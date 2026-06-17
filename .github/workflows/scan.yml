@@ -5,6 +5,7 @@ name: trade-bot
 # 12:00 UTC = 16:00 الإمارات -> بحث أسهم (1d)
 # كل ساعة -> متابعة الصفقات المفتوحة
 # 21:30 UTC -> تنبيه اختراق المتوسط السنوي (بعد إغلاق السوق)
+# يُرسل فقط الصفقات ذات قوة الاتجاه القوية/القوية جداً (درجة >= 51 ~ 60%+)
 on:
   schedule:
     - cron: '0 4 * * *'
@@ -39,14 +40,14 @@ jobs:
           S="${{ github.event.schedule }}"
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             for TF in 1d 4h 1h; do
-              python trading_bot.py --watchlist watchlist.txt --assets crypto --timeframe $TF --side buy --dca
+              python trading_bot.py --watchlist watchlist.txt --assets crypto --timeframe $TF --side buy --dca --min-score 51
             done
           elif [ "$S" = "0 4 * * *" ]; then
             for TF in 1d 4h 1h; do
-              python trading_bot.py --watchlist watchlist.txt --assets crypto --timeframe $TF --side buy --dca
+              python trading_bot.py --watchlist watchlist.txt --assets crypto --timeframe $TF --side buy --dca --min-score 51
             done
           elif [ "$S" = "0 12 * * *" ]; then
-            python trading_bot.py --watchlist watchlist.txt --assets stocks --timeframe 1d --side buy --dca
+            python trading_bot.py --watchlist watchlist.txt --assets stocks --timeframe 1d --side buy --dca --min-score 51
           elif [ "$S" = "30 21 * * *" ]; then
             python trading_bot.py --mode yearly --watchlist watchlist.txt
           else
