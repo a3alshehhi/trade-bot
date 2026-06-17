@@ -1,0 +1,59 @@
+name: trade-bot
+
+# المواعيد بتوقيت UTC. الإمارات = UTC+4
+#   04:00 UTC = 08:00 الإمارات  -> بحث كريبتو (4h)
+#   12:00 UTC = 16:00 الإمارات  -> بحث أسهم (1d)
+#   كل ساعتين                  -> متابعة الصفقات المفتوحة
+on:
+  schedule:
+    - cron: '0 4 * * *'
+    - cron: '0 12 * * *'
+    - cron: '0 */2 * * *'
+    - cron: '30 21 * * *'   # تنبيه اختراق المتوسط السنوي (يومياً بعد إغلاق السوق)
+  workflow_dispatch:        # زر تشغيل يدوي (يُجري بحثاً)
+
+permissions:
+  contents: write           # لحفظ حالة الصفقات داخل المستودع
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Run bot
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          S="${{ github.event.schedule }}"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python trading_bot.py --watchlist watchlist.txt --assets all --timeframe 1d --side buy
+          elif [ "$S" = "0 4 * * *" ]; then
+            python trading_bot.py --watchlist watchlist.txt --assets crypto --timeframe 4h --side buy
+          elif [ "$S" = "0 12 * * *" ]; then
+            python trading_bot.py --watchlist watchlist.txt --assets stocks --timeframe 1d --side buy
+          elif [ "$S" = "30 21 * * *" ]; then
+            python trading_bot.py --mode yearly --watchlist watchlist.txt
+          else
+            python trading_bot.py --mode monitor
+          fi
+
+      - name: Persist state
+        run: |
+          git add open_trades.json yearly_cross.json 2>/dev/null || true
+          if [ -n "$(git status --porcelain open_trades.json yearly_cross.json 2>/dev/null)" ]; then
+            git config user.name "trade-bot"
+            git config user.email "bot@users.noreply.github.com"
+            git commit -m "update bot state [skip ci]"
+            git push
+          fi
