@@ -387,6 +387,28 @@ def analyze(df, tp_method="fib"):
     target = targets[1]["price"]  # للتوافق (الهدف الأوسط)
     rr = abs(target - price) / abs(price - stop) if (price - stop) != 0 else 0
 
+    # --- سلّم الدخول DCA (4 مستويات) ---
+    dca_ratios = (0.382, 0.5, 0.618, 0.786)
+    win2 = df.iloc[-50:] if len(df) >= 50 else df
+    sh, sl = float(win2["high"].max()), float(win2["low"].min())
+    rng2 = sh - sl
+    if rng2 > risk * 0.5:                       # ارتدادات فيبوناتشي
+        dca_levels = [round((sh - rng2 * r) if direction == 1 else (sl + rng2 * r), 8)
+                      for r in dca_ratios]
+        dca_method = "fib"
+    else:                                       # احتياطي: نسب مئوية ثابتة
+        steps = (0.0, 0.03, 0.06, 0.09)
+        dca_levels = [round(price * (1 - s) if direction == 1 else price * (1 + s), 8)
+                      for s in steps]
+        dca_method = "pct"
+    dca_avg = round(sum(dca_levels) / len(dca_levels), 8)
+    dca_stop = round((min(dca_levels) - 0.5 * risk) if direction == 1
+                     else (max(dca_levels) + 0.5 * risk), 8)
+    dca = {"levels": dca_levels, "avg": dca_avg, "stop": dca_stop, "method": dca_method}
+    # نسبة كل هدف من متوسط دخول DCA
+    for t in targets:
+        t["pct_avg"] = round((t["price"] - dca_avg) / dca_avg * 100 * direction, 2)
+
     # قوة الحجم: الترتيب المئوي لحجم آخر شمعة ضمن آخر 20 شمعة (0-100%)
     vol_window = df["volume"].iloc[-20:]
     vol_strength = round(float((vol_window < float(last["volume"])).mean()) * 100, 1) \
@@ -407,6 +429,7 @@ def analyze(df, tp_method="fib"):
         "target": round(target, 6),
         "targets": targets,
         "tp_method": tp_used,
+        "dca": dca,
         "rr": round(rr, 2),
         "atr": round(atr_val, 6),
         "reasons": reasons,
@@ -881,11 +904,22 @@ def format_signal_card(r, cfg):
         return f"{v:.8f}".rstrip("0").rstrip(".") if v < 1 else f"{v:,.2f}"
 
     price_str = fmt(r["price"])
-    stop_str = fmt(r["stop"])
+    dca = r.get("dca") if cfg.get("dca") else None
+    # عند تفعيل DCA: الوقف من سلّم DCA، ونِسب الأهداف من متوسط الدخول
+    stop_str = fmt(dca["stop"] if dca else r["stop"])
+    pct_key = "pct_avg" if dca else "pct"
     tps = r.get("targets") or []
     tp_lines = []
     for i, tp in enumerate(tps[:3]):
-        tp_lines.append(f"🎯 الهدف {i+1}: {fmt(tp['price'])}  (+{tp['pct']:.2f}%)")
+        pct = tp.get(pct_key, tp["pct"])
+        tp_lines.append(f"🎯 الهدف {i+1}: {fmt(tp['price'])}  (+{pct:.2f}%)")
+
+    dca_block = []
+    if dca:
+        dca_block.append("🪜 سلّم الدخول (DCA × 4):")
+        for i, lvl in enumerate(dca["levels"]):
+            dca_block.append(f"   دخول {i+1}: {fmt(lvl)}")
+        dca_block.append(f"   ⚖️ متوسط الدخول: {fmt(dca['avg'])}")
 
     # --- كتلة تأكيد متعدد الفريمات ---
     mtf = r.get("mtf") or []
@@ -924,7 +958,8 @@ def format_signal_card(r, cfg):
         *mtf_block,
         SEP,
         "",
-        *tp_lines,
+        *dca_block,
+        *(["", *tp_lines] if dca_block else tp_lines),
         f"🛑 وقف الخسارة: {stop_str}",
         SEP,
         "",
@@ -1108,6 +1143,8 @@ def build_argparser():
                    help="إرسال الصفقات ذات الدايفرجنس المؤكّد فقط")
     p.add_argument("--market-filter", action="store_true",
                    help="استبعاد الصفقات المعاكسة لاتجاه السوق العام (BTC/SPY)")
+    p.add_argument("--dca", action="store_true",
+                   help="عرض سلّم دخول DCA (4 مستويات فيبوناتشي) ومتوسط الدخول")
     p.add_argument("--timeframe", choices=["1d", "4h", "1h"], default=DEFAULTS["timeframe"])
     p.add_argument("--top", type=int, default=DEFAULTS["top"])
     p.add_argument("--min-score", type=int, default=DEFAULTS["min_score"])
@@ -1127,7 +1164,7 @@ if __name__ == "__main__":
         "top": args.top, "min_score": args.min_score,
         "workers": args.workers, "assets": args.assets, "side": args.side,
         "tp_method": args.targets, "require_divergence": args.require_divergence,
-        "market_filter": args.market_filter,
+        "market_filter": args.market_filter, "dca": args.dca,
         "tg_token": args.telegram_token, "tg_chat": args.telegram_chat_id,
         "state_path": args.state,
     }
