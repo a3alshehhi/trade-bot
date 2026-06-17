@@ -37,11 +37,11 @@ jobs:
         run: |
           S="${{ github.event.schedule }}"
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            python trading_bot.py --watchlist watchlist.txt --assets all --timeframe 1d --side buy
+            python trading_bot.py --watchlist watchlist.txt --assets all --timeframe 1d --side buy --dca
           elif [ "$S" = "0 4 * * *" ]; then
-            python trading_bot.py --watchlist watchlist.txt --assets crypto --timeframe 4h --side buy
+            python trading_bot.py --watchlist watchlist.txt --assets crypto --timeframe 4h --side buy --dca
           elif [ "$S" = "0 12 * * *" ]; then
-            python trading_bot.py --watchlist watchlist.txt --assets stocks --timeframe 1d --side buy
+            python trading_bot.py --watchlist watchlist.txt --assets stocks --timeframe 1d --side buy --dca
           elif [ "$S" = "30 21 * * *" ]; then
             python trading_bot.py --mode yearly --watchlist watchlist.txt
           else
