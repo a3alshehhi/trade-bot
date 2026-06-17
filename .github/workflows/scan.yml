@@ -1,19 +1,20 @@
 name: trade-bot
 
 # المواعيد بتوقيت UTC. الإمارات = UTC+4
-#   04:00 UTC = 08:00 الإمارات  -> بحث كريبتو (4h)
-#   12:00 UTC = 16:00 الإمارات  -> بحث أسهم (1d)
-#   كل ساعة                    -> متابعة الصفقات المفتوحة
+# 04:00 UTC = 08:00 الإمارات -> بحث كريبتو على الفريمات: يومي + 4 ساعات + ساعة
+# 12:00 UTC = 16:00 الإمارات -> بحث أسهم (1d)
+# كل ساعة -> متابعة الصفقات المفتوحة
+# 21:30 UTC -> تنبيه اختراق المتوسط السنوي (بعد إغلاق السوق)
 on:
   schedule:
     - cron: '0 4 * * *'
     - cron: '0 12 * * *'
     - cron: '0 * * * *'
-    - cron: '30 21 * * *'   # تنبيه اختراق المتوسط السنوي (يومياً بعد إغلاق السوق)
-  workflow_dispatch:        # زر تشغيل يدوي (يُجري بحثاً)
+    - cron: '30 21 * * *'
+  workflow_dispatch:
 
 permissions:
-  contents: write           # لحفظ حالة الصفقات داخل المستودع
+  contents: write
 
 jobs:
   bot:
@@ -37,9 +38,13 @@ jobs:
         run: |
           S="${{ github.event.schedule }}"
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            python trading_bot.py --watchlist watchlist.txt --assets all --timeframe 1d --side buy --dca
+            for TF in 1d 4h 1h; do
+              python trading_bot.py --watchlist watchlist.txt --assets crypto --timeframe $TF --side buy --dca
+            done
           elif [ "$S" = "0 4 * * *" ]; then
-            python trading_bot.py --watchlist watchlist.txt --assets crypto --timeframe 4h --side buy --dca
+            for TF in 1d 4h 1h; do
+              python trading_bot.py --watchlist watchlist.txt --assets crypto --timeframe $TF --side buy --dca
+            done
           elif [ "$S" = "0 12 * * *" ]; then
             python trading_bot.py --watchlist watchlist.txt --assets stocks --timeframe 1d --side buy --dca
           elif [ "$S" = "30 21 * * *" ]; then
