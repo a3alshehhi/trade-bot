@@ -1017,6 +1017,12 @@ def run(cfg, watchlist_path, out_dir):
 
     if not results:
         print("\n⚠️ لم يتم جلب أي بيانات. تحقق من اتصال الإنترنت أو تثبيت yfinance.")
+        _tok = cfg.get("tg_token") or os.environ.get("TELEGRAM_TOKEN")
+        _cid = cfg.get("tg_chat") or os.environ.get("TELEGRAM_CHAT_ID")
+        if _tok and _cid:
+            send_telegram(_tok, _cid,
+                f"⚠️ بوت الصفقات: لم يتم جلب أي بيانات للإطار {cfg['timeframe']} ({cfg['assets']}).\n"
+                "تحقق من اتصال الإنترنت أو توفر البيانات.")
         return
 
     # ربط كل نتيجة باتجاه سوقها
