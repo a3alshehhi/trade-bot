@@ -2400,5 +2400,49 @@
     "opened_at": "2026-06-18T07:13:10",
     "status": "open",
     "hit": []
+  },
+  {
+    "id": "SYNUSDT-20260618164714",
+    "symbol": "SYNUSDT",
+    "kind": "crypto",
+    "side": "buy",
+    "timeframe": "1d",
+    "entry": 0.1161,
+    "stop": 0.095312,
+    "targets": [
+      0.1851306,
+      0.2278,
+      0.2968306
+    ],
+    "targets_pct": [
+      59.46,
+      96.21,
+      155.67
+    ],
+    "opened_at": "2026-06-18T16:47:14",
+    "status": "open",
+    "hit": []
+  },
+  {
+    "id": "PORTALUSDT-20260618164758",
+    "symbol": "PORTALUSDT",
+    "kind": "crypto",
+    "side": "buy",
+    "timeframe": "4h",
+    "entry": 0.01561,
+    "stop": 0.013601,
+    "targets": [
+      0.01989892,
+      0.02255,
+      0.02683892
+    ],
+    "targets_pct": [
+      27.48,
+      44.46,
+      71.93
+    ],
+    "opened_at": "2026-06-18T16:47:58",
+    "status": "open",
+    "hit": []
   }
 ]
