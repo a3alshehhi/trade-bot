@@ -264,6 +264,10 @@ def analyze(df, tp_method="fib"):
     if price <= 0 or np.isnan(price):
         return None
 
+    atr_now = float(last["atr"]) if not np.isnan(last["atr"]) else price * 0.02
+    if atr_now <= 0:
+        atr_now = price * 0.02
+
     score = 0
     reasons = []
 
@@ -314,13 +318,25 @@ def analyze(df, tp_method="fib"):
         else:
             score -= 5; reasons.append("حجم مرتفع مع هبوط")
 
-    # --- الاختراق (آخر 20 شمعة) ---
+    # --- الاختراق (آخر 20 شمعة) — مكافأة مخفّضة لتفادي مطاردة القمة ---
     hi20 = df["high"].iloc[-21:-1].max()
     lo20 = df["low"].iloc[-21:-1].min()
     if price >= hi20 * 0.99:
-        score += 10; reasons.append("اختراق قمة 20 شمعة")
+        score += 5; reasons.append("قرب قمة 20 شمعة")
     elif price <= lo20 * 1.01:
-        score -= 10; reasons.append("كسر قاع 20 شمعة")
+        score -= 5; reasons.append("قرب قاع 20 شمعة")
+
+    # --- جودة نقطة الدخول: نفضّل الارتداد للمتوسط ونعاقب مطاردة الحركة ---
+    # ext = بُعد السعر عن EMA20 بوحدات ATR، باتجاه الصفقة المرجّح
+    ema20_v = float(last["ema20"])
+    up_bias = price > float(last["ema50"])
+    ext = (price - ema20_v) / atr_now if up_bias else (ema20_v - price) / atr_now
+    if -0.5 <= ext <= 1.0:
+        score += 12; reasons.append("دخول قرب المتوسط (ارتداد صحي ✅)")
+    elif ext > 2.5:
+        score -= 18; reasons.append("السعر ممتد بعيداً عن المتوسط (مطاردة — دخول رديء)")
+    elif ext > 1.5:
+        score -= 8; reasons.append("السعر ممتد قليلاً عن المتوسط")
 
     # --- الدايفرجنس (الانحراف) ---
     div_inds = []
@@ -352,10 +368,39 @@ def analyze(df, tp_method="fib"):
     else:
         signal = "حيادي"
 
-    atr_val = float(last["atr"]) if not np.isnan(last["atr"]) else price * 0.02
-    risk = 1.5 * atr_val
+    atr_val = atr_now
     direction = 1 if score > 0 else -1
-    stop = price - direction * risk
+
+    # --- وقف هيكلي: تحت آخر قاع حقيقي (شراء) أو فوق آخر قمة (بيع) + هامش ATR ---
+    buf = 0.5 * atr_val
+    swing_win = 40
+    low_seg = df["low"].values[-swing_win:]
+    high_seg = df["high"].values[-swing_win:]
+    lows_idx = _pivot_lows(low_seg)
+    highs_idx = _pivot_highs(high_seg)
+    struct_stop = None
+    if direction == 1 and lows_idx:
+        swing_low = float(low_seg[lows_idx[-1]])
+        if swing_low < price:
+            struct_stop = swing_low - buf
+    elif direction == -1 and highs_idx:
+        swing_high = float(high_seg[highs_idx[-1]])
+        if swing_high > price:
+            struct_stop = swing_high + buf
+
+    # احتياطي على التذبذب إن لم يوجد قاع/قمة هيكلية صالحة
+    stop = struct_stop if struct_stop is not None else price - direction * 1.5 * atr_val
+
+    # حدّ أقصى للمخاطرة: لا نسمح بوقف أبعد من 3.5×ATR (تفادي خسارة ضخمة)
+    max_risk = 3.5 * atr_val
+    if abs(price - stop) > max_risk:
+        stop = price - direction * max_risk
+    # حدّ أدنى للمخاطرة: لا نضع وقفاً أضيق من 1.0×ATR (تفادي الضرب بالضجيج)
+    min_risk = 1.0 * atr_val
+    if abs(price - stop) < min_risk:
+        stop = price - direction * min_risk
+
+    risk = abs(price - stop)
 
     # --- حساب الأهداف ---
     targets = []
@@ -1141,10 +1186,241 @@ def run(cfg, watchlist_path, out_dir):
     print("\n⚠️ تذكير: أداة تحليل تعليمية فقط — ليست نصيحة مالية. القرار والمسؤولية عليك.")
 
 
+# ======================================================================
+#  7) الاختبار التاريخي (Backtest) — قياس أداء الاستراتيجية على الماضي
+# ======================================================================
+#
+# المبدأ: نمشي شمعةً بشمعة. عند كل شمعة نحلّل البيانات حتى تلك الشمعة فقط
+# (بدون look-ahead). إذا ظهرت إشارة مؤهّلة نفتح صفقة افتراضية بسعر إغلاق
+# الشمعة، ثم نحاكي الشموع التالية لنرى أيهما يتحقق أولاً: الوقف أم الأهداف.
+# نقيس النتيجة بوحدات المخاطرة (R): ربح/خسارة كل صفقة ÷ مخاطرتها.
+#
+# نحسب سيناريوهين لنفس الدخولات:
+#   A) بدون إدارة : نمسك حتى الهدف الأخير أو الوقف.
+#   B) مع إدارة    : عند الهدف الأول نجني 50% وننقل الوقف لنقطة الدخول،
+#                    والباقي يركض للهدف الأخير أو يخرج عند نقطة الدخول.
+# الافتراض المحافظ: لو لمست الشمعة الوقف والهدف معاً، نعتبر الوقف ضُرب أولاً.
+
+def _simulate_trade(df, i, entry, stop, targets, direction, hold, manage):
+    """يحاكي مصير صفقة فُتحت عند الشمعة i. يرجع (R, نتيجة) أو None."""
+    n = len(df)
+    risk = abs(entry - stop)
+    if risk <= 0 or not targets:
+        return None
+    high = df["high"].values
+    low = df["low"].values
+    close = df["close"].values
+    tp1, tp_final = targets[0], targets[-1]
+
+    stop_cur = stop
+    part = 1.0          # الجزء المتبقّي من الصفقة
+    realized = 0.0      # الربح/الخسارة المحقّق بوحدات R
+    tp1_done = False
+    last_c = entry
+
+    def hit_stop(px_lo, px_hi):
+        return px_lo <= stop_cur if direction == 1 else px_hi >= stop_cur
+
+    def hit(level, px_lo, px_hi):
+        return px_hi >= level if direction == 1 else px_lo <= level
+
+    for j in range(i + 1, min(i + 1 + hold, n)):
+        lo, hi, last_c = low[j], high[j], close[j]
+        # 1) الوقف أولاً (محافظ)
+        if hit_stop(lo, hi):
+            realized += part * direction * (stop_cur - entry) / risk
+            return realized, ("be_stop" if tp1_done else "stop")
+        # 2) الأهداف
+        if manage:
+            if not tp1_done and hit(tp1, lo, hi):
+                realized += 0.5 * direction * (tp1 - entry) / risk
+                part = 0.5
+                tp1_done = True
+                stop_cur = entry          # نقل الوقف لنقطة الدخول
+            if tp1_done and hit(tp_final, lo, hi):
+                realized += part * direction * (tp_final - entry) / risk
+                return realized, "target"
+        else:
+            if hit(tp_final, lo, hi):
+                realized += part * direction * (tp_final - entry) / risk
+                return realized, "target"
+    # 3) خروج زمني عند آخر إغلاق متاح
+    realized += part * direction * (last_c - entry) / risk
+    return realized, "time"
+
+
+def backtest_symbol(item, kind, cfg):
+    """يفتح صفقات افتراضية على تاريخ رمز واحد ويرجع قائمة صفقات مغلقة."""
+    sym = item["symbol"]
+    bars = cfg.get("bt_bars", 365)
+    hold = cfg.get("bt_hold", 40)
+    min_score = cfg["min_score"]
+    side = cfg.get("side", "buy")
+
+    if kind == "crypto":
+        df = fetch_binance(sym, BINANCE_INTERVAL[cfg["timeframe"]], min(bars + 220, 1000))
+    else:
+        df = fetch_stock(sym, YF_INTERVAL[cfg["timeframe"]], "2y")
+    if df is None or len(df) < 120:
+        return []
+    df = df.reset_index(drop=True)
+    n = len(df)
+    warmup = 60
+    start = max(warmup, n - bars)
+
+    trades = []
+    i = start
+    while i < n - 1:
+        sub = df.iloc[max(0, i - 219):i + 1]
+        r = analyze(sub, tp_method=cfg.get("tp_method", "fib"))
+        if not r:
+            i += 1
+            continue
+        is_buy = r["score"] > 0
+        ok_side = (side == "both") or (side == "buy" and is_buy) or (side == "sell" and not is_buy)
+        if ok_side and abs(r["score"]) >= min_score:
+            direction = 1 if is_buy else -1
+            entry = r["price"]
+            tps = [t["price"] for t in (r.get("targets") or [])]
+            simA = _simulate_trade(df, i, entry, r["stop"], tps, direction, hold, manage=False)
+            simB = _simulate_trade(df, i, entry, r["stop"], tps, direction, hold, manage=True)
+            if simA and simB:
+                trades.append({
+                    "symbol": sym, "kind": kind, "side": "buy" if is_buy else "sell",
+                    "bar": i, "date": str(df["date"].iloc[i])[:10],
+                    "score": r["score"], "entry": entry, "stop": r["stop"],
+                    "R_plain": round(simA[0], 3), "out_plain": simA[1],
+                    "R_managed": round(simB[0], 3), "out_managed": simB[1],
+                })
+                # تقدّم زمني بمقدار فترة الإمساك لتفادي صفقات متداخلة على نفس الرمز
+                i += hold
+                continue
+        i += 1
+    return trades
+
+
+def _stats(rs, outs):
+    """يحسب مقاييس الأداء من قائمة عوائد R وقائمة النتائج."""
+    n = len(rs)
+    if n == 0:
+        return None
+    wins = [x for x in rs if x > 0]
+    losses = [x for x in rs if x <= 0]
+    gross_win = sum(wins)
+    gross_loss = abs(sum(losses))
+    # أقصى تراجع وأطول سلسلة خسائر على منحنى رأس المال (بوحدات R)
+    eq = 0.0
+    peak = 0.0
+    max_dd = 0.0
+    streak = 0
+    max_streak = 0
+    for x in rs:
+        eq += x
+        peak = max(peak, eq)
+        max_dd = max(max_dd, peak - eq)
+        if x <= 0:
+            streak += 1
+            max_streak = max(max_streak, streak)
+        else:
+            streak = 0
+    stopped = sum(1 for o in outs if o in ("stop",))
+    return {
+        "n": n,
+        "win_rate": round(len(wins) / n * 100, 1),
+        "expectancy": round(sum(rs) / n, 3),
+        "total_R": round(sum(rs), 1),
+        "profit_factor": round(gross_win / gross_loss, 2) if gross_loss > 0 else float("inf"),
+        "avg_win": round(gross_win / len(wins), 2) if wins else 0.0,
+        "avg_loss": round(-gross_loss / len(losses), 2) if losses else 0.0,
+        "max_dd_R": round(max_dd, 1),
+        "max_consec_losses": max_streak,
+        "stopped_pct": round(stopped / n * 100, 1),
+    }
+
+
+def _print_stats(title, st):
+    if not st:
+        print(f"\n{title}: لا صفقات.")
+        return
+    print(f"\n{SEP}\n  {title}\n{SEP}")
+    print(f"  عدد الصفقات        : {st['n']}")
+    print(f"  نسبة الربح         : {st['win_rate']}%")
+    print(f"  التوقّع (متوسط R)  : {st['expectancy']:+}  ← الأهم (>0 = رابح)")
+    print(f"  إجمالي R           : {st['total_R']:+}")
+    print(f"  معامل الربح        : {st['profit_factor']}  (>1 رابح، >1.5 جيد)")
+    print(f"  متوسط الرابحة/الخاسرة: {st['avg_win']:+} / {st['avg_loss']:+}")
+    print(f"  أقصى تراجع (R)     : -{st['max_dd_R']}")
+    print(f"  أطول سلسلة خسائر   : {st['max_consec_losses']}")
+    print(f"  نسبة ضرب الوقف     : {st['stopped_pct']}%")
+
+
+def run_backtest(cfg, watchlist_path, out_dir):
+    print("=" * 64)
+    print("  الاختبار التاريخي (Backtest) — قياس أداء الاستراتيجية")
+    print("=" * 64)
+    parsed = parse_watchlist(watchlist_path)
+    targets = []
+    if cfg["assets"] in ("all", "stocks"):
+        targets += [(it, "stock") for it in parsed["stocks"]]
+    if cfg["assets"] in ("all", "crypto"):
+        targets += [(it, "crypto") for it in parsed["crypto"]]
+    print(f"رموز للاختبار: {len(targets)} | الإطار: {cfg['timeframe']} | "
+          f"شموع: {cfg.get('bt_bars')} | إمساك: {cfg.get('bt_hold')} شمعة | "
+          f"الحد الأدنى للدرجة: {cfg['min_score']}\n")
+
+    all_trades = []
+    done = 0
+    with ThreadPoolExecutor(max_workers=cfg["workers"]) as ex:
+        futs = {ex.submit(backtest_symbol, it, kind, cfg): it for it, kind in targets}
+        for fut in as_completed(futs):
+            done += 1
+            if done % 25 == 0:
+                print(f"  ... اختُبر {done}/{len(targets)} رمز")
+            try:
+                all_trades.extend(fut.result() or [])
+            except Exception:
+                pass
+
+    if not all_trades:
+        print("\n⚠️ لم تُفتح أي صفقة افتراضية. جرّب خفض --min-score أو تحقّق من البيانات.")
+        return
+
+    rA = [t["R_plain"] for t in all_trades]
+    oA = [t["out_plain"] for t in all_trades]
+    rB = [t["R_managed"] for t in all_trades]
+    oB = [t["out_managed"] for t in all_trades]
+    stA = _stats(rA, oA)
+    stB = _stats(rB, oB)
+
+    _print_stats("بدون إدارة (مسك حتى الهدف/الوقف)", stA)
+    _print_stats("مع إدارة (جني 50% عند الهدف الأول + وقف عند الدخول)", stB)
+
+    # خلاصة المقارنة
+    if stA and stB:
+        print(f"\n{SEP}\n  الخلاصة\n{SEP}")
+        better = "مع الإدارة" if stB["expectancy"] >= stA["expectancy"] else "بدون إدارة"
+        print(f"  التوقّع: بدون={stA['expectancy']:+} مقابل إدارة={stB['expectancy']:+}  → الأفضل: {better}")
+        print(f"  أقصى تراجع: بدون=-{stA['max_dd_R']}R مقابل إدارة=-{stB['max_dd_R']}R")
+        verdict = "النظام رابح إحصائياً ✅" if max(stA["expectancy"], stB["expectancy"]) > 0 \
+            else "النظام خاسر إحصائياً ❌ — يحتاج تعديلاً قبل الاعتماد عليه"
+        print(f"  الحكم: {verdict}")
+
+    os.makedirs(out_dir, exist_ok=True)
+    ts = datetime.now().strftime("%Y%m%d_%H%M")
+    csv_path = os.path.join(out_dir, f"backtest_{ts}.csv")
+    pd.DataFrame(all_trades).to_csv(csv_path, index=False, encoding="utf-8-sig")
+    print(f"\n✅ حُفظت كل الصفقات الافتراضية ({len(all_trades)}): {csv_path}")
+    print("\n⚠️ نتائج تاريخية افتراضية — لا تضمن الأداء المستقبلي. تحليل تعليمي فقط.")
+
+
 def build_argparser():
     p = argparse.ArgumentParser(description="بوت البحث عن الصفقات")
-    p.add_argument("--mode", choices=["scan", "monitor", "yearly"], default="scan",
-                   help="scan: بحث | monitor: متابعة الصفقات | yearly: تنبيه اختراق المتوسط السنوي")
+    p.add_argument("--mode", choices=["scan", "monitor", "yearly", "backtest"], default="scan",
+                   help="scan: بحث | monitor: متابعة | yearly: المتوسط السنوي | backtest: اختبار تاريخي")
+    p.add_argument("--bt-bars", type=int, default=365,
+                   help="عدد الشموع الأخيرة للاختبار التاريخي (افتراضي 365)")
+    p.add_argument("--bt-hold", type=int, default=40,
+                   help="أقصى عدد شموع لإمساك الصفقة الافتراضية (افتراضي 40)")
     p.add_argument("--watchlist", help="مسار ملف الـ watchlist (مطلوب في وضع scan)")
     p.add_argument("--state", default=TRADES_FILE, help="ملف حفظ الصفقات المفتوحة")
     p.add_argument("--assets", choices=["all", "crypto", "stocks"], default=DEFAULTS["assets"])
@@ -1183,9 +1459,14 @@ if __name__ == "__main__":
         "quiet_empty": args.quiet_empty,
         "tg_token": args.telegram_token, "tg_chat": args.telegram_chat_id,
         "state_path": args.state,
+        "bt_bars": args.bt_bars, "bt_hold": args.bt_hold,
     }
     if args.mode == "monitor":
         monitor(cfg, args.state)
+    elif args.mode == "backtest":
+        if not args.watchlist:
+            sys.exit("⚠️ وضع backtest يتطلب --watchlist")
+        run_backtest(cfg, args.watchlist, args.output_dir)
     elif args.mode == "yearly":
         if not args.watchlist:
             sys.exit("⚠️ وضع yearly يتطلب --watchlist")
