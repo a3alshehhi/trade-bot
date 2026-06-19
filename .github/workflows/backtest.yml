@@ -24,6 +24,11 @@ on:
       bt_hold:
         description: "أقصى شموع لإمساك الصفقة"
         default: "40"
+      market_filter:
+        description: "فلتر اتجاه السوق (BTC/SPY)"
+        type: choice
+        options: ["on", "off"]
+        default: "on"
 
 permissions:
   contents: read
@@ -46,6 +51,8 @@ jobs:
       - name: Run backtest
         run: |
           set -o pipefail
+          MF=""
+          if [ "${{ inputs.market_filter }}" = "on" ]; then MF="--market-filter"; fi
           python trading_bot.py --mode backtest \
             --watchlist watchlist.txt \
             --assets "${{ inputs.assets }}" \
@@ -53,6 +60,7 @@ jobs:
             --min-score "${{ inputs.min_score }}" \
             --bt-bars "${{ inputs.bt_bars }}" \
             --bt-hold "${{ inputs.bt_hold }}" \
+            $MF \
             --output-dir . 2>&1 | tee backtest_log.txt
 
       - name: Send report to Telegram
