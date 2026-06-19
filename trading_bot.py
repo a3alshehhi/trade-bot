@@ -1288,7 +1288,9 @@ def anchored_vwap_last(df, anchor):
         return None
     d = pd.to_datetime(df["date"])
     last = d.iloc[-1]
-    if anchor == "W":
+    if anchor == "D":
+        start = last.normalize()                       # بداية اليوم (مفيد على 4h/1h)
+    elif anchor == "W":
         start = (last - pd.Timedelta(days=int(last.weekday()))).normalize()
     else:  # 'M'
         start = last.normalize().replace(day=1)
@@ -1339,10 +1341,14 @@ def backtest_symbol(item, kind, cfg):
             mb = regime_bullish_at(reg, df["date"].iloc[i])
             if mb is not None and ((is_buy and not mb) or (not is_buy and mb)):
                 ok_side = False
-        # فلتر VWAP المثبّت: للشراء يجب أن يكون السعر فوق VWAP الأسبوعي/الشهري (والعكس للبيع)
-        if ok_side and (cfg.get("vwap_w") or cfg.get("vwap_m")):
+        # فلتر VWAP المثبّت: للشراء يجب أن يكون السعر فوق VWAP (والعكس للبيع)
+        if ok_side and (cfg.get("vwap_w") or cfg.get("vwap_m") or cfg.get("vwap_d")):
             pnow = r["price"]
-            if cfg.get("vwap_w"):
+            if cfg.get("vwap_d"):                     # يومي — ذو معنى على 4h/1h فقط
+                vd = anchored_vwap_last(sub, "D")
+                if vd is not None and ((is_buy and pnow < vd) or (not is_buy and pnow > vd)):
+                    ok_side = False
+            if ok_side and cfg.get("vwap_w"):
                 vw = anchored_vwap_last(sub, "W")
                 if vw is not None and ((is_buy and pnow < vw) or (not is_buy and pnow > vw)):
                     ok_side = False
@@ -1449,7 +1455,8 @@ def run_backtest(cfg, watchlist_path, out_dir):
         cfg["_regime"] = reg
         ok = [k for k, v in reg.items() if v is not None]
         print(f"🌐 فلتر اتجاه السوق: مفعّل (BTC/SPY) — جاهز لـ: {', '.join(ok) or 'لا شيء'}")
-    vwf = [n for n, on in (("أسبوعي", cfg.get("vwap_w")), ("شهري", cfg.get("vwap_m"))) if on]
+    vwf = [n for n, on in (("يومي", cfg.get("vwap_d")), ("أسبوعي", cfg.get("vwap_w")),
+                           ("شهري", cfg.get("vwap_m"))) if on]
     if vwf:
         print(f"📈 فلتر VWAP المثبّت: مفعّل ({' + '.join(vwf)}) — شراء فوق VWAP فقط")
     print()
@@ -1518,6 +1525,8 @@ def build_argparser():
                    help="إرسال الصفقات ذات الدايفرجنس المؤكّد فقط")
     p.add_argument("--market-filter", action="store_true",
                    help="استبعاد الصفقات المعاكسة لاتجاه السوق العام (BTC/SPY)")
+    p.add_argument("--vwap-daily", action="store_true",
+                   help="شرط VWAP مثبّت يومياً (ذو معنى على 4h/1h فقط)")
     p.add_argument("--vwap-weekly", action="store_true",
                    help="شرط VWAP مثبّت أسبوعياً (شراء فقط فوقه)")
     p.add_argument("--vwap-monthly", action="store_true",
@@ -1546,6 +1555,7 @@ if __name__ == "__main__":
         "workers": args.workers, "assets": args.assets, "side": args.side,
         "tp_method": args.targets, "require_divergence": args.require_divergence,
         "market_filter": args.market_filter, "dca": args.dca,
+        "vwap_d": args.vwap_daily,
         "vwap_w": args.vwap_weekly, "vwap_m": args.vwap_monthly,
         "quiet_empty": args.quiet_empty,
         "tg_token": args.telegram_token, "tg_chat": args.telegram_chat_id,
