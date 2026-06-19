@@ -1,13 +1,15 @@
 name: trade-bot
 
 # المواعيد بتوقيت UTC. الإمارات = UTC+4
-# 04:17 UTC = 08:17 الإمارات <- بحث كريبتو (يومي + 4 ساعات + ساعة)
+# 13,43 كل ساعة (كل 30 دقيقة) <- فحص كريبتو سريع على إطار 1h (إشعار للجديد فقط)
+# 04:17 UTC = 08:17 الإمارات <- بحث كريبتو شامل (يومي + 4 ساعات + ساعة)
 # 12:17 UTC = 16:17 الإمارات <- بحث أسهم (1d)
 # كل ساعتين (الدقيقة 37) <- متابعة الصفقات المفتوحة
 # 21:30 UTC -> اختراق المتوسط السنوي (بعد إغلاق السوق)
-# تُجنّب رأس الساعة (ذروة GitHub): الجدولة عند الدقائق 17/37/30
+# تُجنّب رأس الساعة (ذروة GitHub): الجدولة عند الدقائق 13/43/17/37/30
 on:
   schedule:
+    - cron: '13,43 * * * *'
     - cron: '17 4 * * *'
     - cron: '17 12 * * *'
     - cron: '37 */2 * * *'
@@ -47,6 +49,8 @@ jobs:
             for TF in 1d 4h 1h; do
               python trading_bot.py --watchlist watchlist.txt --assets crypto --timeframe $TF --side buy --dca --min-score 51
             done
+          elif [ "$S" = "13,43 * * * *" ]; then
+            python trading_bot.py --watchlist watchlist.txt --assets crypto --timeframe 1h --side buy --dca --quiet-empty --min-score 51
           elif [ "$S" = "17 4 * * *" ]; then
             for TF in 1d 4h 1h; do
               python trading_bot.py --watchlist watchlist.txt --assets crypto --timeframe $TF --side buy --dca --min-score 51
