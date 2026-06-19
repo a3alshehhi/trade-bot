@@ -1797,7 +1797,9 @@
     ],
     "opened_at": "2026-06-17T17:29:04",
     "status": "open",
-    "hit": []
+    "hit": [
+      "tp1"
+    ]
   },
   {
     "id": "NEOUSDT-20260617172905",
@@ -1864,11 +1866,13 @@
       25.51
     ],
     "opened_at": "2026-06-17T17:39:33",
-    "status": "open",
+    "status": "closed_tp",
     "hit": [
       "tp1",
-      "tp2"
-    ]
+      "tp2",
+      "tp3"
+    ],
+    "closed_at": "2026-06-19T20:22:31"
   },
   {
     "id": "DIAUSDT-20260617174120",
@@ -2707,8 +2711,9 @@
       19.8
     ],
     "opened_at": "2026-06-19T11:35:28",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T20:22:37"
   },
   {
     "id": "CELOUSDT-20260619113532",
@@ -2730,7 +2735,9 @@
     ],
     "opened_at": "2026-06-19T11:35:32",
     "status": "open",
-    "hit": []
+    "hit": [
+      "tp1"
+    ]
   },
   {
     "id": "PSGUSDT-20260619113534",
@@ -2751,8 +2758,9 @@
       10.6
     ],
     "opened_at": "2026-06-19T11:35:34",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T20:22:40"
   },
   {
     "id": "SOMIUSDT-20260619113535",
@@ -2773,8 +2781,9 @@
       16.11
     ],
     "opened_at": "2026-06-19T11:35:35",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T20:22:41"
   },
   {
     "id": "HYPERUSDT-20260619113537",
@@ -3147,8 +3156,9 @@
       15.07
     ],
     "opened_at": "2026-06-19T16:49:14",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T20:22:53"
   },
   {
     "id": "API3USDT-20260619164915",
