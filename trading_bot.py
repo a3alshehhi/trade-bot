@@ -1280,6 +1280,30 @@ def regime_bullish_at(reg, date):
     return bool(reg["bullish"][idx])
 
 
+def anchored_vwap_last(df, anchor):
+    """VWAP مثبّت (Anchored) عند بداية الأسبوع/الشهر، قيمته عند آخر شمعة.
+    anchor: 'W' أسبوعي (يُصفّر الإثنين) أو 'M' شهري (يُصفّر أول الشهر).
+    يُحسب من البيانات اليومية: مجموع (السعر النموذجي × الحجم) ÷ مجموع الحجم."""
+    if df is None or len(df) < 2:
+        return None
+    d = pd.to_datetime(df["date"])
+    last = d.iloc[-1]
+    if anchor == "W":
+        start = (last - pd.Timedelta(days=int(last.weekday()))).normalize()
+    else:  # 'M'
+        start = last.normalize().replace(day=1)
+    mask = (d >= start).values
+    sub = df[mask]
+    if len(sub) == 0:
+        return None
+    tp = (sub["high"] + sub["low"] + sub["close"]) / 3.0
+    vol = sub["volume"]
+    denom = float(vol.sum())
+    if denom <= 0:
+        return None
+    return float((tp * vol).sum() / denom)
+
+
 def backtest_symbol(item, kind, cfg):
     """يفتح صفقات افتراضية على تاريخ رمز واحد ويرجع قائمة صفقات مغلقة."""
     sym = item["symbol"]
@@ -1315,6 +1339,17 @@ def backtest_symbol(item, kind, cfg):
             mb = regime_bullish_at(reg, df["date"].iloc[i])
             if mb is not None and ((is_buy and not mb) or (not is_buy and mb)):
                 ok_side = False
+        # فلتر VWAP المثبّت: للشراء يجب أن يكون السعر فوق VWAP الأسبوعي/الشهري (والعكس للبيع)
+        if ok_side and (cfg.get("vwap_w") or cfg.get("vwap_m")):
+            pnow = r["price"]
+            if cfg.get("vwap_w"):
+                vw = anchored_vwap_last(sub, "W")
+                if vw is not None and ((is_buy and pnow < vw) or (not is_buy and pnow > vw)):
+                    ok_side = False
+            if ok_side and cfg.get("vwap_m"):
+                vm = anchored_vwap_last(sub, "M")
+                if vm is not None and ((is_buy and pnow < vm) or (not is_buy and pnow > vm)):
+                    ok_side = False
         if ok_side and abs(r["score"]) >= min_score:
             direction = 1 if is_buy else -1
             entry = r["price"]
@@ -1414,6 +1449,9 @@ def run_backtest(cfg, watchlist_path, out_dir):
         cfg["_regime"] = reg
         ok = [k for k, v in reg.items() if v is not None]
         print(f"🌐 فلتر اتجاه السوق: مفعّل (BTC/SPY) — جاهز لـ: {', '.join(ok) or 'لا شيء'}")
+    vwf = [n for n, on in (("أسبوعي", cfg.get("vwap_w")), ("شهري", cfg.get("vwap_m"))) if on]
+    if vwf:
+        print(f"📈 فلتر VWAP المثبّت: مفعّل ({' + '.join(vwf)}) — شراء فوق VWAP فقط")
     print()
 
     all_trades = []
@@ -1480,6 +1518,10 @@ def build_argparser():
                    help="إرسال الصفقات ذات الدايفرجنس المؤكّد فقط")
     p.add_argument("--market-filter", action="store_true",
                    help="استبعاد الصفقات المعاكسة لاتجاه السوق العام (BTC/SPY)")
+    p.add_argument("--vwap-weekly", action="store_true",
+                   help="شرط VWAP مثبّت أسبوعياً (شراء فقط فوقه)")
+    p.add_argument("--vwap-monthly", action="store_true",
+                   help="شرط VWAP مثبّت شهرياً (شراء فقط فوقه)")
     p.add_argument("--dca", action="store_true",
                    help="عرض سلّم دخول DCA (4 مستويات فيبوناتشي) ومتوسط الدخول")
     p.add_argument("--quiet-empty", action="store_true",
@@ -1504,6 +1546,7 @@ if __name__ == "__main__":
         "workers": args.workers, "assets": args.assets, "side": args.side,
         "tp_method": args.targets, "require_divergence": args.require_divergence,
         "market_filter": args.market_filter, "dca": args.dca,
+        "vwap_w": args.vwap_weekly, "vwap_m": args.vwap_monthly,
         "quiet_empty": args.quiet_empty,
         "tg_token": args.telegram_token, "tg_chat": args.telegram_chat_id,
         "state_path": args.state,
