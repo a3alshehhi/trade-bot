@@ -1019,7 +1019,7 @@ def run(cfg, watchlist_path, out_dir):
         print("\n⚠️ لم يتم جلب أي بيانات. تحقق من اتصال الإنترنت أو تثبيت yfinance.")
         _tok = cfg.get("tg_token") or os.environ.get("TELEGRAM_TOKEN")
         _cid = cfg.get("tg_chat") or os.environ.get("TELEGRAM_CHAT_ID")
-        if _tok and _cid:
+        if _tok and _cid and not cfg.get("quiet_empty"):
             send_telegram(_tok, _cid,
                 f"⚠️ بوت الصفقات: لم يتم جلب أي بيانات للإطار {cfg['timeframe']} ({cfg['assets']}).\n"
                 "تحقق من اتصال الإنترنت أو توفر البيانات.")
@@ -1117,19 +1117,26 @@ def run(cfg, watchlist_path, out_dir):
             state_path = cfg.get("state_path", TRADES_FILE)
             trades = load_trades(state_path)
             open_syms = {t["symbol"] for t in trades if t["status"] == "open"}
-            for r in shown:
+            # منع تكرار التنبيه: نرسل فقط الإشارات الجديدة (غير المفتوحة أصلاً)
+            new_signals = [r for r in shown if r["symbol"] not in open_syms]
+            for r in new_signals:
                 if send_telegram(token, chat_id, format_signal_card(r, cfg)):
                     sent += 1
-                    # حفظ الصفقة للمتابعة (إن لم تكن مفتوحة أصلاً)
-                    if r["symbol"] not in open_syms and (r.get("targets")):
+                    # حفظ الصفقة للمتابعة
+                    if r.get("targets"):
                         trades.append(make_trade(r, cfg))
                         open_syms.add(r["symbol"])
                 time.sleep(0.6)   # تفادي حدود إرسال تيليجرام
             save_trades(trades, state_path)
-            print(f"📲 أُرسلت {sent} بطاقة صفقة إلى تيليجرام، وحُفظت للمتابعة.")
-        else:
+            if new_signals:
+                print(f"📲 أُرسلت {sent} بطاقة صفقة جديدة إلى تيليجرام، وحُفظت للمتابعة.")
+            else:
+                print("لا صفقات جديدة — كل الإشارات الحالية مُنبَّه بها مسبقاً (لا تكرار).")
+        elif not cfg.get("quiet_empty"):
             send_telegram(token, chat_id, "🤖 بوت الصفقات: لا توجد فرص تتجاوز الحد المطلوب الآن.")
             print("📲 أُرسل تنبيه (لا فرص) إلى تيليجرام.")
+        else:
+            print("لا فرص جديدة الآن — كُتمت رسالة الفراغ (وضع الفحص المتكرر).")
 
     print("\n⚠️ تذكير: أداة تحليل تعليمية فقط — ليست نصيحة مالية. القرار والمسؤولية عليك.")
 
@@ -1151,6 +1158,8 @@ def build_argparser():
                    help="استبعاد الصفقات المعاكسة لاتجاه السوق العام (BTC/SPY)")
     p.add_argument("--dca", action="store_true",
                    help="عرض سلّم دخول DCA (4 مستويات فيبوناتشي) ومتوسط الدخول")
+    p.add_argument("--quiet-empty", action="store_true",
+                   help="عدم إرسال رسالة عند عدم وجود فرص جديدة (للفحص المتكرر)")
     p.add_argument("--timeframe", choices=["1d", "4h", "1h"], default=DEFAULTS["timeframe"])
     p.add_argument("--top", type=int, default=DEFAULTS["top"])
     p.add_argument("--min-score", type=int, default=DEFAULTS["min_score"])
@@ -1171,6 +1180,7 @@ if __name__ == "__main__":
         "workers": args.workers, "assets": args.assets, "side": args.side,
         "tp_method": args.targets, "require_divergence": args.require_divergence,
         "market_filter": args.market_filter, "dca": args.dca,
+        "quiet_empty": args.quiet_empty,
         "tg_token": args.telegram_token, "tg_chat": args.telegram_chat_id,
         "state_path": args.state,
     }
