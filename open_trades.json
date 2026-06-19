@@ -590,8 +590,9 @@
       154.48
     ],
     "opened_at": "2026-06-17T17:25:08",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T12:54:45"
   },
   {
     "id": "ZECUSDT-20260617172509",
@@ -903,8 +904,9 @@
       86.03
     ],
     "opened_at": "2026-06-17T17:25:22",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T12:54:53"
   },
   {
     "id": "BIOUSDT-20260617172523",
@@ -1013,8 +1015,9 @@
       23.57
     ],
     "opened_at": "2026-06-17T17:26:56",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T12:54:56"
   },
   {
     "id": "SENTUSDT-20260617172659",
@@ -1126,8 +1129,9 @@
       51.06
     ],
     "opened_at": "2026-06-17T17:27:06",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T12:54:58"
   },
   {
     "id": "AVAUSDT-20260617172709",
@@ -1217,8 +1221,9 @@
       29.16
     ],
     "opened_at": "2026-06-17T17:27:12",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T12:55:00"
   },
   {
     "id": "SIGNUSDT-20260617172712",
@@ -1239,8 +1244,9 @@
       25.01
     ],
     "opened_at": "2026-06-17T17:27:12",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T12:55:01"
   },
   {
     "id": "TRBUSDT-20260617172713",
@@ -1307,8 +1313,9 @@
       25.19
     ],
     "opened_at": "2026-06-17T17:27:15",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T12:55:03"
   },
   {
     "id": "BATUSDT-20260617172842",
@@ -1329,8 +1336,9 @@
       10.31
     ],
     "opened_at": "2026-06-17T17:28:42",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T12:55:05"
   },
   {
     "id": "LPTUSDT-20260617172843",
@@ -1397,8 +1405,9 @@
       12.52
     ],
     "opened_at": "2026-06-17T17:28:45",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T12:55:06"
   },
   {
     "id": "ARBUSDT-20260617172848",
@@ -1856,7 +1865,10 @@
     ],
     "opened_at": "2026-06-17T17:39:33",
     "status": "open",
-    "hit": []
+    "hit": [
+      "tp1",
+      "tp2"
+    ]
   },
   {
     "id": "DIAUSDT-20260617174120",
@@ -2083,8 +2095,9 @@
       15.16
     ],
     "opened_at": "2026-06-17T19:21:02",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T12:55:11"
   },
   {
     "id": "API3USDT-20260617192105",
@@ -2288,8 +2301,9 @@
       31.85
     ],
     "opened_at": "2026-06-18T07:11:48",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T12:55:14"
   },
   {
     "id": "ZKUSDT-20260618071302",
@@ -2310,8 +2324,9 @@
       13.03
     ],
     "opened_at": "2026-06-18T07:13:02",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T12:55:15"
   },
   {
     "id": "HEIUSDT-20260618071304",
@@ -2332,8 +2347,13 @@
       34.2
     ],
     "opened_at": "2026-06-18T07:13:04",
-    "status": "open",
-    "hit": []
+    "status": "closed_tp",
+    "hit": [
+      "tp1",
+      "tp2",
+      "tp3"
+    ],
+    "closed_at": "2026-06-19T12:55:20"
   },
   {
     "id": "ZKPUSDT-20260618071305",
@@ -2354,8 +2374,9 @@
       15.54
     ],
     "opened_at": "2026-06-18T07:13:05",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T12:55:20"
   },
   {
     "id": "INITUSDT-20260618071306",
@@ -2376,8 +2397,9 @@
       15.66
     ],
     "opened_at": "2026-06-18T07:13:06",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T12:55:22"
   },
   {
     "id": "DUSDT-20260618071310",
@@ -2398,8 +2420,9 @@
       126.38
     ],
     "opened_at": "2026-06-18T07:13:10",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-19T12:55:24"
   },
   {
     "id": "SYNUSDT-20260618164714",
