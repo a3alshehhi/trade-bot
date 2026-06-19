@@ -28,6 +28,16 @@ on:
         description: "فلتر اتجاه السوق (BTC/SPY)"
         type: choice
         options: ["on", "off"]
+        default: "off"
+      vwap_weekly:
+        description: "شرط VWAP الأسبوعي"
+        type: choice
+        options: ["on", "off"]
+        default: "on"
+      vwap_monthly:
+        description: "شرط VWAP الشهري"
+        type: choice
+        options: ["on", "off"]
         default: "on"
 
 permissions:
@@ -51,8 +61,10 @@ jobs:
       - name: Run backtest
         run: |
           set -o pipefail
-          MF=""
-          if [ "${{ inputs.market_filter }}" = "on" ]; then MF="--market-filter"; fi
+          FLAGS=""
+          if [ "${{ inputs.market_filter }}" = "on" ]; then FLAGS="$FLAGS --market-filter"; fi
+          if [ "${{ inputs.vwap_weekly }}" = "on" ]; then FLAGS="$FLAGS --vwap-weekly"; fi
+          if [ "${{ inputs.vwap_monthly }}" = "on" ]; then FLAGS="$FLAGS --vwap-monthly"; fi
           python trading_bot.py --mode backtest \
             --watchlist watchlist.txt \
             --assets "${{ inputs.assets }}" \
@@ -60,7 +72,7 @@ jobs:
             --min-score "${{ inputs.min_score }}" \
             --bt-bars "${{ inputs.bt_bars }}" \
             --bt-hold "${{ inputs.bt_hold }}" \
-            $MF \
+            $FLAGS \
             --output-dir . 2>&1 | tee backtest_log.txt
 
       - name: Send report to Telegram
