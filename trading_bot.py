@@ -1249,9 +1249,41 @@ def _simulate_trade(df, i, entry, stop, targets, direction, hold, manage):
     return realized, "time"
 
 
+def build_regime_series(kind):
+    """يبني سلسلة اتجاه السوق التاريخية (يومي): BTC للكريبتو، SPY للأسهم.
+    يرجع dict فيه مصفوفة تواريخ مرتبة وراية صعود لكل يوم، أو None."""
+    if kind == "crypto":
+        df = fetch_binance("BTCUSDT", "1d", 500)
+    else:
+        df = fetch_stock("SPY", "1d", "2y")
+    if df is None or len(df) < 60:
+        return None
+    close = df["close"]
+    ema50 = ema(close, 50)
+    ema200 = ema(close, 200) if len(df) >= 200 else ema(close, 100)
+    bullish = (close > ema50) & (ema50 >= ema200 * 0.99)
+    dates = pd.to_datetime(df["date"]).dt.normalize().values.astype("datetime64[D]")
+    return {"dates": dates, "bullish": bullish.values.astype(bool)}
+
+
+def regime_bullish_at(reg, date):
+    """حالة اتجاه السوق كما كانت بتاريخ معيّن (as-of). يرجع True/False أو None."""
+    if reg is None:
+        return None
+    try:
+        d = np.datetime64(pd.to_datetime(date).normalize(), "D")
+    except Exception:
+        return None
+    idx = int(np.searchsorted(reg["dates"], d, side="right")) - 1
+    if idx < 0:
+        return None
+    return bool(reg["bullish"][idx])
+
+
 def backtest_symbol(item, kind, cfg):
     """يفتح صفقات افتراضية على تاريخ رمز واحد ويرجع قائمة صفقات مغلقة."""
     sym = item["symbol"]
+    reg = (cfg.get("_regime") or {}).get(kind) if cfg.get("market_filter") else None
     bars = cfg.get("bt_bars", 365)
     hold = cfg.get("bt_hold", 40)
     min_score = cfg["min_score"]
@@ -1278,6 +1310,11 @@ def backtest_symbol(item, kind, cfg):
             continue
         is_buy = r["score"] > 0
         ok_side = (side == "both") or (side == "buy" and is_buy) or (side == "sell" and not is_buy)
+        # فلتر اتجاه السوق: امنع الشراء في سوق هابط والبيع في سوق صاعد (تاريخياً)
+        if ok_side and reg is not None:
+            mb = regime_bullish_at(reg, df["date"].iloc[i])
+            if mb is not None and ((is_buy and not mb) or (not is_buy and mb)):
+                ok_side = False
         if ok_side and abs(r["score"]) >= min_score:
             direction = 1 if is_buy else -1
             entry = r["price"]
@@ -1366,7 +1403,18 @@ def run_backtest(cfg, watchlist_path, out_dir):
         targets += [(it, "crypto") for it in parsed["crypto"]]
     print(f"رموز للاختبار: {len(targets)} | الإطار: {cfg['timeframe']} | "
           f"شموع: {cfg.get('bt_bars')} | إمساك: {cfg.get('bt_hold')} شمعة | "
-          f"الحد الأدنى للدرجة: {cfg['min_score']}\n")
+          f"الحد الأدنى للدرجة: {cfg['min_score']}")
+
+    # بناء سلسلة اتجاه السوق التاريخية إن كان الفلتر مفعّلاً
+    if cfg.get("market_filter"):
+        reg = {}
+        kinds = {kind for _, kind in targets}
+        for k in kinds:
+            reg[k] = build_regime_series(k)
+        cfg["_regime"] = reg
+        ok = [k for k, v in reg.items() if v is not None]
+        print(f"🌐 فلتر اتجاه السوق: مفعّل (BTC/SPY) — جاهز لـ: {', '.join(ok) or 'لا شيء'}")
+    print()
 
     all_trades = []
     done = 0
