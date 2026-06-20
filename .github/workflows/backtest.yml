@@ -32,6 +32,11 @@ on:
         type: choice
         options: ["on", "off"]
         default: "off"
+      supply_demand:
+        description: "شرط مناطق العرض/الطلب"
+        type: choice
+        options: ["on", "off"]
+        default: "off"
       vwap_daily:
         description: "شرط VWAP اليومي (لـ 4h/1h فقط)"
         type: choice
@@ -71,6 +76,7 @@ jobs:
           set -o pipefail
           FLAGS=""
           if [ "${{ inputs.market_filter }}" = "on" ]; then FLAGS="$FLAGS --market-filter"; fi
+          if [ "${{ inputs.supply_demand }}" = "on" ]; then FLAGS="$FLAGS --supply-demand"; fi
           if [ "${{ inputs.vwap_daily }}" = "on" ]; then FLAGS="$FLAGS --vwap-daily"; fi
           if [ "${{ inputs.vwap_weekly }}" = "on" ]; then FLAGS="$FLAGS --vwap-weekly"; fi
           if [ "${{ inputs.vwap_monthly }}" = "on" ]; then FLAGS="$FLAGS --vwap-monthly"; fi
