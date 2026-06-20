@@ -1343,6 +1343,241 @@ def supply_demand_ok(df, atr, direction, lookback=80, body_mult=1.5, vol_mult=1.
     return False
 
 
+def fetch_binance_paged(symbol, interval, total, limit=1000):
+    """يجلب أكثر من 1000 شمعة بالتقسيم (paging) رجوعاً عبر endTime.
+    يُستخدم للتحقّق خارج العيّنة على فترات أقدم."""
+    total = int(total)
+    cols = ["open_time", "open", "high", "low", "close", "volume",
+            "close_time", "qav", "trades", "tbav", "tqav", "ignore"]
+    frames, end_time, fetched, guard = [], None, 0, 0
+    while fetched < total and guard < 25:
+        guard += 1
+        n_req = min(limit, total - fetched)
+        params = {"symbol": symbol, "interval": interval, "limit": n_req}
+        if end_time is not None:
+            params["endTime"] = end_time
+        data = None
+        for base in BINANCE_BASES:
+            try:
+                r = requests.get(f"{base}/api/v3/klines", params=params, timeout=12)
+                if r.status_code == 200 and r.json():
+                    data = r.json(); break
+            except Exception:
+                continue
+        if not data:
+            break
+        df = pd.DataFrame(data, columns=cols)
+        for cc in ["open", "high", "low", "close", "volume"]:
+            df[cc] = pd.to_numeric(df[cc], errors="coerce")
+        df["date"] = pd.to_datetime(df["close_time"], unit="ms")
+        frames.append(df[["date", "open", "high", "low", "close", "volume", "open_time"]])
+        fetched += len(data)
+        end_time = int(data[0][0]) - 1            # قبل أقدم شمعة في هذه الدفعة
+        if len(data) < n_req:
+            break
+    if not frames:
+        return None
+    allf = (pd.concat(frames).drop_duplicates("open_time").sort_values("open_time")
+            .dropna().reset_index(drop=True))
+    return allf[["date", "open", "high", "low", "close", "volume"]]
+
+
+def _simulate_dca(df, i0, direct_entry, dca_levels, stop, targets, hold, manage, cost):
+    """محاكاة صفقة بدخول مباشر ثم DCA على مستويات فيبوناتشي.
+    T0 = دخول مباشر عند التأكيد، ثم تُملأ شرائح DCA كلما هبط السعر للمستوى.
+    R محسوبة على متوسط الدخول مقابل الوقف. الافتراض: شرائح متساوية الحجم."""
+    n = len(df)
+    if direct_entry <= stop or not targets:
+        return None
+    high = df["high"].values; low = df["low"].values; close = df["close"].values
+    tp1, tpf = targets[0], targets[-1]
+    filled = [direct_entry]; nxt = 0
+    tp1_done = False; realized = 0.0; part = 1.0
+    cur_stop = stop; last_c = direct_entry
+
+    def rv(px, avg):
+        return (px - avg) / (avg - stop) if (avg - stop) > 0 else 0.0
+
+    for j in range(i0 + 1, min(i0 + 1 + hold, n)):
+        lo, hi, last_c = low[j], high[j], close[j]
+        while nxt < len(dca_levels) and lo <= dca_levels[nxt]:   # ملء شرائح DCA
+            filled.append(dca_levels[nxt]); nxt += 1
+        avg = sum(filled) / len(filled)
+        cost_r = cost * avg / (avg - stop) if (avg - stop) > 0 else 0.0
+        if lo <= cur_stop:                                       # الوقف أولاً (محافظ)
+            realized += part * rv(cur_stop, avg)
+            return realized - cost_r, ("be_stop" if tp1_done else "stop")
+        if manage:
+            if not tp1_done and hi >= tp1:
+                realized += 0.5 * rv(tp1, avg); part = 0.5; tp1_done = True; cur_stop = avg
+            if tp1_done and hi >= tpf:
+                realized += part * rv(tpf, avg)
+                return realized - cost_r, "target"
+        else:
+            if hi >= tpf:
+                realized += part * rv(tpf, avg)
+                return realized - cost_r, "target"
+    avg = sum(filled) / len(filled)
+    cost_r = cost * avg / (avg - stop) if (avg - stop) > 0 else 0.0
+    realized += part * rv(last_c, avg)
+    return realized - cost_r, "time"
+
+
+def _bt_fetch_df(sym, kind, cfg):
+    """يجلب بيانات رمز للـbacktest مع دعم الجلب المقسّم وإزاحة خارج العيّنة."""
+    bars = cfg.get("bt_bars", 365)
+    offset = int(cfg.get("bt_offset", 0))
+    if kind == "crypto":
+        need = bars + 1000 + offset      # إحماء كافٍ لمتوسط 200 على 4h (≈800 شمعة 1h)
+        if need > 1000:
+            df = fetch_binance_paged(sym, BINANCE_INTERVAL[cfg["timeframe"]], need)
+        else:
+            df = fetch_binance(sym, BINANCE_INTERVAL[cfg["timeframe"]], min(need, 1000))
+    else:
+        df = fetch_stock(sym, YF_INTERVAL[cfg["timeframe"]], "2y")
+    if offset > 0 and df is not None and len(df) > offset + 120:
+        df = df.iloc[:len(df) - offset].reset_index(drop=True)
+    return df
+
+
+def backtest_symbol_reversal(item, kind, cfg):
+    """استراتيجية الانعكاس الزخمي:
+    RSI(21)<20 (تشبّع بيعي) → نتابع حتى RSI(21)>80 (تشبّع شرائي) →
+    ننتظر ارتداداً يصنع قاعاً أعلى من قاع الموجة ثم التفاتاً صعوديّاً → دخول.
+    الوقف تحت القاع الأعلى، أهداف 1R/2R/3R."""
+    sym = item["symbol"]
+    hold = cfg.get("bt_hold", 40)
+    bars = cfg.get("bt_bars", 365)
+    cost = cfg.get("cost", 0.0)
+    os_th = cfg.get("rsi_os", 20.0)
+    ob_th = cfg.get("rsi_ob", 80.0)
+
+    df = _bt_fetch_df(sym, kind, cfg)
+    if df is None or len(df) < 120:
+        return []
+    df = df.reset_index(drop=True)
+    n = len(df)
+    close = df["close"].values
+    high = df["high"].values
+    low = df["low"].values
+    rsi21 = rsi(df["close"], 21).values
+    atrs = atr(df, 14).values
+    # فلتر المتوسط 200 على 4h عند التأكيد (للساعة فقط): إغلاق الساعة فوق متوسط 200 المحسوب على 4h
+    ma200_ob = cfg.get("ma200_ob") and cfg.get("timeframe") == "1h"
+    if ma200_ob:
+        s4 = df.set_index("date")["close"].resample("4h").last().dropna()
+        sma4 = s4.rolling(200).mean().dropna().reset_index()
+        sma4.columns = ["date", "ma"]
+        sma200 = (pd.merge_asof(df[["date"]].copy(), sma4, on="date")["ma"].values
+                  if len(sma4) else np.full(n, np.nan))
+    else:
+        sma200 = None
+    dca_fib = cfg.get("dca_fib")
+
+    warmup = 60
+    start = max(warmup, n - bars)
+    trades = []
+
+    # حالات الآلة: 0=ننتظر تشبّع بيعي | 1=ننتظر تشبّع شرائي | 2=ننتظر القاع الأعلى
+    state = 0
+    ref_low = None      # أدنى قاع خلال موجة (بيعي→شرائي)
+    peak = None         # قمة التشبّع الشرائي (مرجع)
+    pull_low = None     # أدنى قاع في الارتداد بعد التشبّع الشرائي
+
+    i = start
+    while i < n - 1:
+        r = rsi21[i]
+        if np.isnan(r):
+            i += 1
+            continue
+
+        if state == 0:
+            if r < os_th:
+                state = 1
+                ref_low = low[i]
+        elif state == 1:
+            ref_low = min(ref_low, low[i])
+            if r > ob_th:
+                ok_trend = True
+                if ma200_ob:                       # شرط: الإغلاق فوق متوسط 200 عند التشبّع الشرائي
+                    m = sma200[i]
+                    ok_trend = (not np.isnan(m)) and close[i] > m
+                if ok_trend and dca_fib:
+                    # دخول مباشر عند التأكيد ثم DCA على ارتدادات فيبو للموجة (قاع→قمة)
+                    peak = high[i]
+                    imp = peak - ref_low
+                    atrv = atrs[i] if not np.isnan(atrs[i]) else close[i] * 0.02
+                    if imp > 0:
+                        direct = float(close[i])
+                        dca_levels = [peak - rr * imp for rr in (0.382, 0.5, 0.618, 0.786)]
+                        stp = float(ref_low - 0.5 * atrv)
+                        tps = [round(ref_low + m * imp, 8) for m in (1.272, 1.618, 2.0)]
+                        a = _simulate_dca(df, i, direct, dca_levels, stp, tps, hold, False, cost)
+                        b = _simulate_dca(df, i, direct, dca_levels, stp, tps, hold, True, cost)
+                        if a and b:
+                            trades.append({
+                                "symbol": sym, "kind": kind, "side": "buy", "bar": i,
+                                "date": str(df["date"].iloc[i])[:10], "score": 0,
+                                "entry": direct, "stop": stp,
+                                "R_plain": round(a[0], 3), "out_plain": a[1],
+                                "R_managed": round(b[0], 3), "out_managed": b[1],
+                            })
+                            i += hold
+                    state = 0
+                    ref_low = peak = pull_low = None
+                    continue
+                elif ok_trend:
+                    state = 2
+                    peak = high[i]
+                    pull_low = None
+                else:
+                    state = 0                       # الإشارة تحت المتوسط 200 → إعداد مرفوض
+                    ref_low = None
+        elif state == 2:
+            if high[i] > peak:                  # القمة ما زالت تصعد → حدّثها وأعد تتبّع الارتداد
+                peak = high[i]
+                pull_low = None
+            elif pull_low is None or low[i] < pull_low:
+                pull_low = low[i]               # نتتبّع أدنى قاع بعد القمة (نهاية التصحيح)
+            atrv = atrs[i] if not np.isnan(atrs[i]) else close[i] * 0.02
+            turn_up = pull_low is not None and close[i] > high[i - 1] and close[i] < peak
+            entered = False
+            if turn_up:
+                imp = peak - ref_low                          # موجة الدفع (قاع→قمة)
+                retr = (peak - pull_low) / imp if imp > 0 else 0.0   # عمق التصحيح بالفيبو
+                in_zone = cfg.get("fib_lo", 0.382) <= retr <= cfg.get("fib_hi", 0.786)
+                if in_zone:
+                    entry = float(close[i])
+                    stop = float(pull_low - 0.5 * atrv)
+                    risk = entry - stop
+                    corr = peak - pull_low                    # موجة التصحيح (للأهداف)
+                    # أهداف: امتداد فيبو لموجة التصحيح فوق القمة
+                    tps = [round(pull_low + m * corr, 8) for m in (1.272, 1.618, 2.618)]
+                    if risk > 0 and tps[0] > entry:
+                        a = _simulate_trade(df, i, entry, stop, tps, 1, hold, manage=False, cost=cost)
+                        b = _simulate_trade(df, i, entry, stop, tps, 1, hold, manage=True, cost=cost)
+                        if a and b:
+                            trades.append({
+                                "symbol": sym, "kind": kind, "side": "buy", "bar": i,
+                                "date": str(df["date"].iloc[i])[:10], "score": 0,
+                                "entry": entry, "stop": stop, "fib_retr": round(retr, 3),
+                                "R_plain": round(a[0], 3), "out_plain": a[1],
+                                "R_managed": round(b[0], 3), "out_managed": b[1],
+                            })
+                            entered = True
+                    # سواء دخلنا أو لا، انتهى هذا الإعداد عند ظهور الالتفات في المنطقة
+                    state = 0
+                    ref_low = peak = pull_low = None
+                    if entered:
+                        i += hold
+                        continue
+            if state == 2 and low[i] < ref_low:    # كسر قاع الموجة قبل الدخول → إلغاء
+                state = 0
+                ref_low = peak = pull_low = None
+        i += 1
+    return trades
+
+
 def backtest_symbol(item, kind, cfg):
     """يفتح صفقات افتراضية على تاريخ رمز واحد ويرجع قائمة صفقات مغلقة."""
     sym = item["symbol"]
@@ -1352,10 +1587,7 @@ def backtest_symbol(item, kind, cfg):
     min_score = cfg["min_score"]
     side = cfg.get("side", "buy")
 
-    if kind == "crypto":
-        df = fetch_binance(sym, BINANCE_INTERVAL[cfg["timeframe"]], min(bars + 220, 1000))
-    else:
-        df = fetch_stock(sym, YF_INTERVAL[cfg["timeframe"]], "2y")
+    df = _bt_fetch_df(sym, kind, cfg)
     if df is None or len(df) < 120:
         return []
     df = df.reset_index(drop=True)
@@ -1489,6 +1721,8 @@ def run_backtest(cfg, watchlist_path, out_dir):
     print(f"رموز للاختبار: {len(targets)} | الإطار: {cfg['timeframe']} | "
           f"شموع: {cfg.get('bt_bars')} | إمساك: {cfg.get('bt_hold')} شمعة | "
           f"الحد الأدنى للدرجة: {cfg['min_score']}")
+    if cfg.get("bt_offset"):
+        print(f"🔭 تحقّق خارج العيّنة: مُستبعَد أحدث {cfg['bt_offset']} شمعة (اختبار فترة أقدم)")
 
     # بناء سلسلة اتجاه السوق التاريخية إن كان الفلتر مفعّلاً
     if cfg.get("market_filter"):
@@ -1509,10 +1743,21 @@ def run_backtest(cfg, watchlist_path, out_dir):
         print("🟦 فلتر العرض/الطلب: مفعّل — دخول عند منطقة طازجة فقط")
     print()
 
+    bt_fn = backtest_symbol_reversal if cfg.get("strategy") == "reversal" else backtest_symbol
+    if cfg.get("strategy") == "reversal":
+        print("🎯 الاستراتيجية: انعكاس زخمي (RSI21<20 → >80 → قاع أعلى → دخول)")
+        if cfg.get("ma200_ob"):
+            if cfg.get("timeframe") == "1h":
+                print("   ➕ شرط: إغلاق فوق متوسط 200 (على 4h) عند التشبّع الشرائي")
+            else:
+                print("   ⚠️ شرط المتوسط 200 يُطبَّق على 1h فقط — مُتجاهَل هنا")
+        if cfg.get("dca_fib"):
+            print("   🪜 الدخول: مباشر عند التأكيد + DCA على فيبو 0.382/0.5/0.618/0.786")
+
     all_trades = []
     done = 0
     with ThreadPoolExecutor(max_workers=cfg["workers"]) as ex:
-        futs = {ex.submit(backtest_symbol, it, kind, cfg): it for it, kind in targets}
+        futs = {ex.submit(bt_fn, it, kind, cfg): it for it, kind in targets}
         for fut in as_completed(futs):
             done += 1
             if done % 25 == 0:
@@ -1554,14 +1799,203 @@ def run_backtest(cfg, watchlist_path, out_dir):
     print("\n⚠️ نتائج تاريخية افتراضية — لا تضمن الأداء المستقبلي. تحليل تعليمي فقط.")
 
 
+# ======================================================================
+#  8) التنبيه الحيّ لاستراتيجية الانعكاس (يرسل الإشارة فور إغلاق الشمعة)
+# ======================================================================
+def reversal_label(cfg):
+    """اسم الاستراتيجية لعرضه في رسالة تيليجرام للتمييز."""
+    tf = cfg.get("timeframe", "?")
+    return f"انعكاس {tf} " + ("DCA" if cfg.get("dca_fib") else "كلاسيكي")
+
+
+def detect_reversal_signal(df, cfg):
+    """يكشف إن كانت إشارة دخول انعكاسية تتحقق عند آخر شمعة *مغلقة* في df.
+    df يجب أن يكون قد استُبعدت منه الشمعة الجارية. يرجع dict أو None."""
+    os_th = cfg.get("rsi_os", 20.0)
+    ob_th = cfg.get("rsi_ob", 80.0)
+    dca_fib = cfg.get("dca_fib")
+    if df is None or len(df) < 60:
+        return None
+    df = df.reset_index(drop=True)
+    n = len(df)
+    close = df["close"].values
+    high = df["high"].values
+    low = df["low"].values
+    rsi21 = rsi(df["close"], 21).values
+    atrs = atr(df, 14).values
+    ma200_ob = cfg.get("ma200_ob") and cfg.get("timeframe") == "1h"
+    if ma200_ob:
+        s4 = df.set_index("date")["close"].resample("4h").last().dropna()
+        sma4 = s4.rolling(200).mean().dropna().reset_index()
+        sma4.columns = ["date", "ma"]
+        sma200 = (pd.merge_asof(df[["date"]].copy(), sma4, on="date")["ma"].values
+                  if len(sma4) else np.full(n, np.nan))
+    else:
+        sma200 = None
+
+    state = 0
+    ref_low = peak = pull_low = None
+    last_sig = None
+    i = 1
+    while i < n:
+        r = rsi21[i]
+        if np.isnan(r):
+            i += 1
+            continue
+        if state == 0:
+            if r < os_th:
+                state = 1
+                ref_low = low[i]
+        elif state == 1:
+            ref_low = min(ref_low, low[i])
+            if r > ob_th:
+                ok = True
+                if ma200_ob:
+                    m = sma200[i]
+                    ok = (not np.isnan(m)) and close[i] > m
+                if ok and dca_fib:
+                    peak = high[i]
+                    imp = peak - ref_low
+                    atrv = atrs[i] if not np.isnan(atrs[i]) else close[i] * 0.02
+                    if imp > 0:
+                        entry = float(close[i])
+                        stp = float(ref_low - 0.5 * atrv)
+                        dca = [round(peak - rr * imp, 8) for rr in (0.382, 0.5, 0.618, 0.786)]
+                        tps = [round(ref_low + mm * imp, 8) for mm in (1.272, 1.618, 2.0)]
+                        last_sig = (i, {"entry": entry, "stop": stp, "targets": tps, "dca": dca})
+                    state = 0
+                    ref_low = peak = pull_low = None
+                elif ok:
+                    state = 2
+                    peak = high[i]
+                    pull_low = None
+                else:
+                    state = 0
+                    ref_low = None
+        elif state == 2:
+            if high[i] > peak:
+                peak = high[i]
+                pull_low = None
+            elif pull_low is None or low[i] < pull_low:
+                pull_low = low[i]
+            atrv = atrs[i] if not np.isnan(atrs[i]) else close[i] * 0.02
+            turn_up = pull_low is not None and close[i] > high[i - 1] and close[i] < peak
+            if turn_up:
+                imp = peak - ref_low
+                retr = (peak - pull_low) / imp if imp > 0 else 0.0
+                if cfg.get("fib_lo", 0.382) <= retr <= cfg.get("fib_hi", 0.786):
+                    entry = float(close[i])
+                    stp = float(pull_low - 0.5 * atrv)
+                    corr = peak - pull_low
+                    tps = [round(pull_low + mm * corr, 8) for mm in (1.272, 1.618, 2.618)]
+                    last_sig = (i, {"entry": entry, "stop": stp, "targets": tps,
+                                    "dca": None, "retr": round(retr, 3)})
+                    state = 0
+                    ref_low = peak = pull_low = None
+            if state == 2 and low[i] < ref_low:
+                state = 0
+                ref_low = peak = pull_low = None
+        i += 1
+
+    if last_sig and last_sig[0] == n - 1:     # الإشارة عند آخر شمعة مغلقة فقط
+        return last_sig[1]
+    return None
+
+
+def format_reversal_card(sig, cfg, label):
+    """بطاقة تيليجرام لإشارة انعكاس حيّة، مُعنونة باسم الاستراتيجية."""
+    tf = cfg.get("timeframe", "?")
+    now = datetime.now().strftime("%H:%M:%S")
+    fmt = _fmt_price
+    lines = [SEP, f"🎯 إشارة انعكاس — {label}", SEP, "",
+             f"💰 العملة: {sig['symbol']}",
+             f"⏱️ الفريم: {tf}"]
+    if sig.get("dca"):
+        lines.append("🟢 الدخول: مباشر الآن + سلّم DCA على فيبوناتشي")
+        lines.append(f"   ▫️ الدخول المباشر: {fmt(sig['entry'])}")
+        lines.append("🪜 مستويات الإضافة (DCA):")
+        for k, lv in enumerate(sig["dca"], 1):
+            lines.append(f"   {k}) {fmt(lv)}")
+    else:
+        lines.append(f"🟢 الدخول (ارتداد فيبو {sig.get('retr')}): {fmt(sig['entry'])}")
+    for k, t in enumerate(sig["targets"], 1):
+        lines.append(f"🎯 الهدف {k}: {fmt(t)}")
+    lines.append(f"🛑 وقف الخسارة: {fmt(sig['stop'])}")
+    lines += [SEP, "", f"⏰ {now}", SEP, "",
+              "💡 إدارة المخاطر سر النجاح",
+              "⚠️ تحليل تعليمي — ليس نصيحة مالية"]
+    return "\n".join(lines)
+
+
+def live_reversal_scan(cfg, watchlist_path, state_path):
+    """يفحص القائمة على الإطار/الاستراتيجية المحدّدة، ويرسل إشارات الدخول الجديدة
+    (عند آخر شمعة مغلقة) إلى تيليجرام مع منع التكرار."""
+    token = cfg.get("tg_token") or os.environ.get("TELEGRAM_TOKEN")
+    chat_id = cfg.get("tg_chat") or os.environ.get("TELEGRAM_CHAT_ID")
+    label = reversal_label(cfg)
+    parsed = parse_watchlist(watchlist_path)
+    targets = parsed["crypto"]      # الاستراتيجية مُتحقَّقة على الكريبتو
+    print(f"[{label}] فحص {len(targets)} عملة ...")
+
+    alerted = load_trades(state_path) if os.path.exists(state_path) else {}
+    if not isinstance(alerted, dict):
+        alerted = {}
+    need = 1000 if cfg.get("timeframe") == "1h" else 320
+
+    def work(item):
+        sym = item["symbol"]
+        df = fetch_binance(sym, BINANCE_INTERVAL[cfg["timeframe"]], min(need, 1000))
+        if df is None or len(df) < 60:
+            return None
+        df = df.iloc[:-1]                       # استبعاد الشمعة الجارية (غير المغلقة)
+        sig = detect_reversal_signal(df, cfg)
+        if sig:
+            sig["symbol"] = sym
+            sig["bar_ts"] = str(df["date"].iloc[-1])
+        return sig
+
+    found = []
+    with ThreadPoolExecutor(max_workers=cfg.get("workers", 8)) as ex:
+        for fut in as_completed([ex.submit(work, it) for it in targets]):
+            try:
+                s = fut.result()
+            except Exception:
+                s = None
+            if s:
+                found.append(s)
+
+    sent = 0
+    for s in found:
+        key = f"{label}|{s['symbol']}|{s['bar_ts']}"
+        if alerted.get(key):
+            continue
+        if token and chat_id:
+            send_telegram(token, chat_id, format_reversal_card(s, cfg, label))
+            time.sleep(0.5)
+        alerted[key] = True
+        sent += 1
+        print(f"  📲 {label}: {s['symbol']} @ {s['bar_ts']}")
+    save_trades(alerted, state_path)
+    print(f"[{label}] إشارات جديدة مُرسَلة: {sent}")
+
+
 def build_argparser():
     p = argparse.ArgumentParser(description="بوت البحث عن الصفقات")
-    p.add_argument("--mode", choices=["scan", "monitor", "yearly", "backtest"], default="scan",
-                   help="scan: بحث | monitor: متابعة | yearly: المتوسط السنوي | backtest: اختبار تاريخي")
+    p.add_argument("--mode", choices=["scan", "monitor", "yearly", "backtest", "reversal"],
+                   default="scan",
+                   help="scan | monitor | yearly | backtest | reversal: تنبيه انعكاس حيّ")
     p.add_argument("--bt-bars", type=int, default=365,
                    help="عدد الشموع الأخيرة للاختبار التاريخي (افتراضي 365)")
     p.add_argument("--bt-hold", type=int, default=40,
                    help="أقصى عدد شموع لإمساك الصفقة الافتراضية (افتراضي 40)")
+    p.add_argument("--bt-offset", type=int, default=0,
+                   help="استبعاد أحدث N شمعة لاختبار فترة أقدم (تحقّق خارج العيّنة)")
+    p.add_argument("--strategy", choices=["score", "reversal"], default="score",
+                   help="score: النظام متعدد العوامل | reversal: انعكاس RSI الزخمي")
+    p.add_argument("--ma200-confirm", action="store_true",
+                   help="(انعكاس، 1h فقط) اشتراط إغلاق فوق متوسط 200 (على 4h) عند التشبّع الشرائي")
+    p.add_argument("--dca-fib", action="store_true",
+                   help="(انعكاس) دخول مباشر عند التأكيد ثم DCA على ارتدادات فيبوناتشي")
     p.add_argument("--cost", type=float, default=0.0,
                    help="تكلفة الصفقة ذهاباً وإياباً كنسبة (مثلاً 0.002 = 0.2%% عمولة+انزلاق)")
     p.add_argument("--watchlist", help="مسار ملف الـ watchlist (مطلوب في وضع scan)")
@@ -1613,9 +2047,15 @@ if __name__ == "__main__":
         "tg_token": args.telegram_token, "tg_chat": args.telegram_chat_id,
         "state_path": args.state,
         "bt_bars": args.bt_bars, "bt_hold": args.bt_hold, "cost": args.cost,
+        "bt_offset": args.bt_offset, "strategy": args.strategy,
+        "ma200_ob": args.ma200_confirm, "dca_fib": args.dca_fib,
     }
     if args.mode == "monitor":
         monitor(cfg, args.state)
+    elif args.mode == "reversal":
+        if not args.watchlist:
+            sys.exit("⚠️ وضع reversal يتطلب --watchlist")
+        live_reversal_scan(cfg, args.watchlist, args.state)
     elif args.mode == "backtest":
         if not args.watchlist:
             sys.exit("⚠️ وضع backtest يتطلب --watchlist")
