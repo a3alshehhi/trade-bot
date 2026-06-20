@@ -1,0 +1,62 @@
+name: reversal-live
+
+# تنبيه حيّ لاستراتيجيات الانعكاس على تيليجرام، فور إغلاق الشمعة.
+# كل 15 دقيقة (دقائق 8/23/38/53 لتجنّب ذروة GitHub عند رأس الساعة).
+# ثلاث استراتيجيات، كلٌّ برسالة مُعنونة باسمها:
+#   1) انعكاس 4h كلاسيكي   2) انعكاس 4h DCA   3) انعكاس 1h DCA (فلتر متوسط 200 على 4h)
+on:
+  schedule:
+    - cron: '8,23,38,53 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# يمنع تصادم تشغيلين عند حفظ حالة منع التكرار
+concurrency:
+  group: reversal-state
+  cancel-in-progress: false
+
+jobs:
+  reversal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Run live reversal scans
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          # 1) انعكاس 4h كلاسيكي
+          python trading_bot.py --mode reversal --watchlist watchlist.txt \
+            --timeframe 4h --state reversal_alerts.json
+          # 2) انعكاس 4h DCA
+          python trading_bot.py --mode reversal --watchlist watchlist.txt \
+            --timeframe 4h --dca-fib --state reversal_alerts.json
+          # 3) انعكاس 1h DCA + فلتر متوسط 200 على 4h
+          python trading_bot.py --mode reversal --watchlist watchlist.txt \
+            --timeframe 1h --dca-fib --ma200-confirm --state reversal_alerts.json
+
+      - name: Persist alert state
+        run: |
+          [ -f reversal_alerts.json ] && git add reversal_alerts.json
+          if ! git diff --cached --quiet; then
+            git config user.name "trade-bot"
+            git config user.email "bot@users.noreply.github.com"
+            git commit -m "update reversal alerts [skip ci]"
+            for i in 1 2 3 4 5; do
+              git pull --rebase --autostash origin main && git push && break
+              echo "push attempt $i failed, retrying in 5s..."
+              sleep 5
+            done
+          fi
