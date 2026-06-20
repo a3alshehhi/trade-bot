@@ -1038,8 +1038,9 @@
       66.27
     ],
     "opened_at": "2026-06-17T17:26:59",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-20T08:31:52"
   },
   {
     "id": "UMAUSDT-20260617172701",
@@ -1796,10 +1797,13 @@
       10.37
     ],
     "opened_at": "2026-06-17T17:29:04",
-    "status": "open",
+    "status": "closed_tp",
     "hit": [
-      "tp1"
-    ]
+      "tp1",
+      "tp2",
+      "tp3"
+    ],
+    "closed_at": "2026-06-20T08:31:56"
   },
   {
     "id": "NEOUSDT-20260617172905",
@@ -2283,8 +2287,9 @@
       46.16
     ],
     "opened_at": "2026-06-18T07:11:38",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-20T08:31:57"
   },
   {
     "id": "PROVEUSDT-20260618071148",
@@ -2689,8 +2694,9 @@
       24.69
     ],
     "opened_at": "2026-06-19T11:34:20",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-20T08:32:01"
   },
   {
     "id": "CFXUSDT-20260619113528",
@@ -2915,7 +2921,9 @@
     ],
     "opened_at": "2026-06-19T14:01:25",
     "status": "open",
-    "hit": []
+    "hit": [
+      "tp1"
+    ]
   },
   {
     "id": "FILUSDT-20260619140126",
@@ -3025,7 +3033,9 @@
     ],
     "opened_at": "2026-06-19T14:34:50",
     "status": "open",
-    "hit": []
+    "hit": [
+      "tp1"
+    ]
   },
   {
     "id": "ACTUSDT-20260619143451",
@@ -3531,7 +3541,8 @@
       8.56
     ],
     "opened_at": "2026-06-19T22:15:34",
-    "status": "open",
-    "hit": []
+    "status": "closed_sl",
+    "hit": [],
+    "closed_at": "2026-06-20T08:32:18"
   }
 ]
