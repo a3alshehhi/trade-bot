@@ -24,7 +24,7 @@ import sys
 import time
 import os
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import numpy as np
@@ -655,6 +655,45 @@ def save_trades(trades, path):
         json.dump(trades, f, ensure_ascii=False, indent=2)
 
 
+# ── الصفقات الورقية: تسجيل الإشارات المعلّقة لزر تيليجرام ──────────────────
+PENDING_FILE = "pending_signals.json"
+
+
+def register_pending_signal(sig, label, cfg, path=PENDING_FILE):
+    """يخزّن إشارة قابلة للفتح كصفقة ورقية، ويرجع مُعرّفاً قصيراً (≤ حد callback_data).
+    يُنظّف الإشارات الأقدم من 72 ساعة."""
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            pend = json.load(f)
+    except Exception:
+        pend = {}
+    if not isinstance(pend, dict):
+        pend = {}
+
+    # تنظيف القديم (> 72 ساعة)
+    cutoff = (datetime.now() - timedelta(hours=72)).isoformat()
+    pend = {k: v for k, v in pend.items()
+            if isinstance(v, dict) and v.get("created", "") >= cutoff}
+
+    # مُعرّف قصير وفريد: الوقت بالثواني + لاحقة من الرمز
+    pid = f"{int(time.time())}{abs(hash(sig['symbol'])) % 1000:03d}"
+    pend[pid] = {
+        "symbol": sig["symbol"],
+        "label": label,
+        "timeframe": cfg.get("timeframe"),
+        "strategy": "dca" if cfg.get("dca_fib") else "classic",
+        "entry": sig["entry"],
+        "stop": sig["stop"],
+        "targets": sig["targets"],
+        "dca": sig.get("dca"),
+        "bar_ts": sig.get("bar_ts"),
+        "created": datetime.now().isoformat(timespec="seconds"),
+    }
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(pend, f, ensure_ascii=False, indent=2)
+    return pid
+
+
 def make_trade(r, cfg):
     """يبني سجل صفقة من نتيجة إشارة."""
     return {
@@ -894,17 +933,22 @@ def scan_yearly_crosses(cfg, watchlist_path, state_path=YEARLY_STATE_FILE):
 # ======================================================================
 #  5.5) إرسال النتائج إلى تيليجرام
 # ======================================================================
-def send_telegram(token, chat_id, text):
-    """يرسل رسالة إلى تيليجرام. يقسّم الرسائل الطويلة (حد 4096 حرفاً)."""
+def send_telegram(token, chat_id, text, reply_markup=None):
+    """يرسل رسالة إلى تيليجرام. يقسّم الرسائل الطويلة (حد 4096 حرفاً).
+    reply_markup: لوحة أزرار inline (dict) تُرفق بآخر مقطع فقط."""
     if not token or not chat_id:
         return False
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     ok = True
-    for i in range(0, len(text), 3500):
-        chunk = text[i:i + 3500]
+    chunks = [text[i:i + 3500] for i in range(0, len(text), 3500)] or [text]
+    for idx, chunk in enumerate(chunks):
+        payload = {"chat_id": chat_id, "text": chunk,
+                   "disable_web_page_preview": True}
+        # الأزرار تُرفق بآخر مقطع فقط
+        if reply_markup is not None and idx == len(chunks) - 1:
+            payload["reply_markup"] = json.dumps(reply_markup, ensure_ascii=False)
         try:
-            r = requests.post(url, data={"chat_id": chat_id, "text": chunk,
-                                         "disable_web_page_preview": True}, timeout=15)
+            r = requests.post(url, data=payload, timeout=15)
             if r.status_code != 200:
                 ok = False
                 print(f"⚠️ تيليجرام: {r.status_code} {r.text[:200]}")
@@ -1970,7 +2014,12 @@ def live_reversal_scan(cfg, watchlist_path, state_path):
         if alerted.get(key):
             continue
         if token and chat_id:
-            send_telegram(token, chat_id, format_reversal_card(s, cfg, label))
+            pid = register_pending_signal(s, label, cfg)
+            markup = {"inline_keyboard": [[
+                {"text": "📝 افتح صفقة ورقية", "callback_data": f"o|{pid}"}
+            ]]}
+            send_telegram(token, chat_id, format_reversal_card(s, cfg, label),
+                          reply_markup=markup)
             time.sleep(0.5)
         alerted[key] = True
         sent += 1

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d1117">
+<title>متتبّع الصفقات الورقية</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root{
+    --bg:#0d1117; --card:#161b22; --line:#21262d; --muted:#8b949e;
+    --text:#e6edf3; --green:#2ea043; --red:#da3633; --blue:#388bfd;
+    --amber:#d29922;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;
+    background:var(--bg);color:var(--text);padding:16px;
+    max-width:1100px;margin:0 auto;-webkit-text-size-adjust:100%}
+  header{display:flex;justify-content:space-between;align-items:center;
+    flex-wrap:wrap;gap:10px;margin-bottom:18px}
+  h1{font-size:20px;font-weight:700}
+  .sub{color:var(--muted);font-size:12px;margin-top:3px}
+  button{background:var(--card);color:var(--text);border:1px solid var(--line);
+    border-radius:9px;padding:9px 14px;font-size:13px;cursor:pointer}
+  button:active{transform:scale(.97)}
+  .grid{display:grid;gap:12px;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:16px}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:14px}
+  .kpi .lbl{color:var(--muted);font-size:12px;margin-bottom:6px}
+  .kpi .val{font-size:24px;font-weight:700}
+  .pos{color:var(--green)} .neg{color:var(--red)} .neu{color:var(--amber)}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:16px;margin-bottom:16px}
+  .panel h2{font-size:15px;margin-bottom:12px;font-weight:600}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{padding:9px 8px;text-align:center;border-bottom:1px solid var(--line);
+    white-space:nowrap}
+  th{color:var(--muted);font-weight:600;font-size:12px}
+  td.sym{font-weight:700;text-align:right}
+  .tag{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;
+    background:#1f6feb22;color:var(--blue)}
+  .badge{padding:2px 9px;border-radius:20px;font-size:11px;font-weight:600}
+  .b-open{background:#1f6feb22;color:var(--blue)}
+  .b-win{background:#2ea04322;color:var(--green)}
+  .b-loss{background:#da363322;color:var(--red)}
+  .b-even{background:#d2992222;color:var(--amber)}
+  .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .empty{color:var(--muted);text-align:center;padding:26px;font-size:13px}
+  .chartbox{position:relative;height:260px}
+  .foot{color:var(--muted);font-size:11px;text-align:center;margin-top:8px;
+    line-height:1.7}
+  @media(max-width:560px){.kpi .val{font-size:20px}h1{font-size:17px}}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>📊 متتبّع الصفقات الورقية</h1>
+    <div class="sub" id="updated">جارٍ التحميل…</div>
+  </div>
+  <button onclick="load()">🔄 تحديث</button>
+</header>
+
+<div class="grid" id="kpis"></div>
+
+<div class="panel">
+  <h2>📈 منحنى رأس المال (تراكمي بالـ R)</h2>
+  <div class="chartbox"><canvas id="equity"></canvas></div>
+</div>
+
+<div class="panel">
+  <h2>🧭 الأداء حسب الاستراتيجية</h2>
+  <div class="scroll"><table id="byStrat"></table></div>
+</div>
+
+<div class="panel">
+  <h2>📂 الصفقات المفتوحة</h2>
+  <div class="scroll"><table id="openTbl"></table></div>
+</div>
+
+<div class="panel">
+  <h2>📜 سجل الصفقات الكامل</h2>
+  <div class="scroll"><table id="logTbl"></table></div>
+</div>
+
+<div class="foot">
+  ⚠️ أداة تتبّع ورقي تعليمية ونتائج افتراضية — ليست نصيحة مالية.<br>
+  الإدارة: جني 50% عند الهدف الأول مع نقل الوقف للتعادل، 25% للثاني، 25% للثالث.
+</div>
+
+<script>
+let chart;
+const fmtR = r => (r>=0?'+':'') + Number(r).toFixed(2) + 'R';
+const cls = r => r>1e-6?'pos':(r<-1e-6?'neg':'neu');
+const price = v => { v=Number(v); return v<1 ? v.toPrecision(4) : v.toLocaleString('en',{maximumFractionDigits:2}); };
+const strat = t => t.label || (t.strategy==='dca'?'DCA':'كلاسيكي');
+const dt = s => s? String(s).replace('T',' ').slice(5,16) : '—';
+
+async function load(){
+  let data;
+  try{
+    const r = await fetch('paper_data.json?t='+Date.now());
+    data = await r.json();
+  }catch(e){
+    document.getElementById('updated').textContent = 'تعذّر تحميل البيانات';
+    return;
+  }
+  const trades = data.trades||[], s = data.stats||{};
+  document.getElementById('updated').textContent =
+    'آخر تحديث: ' + dt(data.updated_at);
+
+  // KPIs
+  const pf = s.profit_factor===null||s.profit_factor>1e6 ? '∞' : Number(s.profit_factor||0).toFixed(2);
+  const kpis = [
+    ['نسبة الفوز', (s.win_rate||0)+'%', 'neu'],
+    ['معامل الربح', pf, (s.profit_factor>=1?'pos':'neg')],
+    ['إجمالي العائد', fmtR(s.total_R||0), cls(s.total_R||0)],
+    ['متوسط الصفقة', fmtR(s.avg_R||0), cls(s.avg_R||0)],
+    ['أقصى تراجع', fmtR(s.max_drawdown_R||0), 'neg'],
+    ['مفتوحة / مغلقة', (s.open||0)+' / '+(s.closed||0), 'neu'],
+  ];
+  document.getElementById('kpis').innerHTML = kpis.map(k=>
+    `<div class="kpi"><div class="lbl">${k[0]}</div>
+     <div class="val ${k[2]}">${k[1]}</div></div>`).join('');
+
+  // Equity curve (closed trades by close time)
+  const closed = trades.filter(t=>t.status==='closed' && t.result_R!=null)
+    .sort((a,b)=> String(a.closed_at).localeCompare(String(b.closed_at)));
+  let eq=0; const pts=[{x:'البداية',y:0}];
+  closed.forEach(t=>{ eq+=t.result_R; pts.push({x:t.symbol, y:Number(eq.toFixed(2))}); });
+  drawEquity(pts);
+
+  // By strategy
+  const by={};
+  closed.forEach(t=>{ const k=strat(t); (by[k]=by[k]||[]).push(t.result_R); });
+  const bs=document.getElementById('byStrat');
+  if(Object.keys(by).length){
+    bs.innerHTML = '<tr><th>الاستراتيجية</th><th>صفقات</th><th>فوز</th>'+
+      '<th>إجمالي R</th><th>متوسط R</th></tr>' +
+      Object.entries(by).map(([k,rs])=>{
+        const w=rs.filter(r=>r>0).length, tot=rs.reduce((a,b)=>a+b,0);
+        return `<tr><td class="sym">${k}</td><td>${rs.length}</td>
+          <td>${Math.round(w/rs.length*100)}%</td>
+          <td class="${cls(tot)}">${fmtR(tot)}</td>
+          <td class="${cls(tot/rs.length)}">${fmtR(tot/rs.length)}</td></tr>`;
+      }).join('');
+  } else bs.innerHTML = '<tr><td class="empty">لا صفقات مغلقة بعد</td></tr>';
+
+  // Open trades
+  const open = trades.filter(t=>t.status==='open');
+  const ot=document.getElementById('openTbl');
+  if(open.length){
+    ot.innerHTML='<tr><th>العملة</th><th>الاستراتيجية</th><th>فريم</th>'+
+      '<th>الدخول</th><th>الوقف</th><th>أهداف محقّقة</th><th>محقَّق</th></tr>'+
+      open.map(t=>`<tr><td class="sym">${t.symbol}</td>
+        <td><span class="tag">${strat(t)}</span></td><td>${t.timeframe}</td>
+        <td>${price(t.entry)}</td><td>${price(t.stop)}</td>
+        <td>${t.hits.length? t.hits.map(h=>'✅').join(''):'—'}</td>
+        <td class="${cls(t.realized_R)}">${fmtR(t.realized_R)}</td></tr>`).join('');
+  } else ot.innerHTML='<tr><td class="empty">لا صفقات مفتوحة — اضغط زر «افتح صفقة ورقية» في تيليجرام</td></tr>';
+
+  // Full log
+  const lg=document.getElementById('logTbl');
+  const all=[...trades].sort((a,b)=> String(b.opened_at).localeCompare(String(a.opened_at)));
+  if(all.length){
+    lg.innerHTML='<tr><th>العملة</th><th>الاستراتيجية</th><th>الحالة</th>'+
+      '<th>الدخول</th><th>فُتحت</th><th>أُغلقت</th><th>النتيجة</th></tr>'+
+      all.map(t=>{
+        let badge, res;
+        if(t.status==='open'){ badge='<span class="badge b-open">مفتوحة</span>'; res='—'; }
+        else{ const r=t.result_R||0;
+          const c=r>1e-6?'b-win':(r<-1e-6?'b-loss':'b-even');
+          const lbl=r>1e-6?'ربح':(r<-1e-6?'خسارة':'تعادل');
+          badge=`<span class="badge ${c}">${lbl}</span>`; res=`<span class="${cls(r)}">${fmtR(r)}</span>`; }
+        return `<tr><td class="sym">${t.symbol}</td>
+          <td><span class="tag">${strat(t)}</span></td><td>${badge}</td>
+          <td>${price(t.entry)}</td><td>${dt(t.opened_at)}</td>
+          <td>${dt(t.closed_at)}</td><td>${res}</td></tr>`;
+      }).join('');
+  } else lg.innerHTML='<tr><td class="empty">لا توجد صفقات بعد</td></tr>';
+}
+
+function drawEquity(pts){
+  const ctx=document.getElementById('equity');
+  const up = pts[pts.length-1].y>=0;
+  const col = up? '#2ea043':'#da3633';
+  if(chart) chart.destroy();
+  chart=new Chart(ctx,{type:'line',
+    data:{labels:pts.map(p=>p.x),
+      datasets:[{data:pts.map(p=>p.y),borderColor:col,borderWidth:2,
+        tension:.25,pointRadius:3,pointBackgroundColor:col,fill:true,
+        backgroundColor:col+'18'}]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},
+        tooltip:{callbacks:{label:c=>'تراكمي: '+(c.parsed.y>=0?'+':'')+c.parsed.y+'R'}}},
+      scales:{
+        y:{grid:{color:'#21262d'},ticks:{color:'#8b949e',callback:v=>v+'R'}},
+        x:{grid:{display:false},ticks:{color:'#8b949e',maxRotation:0,
+          autoSkip:true,maxTicksLimit:8}}}}});
+}
+load();
+</script>
+</body>
+</html>
