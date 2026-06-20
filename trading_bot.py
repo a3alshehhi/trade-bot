@@ -1201,12 +1201,15 @@ def run(cfg, watchlist_path, out_dir):
 #                    والباقي يركض للهدف الأخير أو يخرج عند نقطة الدخول.
 # الافتراض المحافظ: لو لمست الشمعة الوقف والهدف معاً، نعتبر الوقف ضُرب أولاً.
 
-def _simulate_trade(df, i, entry, stop, targets, direction, hold, manage):
-    """يحاكي مصير صفقة فُتحت عند الشمعة i. يرجع (R, نتيجة) أو None."""
+def _simulate_trade(df, i, entry, stop, targets, direction, hold, manage, cost=0.0):
+    """يحاكي مصير صفقة فُتحت عند الشمعة i. يرجع (R, نتيجة) أو None.
+    cost: تكلفة ذهاب-وإياب كنسبة من القيمة (عمولة+انزلاق)، تُطرح بوحدات R."""
     n = len(df)
     risk = abs(entry - stop)
     if risk <= 0 or not targets:
         return None
+    # تكلفة الصفقة بوحدات R: كلما ضاق الوقف، زاد وزن العمولة نسبياً
+    cost_r = cost * entry / risk if cost else 0.0
     high = df["high"].values
     low = df["low"].values
     close = df["close"].values
@@ -1229,7 +1232,7 @@ def _simulate_trade(df, i, entry, stop, targets, direction, hold, manage):
         # 1) الوقف أولاً (محافظ)
         if hit_stop(lo, hi):
             realized += part * direction * (stop_cur - entry) / risk
-            return realized, ("be_stop" if tp1_done else "stop")
+            return realized - cost_r, ("be_stop" if tp1_done else "stop")
         # 2) الأهداف
         if manage:
             if not tp1_done and hit(tp1, lo, hi):
@@ -1239,14 +1242,14 @@ def _simulate_trade(df, i, entry, stop, targets, direction, hold, manage):
                 stop_cur = entry          # نقل الوقف لنقطة الدخول
             if tp1_done and hit(tp_final, lo, hi):
                 realized += part * direction * (tp_final - entry) / risk
-                return realized, "target"
+                return realized - cost_r, "target"
         else:
             if hit(tp_final, lo, hi):
                 realized += part * direction * (tp_final - entry) / risk
-                return realized, "target"
+                return realized - cost_r, "target"
     # 3) خروج زمني عند آخر إغلاق متاح
     realized += part * direction * (last_c - entry) / risk
-    return realized, "time"
+    return realized - cost_r, "time"
 
 
 def build_regime_series(kind):
@@ -1360,8 +1363,9 @@ def backtest_symbol(item, kind, cfg):
             direction = 1 if is_buy else -1
             entry = r["price"]
             tps = [t["price"] for t in (r.get("targets") or [])]
-            simA = _simulate_trade(df, i, entry, r["stop"], tps, direction, hold, manage=False)
-            simB = _simulate_trade(df, i, entry, r["stop"], tps, direction, hold, manage=True)
+            cost = cfg.get("cost", 0.0)
+            simA = _simulate_trade(df, i, entry, r["stop"], tps, direction, hold, manage=False, cost=cost)
+            simB = _simulate_trade(df, i, entry, r["stop"], tps, direction, hold, manage=True, cost=cost)
             if simA and simB:
                 trades.append({
                     "symbol": sym, "kind": kind, "side": "buy" if is_buy else "sell",
@@ -1455,6 +1459,8 @@ def run_backtest(cfg, watchlist_path, out_dir):
         cfg["_regime"] = reg
         ok = [k for k, v in reg.items() if v is not None]
         print(f"🌐 فلتر اتجاه السوق: مفعّل (BTC/SPY) — جاهز لـ: {', '.join(ok) or 'لا شيء'}")
+    if cfg.get("cost"):
+        print(f"💸 تكلفة الصفقة (عمولة+انزلاق): {cfg['cost']*100:.2f}% ذهاباً وإياباً")
     vwf = [n for n, on in (("يومي", cfg.get("vwap_d")), ("أسبوعي", cfg.get("vwap_w")),
                            ("شهري", cfg.get("vwap_m"))) if on]
     if vwf:
@@ -1514,6 +1520,8 @@ def build_argparser():
                    help="عدد الشموع الأخيرة للاختبار التاريخي (افتراضي 365)")
     p.add_argument("--bt-hold", type=int, default=40,
                    help="أقصى عدد شموع لإمساك الصفقة الافتراضية (افتراضي 40)")
+    p.add_argument("--cost", type=float, default=0.0,
+                   help="تكلفة الصفقة ذهاباً وإياباً كنسبة (مثلاً 0.002 = 0.2%% عمولة+انزلاق)")
     p.add_argument("--watchlist", help="مسار ملف الـ watchlist (مطلوب في وضع scan)")
     p.add_argument("--state", default=TRADES_FILE, help="ملف حفظ الصفقات المفتوحة")
     p.add_argument("--assets", choices=["all", "crypto", "stocks"], default=DEFAULTS["assets"])
@@ -1560,7 +1568,7 @@ if __name__ == "__main__":
         "quiet_empty": args.quiet_empty,
         "tg_token": args.telegram_token, "tg_chat": args.telegram_chat_id,
         "state_path": args.state,
-        "bt_bars": args.bt_bars, "bt_hold": args.bt_hold,
+        "bt_bars": args.bt_bars, "bt_hold": args.bt_hold, "cost": args.cost,
     }
     if args.mode == "monitor":
         monitor(cfg, args.state)
