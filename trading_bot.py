@@ -1309,6 +1309,40 @@ def anchored_vwap_last(df, anchor):
     return float((tp * vol).sum() / denom)
 
 
+def supply_demand_ok(df, atr, direction, lookback=80, body_mult=1.5, vol_mult=1.2):
+    """يتحقق إن كان السعر الحالي عند منطقة طلب (شراء) أو عرض (بيع) طازجة.
+    منطقة الطلب = قاعدة (شمعة قبل) تلاها اندفاع صاعد قوي (جسم كبير + حجم مرتفع
+    = اختلال توازن). تبقى طازجة ما لم يُكسر قاعها لاحقاً. يرجع True/False/None."""
+    n = len(df)
+    if n < 25 or atr <= 0:
+        return None
+    o = df["open"].values; c = df["close"].values
+    h = df["high"].values; l = df["low"].values; v = df["volume"].values
+    seg = slice(max(0, n - lookback), n)
+    body = np.abs(c - o)
+    avg_body = float(np.mean(body[seg])) or 1e-9
+    avg_vol = float(np.mean(v[seg])) or 1e-9
+    price = float(c[-1])
+    band = 0.5 * atr
+    start = max(2, n - lookback)
+    # نمشي من الأحدث للأقدم ونرجع فور إيجاد منطقة طازجة قرب السعر
+    for j in range(n - 2, start - 1, -1):
+        strong = body[j] >= body_mult * avg_body and v[j] >= vol_mult * avg_vol
+        if not strong:
+            continue
+        if direction == 1 and c[j] > o[j]:          # اندفاع صاعد -> منطقة طلب
+            base_lo, base_hi = float(l[j - 1]), float(h[j - 1])
+            broken = bool(np.any(l[j + 1:n - 1] < base_lo)) if j + 1 < n - 1 else False
+            if not broken and (base_lo - band) <= price <= (base_hi + band):
+                return True
+        elif direction == -1 and c[j] < o[j]:        # اندفاع هابط -> منطقة عرض
+            base_lo, base_hi = float(l[j - 1]), float(h[j - 1])
+            broken = bool(np.any(h[j + 1:n - 1] > base_hi)) if j + 1 < n - 1 else False
+            if not broken and (base_lo - band) <= price <= (base_hi + band):
+                return True
+    return False
+
+
 def backtest_symbol(item, kind, cfg):
     """يفتح صفقات افتراضية على تاريخ رمز واحد ويرجع قائمة صفقات مغلقة."""
     sym = item["symbol"]
@@ -1359,6 +1393,12 @@ def backtest_symbol(item, kind, cfg):
                 vm = anchored_vwap_last(sub, "M")
                 if vm is not None and ((is_buy and pnow < vm) or (not is_buy and pnow > vm)):
                     ok_side = False
+        # فلتر العرض/الطلب: ندخل فقط إن كان السعر عند منطقة طلب/عرض طازجة
+        if ok_side and cfg.get("sd"):
+            dirn = 1 if is_buy else -1
+            sdok = supply_demand_ok(sub, float(r.get("atr") or 0.0), dirn)
+            if sdok is False:
+                ok_side = False
         if ok_side and abs(r["score"]) >= min_score:
             direction = 1 if is_buy else -1
             entry = r["price"]
@@ -1465,6 +1505,8 @@ def run_backtest(cfg, watchlist_path, out_dir):
                            ("شهري", cfg.get("vwap_m"))) if on]
     if vwf:
         print(f"📈 فلتر VWAP المثبّت: مفعّل ({' + '.join(vwf)}) — شراء فوق VWAP فقط")
+    if cfg.get("sd"):
+        print("🟦 فلتر العرض/الطلب: مفعّل — دخول عند منطقة طازجة فقط")
     print()
 
     all_trades = []
@@ -1533,6 +1575,8 @@ def build_argparser():
                    help="إرسال الصفقات ذات الدايفرجنس المؤكّد فقط")
     p.add_argument("--market-filter", action="store_true",
                    help="استبعاد الصفقات المعاكسة لاتجاه السوق العام (BTC/SPY)")
+    p.add_argument("--supply-demand", action="store_true",
+                   help="شرط مناطق العرض/الطلب (دخول عند منطقة طازجة فقط)")
     p.add_argument("--vwap-daily", action="store_true",
                    help="شرط VWAP مثبّت يومياً (ذو معنى على 4h/1h فقط)")
     p.add_argument("--vwap-weekly", action="store_true",
@@ -1563,7 +1607,7 @@ if __name__ == "__main__":
         "workers": args.workers, "assets": args.assets, "side": args.side,
         "tp_method": args.targets, "require_divergence": args.require_divergence,
         "market_filter": args.market_filter, "dca": args.dca,
-        "vwap_d": args.vwap_daily,
+        "vwap_d": args.vwap_daily, "sd": args.supply_demand,
         "vwap_w": args.vwap_weekly, "vwap_m": args.vwap_monthly,
         "quiet_empty": args.quiet_empty,
         "tg_token": args.telegram_token, "tg_chat": args.telegram_chat_id,
