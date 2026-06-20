@@ -24,6 +24,9 @@ on:
       bt_hold:
         description: "أقصى شموع لإمساك الصفقة"
         default: "40"
+      cost:
+        description: "تكلفة الصفقة ذهاب/إياب (0.002 = 0.2%)"
+        default: "0.002"
       market_filter:
         description: "فلتر اتجاه السوق (BTC/SPY)"
         type: choice
@@ -78,6 +81,7 @@ jobs:
             --min-score "${{ inputs.min_score }}" \
             --bt-bars "${{ inputs.bt_bars }}" \
             --bt-hold "${{ inputs.bt_hold }}" \
+            --cost "${{ inputs.cost }}" \
             $FLAGS \
             --output-dir . 2>&1 | tee backtest_log.txt
 
