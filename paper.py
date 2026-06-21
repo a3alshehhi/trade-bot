@@ -15,9 +15,10 @@ paper.py — متتبّع الصفقات الورقية (paper trading) للبو
   export   — ينسخ سجل الصفقات إلى docs/ للوحة ويحسب الإحصائيات.
   report   — يرسل ملخص الأداء إلى تيليجرام (للأمر /report أو يدوياً).
 
-الإدارة (مطابِقة لما تم التحقق منه خارج العيّنة): دخول كامل، ثم عند الهدف الأول
-يُجنى 50% ويُنقل الوقف إلى نقطة الدخول (breakeven)، 25% عند الهدف الثاني،
-و25% عند الثالث. النتيجة بالـ R = مجموع (الجزء × عائده).
+الإدارة (هجينة مُتحقَّقة بالباك-تست — الأفضل توازناً): مسك كامل بلا جني جزئي.
+عند بلوغ الهدف الأول يُرفع الوقف إلى سعر الدخول (تعادل)، ثم وقف متحرّك هيكلي
+تحت أدنى قاع في نافذة TRAIL_W ناقص TRAIL_BUF×ATR مع كل صعود، والخروج فوراً
+عند تشكّل دايفرجنس سلبي على RSI(21). النتيجة بالـ R = (سعر الخروج − الدخول) / المخاطرة.
 
 ⚠️ أداة تحليل تعليمية ونتائج افتراضية — ليست نصيحة مالية.
 """
@@ -28,13 +29,21 @@ import time
 import argparse
 from datetime import datetime
 
+import numpy as np
 import requests
 
 # إعادة استخدام أدوات البوت الأساسية
 from trading_bot import (
     fetch_binance, send_telegram, _fmt_price,
     BINANCE_INTERVAL, PENDING_FILE, DASHBOARD_URL,
+    rsi, atr, detect_divergence,
 )
+
+# إدارة هجينة (مُتحقَّقة بالباك-تست، الأفضل توازناً): تعادل عند الهدف الأول →
+# وقف متحرّك هيكلي تحت أدنى قاع في نافذة TRAIL_W ناقص TRAIL_BUF×ATR → خروج عند دايفرجنس سلبي.
+TRAIL_W = 10        # نافذة القاع للوقف المتحرّك
+TRAIL_BUF = 1.0     # حاجز ATR تحت القاع
+DIV_LOOKBACK = 60   # نافذة كشف الدايفرجنس السلبي
 
 _DASH_BTN = {"inline_keyboard": [[{"text": "📊 افتح المتتبّع", "url": DASHBOARD_URL}]]}
 
@@ -236,66 +245,85 @@ def monitor():
 
 
 def _update_trade(tr, token, chat_id):
+    """إدارة هجينة: تعادل عند الهدف الأول → وقف متحرّك هيكلي → خروج عند دايفرجنس سلبي.
+    مسك كامل بلا جني جزئي. الوقف المتحرّك يُحفظ في tr['stop'] ويستمر عبر التشغيلات."""
     sym = tr["symbol"]
     tf = tr["timeframe"]
     df = fetch_binance(sym, BINANCE_INTERVAL.get(tf, "4h"), 300)
-    if df is None or len(df) < 2:
+    if df is None or len(df) < 30:
         return
-    df = df.iloc[:-1]  # الشموع المغلقة فقط (نستبعد الجارية)
-
-    last_ts = tr.get("last_ts")
-    bars = df
-    if last_ts:
-        bars = df[df["date"].astype(str) > str(last_ts)]
-    if bars.empty:
-        return
+    df = df.iloc[:-1].reset_index(drop=True)   # الشموع المغلقة فقط
 
     entry, risk = tr["entry"], tr["risk"]
     if risk <= 0:
         return
     targets = tr["targets"]
+    tp1 = targets[0] if targets else None
+    low = df["low"].values
+    high = df["high"].values
+    rsi21 = rsi(df["close"], 21).values
+    atrs = atr(df, 14).values
+    last_ts = tr.get("last_ts")
+    cur = float(tr.get("stop", tr["stop_orig"]))   # الوقف الفعّال الحالي
 
-    for _, bar in bars.iterrows():
+    for p in range(len(df)):
         if tr["status"] != "open":
             break
-        hi, lo = float(bar["high"]), float(bar["low"])
-        bts = str(bar["date"])
+        bts = str(df["date"].iloc[p])
+        if last_ts and bts <= str(last_ts):
+            continue
+        lo = float(low[p]); hi = float(high[p]); c = float(df["close"].iloc[p])
 
         # 1) فحص الوقف أولاً (تحفّظياً)
-        eff_stop = entry if tr["breakeven"] else tr["stop_orig"]
-        if lo <= eff_stop:
-            R = (eff_stop - entry) / risk
-            tr["realized_R"] += tr["remaining"] * R
-            ev = "be_sl" if tr["breakeven"] else "sl"
-            tr["events"].append({"ts": bts, "type": ev,
-                                 "price": eff_stop, "R": round(R, 3)})
+        if lo <= cur:
+            R = (cur - entry) / risk
+            tr["realized_R"] = R
+            ev = ("be_sl" if abs(cur - entry) < 1e-9
+                  else ("trail_sl" if cur > tr["stop_orig"] + 1e-9 else "sl"))
+            tr["events"].append({"ts": bts, "type": ev, "price": cur, "R": round(R, 3)})
             tr["remaining"] = 0.0
+            tr["stop"] = cur
             tr["status"] = "closed"
             tr["last_ts"] = bts
-            _close_trade(tr, ev, eff_stop, token, chat_id)
+            _close_trade(tr, ev, cur, token, chat_id)
             break
 
-        # 2) فحص الأهداف بالترتيب
-        for i in (1, 2, 3):
-            if i in tr["hits"] or i > len(targets):
-                continue
-            if hi >= targets[i - 1]:
-                R_i = (targets[i - 1] - entry) / risk
-                frac = TP_FRACTIONS[i - 1]
-                tr["realized_R"] += frac * R_i
-                tr["remaining"] = max(0.0, tr["remaining"] - frac)
-                tr["hits"].append(i)
-                tr["breakeven"] = True
-                tr["stop"] = entry
-                tr["events"].append({"ts": bts, "type": f"tp{i}",
-                                     "price": targets[i - 1], "R": round(R_i, 3)})
-                _notify_event(tr, i, targets[i - 1], R_i, token, chat_id)
-                if i == 3 or tr["remaining"] <= 1e-9:
-                    tr["status"] = "closed"
-                    _close_trade(tr, f"tp{i}", targets[i - 1], token, chat_id)
+        # 2) تعادل عند الهدف الأول (نقل الوقف لسعر الدخول)
+        if not tr["breakeven"] and tp1 is not None and hi >= tp1:
+            tr["breakeven"] = True
+            cur = max(cur, entry)
+            if 1 not in tr["hits"]:
+                tr["hits"].append(1)
+            tr["events"].append({"ts": bts, "type": "tp1_be",
+                                 "price": tp1, "R": round((tp1 - entry) / risk, 3)})
+            _notify_be(tr, tp1, token, chat_id)
+
+        # 3) بعد التعادل: وقف متحرّك هيكلي + خروج عند دايفرجنس سلبي
+        if tr["breakeven"]:
+            w0 = max(0, p - TRAIL_W + 1)
+            swing = float(np.min(low[w0:p + 1]))
+            av = float(atrs[p]) if not np.isnan(atrs[p]) else entry * 0.02
+            cand = float(swing - TRAIL_BUF * av)
+            if cand > cur:
+                cur = cand
+                tr["events"].append({"ts": bts, "type": "trail", "price": round(cur, 8)})
+            if detect_divergence(low[:p + 1], high[:p + 1], rsi21[:p + 1],
+                                 lookback=DIV_LOOKBACK) == "bear":
+                R = (c - entry) / risk
+                tr["realized_R"] = R
+                tr["events"].append({"ts": bts, "type": "bear_div",
+                                     "price": c, "R": round(R, 3)})
+                tr["remaining"] = 0.0
+                tr["stop"] = cur
+                tr["status"] = "closed"
+                tr["last_ts"] = bts
+                _close_trade(tr, "bear_div", c, token, chat_id)
+                break
+
+        tr["stop"] = cur
         tr["last_ts"] = bts
 
-    if tr["status"] == "closed" and tr["result_R"] is None:
+    if tr["status"] == "closed" and tr.get("result_R") is None:
         tr["result_R"] = round(tr["realized_R"], 3)
         tr["closed_at"] = datetime.now().isoformat(timespec="seconds")
 
@@ -325,6 +353,23 @@ def _format_open_card(tr):
     lines += ["", "سأتابعها وأبلغك عند الهدف أو الوقف.",
               SEP, "⚠️ تتبّع ورقي تعليمي — ليس نصيحة مالية"]
     return "\n".join(lines)
+
+
+def _notify_be(tr, price, token, chat_id):
+    """إشعار بلوغ الهدف الأول ونقل الوقف للتعادل (بدء الإدارة الهجينة)."""
+    if not (token and chat_id):
+        return
+    f = _fmt_price
+    msg = "\n".join([
+        SEP, "🎯 تحقق الهدف الأول ✅ — رفع الوقف للتعادل", SEP, "",
+        f"💰 {tr['symbol']} — {_strat_name(tr)}",
+        f"🟢 الدخول: {f(tr['entry'])}",
+        f"💵 السعر: {f(price)}",
+        "🔒 الوقف الآن = الدخول (صفقة بلا خسارة)",
+        "🪜 سأرفع الوقف تحت كل تصحيح، وأخرج عند دايفرجنس سلبي.",
+        SEP,
+    ])
+    send_telegram(token, chat_id, msg)
 
 
 def _notify_event(tr, i, price, R, token, chat_id):
