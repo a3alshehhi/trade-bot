@@ -37,16 +37,16 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          # 1) انعكاس 4h كلاسيكي
-          python trading_bot.py --mode reversal --watchlist watchlist.txt \
+          # إشارة شراء بالزخم: فور تجاوز RSI(21) خط الـ80 — على 4 فريمات
+          python trading_bot.py --mode reversal --rsi-cross --watchlist watchlist.txt \
+            --timeframe 15m --state reversal_alerts.json
+          python trading_bot.py --mode reversal --rsi-cross --watchlist watchlist.txt \
+            --timeframe 1h --state reversal_alerts.json
+          python trading_bot.py --mode reversal --rsi-cross --watchlist watchlist.txt \
             --timeframe 4h --state reversal_alerts.json
-          # 2) انعكاس 4h DCA
-          python trading_bot.py --mode reversal --watchlist watchlist.txt \
-            --timeframe 4h --dca-fib --state reversal_alerts.json
-          # 3) انعكاس 1h DCA + فلتر متوسط 200 على 4h
-          python trading_bot.py --mode reversal --watchlist watchlist.txt \
-            --timeframe 1h --dca-fib --ma200-confirm --state reversal_alerts.json
-          # 4) متابعة الإشارات المُرسَلة والرد على رسالتها عند بلوغ هدف/وقف
+          python trading_bot.py --mode reversal --rsi-cross --watchlist watchlist.txt \
+            --timeframe 1d --state reversal_alerts.json
+          # متابعة الإشارات المُرسَلة والرد على رسالتها عند بلوغ هدف/وقف
           python trading_bot.py --mode trackmon
 
       - name: Paper trades — capture taps & monitor
