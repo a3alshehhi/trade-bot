@@ -1927,7 +1927,7 @@ def reversal_label(cfg):
     """اسم الاستراتيجية لعرضه في رسالة تيليجرام للتمييز."""
     tf = cfg.get("timeframe", "?")
     if cfg.get("rsi_cross"):
-        return f"RSI80 · {tf}"
+        return f"RSI{int(cfg.get('rsi_ob', 80.0))} · {tf}"
     return f"انعكاس {tf} " + ("DCA" if cfg.get("dca_fib") else "كلاسيكي")
 
 
@@ -2192,7 +2192,7 @@ def format_reversal_card(sig, cfg, label):
     lines = [f"{head} — {label}",
              f"💎 {sig['symbol']} · ⏱️ {tf}"]
     if sig.get("rsi") is not None:
-        lines.append(f"📈 RSI(21): {sig['rsi']} (تجاوز 80)")
+        lines.append(f"📈 RSI(21): {sig['rsi']} (تجاوز {int(cfg.get('rsi_ob', 80.0))})")
     lines.append("")
 
     # الدخول + مستويات الدخول على فيبوناتشي
