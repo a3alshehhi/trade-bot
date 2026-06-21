@@ -51,7 +51,7 @@ BINANCE_BASES = [
     "https://api.binance.com",
 ]
 # تعيين الإطار الزمني لصيغ Binance و yfinance
-BINANCE_INTERVAL = {"1d": "1d", "4h": "4h", "1h": "1h"}
+BINANCE_INTERVAL = {"1d": "1d", "4h": "4h", "1h": "1h", "15m": "15m"}
 YF_INTERVAL = {"1d": "1d", "4h": "1h", "1h": "1h"}  # yfinance لا يدعم 4h مباشرة
 YF_PERIOD = {"1d": "1y", "4h": "60d", "1h": "60d"}
 
@@ -1860,7 +1860,43 @@ def run_backtest(cfg, watchlist_path, out_dir):
 def reversal_label(cfg):
     """اسم الاستراتيجية لعرضه في رسالة تيليجرام للتمييز."""
     tf = cfg.get("timeframe", "?")
+    if cfg.get("rsi_cross"):
+        return f"RSI80 · {tf}"
     return f"انعكاس {tf} " + ("DCA" if cfg.get("dca_fib") else "كلاسيكي")
+
+
+def detect_rsi_cross_signal(df, cfg):
+    """إشارة شراء بالزخم: تتحقق فور تجاوز RSI(21) خط الـ80 صعوداً
+    عند آخر شمعة *مغلقة* في df (المُستبعَد منه الشمعة الجارية).
+    الوقف يعتمد على ATR، والأهداف بمضاعفات المخاطرة، مع مستويات
+    دخول فيبوناتشي على الموجة الصاعدة الأخيرة. يرجع dict أو None."""
+    ob = cfg.get("rsi_ob", 80.0)
+    if df is None or len(df) < 30:
+        return None
+    df = df.reset_index(drop=True)
+    n = len(df)
+    close = df["close"].values
+    low = df["low"].values
+    r = rsi(df["close"], 21).values
+    a = atr(df, 14).values
+    i = n - 1
+    if np.isnan(r[i]) or np.isnan(r[i - 1]):
+        return None
+    # تجاوز خط 80 صعوداً: الشمعة المغلقة ≥ 80 والسابقة < 80
+    if not (r[i] >= ob and r[i - 1] < ob):
+        return None
+    entry = float(close[i])
+    atrv = a[i] if not np.isnan(a[i]) else entry * 0.02
+    risk = 1.5 * atrv
+    stop = float(entry - risk)
+    targets = [round(entry + m * risk, 8) for m in (1.0, 2.0, 3.0)]
+    # مستويات دخول فيبوناتشي على الموجة الصاعدة (قاع آخر ~20 شمعة → الدخول)
+    lo_win = float(np.min(low[max(0, i - 20):i + 1]))
+    imp = entry - lo_win
+    fib_e = ([round(entry - rr * imp, 8) for rr in (0.236, 0.382, 0.5)]
+             if imp > 0 else [])
+    return {"entry": entry, "stop": stop, "targets": targets,
+            "dca": None, "fib_entries": fib_e, "rsi": round(float(r[i]), 1)}
 
 
 def detect_reversal_signal(df, cfg):
@@ -2080,8 +2116,12 @@ def format_reversal_card(sig, cfg, label):
     risk_pct = ((entry - stop) / entry * 100) if entry else 0.0
     nums = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣"]
 
-    lines = [f"🟢 انعكاس صعودي — {label}",
-             f"💎 {sig['symbol']} · ⏱️ {tf}", ""]
+    head = "🟢 اختراق RSI صعودي" if cfg.get("rsi_cross") else "🟢 انعكاس صعودي"
+    lines = [f"{head} — {label}",
+             f"💎 {sig['symbol']} · ⏱️ {tf}"]
+    if sig.get("rsi") is not None:
+        lines.append(f"📈 RSI(21): {sig['rsi']} (تجاوز 80)")
+    lines.append("")
 
     # الدخول + مستويات الدخول على فيبوناتشي
     if sig.get("dca"):
@@ -2125,7 +2165,8 @@ def live_reversal_scan(cfg, watchlist_path, state_path):
     alerted = load_trades(state_path) if os.path.exists(state_path) else {}
     if not isinstance(alerted, dict):
         alerted = {}
-    need = 1000 if cfg.get("timeframe") == "1h" else 320
+    need = 1000 if cfg.get("timeframe") in ("1h", "15m") else 320
+    detector = detect_rsi_cross_signal if cfg.get("rsi_cross") else detect_reversal_signal
 
     def work(item):
         sym = item["symbol"]
@@ -2133,7 +2174,7 @@ def live_reversal_scan(cfg, watchlist_path, state_path):
         if df is None or len(df) < 60:
             return None
         df = df.iloc[:-1]                       # استبعاد الشمعة الجارية (غير المغلقة)
-        sig = detect_reversal_signal(df, cfg)
+        sig = detector(df, cfg)
         if sig:
             sig["symbol"] = sym
             sig["bar_ts"] = str(df["date"].iloc[-1])
@@ -2216,7 +2257,9 @@ def build_argparser():
                    help="عرض سلّم دخول DCA (4 مستويات فيبوناتشي) ومتوسط الدخول")
     p.add_argument("--quiet-empty", action="store_true",
                    help="عدم إرسال رسالة عند عدم وجود فرص جديدة (للفحص المتكرر)")
-    p.add_argument("--timeframe", choices=["1d", "4h", "1h"], default=DEFAULTS["timeframe"])
+    p.add_argument("--timeframe", choices=["1d", "4h", "1h", "15m"], default=DEFAULTS["timeframe"])
+    p.add_argument("--rsi-cross", action="store_true",
+                   help="(reversal) إشارة شراء فور تجاوز RSI(21) خط الـ80 — استراتيجية زخم")
     p.add_argument("--top", type=int, default=DEFAULTS["top"])
     p.add_argument("--min-score", type=int, default=DEFAULTS["min_score"])
     p.add_argument("--workers", type=int, default=DEFAULTS["workers"])
@@ -2244,6 +2287,7 @@ if __name__ == "__main__":
         "bt_bars": args.bt_bars, "bt_hold": args.bt_hold, "cost": args.cost,
         "bt_offset": args.bt_offset, "strategy": args.strategy,
         "ma200_ob": args.ma200_confirm, "dca_fib": args.dca_fib,
+        "rsi_cross": args.rsi_cross,
     }
     if args.mode == "monitor":
         monitor(cfg, args.state)
