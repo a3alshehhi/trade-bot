@@ -32,8 +32,10 @@ import requests
 # إعادة استخدام أدوات البوت الأساسية
 from trading_bot import (
     fetch_binance, send_telegram, _fmt_price,
-    BINANCE_INTERVAL, PENDING_FILE,
+    BINANCE_INTERVAL, PENDING_FILE, DASHBOARD_URL,
 )
+
+_DASH_BTN = {"inline_keyboard": [[{"text": "📊 افتح المتتبّع", "url": DASHBOARD_URL}]]}
 
 PAPER_FILE = "paper_trades.json"
 OFFSET_FILE = "tg_offset.json"
@@ -153,7 +155,8 @@ def poll():
                 opened += 1
                 _answer_callback(token, cq["id"],
                                  f"✅ فُتحت صفقة ورقية: {tr['symbol']}")
-                send_telegram(token, chat_id, _format_open_card(tr))
+                send_telegram(token, chat_id, _format_open_card(tr),
+                              reply_markup=_DASH_BTN)
             continue
 
         # 2) أوامر نصية

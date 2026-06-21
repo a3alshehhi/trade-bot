@@ -20,9 +20,13 @@
     flex-wrap:wrap;gap:10px;margin-bottom:18px}
   h1{font-size:20px;font-weight:700}
   .sub{color:var(--muted);font-size:12px;margin-top:3px}
+  .row{display:flex;gap:8px;flex-wrap:wrap}
   button{background:var(--card);color:var(--text);border:1px solid var(--line);
     border-radius:9px;padding:9px 14px;font-size:13px;cursor:pointer}
   button:active{transform:scale(.97)}
+  button.primary{background:#1f6feb;border-color:#1f6feb;color:#fff;font-weight:600}
+  button.mini{padding:5px 9px;font-size:12px}
+  button.danger{color:var(--red)}
   .grid{display:grid;gap:12px;
     grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:16px}
   .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;
@@ -32,7 +36,8 @@
   .pos{color:var(--green)} .neg{color:var(--red)} .neu{color:var(--amber)}
   .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;
     padding:16px;margin-bottom:16px}
-  .panel h2{font-size:15px;margin-bottom:12px;font-weight:600}
+  .panel h2{font-size:15px;margin-bottom:12px;font-weight:600;
+    display:flex;justify-content:space-between;align-items:center;gap:8px}
   table{width:100%;border-collapse:collapse;font-size:13px}
   th,td{padding:9px 8px;text-align:center;border-bottom:1px solid var(--line);
     white-space:nowrap}
@@ -40,6 +45,7 @@
   td.sym{font-weight:700;text-align:right}
   .tag{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;
     background:#1f6feb22;color:var(--blue)}
+  .tag.man{background:#d2992222;color:var(--amber)}
   .badge{padding:2px 9px;border-radius:20px;font-size:11px;font-weight:600}
   .b-open{background:#1f6feb22;color:var(--blue)}
   .b-win{background:#2ea04322;color:var(--green)}
@@ -50,6 +56,21 @@
   .chartbox{position:relative;height:260px}
   .foot{color:var(--muted);font-size:11px;text-align:center;margin-top:8px;
     line-height:1.7}
+  /* modal */
+  .overlay{position:fixed;inset:0;background:#000a;display:none;
+    align-items:center;justify-content:center;padding:16px;z-index:50}
+  .overlay.show{display:flex}
+  .modal{background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:18px;width:100%;max-width:420px;max-height:90vh;overflow:auto}
+  .modal h3{font-size:16px;margin-bottom:14px}
+  .fld{margin-bottom:11px}
+  .fld label{display:block;color:var(--muted);font-size:12px;margin-bottom:5px}
+  .fld input,.fld select{width:100%;background:var(--bg);color:var(--text);
+    border:1px solid var(--line);border-radius:8px;padding:9px;font-size:14px}
+  .three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+  .modal-actions{display:flex;gap:8px;margin-top:6px}
+  .modal-actions button{flex:1}
+  .hint{color:var(--muted);font-size:11px;margin-top:4px}
   @media(max-width:560px){.kpi .val{font-size:20px}h1{font-size:17px}}
 </style>
 </head>
@@ -59,34 +80,78 @@
     <h1>📊 متتبّع الصفقات الورقية</h1>
     <div class="sub" id="updated">جارٍ التحميل…</div>
   </div>
-  <button onclick="load()">🔄 تحديث</button>
+  <div class="row">
+    <button class="primary" onclick="openForm()">➕ صفقة جديدة</button>
+    <button onclick="load()">🔄 تحديث</button>
+  </div>
 </header>
 
 <div class="grid" id="kpis"></div>
 
+<!-- صفقاتي اليدوية (محلية + أسعار حيّة) -->
 <div class="panel">
-  <h2>📈 منحنى رأس المال (تراكمي بالـ R)</h2>
+  <h2><span>🧮 صفقاتي (يدوية — أسعار حيّة)</span>
+      <span class="sub" id="localSum"></span></h2>
+  <div class="scroll"><table id="localTbl"></table></div>
+  <div class="hint">تُحفظ في متصفحك فقط (هذا الجهاز). الأسعار الحيّة للأزواج المنتهية بـ USDT.</div>
+</div>
+
+<div class="panel">
+  <h2>📈 منحنى رأس المال (صفقات تيليجرام المغلقة — تراكمي بالـ R)</h2>
   <div class="chartbox"><canvas id="equity"></canvas></div>
 </div>
 
 <div class="panel">
-  <h2>🧭 الأداء حسب الاستراتيجية</h2>
+  <h2>🧭 الأداء حسب الاستراتيجية (تيليجرام)</h2>
   <div class="scroll"><table id="byStrat"></table></div>
 </div>
 
 <div class="panel">
-  <h2>📂 الصفقات المفتوحة</h2>
+  <h2>📂 صفقات تيليجرام المفتوحة</h2>
   <div class="scroll"><table id="openTbl"></table></div>
 </div>
 
 <div class="panel">
-  <h2>📜 سجل الصفقات الكامل</h2>
+  <h2>📜 سجل صفقات تيليجرام</h2>
   <div class="scroll"><table id="logTbl"></table></div>
 </div>
 
 <div class="foot">
   ⚠️ أداة تتبّع ورقي تعليمية ونتائج افتراضية — ليست نصيحة مالية.<br>
   الإدارة: جني 50% عند الهدف الأول مع نقل الوقف للتعادل، 25% للثاني، 25% للثالث.
+</div>
+
+<!-- نموذج إضافة/تعديل -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <h3 id="formTitle">➕ صفقة جديدة</h3>
+    <div class="fld"><label>العملة / الرمز (مثل BTCUSDT)</label>
+      <input id="f_symbol" placeholder="BTCUSDT" autocomplete="off"></div>
+    <div class="three">
+      <div class="fld"><label>النوع</label>
+        <select id="f_side"><option value="buy">شراء</option>
+          <option value="sell">بيع</option></select></div>
+      <div class="fld"><label>الفريم</label>
+        <select id="f_tf"><option>1h</option><option selected>4h</option>
+          <option>1d</option></select></div>
+      <div class="fld"><label>الاستراتيجية</label>
+        <input id="f_label" placeholder="يدوي"></div>
+    </div>
+    <div class="three">
+      <div class="fld"><label>الدخول</label><input id="f_entry" type="number" step="any"></div>
+      <div class="fld"><label>الوقف</label><input id="f_stop" type="number" step="any"></div>
+      <div class="fld"><label>هدف 1</label><input id="f_t1" type="number" step="any"></div>
+    </div>
+    <div class="three">
+      <div class="fld"><label>هدف 2</label><input id="f_t2" type="number" step="any"></div>
+      <div class="fld"><label>هدف 3</label><input id="f_t3" type="number" step="any"></div>
+      <div class="fld"><label>&nbsp;</label></div>
+    </div>
+    <div class="modal-actions">
+      <button class="primary" onclick="saveForm()">💾 حفظ</button>
+      <button onclick="closeForm()">إلغاء</button>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -97,20 +162,139 @@ const price = v => { v=Number(v); return v<1 ? v.toPrecision(4) : v.toLocaleStri
 const strat = t => t.label || (t.strategy==='dca'?'DCA':'كلاسيكي');
 const dt = s => s? String(s).replace('T',' ').slice(5,16) : '—';
 
-async function load(){
+/* ───────── الصفقات اليدوية (localStorage) ───────── */
+const LS_KEY = 'ptracker_local_v1';
+let editingId = null;
+let priceCache = {};
+const loadLocal = () => { try{return JSON.parse(localStorage.getItem(LS_KEY))||[]}catch(e){return[]} };
+const saveLocal = a => localStorage.setItem(LS_KEY, JSON.stringify(a));
+
+function openForm(t){
+  editingId = t? t.id : null;
+  document.getElementById('formTitle').textContent = t? '✏️ تعديل الصفقة' : '➕ صفقة جديدة';
+  const g = id => document.getElementById(id);
+  g('f_symbol').value = t? t.symbol : '';
+  g('f_side').value   = t? t.side   : 'buy';
+  g('f_tf').value     = t? t.timeframe : '4h';
+  g('f_label').value  = t? (t.label||'') : '';
+  g('f_entry').value  = t? t.entry : '';
+  g('f_stop').value   = t? t.stop  : '';
+  g('f_t1').value     = t&&t.t1!=null? t.t1 : '';
+  g('f_t2').value     = t&&t.t2!=null? t.t2 : '';
+  g('f_t3').value     = t&&t.t3!=null? t.t3 : '';
+  document.getElementById('overlay').classList.add('show');
+}
+function closeForm(){ document.getElementById('overlay').classList.remove('show'); }
+
+function saveForm(){
+  const g = id => document.getElementById(id).value.trim();
+  const num = v => v===''? null : Number(v);
+  const sym = g('f_symbol').toUpperCase();
+  const entry = num(g('f_entry')), stop = num(g('f_stop'));
+  if(!sym || entry==null || stop==null){ alert('الرجاء إدخال العملة والدخول والوقف.'); return; }
+  const arr = loadLocal();
+  const rec = {
+    id: editingId || ('L'+Date.now()),
+    symbol: sym, side: g('f_side'), timeframe: g('f_tf'),
+    label: g('f_label') || 'يدوي',
+    entry, stop, t1:num(g('f_t1')), t2:num(g('f_t2')), t3:num(g('f_t3')),
+    opened_at: editingId ? (arr.find(x=>x.id===editingId)||{}).opened_at || new Date().toISOString()
+                         : new Date().toISOString(),
+  };
+  const i = arr.findIndex(x=>x.id===rec.id);
+  if(i>=0) arr[i]=rec; else arr.push(rec);
+  saveLocal(arr); closeForm(); refreshPrices().then(renderLocal);
+}
+function editTrade(id){ const t=loadLocal().find(x=>x.id===id); if(t) openForm(t); }
+function delTrade(id){
+  if(!confirm('حذف هذه الصفقة؟')) return;
+  saveLocal(loadLocal().filter(x=>x.id!==id)); renderLocal();
+}
+
+async function fetchPrice(sym){
+  if(!/USDT$/.test(sym)) return null;
+  const urls=['https://data-api.binance.vision/api/v3/ticker/price?symbol='+sym,
+              'https://api.binance.com/api/v3/ticker/price?symbol='+sym];
+  for(const u of urls){
+    try{ const r=await fetch(u); if(r.ok){ const j=await r.json(); if(j.price) return Number(j.price); } }
+    catch(e){}
+  }
+  return null;
+}
+async function refreshPrices(){
+  const syms=[...new Set(loadLocal().map(t=>t.symbol.toUpperCase()))];
+  await Promise.all(syms.map(async s=>{ const p=await fetchPrice(s); if(p!=null) priceCache[s]=p; }));
+}
+
+function liveStats(t){
+  const p = priceCache[t.symbol.toUpperCase()];
+  const buy = t.side!=='sell';
+  const risk = Math.abs(t.entry - t.stop);
+  const tps = [t.t1,t.t2,t.t3].filter(x=>x!=null);
+  let R=null, status='جارية', sClass='neu';
+  if(p!=null && risk>0){
+    R = buy ? (p-t.entry)/risk : (t.entry-p)/risk;
+    if((buy && p<=t.stop) || (!buy && p>=t.stop)){ status='ضرب الوقف 🛑'; sClass='neg'; }
+    else{
+      let hit=0;
+      tps.forEach((tp,i)=>{ if((buy && p>=tp)||(!buy && p<=tp)) hit=i+1; });
+      if(hit>0){ status='هدف '+hit+' ✅'; sClass='pos'; }
+    }
+  }
+  return {p,R,status,sClass,tps,buy};
+}
+
+function renderLocal(){
+  const arr = loadLocal();
+  const tb = document.getElementById('localTbl');
+  if(!arr.length){
+    tb.innerHTML='<tr><td class="empty">لا صفقات يدوية بعد — اضغط «➕ صفقة جديدة»</td></tr>';
+    document.getElementById('localSum').textContent=''; return;
+  }
+  let sumR=0, withPx=0;
+  const rows = arr.map(t=>{
+    const L=liveStats(t);
+    if(L.R!=null){ sumR+=L.R; withPx++; }
+    const pxTxt = L.p!=null? price(L.p) : '—';
+    const rTxt  = L.R!=null? `<span class="${cls(L.R)}">${fmtR(L.R)}</span>` : '—';
+    const tgs = L.tps.length? L.tps.map((tp,i)=>{
+        const done = L.p!=null && ((L.buy&&L.p>=tp)||(!L.buy&&L.p<=tp));
+        return (done?'✅':(i+1))+'·'+price(tp);
+      }).join(' ') : '—';
+    return `<tr>
+      <td class="sym">${t.symbol}<div class="sub">${t.side==='sell'?'🔴 بيع':'🟢 شراء'} · ${t.timeframe}</div></td>
+      <td><span class="tag man">${t.label||'يدوي'}</span></td>
+      <td>${price(t.entry)}</td>
+      <td><b>${pxTxt}</b></td>
+      <td>${price(t.stop)}</td>
+      <td style="text-align:right">${tgs}</td>
+      <td>${rTxt}</td>
+      <td><span class="${L.sClass}">${L.status}</span></td>
+      <td>
+        <button class="mini" onclick="editTrade('${t.id}')">✏️</button>
+        <button class="mini danger" onclick="delTrade('${t.id}')">🗑️</button>
+      </td></tr>`;
+  }).join('');
+  tb.innerHTML = '<tr><th>العملة</th><th>استراتيجية</th><th>الدخول</th>'+
+    '<th>السعر الحيّ</th><th>الوقف</th><th>الأهداف</th><th>R حيّ</th>'+
+    '<th>الحالة</th><th></th></tr>' + rows;
+  document.getElementById('localSum').textContent =
+    `${arr.length} صفقة · مجموع R الحيّ: ${withPx? fmtR(sumR):'—'}`;
+}
+
+/* ───────── بيانات الخادم (تيليجرام) ───────── */
+async function loadServer(){
   let data;
   try{
     const r = await fetch('paper_data.json?t='+Date.now());
     data = await r.json();
   }catch(e){
-    document.getElementById('updated').textContent = 'تعذّر تحميل البيانات';
+    document.getElementById('updated').textContent = 'تعذّر تحميل بيانات الخادم';
     return;
   }
   const trades = data.trades||[], s = data.stats||{};
-  document.getElementById('updated').textContent =
-    'آخر تحديث: ' + dt(data.updated_at);
+  document.getElementById('updated').textContent = 'آخر تحديث (تيليجرام): ' + dt(data.updated_at);
 
-  // KPIs
   const pf = s.profit_factor===null||s.profit_factor>1e6 ? '∞' : Number(s.profit_factor||0).toFixed(2);
   const kpis = [
     ['نسبة الفوز', (s.win_rate||0)+'%', 'neu'],
@@ -124,14 +308,12 @@ async function load(){
     `<div class="kpi"><div class="lbl">${k[0]}</div>
      <div class="val ${k[2]}">${k[1]}</div></div>`).join('');
 
-  // Equity curve (closed trades by close time)
   const closed = trades.filter(t=>t.status==='closed' && t.result_R!=null)
     .sort((a,b)=> String(a.closed_at).localeCompare(String(b.closed_at)));
   let eq=0; const pts=[{x:'البداية',y:0}];
   closed.forEach(t=>{ eq+=t.result_R; pts.push({x:t.symbol, y:Number(eq.toFixed(2))}); });
   drawEquity(pts);
 
-  // By strategy
   const by={};
   closed.forEach(t=>{ const k=strat(t); (by[k]=by[k]||[]).push(t.result_R); });
   const bs=document.getElementById('byStrat');
@@ -147,7 +329,6 @@ async function load(){
       }).join('');
   } else bs.innerHTML = '<tr><td class="empty">لا صفقات مغلقة بعد</td></tr>';
 
-  // Open trades
   const open = trades.filter(t=>t.status==='open');
   const ot=document.getElementById('openTbl');
   if(open.length){
@@ -156,11 +337,10 @@ async function load(){
       open.map(t=>`<tr><td class="sym">${t.symbol}</td>
         <td><span class="tag">${strat(t)}</span></td><td>${t.timeframe}</td>
         <td>${price(t.entry)}</td><td>${price(t.stop)}</td>
-        <td>${t.hits.length? t.hits.map(h=>'✅').join(''):'—'}</td>
-        <td class="${cls(t.realized_R)}">${fmtR(t.realized_R)}</td></tr>`).join('');
-  } else ot.innerHTML='<tr><td class="empty">لا صفقات مفتوحة — اضغط زر «افتح صفقة ورقية» في تيليجرام</td></tr>';
+        <td>${t.hits&&t.hits.length? t.hits.map(h=>'✅').join(''):'—'}</td>
+        <td class="${cls(t.realized_R)}">${fmtR(t.realized_R||0)}</td></tr>`).join('');
+  } else ot.innerHTML='<tr><td class="empty">لا صفقات مفتوحة من تيليجرام</td></tr>';
 
-  // Full log
   const lg=document.getElementById('logTbl');
   const all=[...trades].sort((a,b)=> String(b.opened_at).localeCompare(String(a.opened_at)));
   if(all.length){
@@ -178,7 +358,7 @@ async function load(){
           <td>${price(t.entry)}</td><td>${dt(t.opened_at)}</td>
           <td>${dt(t.closed_at)}</td><td>${res}</td></tr>`;
       }).join('');
-  } else lg.innerHTML='<tr><td class="empty">لا توجد صفقات بعد</td></tr>';
+  } else lg.innerHTML='<tr><td class="empty">لا توجد صفقات من تيليجرام بعد</td></tr>';
 }
 
 function drawEquity(pts){
@@ -199,7 +379,14 @@ function drawEquity(pts){
         x:{grid:{display:false},ticks:{color:'#8b949e',maxRotation:0,
           autoSkip:true,maxTicksLimit:8}}}}});
 }
+
+async function load(){
+  await loadServer();
+  await refreshPrices();
+  renderLocal();
+}
 load();
+setInterval(()=>{ refreshPrices().then(renderLocal); }, 30000);  // أسعار حيّة كل 30 ثانية
 </script>
 </body>
 </html>

@@ -933,13 +933,15 @@ def scan_yearly_crosses(cfg, watchlist_path, state_path=YEARLY_STATE_FILE):
 # ======================================================================
 #  5.5) إرسال النتائج إلى تيليجرام
 # ======================================================================
-def send_telegram(token, chat_id, text, reply_markup=None):
+def send_telegram(token, chat_id, text, reply_markup=None, reply_to=None):
     """يرسل رسالة إلى تيليجرام. يقسّم الرسائل الطويلة (حد 4096 حرفاً).
-    reply_markup: لوحة أزرار inline (dict) تُرفق بآخر مقطع فقط."""
+    reply_markup: لوحة أزرار inline (dict) تُرفق بآخر مقطع فقط.
+    reply_to: message_id لجعل الرسالة رداً على رسالة سابقة.
+    يرجع message_id لأول مقطع عند النجاح، أو None عند الفشل."""
     if not token or not chat_id:
-        return False
+        return None
     url = f"https://api.telegram.org/bot{token}/sendMessage"
-    ok = True
+    msg_id = None
     chunks = [text[i:i + 3500] for i in range(0, len(text), 3500)] or [text]
     for idx, chunk in enumerate(chunks):
         payload = {"chat_id": chat_id, "text": chunk,
@@ -947,18 +949,27 @@ def send_telegram(token, chat_id, text, reply_markup=None):
         # الأزرار تُرفق بآخر مقطع فقط
         if reply_markup is not None and idx == len(chunks) - 1:
             payload["reply_markup"] = json.dumps(reply_markup, ensure_ascii=False)
+        # الرد يُربط بأول مقطع فقط
+        if reply_to is not None and idx == 0:
+            payload["reply_to_message_id"] = reply_to
         try:
             r = requests.post(url, data=payload, timeout=15)
             if r.status_code != 200:
-                ok = False
                 print(f"⚠️ تيليجرام: {r.status_code} {r.text[:200]}")
+            elif idx == 0:
+                try:
+                    msg_id = r.json()["result"]["message_id"]
+                except Exception:
+                    msg_id = None
         except Exception as e:
-            ok = False
             print(f"⚠️ تعذّر الإرسال إلى تيليجرام: {e}")
-    return ok
+    return msg_id
 
 
 SEP = "━━━━━━━━━━━━━━━━━━"
+
+# رابط لوحة المتتبّع (GitHub Pages) — يُرفق كزر في الرسائل
+DASHBOARD_URL = os.environ.get("DASHBOARD_URL", "https://a3alshehhi.github.io/trade-bot/")
 
 
 def _trend_label(pct):
@@ -1932,8 +1943,12 @@ def detect_reversal_signal(df, cfg):
                     stp = float(pull_low - 0.5 * atrv)
                     corr = peak - pull_low
                     tps = [round(pull_low + mm * corr, 8) for mm in (1.272, 1.618, 2.618)]
+                    # مستويات الدخول على فيبوناتشي (ارتدادات الموجة الصاعدة ref_low→peak)
+                    fib_e = ([round(peak - rr * imp, 8) for rr in (0.382, 0.5, 0.618, 0.786)]
+                             if imp > 0 else [])
                     last_sig = (i, {"entry": entry, "stop": stp, "targets": tps,
-                                    "dca": None, "retr": round(retr, 3)})
+                                    "dca": None, "retr": round(retr, 3),
+                                    "fib_entries": fib_e})
                     state = 0
                     ref_low = peak = pull_low = None
             if state == 2 and low[i] < ref_low:
@@ -1946,27 +1961,153 @@ def detect_reversal_signal(df, cfg):
     return None
 
 
+TRACK_FILE = "tracked_signals.json"
+
+
+def track_signal(sig, label, cfg, message_id, path=TRACK_FILE):
+    """يخزّن إشارة مُرسَلة لمتابعتها لاحقاً (أهداف/وقف) والرد على رسالتها الأصلية.
+    يُنظّف الإشارات الأقدم من 14 يوماً."""
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception:
+        data = {}
+    if not isinstance(data, dict):
+        data = {}
+    cutoff = (datetime.now() - timedelta(days=14)).isoformat()
+    data = {k: v for k, v in data.items()
+            if isinstance(v, dict) and v.get("created", "") >= cutoff}
+    key = f"{label}|{sig['symbol']}|{sig.get('bar_ts')}"
+    data[key] = {
+        "symbol": sig["symbol"],
+        "label": label,
+        "timeframe": cfg.get("timeframe"),
+        "message_id": message_id,
+        "entry": sig["entry"],
+        "stop": sig["stop"],
+        "targets": sig["targets"],
+        "bar_ts": sig.get("bar_ts"),
+        "hits": [],
+        "stopped": False,
+        "hi_seen": sig["entry"],
+        "lo_seen": sig["entry"],
+        "created": datetime.now().isoformat(timespec="seconds"),
+    }
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def monitor_tracked_signals(cfg, path=TRACK_FILE):
+    """يتابع الإشارات المُرسَلة؛ عند بلوغ أي هدف أو ضرب الوقف يرسل رداً
+    على رسالة الصفقة الأصلية في تيليجرام (reply_to_message_id)."""
+    token = cfg.get("tg_token") or os.environ.get("TELEGRAM_TOKEN")
+    chat_id = cfg.get("tg_chat") or os.environ.get("TELEGRAM_CHAT_ID")
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception:
+        print("[متابعة] لا توجد إشارات مُتابَعة.")
+        return
+    if not isinstance(data, dict) or not data:
+        print("[متابعة] لا توجد إشارات مُتابَعة.")
+        return
+
+    fmt = _fmt_price
+    changed = False
+    active = [(k, v) for k, v in data.items()
+              if not v.get("stopped")
+              and len(v.get("hits", [])) < len(v.get("targets", []))]
+    print(f"[متابعة] إشارات نشطة: {len(active)}")
+
+    for key, tr in active:
+        tf = tr.get("timeframe", "4h")
+        df = fetch_binance(tr["symbol"], BINANCE_INTERVAL.get(tf, "4h"), 6)
+        if df is None or len(df) < 1:
+            continue
+        # اعتبر فقط الشموع التي تلت شمعة الإشارة (تفادي قمم ما قبل الإشارة)
+        try:
+            bar = pd.Timestamp(tr.get("bar_ts"))
+            post = df[df["date"] > bar]
+        except Exception:
+            post = df.iloc[-1:]
+        if len(post) < 1:
+            post = df.iloc[-1:]
+        hi = float(post["high"].max())
+        lo = float(post["low"].min())
+        tr["hi_seen"] = max(tr.get("hi_seen", hi), hi)
+        tr["lo_seen"] = min(tr.get("lo_seen", lo), lo)
+        mid = tr.get("message_id")
+
+        # 1) وقف الخسارة أولاً
+        if tr["lo_seen"] <= tr["stop"]:
+            txt = (f"🛑 {tr['symbol']} — ضرب وقف الخسارة\n"
+                   f"السعر: {fmt(tr['stop'])}")
+            if token and chat_id:
+                send_telegram(token, chat_id, txt, reply_to=mid)
+            tr["stopped"] = True
+            changed = True
+            print(f"  🛑 {tr['symbol']}: وقف")
+            continue
+
+        # 2) الأهداف بالترتيب
+        for k, t in enumerate(tr["targets"], 1):
+            if k in tr["hits"]:
+                continue
+            if tr["hi_seen"] >= t:
+                tr["hits"].append(k)
+                gain = ((t - tr["entry"]) / tr["entry"] * 100) if tr["entry"] else 0.0
+                txt = (f"🎯 {tr['symbol']} — تحقق الهدف {k} {'✅' * k}\n"
+                       f"السعر: {fmt(t)}  (+{gain:.2f}%)")
+                if token and chat_id:
+                    send_telegram(token, chat_id, txt, reply_to=mid)
+                changed = True
+                print(f"  🎯 {tr['symbol']}: هدف {k}")
+                time.sleep(0.4)
+
+    if changed:
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+    print("[متابعة] انتهت.")
+
+
 def format_reversal_card(sig, cfg, label):
     """بطاقة تيليجرام لإشارة انعكاس حيّة، مُعنونة باسم الاستراتيجية."""
     tf = cfg.get("timeframe", "?")
     now = datetime.now().strftime("%H:%M:%S")
     fmt = _fmt_price
-    lines = [SEP, f"🎯 إشارة انعكاس — {label}", SEP, "",
-             f"💰 العملة: {sig['symbol']}",
-             f"⏱️ الفريم: {tf}"]
+    entry = sig["entry"]
+    stop = sig["stop"]
+    risk_pct = ((entry - stop) / entry * 100) if entry else 0.0
+    nums = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣"]
+
+    lines = [f"🟢 انعكاس صعودي — {label}",
+             f"💎 {sig['symbol']} · ⏱️ {tf}", ""]
+
+    # الدخول + مستويات الدخول على فيبوناتشي
     if sig.get("dca"):
-        lines.append("🟢 الدخول: مباشر الآن + سلّم DCA على فيبوناتشي")
-        lines.append(f"   ▫️ الدخول المباشر: {fmt(sig['entry'])}")
-        lines.append("🪜 مستويات الإضافة (DCA):")
+        lines.append(f"📍 الدخول المباشر: {fmt(entry)}")
+        lines.append("🪜 مستويات الدخول (فيبوناتشي):")
         for k, lv in enumerate(sig["dca"], 1):
             lines.append(f"   {k}) {fmt(lv)}")
     else:
-        lines.append(f"🟢 الدخول (ارتداد فيبو {sig.get('retr')}): {fmt(sig['entry'])}")
-    for k, t in enumerate(sig["targets"], 1):
-        lines.append(f"🎯 الهدف {k}: {fmt(t)}")
-    lines.append(f"🛑 وقف الخسارة: {fmt(sig['stop'])}")
-    lines += [SEP, "", f"⏰ {now}", SEP, "",
-              "💡 إدارة المخاطر سر النجاح",
+        retr = sig.get("retr")
+        suffix = f"  (ارتداد فيبو {retr})" if retr is not None else ""
+        lines.append(f"📍 الدخول: {fmt(entry)}{suffix}")
+        if sig.get("fib_entries"):
+            lines.append("🪜 مستويات الدخول (فيبوناتشي):")
+            for k, lv in enumerate(sig["fib_entries"], 1):
+                lines.append(f"   {k}) {fmt(lv)}")
+
+    lines.append(f"🛑 الوقف: {fmt(stop)}  (−{risk_pct:.2f}%)")
+    lines += ["", "🎯 الأهداف:"]
+    for k, t in enumerate(sig["targets"]):
+        gain = ((t - entry) / entry * 100) if entry else 0.0
+        n = nums[k] if k < len(nums) else f"{k + 1})"
+        lines.append(f"{n} {fmt(t)}  (+{gain:.2f}%)")
+
+    lines += ["",
+              f"⚖️ المخاطرة لكل صفقة: {risk_pct:.2f}% من الدخول",
+              f"⏰ {now}", "",
               "⚠️ تحليل تعليمي — ليس نصيحة مالية"]
     return "\n".join(lines)
 
@@ -2016,10 +2157,14 @@ def live_reversal_scan(cfg, watchlist_path, state_path):
         if token and chat_id:
             pid = register_pending_signal(s, label, cfg)
             markup = {"inline_keyboard": [[
-                {"text": "📝 افتح صفقة ورقية", "callback_data": f"o|{pid}"}
+                {"text": "📝 افتح صفقة ورقية", "callback_data": f"o|{pid}"},
+                {"text": "📊 المتتبّع", "url": DASHBOARD_URL},
             ]]}
-            send_telegram(token, chat_id, format_reversal_card(s, cfg, label),
-                          reply_markup=markup)
+            mid = send_telegram(token, chat_id, format_reversal_card(s, cfg, label),
+                                reply_markup=markup)
+            # خزّن الإشارة للمتابعة والرد على رسالتها عند الهدف/الوقف
+            if mid:
+                track_signal(s, label, cfg, mid)
             time.sleep(0.5)
         alerted[key] = True
         sent += 1
@@ -2030,9 +2175,10 @@ def live_reversal_scan(cfg, watchlist_path, state_path):
 
 def build_argparser():
     p = argparse.ArgumentParser(description="بوت البحث عن الصفقات")
-    p.add_argument("--mode", choices=["scan", "monitor", "yearly", "backtest", "reversal"],
+    p.add_argument("--mode", choices=["scan", "monitor", "yearly", "backtest", "reversal", "trackmon"],
                    default="scan",
-                   help="scan | monitor | yearly | backtest | reversal: تنبيه انعكاس حيّ")
+                   help="scan | monitor | yearly | backtest | reversal: تنبيه انعكاس حيّ | "
+                        "trackmon: متابعة الإشارات والرد على رسالتها عند الهدف/الوقف")
     p.add_argument("--bt-bars", type=int, default=365,
                    help="عدد الشموع الأخيرة للاختبار التاريخي (افتراضي 365)")
     p.add_argument("--bt-hold", type=int, default=40,
@@ -2101,6 +2247,8 @@ if __name__ == "__main__":
     }
     if args.mode == "monitor":
         monitor(cfg, args.state)
+    elif args.mode == "trackmon":
+        monitor_tracked_signals(cfg)
     elif args.mode == "reversal":
         if not args.watchlist:
             sys.exit("⚠️ وضع reversal يتطلب --watchlist")
