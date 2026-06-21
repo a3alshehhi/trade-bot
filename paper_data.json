@@ -1,13 +1,249 @@
 {
-  "updated_at": "2026-06-20T18:29:27",
+  "updated_at": "2026-06-21T22:03:24",
   "stats": {
-    "open": 0,
-    "closed": 0,
-    "win_rate": 0.0,
-    "profit_factor": 0.0,
-    "total_R": 0.0,
-    "avg_R": 0.0,
-    "max_drawdown_R": 0.0
+    "open": 4,
+    "closed": 3,
+    "win_rate": 33.3,
+    "profit_factor": 5.68,
+    "total_R": 4.68,
+    "avg_R": 1.561,
+    "max_drawdown_R": -1.0
   },
-  "trades": []
+  "trades": [
+    {
+      "id": "1782038794288",
+      "symbol": "TNSRUSDT",
+      "label": "انعكاس 4h DCA",
+      "strategy": "dca",
+      "timeframe": "4h",
+      "side": "buy",
+      "entry": 0.0494,
+      "stop": 0.025908723908017867,
+      "stop_orig": 0.025908723908017867,
+      "targets": [
+        0.0612624,
+        0.0705006,
+        0.0807
+      ],
+      "risk": 0.023491276091982132,
+      "opened_at": "2026-06-21T22:03:14",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_R": 0.0,
+      "result_R": null,
+      "events": [],
+      "last_ts": "2026-06-21 19:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782054194497",
+      "symbol": "BICOUSDT",
+      "label": "RSI80 · 1d",
+      "strategy": "classic",
+      "timeframe": "1d",
+      "side": "buy",
+      "entry": 0.0627,
+      "stop": 0.05498868972339402,
+      "stop_orig": 0.05498868972339402,
+      "targets": [
+        0.0750488,
+        0.0907572,
+        0.1361572
+      ],
+      "risk": 0.007711310276605987,
+      "opened_at": "2026-06-21T22:03:14",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_R": 0.0,
+      "result_R": null,
+      "events": [],
+      "last_ts": "2026-06-20 23:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782061015487",
+      "symbol": "2ZUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.07986,
+      "stop": 0.07986,
+      "stop_orig": 0.07805148790556007,
+      "targets": [
+        0.08139408,
+        0.08334552,
+        0.08898552
+      ],
+      "risk": 0.0018085120944399263,
+      "opened_at": "2026-06-21T22:03:14",
+      "status": "closed",
+      "hits": [
+        1
+      ],
+      "breakeven": true,
+      "remaining": 0.0,
+      "realized_R": 5.684230717397323,
+      "result_R": 5.684,
+      "events": [
+        {
+          "ts": "2026-06-21 16:59:59.999000",
+          "type": "tp1_be",
+          "price": 0.08139408,
+          "R": 0.848
+        },
+        {
+          "ts": "2026-06-21 16:59:59.999000",
+          "type": "bear_div",
+          "price": 0.09014,
+          "R": 5.684
+        }
+      ],
+      "last_ts": "2026-06-21 16:59:59.999000",
+      "closed_at": "2026-06-21T22:03:18"
+    },
+    {
+      "id": "1782061035777",
+      "symbol": "2ZUSDT",
+      "label": "RSI70 · 1h",
+      "strategy": "classic",
+      "timeframe": "1h",
+      "side": "buy",
+      "entry": 0.07856,
+      "stop": 0.07856,
+      "stop_orig": 0.07639814418865869,
+      "targets": [
+        0.08159008,
+        0.08544452,
+        0.09658452
+      ],
+      "risk": 0.0021618558113413178,
+      "opened_at": "2026-06-21T22:03:14",
+      "status": "closed",
+      "hits": [
+        1
+      ],
+      "breakeven": true,
+      "remaining": 0.0,
+      "realized_R": 0.0,
+      "result_R": 0.0,
+      "events": [
+        {
+          "ts": "2026-06-21 16:59:59.999000",
+          "type": "tp1_be",
+          "price": 0.08159008,
+          "R": 1.402
+        },
+        {
+          "ts": "2026-06-21 19:59:59.999000",
+          "type": "be_sl",
+          "price": 0.07856,
+          "R": 0.0
+        }
+      ],
+      "last_ts": "2026-06-21 19:59:59.999000",
+      "closed_at": "2026-06-21T22:03:20"
+    },
+    {
+      "id": "1782061036137",
+      "symbol": "LTCUSDT",
+      "label": "RSI70 · 1h",
+      "strategy": "classic",
+      "timeframe": "1h",
+      "side": "buy",
+      "entry": 45.93,
+      "stop": 45.495823393275344,
+      "stop_orig": 45.495823393275344,
+      "targets": [
+        46.44408,
+        47.09802,
+        48.98802
+      ],
+      "risk": 0.4341766067246553,
+      "opened_at": "2026-06-21T22:03:14",
+      "status": "closed",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 0.0,
+      "realized_R": -1.0,
+      "result_R": -1.0,
+      "events": [
+        {
+          "ts": "2026-06-21 16:59:59.999000",
+          "type": "sl",
+          "price": 45.495823393275344,
+          "R": -1.0
+        }
+      ],
+      "last_ts": "2026-06-21 16:59:59.999000",
+      "closed_at": "2026-06-21T22:03:21"
+    },
+    {
+      "id": "1782061053927",
+      "symbol": "SAGAUSDT",
+      "label": "RSI70 · 4h",
+      "strategy": "classic",
+      "timeframe": "4h",
+      "side": "buy",
+      "entry": 0.01596,
+      "stop": 0.01596,
+      "stop_orig": 0.014978806770639987,
+      "targets": [
+        0.0168848,
+        0.0180612,
+        0.0214612
+      ],
+      "risk": 0.0009811932293600119,
+      "opened_at": "2026-06-21T22:03:14",
+      "status": "open",
+      "hits": [
+        1
+      ],
+      "breakeven": true,
+      "remaining": 1.0,
+      "realized_R": 0.0,
+      "result_R": null,
+      "events": [
+        {
+          "ts": "2026-06-21 19:59:59.999000",
+          "type": "tp1_be",
+          "price": 0.0168848,
+          "R": 0.943
+        }
+      ],
+      "last_ts": "2026-06-21 19:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782079363641",
+      "symbol": "TNSRUSDT",
+      "label": "RSI70 · 4h",
+      "strategy": "classic",
+      "timeframe": "4h",
+      "side": "buy",
+      "entry": 0.0482,
+      "stop": 0.04193150483868239,
+      "stop_orig": 0.04193150483868239,
+      "targets": [
+        0.0537216,
+        0.0607454,
+        0.0810454
+      ],
+      "risk": 0.006268495161317611,
+      "opened_at": "2026-06-21T22:03:14",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_R": 0.0,
+      "result_R": null,
+      "events": [],
+      "last_ts": "2026-06-21 19:59:59.999000",
+      "closed_at": null
+    }
+  ]
 }

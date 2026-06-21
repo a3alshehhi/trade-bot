@@ -35,9 +35,9 @@
       1,
       2
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0878,
-    "lo_seen": 0.07971,
+    "lo_seen": 0.07565,
     "created": "2026-06-21T16:56:55"
   },
   "RSI70 · 1h|2ZUSDT|2026-06-21 15:59:59.999000": {
@@ -57,9 +57,9 @@
       1,
       2
     ],
-    "stopped": false,
-    "hi_seen": 0.0878,
-    "lo_seen": 0.07818,
+    "stopped": true,
+    "hi_seen": 0.09304,
+    "lo_seen": 0.07565,
     "created": "2026-06-21T16:57:15"
   },
   "RSI70 · 1h|LTCUSDT|2026-06-21 15:59:59.999000": {
@@ -99,7 +99,26 @@
     ],
     "stopped": false,
     "hi_seen": 0.01791,
-    "lo_seen": 0.01588,
+    "lo_seen": 0.01518,
     "created": "2026-06-21T16:57:34"
+  },
+  "RSI70 · 4h|TNSRUSDT|2026-06-21 19:59:59.999000": {
+    "symbol": "TNSRUSDT",
+    "label": "RSI70 · 4h",
+    "timeframe": "4h",
+    "message_id": 755,
+    "entry": 0.0482,
+    "stop": 0.04193150483868239,
+    "targets": [
+      0.0537216,
+      0.0607454,
+      0.0810454
+    ],
+    "bar_ts": "2026-06-21 19:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0533,
+    "lo_seen": 0.0456,
+    "created": "2026-06-21T22:02:43"
   }
 }
