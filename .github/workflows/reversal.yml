@@ -37,14 +37,14 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          # إشارة شراء بالزخم: فور تجاوز RSI(21) خط الـ80 — على 4 فريمات
-          python trading_bot.py --mode reversal --rsi-cross --watchlist watchlist.txt \
+          # إشارة شراء بالزخم: فور تجاوز RSI(21) خط الـ70 — على 4 فريمات
+          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --watchlist watchlist.txt \
             --timeframe 15m --state reversal_alerts.json
-          python trading_bot.py --mode reversal --rsi-cross --watchlist watchlist.txt \
+          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --watchlist watchlist.txt \
             --timeframe 1h --state reversal_alerts.json
-          python trading_bot.py --mode reversal --rsi-cross --watchlist watchlist.txt \
+          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --watchlist watchlist.txt \
             --timeframe 4h --state reversal_alerts.json
-          python trading_bot.py --mode reversal --rsi-cross --watchlist watchlist.txt \
+          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --watchlist watchlist.txt \
             --timeframe 1d --state reversal_alerts.json
           # متابعة الإشارات المُرسَلة والرد على رسالتها عند بلوغ هدف/وقف
           python trading_bot.py --mode trackmon
