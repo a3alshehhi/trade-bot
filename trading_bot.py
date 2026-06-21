@@ -1708,6 +1708,65 @@ def backtest_symbol(item, kind, cfg):
     return trades
 
 
+def backtest_symbol_rsi_cross(item, kind, cfg):
+    """باك-تست استراتيجية الزخم RSI80 — مطابق لـ detect_rsi_cross_signal:
+    دخول فور تجاوز RSI(21) عتبة التشبّع صعوداً، عند إغلاق الشمعة.
+    الوقف = الدخول − (مضاعف × ATR14)، والأهداف بامتدادات فيبوناتشي
+    (1.272/1.618/2.618) على الموجة الصاعدة الأخيرة (~20 شمعة).
+    يرجع صفقات بنفس صيغة باقي دوال الباك-تست (R_plain/R_managed...)."""
+    sym = item["symbol"]
+    hold = cfg.get("bt_hold", 40)
+    bars = cfg.get("bt_bars", 365)
+    cost = cfg.get("cost", 0.0)
+    ob = cfg.get("rsi_ob", 80.0)
+    stop_mult = cfg.get("bt_stop_mult", 1.5)
+
+    df = _bt_fetch_df(sym, kind, cfg)
+    if df is None or len(df) < 120:
+        return []
+    df = df.reset_index(drop=True)
+    n = len(df)
+    close = df["close"].values
+    low = df["low"].values
+    r = rsi(df["close"], 21).values
+    a = atr(df, 14).values
+
+    warmup = 30
+    start = max(warmup, n - bars)
+    trades = []
+    i = start
+    while i < n - 1:
+        if np.isnan(r[i]) or np.isnan(r[i - 1]) or not (r[i] >= ob and r[i - 1] < ob):
+            i += 1
+            continue
+        entry = float(close[i])
+        atrv = a[i] if not np.isnan(a[i]) else entry * 0.02
+        lo_win = float(np.min(low[max(0, i - 20):i + 1]))
+        imp = entry - lo_win
+        if imp <= 0:
+            i += 1
+            continue
+        targets = [round(lo_win + ext * imp, 8) for ext in (1.272, 1.618, 2.618)]
+        stop = entry - stop_mult * atrv
+        if targets[0] <= entry or entry - stop <= 0:
+            i += 1
+            continue
+        simA = _simulate_trade(df, i, entry, stop, targets, 1, hold, manage=False, cost=cost)
+        simB = _simulate_trade(df, i, entry, stop, targets, 1, hold, manage=True, cost=cost)
+        if simA and simB:
+            trades.append({
+                "symbol": sym, "kind": kind, "side": "buy", "bar": i,
+                "date": str(df["date"].iloc[i])[:10], "score": round(float(r[i]), 1),
+                "entry": entry, "stop": round(stop, 8),
+                "R_plain": round(simA[0], 3), "out_plain": simA[1],
+                "R_managed": round(simB[0], 3), "out_managed": simB[1],
+            })
+            i += hold
+            continue
+        i += 1
+    return trades
+
+
 def _stats(rs, outs):
     """يحسب مقاييس الأداء من قائمة عوائد R وقائمة النتائج."""
     n = len(rs)
@@ -1798,9 +1857,16 @@ def run_backtest(cfg, watchlist_path, out_dir):
         print("🟦 فلتر العرض/الطلب: مفعّل — دخول عند منطقة طازجة فقط")
     print()
 
-    bt_fn = backtest_symbol_reversal if cfg.get("strategy") == "reversal" else backtest_symbol
-    if cfg.get("strategy") == "reversal":
+    if cfg.get("rsi_cross"):
+        bt_fn = backtest_symbol_rsi_cross
+        print(f"🎯 الاستراتيجية: زخم RSI80 (تجاوز RSI21 عتبة {cfg.get('rsi_ob',80.0):.0f} صعوداً → دخول)")
+        print(f"   وقف = {cfg.get('bt_stop_mult',1.5)}×ATR | أهداف امتدادات فيبو 1.272/1.618/2.618")
+    elif cfg.get("strategy") == "reversal":
+        bt_fn = backtest_symbol_reversal
         print("🎯 الاستراتيجية: انعكاس زخمي (RSI21<20 → >80 → قاع أعلى → دخول)")
+    else:
+        bt_fn = backtest_symbol
+    if cfg.get("strategy") == "reversal" and not cfg.get("rsi_cross"):
         if cfg.get("ma200_ob"):
             if cfg.get("timeframe") == "1h":
                 print("   ➕ شرط: إغلاق فوق متوسط 200 (على 4h) عند التشبّع الشرائي")
@@ -2240,6 +2306,10 @@ def build_argparser():
                    help="(انعكاس) دخول مباشر عند التأكيد ثم DCA على ارتدادات فيبوناتشي")
     p.add_argument("--cost", type=float, default=0.0,
                    help="تكلفة الصفقة ذهاباً وإياباً كنسبة (مثلاً 0.002 = 0.2%% عمولة+انزلاق)")
+    p.add_argument("--rsi-ob", type=float, default=80.0,
+                   help="عتبة التشبّع الشرائي لاستراتيجية الزخم RSI (افتراضي 80؛ جرّب 70/75)")
+    p.add_argument("--bt-stop-mult", type=float, default=1.5,
+                   help="مضاعف ATR للوقف في باك-تست الزخم RSI80 (افتراضي 1.5؛ جرّب 2.0)")
     p.add_argument("--watchlist", help="مسار ملف الـ watchlist (مطلوب في وضع scan)")
     p.add_argument("--state", default=TRADES_FILE, help="ملف حفظ الصفقات المفتوحة")
     p.add_argument("--assets", choices=["all", "crypto", "stocks"], default=DEFAULTS["assets"])
@@ -2294,6 +2364,7 @@ if __name__ == "__main__":
         "bt_offset": args.bt_offset, "strategy": args.strategy,
         "ma200_ob": args.ma200_confirm, "dca_fib": args.dca_fib,
         "rsi_cross": args.rsi_cross,
+        "rsi_ob": args.rsi_ob, "bt_stop_mult": args.bt_stop_mult,
     }
     if args.mode == "monitor":
         monitor(cfg, args.state)
