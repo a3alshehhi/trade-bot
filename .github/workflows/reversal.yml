@@ -46,6 +46,8 @@ jobs:
           # 3) انعكاس 1h DCA + فلتر متوسط 200 على 4h
           python trading_bot.py --mode reversal --watchlist watchlist.txt \
             --timeframe 1h --dca-fib --ma200-confirm --state reversal_alerts.json
+          # 4) متابعة الإشارات المُرسَلة والرد على رسالتها عند بلوغ هدف/وقف
+          python trading_bot.py --mode trackmon
 
       - name: Paper trades — capture taps & monitor
         env:
@@ -59,7 +61,7 @@ jobs:
 
       - name: Persist alert & paper state
         run: |
-          for f in reversal_alerts.json pending_signals.json \
+          for f in reversal_alerts.json pending_signals.json tracked_signals.json \
                    paper_trades.json tg_offset.json paper_data.json; do
             [ -f "$f" ] && git add "$f"
           done
