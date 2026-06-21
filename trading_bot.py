@@ -1887,14 +1887,20 @@ def detect_rsi_cross_signal(df, cfg):
         return None
     entry = float(close[i])
     atrv = a[i] if not np.isnan(a[i]) else entry * 0.02
-    risk = 1.5 * atrv
-    stop = float(entry - risk)
-    targets = [round(entry + m * risk, 8) for m in (1.0, 2.0, 3.0)]
-    # مستويات دخول فيبوناتشي على الموجة الصاعدة (قاع آخر ~20 شمعة → الدخول)
+    stop = float(entry - 1.5 * atrv)
+    # الموجة الصاعدة الأخيرة: قاع آخر ~20 شمعة → الدخول
     lo_win = float(np.min(low[max(0, i - 20):i + 1]))
     imp = entry - lo_win
-    fib_e = ([round(entry - rr * imp, 8) for rr in (0.236, 0.382, 0.5)]
-             if imp > 0 else [])
+    if imp > 0:
+        # الأهداف بامتدادات فيبوناتشي على الموجة (القاع + نسبة × المدى)
+        targets = [round(lo_win + ext * imp, 8) for ext in (1.272, 1.618, 2.618)]
+        # مستويات دخول فيبوناتشي على ارتدادات نفس الموجة
+        fib_e = [round(entry - rr * imp, 8) for rr in (0.236, 0.382, 0.5)]
+    else:
+        # احتياط (موجة غير صالحة): أهداف بمضاعفات المخاطرة
+        risk = entry - stop
+        targets = [round(entry + m * risk, 8) for m in (1.0, 2.0, 3.0)]
+        fib_e = []
     return {"entry": entry, "stop": stop, "targets": targets,
             "dca": None, "fib_entries": fib_e, "rsi": round(float(r[i]), 1)}
 
