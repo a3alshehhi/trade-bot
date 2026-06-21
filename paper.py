@@ -8,6 +8,7 @@ paper.py — متتبّع الصفقات الورقية (paper trading) للبو
 ويكتب كل شيء في ملف تقرأه لوحة الويب على GitHub Pages.
 
 الأوضاع:
+  auto     — يسجّل تلقائياً كل إشارة معلّقة كصفقة ورقية (بلا ضغط زر).
   poll     — يلتقط ضغطات زر "افتح صفقة ورقية" عبر getUpdates ويفتح الصفقات.
   monitor  — يتابع الصفقات المفتوحة، يطبّق إدارة (جني جزئي + breakeven)،
              يغلقها عند اكتمالها، ويرسل إشعاراً.
@@ -170,6 +171,47 @@ def poll():
     _save_json(PAPER_FILE, trades)
     _save_json(OFFSET_FILE, {"offset": max_uid + 1})
     print(f"[poll] تحديثات: {len(updates)} | صفقات جديدة: {opened}")
+
+
+# ── auto: تسجيل كل الإشارات تلقائياً (بلا ضغط زر) ───────────────────────────
+def auto_open():
+    """يفتح تلقائياً كل إشارة معلّقة لم تُسجَّل بعد كصفقة ورقية.
+    يضمن تجميع نتائج كل الإشارات أمامياً بلا حاجة للضغط على الزر."""
+    token, chat_id = _creds()
+    pending = _load_json(PENDING_FILE, {})
+    if not isinstance(pending, dict) or not pending:
+        print("[auto] لا إشارات معلّقة")
+        return
+    trades = _load_json(PAPER_FILE, [])
+    existing_ids = {t["id"] for t in trades}
+    opened = []
+    for pid, sig in sorted(pending.items()):
+        if pid in existing_ids:
+            continue
+        if not isinstance(sig, dict) or sig.get("entry") is None or not sig.get("targets"):
+            continue
+        try:
+            tr = _open_trade_from_signal(pid, sig)
+        except Exception as e:
+            print(f"⚠️ auto {sig.get('symbol')}: {e}")
+            continue
+        # تجاهل الإشارات بمخاطرة غير صالحة (entry<=stop)
+        if tr["risk"] <= 0:
+            continue
+        trades.append(tr)
+        existing_ids.add(pid)
+        opened.append(tr)
+    _save_json(PAPER_FILE, trades)
+    print(f"[auto] صفقات مُسجّلة تلقائياً: {len(opened)}")
+    # رسالة ملخّص واحدة (تفادي إغراق تيليجرام برسالة لكل صفقة)
+    if opened and token and chat_id:
+        names = "، ".join(f"{t['symbol']}({t['timeframe']})" for t in opened[:12])
+        more = f" +{len(opened) - 12}" if len(opened) > 12 else ""
+        msg = "\n".join([
+            SEP, f"📝 سُجّلت {len(opened)} صفقة ورقية تلقائياً للمتابعة", SEP,
+            names + more, "", "سأتابعها وأبلغك عند الهدف/الوقف.",
+            SEP, "⚠️ تتبّع ورقي تعليمي — ليس نصيحة مالية"])
+        send_telegram(token, chat_id, msg, reply_markup=_DASH_BTN)
 
 
 # ── monitor: متابعة وإغلاق الصفقات ─────────────────────────────────────────
@@ -409,9 +451,9 @@ def export():
 # ── CLI ────────────────────────────────────────────────────────────────────
 def main():
     ap = argparse.ArgumentParser(description="متتبّع الصفقات الورقية")
-    ap.add_argument("mode", choices=["poll", "monitor", "export", "report"])
+    ap.add_argument("mode", choices=["poll", "auto", "monitor", "export", "report"])
     args = ap.parse_args()
-    {"poll": poll, "monitor": monitor,
+    {"poll": poll, "auto": auto_open, "monitor": monitor,
      "export": export, "report": report}[args.mode]()
 
 
