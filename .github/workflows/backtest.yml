@@ -5,11 +5,22 @@ name: backtest
 on:
   workflow_dispatch:
     inputs:
+      strategy:
+        description: "الاستراتيجية"
+        type: choice
+        options: [rsi80, score, reversal]
+        default: rsi80
       assets:
         description: "الأصول"
         type: choice
         options: [crypto, stocks, all]
         default: crypto
+      rsi_ob:
+        description: "عتبة RSI للزخم (rsi80): 70/75/80"
+        default: "70"
+      bt_stop_mult:
+        description: "مضاعف وقف ATR (rsi80): 1.5/2.0/2.5"
+        default: "2.0"
       timeframe:
         description: "الإطار الزمني"
         type: choice
@@ -75,6 +86,11 @@ jobs:
         run: |
           set -o pipefail
           FLAGS=""
+          if [ "${{ inputs.strategy }}" = "rsi80" ]; then
+            FLAGS="$FLAGS --rsi-cross --rsi-ob ${{ inputs.rsi_ob }} --bt-stop-mult ${{ inputs.bt_stop_mult }}"
+          elif [ "${{ inputs.strategy }}" = "reversal" ]; then
+            FLAGS="$FLAGS --strategy reversal"
+          fi
           if [ "${{ inputs.market_filter }}" = "on" ]; then FLAGS="$FLAGS --market-filter"; fi
           if [ "${{ inputs.supply_demand }}" = "on" ]; then FLAGS="$FLAGS --supply-demand"; fi
           if [ "${{ inputs.vwap_daily }}" = "on" ]; then FLAGS="$FLAGS --vwap-daily"; fi
