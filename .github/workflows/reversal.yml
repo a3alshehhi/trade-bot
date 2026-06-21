@@ -54,6 +54,8 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
+          # تسجيل كل الإشارات الجديدة تلقائياً كصفقات ورقية (بلا ضغط زر)
+          python paper.py auto
           # التقاط ضغطات زر "افتح صفقة ورقية" وأوامر /report و/trades
           python paper.py poll
           # متابعة الصفقات المفتوحة وإغلاقها عند الهدف/الوقف + تحديث نسخة اللوحة
