@@ -1,13 +1,42 @@
 {
-  "updated_at": "2026-06-22T13:47:49",
+  "updated_at": "2026-06-22T14:02:44",
   "stats": {
-    "open": 15,
-    "closed": 9,
-    "win_rate": 11.1,
-    "profit_factor": 1.14,
-    "total_R": 0.68,
-    "avg_R": 0.076,
-    "max_drawdown_R": -4.0
+    "open": 27,
+    "closed": 1,
+    "win_rate": 0.0,
+    "profit_factor": 0.0,
+    "total_pct": -5.61,
+    "avg_pct": -5.61,
+    "max_drawdown_pct": -5.61
+  },
+  "periods": {
+    "daily": [
+      {
+        "key": "2026-06-22",
+        "trades": 1,
+        "win_rate": 0.0,
+        "return_pct": -5.61,
+        "week": "2026-W26",
+        "month": "2026-06"
+      }
+    ],
+    "weekly": [
+      {
+        "key": "2026-W26",
+        "trades": 1,
+        "win_rate": 0.0,
+        "return_pct": -5.61,
+        "month": "2026-06"
+      }
+    ],
+    "monthly": [
+      {
+        "key": "2026-06",
+        "trades": 1,
+        "win_rate": 0.0,
+        "return_pct": -5.61
+      }
+    ]
   },
   "trades": [
     {
@@ -289,7 +318,7 @@
       "realized_R": 0.0,
       "result_R": null,
       "events": [],
-      "last_ts": "2026-06-22 13:44:59.999000",
+      "last_ts": "2026-06-22 13:59:59.999000",
       "closed_at": null
     },
     {
@@ -351,15 +380,25 @@
       ],
       "risk": 0.0007067423201587604,
       "opened_at": "2026-06-22T12:11:28",
-      "status": "open",
+      "status": "closed",
       "hits": [],
       "breakeven": false,
-      "remaining": 1.0,
+      "remaining": 0.0,
       "realized_R": 0.0,
       "result_R": null,
-      "events": [],
-      "last_ts": "2026-06-22 12:59:59.999000",
-      "closed_at": null
+      "events": [
+        {
+          "ts": "2026-06-22 13:59:59.999000",
+          "type": "sl",
+          "price": 0.01188325767984124,
+          "pct": -5.614
+        }
+      ],
+      "last_ts": "2026-06-22 13:59:59.999000",
+      "closed_at": "2026-06-22T14:02:30",
+      "realized_pct": -5.6135212085683905,
+      "exit_price": 0.01188325767984124,
+      "result_pct": -5.614
     },
     {
       "id": "1782130259464",
@@ -507,7 +546,7 @@
       "realized_R": 0.0,
       "result_R": null,
       "events": [],
-      "last_ts": "2026-06-22 12:59:59.999000",
+      "last_ts": "2026-06-22 13:59:59.999000",
       "closed_at": null
     },
     {
@@ -534,7 +573,7 @@
       "realized_R": 0.0,
       "result_R": null,
       "events": [],
-      "last_ts": "2026-06-22 13:44:59.999000",
+      "last_ts": "2026-06-22 13:59:59.999000",
       "closed_at": null
     },
     {
@@ -561,7 +600,7 @@
       "realized_R": 0.0,
       "result_R": null,
       "events": [],
-      "last_ts": "2026-06-22 13:44:59.999000",
+      "last_ts": "2026-06-22 13:59:59.999000",
       "closed_at": null
     },
     {
@@ -588,7 +627,7 @@
       "realized_R": 0.0,
       "result_R": null,
       "events": [],
-      "last_ts": "2026-06-22 13:44:59.999000",
+      "last_ts": "2026-06-22 13:59:59.999000",
       "closed_at": null
     },
     {
@@ -615,7 +654,7 @@
       "realized_R": 0.0,
       "result_R": null,
       "events": [],
-      "last_ts": "2026-06-22 13:44:59.999000",
+      "last_ts": "2026-06-22 13:59:59.999000",
       "closed_at": null
     },
     {
@@ -642,7 +681,7 @@
       "realized_R": 0.0,
       "result_R": null,
       "events": [],
-      "last_ts": "2026-06-22 13:44:59.999000",
+      "last_ts": "2026-06-22 13:59:59.999000",
       "closed_at": null
     },
     {
@@ -669,7 +708,7 @@
       "realized_R": 0.0,
       "result_R": null,
       "events": [],
-      "last_ts": "2026-06-22 13:44:59.999000",
+      "last_ts": "2026-06-22 13:59:59.999000",
       "closed_at": null
     },
     {
@@ -696,7 +735,7 @@
       "realized_R": 0.0,
       "result_R": null,
       "events": [],
-      "last_ts": "2026-06-22 13:44:59.999000",
+      "last_ts": "2026-06-22 13:59:59.999000",
       "closed_at": null
     },
     {
@@ -723,7 +762,7 @@
       "realized_R": 0.0,
       "result_R": null,
       "events": [],
-      "last_ts": "2026-06-22 13:44:59.999000",
+      "last_ts": "2026-06-22 13:59:59.999000",
       "closed_at": null
     },
     {
@@ -750,7 +789,371 @@
       "realized_R": 0.0,
       "result_R": null,
       "events": [],
-      "last_ts": "2026-06-22 13:44:59.999000",
+      "last_ts": "2026-06-22 13:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782136866311",
+      "symbol": "API3USDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.2655,
+      "stop": 0.26363258477533486,
+      "stop_orig": 0.26363258477533486,
+      "targets": [
+        0.2679208,
+        0.2710002,
+        0.2799002
+      ],
+      "risk": 0.0018674152246651587,
+      "opened_at": "2026-06-22T14:02:27",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-22 13:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782136867599",
+      "symbol": "AVAXUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 6.463,
+      "stop": 6.404277940142037,
+      "stop_orig": 6.404277940142037,
+      "targets": [
+        6.523928,
+        6.601432,
+        6.825432
+      ],
+      "risk": 0.058722059857963416,
+      "opened_at": "2026-06-22T14:02:27",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-22 13:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782136868095",
+      "symbol": "DOGEUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.08503,
+      "stop": 0.08460945052357442,
+      "stop_orig": 0.08460945052357442,
+      "targets": [
+        0.08544616,
+        0.08597554,
+        0.08750554
+      ],
+      "risk": 0.00042054947642557183,
+      "opened_at": "2026-06-22T14:02:27",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-22 13:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782136869033",
+      "symbol": "ICXUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.0283,
+      "stop": 0.028167131971778236,
+      "stop_orig": 0.028167131971778236,
+      "targets": [
+        0.0285176,
+        0.0287944,
+        0.0295944
+      ],
+      "risk": 0.000132868028221763,
+      "opened_at": "2026-06-22T14:02:27",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-22 13:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782136870471",
+      "symbol": "IMXUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.1435,
+      "stop": 0.1426202972767112,
+      "stop_orig": 0.1426202972767112,
+      "targets": [
+        0.144588,
+        0.145972,
+        0.149972
+      ],
+      "risk": 0.0008797027232888,
+      "opened_at": "2026-06-22T14:02:27",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-22 13:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782136872456",
+      "symbol": "QNTUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 73.4,
+      "stop": 72.58732365680919,
+      "stop_orig": 72.58732365680919,
+      "targets": [
+        74.3248,
+        75.5012,
+        78.9012
+      ],
+      "risk": 0.8126763431908159,
+      "opened_at": "2026-06-22T14:02:27",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-22 13:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782136873170",
+      "symbol": "ROSEUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.00687,
+      "stop": 0.006800744131456165,
+      "stop_orig": 0.006800744131456165,
+      "targets": [
+        0.00694072,
+        0.00703068,
+        0.00729068
+      ],
+      "risk": 6.925586854383565e-05,
+      "opened_at": "2026-06-22T14:02:27",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-22 13:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782136874975",
+      "symbol": "SEIUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.05645,
+      "stop": 0.056053572516512266,
+      "stop_orig": 0.056053572516512266,
+      "targets": [
+        0.056926,
+        0.0575315,
+        0.0592815
+      ],
+      "risk": 0.00039642748348773377,
+      "opened_at": "2026-06-22T14:02:27",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-22 13:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782136875199",
+      "symbol": "SSVUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 2.416,
+      "stop": 2.3963683035497443,
+      "stop_orig": 2.3963683035497443,
+      "targets": [
+        2.4432,
+        2.4778,
+        2.5778
+      ],
+      "risk": 0.019631696450255642,
+      "opened_at": "2026-06-22T14:02:27",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-22 13:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782136876344",
+      "symbol": "VANAUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 1.162,
+      "stop": 1.1567154643565494,
+      "stop_orig": 1.1567154643565494,
+      "targets": [
+        1.169616,
+        1.179304,
+        1.207304
+      ],
+      "risk": 0.00528453564345055,
+      "opened_at": "2026-06-22T14:02:27",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-22 13:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782136877364",
+      "symbol": "XRPUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 1.1637,
+      "stop": 1.1566674205918224,
+      "stop_orig": 1.1566674205918224,
+      "targets": [
+        1.1721048,
+        1.1827962,
+        1.2136962
+      ],
+      "risk": 0.007032579408177586,
+      "opened_at": "2026-06-22T14:02:27",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-22 13:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782136878290",
+      "symbol": "ZENUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 4.711,
+      "stop": 4.679517632976213,
+      "stop_orig": 4.679517632976213,
+      "targets": [
+        4.742824,
+        4.783306,
+        4.900306
+      ],
+      "risk": 0.03148236702378693,
+      "opened_at": "2026-06-22T14:02:27",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-22 13:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782136898575",
+      "symbol": "ZROUSDT",
+      "label": "RSI70 · 1h",
+      "strategy": "classic",
+      "timeframe": "1h",
+      "side": "buy",
+      "entry": 0.991,
+      "stop": 0.9681815634586154,
+      "stop_orig": 0.9681815634586154,
+      "targets": [
+        1.014936,
+        1.045384,
+        1.133384
+      ],
+      "risk": 0.0228184365413846,
+      "opened_at": "2026-06-22T14:02:27",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-22 13:59:59.999000",
       "closed_at": null
     }
   ]
