@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-22T17:02:47",
+  "updated_at": "2026-06-22T17:17:47",
   "stats": {
-    "open": 15,
-    "closed": 32,
-    "win_rate": 3.1,
+    "open": 13,
+    "closed": 34,
+    "win_rate": 2.9,
     "profit_factor": 0.01,
-    "total_pct": -34.42,
-    "avg_pct": -1.29,
-    "max_drawdown_pct": -34.42
+    "total_pct": -35.67,
+    "avg_pct": -1.27,
+    "max_drawdown_pct": -35.67
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-22",
-        "trades": 32,
-        "win_rate": 3.1,
-        "return_pct": -34.42,
+        "trades": 34,
+        "win_rate": 2.9,
+        "return_pct": -35.67,
         "week": "2026-W26",
         "month": "2026-06"
       }
@@ -23,18 +23,18 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 32,
-        "win_rate": 3.1,
-        "return_pct": -34.42,
+        "trades": 34,
+        "win_rate": 2.9,
+        "return_pct": -35.67,
         "month": "2026-06"
       }
     ],
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 32,
-        "win_rate": 3.1,
-        "return_pct": -34.42
+        "trades": 34,
+        "win_rate": 2.9,
+        "return_pct": -35.67
       }
     ]
   },
@@ -1532,7 +1532,7 @@
           "pct": 1.209
         }
       ],
-      "last_ts": "2026-06-22 16:59:59.999000",
+      "last_ts": "2026-06-22 17:14:59.999000",
       "closed_at": null
     },
     {
@@ -1737,7 +1737,7 @@
           "pct": 1.146
         }
       ],
-      "last_ts": "2026-06-22 16:59:59.999000",
+      "last_ts": "2026-06-22 17:14:59.999000",
       "closed_at": null
     },
     {
@@ -1765,7 +1765,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-22 16:59:59.999000",
+      "last_ts": "2026-06-22 17:14:59.999000",
       "closed_at": null
     },
     {
@@ -1785,16 +1785,23 @@
       ],
       "risk": 0.0015683300000000067,
       "opened_at": "2026-06-22T15:47:04",
-      "status": "open",
+      "status": "closed",
       "hits": [],
       "breakeven": false,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-22 16:59:59.999000",
-      "closed_at": null
+      "remaining": 0.0,
+      "realized_pct": -1.9086406230984625,
+      "result_pct": -1.909,
+      "exit_price": 0.08060167,
+      "events": [
+        {
+          "ts": "2026-06-22 17:14:59.999000",
+          "type": "sl",
+          "price": 0.08060167,
+          "pct": -1.909
+        }
+      ],
+      "last_ts": "2026-06-22 17:14:59.999000",
+      "closed_at": "2026-06-22T17:17:41"
     },
     {
       "id": "1782144097122",
@@ -1914,7 +1921,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-22 16:59:59.999000",
+      "last_ts": "2026-06-22 17:14:59.999000",
       "closed_at": null
     },
     {
@@ -1942,7 +1949,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-22 16:59:59.999000",
+      "last_ts": "2026-06-22 17:14:59.999000",
       "closed_at": null
     },
     {
@@ -1962,25 +1969,31 @@
       ],
       "risk": 0.00034237999999999977,
       "opened_at": "2026-06-22T16:32:43",
-      "status": "open",
+      "status": "closed",
       "hits": [
         1
       ],
       "breakeven": true,
-      "remaining": 1.0,
+      "remaining": 0.0,
       "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
+      "result_pct": 0.0,
+      "exit_price": 0.0097,
       "events": [
         {
           "ts": "2026-06-22 16:59:59.999000",
           "type": "tp1_be",
           "price": 0.0098632,
           "pct": 1.682
+        },
+        {
+          "ts": "2026-06-22 17:14:59.999000",
+          "type": "be_sl",
+          "price": 0.0097,
+          "pct": 0.0
         }
       ],
-      "last_ts": "2026-06-22 16:59:59.999000",
-      "closed_at": null
+      "last_ts": "2026-06-22 17:14:59.999000",
+      "closed_at": "2026-06-22T17:17:46"
     },
     {
       "id": "1782147697752",
