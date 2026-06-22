@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-22T16:17:46",
+  "updated_at": "2026-06-22T16:32:55",
   "stats": {
-    "open": 12,
+    "open": 14,
     "closed": 32,
     "win_rate": 3.1,
     "profit_factor": 0.01,
@@ -1532,7 +1532,7 @@
           "pct": 1.209
         }
       ],
-      "last_ts": "2026-06-22 16:14:59.999000",
+      "last_ts": "2026-06-22 16:29:59.999000",
       "closed_at": null
     },
     {
@@ -1737,7 +1737,7 @@
           "pct": 1.146
         }
       ],
-      "last_ts": "2026-06-22 16:14:59.999000",
+      "last_ts": "2026-06-22 16:29:59.999000",
       "closed_at": null
     },
     {
@@ -1765,7 +1765,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-22 16:14:59.999000",
+      "last_ts": "2026-06-22 16:29:59.999000",
       "closed_at": null
     },
     {
@@ -1793,7 +1793,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-22 16:14:59.999000",
+      "last_ts": "2026-06-22 16:29:59.999000",
       "closed_at": null
     },
     {
@@ -1905,7 +1905,63 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-22 16:14:59.999000",
+      "last_ts": "2026-06-22 16:29:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782145871582",
+      "symbol": "ENJUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.03435,
+      "stop": 0.03350229,
+      "stop_orig": 0.03350229,
+      "targets": [
+        0.03474712,
+        0.03525228,
+        0.03671228
+      ],
+      "risk": 0.0008477100000000015,
+      "opened_at": "2026-06-22T16:32:43",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-22 16:29:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782145872324",
+      "symbol": "SIGNUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.0097,
+      "stop": 0.00935762,
+      "stop_orig": 0.00935762,
+      "targets": [
+        0.0098632,
+        0.0100708,
+        0.0106708
+      ],
+      "risk": 0.00034237999999999977,
+      "opened_at": "2026-06-22T16:32:43",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-22 16:29:59.999000",
       "closed_at": null
     }
   ]
