@@ -516,7 +516,7 @@
     "realized_R": 0.0,
     "result_R": null,
     "events": [],
-    "last_ts": "2026-06-22 13:59:59.999000",
+    "last_ts": "2026-06-22 14:59:59.999000",
     "closed_at": null
   },
   {
@@ -728,7 +728,7 @@
     "realized_R": 0.0,
     "result_R": null,
     "events": [],
-    "last_ts": "2026-06-22 14:44:59.999000",
+    "last_ts": "2026-06-22 14:59:59.999000",
     "closed_at": null
   },
   {
@@ -837,7 +837,7 @@
     "realized_R": 0.0,
     "result_R": null,
     "events": [],
-    "last_ts": "2026-06-22 14:44:59.999000",
+    "last_ts": "2026-06-22 14:59:59.999000",
     "closed_at": null
   },
   {
@@ -1285,7 +1285,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-22 13:59:59.999000",
+    "last_ts": "2026-06-22 14:59:59.999000",
     "closed_at": null
   },
   {
@@ -1418,7 +1418,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-22 14:44:59.999000",
+    "last_ts": "2026-06-22 14:59:59.999000",
     "closed_at": null
   },
   {
@@ -1446,7 +1446,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-22 14:44:59.999000",
+    "last_ts": "2026-06-22 14:59:59.999000",
     "closed_at": null
   },
   {
@@ -1483,5 +1483,61 @@
     ],
     "last_ts": "2026-06-22 14:29:59.999000",
     "closed_at": "2026-06-22T14:32:37"
+  },
+  {
+    "id": "1782140468544",
+    "symbol": "CUSDT",
+    "label": "RSI70 · 15m",
+    "strategy": "classic",
+    "timeframe": "15m",
+    "side": "buy",
+    "entry": 0.0968,
+    "stop": 0.09454131,
+    "stop_orig": 0.09454131,
+    "targets": [
+      0.0978336,
+      0.0991484,
+      0.1029484
+    ],
+    "risk": 0.0022586899999999938,
+    "opened_at": "2026-06-22T15:02:08",
+    "status": "open",
+    "hits": [],
+    "breakeven": false,
+    "remaining": 1.0,
+    "realized_pct": 0.0,
+    "result_pct": null,
+    "exit_price": null,
+    "events": [],
+    "last_ts": "2026-06-22 14:59:59.999000",
+    "closed_at": null
+  },
+  {
+    "id": "1782140488941",
+    "symbol": "TIAUSDT",
+    "label": "RSI70 · 1h",
+    "strategy": "classic",
+    "timeframe": "1h",
+    "side": "buy",
+    "entry": 0.4086,
+    "stop": 0.38131902,
+    "stop_orig": 0.38131902,
+    "targets": [
+      0.4215472,
+      0.4380168,
+      0.4856168
+    ],
+    "risk": 0.02728098000000001,
+    "opened_at": "2026-06-22T15:02:08",
+    "status": "open",
+    "hits": [],
+    "breakeven": false,
+    "remaining": 1.0,
+    "realized_pct": 0.0,
+    "result_pct": null,
+    "exit_price": null,
+    "events": [],
+    "last_ts": "2026-06-22 14:59:59.999000",
+    "closed_at": null
   }
 ]
