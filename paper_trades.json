@@ -1905,25 +1905,31 @@
     ],
     "risk": 0.006108550000000004,
     "opened_at": "2026-06-22T16:17:35",
-    "status": "open",
+    "status": "closed",
     "hits": [
       1
     ],
     "breakeven": true,
-    "remaining": 1.0,
+    "remaining": 0.0,
     "realized_pct": 0.0,
-    "result_pct": null,
-    "exit_price": null,
+    "result_pct": 0.0,
+    "exit_price": 0.0911,
     "events": [
       {
         "ts": "2026-06-22 19:29:59.999000",
         "type": "tp1_be",
         "price": 0.0939832,
         "pct": 3.165
+      },
+      {
+        "ts": "2026-06-22 19:44:59.999000",
+        "type": "be_sl",
+        "price": 0.0911,
+        "pct": 0.0
       }
     ],
-    "last_ts": "2026-06-22 19:29:59.999000",
-    "closed_at": null
+    "last_ts": "2026-06-22 19:44:59.999000",
+    "closed_at": "2026-06-22T19:48:43"
   },
   {
     "id": "1782145871582",
@@ -1950,7 +1956,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-22 19:29:59.999000",
+    "last_ts": "2026-06-22 19:44:59.999000",
     "closed_at": null
   },
   {
@@ -2058,7 +2064,7 @@
         "pct": 1.668
       }
     ],
-    "last_ts": "2026-06-22 19:29:59.999000",
+    "last_ts": "2026-06-22 19:44:59.999000",
     "closed_at": null
   },
   {
@@ -2078,16 +2084,23 @@
     ],
     "risk": 0.0009071900000000004,
     "opened_at": "2026-06-22T17:32:06",
-    "status": "open",
+    "status": "closed",
     "hits": [],
     "breakeven": false,
-    "remaining": 1.0,
-    "realized_pct": 0.0,
-    "result_pct": null,
-    "exit_price": null,
-    "events": [],
-    "last_ts": "2026-06-22 19:29:59.999000",
-    "closed_at": null
+    "remaining": 0.0,
+    "realized_pct": -5.49479103573592,
+    "result_pct": -5.495,
+    "exit_price": 0.01560281,
+    "events": [
+      {
+        "ts": "2026-06-22 19:44:59.999000",
+        "type": "sl",
+        "price": 0.01560281,
+        "pct": -5.495
+      }
+    ],
+    "last_ts": "2026-06-22 19:44:59.999000",
+    "closed_at": "2026-06-22T19:48:45"
   },
   {
     "id": "1782151301790",
@@ -2194,7 +2207,35 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-22 19:29:59.999000",
+    "last_ts": "2026-06-22 19:44:59.999000",
+    "closed_at": null
+  },
+  {
+    "id": "1782157556684",
+    "symbol": "ENSOUSDT",
+    "label": "RSI70 · 15m",
+    "strategy": "classic",
+    "timeframe": "15m",
+    "side": "buy",
+    "entry": 0.669,
+    "stop": 0.63911657,
+    "stop_orig": 0.63911657,
+    "targets": [
+      0.683144,
+      0.701136,
+      0.753136
+    ],
+    "risk": 0.029883430000000044,
+    "opened_at": "2026-06-22T19:48:38",
+    "status": "open",
+    "hits": [],
+    "breakeven": false,
+    "remaining": 1.0,
+    "realized_pct": 0.0,
+    "result_pct": null,
+    "exit_price": null,
+    "events": [],
+    "last_ts": "2026-06-22 19:44:59.999000",
     "closed_at": null
   }
 ]

@@ -897,7 +897,7 @@
       2
     ],
     "stopped": false,
-    "hi_seen": 0.666,
+    "hi_seen": 0.676,
     "lo_seen": 0.641,
     "created": "2026-06-22T15:31:11"
   },
@@ -1116,9 +1116,9 @@
     ],
     "bar_ts": "2026-06-22 17:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.01688,
-    "lo_seen": 0.01561,
+    "lo_seen": 0.01555,
     "created": "2026-06-22T17:31:02"
   },
   "RSI70 · 1h|FIDAUSDT|2026-06-22 17:59:59.999000": {
@@ -1179,8 +1179,27 @@
     "bar_ts": "2026-06-22 19:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.666,
+    "hi_seen": 0.676,
     "lo_seen": 0.661,
     "created": "2026-06-22T19:16:07"
+  },
+  "RSI70 · 15m|ENSOUSDT|2026-06-22 19:44:59.999000": {
+    "symbol": "ENSOUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 966,
+    "entry": 0.669,
+    "stop": 0.63911657,
+    "targets": [
+      0.683144,
+      0.701136,
+      0.753136
+    ],
+    "bar_ts": "2026-06-22 19:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.676,
+    "lo_seen": 0.669,
+    "created": "2026-06-22T19:45:57"
   }
 }
