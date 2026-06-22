@@ -2,8 +2,8 @@ name: reversal-live
 
 # تنبيه حيّ لاستراتيجيات الانعكاس على تيليجرام، فور إغلاق الشمعة.
 # كل 15 دقيقة (دقائق 8/23/38/53 لتجنّب ذروة GitHub عند رأس الساعة).
-# ثلاث استراتيجيات، كلٌّ برسالة مُعنونة باسمها:
-#   1) انعكاس 4h كلاسيكي   2) انعكاس 4h DCA   3) انعكاس 1h DCA (فلتر متوسط 200 على 4h)
+# يشمل: زخم RSI70 (15m/1h/4h/1d) + استراتيجية trendwave المستقلة (15m/1h/4h).
+# هذا هو الوركفلو الذي يشغّله cron-job.org، فإضافة trendwave هنا تربطه بالجدولة تلقائياً.
 on:
   schedule:
     - cron: '8,23,38,53 * * * *'
@@ -46,6 +46,14 @@ jobs:
             --timeframe 4h --state reversal_alerts.json
           python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --watchlist watchlist.txt \
             --timeframe 1d --state reversal_alerts.json
+          # === استراتيجية trendwave المستقلة (الإعداد الرابح) — على نفس الجدول ===
+          # دخول مباشر بعد موجة RSI(20→80) + فلتر اتجاه من فريم أعلى. رسائل مُعنونة "trendwave".
+          python trading_bot.py --mode reversal --trendwave --watchlist watchlist.txt \
+            --timeframe 15m --state trendwave_alerts.json
+          python trading_bot.py --mode reversal --trendwave --watchlist watchlist.txt \
+            --timeframe 1h --state trendwave_alerts.json
+          python trading_bot.py --mode reversal --trendwave --watchlist watchlist.txt \
+            --timeframe 4h --state trendwave_alerts.json
           # متابعة الإشارات المُرسَلة والرد على رسالتها عند بلوغ هدف/وقف
           python trading_bot.py --mode trackmon
 
@@ -63,7 +71,7 @@ jobs:
 
       - name: Persist alert & paper state
         run: |
-          for f in reversal_alerts.json pending_signals.json tracked_signals.json \
+          for f in reversal_alerts.json trendwave_alerts.json pending_signals.json tracked_signals.json \
                    paper_trades.json tg_offset.json paper_data.json; do
             [ -f "$f" ] && git add "$f"
           done
