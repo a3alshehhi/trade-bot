@@ -8,8 +8,22 @@ on:
       strategy:
         description: "الاستراتيجية"
         type: choice
-        options: [rsi80, score, reversal]
+        options: [rsi80, score, reversal, osmulti, osob, trendwave]
         default: rsi80
+      os_touches:
+        description: "(osmulti) عدد نزولات التشبّع البيعي: 15m=3 / 1h=2"
+        default: "2"
+      trend_filter:
+        description: "(osob) فلتر اتجاه: دخول فقط فوق متوسط 200"
+        type: choice
+        options: ["off", "on"]
+        default: "off"
+      trail_buf:
+        description: "(osob) مسافة الوقف المتحرك ×ATR (0.25/0.5/1.0)"
+        default: "0.25"
+      trail_arm:
+        description: "(osob) تأجيل التتبّع حتى ربح ×المخاطرة (0=فوري/1.0)"
+        default: "0.0"
       assets:
         description: "الأصول"
         type: choice
@@ -24,7 +38,7 @@ on:
       timeframe:
         description: "الإطار الزمني"
         type: choice
-        options: ["1d", "4h", "1h"]
+        options: ["1d", "4h", "1h", "15m"]
         default: "1d"
       min_score:
         description: "الحد الأدنى للدرجة"
@@ -90,6 +104,13 @@ jobs:
             FLAGS="$FLAGS --rsi-cross --rsi-ob ${{ inputs.rsi_ob }} --bt-stop-mult ${{ inputs.bt_stop_mult }}"
           elif [ "${{ inputs.strategy }}" = "reversal" ]; then
             FLAGS="$FLAGS --strategy reversal"
+          elif [ "${{ inputs.strategy }}" = "osmulti" ]; then
+            FLAGS="$FLAGS --os-multi --os-touches ${{ inputs.os_touches }} --rsi-os 20 --rsi-ob 80"
+          elif [ "${{ inputs.strategy }}" = "osob" ]; then
+            FLAGS="$FLAGS --osob --rsi-os 20 --rsi-ob 80 --trail-buf ${{ inputs.trail_buf }} --trail-arm ${{ inputs.trail_arm }}"
+            if [ "${{ inputs.trend_filter }}" = "on" ]; then FLAGS="$FLAGS --trend-filter"; fi
+          elif [ "${{ inputs.strategy }}" = "trendwave" ]; then
+            FLAGS="$FLAGS --trendwave"
           fi
           if [ "${{ inputs.market_filter }}" = "on" ]; then FLAGS="$FLAGS --market-filter"; fi
           if [ "${{ inputs.supply_demand }}" = "on" ]; then FLAGS="$FLAGS --supply-demand"; fi
