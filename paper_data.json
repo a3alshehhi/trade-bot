@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-22T20:48:42",
+  "updated_at": "2026-06-22T21:04:19",
   "stats": {
-    "open": 11,
+    "open": 12,
     "closed": 44,
     "win_rate": 6.8,
     "profit_factor": 0.04,
@@ -585,7 +585,7 @@
           "pct": 2.49
         }
       ],
-      "last_ts": "2026-06-22 19:59:59.999000",
+      "last_ts": "2026-06-22 20:59:59.999000",
       "closed_at": null
     },
     {
@@ -1678,7 +1678,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-22 19:59:59.999000",
+      "last_ts": "2026-06-22 20:59:59.999000",
       "closed_at": null
     },
     {
@@ -1854,7 +1854,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-22 19:59:59.999000",
+      "last_ts": "2026-06-22 20:59:59.999000",
       "closed_at": null
     },
     {
@@ -1882,7 +1882,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-22 19:59:59.999000",
+      "last_ts": "2026-06-22 20:59:59.999000",
       "closed_at": null
     },
     {
@@ -2074,7 +2074,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-22 19:59:59.999000",
+      "last_ts": "2026-06-22 20:59:59.999000",
       "closed_at": null
     },
     {
@@ -2111,7 +2111,7 @@
           "pct": 1.668
         }
       ],
-      "last_ts": "2026-06-22 20:44:59.999000",
+      "last_ts": "2026-06-22 20:59:59.999000",
       "closed_at": null
     },
     {
@@ -2260,7 +2260,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-22 20:44:59.999000",
+      "last_ts": "2026-06-22 20:59:59.999000",
       "closed_at": null
     },
     {
@@ -2288,7 +2288,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-22 20:44:59.999000",
+      "last_ts": "2026-06-22 20:59:59.999000",
       "closed_at": null
     },
     {
@@ -2316,7 +2316,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-22 19:59:59.999000",
+      "last_ts": "2026-06-22 20:59:59.999000",
       "closed_at": null
     },
     {
@@ -2345,6 +2345,34 @@
       "exit_price": null,
       "events": [],
       "last_ts": "2026-06-22 19:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782162089351",
+      "symbol": "TRXUSDT",
+      "label": "RSI70 · 1h",
+      "strategy": "classic",
+      "timeframe": "1h",
+      "side": "buy",
+      "entry": 0.3337,
+      "stop": 0.33008577,
+      "stop_orig": 0.33008577,
+      "targets": [
+        0.3353864,
+        0.3375316,
+        0.3437316
+      ],
+      "risk": 0.003614229999999996,
+      "opened_at": "2026-06-22T21:04:10",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-22 20:59:59.999000",
       "closed_at": null
     }
   ]
