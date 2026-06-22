@@ -798,9 +798,9 @@
     ],
     "bar_ts": "2026-06-22 14:14:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.3322,
-    "lo_seen": 0.3316,
+    "lo_seen": 0.3284,
     "created": "2026-06-22T14:16:05"
   },
   "RSI70 · 15m|VETUSDT|2026-06-22 14:14:59.999000": {
@@ -836,9 +836,9 @@
     ],
     "bar_ts": "2026-06-22 14:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0976,
-    "lo_seen": 0.0963,
+    "lo_seen": 0.0935,
     "created": "2026-06-22T15:01:09"
   },
   "RSI70 · 1h|TIAUSDT|2026-06-22 14:59:59.999000": {
@@ -857,7 +857,7 @@
     "hits": [],
     "stopped": false,
     "hi_seen": 0.4111,
-    "lo_seen": 0.4027,
+    "lo_seen": 0.396,
     "created": "2026-06-22T15:01:29"
   },
   "RSI70 · 15m|CUSDT|2026-06-22 15:29:59.999000": {
@@ -874,9 +874,9 @@
     ],
     "bar_ts": "2026-06-22 15:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0973,
-    "lo_seen": 0.0968,
+    "lo_seen": 0.0935,
     "created": "2026-06-22T15:31:10"
   },
   "RSI70 · 15m|ENSOUSDT|2026-06-22 15:29:59.999000": {
@@ -896,7 +896,7 @@
       1
     ],
     "stopped": false,
-    "hi_seen": 0.65,
+    "hi_seen": 0.651,
     "lo_seen": 0.641,
     "created": "2026-06-22T15:31:11"
   },
@@ -915,8 +915,8 @@
     "bar_ts": "2026-06-22 15:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.00933,
-    "lo_seen": 0.00925,
+    "hi_seen": 0.00938,
+    "lo_seen": 0.00919,
     "created": "2026-06-22T15:45:56"
   },
   "RSI70 · 15m|POLUSDT|2026-06-22 15:44:59.999000": {
@@ -935,7 +935,64 @@
     "hits": [],
     "stopped": false,
     "hi_seen": 0.08239,
-    "lo_seen": 0.08213,
+    "lo_seen": 0.08085,
     "created": "2026-06-22T15:45:57"
+  },
+  "RSI70 · 1h|ARPAUSDT|2026-06-22 15:59:59.999000": {
+    "symbol": "ARPAUSDT",
+    "label": "RSI70 · 1h",
+    "timeframe": "1h",
+    "message_id": 898,
+    "entry": 0.00926,
+    "stop": 0.00873737,
+    "targets": [
+      0.00949936,
+      0.00980384,
+      0.01068384
+    ],
+    "bar_ts": "2026-06-22 15:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00926,
+    "lo_seen": 0.00919,
+    "created": "2026-06-22T16:01:37"
+  },
+  "RSI70 · 1h|AWEUSDT|2026-06-22 15:59:59.999000": {
+    "symbol": "AWEUSDT",
+    "label": "RSI70 · 1h",
+    "timeframe": "1h",
+    "message_id": 899,
+    "entry": 0.05908,
+    "stop": 0.05693525,
+    "targets": [
+      0.06008096,
+      0.06135424,
+      0.06503424
+    ],
+    "bar_ts": "2026-06-22 15:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.05925,
+    "lo_seen": 0.05908,
+    "created": "2026-06-22T16:01:38"
+  },
+  "RSI70 · 1h|BREVUSDT|2026-06-22 15:59:59.999000": {
+    "symbol": "BREVUSDT",
+    "label": "RSI70 · 1h",
+    "timeframe": "1h",
+    "message_id": 900,
+    "entry": 0.0879,
+    "stop": 0.08231356,
+    "targets": [
+      0.090484,
+      0.093771,
+      0.103271
+    ],
+    "bar_ts": "2026-06-22 15:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0898,
+    "lo_seen": 0.0872,
+    "created": "2026-06-22T16:01:40"
   }
 }
