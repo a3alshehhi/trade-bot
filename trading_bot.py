@@ -1633,6 +1633,421 @@ def backtest_symbol_reversal(item, kind, cfg):
     return trades
 
 
+def _simulate_direct_trail_div(df, i0, direct_entry, dca_levels, initial_stop, hold,
+                               cost, rsi_arr, atr_arr, trail, buf=0.25, arm=0.0,
+                               use_div=True):
+    """دخول سوقي مباشر عند i0 + DCA أسفل الدخول، مع وقف متحرك تحت كل تصحيح
+    (trail=True) وخروج كامل عند دايفرجنس سلبي، وإلا ضرب الوقف أو انتهاء المدة.
+    buf = مضاعف ATR لمسافة الوقف تحت التصحيح. arm = لا يُفعَّل التتبّع إلا بعد ربح
+    عائم ≥ arm×المخاطرة (0 = فوري). يرجع (R, outcome) أو None."""
+    n = len(df)
+    if direct_entry <= initial_stop:
+        return None
+    high = df["high"].values
+    low = df["low"].values
+    close = df["close"].values
+    risk0 = direct_entry - initial_stop
+    filled = [direct_entry]
+    nxt = 0
+    cur_stop = initial_stop
+    best_ph = None
+    armed = (arm <= 0)
+    end = min(i0 + 1 + hold, n)
+
+    def _avg():
+        return sum(filled) / len(filled)
+
+    for j in range(i0 + 1, end):
+        lo = low[j]
+        while nxt < len(dca_levels) and lo <= dca_levels[nxt]:
+            filled.append(dca_levels[nxt]); nxt += 1
+        avg = _avg()
+        cost_r = cost * avg / risk0
+        if lo <= cur_stop:
+            return (cur_stop - avg) / risk0 - cost_r, "trail_stop"
+        if not armed and (high[j] - avg) >= arm * (avg - initial_stop):
+            armed = True
+        k = j - 2
+        if k - 2 >= i0:
+            piv_low = (low[k] <= low[k - 1] and low[k] <= low[k - 2]
+                       and low[k] <= low[k + 1] and low[k] <= low[k + 2])
+            piv_high = (high[k] >= high[k - 1] and high[k] >= high[k - 2]
+                        and high[k] >= high[k + 1] and high[k] >= high[k + 2])
+            atrk = atr_arr[k] if not np.isnan(atr_arr[k]) else avg * 0.01
+            if trail and armed and piv_low:
+                new_stop = low[k] - buf * atrk
+                if new_stop > cur_stop and new_stop < close[j]:
+                    cur_stop = new_stop
+            if use_div and piv_high:
+                rh = rsi_arr[k]
+                if best_ph is not None and high[k] > best_ph[0] and rh < best_ph[1]:
+                    return (close[j] - avg) / risk0 - cost_r, "divergence"
+                if best_ph is None or high[k] > best_ph[0]:
+                    best_ph = (high[k], rh)
+
+    avg = _avg()
+    cost_r = cost * avg / risk0
+    return (close[end - 1] - avg) / risk0 - cost_r, "time"
+
+
+def _simulate_fib_ladder(df, i_lock, fib_levels, initial_stop, hold, cost,
+                         rsi_arr, atr_arr, trail, wait, buf=0.25, arm=0.0,
+                         use_div=True):
+    """دخول سلّمي عند مستويات فيبوناتشي التصحيحية (لا دخول سوقي مباشر):
+      • تُملأ الشريحة كلما هبط السعر إلى مستوى فيبو (الأعلى = أقل تصحيح يُملأ أولاً).
+      • يبدأ الإمساك من أول تعبئة؛ لو لم يُلمس أعلى مستوى خلال نافذة الانتظار → لا صفقة.
+      • وقف متحرك يرتفع تحت كل تصحيح (trail=True)، وخروج كامل عند دايفرجنس سلبي،
+        وإلا ضرب الوقف (الابتدائي/المتحرك) أو انتهاء مدة الإمساك.
+    fib_levels: قائمة تنازلية (0.382 أعلى → 0.786 أدنى). يرجع (R, outcome, j0) أو None.
+    R على متوسط الدخول مقابل (المتوسط − الوقف الابتدائي)."""
+    n = len(df)
+    high = df["high"].values
+    low = df["low"].values
+    close = df["close"].values
+    top = fib_levels[0]
+    j0 = None                                        # أول شمعة تلمس أعلى مستوى فيبو
+    for j in range(i_lock + 1, min(i_lock + 1 + wait, n)):
+        if low[j] <= top:
+            j0 = j
+            break
+    if j0 is None:
+        return None
+
+    filled = []
+    nxt = 0
+    cur_stop = initial_stop
+    best_ph = None
+    armed = (arm <= 0)
+    end = min(j0 + 1 + hold, n)
+
+    def _avg():
+        return sum(filled) / len(filled) if filled else top
+
+    for j in range(j0, end):
+        lo = low[j]
+        while nxt < len(fib_levels) and lo <= fib_levels[nxt]:    # ملء شرائح الفيبو
+            filled.append(fib_levels[nxt]); nxt += 1
+        avg = _avg()
+        risk = avg - initial_stop
+        if risk <= 0:
+            return None
+        cost_r = cost * avg / risk
+        if lo <= cur_stop:                                        # الوقف أولاً (محافظ)
+            return (cur_stop - avg) / risk - cost_r, "trail_stop", j0
+        if not armed and (high[j] - avg) >= arm * risk:           # تفعيل التتبّع بعد ربح عائم
+            armed = True
+
+        k = j - 2                                                 # شمعة محورية مؤكَّدة الآن
+        if k - 2 >= j0:
+            piv_low = (low[k] <= low[k - 1] and low[k] <= low[k - 2]
+                       and low[k] <= low[k + 1] and low[k] <= low[k + 2])
+            piv_high = (high[k] >= high[k - 1] and high[k] >= high[k - 2]
+                        and high[k] >= high[k + 1] and high[k] >= high[k + 2])
+            atrk = atr_arr[k] if not np.isnan(atr_arr[k]) else avg * 0.01
+            if trail and armed and piv_low:                      # ارفع الوقف تحت التصحيح
+                new_stop = low[k] - buf * atrk
+                if new_stop > cur_stop and new_stop < close[j]:
+                    cur_stop = new_stop
+            if use_div and piv_high:                             # افحص الدايفرجنس السلبي
+                rh = rsi_arr[k]
+                if best_ph is not None and high[k] > best_ph[0] and rh < best_ph[1]:
+                    return (close[j] - avg) / risk - cost_r, "divergence", j0
+                if best_ph is None or high[k] > best_ph[0]:
+                    best_ph = (high[k], rh)
+
+    avg = _avg()
+    risk = avg - initial_stop
+    if risk <= 0:
+        return None
+    cost_r = cost * avg / risk
+    return (close[end - 1] - avg) / risk - cost_r, "time", j0
+
+
+def backtest_symbol_osob(item, kind, cfg):
+    """استراتيجية «الدخول الفيبوناتشي بعد الموجة + خروج بالدايفرجنس» (osob):
+
+    الإعداد لكل رمز:
+      1) RSI(21) ينزل تحت عتبة البيع (20) — قاع/موجة هابطة.
+      2) نتابع حتى يتجاوز RSI(21) عتبة الشراء (80) — موجة دفع صاعدة مؤكَّدة؛
+         نحتفظ بأعمق قاع (ref_low) وأعلى قمة (peak) للموجة.
+      3) حين تنتهي الموجة (RSI<80) نثبّت القمة ونضع سلّم دخول عند ارتدادات فيبو
+         peak−{0.382,0.5,0.618,0.786}·imp. الدخول يتحقق عند لمس هذه المستويات (DCA)
+         — لا دخول سوقي مباشر.
+    الإدارة: وقف متحرك يرتفع تحت كل تصحيح + خروج كامل عند دايفرجنس سلبي (ولو تجاوزنا
+      الأهداف) أو ضرب الوقف. الأهداف الفيبوناتشية مرجعية فقط — لا بيع عندها.
+    عمود out_plain = بوقف ثابت | out_managed = بوقف متحرك (كلاهما يخرج بالدايفرجنس)."""
+    sym = item["symbol"]
+    hold = cfg.get("bt_hold", 40)
+    bars = cfg.get("bt_bars", 365)
+    cost = cfg.get("cost", 0.0)
+    os_th = cfg.get("rsi_os", 20.0)
+    ob_th = cfg.get("rsi_ob", 80.0)
+    # 1h/15m: دخول سلّمي فيبوناتشي | 1d/4h: دخول سوقي مباشر + DCA فيبو
+    # --force-direct يفرض الدخول المباشر على أي إطار (مثل 1h يصير كـ4h)
+    ladder_mode = (cfg.get("timeframe") in ("1h", "15m")) and not cfg.get("force_direct")
+    trend_filter = cfg.get("trend_filter", False)
+    trail_buf = cfg.get("trail_buf", 0.25)
+    trail_arm = cfg.get("trail_arm", 0.0)
+    use_div = not cfg.get("no_div", False)
+
+    df = _bt_fetch_df(sym, kind, cfg)
+    if df is None or len(df) < 120:
+        return []
+    df = df.reset_index(drop=True)
+    n = len(df)
+    close = df["close"].values
+    high = df["high"].values
+    low = df["low"].values
+    rsi21 = rsi(df["close"], 21).values
+    atrs = atr(df, 14).values
+    # فلتر الاتجاه: إغلاق فوق متوسط 200 وقت التثبيت.
+    # --htf-trend يحسبه على فريم أعلى (1h→4h، 15m→1h، 4h/1d→1d) لفلتر اتجاه أقوى.
+    if trend_filter:
+        if cfg.get("htf_trend"):
+            htf = {"1h": "4h", "15m": "1h", "4h": "1D", "1d": "1D"}.get(cfg.get("timeframe"), "1D")
+            s = df.set_index("date")["close"].resample(htf).last().dropna()
+            sm = s.rolling(200).mean().dropna().reset_index()
+            sm.columns = ["date", "ma"]
+            sma200 = (pd.merge_asof(df[["date"]].copy(), sm, on="date")["ma"].values
+                      if len(sm) else np.full(n, np.nan))
+        else:
+            sma200 = df["close"].rolling(200).mean().values
+    else:
+        sma200 = None
+
+    warmup = 60
+    start = max(warmup, n - bars)
+    trades = []
+
+    state = 0           # 0=ننتظر تشبّع بيعي | 1=ننتظر تشبّع شرائي | 2=داخل التشبّع الشرائي
+    ref_low = None
+    peak = None
+
+    i = start
+    while i < n - 1:
+        r = rsi21[i]
+        if np.isnan(r):
+            i += 1
+            continue
+
+        if state == 0:
+            if r < os_th:
+                state = 1
+                ref_low = low[i]
+                peak = high[i]
+        elif state == 1:
+            ref_low = min(ref_low, low[i])
+            peak = max(peak, high[i])
+            if r > ob_th:
+                state = 2
+        elif state == 2:
+            peak = max(peak, high[i])
+            if r < ob_th:                        # انتهت موجة التشبّع الشرائي → ثبّت المرجع
+                imp = peak - ref_low
+                trend_ok = (not trend_filter) or (
+                    sma200 is not None and not np.isnan(sma200[i]) and close[i] > sma200[i])
+                if imp > 0 and trend_ok:
+                    atrv = atrs[i] if not np.isnan(atrs[i]) else close[i] * 0.02
+                    fib = [round(peak - rr * imp, 8) for rr in (0.382, 0.5, 0.618, 0.786)]
+                    if ladder_mode:
+                        # 1h/15m: دخول سلّمي عند ارتدادات فيبو (لا دخول سوقي)
+                        stp = float(ref_low - 0.5 * atrv)
+                        a = _simulate_fib_ladder(df, i, fib, stp, hold, cost, rsi21, atrs,
+                                                 trail=False, wait=hold,
+                                                 buf=trail_buf, arm=trail_arm, use_div=use_div)
+                        b = _simulate_fib_ladder(df, i, fib, stp, hold, cost, rsi21, atrs,
+                                                 trail=True, wait=hold,
+                                                 buf=trail_buf, arm=trail_arm, use_div=use_div)
+                        if a and b:
+                            j0 = b[2]
+                            trades.append({
+                                "symbol": sym, "kind": kind, "side": "buy",
+                                "mode": "ladder", "lock_bar": i, "fill_bar": j0,
+                                "date": str(df["date"].iloc[j0])[:10], "score": 0,
+                                "entry_ref": fib[0], "stop": round(stp, 8),
+                                "R_plain": round(a[0], 3), "out_plain": a[1],
+                                "R_managed": round(b[0], 3), "out_managed": b[1],
+                            })
+                            i = j0 + hold
+                            state = 0
+                            ref_low = peak = None
+                            continue
+                    else:
+                        # 1d/4h: دخول سوقي مباشر + تعديل بفيبو DCA أسفل الدخول
+                        entry = float(close[i])
+                        dca = [x for x in fib if x < entry]
+                        deepest = min(dca) if dca else ref_low
+                        stp = float(min(ref_low, deepest) - 0.5 * atrv)
+                        if entry > stp:
+                            a = _simulate_direct_trail_div(df, i, entry, dca, stp, hold,
+                                                           cost, rsi21, atrs, trail=False,
+                                                           buf=trail_buf, arm=trail_arm,
+                                                           use_div=use_div)
+                            b = _simulate_direct_trail_div(df, i, entry, dca, stp, hold,
+                                                           cost, rsi21, atrs, trail=True,
+                                                           buf=trail_buf, arm=trail_arm,
+                                                           use_div=use_div)
+                            if a and b:
+                                trades.append({
+                                    "symbol": sym, "kind": kind, "side": "buy",
+                                    "mode": "direct", "lock_bar": i, "fill_bar": i,
+                                    "date": str(df["date"].iloc[i])[:10], "score": 0,
+                                    "entry_ref": round(entry, 8), "stop": round(stp, 8),
+                                    "R_plain": round(a[0], 3), "out_plain": a[1],
+                                    "R_managed": round(b[0], 3), "out_managed": b[1],
+                                })
+                                i += hold
+                                state = 0
+                                ref_low = peak = None
+                                continue
+                state = 0
+                ref_low = peak = None
+        i += 1
+    return trades
+
+
+def backtest_symbol_trendwave(item, kind, cfg):
+    """استراتيجية مستقلة «trendwave» — الإعداد الرابح الموحّد على كل الفريمات:
+
+      • الإعداد: RSI(21) ينزل تحت 20 ثم يتجاوز 80 (موجة دفع صاعدة مؤكَّدة).
+      • الدخول: سوقي مباشر عند نهاية الموجة + تعديل بمستويات فيبو تصحيحية (DCA).
+      • فلتر الاتجاه: إغلاق فوق متوسط 200 على *فريم أعلى* (1h→4h، 15m→1h، 4h/1d→1d).
+      • الإدارة: وقف متحرك (0.5×ATR تحت كل تصحيح) لا يُفعَّل إلا بعد ربح عائم +1×المخاطرة.
+      • الخروج: بالوقف المتحرك فقط (بلا خروج دايفرجنس).
+
+    مبنيّة فوق محرّك osob لكنها مُقدَّمة كاستراتيجية مستقلة بإعداداتها المثبّتة.
+    نتائج الباك-تست الحقيقية (Binance): رابحة على 1d و4h و1h."""
+    c = dict(cfg)
+    c["force_direct"] = True      # دخول مباشر على كل الفريمات (بما فيها 1h/15m)
+    c["no_div"] = True            # بلا خروج دايفرجنس
+    c["trend_filter"] = True      # فلتر اتجاه مفعّل
+    c["htf_trend"] = True         # من فريم أعلى
+    c.setdefault("trail_buf", 0.5)
+    c.setdefault("trail_arm", 1.0)
+    return backtest_symbol_osob(item, kind, c)
+
+
+def backtest_symbol_os_multi(item, kind, cfg):
+    """استراتيجية «تكرار التشبّع البيعي بعد موجة شرائية مكتملة» (os-multi):
+
+    التسلسل لكل رمز:
+      1) تكتمل موجة تشبّع شرائي: RSI(21) يتجاوز عتبة الشراء (80) ثم يعود تحتها
+         (نهاية الموجة). نحتفظ بأعلى قمة بلغتها الموجة كمرجع (peak).
+      2) بعد اكتمال الموجة نعدّ نزولات التشبّع البيعي: كل هبوط لـ RSI(21) تحت
+         عتبة البيع (20) يُحتسب «مرة»، ولا تُحتسب المرة التالية إلا بعد عودة
+         RSI فوق العتبة (نزول مستقل). نتابع أعمق قاع خلال هذه النزولات (ref_low).
+      3) عند بلوغ العدد المطلوب (os_touches: 15m=3، 1h=2) ندخل مباشرةً عند
+         إغلاق تلك الشمعة. الفيبو/الأهداف بنفس معادلات الدخول المباشر الحالية:
+           imp        = peak - ref_low
+           DCA        = peak - {0.382,0.5,0.618,0.786}·imp
+           الوقف      = أسفل أعمق مستوى دخول مُدرَج (− 0.5·ATR)
+           الأهداف    = ref_low + {1.272,1.618,2.0}·imp
+      لو ظهرت موجة شرائية جديدة (RSI>80) أثناء العدّ، يُعاد ضبط الإعداد عليها.
+    """
+    sym = item["symbol"]
+    hold = cfg.get("bt_hold", 40)
+    bars = cfg.get("bt_bars", 365)
+    cost = cfg.get("cost", 0.0)
+    os_th = cfg.get("rsi_os", 20.0)
+    ob_th = cfg.get("rsi_ob", 80.0)
+    need = int(cfg.get("os_touches", 2))
+
+    df = _bt_fetch_df(sym, kind, cfg)
+    if df is None or len(df) < 120:
+        return []
+    df = df.reset_index(drop=True)
+    n = len(df)
+    close = df["close"].values
+    high = df["high"].values
+    low = df["low"].values
+    rsi21 = rsi(df["close"], 21).values
+    atrs = atr(df, 14).values
+
+    warmup = 60
+    start = max(warmup, n - bars)
+    trades = []
+
+    # ob_done=False: ننتظر موجة شرائية تكتمل | True: نعدّ نزولات التشبّع البيعي
+    ob_done = False
+    in_ob = False
+    ob_peak = None      # أعلى قمة بلغتها الموجة الشرائية (مرجع الفيبو الأعلى)
+    touches = 0         # عدد نزولات التشبّع البيعي المستقلة بعد اكتمال الموجة
+    armed = True        # جاهز لعدّ نزول جديد (RSI فوق عتبة البيع حالياً)
+    ref_low = None      # أعمق قاع خلال النزولات
+
+    i = start
+    while i < n - 1:
+        r = rsi21[i]
+        if np.isnan(r):
+            i += 1
+            continue
+
+        if not ob_done:
+            if r > ob_th:                       # داخل موجة تشبّع شرائي
+                in_ob = True
+                ob_peak = high[i] if ob_peak is None else max(ob_peak, high[i])
+            elif in_ob:                          # RSI عاد تحت 80 → اكتملت الموجة
+                ob_done = True
+                in_ob = False
+                touches = 0
+                armed = True
+                ref_low = None
+            i += 1
+            continue
+
+        # ob_done == True: مرحلة عدّ نزولات التشبّع البيعي
+        if r > ob_th:                            # موجة شرائية جديدة → أعد الإعداد عليها
+            ob_done = False
+            in_ob = True
+            ob_peak = high[i]
+            touches = 0
+            armed = True
+            ref_low = None
+            i += 1
+            continue
+
+        ob_peak = high[i] if ob_peak is None else max(ob_peak, high[i])
+        if r < os_th:                            # داخل منطقة تشبّع بيعي
+            ref_low = low[i] if ref_low is None else min(ref_low, low[i])
+            if armed:
+                touches += 1
+                armed = False
+        else:                                    # عاد فوق عتبة البيع → النزول التالي يُعدّ
+            armed = True
+
+        if touches >= need and ref_low is not None and ob_peak is not None:
+            peak = ob_peak
+            imp = peak - ref_low
+            if imp > 0:
+                entry = float(close[i])
+                atrv = atrs[i] if not np.isnan(atrs[i]) else close[i] * 0.02
+                dca_levels = [peak - rr * imp for rr in (0.382, 0.5, 0.618, 0.786)]
+                stp = float(ref_low - 0.5 * atrv)
+                stp = min(stp, round(min(dca_levels) - 0.5 * atrv, 8))
+                tps = [round(ref_low + m * imp, 8) for m in (1.272, 1.618, 2.0)]
+                a = _simulate_dca(df, i, entry, dca_levels, stp, tps, hold, False, cost)
+                b = _simulate_dca(df, i, entry, dca_levels, stp, tps, hold, True, cost)
+                if a and b:
+                    trades.append({
+                        "symbol": sym, "kind": kind, "side": "buy", "bar": i,
+                        "date": str(df["date"].iloc[i])[:10], "score": 0,
+                        "touches": need, "entry": entry, "stop": round(stp, 8),
+                        "R_plain": round(a[0], 3), "out_plain": a[1],
+                        "R_managed": round(b[0], 3), "out_managed": b[1],
+                    })
+                    i += hold
+            # سواء دخلنا أو لا، انتهى هذا الإعداد → ابحث عن موجة شرائية جديدة
+            ob_done = False
+            in_ob = False
+            ob_peak = None
+            touches = 0
+            armed = True
+            ref_low = None
+            continue
+        i += 1
+    return trades
+
+
 def backtest_symbol(item, kind, cfg):
     """يفتح صفقات افتراضية على تاريخ رمز واحد ويرجع قائمة صفقات مغلقة."""
     sym = item["symbol"]
@@ -1857,7 +2272,35 @@ def run_backtest(cfg, watchlist_path, out_dir):
         print("🟦 فلتر العرض/الطلب: مفعّل — دخول عند منطقة طازجة فقط")
     print()
 
-    if cfg.get("rsi_cross"):
+    if cfg.get("trendwave"):
+        bt_fn = backtest_symbol_trendwave
+        _tb = cfg.get("trail_buf", 0.5); _ta = cfg.get("trail_arm", 1.0)
+        if _tb == 0.25: _tb = 0.5
+        if _ta == 0.0: _ta = 1.0
+        print("🌟 استراتيجية مستقلة: trendwave (الإعداد الرابح الموحّد)")
+        print(f"   RSI21<{cfg.get('rsi_os',20.0):.0f} → >{cfg.get('rsi_ob',80.0):.0f} → دخول سوقي مباشر + DCA فيبو")
+        print(f"   🔎 فلتر اتجاه من فريم أعلى | خروج: وقف متحرك فقط ({_tb}×ATR، مؤجّل {_ta}×المخاطرة)")
+    elif cfg.get("osob"):
+        bt_fn = backtest_symbol_osob
+        _direct = cfg.get("force_direct") or cfg.get("timeframe") in ("1d", "4h")
+        _md = "دخول سوقي مباشر + DCA فيبو" if _direct else "سلّم دخول فيبوناتشي (1h/15m)"
+        if cfg.get("no_div"):
+            _md += " | بدون خروج دايفرجنس"
+        print(f"🎯 الاستراتيجية: دخول فيبوناتشي بعد الموجة + خروج بالدايفرجنس (osob)")
+        print(f"   RSI21<{cfg.get('rsi_os',20.0):.0f} → >{cfg.get('rsi_ob',80.0):.0f} → {_md}")
+        _ex = "وقف متحرك فقط" if cfg.get("no_div") else "وقف متحرك + خروج دايفرجنس"
+        print(f"   🪜 DCA على 0.382/0.5/0.618/0.786 | الخروج: {_ex}")
+        _tf = ("مفعّل (متوسط 200 على فريم أعلى)" if cfg.get("htf_trend")
+               else "مفعّل (فوق متوسط 200)") if cfg.get("trend_filter") else "معطّل"
+        print(f"   🔎 فلتر الاتجاه: {_tf} | مسافة الوقف: {cfg.get('trail_buf',0.25)}×ATR | "
+              f"تفعيل التتبّع بعد: {cfg.get('trail_arm',0.0)}×المخاطرة")
+    elif cfg.get("os_multi"):
+        bt_fn = backtest_symbol_os_multi
+        nt = int(cfg.get("os_touches", 2))
+        print(f"🎯 الاستراتيجية: تكرار التشبّع البيعي بعد موجة شرائية مكتملة (os-multi)")
+        print(f"   موجة RSI21>{cfg.get('rsi_ob',80.0):.0f} تكتمل → ثم {nt} نزولات تحت {cfg.get('rsi_os',20.0):.0f} → دخول مباشر")
+        print(f"   🪜 الفيبو: أعمق قاع→أعلى قمة | DCA 0.382/0.5/0.618/0.786 | أهداف 1.272/1.618/2.0")
+    elif cfg.get("rsi_cross"):
         bt_fn = backtest_symbol_rsi_cross
         print(f"🎯 الاستراتيجية: زخم RSI80 (تجاوز RSI21 عتبة {cfg.get('rsi_ob',80.0):.0f} صعوداً → دخول)")
         print(f"   وقف = {cfg.get('bt_stop_mult',1.5)}×ATR | أهداف امتدادات فيبو 1.272/1.618/2.618")
@@ -2326,6 +2769,31 @@ def build_argparser():
                    help="تكلفة الصفقة ذهاباً وإياباً كنسبة (مثلاً 0.002 = 0.2%% عمولة+انزلاق)")
     p.add_argument("--rsi-ob", type=float, default=80.0,
                    help="عتبة التشبّع الشرائي لاستراتيجية الزخم RSI (افتراضي 80؛ جرّب 70/75)")
+    p.add_argument("--rsi-os", type=float, default=20.0,
+                   help="عتبة التشبّع البيعي (افتراضي 20)")
+    p.add_argument("--os-multi", action="store_true",
+                   help="(backtest) استراتيجية: موجة تشبّع شرائي مكتملة ثم تكرار التشبّع "
+                        "البيعي N مرة ثم دخول مباشر بفيبو DCA")
+    p.add_argument("--os-touches", type=int, default=2,
+                   help="(os-multi) عدد نزولات التشبّع البيعي المطلوبة للدخول (15m=3، 1h=2)")
+    p.add_argument("--trendwave", action="store_true",
+                   help="استراتيجية مستقلة (الإعداد الرابح): دخول مباشر + DCA فيبو + فلتر "
+                        "اتجاه من فريم أعلى + وقف متحرك 0.5×ATR مؤجّل 1R، بلا دايفرجنس. كل الفريمات")
+    p.add_argument("--osob", action="store_true",
+                   help="(backtest) استراتيجية: تشبّع بيعي→شرائي ثم سلّم دخول عند ارتدادات "
+                        "فيبو (DCA)، وقف متحرك تحت كل تصحيح، خروج عند دايفرجنس سلبي")
+    p.add_argument("--trend-filter", action="store_true",
+                   help="(osob) دخول فقط إذا كان الإغلاق فوق متوسط 200 على نفس الإطار")
+    p.add_argument("--htf-trend", action="store_true",
+                   help="(osob) احسب فلتر متوسط 200 على فريم أعلى (1h→4h، 15m→1h) لفلتر أقوى")
+    p.add_argument("--trail-buf", type=float, default=0.25,
+                   help="(osob) مضاعف ATR لمسافة الوقف المتحرك تحت التصحيح (افتراضي 0.25؛ أكبر = أوسع)")
+    p.add_argument("--trail-arm", type=float, default=0.0,
+                   help="(osob) لا يُفعَّل الوقف المتحرك إلا بعد ربح عائم ≥ هذا×المخاطرة (0=فوري؛ جرّب 1.0)")
+    p.add_argument("--force-direct", action="store_true",
+                   help="(osob) فرض الدخول السوقي المباشر على أي إطار (يجعل 1h/15m مثل 4h)")
+    p.add_argument("--no-divergence", action="store_true",
+                   help="(osob) تعطيل الخروج عند الدايفرجنس السلبي (الخروج بالوقف المتحرك فقط)")
     p.add_argument("--bt-stop-mult", type=float, default=1.5,
                    help="مضاعف ATR للوقف في باك-تست الزخم RSI80 (افتراضي 1.5؛ جرّب 2.0)")
     p.add_argument("--watchlist", help="مسار ملف الـ watchlist (مطلوب في وضع scan)")
@@ -2382,8 +2850,18 @@ if __name__ == "__main__":
         "bt_offset": args.bt_offset, "strategy": args.strategy,
         "ma200_ob": args.ma200_confirm, "dca_fib": args.dca_fib,
         "rsi_cross": args.rsi_cross,
-        "rsi_ob": args.rsi_ob, "bt_stop_mult": args.bt_stop_mult,
+        "rsi_ob": args.rsi_ob, "rsi_os": args.rsi_os, "bt_stop_mult": args.bt_stop_mult,
+        "os_multi": args.os_multi, "os_touches": args.os_touches,
+        "osob": args.osob, "trend_filter": args.trend_filter,
+        "trail_buf": args.trail_buf, "trail_arm": args.trail_arm,
+        "force_direct": args.force_direct, "no_div": args.no_divergence,
+        "htf_trend": args.htf_trend, "trendwave": args.trendwave,
     }
+    if args.trendwave:        # الإعداد الرابح المثبّت
+        if args.trail_buf == 0.25:
+            cfg["trail_buf"] = 0.5
+        if args.trail_arm == 0.0:
+            cfg["trail_arm"] = 1.0
     if args.mode == "monitor":
         monitor(cfg, args.state)
     elif args.mode == "trackmon":
