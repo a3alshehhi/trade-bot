@@ -1913,7 +1913,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-22 18:59:59.999000",
+    "last_ts": "2026-06-22 19:14:59.999000",
     "closed_at": null
   },
   {
@@ -1941,7 +1941,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-22 18:59:59.999000",
+    "last_ts": "2026-06-22 19:14:59.999000",
     "closed_at": null
   },
   {
@@ -2049,7 +2049,7 @@
         "pct": 1.668
       }
     ],
-    "last_ts": "2026-06-22 18:59:59.999000",
+    "last_ts": "2026-06-22 19:14:59.999000",
     "closed_at": null
   },
   {
@@ -2077,7 +2077,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-22 18:59:59.999000",
+    "last_ts": "2026-06-22 19:14:59.999000",
     "closed_at": null
   },
   {
@@ -2134,24 +2134,58 @@
     ],
     "risk": 0.001558430000000003,
     "opened_at": "2026-06-22T18:32:04",
-    "status": "open",
+    "status": "closed",
     "hits": [
       1
     ],
     "breakeven": true,
-    "remaining": 1.0,
+    "remaining": 0.0,
     "realized_pct": 0.0,
-    "result_pct": null,
-    "exit_price": null,
+    "result_pct": 0.0,
+    "exit_price": 0.02406,
     "events": [
       {
         "ts": "2026-06-22 18:59:59.999000",
         "type": "tp1_be",
         "price": 0.02473456,
         "pct": 2.804
+      },
+      {
+        "ts": "2026-06-22 19:14:59.999000",
+        "type": "be_sl",
+        "price": 0.02406,
+        "pct": 0.0
       }
     ],
-    "last_ts": "2026-06-22 18:59:59.999000",
+    "last_ts": "2026-06-22 19:14:59.999000",
+    "closed_at": "2026-06-22T19:17:48"
+  },
+  {
+    "id": "1782155766006",
+    "symbol": "ENSOUSDT",
+    "label": "RSI70 · 15m",
+    "strategy": "classic",
+    "timeframe": "15m",
+    "side": "buy",
+    "entry": 0.665,
+    "stop": 0.63706123,
+    "stop_orig": 0.63706123,
+    "targets": [
+      0.678056,
+      0.694664,
+      0.742664
+    ],
+    "risk": 0.02793877,
+    "opened_at": "2026-06-22T19:17:37",
+    "status": "open",
+    "hits": [],
+    "breakeven": false,
+    "remaining": 1.0,
+    "realized_pct": 0.0,
+    "result_pct": null,
+    "exit_price": null,
+    "events": [],
+    "last_ts": "2026-06-22 19:14:59.999000",
     "closed_at": null
   }
 ]

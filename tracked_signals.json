@@ -157,9 +157,9 @@
       1,
       2
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.4111,
-    "lo_seen": 0.3917,
+    "lo_seen": 0.3892,
     "created": "2026-06-22T12:10:12"
   },
   "RSI70 · 1h|WUSDT|2026-06-22 11:59:59.999000": {
@@ -857,7 +857,7 @@
     "hits": [],
     "stopped": false,
     "hi_seen": 0.4111,
-    "lo_seen": 0.3917,
+    "lo_seen": 0.3892,
     "created": "2026-06-22T15:01:29"
   },
   "RSI70 · 15m|CUSDT|2026-06-22 15:29:59.999000": {
@@ -1160,5 +1160,24 @@
     "hi_seen": 0.026,
     "lo_seen": 0.0236,
     "created": "2026-06-22T18:31:04"
+  },
+  "RSI70 · 15m|ENSOUSDT|2026-06-22 19:14:59.999000": {
+    "symbol": "ENSOUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 955,
+    "entry": 0.665,
+    "stop": 0.63706123,
+    "targets": [
+      0.678056,
+      0.694664,
+      0.742664
+    ],
+    "bar_ts": "2026-06-22 19:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.666,
+    "lo_seen": 0.665,
+    "created": "2026-06-22T19:16:07"
   }
 }
