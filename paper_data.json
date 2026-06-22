@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-22T18:17:13",
+  "updated_at": "2026-06-22T18:32:12",
   "stats": {
-    "open": 11,
+    "open": 12,
     "closed": 39,
     "win_rate": 7.7,
     "profit_factor": 0.04,
@@ -1953,7 +1953,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-22 18:14:59.999000",
+      "last_ts": "2026-06-22 18:29:59.999000",
       "closed_at": null
     },
     {
@@ -1981,7 +1981,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-22 18:14:59.999000",
+      "last_ts": "2026-06-22 18:29:59.999000",
       "closed_at": null
     },
     {
@@ -2089,7 +2089,7 @@
           "pct": 1.668
         }
       ],
-      "last_ts": "2026-06-22 18:14:59.999000",
+      "last_ts": "2026-06-22 18:29:59.999000",
       "closed_at": null
     },
     {
@@ -2117,7 +2117,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-22 18:14:59.999000",
+      "last_ts": "2026-06-22 18:29:59.999000",
       "closed_at": null
     },
     {
@@ -2146,6 +2146,34 @@
       "exit_price": null,
       "events": [],
       "last_ts": "2026-06-22 17:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782153064849",
+      "symbol": "FIDAUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.02406,
+      "stop": 0.02250157,
+      "stop_orig": 0.02250157,
+      "targets": [
+        0.02473456,
+        0.02559264,
+        0.02807264
+      ],
+      "risk": 0.001558430000000003,
+      "opened_at": "2026-06-22T18:32:04",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-22 18:29:59.999000",
       "closed_at": null
     }
   ]
