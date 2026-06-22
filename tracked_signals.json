@@ -97,9 +97,9 @@
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.01791,
-    "lo_seen": 0.01518,
+    "lo_seen": 0.01459,
     "created": "2026-06-21T16:57:34"
   },
   "RSI70 · 4h|TNSRUSDT|2026-06-21 19:59:59.999000": {
@@ -116,9 +116,104 @@
     ],
     "bar_ts": "2026-06-21 19:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0533,
-    "lo_seen": 0.0456,
+    "lo_seen": 0.0395,
     "created": "2026-06-21T22:02:43"
+  },
+  "RSI70 · 15m|DCRUSDT|2026-06-22 11:59:59.999000": {
+    "symbol": "DCRUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 765,
+    "entry": 11.93,
+    "stop": 11.833549552719532,
+    "targets": [
+      12.02792,
+      12.15248,
+      12.51248
+    ],
+    "bar_ts": "2026-06-22 11:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 11.93,
+    "lo_seen": 11.9,
+    "created": "2026-06-22T12:10:11"
+  },
+  "RSI70 · 15m|TIAUSDT|2026-06-22 11:59:59.999000": {
+    "symbol": "TIAUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 766,
+    "entry": 0.3963,
+    "stop": 0.3911392248011571,
+    "targets": [
+      0.4019576,
+      0.4091544,
+      0.4299544
+    ],
+    "bar_ts": "2026-06-22 11:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.4007,
+    "lo_seen": 0.3955,
+    "created": "2026-06-22T12:10:12"
+  },
+  "RSI70 · 1h|WUSDT|2026-06-22 11:59:59.999000": {
+    "symbol": "WUSDT",
+    "label": "RSI70 · 1h",
+    "timeframe": "1h",
+    "message_id": 767,
+    "entry": 0.01259,
+    "stop": 0.01188325767984124,
+    "targets": [
+      0.01305784,
+      0.01365296,
+      0.01537296
+    ],
+    "bar_ts": "2026-06-22 11:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01284,
+    "lo_seen": 0.01257,
+    "created": "2026-06-22T12:10:38"
+  },
+  "RSI70 · 4h|LAYERUSDT|2026-06-22 11:59:59.999000": {
+    "symbol": "LAYERUSDT",
+    "label": "RSI70 · 4h",
+    "timeframe": "4h",
+    "message_id": 768,
+    "entry": 0.0874,
+    "stop": 0.08186154264035365,
+    "targets": [
+      0.0937648,
+      0.1018612,
+      0.1252612
+    ],
+    "bar_ts": "2026-06-22 11:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0889,
+    "lo_seen": 0.0834,
+    "created": "2026-06-22T12:10:59"
+  },
+  "RSI70 · 4h|WUSDT|2026-06-22 11:59:59.999000": {
+    "symbol": "WUSDT",
+    "label": "RSI70 · 4h",
+    "timeframe": "4h",
+    "message_id": 769,
+    "entry": 0.01259,
+    "stop": 0.011697041168959614,
+    "targets": [
+      0.01346856,
+      0.01458614,
+      0.01781614
+    ],
+    "bar_ts": "2026-06-22 11:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01284,
+    "lo_seen": 0.01257,
+    "created": "2026-06-22T12:11:00"
   }
 }
