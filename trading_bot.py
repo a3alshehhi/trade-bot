@@ -2369,6 +2369,8 @@ def run_backtest(cfg, watchlist_path, out_dir):
 def reversal_label(cfg):
     """اسم الاستراتيجية لعرضه في رسالة تيليجرام للتمييز."""
     tf = cfg.get("timeframe", "?")
+    if cfg.get("trendwave"):
+        return f"trendwave · {tf}"
     if cfg.get("rsi_cross"):
         return f"RSI{int(cfg.get('rsi_ob', 80.0))} · {tf}"
     return f"انعكاس {tf} " + ("DCA" if cfg.get("dca_fib") else "كلاسيكي")
@@ -2522,6 +2524,72 @@ def detect_reversal_signal(df, cfg):
     return None
 
 
+def detect_trendwave_signal(df, cfg):
+    """إشارة دخول حيّة لاستراتيجية trendwave عند آخر شمعة *مغلقة*:
+    RSI(21)<20 ثم >80 (موجة دفع) → عند عودة RSI تحت 80 (نهاية الموجة) ندخل مباشرةً،
+    بشرط أن يكون الإغلاق فوق متوسط 200 على *فريم أعلى* (1h→4h، 15m→1h، 4h/1d→يومي).
+    مستويات الدخول DCA على ارتدادات فيبو، والوقف تحت أعمق دخول/قاع الموجة.
+    يرجع dict أو None."""
+    os_th = cfg.get("rsi_os", 20.0)
+    ob_th = cfg.get("rsi_ob", 80.0)
+    if df is None or len(df) < 60:
+        return None
+    df = df.reset_index(drop=True)
+    n = len(df)
+    close = df["close"].values
+    high = df["high"].values
+    low = df["low"].values
+    r = rsi(df["close"], 21).values
+    a = atr(df, 14).values
+    # فلتر الاتجاه من فريم أعلى
+    htf = {"1h": "4h", "15m": "1h", "4h": "1D", "1d": "1D"}.get(cfg.get("timeframe"), "1D")
+    s = df.set_index("date")["close"].resample(htf).last().dropna()
+    sm = s.rolling(200).mean().dropna().reset_index()
+    sm.columns = ["date", "ma"]
+    sma = (pd.merge_asof(df[["date"]].copy(), sm, on="date")["ma"].values
+           if len(sm) else np.full(n, np.nan))
+
+    # آلة الحالات للعثور على آخر دخول (يجب أن يقع عند الشمعة المغلقة الأخيرة)
+    state = 0
+    ref_low = peak = None
+    trig = None
+    for i in range(1, n):
+        ri = r[i]
+        if np.isnan(ri):
+            continue
+        if state == 0:
+            if ri < os_th:
+                state = 1; ref_low = low[i]; peak = high[i]
+        elif state == 1:
+            ref_low = min(ref_low, low[i]); peak = max(peak, high[i])
+            if ri > ob_th:
+                state = 2
+        elif state == 2:
+            peak = max(peak, high[i])
+            if ri < ob_th:                     # نهاية الموجة → نقطة الدخول
+                trig = (i, ref_low, peak)
+                state = 0; ref_low = peak = None
+
+    if not trig or trig[0] != n - 1:
+        return None
+    i, rl, pk = trig
+    m = sma[i]
+    if np.isnan(m) or close[i] <= m:           # فلتر الاتجاه غير محقَّق
+        return None
+    imp = pk - rl
+    if imp <= 0:
+        return None
+    entry = float(close[i])
+    atrv = a[i] if not np.isnan(a[i]) else entry * 0.02
+    fib = [round(pk - rr * imp, 8) for rr in (0.382, 0.5, 0.618, 0.786)]
+    dca = [x for x in fib if x < entry]        # مستويات DCA أسفل الدخول فقط
+    deepest = min(dca) if dca else rl
+    stop = float(min(rl, deepest) - 0.5 * atrv)
+    targets = [round(rl + mm * imp, 8) for mm in (1.272, 1.618, 2.0)]
+    return {"entry": entry, "stop": round(stop, 8), "dca": dca,
+            "targets": targets, "rsi": round(float(r[i]), 1)}
+
+
 TRACK_FILE = "tracked_signals.json"
 
 
@@ -2646,11 +2714,18 @@ def format_reversal_card(sig, cfg, label):
     risk_pct = ((risk_ref - stop) / risk_ref * 100) if risk_ref else 0.0
     nums = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣"]
 
-    head = "🟢 اختراق RSI صعودي" if cfg.get("rsi_cross") else "🟢 انعكاس صعودي"
+    head = ("🌟 إشارة trendwave" if cfg.get("trendwave")
+            else "🟢 اختراق RSI صعودي" if cfg.get("rsi_cross") else "🟢 انعكاس صعودي")
     lines = [f"{head} — {label}",
              f"💎 {sig['symbol']} · ⏱️ {tf}"]
     if sig.get("rsi") is not None:
-        lines.append(f"📈 RSI(21): {sig['rsi']} (تجاوز {int(cfg.get('rsi_ob', 80.0))})")
+        if cfg.get("trendwave"):
+            _note = "نهاية موجة شرائية + فلتر اتجاه"
+        elif cfg.get("rsi_cross"):
+            _note = f"تجاوز {int(cfg.get('rsi_ob', 80.0))}"
+        else:
+            _note = "ارتداد"
+        lines.append(f"📈 RSI(21): {sig['rsi']} ({_note})")
     lines.append("")
 
     # الدخول + مستويات الدخول على فيبوناتشي
@@ -2699,11 +2774,21 @@ def live_reversal_scan(cfg, watchlist_path, state_path):
     if not isinstance(alerted, dict):
         alerted = {}
     need = 1000 if cfg.get("timeframe") in ("1h", "15m") else 320
-    detector = detect_rsi_cross_signal if cfg.get("rsi_cross") else detect_reversal_signal
+    if cfg.get("trendwave"):
+        detector = detect_trendwave_signal
+        # فلتر الفريم الأعلى يحتاج 200 شمعة على الفريم الأعلى → شموع أكثر
+        tw_need = {"15m": 1200, "1h": 1200, "4h": 1300, "1d": 400}.get(cfg.get("timeframe"), 1000)
+    elif cfg.get("rsi_cross"):
+        detector = detect_rsi_cross_signal
+    else:
+        detector = detect_reversal_signal
 
     def work(item):
         sym = item["symbol"]
-        df = fetch_binance(sym, BINANCE_INTERVAL[cfg["timeframe"]], min(need, 1000))
+        if cfg.get("trendwave"):
+            df = fetch_binance_paged(sym, BINANCE_INTERVAL[cfg["timeframe"]], tw_need)
+        else:
+            df = fetch_binance(sym, BINANCE_INTERVAL[cfg["timeframe"]], min(need, 1000))
         if df is None or len(df) < 60:
             return None
         df = df.iloc[:-1]                       # استبعاد الشمعة الجارية (غير المغلقة)

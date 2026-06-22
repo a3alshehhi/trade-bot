@@ -54,6 +54,20 @@ python3 trading_bot.py --mode backtest --watchlist watchlist.txt \
 
 ---
 
+## 3.5) الإشارات الحيّة (تيليجرام) + الجدولة
+
+أُضيف **وضع حيّ** لـ trendwave: عند إغلاق الشمعة، يرصد الكاشف تحقّق الدخول ويرسل بطاقة
+تيليجرام («🌟 إشارة trendwave») فيها الدخول ومستويات DCA والوقف والأهداف، مع منع التكرار
+(`trendwave_alerts.json`). التشغيل اليدوي:
+```bash
+python3 trading_bot.py --mode reversal --trendwave --watchlist watchlist.txt \
+  --timeframe 1h --state trendwave_alerts.json
+```
+**الجدولة:** مدمجة داخل وركفلو `reversal-live` الذي يشغّله cron-job.org كل 15 دقيقة —
+فلا حاجة لأي إعداد إضافي في cron-job.org (راجع `CRONJOB_SETUP_ar.md`).
+
+---
+
 ## 4) ملاحظات أمانة
 
 - التوقّع على 1h و4h موجب لكن بهامش، وحسّاس للتكاليف الحقيقية والانزلاق وحجم الأمر.
