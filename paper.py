@@ -113,8 +113,9 @@ def _open_trade_from_signal(pid, sig):
         "hits": [],
         "breakeven": False,
         "remaining": 1.0,
-        "realized_R": 0.0,
-        "result_R": None,
+        "realized_pct": 0.0,   # الربح/الخسارة المحقَّق حتى الآن بالنسبة المئوية
+        "result_pct": None,    # النتيجة النهائية بالنسبة المئوية
+        "exit_price": None,    # سعر الخروج الفعلي
         "events": [],
         "last_ts": sig.get("bar_ts"),
         "closed_at": None,
@@ -276,11 +277,12 @@ def _update_trade(tr, token, chat_id):
 
         # 1) فحص الوقف أولاً (تحفّظياً)
         if lo <= cur:
-            R = (cur - entry) / risk
-            tr["realized_R"] = R
+            pct = _pct(entry, cur)
+            tr["realized_pct"] = pct
+            tr["exit_price"] = cur
             ev = ("be_sl" if abs(cur - entry) < 1e-9
                   else ("trail_sl" if cur > tr["stop_orig"] + 1e-9 else "sl"))
-            tr["events"].append({"ts": bts, "type": ev, "price": cur, "R": round(R, 3)})
+            tr["events"].append({"ts": bts, "type": ev, "price": cur, "pct": round(pct, 3)})
             tr["remaining"] = 0.0
             tr["stop"] = cur
             tr["status"] = "closed"
@@ -295,7 +297,7 @@ def _update_trade(tr, token, chat_id):
             if 1 not in tr["hits"]:
                 tr["hits"].append(1)
             tr["events"].append({"ts": bts, "type": "tp1_be",
-                                 "price": tp1, "R": round((tp1 - entry) / risk, 3)})
+                                 "price": tp1, "pct": round(_pct(entry, tp1), 3)})
             _notify_be(tr, tp1, token, chat_id)
 
         # 3) بعد التعادل: وقف متحرّك هيكلي + خروج عند دايفرجنس سلبي
@@ -309,10 +311,11 @@ def _update_trade(tr, token, chat_id):
                 tr["events"].append({"ts": bts, "type": "trail", "price": round(cur, 8)})
             if detect_divergence(low[:p + 1], high[:p + 1], rsi21[:p + 1],
                                  lookback=DIV_LOOKBACK) == "bear":
-                R = (c - entry) / risk
-                tr["realized_R"] = R
+                pct = _pct(entry, c)
+                tr["realized_pct"] = pct
+                tr["exit_price"] = c
                 tr["events"].append({"ts": bts, "type": "bear_div",
-                                     "price": c, "R": round(R, 3)})
+                                     "price": c, "pct": round(pct, 3)})
                 tr["remaining"] = 0.0
                 tr["stop"] = cur
                 tr["status"] = "closed"
@@ -323,13 +326,15 @@ def _update_trade(tr, token, chat_id):
         tr["stop"] = cur
         tr["last_ts"] = bts
 
-    if tr["status"] == "closed" and tr.get("result_R") is None:
-        tr["result_R"] = round(tr["realized_R"], 3)
+    if tr["status"] == "closed" and tr.get("result_pct") is None:
+        tr["result_pct"] = round(tr["realized_pct"], 3)
         tr["closed_at"] = datetime.now().isoformat(timespec="seconds")
 
 
 def _close_trade(tr, ev, price, token, chat_id):
-    tr["result_R"] = round(tr["realized_R"], 3)
+    if tr.get("exit_price") is None:
+        tr["exit_price"] = price
+    tr["result_pct"] = round(tr["realized_pct"], 3)
     tr["closed_at"] = datetime.now().isoformat(timespec="seconds")
     if token and chat_id:
         send_telegram(token, chat_id, _format_close_card(tr))
@@ -372,7 +377,7 @@ def _notify_be(tr, price, token, chat_id):
     send_telegram(token, chat_id, msg)
 
 
-def _notify_event(tr, i, price, R, token, chat_id):
+def _notify_event(tr, i, price, pct, token, chat_id):
     if not (token and chat_id):
         return
     f = _fmt_price
@@ -384,8 +389,8 @@ def _notify_event(tr, i, price, R, token, chat_id):
         f"💰 {tr['symbol']} — {_strat_name(tr)}",
         f"🟢 الدخول: {f(tr['entry'])}",
         f"💵 السعر: {f(price)}",
-        f"📊 عائد هذا الجزء: {R:+.2f}R",
-        f"📈 المحقَّق حتى الآن: {tr['realized_R']:+.2f}R",
+        f"📊 عائد هذا الجزء: {pct:+.2f}%",
+        f"📈 المحقَّق حتى الآن: {tr['realized_pct']:+.2f}%",
         SEP,
     ])
     send_telegram(token, chat_id, msg)
@@ -393,15 +398,17 @@ def _notify_event(tr, i, price, R, token, chat_id):
 
 def _format_close_card(tr):
     f = _fmt_price
-    res = tr["result_R"] if tr["result_R"] is not None else tr["realized_R"]
+    res = tr["result_pct"] if tr.get("result_pct") is not None else tr["realized_pct"]
     verdict = "ربح ✅" if res > 0 else ("تعادل ⚪" if abs(res) < 1e-6 else "خسارة 🔴")
     hit_txt = "، ".join(f"هدف {h}" for h in tr["hits"]) or "لا شيء"
     lines = [SEP, "🏁 أُغلقت الصفقة الورقية", SEP, "",
              f"💰 {tr['symbol']} — {_strat_name(tr)}",
-             f"🟢 الدخول: {f(tr['entry'])}",
-             f"✅ الأهداف المتحققة: {hit_txt}",
-             f"📊 النتيجة النهائية: {res:+.2f}R — {verdict}",
-             SEP, "⚠️ نتيجة افتراضية تعليمية — ليست نصيحة مالية"]
+             f"🟢 الدخول: {f(tr['entry'])}"]
+    if tr.get("exit_price") is not None:
+        lines.append(f"🔚 الخروج: {f(tr['exit_price'])}")
+    lines += [f"✅ الأهداف المتحققة: {hit_txt}",
+              f"📊 النتيجة النهائية: {res:+.2f}% — {verdict}",
+              SEP, "⚠️ نتيجة افتراضية تعليمية — ليست نصيحة مالية"]
     return "\n".join(lines)
 
 
@@ -413,39 +420,104 @@ def _format_open_list(trades):
     for t in op:
         hits = "".join("✅" for _ in t["hits"]) or "—"
         lines.append(f"• {t['symbol']} ({_strat_name(t)}) {hits} "
-                     f"| محقَّق {t['realized_R']:+.2f}R")
+                     f"| محقَّق {t.get('realized_pct', 0.0):+.2f}%")
     return "\n".join(lines)
 
 
 # ── الإحصائيات والتقرير ────────────────────────────────────────────────────
+def _pct(entry, exit_price):
+    """نسبة الربح/الخسارة المئوية لصفقة شراء = (الخروج − الدخول) ÷ الدخول × 100."""
+    entry = float(entry)
+    if entry <= 0:
+        return 0.0
+    return (float(exit_price) - entry) / entry * 100.0
+
+
+def _compound(pcts):
+    """العائد التراكمي المركّب لقائمة نِسب مئوية (كأن رأس المال يُعاد استثماره)."""
+    eq = 1.0
+    for p in pcts:
+        eq *= (1.0 + p / 100.0)
+    return (eq - 1.0) * 100.0
+
+
+def _closed_trades(trades):
+    return [t for t in trades if t.get("status") == "closed"
+            and t.get("result_pct") is not None]
+
+
 def compute_stats(trades):
-    closed = [t for t in trades if t.get("status") == "closed"
-              and t.get("result_R") is not None]
+    closed = _closed_trades(trades)
     n = len(closed)
     out = {"open": sum(1 for t in trades if t.get("status") == "open"),
            "closed": n, "win_rate": 0.0, "profit_factor": 0.0,
-           "total_R": 0.0, "avg_R": 0.0, "max_drawdown_R": 0.0}
+           "total_pct": 0.0, "avg_pct": 0.0, "max_drawdown_pct": 0.0}
     if n == 0:
         return out
-    rs = [t["result_R"] for t in closed]
-    wins = [r for r in rs if r > 1e-9]
-    losses = [r for r in rs if r < -1e-9]
+    ps = [t["result_pct"] for t in closed]
+    wins = [p for p in ps if p > 1e-9]
+    losses = [p for p in ps if p < -1e-9]
     gp = sum(wins)
     gl = -sum(losses)
     out["win_rate"] = round(len(wins) / n * 100, 1)
     out["profit_factor"] = round(gp / gl, 2) if gl > 0 else float("inf")
-    out["total_R"] = round(sum(rs), 2)
-    out["avg_R"] = round(sum(rs) / n, 3)
-    # أقصى تراجع على منحنى رأس المال
-    eq = 0.0
-    peak = 0.0
+    out["avg_pct"] = round(sum(ps) / n, 2)
+    # الإجمالي التراكمي المركّب + أقصى تراجع على منحنى رأس المال (بالنسبة المئوية)
+    ordered = sorted(closed, key=lambda t: str(t.get("closed_at") or ""))
+    eq = 1.0
+    peak = 1.0
     mdd = 0.0
-    for r in rs:
-        eq += r
+    for t in ordered:
+        eq *= (1.0 + t["result_pct"] / 100.0)
         peak = max(peak, eq)
-        mdd = min(mdd, eq - peak)
-    out["max_drawdown_R"] = round(mdd, 2)
+        mdd = min(mdd, (eq / peak - 1.0) * 100.0)
+    out["total_pct"] = round((eq - 1.0) * 100.0, 2)
+    out["max_drawdown_pct"] = round(mdd, 2)
     return out
+
+
+def _period_keys(t):
+    """يُرجع (اليوم، الأسبوع ISO، الشهر) من وقت إغلاق الصفقة."""
+    ts = t.get("closed_at") or t.get("opened_at")
+    d = datetime.fromisoformat(str(ts))
+    iso = d.isocalendar()
+    return (d.strftime("%Y-%m-%d"),
+            f"{iso[0]}-W{iso[1]:02d}",
+            d.strftime("%Y-%m"))
+
+
+def _pack_period(groups, meta=None):
+    """يحوّل قاموس {مفتاح: [نِسب]} إلى صفوف مرتّبة تنازلياً بإحصاء كل فترة."""
+    rows = []
+    for k in sorted(groups.keys(), reverse=True):
+        ps = groups[k]
+        wins = sum(1 for p in ps if p > 1e-9)
+        row = {"key": k, "trades": len(ps),
+               "win_rate": round(wins / len(ps) * 100, 1),
+               "return_pct": round(_compound(ps), 2)}
+        if meta:
+            row.update(meta.get(k, {}))
+        rows.append(row)
+    return rows
+
+
+def compute_periods(trades):
+    """إحصائيات بالنسبة المئوية: يومية (مع أسبوعها وشهرها)، أسبوعية (مع شهرها)، شهرية."""
+    closed = _closed_trades(trades)
+    daily, weekly, monthly = {}, {}, {}
+    md, mw = {}, {}
+    for t in closed:
+        try:
+            day, week, month = _period_keys(t)
+        except Exception:
+            continue
+        p = t["result_pct"]
+        daily.setdefault(day, []).append(p);   md[day] = {"week": week, "month": month}
+        weekly.setdefault(week, []).append(p);  mw[week] = {"month": month}
+        monthly.setdefault(month, []).append(p)
+    return {"daily": _pack_period(daily, md),
+            "weekly": _pack_period(weekly, mw),
+            "monthly": _pack_period(monthly)}
 
 
 def _format_report(trades):
@@ -455,20 +527,34 @@ def _format_report(trades):
              f"📂 مفتوحة: {s['open']}  |  🏁 مغلقة: {s['closed']}",
              f"🎯 نسبة الفوز: {s['win_rate']}%",
              f"💹 معامل الربح: {pf}",
-             f"📈 إجمالي العائد: {s['total_R']:+.2f}R",
-             f"📐 متوسط الصفقة: {s['avg_R']:+.3f}R",
-             f"📉 أقصى تراجع: {s['max_drawdown_R']:.2f}R"]
-    # تفصيل لكل استراتيجية
+             f"📈 إجمالي العائد (مركّب): {s['total_pct']:+.2f}%",
+             f"📐 متوسط الصفقة: {s['avg_pct']:+.2f}%",
+             f"📉 أقصى تراجع: {s['max_drawdown_pct']:.2f}%"]
+    # تفصيل لكل استراتيجية (بالنسبة المئوية المركّبة)
     by = {}
-    for t in trades:
-        if t.get("status") == "closed" and t.get("result_R") is not None:
-            by.setdefault(_strat_name(t), []).append(t["result_R"])
+    for t in _closed_trades(trades):
+        by.setdefault(_strat_name(t), []).append(t["result_pct"])
     if by:
         lines += ["", "— حسب الاستراتيجية —"]
-        for name, rs in by.items():
-            wr = round(sum(1 for r in rs if r > 0) / len(rs) * 100)
-            lines.append(f"• {name}: {len(rs)} صفقة | فوز {wr}% | "
-                         f"{sum(rs):+.2f}R")
+        for name, ps in by.items():
+            wr = round(sum(1 for p in ps if p > 0) / len(ps) * 100)
+            lines.append(f"• {name}: {len(ps)} صفقة | فوز {wr}% | "
+                         f"{_compound(ps):+.2f}%")
+    # إحصائيات الفترات
+    per = compute_periods(trades)
+
+    def _section(title, rows, limit):
+        if not rows:
+            return []
+        out = ["", title]
+        for r in rows[:limit]:
+            out.append(f"• {r['key']}: {r['trades']} صفقة | "
+                       f"فوز {r['win_rate']:.0f}% | {r['return_pct']:+.2f}%")
+        return out
+
+    lines += _section("🗓️ شهرياً (السنة)", per["monthly"], 12)
+    lines += _section("📅 أسبوعياً (آخر 8 أسابيع)", per["weekly"], 8)
+    lines += _section("📆 يومياً (آخر 7 أيام)", per["daily"], 7)
     lines += [SEP, "⚠️ نتائج افتراضية تعليمية — ليست نصيحة مالية"]
     return "\n".join(lines)
 
@@ -487,6 +573,7 @@ def export():
     payload = {
         "updated_at": datetime.now().isoformat(timespec="seconds"),
         "stats": compute_stats(trades),
+        "periods": compute_periods(trades),
         "trades": trades,
     }
     _save_json(DATA_FILE, payload)

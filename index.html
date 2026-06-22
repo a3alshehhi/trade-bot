@@ -97,8 +97,23 @@
 </div>
 
 <div class="panel">
-  <h2>📈 منحنى رأس المال (صفقات تيليجرام المغلقة — تراكمي بالـ R)</h2>
+  <h2>📈 منحنى رأس المال (صفقات تيليجرام المغلقة — تراكمي مركّب %)</h2>
   <div class="chartbox"><canvas id="equity"></canvas></div>
+</div>
+
+<div class="panel">
+  <h2>🗓️ الأداء الشهري (السنة)</h2>
+  <div class="scroll"><table id="monthlyTbl"></table></div>
+</div>
+
+<div class="panel">
+  <h2>📅 الأداء الأسبوعي (لكل شهر)</h2>
+  <div class="scroll"><table id="weeklyTbl"></table></div>
+</div>
+
+<div class="panel">
+  <h2>📆 الأداء اليومي (لكل أسبوع)</h2>
+  <div class="scroll"><table id="dailyTbl"></table></div>
 </div>
 
 <div class="panel">
@@ -118,7 +133,7 @@
 
 <div class="foot">
   ⚠️ أداة تتبّع ورقي تعليمية ونتائج افتراضية — ليست نصيحة مالية.<br>
-  الإدارة: جني 50% عند الهدف الأول مع نقل الوقف للتعادل، 25% للثاني، 25% للثالث.
+  كل النتائج بالنسبة المئوية. الإجمالي تراكمي مركّب. الإدارة: تعادل عند الهدف الأول، ثم وقف متحرّك هيكلي، وخروج عند دايفرجنس سلبي.
 </div>
 
 <!-- نموذج إضافة/تعديل -->
@@ -156,7 +171,7 @@
 
 <script>
 let chart;
-const fmtR = r => (r>=0?'+':'') + Number(r).toFixed(2) + 'R';
+const fmtPct = r => (r>=0?'+':'') + Number(r).toFixed(2) + '%';
 const cls = r => r>1e-6?'pos':(r<-1e-6?'neg':'neu');
 const price = v => { v=Number(v); return v<1 ? v.toPrecision(4) : v.toLocaleString('en',{maximumFractionDigits:2}); };
 const strat = t => t.label || (t.strategy==='dca'?'DCA':'كلاسيكي');
@@ -229,11 +244,10 @@ async function refreshPrices(){
 function liveStats(t){
   const p = priceCache[t.symbol.toUpperCase()];
   const buy = t.side!=='sell';
-  const risk = Math.abs(t.entry - t.stop);
   const tps = [t.t1,t.t2,t.t3].filter(x=>x!=null);
-  let R=null, status='جارية', sClass='neu';
-  if(p!=null && risk>0){
-    R = buy ? (p-t.entry)/risk : (t.entry-p)/risk;
+  let pct=null, status='جارية', sClass='neu';
+  if(p!=null && t.entry>0){
+    pct = buy ? (p-t.entry)/t.entry*100 : (t.entry-p)/t.entry*100;
     if((buy && p<=t.stop) || (!buy && p>=t.stop)){ status='ضرب الوقف 🛑'; sClass='neg'; }
     else{
       let hit=0;
@@ -241,7 +255,7 @@ function liveStats(t){
       if(hit>0){ status='هدف '+hit+' ✅'; sClass='pos'; }
     }
   }
-  return {p,R,status,sClass,tps,buy};
+  return {p,pct,status,sClass,tps,buy};
 }
 
 function renderLocal(){
@@ -251,12 +265,12 @@ function renderLocal(){
     tb.innerHTML='<tr><td class="empty">لا صفقات يدوية بعد — اضغط «➕ صفقة جديدة»</td></tr>';
     document.getElementById('localSum').textContent=''; return;
   }
-  let sumR=0, withPx=0;
+  let sumPct=0, withPx=0;
   const rows = arr.map(t=>{
     const L=liveStats(t);
-    if(L.R!=null){ sumR+=L.R; withPx++; }
+    if(L.pct!=null){ sumPct+=L.pct; withPx++; }
     const pxTxt = L.p!=null? price(L.p) : '—';
-    const rTxt  = L.R!=null? `<span class="${cls(L.R)}">${fmtR(L.R)}</span>` : '—';
+    const rTxt  = L.pct!=null? `<span class="${cls(L.pct)}">${fmtPct(L.pct)}</span>` : '—';
     const tgs = L.tps.length? L.tps.map((tp,i)=>{
         const done = L.p!=null && ((L.buy&&L.p>=tp)||(!L.buy&&L.p<=tp));
         return (done?'✅':(i+1))+'·'+price(tp);
@@ -276,10 +290,10 @@ function renderLocal(){
       </td></tr>`;
   }).join('');
   tb.innerHTML = '<tr><th>العملة</th><th>استراتيجية</th><th>الدخول</th>'+
-    '<th>السعر الحيّ</th><th>الوقف</th><th>الأهداف</th><th>R حيّ</th>'+
+    '<th>السعر الحيّ</th><th>الوقف</th><th>الأهداف</th><th>ربح% حيّ</th>'+
     '<th>الحالة</th><th></th></tr>' + rows;
   document.getElementById('localSum').textContent =
-    `${arr.length} صفقة · مجموع R الحيّ: ${withPx? fmtR(sumR):'—'}`;
+    `${arr.length} صفقة · مجموع الربح% الحيّ: ${withPx? fmtPct(sumPct):'—'}`;
 }
 
 /* ───────── بيانات الخادم (تيليجرام) ───────── */
@@ -292,42 +306,47 @@ async function loadServer(){
     document.getElementById('updated').textContent = 'تعذّر تحميل بيانات الخادم';
     return;
   }
-  const trades = data.trades||[], s = data.stats||{};
+  const trades = data.trades||[], s = data.stats||{}, periods = data.periods||{};
   document.getElementById('updated').textContent = 'آخر تحديث (تيليجرام): ' + dt(data.updated_at);
 
   const pf = s.profit_factor===null||s.profit_factor>1e6 ? '∞' : Number(s.profit_factor||0).toFixed(2);
   const kpis = [
     ['نسبة الفوز', (s.win_rate||0)+'%', 'neu'],
     ['معامل الربح', pf, (s.profit_factor>=1?'pos':'neg')],
-    ['إجمالي العائد', fmtR(s.total_R||0), cls(s.total_R||0)],
-    ['متوسط الصفقة', fmtR(s.avg_R||0), cls(s.avg_R||0)],
-    ['أقصى تراجع', fmtR(s.max_drawdown_R||0), 'neg'],
+    ['إجمالي العائد (مركّب)', fmtPct(s.total_pct||0), cls(s.total_pct||0)],
+    ['متوسط الصفقة', fmtPct(s.avg_pct||0), cls(s.avg_pct||0)],
+    ['أقصى تراجع', fmtPct(s.max_drawdown_pct||0), 'neg'],
     ['مفتوحة / مغلقة', (s.open||0)+' / '+(s.closed||0), 'neu'],
   ];
   document.getElementById('kpis').innerHTML = kpis.map(k=>
     `<div class="kpi"><div class="lbl">${k[0]}</div>
      <div class="val ${k[2]}">${k[1]}</div></div>`).join('');
 
-  const closed = trades.filter(t=>t.status==='closed' && t.result_R!=null)
+  // منحنى رأس المال تراكمي مركّب بالنسبة المئوية
+  const closed = trades.filter(t=>t.status==='closed' && t.result_pct!=null)
     .sort((a,b)=> String(a.closed_at).localeCompare(String(b.closed_at)));
-  let eq=0; const pts=[{x:'البداية',y:0}];
-  closed.forEach(t=>{ eq+=t.result_R; pts.push({x:t.symbol, y:Number(eq.toFixed(2))}); });
+  let eq=1; const pts=[{x:'البداية',y:0}];
+  closed.forEach(t=>{ eq*=(1+t.result_pct/100); pts.push({x:t.symbol, y:Number(((eq-1)*100).toFixed(2))}); });
   drawEquity(pts);
 
   const by={};
-  closed.forEach(t=>{ const k=strat(t); (by[k]=by[k]||[]).push(t.result_R); });
+  closed.forEach(t=>{ const k=strat(t); (by[k]=by[k]||[]).push(t.result_pct); });
   const bs=document.getElementById('byStrat');
   if(Object.keys(by).length){
     bs.innerHTML = '<tr><th>الاستراتيجية</th><th>صفقات</th><th>فوز</th>'+
-      '<th>إجمالي R</th><th>متوسط R</th></tr>' +
-      Object.entries(by).map(([k,rs])=>{
-        const w=rs.filter(r=>r>0).length, tot=rs.reduce((a,b)=>a+b,0);
-        return `<tr><td class="sym">${k}</td><td>${rs.length}</td>
-          <td>${Math.round(w/rs.length*100)}%</td>
-          <td class="${cls(tot)}">${fmtR(tot)}</td>
-          <td class="${cls(tot/rs.length)}">${fmtR(tot/rs.length)}</td></tr>`;
+      '<th>إجمالي %</th><th>متوسط %</th></tr>' +
+      Object.entries(by).map(([k,ps])=>{
+        const w=ps.filter(r=>r>0).length;
+        const tot=(ps.reduce((a,b)=>a*(1+b/100),1)-1)*100;
+        const avg=ps.reduce((a,b)=>a+b,0)/ps.length;
+        return `<tr><td class="sym">${k}</td><td>${ps.length}</td>
+          <td>${Math.round(w/ps.length*100)}%</td>
+          <td class="${cls(tot)}">${fmtPct(tot)}</td>
+          <td class="${cls(avg)}">${fmtPct(avg)}</td></tr>`;
       }).join('');
   } else bs.innerHTML = '<tr><td class="empty">لا صفقات مغلقة بعد</td></tr>';
+
+  renderPeriods(periods);
 
   const open = trades.filter(t=>t.status==='open');
   const ot=document.getElementById('openTbl');
@@ -338,7 +357,7 @@ async function loadServer(){
         <td><span class="tag">${strat(t)}</span></td><td>${t.timeframe}</td>
         <td>${price(t.entry)}</td><td>${price(t.stop)}</td>
         <td>${t.hits&&t.hits.length? t.hits.map(h=>'✅').join(''):'—'}</td>
-        <td class="${cls(t.realized_R)}">${fmtR(t.realized_R||0)}</td></tr>`).join('');
+        <td class="${cls(t.realized_pct)}">${fmtPct(t.realized_pct||0)}</td></tr>`).join('');
   } else ot.innerHTML='<tr><td class="empty">لا صفقات مفتوحة من تيليجرام</td></tr>';
 
   const lg=document.getElementById('logTbl');
@@ -349,10 +368,10 @@ async function loadServer(){
       all.map(t=>{
         let badge, res;
         if(t.status==='open'){ badge='<span class="badge b-open">مفتوحة</span>'; res='—'; }
-        else{ const r=t.result_R||0;
+        else{ const r=t.result_pct||0;
           const c=r>1e-6?'b-win':(r<-1e-6?'b-loss':'b-even');
           const lbl=r>1e-6?'ربح':(r<-1e-6?'خسارة':'تعادل');
-          badge=`<span class="badge ${c}">${lbl}</span>`; res=`<span class="${cls(r)}">${fmtR(r)}</span>`; }
+          badge=`<span class="badge ${c}">${lbl}</span>`; res=`<span class="${cls(r)}">${fmtPct(r)}</span>`; }
         return `<tr><td class="sym">${t.symbol}</td>
           <td><span class="tag">${strat(t)}</span></td><td>${badge}</td>
           <td>${price(t.entry)}</td><td>${dt(t.opened_at)}</td>
@@ -373,11 +392,36 @@ function drawEquity(pts){
         backgroundColor:col+'18'}]},
     options:{responsive:true,maintainAspectRatio:false,
       plugins:{legend:{display:false},
-        tooltip:{callbacks:{label:c=>'تراكمي: '+(c.parsed.y>=0?'+':'')+c.parsed.y+'R'}}},
+        tooltip:{callbacks:{label:c=>'تراكمي: '+(c.parsed.y>=0?'+':'')+c.parsed.y+'%'}}},
       scales:{
-        y:{grid:{color:'#21262d'},ticks:{color:'#8b949e',callback:v=>v+'R'}},
+        y:{grid:{color:'#21262d'},ticks:{color:'#8b949e',callback:v=>v+'%'}},
         x:{grid:{display:false},ticks:{color:'#8b949e',maxRotation:0,
           autoSkip:true,maxTicksLimit:8}}}}});
+}
+
+/* ───────── إحصائيات الفترات (يومي/أسبوعي/شهري) ───────── */
+function periodTable(rows, cols){
+  if(!rows||!rows.length) return '<tr><td class="empty">لا بيانات بعد</td></tr>';
+  const head = '<tr>'+cols.map(c=>`<th>${c.h}</th>`).join('')+'</tr>';
+  const body = rows.map(r=>'<tr>'+cols.map(c=>{
+    if(c.k==='key')        return `<td class="sym">${r.key}</td>`;
+    if(c.k==='week')       return `<td>${r.week||'—'}</td>`;
+    if(c.k==='month')      return `<td>${r.month||'—'}</td>`;
+    if(c.k==='trades')     return `<td>${r.trades}</td>`;
+    if(c.k==='win_rate')   return `<td>${Math.round(r.win_rate)}%</td>`;
+    if(c.k==='return_pct') return `<td class="${cls(r.return_pct)}">${fmtPct(r.return_pct)}</td>`;
+    return '<td>—</td>';
+  }).join('')+'</tr>').join('');
+  return head+body;
+}
+function renderPeriods(p){
+  p = p||{};
+  document.getElementById('monthlyTbl').innerHTML = periodTable(p.monthly, [
+    {h:'الشهر',k:'key'},{h:'صفقات',k:'trades'},{h:'فوز',k:'win_rate'},{h:'العائد',k:'return_pct'}]);
+  document.getElementById('weeklyTbl').innerHTML = periodTable(p.weekly, [
+    {h:'الأسبوع',k:'key'},{h:'الشهر',k:'month'},{h:'صفقات',k:'trades'},{h:'فوز',k:'win_rate'},{h:'العائد',k:'return_pct'}]);
+  document.getElementById('dailyTbl').innerHTML = periodTable(p.daily, [
+    {h:'اليوم',k:'key'},{h:'الأسبوع',k:'week'},{h:'صفقات',k:'trades'},{h:'فوز',k:'win_rate'},{h:'العائد',k:'return_pct'}]);
 }
 
 async function load(){
