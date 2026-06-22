@@ -1967,6 +1967,10 @@ def detect_rsi_cross_signal(df, cfg):
         risk = entry - stop
         targets = [round(entry + m * risk, 8) for m in (1.0, 2.0, 3.0)]
         fib_e = []
+    # الوقف يجب أن يقع تحت أعمق مستوى دخول مُدرَج، وإلا فالسلّم بلا معنى
+    # (يُملأ آخر دخول بعد ضرب الوقف). نخفض الوقف عند الحاجة بهامش 0.5×ATR.
+    if fib_e:
+        stop = min(stop, round(min(fib_e) - 0.5 * atrv, 8))
     return {"entry": entry, "stop": stop, "targets": targets,
             "dca": None, "fib_entries": fib_e, "rsi": round(float(r[i]), 1)}
 
@@ -2024,6 +2028,8 @@ def detect_reversal_signal(df, cfg):
                         entry = float(close[i])
                         stp = float(ref_low - 0.5 * atrv)
                         dca = [round(peak - rr * imp, 8) for rr in (0.382, 0.5, 0.618, 0.786)]
+                        # الوقف تحت أعمق مستوى دخول مُدرَج
+                        stp = min(stp, round(min(dca) - 0.5 * atrv, 8))
                         tps = [round(ref_low + mm * imp, 8) for mm in (1.272, 1.618, 2.0)]
                         last_sig = (i, {"entry": entry, "stop": stp, "targets": tps, "dca": dca})
                     state = 0
@@ -2054,6 +2060,10 @@ def detect_reversal_signal(df, cfg):
                     # مستويات الدخول على فيبوناتشي (ارتدادات الموجة الصاعدة ref_low→peak)
                     fib_e = ([round(peak - rr * imp, 8) for rr in (0.382, 0.5, 0.618, 0.786)]
                              if imp > 0 else [])
+                    # الوقف يجب أن يقع تحت أعمق مستوى دخول مُدرَج، وإلا تُملأ
+                    # الدخولات الأعمق بعد ضرب الوقف (سلّم بلا معنى).
+                    if fib_e:
+                        stp = min(stp, round(min(fib_e) - 0.5 * atrv, 8))
                     last_sig = (i, {"entry": entry, "stop": stp, "targets": tps,
                                     "dca": None, "retr": round(retr, 3),
                                     "fib_entries": fib_e})
@@ -2185,7 +2195,12 @@ def format_reversal_card(sig, cfg, label):
     fmt = _fmt_price
     entry = sig["entry"]
     stop = sig["stop"]
-    risk_pct = ((entry - stop) / entry * 100) if entry else 0.0
+    # عند وجود سلّم دخول، المخاطرة تُقاس من متوسط الدخول (لا الدخول المباشر)
+    levels = sig.get("dca") or sig.get("fib_entries") or []
+    all_entries = [entry] + list(levels)
+    avg_entry = sum(all_entries) / len(all_entries) if all_entries else entry
+    risk_ref = avg_entry if levels else entry
+    risk_pct = ((risk_ref - stop) / risk_ref * 100) if risk_ref else 0.0
     nums = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣"]
 
     head = "🟢 اختراق RSI صعودي" if cfg.get("rsi_cross") else "🟢 انعكاس صعودي"
@@ -2201,6 +2216,7 @@ def format_reversal_card(sig, cfg, label):
         lines.append("🪜 مستويات الدخول (فيبوناتشي):")
         for k, lv in enumerate(sig["dca"], 1):
             lines.append(f"   {k}) {fmt(lv)}")
+        lines.append(f"   ⚖️ متوسط الدخول: {fmt(avg_entry)}")
     else:
         retr = sig.get("retr")
         suffix = f"  (ارتداد فيبو {retr})" if retr is not None else ""
@@ -2209,6 +2225,7 @@ def format_reversal_card(sig, cfg, label):
             lines.append("🪜 مستويات الدخول (فيبوناتشي):")
             for k, lv in enumerate(sig["fib_entries"], 1):
                 lines.append(f"   {k}) {fmt(lv)}")
+            lines.append(f"   ⚖️ متوسط الدخول: {fmt(avg_entry)}")
 
     lines.append(f"🛑 الوقف: {fmt(stop)}  (−{risk_pct:.2f}%)")
     lines += ["", "🎯 الأهداف:"]
@@ -2218,7 +2235,8 @@ def format_reversal_card(sig, cfg, label):
         lines.append(f"{n} {fmt(t)}  (+{gain:.2f}%)")
 
     lines += ["",
-              f"⚖️ المخاطرة لكل صفقة: {risk_pct:.2f}% من الدخول",
+              f"⚖️ المخاطرة لكل صفقة: {risk_pct:.2f}% من "
+              f"{'متوسط الدخول' if levels else 'الدخول'}",
               f"⏰ {now}", "",
               "⚠️ تحليل تعليمي — ليس نصيحة مالية"]
     return "\n".join(lines)
