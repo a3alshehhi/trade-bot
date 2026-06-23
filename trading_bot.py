@@ -2592,9 +2592,26 @@ def detect_trendwave_signal(df, cfg):
 
 TRACK_FILE = "tracked_signals.json"
 
+# إعدادات إدارة الصفقة الحيّة (مطابقة لإعداد trendwave الرابح في الباك-تست)
+TRAIL_BUF = 0.5     # مسافة الوقف المتحرك تحت القاع المحوري = 0.5×ATR
+TRAIL_ARM = 1.0     # لا يُفعَّل التتبّع إلا بعد ربح عائم ≥ 1×المخاطرة
+
+
+def _tp_split_for(n_targets):
+    """نِسَب الإغلاق الجزئي المقترَحة لكل هدف (جني ربح تدريجي).
+    50% عند الهدف الأول ثم توزيع الباقي بالتساوي على بقية الأهداف."""
+    if n_targets <= 0:
+        return []
+    if n_targets == 1:
+        return [100]
+    rest = round(50 / (n_targets - 1))
+    split = [50] + [rest] * (n_targets - 1)
+    split[-1] = 100 - sum(split[:-1])      # ضمان أن المجموع = 100%
+    return split
+
 
 def track_signal(sig, label, cfg, message_id, path=TRACK_FILE):
-    """يخزّن إشارة مُرسَلة لمتابعتها لاحقاً (أهداف/وقف) والرد على رسالتها الأصلية.
+    """يخزّن إشارة مُرسَلة لمتابعتها لاحقاً (أهداف/وقف/وقف متحرك) والرد على رسالتها.
     يُنظّف الإشارات الأقدم من 14 يوماً."""
     try:
         with open(path, "r", encoding="utf-8") as f:
@@ -2607,15 +2624,26 @@ def track_signal(sig, label, cfg, message_id, path=TRACK_FILE):
     data = {k: v for k, v in data.items()
             if isinstance(v, dict) and v.get("created", "") >= cutoff}
     key = f"{label}|{sig['symbol']}|{sig.get('bar_ts')}"
+    is_tw = bool(cfg.get("trendwave"))
+    # جني الربح الجزئي + الوقف للتعادل: لعائلة الانعكاس فقط (trendwave يُدار بالوقف المتحرك)
+    tp_split = None if is_tw else _tp_split_for(len(sig["targets"]))
     data[key] = {
         "symbol": sig["symbol"],
         "label": label,
         "timeframe": cfg.get("timeframe"),
         "message_id": message_id,
         "entry": sig["entry"],
-        "stop": sig["stop"],
+        "stop": sig["stop"],            # الوقف الابتدائي (يبقى ثابتاً للمرجع)
+        "init_stop": sig["stop"],
+        "cur_stop": sig["stop"],        # الوقف الجاري (يرتفع مع التتبّع)
+        "last_alert_stop": sig["stop"], # آخر مستوى وقف أُبلغ عنه (منع التكرار)
+        "armed": False,                 # هل تفعّل الوقف المتحرك (بعد 1×المخاطرة)؟
         "targets": sig["targets"],
+        "tp_split": tp_split,
+        "is_trendwave": is_tw,
+        "breakeven_done": False,
         "bar_ts": sig.get("bar_ts"),
+        "last_bar": sig.get("bar_ts"),  # آخر شمعة مغلقة عولِجت
         "hits": [],
         "stopped": False,
         "hi_seen": sig["entry"],
@@ -2626,9 +2654,123 @@ def track_signal(sig, label, cfg, message_id, path=TRACK_FILE):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
+def _advance_trade(df, tr):
+    """يُحدّث حالة صفقة مُتابَعة بناءً على الشموع المُغلقة الجديدة فقط.
+    يطبّق: (1) جني ربح جزئي عند كل هدف + نقل الوقف للتعادل بعد الهدف الأول
+    (عائلة الانعكاس)، (2) وقف متحرك يرتفع تحت كل قاع محوري مؤكَّد − 0.5×ATR
+    بعد ربح عائم ≥ 1×المخاطرة (مطابق لإعداد trendwave الرابح).
+    يُعدّل tr مباشرةً ويُرجع قائمة أحداث (نصوص جاهزة للإرسال). الترتيب الزمني محفوظ."""
+    fmt = _fmt_price
+    events = []
+    df = df.reset_index(drop=True)
+    high = df["high"].values
+    low = df["low"].values
+    close = df["close"].values
+    dates = df["date"]
+    atr_arr = atr(df, 14).values
+
+    entry = tr["entry"]
+    init_stop = tr.get("init_stop", tr["stop"])
+    risk = entry - init_stop
+    if risk <= 0:
+        return events
+    targets = tr["targets"]
+    tp_split = tr.get("tp_split")          # None لـ trendwave
+    sym = tr["symbol"]
+
+    # نقطة البداية: أول شمعة مغلقة تلَت آخر شمعة عولِجت
+    try:
+        last_bar = pd.Timestamp(tr.get("last_bar") or tr.get("bar_ts"))
+    except Exception:
+        last_bar = None
+    if last_bar is not None:
+        idxs = [i for i in range(len(df)) if dates.iloc[i] > last_bar]
+    else:
+        idxs = list(range(len(df)))
+    if not idxs:
+        return events
+
+    cur_stop = tr.get("cur_stop", init_stop)
+    armed = tr.get("armed", False)
+
+    for j in idxs:
+        # (أ) ضرب الوقف (بالمستوى السابق) أولاً — يُنهي الصفقة.
+        #     يُفحص قبل أي رفع لهذه الشمعة حتى لا يُطبَّق التعادل/التتبّع على شمعته نفسها.
+        if low[j] <= cur_stop:
+            if cur_stop > entry:                   # خروج بربح عبر الوقف المتحرك
+                g = (cur_stop - entry) / entry * 100 if entry else 0.0
+                events.append(f"✅ {sym} — خروج بالوقف المتحرك (تأمين ربح)\n"
+                              f"السعر: {fmt(cur_stop)}  (+{g:.2f}%)")
+            elif cur_stop >= entry:                # خروج عند التعادل
+                events.append(f"➖ {sym} — خروج عند التعادل\n"
+                              f"السعر: {fmt(cur_stop)}  (0.00%)")
+            else:                                  # وقف خسارة
+                events.append(f"🛑 {sym} — ضرب وقف الخسارة\n"
+                              f"السعر: {fmt(cur_stop)}")
+            tr["stopped"] = True
+            tr["cur_stop"] = cur_stop
+            tr["last_bar"] = str(dates.iloc[j])
+            tr["hi_seen"] = max(tr.get("hi_seen", entry), float(high[j]))
+            tr["lo_seen"] = min(tr.get("lo_seen", entry), float(low[j]))
+            return events
+
+        # (ب) الأهداف + جني الربح الجزئي (يُطبَّق التعادل على الشموع التالية فقط)
+        for k in range(1, len(targets) + 1):
+            if k in tr["hits"]:
+                continue
+            if high[j] >= targets[k - 1]:
+                tr["hits"].append(k)
+                gain = ((targets[k - 1] - entry) / entry * 100) if entry else 0.0
+                msg = [f"🎯 {sym} — تحقق الهدف {k} {'✅' * k}",
+                       f"السعر: {fmt(targets[k - 1])}  (+{gain:.2f}%)"]
+                if tp_split:                       # جني ربح جزئي (عائلة الانعكاس)
+                    msg.append(f"💰 اقترح إغلاق {tp_split[k - 1]}% من الصفقة")
+                    if k == 1 and not tr.get("breakeven_done"):
+                        cur_stop = max(cur_stop, entry)
+                        tr["breakeven_done"] = True
+                        tr["last_alert_stop"] = max(tr.get("last_alert_stop", init_stop),
+                                                    cur_stop)
+                        msg.append(f"🛡️ انقل الوقف إلى التعادل: {fmt(entry)}")
+                events.append("\n".join(msg))
+
+        # (ج) تفعيل التتبّع بعد ربح عائم ≥ 1×المخاطرة
+        if not armed and (high[j] - entry) >= TRAIL_ARM * risk:
+            armed = True
+
+        # (د) رفع الوقف المتحرك تحت قاع محوري مؤكَّد (5 شموع) − 0.5×ATR
+        k2 = j - 2                                  # شمعة محورية تأكَّدت الآن
+        if armed and k2 - 2 >= 0:
+            piv_low = (low[k2] <= low[k2 - 1] and low[k2] <= low[k2 - 2]
+                       and low[k2] <= low[k2 + 1] and low[k2] <= low[k2 + 2])
+            if piv_low:
+                atrk = atr_arr[k2] if not np.isnan(atr_arr[k2]) else close[j] * 0.01
+                new_stop = low[k2] - TRAIL_BUF * atrk
+                if new_stop > cur_stop and new_stop < close[j]:
+                    cur_stop = new_stop
+
+        tr["hi_seen"] = max(tr.get("hi_seen", entry), float(high[j]))
+        tr["lo_seen"] = min(tr.get("lo_seen", entry), float(low[j]))
+
+    tr["cur_stop"] = cur_stop
+    tr["armed"] = armed
+    tr["last_bar"] = str(dates.iloc[idxs[-1]])
+
+    # (هـ) أبلغ عن رفع الوقف المتحرك مرة واحدة عند تغيّر مستواه فعلياً
+    eps = abs(cur_stop) * 1e-6
+    if cur_stop > tr.get("last_alert_stop", init_stop) + eps:
+        locked = ((cur_stop - entry) / entry * 100) if entry else 0.0
+        extra = (f"  (مؤمّن +{locked:.2f}%)" if cur_stop > entry else
+                 "  (تعادل)" if abs(cur_stop - entry) <= eps else "")
+        events.append(f"📈 {sym} — ارفع الوقف المتحرك\n"
+                      f"الوقف الجديد: {fmt(cur_stop)}{extra}")
+        tr["last_alert_stop"] = cur_stop
+
+    return events
+
+
 def monitor_tracked_signals(cfg, path=TRACK_FILE):
-    """يتابع الإشارات المُرسَلة؛ عند بلوغ أي هدف أو ضرب الوقف يرسل رداً
-    على رسالة الصفقة الأصلية في تيليجرام (reply_to_message_id)."""
+    """يتابع الإشارات المُرسَلة؛ يدير كل صفقة حيّاً (وقف متحرك + جني ربح جزئي)
+    ويرسل كل حدث رداً على رسالة الصفقة الأصلية في تيليجرام (reply_to_message_id)."""
     token = cfg.get("tg_token") or os.environ.get("TELEGRAM_TOKEN")
     chat_id = cfg.get("tg_chat") or os.environ.get("TELEGRAM_CHAT_ID")
     try:
@@ -2641,7 +2783,6 @@ def monitor_tracked_signals(cfg, path=TRACK_FILE):
         print("[متابعة] لا توجد إشارات مُتابَعة.")
         return
 
-    fmt = _fmt_price
     changed = False
     active = [(k, v) for k, v in data.items()
               if not v.get("stopped")
@@ -2650,48 +2791,22 @@ def monitor_tracked_signals(cfg, path=TRACK_FILE):
 
     for key, tr in active:
         tf = tr.get("timeframe", "4h")
-        df = fetch_binance(tr["symbol"], BINANCE_INTERVAL.get(tf, "4h"), 6)
-        if df is None or len(df) < 1:
+        # شموع كافية لإعادة بناء القيعان المحورية و ATR منذ آخر معالجة
+        need = {"15m": 400, "1h": 240, "4h": 120, "1d": 60}.get(tf, 120)
+        df = fetch_binance(tr["symbol"], BINANCE_INTERVAL.get(tf, "4h"), need)
+        if df is None or len(df) < 16:
             continue
-        # اعتبر فقط الشموع التي تلت شمعة الإشارة (تفادي قمم ما قبل الإشارة)
-        try:
-            bar = pd.Timestamp(tr.get("bar_ts"))
-            post = df[df["date"] > bar]
-        except Exception:
-            post = df.iloc[-1:]
-        if len(post) < 1:
-            post = df.iloc[-1:]
-        hi = float(post["high"].max())
-        lo = float(post["low"].min())
-        tr["hi_seen"] = max(tr.get("hi_seen", hi), hi)
-        tr["lo_seen"] = min(tr.get("lo_seen", lo), lo)
+        df = df.iloc[:-1]                  # استبعاد الشمعة الجارية (غير المغلقة)
+        if len(df) < 16:
+            continue
         mid = tr.get("message_id")
-
-        # 1) وقف الخسارة أولاً
-        if tr["lo_seen"] <= tr["stop"]:
-            txt = (f"🛑 {tr['symbol']} — ضرب وقف الخسارة\n"
-                   f"السعر: {fmt(tr['stop'])}")
+        events = _advance_trade(df, tr)
+        for txt in events:
+            changed = True
             if token and chat_id:
                 send_telegram(token, chat_id, txt, reply_to=mid)
-            tr["stopped"] = True
-            changed = True
-            print(f"  🛑 {tr['symbol']}: وقف")
-            continue
-
-        # 2) الأهداف بالترتيب
-        for k, t in enumerate(tr["targets"], 1):
-            if k in tr["hits"]:
-                continue
-            if tr["hi_seen"] >= t:
-                tr["hits"].append(k)
-                gain = ((t - tr["entry"]) / tr["entry"] * 100) if tr["entry"] else 0.0
-                txt = (f"🎯 {tr['symbol']} — تحقق الهدف {k} {'✅' * k}\n"
-                       f"السعر: {fmt(t)}  (+{gain:.2f}%)")
-                if token and chat_id:
-                    send_telegram(token, chat_id, txt, reply_to=mid)
-                changed = True
-                print(f"  🎯 {tr['symbol']}: هدف {k}")
                 time.sleep(0.4)
+            print(f"  📲 {tr['symbol']}: {txt.splitlines()[0]}")
 
     if changed:
         with open(path, "w", encoding="utf-8") as f:
