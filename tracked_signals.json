@@ -973,15 +973,16 @@
     ],
     "bar_ts": "2026-06-22 15:59:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
     "stopped": false,
-    "hi_seen": 0.06024,
+    "hi_seen": 0.06136,
     "lo_seen": 0.05814,
     "created": "2026-06-22T16:01:38",
     "cur_stop": 0.05693525,
-    "armed": false,
-    "last_bar": "2026-06-23 05:59:59.999000"
+    "armed": true,
+    "last_bar": "2026-06-23 06:59:59.999000"
   },
   "RSI70 · 1h|BREVUSDT|2026-06-22 15:59:59.999000": {
     "symbol": "BREVUSDT",
@@ -1000,13 +1001,13 @@
       1,
       2
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0958,
-    "lo_seen": 0.0826,
+    "lo_seen": 0.0813,
     "created": "2026-06-22T16:01:40",
     "cur_stop": 0.08231356,
     "armed": true,
-    "last_bar": "2026-06-23 05:59:59.999000"
+    "last_bar": "2026-06-23 06:59:59.999000"
   },
   "RSI70 · 15m|BREVUSDT|2026-06-22 16:14:59.999000": {
     "symbol": "BREVUSDT",
@@ -1085,11 +1086,11 @@
     "hits": [],
     "stopped": false,
     "hi_seen": 0.3342,
-    "lo_seen": 0.3314,
+    "lo_seen": 0.331,
     "created": "2026-06-22T17:01:38",
     "cur_stop": 0.32968647,
     "armed": false,
-    "last_bar": "2026-06-23 05:59:59.999000"
+    "last_bar": "2026-06-23 06:59:59.999000"
   },
   "RSI70 · 15m|FIDAUSDT|2026-06-22 17:29:59.999000": {
     "symbol": "FIDAUSDT",
@@ -1278,11 +1279,11 @@
     "hits": [],
     "stopped": false,
     "hi_seen": 0.3342,
-    "lo_seen": 0.3314,
+    "lo_seen": 0.331,
     "created": "2026-06-22T21:01:29",
     "cur_stop": 0.33008577,
     "armed": false,
-    "last_bar": "2026-06-23 05:59:59.999000"
+    "last_bar": "2026-06-23 06:59:59.999000"
   },
   "RSI70 · 4h|TRXUSDT|2026-06-22 23:59:59.999000": {
     "symbol": "TRXUSDT",
@@ -1319,14 +1320,16 @@
       30.07768
     ],
     "bar_ts": "2026-06-23 00:14:59.999000",
-    "hits": [],
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 23.348,
+    "hi_seen": 24.639,
     "lo_seen": 20.663,
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-06-23 06:29:59.999000"
+    "last_bar": "2026-06-23 06:59:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -1496,11 +1499,11 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-23 05:44:59.999000",
-    "last_bar": "2026-06-23 06:29:59.999000",
+    "last_bar": "2026-06-23 06:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.03263,
-    "lo_seen": 0.03124,
+    "lo_seen": 0.03118,
     "created": "2026-06-23T05:45:55"
   },
   "RSI70 · 15m|SCUSDT|2026-06-23 05:59:59.999000": {
@@ -1561,11 +1564,11 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-23 05:59:59.999000",
-    "last_bar": "2026-06-23 05:59:59.999000",
+    "last_bar": "2026-06-23 06:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 1.382,
-    "lo_seen": 1.382,
+    "hi_seen": 1.422,
+    "lo_seen": 1.27,
     "created": "2026-06-23T06:01:40"
   },
   "RSI70 · 15m|QKCUSDT|2026-06-23 06:14:59.999000": {
@@ -1598,5 +1601,67 @@
     "hi_seen": 0.002157,
     "lo_seen": 0.002037,
     "created": "2026-06-23T06:16:00"
+  },
+  "RSI70 · 15m|DEXEUSDT|2026-06-23 06:59:59.999000": {
+    "symbol": "DEXEUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1136,
+    "entry": 24.196,
+    "stop": 22.26452872,
+    "init_stop": 22.26452872,
+    "cur_stop": 22.26452872,
+    "last_alert_stop": 22.26452872,
+    "armed": false,
+    "targets": [
+      25.024512,
+      26.078428,
+      29.124428
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-23 06:59:59.999000",
+    "last_bar": "2026-06-23 06:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 24.196,
+    "lo_seen": 24.196,
+    "created": "2026-06-23T07:01:04"
+  },
+  "RSI70 · 1h|AWEUSDT|2026-06-23 06:59:59.999000": {
+    "symbol": "AWEUSDT",
+    "label": "RSI70 · 1h",
+    "timeframe": "1h",
+    "message_id": 1137,
+    "entry": 0.06105,
+    "stop": 0.05912944,
+    "init_stop": 0.05912944,
+    "cur_stop": 0.05912944,
+    "last_alert_stop": 0.05912944,
+    "armed": false,
+    "targets": [
+      0.06188504,
+      0.06294726,
+      0.06601726
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-23 06:59:59.999000",
+    "last_bar": "2026-06-23 06:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.06105,
+    "lo_seen": 0.06105,
+    "created": "2026-06-23T07:01:24"
   }
 }
