@@ -1471,5 +1471,36 @@
     "hi_seen": 1.485,
     "lo_seen": 1.246,
     "created": "2026-06-23T05:01:08"
+  },
+  "RSI70 · 15m|SCRUSDT|2026-06-23 05:44:59.999000": {
+    "symbol": "SCRUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1120,
+    "entry": 0.03235,
+    "stop": 0.03089879,
+    "init_stop": 0.03089879,
+    "cur_stop": 0.03089879,
+    "last_alert_stop": 0.03089879,
+    "armed": false,
+    "targets": [
+      0.0330436,
+      0.0339259,
+      0.0364759
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-23 05:44:59.999000",
+    "last_bar": "2026-06-23 05:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.03235,
+    "lo_seen": 0.03235,
+    "created": "2026-06-23T05:45:55"
   }
 }
