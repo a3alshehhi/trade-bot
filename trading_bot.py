@@ -716,28 +716,38 @@ def _fmt_price(v):
 def format_update_card(tr, event, price):
     """بطاقة تحديث: تحقق هدف / ضرب وقف."""
     is_buy = tr["side"] == "buy"
-    pnl = (price - tr["entry"]) / tr["entry"] * 100 * (1 if is_buy else -1)
-    head = {"tp1": "🎯 تحقق الهدف الأول ✅",
-            "tp2": "🎯 تحقق الهدف الثاني ✅✅",
-            "tp3": "🏆 تحقق الهدف الثالث ✅✅✅",
-            "sl":  "🛑 ضرب وقف الخسارة"}[event]
+    entry  = tr["entry"]
+    pnl    = (price - entry) / entry * 100 * (1 if is_buy else -1)
+    head   = {"tp1": "🎯 تحقق الهدف الأول ✅",
+              "tp2": "🎯 تحقق الهدف الثاني ✅✅",
+              "tp3": "🏆 تحقق الهدف الثالث ✅✅✅",
+              "sl":  "🛑 ضرب وقف الخسارة"}.get(event, f"🎯 {event}")
 
     lines = [SEP, head, SEP, "",
-             f"💰 العملة: {tr['symbol']}",
-             f"⏱️ فريم الدخول: {tr['timeframe']}",
-             f"🟢 سعر الدخول: {_fmt_price(tr['entry'])}",
-             f"💵 السعر الحالي: {_fmt_price(price)}"]
-    if event == "sl":
-        lines.append(f"📉 النتيجة: {pnl:+.2f}%")
-    else:
-        lines.append(f"📈 الربح: {pnl:+.2f}%")
-        n = int(event[-1])
-        if n < len(tr["targets"]):
-            lines.append(f"➡️ الهدف التالي: {_fmt_price(tr['targets'][n])}")
-        else:
-            lines.append("✅ اكتملت جميع الأهداف — تهانينا!")
-    lines += [SEP, "", f"⏰ {datetime.now().strftime('%H:%M:%S')}",
-              SEP, "", "💡 إدارة المخاطر سر النجاح"]
+             f"💰 العملة:      {tr['symbol']}",
+             f"⏱️ الفريم:     {tr['timeframe']}",
+             SEP, "",
+             f"📥 سعر الدخول:   {_fmt_price(entry)}",
+             f"💵 السعر الحالي:  {_fmt_price(price)}",
+             f"{'📉 الخسارة' if event == 'sl' else '📈 نسبة الربح'}:  {pnl:+.2f}%"]
+
+    if event != "sl":
+        try:
+            n = int(event[2:])          # "tp1"→1, "tp2"→2, "tp3"→3 ...
+            targets = tr.get("targets", [])
+            if n < len(targets):
+                next_tp  = targets[n]
+                next_pnl = (next_tp - entry) / entry * 100 * (1 if is_buy else -1)
+                lines.append(f"➡️ الهدف التالي:  {_fmt_price(next_tp)}  (+{next_pnl:.2f}%)")
+            else:
+                lines.append("✅ اكتملت جميع الأهداف — تهانينا! 🎉")
+        except (ValueError, IndexError):
+            pass
+
+    lines += [SEP, "",
+              f"⏰ {datetime.now().strftime('%H:%M:%S')}",
+              SEP, "",
+              "💡 إدارة المخاطر سر النجاح"]
     return "\n".join(lines)
 
 
