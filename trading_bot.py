@@ -1479,9 +1479,16 @@ def _simulate_dca(df, i0, direct_entry, dca_levels, stop, targets, hold, manage,
 
 
 def _bt_fetch_df(sym, kind, cfg):
-    """يجلب بيانات رمز للـbacktest مع دعم الجلب المقسّم وإزاحة خارج العيّنة."""
+    """يجلب بيانات رمز للـbacktest مع دعم الجلب المقسّم وإزاحة خارج العيّنة.
+    يدعم كاش اختياري (cfg['_df_cache']) لإعادة استخدام نفس البيانات عبر عدّة
+    تشغيلات (مثل walk-forward الذي يكرّر نفس الرموز بإعدادات مختلفة) — يلغي
+    الجلب المكرّر ويتفادى خنق مصدر البيانات (rate-limit)."""
     bars = cfg.get("bt_bars", 365)
     offset = int(cfg.get("bt_offset", 0))
+    cache = cfg.get("_df_cache")
+    key = (sym, kind, cfg.get("timeframe"), bars, offset)
+    if cache is not None and key in cache:
+        return cache[key]
     if kind == "crypto":
         need = bars + 1000 + offset      # إحماء كافٍ لمتوسط 200 على 4h (≈800 شمعة 1h)
         if need > 1000:
@@ -1492,6 +1499,8 @@ def _bt_fetch_df(sym, kind, cfg):
         df = fetch_stock(sym, YF_INTERVAL[cfg["timeframe"]], "2y")
     if offset > 0 and df is not None and len(df) > offset + 120:
         df = df.iloc[:len(df) - offset].reset_index(drop=True)
+    if cache is not None and df is not None:
+        cache[key] = df
     return df
 
 
@@ -2448,9 +2457,12 @@ def run_walkforward(cfg, watchlist_path, out_dir):
     print()
 
     bt_fn = backtest_symbol_trendwave if cfg.get("trendwave") else backtest_symbol_osob
+    # كاش مشترك: نجلب بيانات كل رمز مرة واحدة (الإعداد الأول) ونعيد استخدامها
+    # في باقي الإعدادات — يلغي الجلب المكرّر ويتفادى خنق المصدر (rate-limit).
+    cfg["_df_cache"] = {}
     trades_by_combo = {}
     for gi, (b, a) in enumerate(grid, 1):
-        c = dict(cfg)
+        c = dict(cfg)                     # يشارك نفس مرجع _df_cache
         c["trail_buf"], c["trail_arm"] = b, a
         comb = []
         with ThreadPoolExecutor(max_workers=cfg["workers"]) as ex:
@@ -2461,7 +2473,16 @@ def run_walkforward(cfg, watchlist_path, out_dir):
                 except Exception:
                     pass
         trades_by_combo[(b, a)] = comb
-        print(f"  [{gi}/{len(grid)}] إعداد {b}×{a}: {len(comb)} صفقة")
+        cached = len(cfg["_df_cache"])
+        print(f"  [{gi}/{len(grid)}] إعداد {b}×{a}: {len(comb)} صفقة"
+              + (f"  (بيانات مُخزّنة لـ {cached} رمز)" if gi == 1 else ""))
+
+    # تحذير: عدد صفقات ضئيل ⇒ البيانات لم تُجمَع (غالباً خنق المصدر) لا حكم على الاستراتيجية
+    total_def = len(trades_by_combo.get((0.5, 1.0), []))
+    if total_def < 30:
+        print(f"\n⚠️ تحذير: إجمالي صفقات الإعداد الافتراضي = {total_def} فقط — قليل جداً!")
+        print("   هذا غالباً يعني أن البيانات لم تُجلَب (خنق المصدر/شبكة)، وليس حكماً على الاستراتيجية.")
+        print("   جرّب: شغّل باك-تست عادياً أولاً للتأكد أنه يعطي مئات الصفقات، ثم أعد walk-forward.")
 
     oos_all, fold_rows = _walkforward_oos(trades_by_combo, folds, (0.5, 1.0))
     if not fold_rows:
