@@ -2460,7 +2460,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-23 00:29:59.999000",
+    "last_ts": "2026-06-23 00:44:59.999000",
     "closed_at": null
   },
   {
@@ -2471,7 +2471,7 @@
     "timeframe": "15m",
     "side": "buy",
     "entry": 0.0524,
-    "stop": 0.05030932,
+    "stop": 0.0524,
     "stop_orig": 0.05030932,
     "targets": [
       0.0533792,
@@ -2481,14 +2481,23 @@
     "risk": 0.0020906800000000045,
     "opened_at": "2026-06-23T00:33:35",
     "status": "open",
-    "hits": [],
-    "breakeven": false,
+    "hits": [
+      1
+    ],
+    "breakeven": true,
     "remaining": 1.0,
     "realized_pct": 0.0,
     "result_pct": null,
     "exit_price": null,
-    "events": [],
-    "last_ts": "2026-06-23 00:29:59.999000",
+    "events": [
+      {
+        "ts": "2026-06-23 00:44:59.999000",
+        "type": "tp1_be",
+        "price": 0.0533792,
+        "pct": 1.869
+      }
+    ],
+    "last_ts": "2026-06-23 00:44:59.999000",
     "closed_at": null
   }
 ]
