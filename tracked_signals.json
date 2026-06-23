@@ -2145,5 +2145,36 @@
     "hi_seen": 0.00473,
     "lo_seen": 0.00473,
     "created": "2026-06-23T21:31:11"
+  },
+  "RSI70 · 15m|SAHARAUSDT|2026-06-23 23:44:59.999000": {
+    "symbol": "SAHARAUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1223,
+    "entry": 0.01257,
+    "stop": 0.01181191,
+    "init_stop": 0.01181191,
+    "cur_stop": 0.01181191,
+    "last_alert_stop": 0.01181191,
+    "armed": false,
+    "targets": [
+      0.01292904,
+      0.01338576,
+      0.01470576
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-23 23:44:59.999000",
+    "last_bar": "2026-06-23 23:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01257,
+    "lo_seen": 0.01257,
+    "created": "2026-06-23T23:46:06"
   }
 }

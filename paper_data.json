@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-23T23:33:53",
+  "updated_at": "2026-06-23T23:50:11",
   "stats": {
-    "open": 12,
+    "open": 13,
     "closed": 81,
     "win_rate": 11.1,
     "profit_factor": 0.2,
@@ -3100,7 +3100,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 23:29:59.999000",
+      "last_ts": "2026-06-23 23:44:59.999000",
       "closed_at": null
     },
     {
@@ -3319,7 +3319,7 @@
           "price": 0.11396777
         }
       ],
-      "last_ts": "2026-06-23 23:29:59.999000",
+      "last_ts": "2026-06-23 23:44:59.999000",
       "closed_at": null
     },
     {
@@ -3490,7 +3490,35 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 23:29:59.999000",
+      "last_ts": "2026-06-23 23:44:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782258366288",
+      "symbol": "SAHARAUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.01257,
+      "stop": 0.01181191,
+      "stop_orig": 0.01181191,
+      "targets": [
+        0.01292904,
+        0.01338576,
+        0.01470576
+      ],
+      "risk": 0.0007580899999999995,
+      "opened_at": "2026-06-23T23:49:59",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-23 23:44:59.999000",
       "closed_at": null
     }
   ]
