@@ -1275,16 +1275,8 @@ def _simulate_trade(df, i, entry, stop, targets, direction, hold, manage, cost=0
     realized = 0.0      # الربح/الخسارة المحقّق بوحدات R
     tp1_done = False
     last_c = entry
-    # نِسَب الإغلاق الجزئي عند كل هدف: 50% عند الأول ثم توزيع الباقي بالتساوي
-    # (3 أهداف → 50% / 25% / 25%). الوقف يُنقل للتعادل بعد الهدف الأول، ثم تُجنى
-    # بقية الأجزاء عند الهدفين الثاني والثالث (بلا تتبّع للوقف فوق التعادل).
-    if len(targets) <= 1:
-        fracs = [1.0]
-    else:
-        _rest = 0.5 / (len(targets) - 1)
-        fracs = [0.5] + [_rest] * (len(targets) - 1)
-    next_t = 0          # مؤشّر الهدف التالي المنتظَر
-
+    # سياسة الخروج المُدارة: إغلاق الصفقة **بالكامل عند الهدف الأول** (بلا جني جزئي
+    # على أهداف متعددة وبلا نقل وقف للتعادل) — أبسط وأوضح بطلب بو محمد.
     def hit_stop(px_lo, px_hi):
         return px_lo <= stop_cur if direction == 1 else px_hi >= stop_cur
 
@@ -1297,17 +1289,10 @@ def _simulate_trade(df, i, entry, stop, targets, direction, hold, manage, cost=0
         if hit_stop(lo, hi):
             realized += part * direction * (stop_cur - entry) / risk
             return realized - cost_r, ("be_stop" if tp1_done else "stop")
-        # 2) الأهداف على التوالي + جني جزئي عند كلٍّ منها
+        # 2) الهدف — إغلاق كامل عند الهدف الأول (مُدار) أو الأخير (خام)
         if manage:
-            while next_t < len(targets) and hit(targets[next_t], lo, hi):
-                f = fracs[next_t]
-                realized += f * direction * (targets[next_t] - entry) / risk
-                part -= f
-                if next_t == 0:               # بعد الهدف الأول: انقل الوقف للتعادل
-                    stop_cur = entry
-                    tp1_done = True
-                next_t += 1
-            if next_t >= len(targets):        # جُنيت كل الأجزاء (50/25/25)
+            if hit(targets[0], lo, hi):       # إغلاق 100% عند الهدف الأول
+                realized += part * direction * (targets[0] - entry) / risk
                 return realized - cost_r, "target"
         else:
             if hit(tp_final, lo, hi):
@@ -3092,24 +3077,30 @@ def _advance_trade(df, tr):
             tr["lo_seen"] = min(tr.get("lo_seen", entry), float(low[j]))
             return events
 
-        # (ب) الأهداف + جني الربح الجزئي (يُطبَّق التعادل على الشموع التالية فقط)
-        for k in range(1, len(targets) + 1):
-            if k in tr["hits"]:
-                continue
-            if high[j] >= targets[k - 1]:
-                tr["hits"].append(k)
-                gain = ((targets[k - 1] - entry) / entry * 100) if entry else 0.0
-                msg = [f"🎯 {sym} — تحقق الهدف {k} {'✅' * k}",
-                       f"السعر: {fmt(targets[k - 1])}  (+{gain:.2f}%)"]
-                if tp_split:                       # جني ربح جزئي (عائلة الانعكاس)
-                    msg.append(f"💰 اقترح إغلاق {tp_split[k - 1]}% من الصفقة")
-                    if k == 1 and not tr.get("breakeven_done"):
-                        cur_stop = max(cur_stop, entry)
-                        tr["breakeven_done"] = True
-                        tr["last_alert_stop"] = max(tr.get("last_alert_stop", init_stop),
-                                                    cur_stop)
-                        msg.append(f"🛡️ انقل الوقف إلى التعادل: {fmt(entry)}")
-                events.append("\n".join(msg))
+        # (ب) الأهداف
+        if not tr.get("is_trendwave"):
+            # عائلة الانعكاس: **إغلاق كامل عند الهدف الأول** (بلا جني جزئي متعدّد)
+            if 1 not in tr["hits"] and high[j] >= targets[0]:
+                tr["hits"].append(1)
+                gain = ((targets[0] - entry) / entry * 100) if entry else 0.0
+                events.append(f"🎯 {sym} — تحقق الهدف الأول ✅ — أغلق الصفقة بالكامل\n"
+                              f"السعر: {fmt(targets[0])}  (+{gain:.2f}%)")
+                tr["stopped"] = True
+                tr["cur_stop"] = cur_stop
+                tr["last_bar"] = str(dates.iloc[j])
+                tr["hi_seen"] = max(tr.get("hi_seen", entry), float(high[j]))
+                tr["lo_seen"] = min(tr.get("lo_seen", entry), float(low[j]))
+                return events
+        else:
+            # trendwave: تنبيه ببلوغ الأهداف فقط (الخروج بالوقف المتحرك)
+            for k in range(1, len(targets) + 1):
+                if k in tr["hits"]:
+                    continue
+                if high[j] >= targets[k - 1]:
+                    tr["hits"].append(k)
+                    gain = ((targets[k - 1] - entry) / entry * 100) if entry else 0.0
+                    events.append(f"🎯 {sym} — تحقق الهدف {k} {'✅' * k}\n"
+                                  f"السعر: {fmt(targets[k - 1])}  (+{gain:.2f}%)")
 
         # الوقف المتحرك يخصّ trendwave فقط (بلا أهداف ثابتة). عائلة الانعكاس
         # تبقى عند التعادل بعد الهدف الأول وتجني 25%/25% عند الهدفين 2 و3.
