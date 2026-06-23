@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-23T13:49:59",
+  "updated_at": "2026-06-23T14:05:24",
   "stats": {
-    "open": 8,
+    "open": 9,
     "closed": 76,
     "win_rate": 11.8,
     "profit_factor": 0.24,
@@ -3044,7 +3044,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 12:59:59.999000",
+      "last_ts": "2026-06-23 13:59:59.999000",
       "closed_at": null
     },
     {
@@ -3100,7 +3100,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 13:44:59.999000",
+      "last_ts": "2026-06-23 13:59:59.999000",
       "closed_at": null
     },
     {
@@ -3137,7 +3137,7 @@
           "pct": 3.536
         }
       ],
-      "last_ts": "2026-06-23 13:44:59.999000",
+      "last_ts": "2026-06-23 13:59:59.999000",
       "closed_at": null
     },
     {
@@ -3165,7 +3165,35 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 12:59:59.999000",
+      "last_ts": "2026-06-23 13:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782223454959",
+      "symbol": "GUSDT",
+      "label": "trendwave · 1h",
+      "strategy": "classic",
+      "timeframe": "1h",
+      "side": "buy",
+      "entry": 0.00308,
+      "stop": 0.00248811,
+      "stop_orig": 0.00248811,
+      "targets": [
+        0.00467424,
+        0.00525206,
+        0.00589
+      ],
+      "risk": 0.0005918899999999999,
+      "opened_at": "2026-06-23T14:05:16",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-23 13:59:59.999000",
       "closed_at": null
     }
   ]

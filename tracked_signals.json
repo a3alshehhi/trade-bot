@@ -1858,5 +1858,32 @@
     "hi_seen": 0.0034,
     "lo_seen": 0.0034,
     "created": "2026-06-23T13:01:38"
+  },
+  "trendwave · 1h|GUSDT|2026-06-23 13:59:59.999000": {
+    "symbol": "GUSDT",
+    "label": "trendwave · 1h",
+    "timeframe": "1h",
+    "message_id": 1177,
+    "entry": 0.00308,
+    "stop": 0.00248811,
+    "init_stop": 0.00248811,
+    "cur_stop": 0.00248811,
+    "last_alert_stop": 0.00248811,
+    "armed": false,
+    "targets": [
+      0.00467424,
+      0.00525206,
+      0.00589
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-23 13:59:59.999000",
+    "last_bar": "2026-06-23 13:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00308,
+    "lo_seen": 0.00308,
+    "created": "2026-06-23T14:04:14"
   }
 }
