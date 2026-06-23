@@ -3189,6 +3189,8 @@ def format_reversal_card(sig, cfg, label):
         else:
             _note = "ارتداد"
         lines.append(f"📈 RSI(21): {sig['rsi']} ({_note})")
+    if sig.get("ml_prob") is not None:
+        lines.append(f"🤖 ثقة الفلتر التعلّمي (موجات+MACD 4C): {sig['ml_prob']*100:.0f}%")
     lines.append("")
 
     # الدخول + مستويات الدخول على فيبوناتشي
@@ -3254,11 +3256,23 @@ def live_reversal_scan(cfg, watchlist_path, state_path):
             df = fetch_binance(sym, BINANCE_INTERVAL[cfg["timeframe"]], min(need, 1000))
         if df is None or len(df) < 60:
             return None
-        df = df.iloc[:-1]                       # استبعاد الشمعة الجارية (غير المغلقة)
+        df = df.iloc[:-1].reset_index(drop=True)  # استبعاد الشمعة الجارية (غير المغلقة)
         sig = detector(df, cfg)
         if sig:
             sig["symbol"] = sym
             sig["bar_ts"] = str(df["date"].iloc[-1])
+            # فلتر التعلّم الآلي: يقرأ الموجات + MACD 4C وسياق السوق ويرشّح
+            if cfg.get("ml_filter"):
+                try:
+                    import ml_filter
+                    ok, prob, thr = ml_filter.passes_filter(
+                        df, len(df) - 1, "crypto", cfg.get("side", "buy"))
+                    if prob is not None:
+                        sig["ml_prob"] = round(prob, 3)
+                        if not ok:
+                            return None                # أُسقطت إشارة ضعيفة الاحتمال
+                except Exception:
+                    pass                               # عند أي خطأ لا نكسر الفحص
         return sig
 
     found = []
@@ -3385,6 +3399,8 @@ def build_argparser():
     p.add_argument("--timeframe", choices=["1d", "4h", "1h", "15m"], default=DEFAULTS["timeframe"])
     p.add_argument("--rsi-cross", action="store_true",
                    help="(reversal) إشارة شراء فور تجاوز RSI(21) خط الـ80 — استراتيجية زخم")
+    p.add_argument("--ml-filter", action="store_true",
+                   help="فلتر التعلّم الآلي: يرشّح الإشارات حسب الموجات + MACD 4C وسياق السوق (يتطلّب ml_model.joblib)")
     p.add_argument("--top", type=int, default=DEFAULTS["top"])
     p.add_argument("--min-score", type=int, default=DEFAULTS["min_score"])
     p.add_argument("--workers", type=int, default=DEFAULTS["workers"])
@@ -3423,6 +3439,7 @@ if __name__ == "__main__":
         "donchian": args.donchian, "don_entry": args.don_entry, "don_exit": args.don_exit,
         "ema_cross": args.ema_cross, "ema_fast": args.ema_fast, "ema_slow": args.ema_slow,
         "rsi2": args.rsi2, "rsi2_buy": args.rsi2_buy,
+        "ml_filter": args.ml_filter,
     }
     if args.trendwave:        # الإعداد الرابح المثبّت
         if args.trail_buf == 0.25:
