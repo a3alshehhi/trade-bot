@@ -3060,7 +3060,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-23 21:14:59.999000",
+    "last_ts": "2026-06-23 21:29:59.999000",
     "closed_at": null
   },
   {
@@ -3274,7 +3274,7 @@
         "pct": 5.939
       }
     ],
-    "last_ts": "2026-06-23 21:14:59.999000",
+    "last_ts": "2026-06-23 21:29:59.999000",
     "closed_at": null
   },
   {
@@ -3418,6 +3418,34 @@
     "exit_price": null,
     "events": [],
     "last_ts": "2026-06-23 19:59:59.999000",
+    "closed_at": null
+  },
+  {
+    "id": "1782250271958",
+    "symbol": "JASMYUSDT",
+    "label": "RSI70 · 15m",
+    "strategy": "classic",
+    "timeframe": "15m",
+    "side": "buy",
+    "entry": 0.00473,
+    "stop": 0.00457691,
+    "stop_orig": 0.00457691,
+    "targets": [
+      0.00480344,
+      0.00489686,
+      0.00516686
+    ],
+    "risk": 0.00015308999999999982,
+    "opened_at": "2026-06-23T21:35:04",
+    "status": "open",
+    "hits": [],
+    "breakeven": false,
+    "remaining": 1.0,
+    "realized_pct": 0.0,
+    "result_pct": null,
+    "exit_price": null,
+    "events": [],
+    "last_ts": "2026-06-23 21:29:59.999000",
     "closed_at": null
   }
 ]

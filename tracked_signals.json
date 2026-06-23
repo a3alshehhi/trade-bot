@@ -2114,5 +2114,36 @@
     "hi_seen": 0.306,
     "lo_seen": 0.306,
     "created": "2026-06-23T20:01:55"
+  },
+  "RSI70 · 15m|JASMYUSDT|2026-06-23 21:29:59.999000": {
+    "symbol": "JASMYUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1221,
+    "entry": 0.00473,
+    "stop": 0.00457691,
+    "init_stop": 0.00457691,
+    "cur_stop": 0.00457691,
+    "last_alert_stop": 0.00457691,
+    "armed": false,
+    "targets": [
+      0.00480344,
+      0.00489686,
+      0.00516686
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-23 21:29:59.999000",
+    "last_bar": "2026-06-23 21:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00473,
+    "lo_seen": 0.00473,
+    "created": "2026-06-23T21:31:11"
   }
 }
