@@ -1326,7 +1326,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-06-23 06:14:59.999000"
+    "last_bar": "2026-06-23 06:29:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -1428,13 +1428,13 @@
     "is_trendwave": false,
     "breakeven_done": true,
     "bar_ts": "2026-06-23 04:29:59.999000",
-    "last_bar": "2026-06-23 06:14:59.999000",
+    "last_bar": "2026-06-23 06:29:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.03263,
-    "lo_seen": 0.03132,
+    "lo_seen": 0.03124,
     "created": "2026-06-23T04:31:03"
   },
   "RSI70 · 15m|MOVRUSDT|2026-06-23 04:59:59.999000": {
@@ -1496,11 +1496,11 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-23 05:44:59.999000",
-    "last_bar": "2026-06-23 06:14:59.999000",
+    "last_bar": "2026-06-23 06:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.03263,
-    "lo_seen": 0.03181,
+    "lo_seen": 0.03124,
     "created": "2026-06-23T05:45:55"
   },
   "RSI70 · 15m|SCUSDT|2026-06-23 05:59:59.999000": {
@@ -1527,14 +1527,14 @@
     "is_trendwave": false,
     "breakeven_done": true,
     "bar_ts": "2026-06-23 05:59:59.999000",
-    "last_bar": "2026-06-23 06:14:59.999000",
+    "last_bar": "2026-06-23 06:29:59.999000",
     "hits": [
       1,
       2
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.000733,
-    "lo_seen": 0.000713,
+    "lo_seen": 0.000695,
     "created": "2026-06-23T06:01:11"
   },
   "RSI70 · 1h|MOVRUSDT|2026-06-23 05:59:59.999000": {
@@ -1592,11 +1592,11 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-23 06:14:59.999000",
-    "last_bar": "2026-06-23 06:14:59.999000",
+    "last_bar": "2026-06-23 06:29:59.999000",
     "hits": [],
-    "stopped": false,
-    "hi_seen": 0.002153,
-    "lo_seen": 0.002153,
+    "stopped": true,
+    "hi_seen": 0.002157,
+    "lo_seen": 0.002037,
     "created": "2026-06-23T06:16:00"
   }
 }

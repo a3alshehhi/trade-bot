@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-23T06:20:09",
+  "updated_at": "2026-06-23T06:34:18",
   "stats": {
-    "open": 11,
-    "closed": 65,
-    "win_rate": 9.2,
+    "open": 8,
+    "closed": 68,
+    "win_rate": 8.8,
     "profit_factor": 0.17,
-    "total_pct": -62.74,
-    "avg_pct": -1.45,
-    "max_drawdown_pct": -62.75
+    "total_pct": -63.71,
+    "avg_pct": -1.42,
+    "max_drawdown_pct": -63.71
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-23",
-        "trades": 65,
-        "win_rate": 9.2,
-        "return_pct": -62.74,
+        "trades": 68,
+        "win_rate": 8.8,
+        "return_pct": -63.71,
         "week": "2026-W26",
         "month": "2026-06"
       }
@@ -23,18 +23,18 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 65,
-        "win_rate": 9.2,
-        "return_pct": -62.74,
+        "trades": 68,
+        "win_rate": 8.8,
+        "return_pct": -63.71,
         "month": "2026-06"
       }
     ],
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 65,
-        "win_rate": 9.2,
-        "return_pct": -62.74
+        "trades": 68,
+        "win_rate": 8.8,
+        "return_pct": -63.71
       }
     ]
   },
@@ -2510,7 +2510,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 06:14:59.999000",
+      "last_ts": "2026-06-23 06:29:59.999000",
       "closed_at": null
     },
     {
@@ -2644,25 +2644,31 @@
       ],
       "risk": 0.0010578299999999992,
       "opened_at": "2026-06-23T04:34:50",
-      "status": "open",
+      "status": "closed",
       "hits": [
         1
       ],
       "breakeven": true,
-      "remaining": 1.0,
+      "remaining": 0.0,
       "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
+      "result_pct": 0.0,
+      "exit_price": 0.03159,
       "events": [
         {
           "ts": "2026-06-23 05:29:59.999000",
           "type": "tp1_be",
           "price": 0.03210408,
           "pct": 1.627
+        },
+        {
+          "ts": "2026-06-23 06:29:59.999000",
+          "type": "be_sl",
+          "price": 0.03159,
+          "pct": 0.0
         }
       ],
-      "last_ts": "2026-06-23 06:14:59.999000",
-      "closed_at": null
+      "last_ts": "2026-06-23 06:29:59.999000",
+      "closed_at": "2026-06-23T06:34:14"
     },
     {
       "id": "1782190867193",
@@ -2732,7 +2738,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 06:14:59.999000",
+      "last_ts": "2026-06-23 06:29:59.999000",
       "closed_at": null
     },
     {
@@ -2752,25 +2758,31 @@
       ],
       "risk": 1.5719999999999992e-05,
       "opened_at": "2026-06-23T06:05:06",
-      "status": "open",
+      "status": "closed",
       "hits": [
         1
       ],
       "breakeven": true,
-      "remaining": 1.0,
+      "remaining": 0.0,
       "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
+      "result_pct": 0.0,
+      "exit_price": 0.000713,
       "events": [
         {
           "ts": "2026-06-23 06:14:59.999000",
           "type": "tp1_be",
           "price": 0.00072007,
           "pct": 0.992
+        },
+        {
+          "ts": "2026-06-23 06:29:59.999000",
+          "type": "be_sl",
+          "price": 0.000713,
+          "pct": 0.0
         }
       ],
-      "last_ts": "2026-06-23 06:14:59.999000",
-      "closed_at": null
+      "last_ts": "2026-06-23 06:29:59.999000",
+      "closed_at": "2026-06-23T06:34:16"
     },
     {
       "id": "1782194499722",
@@ -2817,16 +2829,23 @@
       ],
       "risk": 5.608000000000002e-05,
       "opened_at": "2026-06-23T06:19:54",
-      "status": "open",
+      "status": "closed",
       "hits": [],
       "breakeven": false,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-23 06:14:59.999000",
-      "closed_at": null
+      "remaining": 0.0,
+      "realized_pct": -2.6047375754760806,
+      "result_pct": -2.605,
+      "exit_price": 0.00209692,
+      "events": [
+        {
+          "ts": "2026-06-23 06:29:59.999000",
+          "type": "sl",
+          "price": 0.00209692,
+          "pct": -2.605
+        }
+      ],
+      "last_ts": "2026-06-23 06:29:59.999000",
+      "closed_at": "2026-06-23T06:34:17"
     }
   ]
 }
