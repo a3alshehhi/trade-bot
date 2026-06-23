@@ -1275,6 +1275,15 @@ def _simulate_trade(df, i, entry, stop, targets, direction, hold, manage, cost=0
     realized = 0.0      # الربح/الخسارة المحقّق بوحدات R
     tp1_done = False
     last_c = entry
+    # نِسَب الإغلاق الجزئي عند كل هدف: 50% عند الأول ثم توزيع الباقي بالتساوي
+    # (3 أهداف → 50% / 25% / 25%). الوقف يُنقل للتعادل بعد الهدف الأول، ثم تُجنى
+    # بقية الأجزاء عند الهدفين الثاني والثالث (بلا تتبّع للوقف فوق التعادل).
+    if len(targets) <= 1:
+        fracs = [1.0]
+    else:
+        _rest = 0.5 / (len(targets) - 1)
+        fracs = [0.5] + [_rest] * (len(targets) - 1)
+    next_t = 0          # مؤشّر الهدف التالي المنتظَر
 
     def hit_stop(px_lo, px_hi):
         return px_lo <= stop_cur if direction == 1 else px_hi >= stop_cur
@@ -1284,19 +1293,21 @@ def _simulate_trade(df, i, entry, stop, targets, direction, hold, manage, cost=0
 
     for j in range(i + 1, min(i + 1 + hold, n)):
         lo, hi, last_c = low[j], high[j], close[j]
-        # 1) الوقف أولاً (محافظ)
+        # 1) الوقف أولاً (محافظ) — الجزء المتبقّي يخرج عند الوقف الجاري
         if hit_stop(lo, hi):
             realized += part * direction * (stop_cur - entry) / risk
             return realized - cost_r, ("be_stop" if tp1_done else "stop")
-        # 2) الأهداف
+        # 2) الأهداف على التوالي + جني جزئي عند كلٍّ منها
         if manage:
-            if not tp1_done and hit(tp1, lo, hi):
-                realized += 0.5 * direction * (tp1 - entry) / risk
-                part = 0.5
-                tp1_done = True
-                stop_cur = entry          # نقل الوقف لنقطة الدخول
-            if tp1_done and hit(tp_final, lo, hi):
-                realized += part * direction * (tp_final - entry) / risk
+            while next_t < len(targets) and hit(targets[next_t], lo, hi):
+                f = fracs[next_t]
+                realized += f * direction * (targets[next_t] - entry) / risk
+                part -= f
+                if next_t == 0:               # بعد الهدف الأول: انقل الوقف للتعادل
+                    stop_cur = entry
+                    tp1_done = True
+                next_t += 1
+            if next_t >= len(targets):        # جُنيت كل الأجزاء (50/25/25)
                 return realized - cost_r, "target"
         else:
             if hit(tp_final, lo, hi):
@@ -1882,9 +1893,10 @@ def backtest_symbol_osob(item, kind, cfg):
                             ref_low = peak = None
                             continue
                     else:
-                        # 1d/4h: دخول سوقي مباشر + تعديل بفيبو DCA أسفل الدخول
+                        # دخول سوقي مباشر + سلّم DCA بارتدادات فيبو أسفل الدخول
+                        # (نفس بناء الإشارة الحيّة عبر _fib_dca_ladder لضمان التطابق)
                         entry = float(close[i])
-                        dca = [x for x in fib if x < entry]
+                        dca = _fib_dca_ladder(entry, peak, ref_low, imp)
                         deepest = min(dca) if dca else ref_low
                         stp = float(min(ref_low, deepest) - 0.5 * atrv)
                         if entry > stp:
@@ -2872,6 +2884,25 @@ def detect_reversal_signal(df, cfg):
     return None
 
 
+def _fib_dca_ladder(entry, peak, ref_low, imp):
+    """سلّم دخول DCA بارتدادات فيبوناتشي لموجة الدفع (ref_low→peak)، تحت الدخول فقط.
+    المستويات الأساسية: 0.382/0.5/0.618/0.786/0.886 من القمة. إن وقع الدخول عميقاً
+    (أقل من 3 مستويات تحته) يُكمَّل السلّم بارتدادات فيبو بين الدخول وقاع الموجة،
+    لضمان سلّم متعدّد المستويات دائماً بدل قيمة واحدة. يرجع قائمة تنازلية (الأقرب أولاً)."""
+    if imp <= 0:
+        return []
+    fib = [round(peak - rr * imp, 8) for rr in (0.382, 0.5, 0.618, 0.786, 0.886)]
+    dca = [x for x in fib if x < entry]                 # ارتدادات الموجة تحت الدخول
+    if len(dca) < 3:                                    # دخول عميق → أكمل السلّم
+        span = entry - ref_low
+        if span > 0:
+            for rr in (0.236, 0.382, 0.5, 0.618, 0.786):
+                lvl = round(entry - rr * span, 8)
+                if ref_low < lvl < entry:
+                    dca.append(lvl)
+    return sorted(set(dca), reverse=True)[:5]
+
+
 def detect_trendwave_signal(df, cfg):
     """إشارة دخول حيّة لاستراتيجية trendwave عند آخر شمعة *مغلقة*:
     RSI(21)<20 ثم >80 (موجة دفع) → عند عودة RSI تحت 80 (نهاية الموجة) ندخل مباشرةً،
@@ -2929,8 +2960,7 @@ def detect_trendwave_signal(df, cfg):
         return None
     entry = float(close[i])
     atrv = a[i] if not np.isnan(a[i]) else entry * 0.02
-    fib = [round(pk - rr * imp, 8) for rr in (0.382, 0.5, 0.618, 0.786)]
-    dca = [x for x in fib if x < entry]        # مستويات DCA أسفل الدخول فقط
+    dca = _fib_dca_ladder(entry, pk, rl, imp)  # سلّم DCA بارتدادات فيبو تحت الدخول
     deepest = min(dca) if dca else rl
     stop = float(min(rl, deepest) - 0.5 * atrv)
     targets = [round(rl + mm * imp, 8) for mm in (1.272, 1.618, 2.0)]
@@ -3081,20 +3111,23 @@ def _advance_trade(df, tr):
                         msg.append(f"🛡️ انقل الوقف إلى التعادل: {fmt(entry)}")
                 events.append("\n".join(msg))
 
-        # (ج) تفعيل التتبّع بعد ربح عائم ≥ 1×المخاطرة
-        if not armed and (high[j] - entry) >= TRAIL_ARM * risk:
-            armed = True
+        # الوقف المتحرك يخصّ trendwave فقط (بلا أهداف ثابتة). عائلة الانعكاس
+        # تبقى عند التعادل بعد الهدف الأول وتجني 25%/25% عند الهدفين 2 و3.
+        if tr.get("is_trendwave"):
+            # (ج) تفعيل التتبّع بعد ربح عائم ≥ 1×المخاطرة
+            if not armed and (high[j] - entry) >= TRAIL_ARM * risk:
+                armed = True
 
-        # (د) رفع الوقف المتحرك تحت قاع محوري مؤكَّد (5 شموع) − 0.5×ATR
-        k2 = j - 2                                  # شمعة محورية تأكَّدت الآن
-        if armed and k2 - 2 >= 0:
-            piv_low = (low[k2] <= low[k2 - 1] and low[k2] <= low[k2 - 2]
-                       and low[k2] <= low[k2 + 1] and low[k2] <= low[k2 + 2])
-            if piv_low:
-                atrk = atr_arr[k2] if not np.isnan(atr_arr[k2]) else close[j] * 0.01
-                new_stop = low[k2] - TRAIL_BUF * atrk
-                if new_stop > cur_stop and new_stop < close[j]:
-                    cur_stop = new_stop
+            # (د) رفع الوقف المتحرك تحت قاع محوري مؤكَّد (5 شموع) − 0.5×ATR
+            k2 = j - 2                              # شمعة محورية تأكَّدت الآن
+            if armed and k2 - 2 >= 0:
+                piv_low = (low[k2] <= low[k2 - 1] and low[k2] <= low[k2 - 2]
+                           and low[k2] <= low[k2 + 1] and low[k2] <= low[k2 + 2])
+                if piv_low:
+                    atrk = atr_arr[k2] if not np.isnan(atr_arr[k2]) else close[j] * 0.01
+                    new_stop = low[k2] - TRAIL_BUF * atrk
+                    if new_stop > cur_stop and new_stop < close[j]:
+                        cur_stop = new_stop
 
         tr["hi_seen"] = max(tr.get("hi_seen", entry), float(high[j]))
         tr["lo_seen"] = min(tr.get("lo_seen", entry), float(low[j]))

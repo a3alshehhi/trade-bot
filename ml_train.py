@@ -23,7 +23,7 @@ import ml_filter as mlf
 # الاستراتيجيات الحيّة وفريماتها (مطابقة لـ reversal.yml)
 LIVE_SETUPS = [
     # (اسم, دالة الباك-تست, الفريمات, تعديلات cfg)
-    ("rsi2",      tb.backtest_symbol_rsi_cross, ["15m", "1h", "4h", "1d"],
+    ("rsi70",     tb.backtest_symbol_rsi_cross, ["15m", "1h", "4h", "1d"],
      {"rsi_cross": True, "rsi_ob": 70.0, "bt_stop_mult": 2.0}),
     ("trendwave", tb.backtest_symbol_trendwave, ["15m", "1h", "4h"],
      {"trendwave": True, "rsi_os": 20.0, "rsi_ob": 80.0,
