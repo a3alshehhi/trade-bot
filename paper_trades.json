@@ -2883,7 +2883,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-23 12:14:59.999000",
+    "last_ts": "2026-06-23 12:29:59.999000",
     "closed_at": null
   },
   {
@@ -3026,6 +3026,62 @@
     "exit_price": null,
     "events": [],
     "last_ts": "2026-06-23 11:59:59.999000",
+    "closed_at": null
+  },
+  {
+    "id": "1782217869711",
+    "symbol": "ALGOUSDT",
+    "label": "RSI70 · 15m",
+    "strategy": "classic",
+    "timeframe": "15m",
+    "side": "buy",
+    "entry": 0.0958,
+    "stop": 0.09152364,
+    "stop_orig": 0.09152364,
+    "targets": [
+      0.0978672,
+      0.1004968,
+      0.1080968
+    ],
+    "risk": 0.004276359999999993,
+    "opened_at": "2026-06-23T12:35:07",
+    "status": "open",
+    "hits": [],
+    "breakeven": false,
+    "remaining": 1.0,
+    "realized_pct": 0.0,
+    "result_pct": null,
+    "exit_price": null,
+    "events": [],
+    "last_ts": "2026-06-23 12:29:59.999000",
+    "closed_at": null
+  },
+  {
+    "id": "1782217874368",
+    "symbol": "GUSDT",
+    "label": "RSI70 · 15m",
+    "strategy": "classic",
+    "timeframe": "15m",
+    "side": "buy",
+    "entry": 0.003,
+    "stop": 0.00277696,
+    "stop_orig": 0.00277696,
+    "targets": [
+      0.00310608,
+      0.00324102,
+      0.00363102
+    ],
+    "risk": 0.00022303999999999987,
+    "opened_at": "2026-06-23T12:35:07",
+    "status": "open",
+    "hits": [],
+    "breakeven": false,
+    "remaining": 1.0,
+    "realized_pct": 0.0,
+    "result_pct": null,
+    "exit_price": null,
+    "events": [],
+    "last_ts": "2026-06-23 12:29:59.999000",
     "closed_at": null
   }
 ]
