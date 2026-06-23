@@ -1700,5 +1700,67 @@
     "hi_seen": 0.06337,
     "lo_seen": 0.0576,
     "created": "2026-06-23T09:01:21"
+  },
+  "RSI70 · 1h|DEXEUSDT|2026-06-23 11:59:59.999000": {
+    "symbol": "DEXEUSDT",
+    "label": "RSI70 · 1h",
+    "timeframe": "1h",
+    "message_id": 1164,
+    "entry": 22.861,
+    "stop": 19.69446517,
+    "init_stop": 19.69446517,
+    "cur_stop": 19.69446517,
+    "last_alert_stop": 19.69446517,
+    "armed": false,
+    "targets": [
+      24.28764,
+      26.10241,
+      31.34741
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-23 11:59:59.999000",
+    "last_bar": "2026-06-23 11:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 22.861,
+    "lo_seen": 22.861,
+    "created": "2026-06-23T12:01:30"
+  },
+  "RSI70 · 4h|AWEUSDT|2026-06-23 11:59:59.999000": {
+    "symbol": "AWEUSDT",
+    "label": "RSI70 · 4h",
+    "timeframe": "4h",
+    "message_id": 1165,
+    "entry": 0.06256,
+    "stop": 0.05711041,
+    "init_stop": 0.05711041,
+    "cur_stop": 0.05711041,
+    "last_alert_stop": 0.05711041,
+    "armed": false,
+    "targets": [
+      0.06509504,
+      0.06831976,
+      0.07763976
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-23 11:59:59.999000",
+    "last_bar": "2026-06-23 11:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.06256,
+    "lo_seen": 0.06256,
+    "created": "2026-06-23T12:01:50"
   }
 }

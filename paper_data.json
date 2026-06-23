@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-23T11:48:31",
+  "updated_at": "2026-06-23T12:04:13",
   "stats": {
-    "open": 4,
+    "open": 6,
     "closed": 75,
     "win_rate": 12.0,
     "profit_factor": 0.25,
@@ -64,7 +64,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 07:59:59.999000",
+      "last_ts": "2026-06-23 11:59:59.999000",
       "closed_at": null
     },
     {
@@ -2496,7 +2496,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 07:59:59.999000",
+      "last_ts": "2026-06-23 11:59:59.999000",
       "closed_at": null
     },
     {
@@ -2653,7 +2653,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 07:59:59.999000",
+      "last_ts": "2026-06-23 11:59:59.999000",
       "closed_at": null
     },
     {
@@ -2923,7 +2923,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 11:44:59.999000",
+      "last_ts": "2026-06-23 11:59:59.999000",
       "closed_at": null
     },
     {
@@ -3011,6 +3011,62 @@
       ],
       "last_ts": "2026-06-23 09:59:59.999000",
       "closed_at": "2026-06-23T10:05:04"
+    },
+    {
+      "id": "1782216089028",
+      "symbol": "DEXEUSDT",
+      "label": "RSI70 · 1h",
+      "strategy": "classic",
+      "timeframe": "1h",
+      "side": "buy",
+      "entry": 22.861,
+      "stop": 19.69446517,
+      "stop_orig": 19.69446517,
+      "targets": [
+        24.28764,
+        26.10241,
+        31.34741
+      ],
+      "risk": 3.16653483,
+      "opened_at": "2026-06-23T12:04:07",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-23 11:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782216109135",
+      "symbol": "AWEUSDT",
+      "label": "RSI70 · 4h",
+      "strategy": "classic",
+      "timeframe": "4h",
+      "side": "buy",
+      "entry": 0.06256,
+      "stop": 0.05711041,
+      "stop_orig": 0.05711041,
+      "targets": [
+        0.06509504,
+        0.06831976,
+        0.07763976
+      ],
+      "risk": 0.005449590000000004,
+      "opened_at": "2026-06-23T12:04:07",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-23 11:59:59.999000",
+      "closed_at": null
     }
   ]
 }
