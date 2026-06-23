@@ -2883,7 +2883,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-23 12:44:59.999000",
+    "last_ts": "2026-06-23 12:59:59.999000",
     "closed_at": null
   },
   {
@@ -2997,7 +2997,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-23 11:59:59.999000",
+    "last_ts": "2026-06-23 12:59:59.999000",
     "closed_at": null
   },
   {
@@ -3053,7 +3053,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-23 12:44:59.999000",
+    "last_ts": "2026-06-23 12:59:59.999000",
     "closed_at": null
   },
   {
@@ -3090,7 +3090,35 @@
         "pct": 3.536
       }
     ],
-    "last_ts": "2026-06-23 12:44:59.999000",
+    "last_ts": "2026-06-23 12:59:59.999000",
+    "closed_at": null
+  },
+  {
+    "id": "1782219697362",
+    "symbol": "GUSDT",
+    "label": "RSI70 · 1h",
+    "strategy": "classic",
+    "timeframe": "1h",
+    "side": "buy",
+    "entry": 0.0034,
+    "stop": 0.00292643,
+    "stop_orig": 0.00292643,
+    "targets": [
+      0.0036312,
+      0.0039253,
+      0.0047753
+    ],
+    "risk": 0.00047357,
+    "opened_at": "2026-06-23T13:04:58",
+    "status": "open",
+    "hits": [],
+    "breakeven": false,
+    "remaining": 1.0,
+    "realized_pct": 0.0,
+    "result_pct": null,
+    "exit_price": null,
+    "events": [],
+    "last_ts": "2026-06-23 12:59:59.999000",
     "closed_at": null
   }
 ]

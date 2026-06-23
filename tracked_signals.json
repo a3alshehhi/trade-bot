@@ -1827,5 +1827,36 @@
     "hi_seen": 0.00336,
     "lo_seen": 0.00298,
     "created": "2026-06-23T12:31:15"
+  },
+  "RSI70 · 1h|GUSDT|2026-06-23 12:59:59.999000": {
+    "symbol": "GUSDT",
+    "label": "RSI70 · 1h",
+    "timeframe": "1h",
+    "message_id": 1173,
+    "entry": 0.0034,
+    "stop": 0.00292643,
+    "init_stop": 0.00292643,
+    "cur_stop": 0.00292643,
+    "last_alert_stop": 0.00292643,
+    "armed": false,
+    "targets": [
+      0.0036312,
+      0.0039253,
+      0.0047753
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-23 12:59:59.999000",
+    "last_bar": "2026-06-23 12:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0034,
+    "lo_seen": 0.0034,
+    "created": "2026-06-23T13:01:38"
   }
 }
