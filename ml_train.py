@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-ml_train.py — يبني بيانات التدريب من نتائج الاستراتيجيات الحيّة نفسها
-(rsi-cross ob70 + trendwave) عبر باك-تست البوت، ثم يدرّب نموذج Gradient
+ml_train.py — يبني بيانات التدريب من نتائج الاستراتيجيتين الحيّتين نفسيهما
+(reversal=اختراق RSI70 + trendwave) عبر باك-تست البوت، ثم يدرّب نموذج Gradient
 Boosting يتعلّم تمييز الإشارات الرابحة من الخاسرة، ويحفظه في ml_model.joblib.
 
 الصدق المنهجي:
@@ -20,10 +20,13 @@ import pandas as pd
 import trading_bot as tb
 import ml_filter as mlf
 
-# الاستراتيجيات الحيّة وفريماتها (مطابقة لـ reversal.yml)
+# الاستراتيجيتان الحيّتان فقط (مطابقة تماماً لما يشغّله reversal.yml):
+#   • reversal  = اختراق RSI(21) عتبة 70 في وضع --mode reversal (backtest_symbol_rsi_cross)
+#   • trendwave = موجة RSI 20→80 ثم نهايتها + فلتر فريم أعلى (backtest_symbol_trendwave)
+# لا علاقة لها بـ RSI2 الكلاسيكي — كان مجرد اسم تسمية قديم مُضلِّل.
 LIVE_SETUPS = [
     # (اسم, دالة الباك-تست, الفريمات, تعديلات cfg)
-    ("rsi70",     tb.backtest_symbol_rsi_cross, ["15m", "1h", "4h", "1d"],
+    ("reversal",  tb.backtest_symbol_rsi_cross, ["15m", "1h", "4h", "1d"],
      {"rsi_cross": True, "rsi_ob": 70.0, "bt_stop_mult": 2.0}),
     ("trendwave", tb.backtest_symbol_trendwave, ["15m", "1h", "4h"],
      {"trendwave": True, "rsi_os": 20.0, "rsi_ob": 80.0,
