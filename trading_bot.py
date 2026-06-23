@@ -716,25 +716,28 @@ def _fmt_price(v):
 def format_update_card(tr, event, price):
     """بطاقة تحديث: تحقق هدف / ضرب وقف."""
     is_buy = tr["side"] == "buy"
-    entry  = tr["entry"]
-    pnl    = (price - entry) / entry * 100 * (1 if is_buy else -1) if entry else 0.0
-    head   = {"tp1": "✅ تم جني الربح — الهدف الأول 💰",
-              "tp2": "✅ تم جني الربح — الهدف الثاني 💰",
-              "tp3": "✅ تم جني الربح — الهدف الثالث 💰",
-              "sl":  "🛑 ضرب وقف الخسارة"}.get(event, f"✅ {event}")
+    pnl = (price - tr["entry"]) / tr["entry"] * 100 * (1 if is_buy else -1)
+    head = {"tp1": "🎯 تحقق الهدف الأول ✅",
+            "tp2": "🎯 تحقق الهدف الثاني ✅✅",
+            "tp3": "🏆 تحقق الهدف الثالث ✅✅✅",
+            "sl":  "🛑 ضرب وقف الخسارة"}[event]
 
     lines = [SEP, head, SEP, "",
-             f"💰 العملة:      {tr['symbol']}",
-             f"⏱️ الفريم:     {tr['timeframe']}",
-             SEP, "",
-             f"📥 سعر الدخول:   {_fmt_price(entry)}",
-             f"💵 السعر الحالي:  {_fmt_price(price)}",
-             f"{'📉 الخسارة' if event == 'sl' else '📈 نسبة الربح'}:  {pnl:+.2f}%"]
-
-    lines += [SEP, "",
-              f"⏰ {datetime.now().strftime('%H:%M:%S')}",
-              SEP, "",
-              "💡 إدارة المخاطر سر النجاح"]
+             f"💰 العملة: {tr['symbol']}",
+             f"⏱️ فريم الدخول: {tr['timeframe']}",
+             f"🟢 سعر الدخول: {_fmt_price(tr['entry'])}",
+             f"💵 السعر الحالي: {_fmt_price(price)}"]
+    if event == "sl":
+        lines.append(f"📉 النتيجة: {pnl:+.2f}%")
+    else:
+        lines.append(f"📈 الربح: {pnl:+.2f}%")
+        n = int(event[-1])
+        if n < len(tr["targets"]):
+            lines.append(f"➡️ الهدف التالي: {_fmt_price(tr['targets'][n])}")
+        else:
+            lines.append("✅ اكتملت جميع الأهداف — تهانينا!")
+    lines += [SEP, "", f"⏰ {datetime.now().strftime('%H:%M:%S')}",
+              SEP, "", "💡 إدارة المخاطر سر النجاح"]
     return "\n".join(lines)
 
 
@@ -757,7 +760,7 @@ def monitor(cfg, state_path):
             continue
         is_buy = tr["side"] == "buy"
 
-        # تحقق الأهداف — يُغلق فور أول هدف يتحقق
+        # تحقق الأهداف بالترتيب
         for i, tp in enumerate(tr["targets"]):
             key = f"tp{i+1}"
             if key in tr["hit"]:
@@ -765,14 +768,14 @@ def monitor(cfg, state_path):
             reached = price >= tp if is_buy else price <= tp
             if reached:
                 tr["hit"].append(key)
-                tr["status"]    = "closed_tp"
-                tr["closed_at"] = datetime.now().isoformat(timespec="seconds")
                 changed = True
-                print(f"  {tr['symbol']}: {key} تحقق عند {price} — الصفقة مغلقة")
+                print(f"  {tr['symbol']}: {key} تحقق عند {price}")
                 if token and chat_id:
                     send_telegram(token, chat_id, format_update_card(tr, key, price))
                     time.sleep(0.6)
-                break   # إغلاق فور أول هدف
+                if i == len(tr["targets"]) - 1:
+                    tr["status"] = "closed_tp"
+                    tr["closed_at"] = datetime.now().isoformat(timespec="seconds")
 
         # وقف الخسارة (إن لم تُغلق بالأهداف)
         if tr["status"] == "open":
@@ -2361,6 +2364,140 @@ def run_backtest(cfg, watchlist_path, out_dir):
 
 
 # ======================================================================
+#  7.5) تحقّق Walk-Forward (اختبار خارج العيّنة المتدرّج ضد الـoverfitting)
+# ======================================================================
+def _wf_param_grid():
+    """شبكة إعدادات الوقف المتحرك لاختيار الأفضل على IS في كل نافذة."""
+    return [(b, a) for b in (0.25, 0.5, 0.75) for a in (0.0, 1.0)]
+
+
+def _wf_expectancy(trades):
+    rs = [t["R_managed"] for t in trades]
+    return (sum(rs) / len(rs)) if rs else None
+
+
+def _walkforward_oos(trades_by_combo, folds, default_key, min_is=20):
+    """النواة القابلة للاختبار: تقسّم الزمن إلى نوافذ، وفي كل نافذة OOS تختار
+    الإعداد صاحب أعلى توقّع على IS (كل ما قبلها) ثم تجمع صفقاته في OOS فقط.
+
+    trades_by_combo: dict[(buf,arm) -> list[trade]] حيث كل trade فيه
+      'date' (YYYY-MM-DD) و'R_managed' و'out_managed'.
+    يرجع (oos_all, fold_rows)."""
+    all_dates = [pd.Timestamp(t["date"]) for c in trades_by_combo.values()
+                 for t in c if t.get("date")]
+    if not all_dates:
+        return [], []
+    dmin, dmax = min(all_dates), max(all_dates)
+    span = (dmax - dmin)
+    bounds = [dmin + span * i / (folds + 1) for i in range(folds + 2)]
+
+    oos_all, fold_rows = [], []
+    for fi in range(1, folds + 1):
+        oos_start, oos_end = bounds[fi], bounds[fi + 1]
+        last = (fi == folds)
+        best_key, best_exp = None, None
+        for key, tr in trades_by_combo.items():
+            is_tr = [t for t in tr if pd.Timestamp(t["date"]) < oos_start]
+            if len(is_tr) < min_is:
+                continue
+            e = _wf_expectancy(is_tr)
+            if e is not None and (best_exp is None or e > best_exp):
+                best_exp, best_key = e, key
+        if best_key is None:
+            best_key = default_key
+        chosen = trades_by_combo.get(best_key, [])
+        oos = [t for t in chosen if oos_start <= pd.Timestamp(t["date"])
+               and (pd.Timestamp(t["date"]) <= oos_end if last
+                    else pd.Timestamp(t["date"]) < oos_end)]
+        for t in oos:
+            tt = dict(t)
+            tt["wf_fold"] = fi
+            tt["wf_combo"] = f"{best_key[0]}x{best_key[1]}"
+            oos_all.append(tt)
+        st = _stats([t["R_managed"] for t in oos], [t["out_managed"] for t in oos])
+        fold_rows.append({
+            "fold": fi, "from": str(oos_start)[:10], "to": str(oos_end)[:10],
+            "combo": f"{best_key[0]}×{best_key[1]}",
+            "n": st["n"] if st else 0,
+            "expectancy": st["expectancy"] if st else None,
+            "pf": st["profit_factor"] if st else None,
+        })
+    return oos_all, fold_rows
+
+
+def run_walkforward(cfg, watchlist_path, out_dir):
+    """تحقّق walk-forward: لكل نافذة اختبار (OOS) نختار أفضل إعداد من البيانات
+    السابقة لها (IS) ثم نطبّقه على النافذة الجديدة فقط. النتيجة المجمّعة على
+    كل نوافذ OOS هي الحكم الصادق خارج العيّنة ضد الـoverfitting."""
+    print("=" * 64)
+    print("  تحقّق Walk-Forward — اختبار خارج العيّنة المتدرّج")
+    print("=" * 64)
+    if not cfg.get("trendwave"):
+        print("ℹ️ walk-forward مُهيّأ لاستراتيجية trendwave (فعّل --trendwave).")
+    parsed = parse_watchlist(watchlist_path)
+    targets = []
+    if cfg["assets"] in ("all", "stocks"):
+        targets += [(it, "stock") for it in parsed["stocks"]]
+    if cfg["assets"] in ("all", "crypto"):
+        targets += [(it, "crypto") for it in parsed["crypto"]]
+    folds = int(cfg.get("wf_folds", 5))
+    grid = _wf_param_grid()
+    print(f"رموز: {len(targets)} | الإطار: {cfg['timeframe']} | شموع: {cfg.get('bt_bars')} | "
+          f"نوافذ OOS: {folds} | إعدادات الشبكة: {len(grid)}")
+    print("الشبكة (trail_buf×trail_arm): " + ", ".join(f"{b}×{a}" for b, a in grid))
+    print()
+
+    bt_fn = backtest_symbol_trendwave if cfg.get("trendwave") else backtest_symbol_osob
+    trades_by_combo = {}
+    for gi, (b, a) in enumerate(grid, 1):
+        c = dict(cfg)
+        c["trail_buf"], c["trail_arm"] = b, a
+        comb = []
+        with ThreadPoolExecutor(max_workers=cfg["workers"]) as ex:
+            futs = [ex.submit(bt_fn, it, kind, c) for it, kind in targets]
+            for fut in as_completed(futs):
+                try:
+                    comb.extend(fut.result() or [])
+                except Exception:
+                    pass
+        trades_by_combo[(b, a)] = comb
+        print(f"  [{gi}/{len(grid)}] إعداد {b}×{a}: {len(comb)} صفقة")
+
+    oos_all, fold_rows = _walkforward_oos(trades_by_combo, folds, (0.5, 1.0))
+    if not fold_rows:
+        print("\n⚠️ لا صفقات كافية لبناء النوافذ.")
+        return
+
+    print(f"\n{SEP}\n  نتائج كل نافذة (OOS فقط)\n{SEP}")
+    for r in fold_rows:
+        print(f"  نافذة {r['fold']} [{r['from']}→{r['to']}] إعداد {r['combo']}: "
+              f"{r['n']} صفقة، توقّع {r['expectancy']}، PF {r['pf']}")
+
+    st_oos = _stats([t["R_managed"] for t in oos_all], [t["out_managed"] for t in oos_all])
+    _print_stats("الإجمالي خارج العيّنة (Walk-Forward — الحكم الصادق)", st_oos)
+
+    full_def = trades_by_combo.get((0.5, 1.0), [])
+    st_is = _stats([t["R_managed"] for t in full_def], [t["out_managed"] for t in full_def])
+    if st_is and st_oos:
+        n_pos = sum(1 for r in fold_rows if (r["expectancy"] or 0) > 0)
+        print(f"\n{SEP}\n  فجوة الباك-تست مقابل خارج العيّنة\n{SEP}")
+        print(f"  in-sample (كامل، 0.5×1.0): توقّع {st_is['expectancy']:+}، PF {st_is['profit_factor']}")
+        print(f"  out-of-sample (walk-forward): توقّع {st_oos['expectancy']:+}، PF {st_oos['profit_factor']}")
+        print(f"  نوافذ موجبة: {n_pos}/{len(fold_rows)}")
+        ok = st_oos["expectancy"] > 0 and n_pos >= max(1, (len(fold_rows) + 1) // 2)
+        print(f"  الحكم: " + ("رابح خارج العيّنة ✅ — الإيدج صامد عبر الزمن" if ok
+                              else "غير صامد خارج العيّنة ❌ — الأداء غالباً overfitting/حظّ فترة"))
+
+    os.makedirs(out_dir, exist_ok=True)
+    ts = datetime.now().strftime("%Y%m%d_%H%M")
+    if oos_all:
+        p = os.path.join(out_dir, f"walkforward_{ts}.csv")
+        pd.DataFrame(oos_all).to_csv(p, index=False, encoding="utf-8-sig")
+        print(f"\n✅ حُفظت صفقات OOS ({len(oos_all)}): {p}")
+    print("\n⚠️ نتائج تاريخية افتراضية — لا تضمن المستقبل. تحليل تعليمي فقط.")
+
+
+# ======================================================================
 #  8) التنبيه الحيّ لاستراتيجية الانعكاس (يرسل الإشارة فور إغلاق الشمعة)
 # ======================================================================
 def reversal_label(cfg):
@@ -2956,6 +3093,10 @@ def build_argparser():
                    help="أقصى عدد شموع لإمساك الصفقة الافتراضية (افتراضي 40)")
     p.add_argument("--bt-offset", type=int, default=0,
                    help="استبعاد أحدث N شمعة لاختبار فترة أقدم (تحقّق خارج العيّنة)")
+    p.add_argument("--walk-forward", action="store_true",
+                   help="(backtest) تحقّق walk-forward: اختيار أفضل إعداد على IS واختباره على OOS فقط")
+    p.add_argument("--wf-folds", type=int, default=5,
+                   help="عدد نوافذ الاختبار خارج العيّنة في walk-forward (افتراضي 5)")
     p.add_argument("--strategy", choices=["score", "reversal"], default="score",
                    help="score: النظام متعدد العوامل | reversal: انعكاس RSI الزخمي")
     p.add_argument("--ma200-confirm", action="store_true",
@@ -3053,6 +3194,7 @@ if __name__ == "__main__":
         "trail_buf": args.trail_buf, "trail_arm": args.trail_arm,
         "force_direct": args.force_direct, "no_div": args.no_divergence,
         "htf_trend": args.htf_trend, "trendwave": args.trendwave,
+        "walk_forward": args.walk_forward, "wf_folds": args.wf_folds,
     }
     if args.trendwave:        # الإعداد الرابح المثبّت
         if args.trail_buf == 0.25:
@@ -3070,7 +3212,10 @@ if __name__ == "__main__":
     elif args.mode == "backtest":
         if not args.watchlist:
             sys.exit("⚠️ وضع backtest يتطلب --watchlist")
-        run_backtest(cfg, args.watchlist, args.output_dir)
+        if cfg.get("walk_forward"):
+            run_walkforward(cfg, args.watchlist, args.output_dir)
+        else:
+            run_backtest(cfg, args.watchlist, args.output_dir)
     elif args.mode == "yearly":
         if not args.watchlist:
             sys.exit("⚠️ وضع yearly يتطلب --watchlist")
