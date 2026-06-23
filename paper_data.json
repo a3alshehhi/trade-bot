@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-23T05:48:42",
+  "updated_at": "2026-06-23T06:05:16",
   "stats": {
-    "open": 8,
+    "open": 10,
     "closed": 65,
     "win_rate": 9.2,
     "profit_factor": 0.17,
@@ -2094,7 +2094,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 04:59:59.999000",
+      "last_ts": "2026-06-23 05:59:59.999000",
       "closed_at": null
     },
     {
@@ -2454,7 +2454,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 04:59:59.999000",
+      "last_ts": "2026-06-23 05:59:59.999000",
       "closed_at": null
     },
     {
@@ -2510,7 +2510,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 05:44:59.999000",
+      "last_ts": "2026-06-23 05:59:59.999000",
       "closed_at": null
     },
     {
@@ -2661,7 +2661,7 @@
           "pct": 1.627
         }
       ],
-      "last_ts": "2026-06-23 05:44:59.999000",
+      "last_ts": "2026-06-23 05:59:59.999000",
       "closed_at": null
     },
     {
@@ -2732,7 +2732,63 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 05:44:59.999000",
+      "last_ts": "2026-06-23 05:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782194471531",
+      "symbol": "SCUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.000713,
+      "stop": 0.00069728,
+      "stop_orig": 0.00069728,
+      "targets": [
+        0.00072007,
+        0.00072907,
+        0.00075507
+      ],
+      "risk": 1.5719999999999992e-05,
+      "opened_at": "2026-06-23T06:05:06",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-23 05:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782194499722",
+      "symbol": "MOVRUSDT",
+      "label": "RSI70 · 1h",
+      "strategy": "classic",
+      "timeframe": "1h",
+      "side": "buy",
+      "entry": 1.382,
+      "stop": 1.25399611,
+      "stop_orig": 1.25399611,
+      "targets": [
+        1.441568,
+        1.517342,
+        1.736342
+      ],
+      "risk": 0.1280038899999998,
+      "opened_at": "2026-06-23T06:05:06",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-23 05:59:59.999000",
       "closed_at": null
     }
   ]

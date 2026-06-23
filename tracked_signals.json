@@ -1502,5 +1502,67 @@
     "hi_seen": 0.03235,
     "lo_seen": 0.03235,
     "created": "2026-06-23T05:45:55"
+  },
+  "RSI70 · 15m|SCUSDT|2026-06-23 05:59:59.999000": {
+    "symbol": "SCUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1122,
+    "entry": 0.000713,
+    "stop": 0.00069728,
+    "init_stop": 0.00069728,
+    "cur_stop": 0.00069728,
+    "last_alert_stop": 0.00069728,
+    "armed": false,
+    "targets": [
+      0.00072007,
+      0.00072907,
+      0.00075507
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-23 05:59:59.999000",
+    "last_bar": "2026-06-23 05:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.000713,
+    "lo_seen": 0.000713,
+    "created": "2026-06-23T06:01:11"
+  },
+  "RSI70 · 1h|MOVRUSDT|2026-06-23 05:59:59.999000": {
+    "symbol": "MOVRUSDT",
+    "label": "RSI70 · 1h",
+    "timeframe": "1h",
+    "message_id": 1123,
+    "entry": 1.382,
+    "stop": 1.25399611,
+    "init_stop": 1.25399611,
+    "cur_stop": 1.25399611,
+    "last_alert_stop": 1.25399611,
+    "armed": false,
+    "targets": [
+      1.441568,
+      1.517342,
+      1.736342
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-23 05:59:59.999000",
+    "last_bar": "2026-06-23 05:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1.382,
+    "lo_seen": 1.382,
+    "created": "2026-06-23T06:01:40"
   }
 }
