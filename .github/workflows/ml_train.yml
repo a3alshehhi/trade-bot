@@ -1,0 +1,80 @@
+name: ml-train
+
+# تدريب الفلتر التعلّمي (الموجات + MACD 4C) على نتائج الاستراتيجيات الحيّة،
+# على بيانات حقيقية من Binance، ثم حفظ ml_model.joblib في المستودع.
+# يُشغَّل يدوياً من تبويب Actions بزر "Run workflow".
+on:
+  workflow_dispatch:
+    inputs:
+      assets:
+        description: "الأصول"
+        type: choice
+        options: [crypto, stocks, all]
+        default: crypto
+      max_symbols:
+        description: "أقصى عدد رموز (للسرعة)"
+        default: "80"
+      bt_bars:
+        description: "عدد الشموع التاريخية لكل رمز"
+        default: "1500"
+      min_retain:
+        description: "أقل نسبة صفقات تُبقى عند اختيار العتبة"
+        default: "0.35"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ml-train
+  cancel-in-progress: false
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Train ML filter
+        run: |
+          python ml_train.py \
+            --assets "${{ inputs.assets }}" \
+            --max-symbols "${{ inputs.max_symbols }}" \
+            --bt-bars "${{ inputs.bt_bars }}" \
+            --min-retain "${{ inputs.min_retain }}" 2>&1 | tee ml_train_log.txt
+
+      - name: Send report to Telegram
+        if: always()
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ -n "$TELEGRAM_TOKEN" ] && [ -f ml_train_log.txt ]; then
+            BODY=$(tail -c 3500 ml_train_log.txt)
+            curl -s "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
+              --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+              --data-urlencode "text=🤖 تدريب الفلتر التعلّمي:
+${BODY}" >/dev/null || true
+          fi
+
+      - name: Commit model
+        run: |
+          [ -f ml_model.joblib ] && git add ml_model.joblib ml_train_log.txt
+          if ! git diff --cached --quiet; then
+            git config user.name "trade-bot"
+            git config user.email "bot@users.noreply.github.com"
+            git commit -m "train ML filter model [skip ci]"
+            for i in 1 2 3 4 5; do
+              git pull --rebase --autostash origin main && git push && break
+              echo "push attempt $i failed, retrying in 5s..."
+              sleep 5
+            done
+          fi

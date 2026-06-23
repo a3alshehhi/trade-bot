@@ -38,21 +38,22 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           # إشارة شراء بالزخم: فور تجاوز RSI(21) خط الـ70 — على 4 فريمات
-          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --watchlist watchlist.txt \
+          # --ml-filter: يرشّح الإشارات بالفلتر التعلّمي إن وُجد ml_model.joblib (وإلا يمرّر الكل)
+          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --ml-filter --watchlist watchlist.txt \
             --timeframe 15m --state reversal_alerts.json
-          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --watchlist watchlist.txt \
+          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --ml-filter --watchlist watchlist.txt \
             --timeframe 1h --state reversal_alerts.json
-          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --watchlist watchlist.txt \
+          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --ml-filter --watchlist watchlist.txt \
             --timeframe 4h --state reversal_alerts.json
-          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --watchlist watchlist.txt \
+          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --ml-filter --watchlist watchlist.txt \
             --timeframe 1d --state reversal_alerts.json
           # === استراتيجية trendwave المستقلة (الإعداد الرابح) — على نفس الجدول ===
           # دخول مباشر بعد موجة RSI(20→80) + فلتر اتجاه من فريم أعلى. رسائل مُعنونة "trendwave".
-          python trading_bot.py --mode reversal --trendwave --watchlist watchlist.txt \
+          python trading_bot.py --mode reversal --trendwave --ml-filter --watchlist watchlist.txt \
             --timeframe 15m --state trendwave_alerts.json
-          python trading_bot.py --mode reversal --trendwave --watchlist watchlist.txt \
+          python trading_bot.py --mode reversal --trendwave --ml-filter --watchlist watchlist.txt \
             --timeframe 1h --state trendwave_alerts.json
-          python trading_bot.py --mode reversal --trendwave --watchlist watchlist.txt \
+          python trading_bot.py --mode reversal --trendwave --ml-filter --watchlist watchlist.txt \
             --timeframe 4h --state trendwave_alerts.json
           # متابعة الإشارات المُرسَلة والرد على رسالتها عند بلوغ هدف/وقف
           python trading_bot.py --mode trackmon
