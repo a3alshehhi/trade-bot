@@ -2470,7 +2470,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-23 04:14:59.999000",
+    "last_ts": "2026-06-23 04:29:59.999000",
     "closed_at": null
   },
   {
@@ -2585,6 +2585,34 @@
     "exit_price": null,
     "events": [],
     "last_ts": "2026-06-23 03:59:59.999000",
+    "closed_at": null
+  },
+  {
+    "id": "1782189063729",
+    "symbol": "SCRUSDT",
+    "label": "RSI70 · 15m",
+    "strategy": "classic",
+    "timeframe": "15m",
+    "side": "buy",
+    "entry": 0.03159,
+    "stop": 0.03053217,
+    "stop_orig": 0.03053217,
+    "targets": [
+      0.03210408,
+      0.03275802,
+      0.03464802
+    ],
+    "risk": 0.0010578299999999992,
+    "opened_at": "2026-06-23T04:34:50",
+    "status": "open",
+    "hits": [],
+    "breakeven": false,
+    "remaining": 1.0,
+    "realized_pct": 0.0,
+    "result_pct": null,
+    "exit_price": null,
+    "events": [],
+    "last_ts": "2026-06-23 04:29:59.999000",
     "closed_at": null
   }
 ]
