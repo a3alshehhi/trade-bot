@@ -1885,14 +1885,23 @@ def backtest_symbol_osob(item, kind, cfg):
                         deepest = min(dca) if dca else ref_low
                         stp = float(min(ref_low, deepest) - 0.5 * atrv)
                         if entry > stp:
-                            a = _simulate_direct_trail_div(df, i, entry, dca, stp, hold,
-                                                           cost, rsi21, atrs, trail=False,
-                                                           buf=trail_buf, arm=trail_arm,
-                                                           use_div=use_div)
-                            b = _simulate_direct_trail_div(df, i, entry, dca, stp, hold,
-                                                           cost, rsi21, atrs, trail=True,
-                                                           buf=trail_buf, arm=trail_arm,
-                                                           use_div=use_div)
+                            if cfg.get("tp1_exit"):
+                                # خروج كامل عند الهدف الأول (أهداف فيبو امتدادية للموجة)
+                                tps = [round(ref_low + mm * imp, 8)
+                                       for mm in (1.272, 1.618, 2.0)]
+                                a = _simulate_trade(df, i, entry, stp, tps, 1, hold,
+                                                    manage=False, cost=cost)
+                                b = _simulate_trade(df, i, entry, stp, tps, 1, hold,
+                                                    manage=True, cost=cost)
+                            else:
+                                a = _simulate_direct_trail_div(df, i, entry, dca, stp, hold,
+                                                               cost, rsi21, atrs, trail=False,
+                                                               buf=trail_buf, arm=trail_arm,
+                                                               use_div=use_div)
+                                b = _simulate_direct_trail_div(df, i, entry, dca, stp, hold,
+                                                               cost, rsi21, atrs, trail=True,
+                                                               buf=trail_buf, arm=trail_arm,
+                                                               use_div=use_div)
                             if a and b:
                                 trades.append({
                                     "symbol": sym, "kind": kind, "side": "buy",
@@ -1918,14 +1927,14 @@ def backtest_symbol_trendwave(item, kind, cfg):
       • الإعداد: RSI(21) ينزل تحت 20 ثم يتجاوز 80 (موجة دفع صاعدة مؤكَّدة).
       • الدخول: سوقي مباشر عند نهاية الموجة + تعديل بمستويات فيبو تصحيحية (DCA).
       • فلتر الاتجاه: إغلاق فوق متوسط 200 على *فريم أعلى* (1h→4h، 15m→1h، 4h/1d→1d).
-      • الإدارة: وقف متحرك (0.5×ATR تحت كل تصحيح) لا يُفعَّل إلا بعد ربح عائم +1×المخاطرة.
-      • الخروج: بالوقف المتحرك فقط (بلا خروج دايفرجنس).
+      • الخروج: إغلاق كامل عند الهدف الأول (أهداف فيبو امتدادية) أو وقف الخسارة — بلا تتبّع ولا دايفرجنس.
 
     مبنيّة فوق محرّك osob لكنها مُقدَّمة كاستراتيجية مستقلة بإعداداتها المثبّتة.
     نتائج الباك-تست الحقيقية (Binance): رابحة على 1d و4h و1h."""
     c = dict(cfg)
     c["force_direct"] = True      # دخول مباشر على كل الفريمات (بما فيها 1h/15m)
     c["no_div"] = True            # بلا خروج دايفرجنس
+    c["tp1_exit"] = True          # خروج كامل عند الهدف الأول (بدل الوقف المتحرك)
     c["trend_filter"] = True      # فلتر اتجاه مفعّل
     c["htf_trend"] = True         # من فريم أعلى
     c.setdefault("trail_buf", 0.5)
@@ -3077,48 +3086,19 @@ def _advance_trade(df, tr):
             tr["lo_seen"] = min(tr.get("lo_seen", entry), float(low[j]))
             return events
 
-        # (ب) الأهداف
-        if not tr.get("is_trendwave"):
-            # عائلة الانعكاس: **إغلاق كامل عند الهدف الأول** (بلا جني جزئي متعدّد)
-            if 1 not in tr["hits"] and high[j] >= targets[0]:
-                tr["hits"].append(1)
-                gain = ((targets[0] - entry) / entry * 100) if entry else 0.0
-                events.append(f"🎯 {sym} — تحقق الهدف الأول ✅ — أغلق الصفقة بالكامل\n"
-                              f"السعر: {fmt(targets[0])}  (+{gain:.2f}%)")
-                tr["stopped"] = True
-                tr["cur_stop"] = cur_stop
-                tr["last_bar"] = str(dates.iloc[j])
-                tr["hi_seen"] = max(tr.get("hi_seen", entry), float(high[j]))
-                tr["lo_seen"] = min(tr.get("lo_seen", entry), float(low[j]))
-                return events
-        else:
-            # trendwave: تنبيه ببلوغ الأهداف فقط (الخروج بالوقف المتحرك)
-            for k in range(1, len(targets) + 1):
-                if k in tr["hits"]:
-                    continue
-                if high[j] >= targets[k - 1]:
-                    tr["hits"].append(k)
-                    gain = ((targets[k - 1] - entry) / entry * 100) if entry else 0.0
-                    events.append(f"🎯 {sym} — تحقق الهدف {k} {'✅' * k}\n"
-                                  f"السعر: {fmt(targets[k - 1])}  (+{gain:.2f}%)")
-
-        # الوقف المتحرك يخصّ trendwave فقط (بلا أهداف ثابتة). عائلة الانعكاس
-        # تبقى عند التعادل بعد الهدف الأول وتجني 25%/25% عند الهدفين 2 و3.
-        if tr.get("is_trendwave"):
-            # (ج) تفعيل التتبّع بعد ربح عائم ≥ 1×المخاطرة
-            if not armed and (high[j] - entry) >= TRAIL_ARM * risk:
-                armed = True
-
-            # (د) رفع الوقف المتحرك تحت قاع محوري مؤكَّد (5 شموع) − 0.5×ATR
-            k2 = j - 2                              # شمعة محورية تأكَّدت الآن
-            if armed and k2 - 2 >= 0:
-                piv_low = (low[k2] <= low[k2 - 1] and low[k2] <= low[k2 - 2]
-                           and low[k2] <= low[k2 + 1] and low[k2] <= low[k2 + 2])
-                if piv_low:
-                    atrk = atr_arr[k2] if not np.isnan(atr_arr[k2]) else close[j] * 0.01
-                    new_stop = low[k2] - TRAIL_BUF * atrk
-                    if new_stop > cur_stop and new_stop < close[j]:
-                        cur_stop = new_stop
+        # (ب) الهدف — **إغلاق كامل عند الهدف الأول لكل الاستراتيجيات** (بلا جني جزئي
+        #     ولا أهداف متعددة ولا وقف متحرك). الصفقة: هدف أول أو وقف خسارة فقط.
+        if 1 not in tr["hits"] and high[j] >= targets[0]:
+            tr["hits"].append(1)
+            gain = ((targets[0] - entry) / entry * 100) if entry else 0.0
+            events.append(f"🎯 {sym} — تحقق الهدف الأول ✅ — أغلق الصفقة بالكامل\n"
+                          f"السعر: {fmt(targets[0])}  (+{gain:.2f}%)")
+            tr["stopped"] = True
+            tr["cur_stop"] = cur_stop
+            tr["last_bar"] = str(dates.iloc[j])
+            tr["hi_seen"] = max(tr.get("hi_seen", entry), float(high[j]))
+            tr["lo_seen"] = min(tr.get("lo_seen", entry), float(low[j]))
+            return events
 
         tr["hi_seen"] = max(tr.get("hi_seen", entry), float(high[j]))
         tr["lo_seen"] = min(tr.get("lo_seen", entry), float(low[j]))
