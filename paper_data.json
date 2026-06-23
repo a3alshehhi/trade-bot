@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-23T00:18:38",
+  "updated_at": "2026-06-23T00:33:43",
   "stats": {
-    "open": 8,
+    "open": 9,
     "closed": 50,
     "win_rate": 8.0,
     "profit_factor": 0.08,
@@ -2508,7 +2508,35 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 00:14:59.999000",
+      "last_ts": "2026-06-23 00:29:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782174656156",
+      "symbol": "HIVEUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.0524,
+      "stop": 0.05030932,
+      "stop_orig": 0.05030932,
+      "targets": [
+        0.0533792,
+        0.0546248,
+        0.0582248
+      ],
+      "risk": 0.0020906800000000045,
+      "opened_at": "2026-06-23T00:33:35",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-23 00:29:59.999000",
       "closed_at": null
     }
   ]
