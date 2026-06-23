@@ -2057,6 +2057,162 @@ def backtest_symbol_os_multi(item, kind, cfg):
     return trades
 
 
+# ======================================================================
+#  استراتيجيات كلاسيكية معروفة (لمقارنتها عبر بوّابة walk-forward)
+#  وقف موحّد 2×ATR لجعل R قابلاً للمقارنة بين الاستراتيجيات.
+# ======================================================================
+def _sim_long(df, i0, entry, stop, exit_fn, hold, cost):
+    """صفقة شراء: وقف ثابت + خروج بإشارة exit_fn(j) أو انتهاء المدة.
+    يرجع (R, outcome, exit_bar) حيث R = (الخروج − الدخول)/(الدخول − الوقف) − تكلفة."""
+    n = len(df)
+    high = df["high"].values
+    low = df["low"].values
+    close = df["close"].values
+    risk = entry - stop
+    if risk <= 0:
+        return None
+    cost_r = cost * entry / risk
+    end = min(i0 + 1 + hold, n)
+    for j in range(i0 + 1, end):
+        if low[j] <= stop:
+            return (stop - entry) / risk - cost_r, "stop", j
+        if exit_fn(j):
+            return (close[j] - entry) / risk - cost_r, "signal", j
+    return (close[end - 1] - entry) / risk - cost_r, "time", end - 1
+
+
+def backtest_symbol_donchian(item, kind, cfg):
+    """اختراق قناة Donchian (نظام السلاحف/Turtle): دخول عند اختراق أعلى قمة
+    لـ don_entry شمعة سابقة + فلتر اتجاه (فوق متوسط 200)، خروج عند الإغلاق دون
+    أدنى قاع لـ don_exit شمعة، ووقف 2×ATR. تتبّع اتجاه كلاسيكي موثّق."""
+    sym = item["symbol"]
+    hold = cfg.get("bt_hold", 60)
+    bars = cfg.get("bt_bars", 365)
+    cost = cfg.get("cost", 0.0)
+    en = int(cfg.get("don_entry", 20))
+    ex = int(cfg.get("don_exit", 10))
+    df = _bt_fetch_df(sym, kind, cfg)
+    if df is None or len(df) < 220 + en:
+        return []
+    df = df.reset_index(drop=True)
+    n = len(df)
+    high = df["high"].values
+    low = df["low"].values
+    close = df["close"].values
+    a = atr(df, 14).values
+    sma200 = df["close"].rolling(200).mean().values
+    hh = pd.Series(high).rolling(en).max().shift(1).values     # أعلى قمة سابقة
+    ll = pd.Series(low).rolling(ex).min().shift(1).values      # أدنى قاع سابق
+    warmup = max(220, en + 5)
+    start = max(warmup, n - bars)
+    trades = []
+    i = start
+    while i < n - 1:
+        if (not np.isnan(hh[i]) and not np.isnan(sma200[i]) and not np.isnan(a[i])
+                and high[i] > hh[i] and close[i] > sma200[i]):
+            entry = float(close[i])
+            stop = float(entry - 2.0 * a[i])
+            r = _sim_long(df, i, entry, stop,
+                          lambda j: (not np.isnan(ll[j])) and close[j] < ll[j],
+                          hold, cost)
+            if r:
+                trades.append({
+                    "symbol": sym, "kind": kind, "side": "buy", "date": str(df["date"].iloc[i])[:10],
+                    "entry_ref": round(entry, 8), "stop": round(stop, 8),
+                    "R_plain": round(r[0], 3), "out_plain": r[1],
+                    "R_managed": round(r[0], 3), "out_managed": r[1],
+                })
+                i = r[2] + 1
+                continue
+        i += 1
+    return trades
+
+
+def backtest_symbol_ema_cross(item, kind, cfg):
+    """تقاطع المتوسطات المتحرّكة (Golden Cross): دخول عند تقاطع EMA(fast) فوق
+    EMA(slow)، خروج عند التقاطع العكسي، ووقف 2×ATR. تتبّع اتجاه بسيط وصلب."""
+    sym = item["symbol"]
+    hold = cfg.get("bt_hold", 120)
+    bars = cfg.get("bt_bars", 365)
+    cost = cfg.get("cost", 0.0)
+    fast = int(cfg.get("ema_fast", 50))
+    slow = int(cfg.get("ema_slow", 200))
+    df = _bt_fetch_df(sym, kind, cfg)
+    if df is None or len(df) < slow + 20:
+        return []
+    df = df.reset_index(drop=True)
+    n = len(df)
+    close = df["close"].values
+    a = atr(df, 14).values
+    ef = ema(df["close"], fast).values
+    es = ema(df["close"], slow).values
+    warmup = slow + 5
+    start = max(warmup, n - bars)
+    trades = []
+    i = start
+    while i < n - 1:
+        if (not np.isnan(ef[i - 1]) and not np.isnan(es[i - 1]) and not np.isnan(a[i])
+                and ef[i] > es[i] and ef[i - 1] <= es[i - 1]):     # تقاطع صعودي
+            entry = float(close[i])
+            stop = float(entry - 2.0 * a[i])
+            r = _sim_long(df, i, entry, stop, lambda j: ef[j] < es[j], hold, cost)
+            if r:
+                trades.append({
+                    "symbol": sym, "kind": kind, "side": "buy", "date": str(df["date"].iloc[i])[:10],
+                    "entry_ref": round(entry, 8), "stop": round(stop, 8),
+                    "R_plain": round(r[0], 3), "out_plain": r[1],
+                    "R_managed": round(r[0], 3), "out_managed": r[1],
+                })
+                i = r[2] + 1
+                continue
+        i += 1
+    return trades
+
+
+def backtest_symbol_rsi2(item, kind, cfg):
+    """ارتداد RSI(2) لـ Larry Connors: في اتجاه صاعد (فوق متوسط 200) ادخل عند
+    هبوط RSI(2) تحت العتبة (تشبّع بيعي قصير)، واخرج عند إغلاق فوق متوسط 5،
+    ووقف 2.5×ATR. ارتداد قصير المدى مشهور."""
+    sym = item["symbol"]
+    hold = cfg.get("bt_hold", 15)
+    bars = cfg.get("bt_bars", 365)
+    cost = cfg.get("cost", 0.0)
+    buy = float(cfg.get("rsi2_buy", 10.0))
+    df = _bt_fetch_df(sym, kind, cfg)
+    if df is None or len(df) < 220:
+        return []
+    df = df.reset_index(drop=True)
+    n = len(df)
+    close = df["close"].values
+    a = atr(df, 14).values
+    r2 = rsi(df["close"], 2).values
+    sma200 = df["close"].rolling(200).mean().values
+    sma5 = df["close"].rolling(5).mean().values
+    warmup = 205
+    start = max(warmup, n - bars)
+    trades = []
+    i = start
+    while i < n - 1:
+        if (not np.isnan(r2[i]) and not np.isnan(sma200[i]) and not np.isnan(a[i])
+                and close[i] > sma200[i] and r2[i] < buy):
+            entry = float(close[i])
+            stop = float(entry - 2.5 * a[i])
+            r = _sim_long(df, i, entry, stop,
+                          lambda j: (not np.isnan(sma5[j])) and close[j] > sma5[j],
+                          hold, cost)
+            if r:
+                trades.append({
+                    "symbol": sym, "kind": kind, "side": "buy", "date": str(df["date"].iloc[i])[:10],
+                    "entry_ref": round(entry, 8), "stop": round(stop, 8),
+                    "R_plain": round(r[0], 3), "out_plain": r[1],
+                    "R_managed": round(r[0], 3), "out_managed": r[1],
+                })
+                i = r[2] + 1
+                continue
+        i += 1
+    return trades
+
+
 def backtest_symbol(item, kind, cfg):
     """يفتح صفقات افتراضية على تاريخ رمز واحد ويرجع قائمة صفقات مغلقة."""
     sym = item["symbol"]
@@ -2309,6 +2465,18 @@ def run_backtest(cfg, watchlist_path, out_dir):
         print(f"🎯 الاستراتيجية: تكرار التشبّع البيعي بعد موجة شرائية مكتملة (os-multi)")
         print(f"   موجة RSI21>{cfg.get('rsi_ob',80.0):.0f} تكتمل → ثم {nt} نزولات تحت {cfg.get('rsi_os',20.0):.0f} → دخول مباشر")
         print(f"   🪜 الفيبو: أعمق قاع→أعلى قمة | DCA 0.382/0.5/0.618/0.786 | أهداف 1.272/1.618/2.0")
+    elif cfg.get("donchian"):
+        bt_fn = backtest_symbol_donchian
+        print(f"🐢 الاستراتيجية: اختراق قناة Donchian (Turtle) — اختراق {int(cfg.get('don_entry',20))} قمة + فلتر متوسط 200")
+        print(f"   خروج: إغلاق دون {int(cfg.get('don_exit',10))} قاع | وقف 2×ATR")
+    elif cfg.get("ema_cross"):
+        bt_fn = backtest_symbol_ema_cross
+        print(f"📈 الاستراتيجية: تقاطع المتوسطات EMA{int(cfg.get('ema_fast',50))}/{int(cfg.get('ema_slow',200))} (Golden Cross)")
+        print("   خروج: التقاطع العكسي | وقف 2×ATR")
+    elif cfg.get("rsi2"):
+        bt_fn = backtest_symbol_rsi2
+        print(f"🔄 الاستراتيجية: ارتداد RSI(2) Connors — فوق متوسط 200 + RSI2<{cfg.get('rsi2_buy',10.0):.0f}")
+        print("   خروج: إغلاق فوق متوسط 5 | وقف 2.5×ATR")
     elif cfg.get("rsi_cross"):
         bt_fn = backtest_symbol_rsi_cross
         print(f"🎯 الاستراتيجية: زخم RSI80 (تجاوز RSI21 عتبة {cfg.get('rsi_ob',80.0):.0f} صعوداً → دخول)")
@@ -2375,9 +2543,36 @@ def run_backtest(cfg, watchlist_path, out_dir):
 # ======================================================================
 #  7.5) تحقّق Walk-Forward (اختبار خارج العيّنة المتدرّج ضد الـoverfitting)
 # ======================================================================
-def _wf_param_grid():
-    """شبكة إعدادات الوقف المتحرك لاختيار الأفضل على IS في كل نافذة."""
-    return [(b, a) for b in (0.25, 0.5, 0.75) for a in (0.0, 1.0)]
+def _wf_lbl(key):
+    """تسمية مقروءة لمفتاح الإعداد (tuple أو نص)."""
+    if isinstance(key, tuple):
+        return "×".join(str(x) for x in key)
+    return str(key)
+
+
+def _wf_strategy_spec(cfg):
+    """يرجع (الاسم، دالة الباك-تست، شبكة الإعدادات). كل عنصر شبكة = (مفتاح, dict معاملات).
+    الإعداد الأول هو الافتراضي (للمقارنة in-sample والاحتياط)."""
+    if cfg.get("donchian"):
+        grid = [(("don", 20, 10), {"don_entry": 20, "don_exit": 10}),
+                (("don", 55, 20), {"don_entry": 55, "don_exit": 20}),
+                (("don", 20, 5),  {"don_entry": 20, "don_exit": 5})]
+        return "Donchian (Turtle)", backtest_symbol_donchian, grid
+    if cfg.get("ema_cross"):
+        grid = [(("ema", 50, 200), {"ema_fast": 50, "ema_slow": 200}),
+                (("ema", 20, 100), {"ema_fast": 20, "ema_slow": 100}),
+                (("ema", 20, 50),  {"ema_fast": 20, "ema_slow": 50})]
+        return "EMA Cross (Golden)", backtest_symbol_ema_cross, grid
+    if cfg.get("rsi2"):
+        grid = [(("rsi2", 10), {"rsi2_buy": 10.0}),
+                (("rsi2", 5),  {"rsi2_buy": 5.0}),
+                (("rsi2", 15), {"rsi2_buy": 15.0})]
+        return "RSI(2) Connors", backtest_symbol_rsi2, grid
+    # الافتراضي: trendwave/osob — شبكة الوقف المتحرك
+    grid = [((b, a), {"trail_buf": b, "trail_arm": a})
+            for b in (0.25, 0.5, 0.75) for a in (0.0, 1.0)]
+    fn = backtest_symbol_trendwave if cfg.get("trendwave") else backtest_symbol_osob
+    return ("trendwave" if cfg.get("trendwave") else "osob"), fn, grid
 
 
 def _wf_expectancy(trades):
@@ -2421,12 +2616,12 @@ def _walkforward_oos(trades_by_combo, folds, default_key, min_is=20):
         for t in oos:
             tt = dict(t)
             tt["wf_fold"] = fi
-            tt["wf_combo"] = f"{best_key[0]}x{best_key[1]}"
+            tt["wf_combo"] = _wf_lbl(best_key)
             oos_all.append(tt)
         st = _stats([t["R_managed"] for t in oos], [t["out_managed"] for t in oos])
         fold_rows.append({
             "fold": fi, "from": str(oos_start)[:10], "to": str(oos_end)[:10],
-            "combo": f"{best_key[0]}×{best_key[1]}",
+            "combo": _wf_lbl(best_key),
             "n": st["n"] if st else 0,
             "expectancy": st["expectancy"] if st else None,
             "pf": st["profit_factor"] if st else None,
@@ -2441,8 +2636,7 @@ def run_walkforward(cfg, watchlist_path, out_dir):
     print("=" * 64)
     print("  تحقّق Walk-Forward — اختبار خارج العيّنة المتدرّج")
     print("=" * 64)
-    if not cfg.get("trendwave"):
-        print("ℹ️ walk-forward مُهيّأ لاستراتيجية trendwave (فعّل --trendwave).")
+    name, bt_fn, grid = _wf_strategy_spec(cfg)
     parsed = parse_watchlist(watchlist_path)
     targets = []
     if cfg["assets"] in ("all", "stocks"):
@@ -2450,20 +2644,19 @@ def run_walkforward(cfg, watchlist_path, out_dir):
     if cfg["assets"] in ("all", "crypto"):
         targets += [(it, "crypto") for it in parsed["crypto"]]
     folds = int(cfg.get("wf_folds", 5))
-    grid = _wf_param_grid()
-    print(f"رموز: {len(targets)} | الإطار: {cfg['timeframe']} | شموع: {cfg.get('bt_bars')} | "
-          f"نوافذ OOS: {folds} | إعدادات الشبكة: {len(grid)}")
-    print("الشبكة (trail_buf×trail_arm): " + ", ".join(f"{b}×{a}" for b, a in grid))
+    default_key = grid[0][0]
+    print(f"الاستراتيجية: {name} | رموز: {len(targets)} | الإطار: {cfg['timeframe']} | "
+          f"شموع: {cfg.get('bt_bars')} | نوافذ OOS: {folds} | إعدادات الشبكة: {len(grid)}")
+    print("الشبكة: " + ", ".join(_wf_lbl(k) for k, _ in grid))
     print()
 
-    bt_fn = backtest_symbol_trendwave if cfg.get("trendwave") else backtest_symbol_osob
     # كاش مشترك: نجلب بيانات كل رمز مرة واحدة (الإعداد الأول) ونعيد استخدامها
     # في باقي الإعدادات — يلغي الجلب المكرّر ويتفادى خنق المصدر (rate-limit).
     cfg["_df_cache"] = {}
     trades_by_combo = {}
-    for gi, (b, a) in enumerate(grid, 1):
+    for gi, (key, params) in enumerate(grid, 1):
         c = dict(cfg)                     # يشارك نفس مرجع _df_cache
-        c["trail_buf"], c["trail_arm"] = b, a
+        c.update(params)
         comb = []
         with ThreadPoolExecutor(max_workers=cfg["workers"]) as ex:
             futs = [ex.submit(bt_fn, it, kind, c) for it, kind in targets]
@@ -2472,19 +2665,19 @@ def run_walkforward(cfg, watchlist_path, out_dir):
                     comb.extend(fut.result() or [])
                 except Exception:
                     pass
-        trades_by_combo[(b, a)] = comb
+        trades_by_combo[key] = comb
         cached = len(cfg["_df_cache"])
-        print(f"  [{gi}/{len(grid)}] إعداد {b}×{a}: {len(comb)} صفقة"
+        print(f"  [{gi}/{len(grid)}] إعداد {_wf_lbl(key)}: {len(comb)} صفقة"
               + (f"  (بيانات مُخزّنة لـ {cached} رمز)" if gi == 1 else ""))
 
     # تحذير: عدد صفقات ضئيل ⇒ البيانات لم تُجمَع (غالباً خنق المصدر) لا حكم على الاستراتيجية
-    total_def = len(trades_by_combo.get((0.5, 1.0), []))
+    total_def = len(trades_by_combo.get(default_key, []))
     if total_def < 30:
         print(f"\n⚠️ تحذير: إجمالي صفقات الإعداد الافتراضي = {total_def} فقط — قليل جداً!")
-        print("   هذا غالباً يعني أن البيانات لم تُجلَب (خنق المصدر/شبكة)، وليس حكماً على الاستراتيجية.")
-        print("   جرّب: شغّل باك-تست عادياً أولاً للتأكد أنه يعطي مئات الصفقات، ثم أعد walk-forward.")
+        print("   إمّا أن البيانات لم تُجلَب (خنق المصدر) أو أن الإشارة نادرة على هذا الإطار.")
+        print("   جرّب باك-تست عادياً أو إطاراً أصغر/إشارة أكثر تكراراً.")
 
-    oos_all, fold_rows = _walkforward_oos(trades_by_combo, folds, (0.5, 1.0))
+    oos_all, fold_rows = _walkforward_oos(trades_by_combo, folds, default_key)
     if not fold_rows:
         print("\n⚠️ لا صفقات كافية لبناء النوافذ.")
         return
@@ -2495,14 +2688,14 @@ def run_walkforward(cfg, watchlist_path, out_dir):
               f"{r['n']} صفقة، توقّع {r['expectancy']}، PF {r['pf']}")
 
     st_oos = _stats([t["R_managed"] for t in oos_all], [t["out_managed"] for t in oos_all])
-    _print_stats("الإجمالي خارج العيّنة (Walk-Forward — الحكم الصادق)", st_oos)
+    _print_stats(f"الإجمالي خارج العيّنة — {name} (الحكم الصادق)", st_oos)
 
-    full_def = trades_by_combo.get((0.5, 1.0), [])
+    full_def = trades_by_combo.get(default_key, [])
     st_is = _stats([t["R_managed"] for t in full_def], [t["out_managed"] for t in full_def])
     if st_is and st_oos:
         n_pos = sum(1 for r in fold_rows if (r["expectancy"] or 0) > 0)
         print(f"\n{SEP}\n  فجوة الباك-تست مقابل خارج العيّنة\n{SEP}")
-        print(f"  in-sample (كامل، 0.5×1.0): توقّع {st_is['expectancy']:+}، PF {st_is['profit_factor']}")
+        print(f"  in-sample (كامل، {_wf_lbl(default_key)}): توقّع {st_is['expectancy']:+}، PF {st_is['profit_factor']}")
         print(f"  out-of-sample (walk-forward): توقّع {st_oos['expectancy']:+}، PF {st_oos['profit_factor']}")
         print(f"  نوافذ موجبة: {n_pos}/{len(fold_rows)}")
         ok = st_oos["expectancy"] > 0 and n_pos >= max(1, (len(fold_rows) + 1) // 2)
@@ -3138,6 +3331,17 @@ def build_argparser():
     p.add_argument("--trendwave", action="store_true",
                    help="استراتيجية مستقلة (الإعداد الرابح): دخول مباشر + DCA فيبو + فلتر "
                         "اتجاه من فريم أعلى + وقف متحرك 0.5×ATR مؤجّل 1R، بلا دايفرجنس. كل الفريمات")
+    p.add_argument("--donchian", action="store_true",
+                   help="(backtest) استراتيجية كلاسيكية: اختراق قناة Donchian (Turtle)")
+    p.add_argument("--don-entry", type=int, default=20, help="(donchian) قمة الاختراق")
+    p.add_argument("--don-exit", type=int, default=10, help="(donchian) قاع الخروج")
+    p.add_argument("--ema-cross", action="store_true",
+                   help="(backtest) استراتيجية كلاسيكية: تقاطع EMA (Golden Cross)")
+    p.add_argument("--ema-fast", type=int, default=50, help="(ema-cross) المتوسط السريع")
+    p.add_argument("--ema-slow", type=int, default=200, help="(ema-cross) المتوسط البطيء")
+    p.add_argument("--rsi2", action="store_true",
+                   help="(backtest) استراتيجية كلاسيكية: ارتداد RSI(2) لـ Connors")
+    p.add_argument("--rsi2-buy", type=float, default=10.0, help="(rsi2) عتبة الدخول")
     p.add_argument("--osob", action="store_true",
                    help="(backtest) استراتيجية: تشبّع بيعي→شرائي ثم سلّم دخول عند ارتدادات "
                         "فيبو (DCA)، وقف متحرك تحت كل تصحيح، خروج عند دايفرجنس سلبي")
@@ -3216,6 +3420,9 @@ if __name__ == "__main__":
         "force_direct": args.force_direct, "no_div": args.no_divergence,
         "htf_trend": args.htf_trend, "trendwave": args.trendwave,
         "walk_forward": args.walk_forward, "wf_folds": args.wf_folds,
+        "donchian": args.donchian, "don_entry": args.don_entry, "don_exit": args.don_exit,
+        "ema_cross": args.ema_cross, "ema_fast": args.ema_fast, "ema_slow": args.ema_slow,
+        "rsi2": args.rsi2, "rsi2_buy": args.rsi2_buy,
     }
     if args.trendwave:        # الإعداد الرابح المثبّت
         if args.trail_buf == 0.25:
