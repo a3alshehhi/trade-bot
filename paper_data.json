@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-23T00:03:55",
+  "updated_at": "2026-06-23T00:18:38",
   "stats": {
-    "open": 7,
+    "open": 8,
     "closed": 50,
     "win_rate": 8.0,
     "profit_factor": 0.08,
@@ -2481,6 +2481,34 @@
       "exit_price": null,
       "events": [],
       "last_ts": "2026-06-22 23:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782173753396",
+      "symbol": "DEXEUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 22.376,
+      "stop": 19.71291387,
+      "stop_orig": 19.71291387,
+      "targets": [
+        23.67072,
+        25.31768,
+        30.07768
+      ],
+      "risk": 2.66308613,
+      "opened_at": "2026-06-23T00:18:32",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-23 00:14:59.999000",
       "closed_at": null
     }
   ]
