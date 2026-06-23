@@ -1413,5 +1413,53 @@
     "dca": null,
     "bar_ts": "2026-06-23 17:29:59.999000",
     "created": "2026-06-23T17:31:18"
+  },
+  "1782237673451": {
+    "symbol": "EDUUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "strategy": "classic",
+    "entry": 0.0305,
+    "stop": 0.02908249,
+    "targets": [
+      0.03118,
+      0.032045,
+      0.034545
+    ],
+    "dca": null,
+    "bar_ts": "2026-06-23 17:59:59.999000",
+    "created": "2026-06-23T18:01:13"
+  },
+  "1782237674861": {
+    "symbol": "SYNUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "strategy": "classic",
+    "entry": 0.3253,
+    "stop": 0.28031103,
+    "targets": [
+      0.345972,
+      0.372268,
+      0.448268
+    ],
+    "dca": null,
+    "bar_ts": "2026-06-23 17:59:59.999000",
+    "created": "2026-06-23T18:01:14"
+  },
+  "1782237694682": {
+    "symbol": "HEIUSDT",
+    "label": "RSI70 · 1h",
+    "timeframe": "1h",
+    "strategy": "classic",
+    "entry": 0.1124,
+    "stop": 0.09433464,
+    "targets": [
+      0.1209136,
+      0.1317434,
+      0.1630434
+    ],
+    "dca": null,
+    "bar_ts": "2026-06-23 17:59:59.999000",
+    "created": "2026-06-23T18:01:34"
   }
 }
