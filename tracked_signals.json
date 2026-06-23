@@ -1326,7 +1326,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-06-23 05:14:59.999000"
+    "last_bar": "2026-06-23 05:29:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -1412,8 +1412,8 @@
     "entry": 0.03159,
     "stop": 0.03053217,
     "init_stop": 0.03053217,
-    "cur_stop": 0.03053217,
-    "last_alert_stop": 0.03053217,
+    "cur_stop": 0.03159,
+    "last_alert_stop": 0.03159,
     "armed": false,
     "targets": [
       0.03210408,
@@ -1426,12 +1426,14 @@
       25
     ],
     "is_trendwave": false,
-    "breakeven_done": false,
+    "breakeven_done": true,
     "bar_ts": "2026-06-23 04:29:59.999000",
-    "last_bar": "2026-06-23 05:14:59.999000",
-    "hits": [],
+    "last_bar": "2026-06-23 05:29:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.03206,
+    "hi_seen": 0.03216,
     "lo_seen": 0.03132,
     "created": "2026-06-23T04:31:03"
   },
