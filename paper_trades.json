@@ -3060,7 +3060,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-23 17:14:59.999000",
+    "last_ts": "2026-06-23 17:29:59.999000",
     "closed_at": null
   },
   {
@@ -3205,7 +3205,7 @@
     "timeframe": "15m",
     "side": "buy",
     "entry": 0.04636,
-    "stop": 0.04509401,
+    "stop": 0.04636,
     "stop_orig": 0.04509401,
     "targets": [
       0.04696656,
@@ -3215,6 +3215,43 @@
     "risk": 0.0012659900000000016,
     "opened_at": "2026-06-23T16:49:57",
     "status": "open",
+    "hits": [
+      1
+    ],
+    "breakeven": true,
+    "remaining": 1.0,
+    "realized_pct": 0.0,
+    "result_pct": null,
+    "exit_price": null,
+    "events": [
+      {
+        "ts": "2026-06-23 17:29:59.999000",
+        "type": "tp1_be",
+        "price": 0.04696656,
+        "pct": 1.308
+      }
+    ],
+    "last_ts": "2026-06-23 17:29:59.999000",
+    "closed_at": null
+  },
+  {
+    "id": "1782235878979",
+    "symbol": "HEIUSDT",
+    "label": "RSI70 · 15m",
+    "strategy": "classic",
+    "timeframe": "15m",
+    "side": "buy",
+    "entry": 0.1122,
+    "stop": 0.09834306,
+    "stop_orig": 0.09834306,
+    "targets": [
+      0.118864,
+      0.127341,
+      0.151841
+    ],
+    "risk": 0.013856939999999998,
+    "opened_at": "2026-06-23T17:34:18",
+    "status": "open",
     "hits": [],
     "breakeven": false,
     "remaining": 1.0,
@@ -3222,7 +3259,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-23 17:14:59.999000",
+    "last_ts": "2026-06-23 17:29:59.999000",
     "closed_at": null
   }
 ]

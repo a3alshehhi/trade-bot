@@ -1330,7 +1330,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-06-23 16:59:59.999000"
+    "last_bar": "2026-06-23 17:29:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -1788,7 +1788,7 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-23 12:29:59.999000",
-    "last_bar": "2026-06-23 16:59:59.999000",
+    "last_bar": "2026-06-23 17:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0966,
@@ -1926,8 +1926,8 @@
     "entry": 0.04636,
     "stop": 0.04509401,
     "init_stop": 0.04509401,
-    "cur_stop": 0.04509401,
-    "last_alert_stop": 0.04509401,
+    "cur_stop": 0.04636,
+    "last_alert_stop": 0.04636,
     "armed": false,
     "targets": [
       0.04696656,
@@ -1940,13 +1940,46 @@
       25
     ],
     "is_trendwave": false,
-    "breakeven_done": false,
+    "breakeven_done": true,
     "bar_ts": "2026-06-23 16:44:59.999000",
-    "last_bar": "2026-06-23 16:59:59.999000",
-    "hits": [],
+    "last_bar": "2026-06-23 17:29:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.04682,
+    "hi_seen": 0.04704,
     "lo_seen": 0.04617,
     "created": "2026-06-23T16:46:09"
+  },
+  "RSI70 · 15m|HEIUSDT|2026-06-23 17:29:59.999000": {
+    "symbol": "HEIUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1189,
+    "entry": 0.1122,
+    "stop": 0.09834306,
+    "init_stop": 0.09834306,
+    "cur_stop": 0.09834306,
+    "last_alert_stop": 0.09834306,
+    "armed": false,
+    "targets": [
+      0.118864,
+      0.127341,
+      0.151841
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-23 17:29:59.999000",
+    "last_bar": "2026-06-23 17:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1122,
+    "lo_seen": 0.1122,
+    "created": "2026-06-23T17:31:18"
   }
 }
