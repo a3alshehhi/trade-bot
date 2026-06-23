@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-23T19:50:14",
+  "updated_at": "2026-06-23T20:04:10",
   "stats": {
-    "open": 13,
+    "open": 14,
     "closed": 78,
     "win_rate": 11.5,
     "profit_factor": 0.21,
@@ -64,7 +64,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 15:59:59.999000",
+      "last_ts": "2026-06-23 19:59:59.999000",
       "closed_at": null
     },
     {
@@ -2496,7 +2496,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 15:59:59.999000",
+      "last_ts": "2026-06-23 19:59:59.999000",
       "closed_at": null
     },
     {
@@ -2653,7 +2653,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 15:59:59.999000",
+      "last_ts": "2026-06-23 19:59:59.999000",
       "closed_at": null
     },
     {
@@ -3044,7 +3044,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 18:59:59.999000",
+      "last_ts": "2026-06-23 19:59:59.999000",
       "closed_at": null
     },
     {
@@ -3072,7 +3072,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 15:59:59.999000",
+      "last_ts": "2026-06-23 19:59:59.999000",
       "closed_at": null
     },
     {
@@ -3100,7 +3100,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 19:44:59.999000",
+      "last_ts": "2026-06-23 19:59:59.999000",
       "closed_at": null
     },
     {
@@ -3206,7 +3206,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 18:59:59.999000",
+      "last_ts": "2026-06-23 19:59:59.999000",
       "closed_at": null
     },
     {
@@ -3234,7 +3234,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 15:59:59.999000",
+      "last_ts": "2026-06-23 19:59:59.999000",
       "closed_at": null
     },
     {
@@ -3271,7 +3271,7 @@
           "pct": 1.308
         }
       ],
-      "last_ts": "2026-06-23 19:44:59.999000",
+      "last_ts": "2026-06-23 19:59:59.999000",
       "closed_at": null
     },
     {
@@ -3308,7 +3308,7 @@
           "pct": 5.939
         }
       ],
-      "last_ts": "2026-06-23 19:44:59.999000",
+      "last_ts": "2026-06-23 19:59:59.999000",
       "closed_at": null
     },
     {
@@ -3345,7 +3345,7 @@
           "pct": 2.23
         }
       ],
-      "last_ts": "2026-06-23 19:44:59.999000",
+      "last_ts": "2026-06-23 19:59:59.999000",
       "closed_at": null
     },
     {
@@ -3373,7 +3373,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 19:44:59.999000",
+      "last_ts": "2026-06-23 19:59:59.999000",
       "closed_at": null
     },
     {
@@ -3410,7 +3410,35 @@
           "pct": 7.574
         }
       ],
-      "last_ts": "2026-06-23 18:59:59.999000",
+      "last_ts": "2026-06-23 19:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782244915211",
+      "symbol": "SYNUSDT",
+      "label": "RSI70 · 4h",
+      "strategy": "classic",
+      "timeframe": "4h",
+      "side": "buy",
+      "entry": 0.306,
+      "stop": 0.19678723,
+      "stop_orig": 0.19678723,
+      "targets": [
+        0.3544704,
+        0.4161276,
+        0.5943276
+      ],
+      "risk": 0.10921276999999999,
+      "opened_at": "2026-06-23T20:04:01",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-23 19:59:59.999000",
       "closed_at": null
     }
   ]

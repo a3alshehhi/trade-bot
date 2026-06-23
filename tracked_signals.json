@@ -2083,5 +2083,36 @@
     "hi_seen": 0.1297,
     "lo_seen": 0.1108,
     "created": "2026-06-23T18:01:35"
+  },
+  "RSI70 · 4h|SYNUSDT|2026-06-23 19:59:59.999000": {
+    "symbol": "SYNUSDT",
+    "label": "RSI70 · 4h",
+    "timeframe": "4h",
+    "message_id": 1213,
+    "entry": 0.306,
+    "stop": 0.19678723,
+    "init_stop": 0.19678723,
+    "cur_stop": 0.19678723,
+    "last_alert_stop": 0.19678723,
+    "armed": false,
+    "targets": [
+      0.3544704,
+      0.4161276,
+      0.5943276
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-23 19:59:59.999000",
+    "last_bar": "2026-06-23 19:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.306,
+    "lo_seen": 0.306,
+    "created": "2026-06-23T20:01:55"
   }
 }
