@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-23T16:35:06",
+  "updated_at": "2026-06-23T16:50:06",
   "stats": {
-    "open": 8,
+    "open": 9,
     "closed": 78,
     "win_rate": 11.5,
     "profit_factor": 0.21,
@@ -3100,7 +3100,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 16:29:59.999000",
+      "last_ts": "2026-06-23 16:44:59.999000",
       "closed_at": null
     },
     {
@@ -3235,6 +3235,34 @@
       "exit_price": null,
       "events": [],
       "last_ts": "2026-06-23 15:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782233168032",
+      "symbol": "WCTUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.04636,
+      "stop": 0.04509401,
+      "stop_orig": 0.04509401,
+      "targets": [
+        0.04696656,
+        0.04773814,
+        0.04996814
+      ],
+      "risk": 0.0012659900000000016,
+      "opened_at": "2026-06-23T16:49:57",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-23 16:44:59.999000",
       "closed_at": null
     }
   ]

@@ -1916,5 +1916,36 @@
     "hi_seen": 0.00302,
     "lo_seen": 0.00302,
     "created": "2026-06-23T16:02:14"
+  },
+  "RSI70 · 15m|WCTUSDT|2026-06-23 16:44:59.999000": {
+    "symbol": "WCTUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1185,
+    "entry": 0.04636,
+    "stop": 0.04509401,
+    "init_stop": 0.04509401,
+    "cur_stop": 0.04509401,
+    "last_alert_stop": 0.04509401,
+    "armed": false,
+    "targets": [
+      0.04696656,
+      0.04773814,
+      0.04996814
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-23 16:44:59.999000",
+    "last_bar": "2026-06-23 16:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.04636,
+    "lo_seen": 0.04636,
+    "created": "2026-06-23T16:46:09"
   }
 }
