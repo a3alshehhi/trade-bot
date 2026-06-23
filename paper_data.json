@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-06-23T01:18:37",
+  "updated_at": "2026-06-23T01:34:58",
   "stats": {
-    "open": 8,
-    "closed": 52,
-    "win_rate": 7.7,
+    "open": 7,
+    "closed": 53,
+    "win_rate": 7.5,
     "profit_factor": 0.08,
     "total_pct": -55.56,
-    "avg_pct": -1.52,
+    "avg_pct": -1.49,
     "max_drawdown_pct": -55.56
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-23",
-        "trades": 4,
-        "win_rate": 25.0,
+        "trades": 5,
+        "win_rate": 20.0,
         "return_pct": -8.43,
         "week": "2026-W26",
         "month": "2026-06"
@@ -31,8 +31,8 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 52,
-        "win_rate": 7.7,
+        "trades": 53,
+        "win_rate": 7.5,
         "return_pct": -55.56,
         "month": "2026-06"
       }
@@ -40,8 +40,8 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 52,
-        "win_rate": 7.7,
+        "trades": 53,
+        "win_rate": 7.5,
         "return_pct": -55.56
       }
     ]
@@ -2515,7 +2515,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 01:14:59.999000",
+      "last_ts": "2026-06-23 01:29:59.999000",
       "closed_at": null
     },
     {
@@ -2578,25 +2578,31 @@
       ],
       "risk": 0.0024397100000000116,
       "opened_at": "2026-06-23T01:04:57",
-      "status": "open",
+      "status": "closed",
       "hits": [
         1
       ],
       "breakeven": true,
-      "remaining": 1.0,
+      "remaining": 0.0,
       "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
+      "result_pct": 0.0,
+      "exit_price": 0.0787,
       "events": [
         {
           "ts": "2026-06-23 01:14:59.999000",
           "type": "tp1_be",
           "price": 0.0798968,
           "pct": 1.521
+        },
+        {
+          "ts": "2026-06-23 01:29:59.999000",
+          "type": "be_sl",
+          "price": 0.0787,
+          "pct": 0.0
         }
       ],
-      "last_ts": "2026-06-23 01:14:59.999000",
-      "closed_at": null
+      "last_ts": "2026-06-23 01:29:59.999000",
+      "closed_at": "2026-06-23T01:34:58"
     }
   ]
 }
