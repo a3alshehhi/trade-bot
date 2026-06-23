@@ -974,9 +974,12 @@
     "bar_ts": "2026-06-22 15:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.05961,
+    "hi_seen": 0.05983,
     "lo_seen": 0.05814,
-    "created": "2026-06-22T16:01:38"
+    "created": "2026-06-22T16:01:38",
+    "cur_stop": 0.05693525,
+    "armed": false,
+    "last_bar": "2026-06-23 01:59:59.999000"
   },
   "RSI70 · 1h|BREVUSDT|2026-06-22 15:59:59.999000": {
     "symbol": "BREVUSDT",
@@ -997,8 +1000,11 @@
     ],
     "stopped": false,
     "hi_seen": 0.0958,
-    "lo_seen": 0.0842,
-    "created": "2026-06-22T16:01:40"
+    "lo_seen": 0.0834,
+    "created": "2026-06-22T16:01:40",
+    "cur_stop": 0.08231356,
+    "armed": true,
+    "last_bar": "2026-06-23 01:59:59.999000"
   },
   "RSI70 · 15m|BREVUSDT|2026-06-22 16:14:59.999000": {
     "symbol": "BREVUSDT",
@@ -1078,7 +1084,10 @@
     "stopped": false,
     "hi_seen": 0.3342,
     "lo_seen": 0.3318,
-    "created": "2026-06-22T17:01:38"
+    "created": "2026-06-22T17:01:38",
+    "cur_stop": 0.32968647,
+    "armed": false,
+    "last_bar": "2026-06-23 01:59:59.999000"
   },
   "RSI70 · 15m|FIDAUSDT|2026-06-22 17:29:59.999000": {
     "symbol": "FIDAUSDT",
@@ -1141,7 +1150,10 @@
     "stopped": false,
     "hi_seen": 0.026,
     "lo_seen": 0.02321,
-    "created": "2026-06-22T18:01:42"
+    "created": "2026-06-22T18:01:42",
+    "cur_stop": 0.02268619,
+    "armed": false,
+    "last_bar": "2026-06-23 01:59:59.999000"
   },
   "RSI70 · 15m|FIDAUSDT|2026-06-22 18:29:59.999000": {
     "symbol": "FIDAUSDT",
@@ -1160,10 +1172,12 @@
       1,
       2
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.026,
     "lo_seen": 0.0236,
-    "created": "2026-06-22T18:31:04"
+    "created": "2026-06-22T18:31:04",
+    "cur_stop": 0.023790623984050796,
+    "last_bar": "2026-06-22 23:59:59.999000"
   },
   "RSI70 · 15m|ENSOUSDT|2026-06-22 19:14:59.999000": {
     "symbol": "ENSOUSDT",
@@ -1241,7 +1255,10 @@
     "stopped": false,
     "hi_seen": 0.3166,
     "lo_seen": 0.2515,
-    "created": "2026-06-22T20:01:39"
+    "created": "2026-06-22T20:01:39",
+    "cur_stop": 0.17895078,
+    "armed": false,
+    "last_bar": "2026-06-22 23:59:59.999000"
   },
   "RSI70 · 1h|TRXUSDT|2026-06-22 20:59:59.999000": {
     "symbol": "TRXUSDT",
@@ -1260,7 +1277,10 @@
     "stopped": false,
     "hi_seen": 0.3342,
     "lo_seen": 0.3332,
-    "created": "2026-06-22T21:01:29"
+    "created": "2026-06-22T21:01:29",
+    "cur_stop": 0.33008577,
+    "armed": false,
+    "last_bar": "2026-06-23 01:59:59.999000"
   },
   "RSI70 · 4h|TRXUSDT|2026-06-22 23:59:59.999000": {
     "symbol": "TRXUSDT",
@@ -1298,7 +1318,10 @@
     "stopped": false,
     "hi_seen": 22.988,
     "lo_seen": 20.663,
-    "created": "2026-06-23T00:15:54"
+    "created": "2026-06-23T00:15:54",
+    "cur_stop": 19.71291387,
+    "armed": false,
+    "last_bar": "2026-06-23 02:44:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -1339,7 +1362,10 @@
     ],
     "stopped": false,
     "hi_seen": 0.08,
-    "lo_seen": 0.0782,
-    "created": "2026-06-23T01:01:09"
+    "lo_seen": 0.0776,
+    "created": "2026-06-23T01:01:09",
+    "cur_stop": 0.07626029,
+    "armed": false,
+    "last_bar": "2026-06-23 02:44:59.999000"
   }
 }
