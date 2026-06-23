@@ -980,9 +980,10 @@
     "hi_seen": 0.0635,
     "lo_seen": 0.0576,
     "created": "2026-06-22T16:01:38",
-    "cur_stop": 0.05693525,
+    "cur_stop": 0.05987242844590666,
     "armed": true,
-    "last_bar": "2026-06-23 14:59:59.999000"
+    "last_bar": "2026-06-23 16:59:59.999000",
+    "last_alert_stop": 0.05987242844590666
   },
   "RSI70 · 1h|BREVUSDT|2026-06-22 15:59:59.999000": {
     "symbol": "BREVUSDT",
@@ -1261,7 +1262,7 @@
     "created": "2026-06-22T20:01:39",
     "cur_stop": 0.17895078,
     "armed": false,
-    "last_bar": "2026-06-23 11:59:59.999000"
+    "last_bar": "2026-06-23 15:59:59.999000"
   },
   "RSI70 · 1h|TRXUSDT|2026-06-22 20:59:59.999000": {
     "symbol": "TRXUSDT",
@@ -1305,7 +1306,7 @@
     "created": "2026-06-23T00:01:41",
     "cur_stop": 0.32588643,
     "armed": false,
-    "last_bar": "2026-06-23 11:59:59.999000"
+    "last_bar": "2026-06-23 15:59:59.999000"
   },
   "RSI70 · 15m|DEXEUSDT|2026-06-23 00:14:59.999000": {
     "symbol": "DEXEUSDT",
@@ -1329,7 +1330,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-06-23 14:59:59.999000"
+    "last_bar": "2026-06-23 16:59:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -1400,7 +1401,7 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-23 03:59:59.999000",
-    "last_bar": "2026-06-23 11:59:59.999000",
+    "last_bar": "2026-06-23 15:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 24.7,
@@ -1725,7 +1726,7 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-23 11:59:59.999000",
-    "last_bar": "2026-06-23 14:59:59.999000",
+    "last_bar": "2026-06-23 16:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 24.126,
@@ -1756,11 +1757,11 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-23 11:59:59.999000",
-    "last_bar": "2026-06-23 11:59:59.999000",
+    "last_bar": "2026-06-23 15:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.06256,
-    "lo_seen": 0.06256,
+    "hi_seen": 0.0635,
+    "lo_seen": 0.06056,
     "created": "2026-06-23T12:01:50"
   },
   "RSI70 · 15m|ALGOUSDT|2026-06-23 12:29:59.999000": {
@@ -1787,11 +1788,11 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-23 12:29:59.999000",
-    "last_bar": "2026-06-23 14:59:59.999000",
+    "last_bar": "2026-06-23 16:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0966,
-    "lo_seen": 0.0936,
+    "lo_seen": 0.0918,
     "created": "2026-06-23T12:31:14"
   },
   "RSI70 · 15m|GUSDT|2026-06-23 12:29:59.999000": {
@@ -1879,11 +1880,11 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-23 13:59:59.999000",
-    "last_bar": "2026-06-23 14:59:59.999000",
+    "last_bar": "2026-06-23 16:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00309,
-    "lo_seen": 0.00285,
+    "lo_seen": 0.00278,
     "created": "2026-06-23T14:04:14"
   },
   "RSI70 · 4h|GUSDT|2026-06-23 15:59:59.999000": {
@@ -1941,11 +1942,11 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-23 16:44:59.999000",
-    "last_bar": "2026-06-23 16:44:59.999000",
+    "last_bar": "2026-06-23 16:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.04636,
-    "lo_seen": 0.04636,
+    "hi_seen": 0.04682,
+    "lo_seen": 0.04617,
     "created": "2026-06-23T16:46:09"
   }
 }
