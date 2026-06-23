@@ -52,6 +52,13 @@
   .b-loss{background:#da363322;color:var(--red)}
   .b-even{background:#d2992222;color:var(--amber)}
   .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .pager{display:flex;justify-content:center;align-items:center;gap:10px;
+    margin-top:12px;flex-wrap:wrap}
+  .pager button{background:var(--bg);color:var(--text);border:1px solid var(--line);
+    border-radius:8px;padding:7px 14px;font-size:13px;cursor:pointer}
+  .pager button:hover:not(:disabled){border-color:var(--blue)}
+  .pager button:disabled{opacity:.4;cursor:default}
+  .pager .pinfo{color:var(--muted);font-size:12px}
   .empty{color:var(--muted);text-align:center;padding:26px;font-size:13px}
   .chartbox{position:relative;height:260px}
   .foot{color:var(--muted);font-size:11px;text-align:center;margin-top:8px;
@@ -129,6 +136,7 @@
 <div class="panel">
   <h2>📜 سجل صفقات تيليجرام</h2>
   <div class="scroll"><table id="logTbl"></table></div>
+  <div id="logPager" class="pager"></div>
 </div>
 
 <div class="foot">
@@ -360,25 +368,47 @@ async function loadServer(){
         <td class="${cls(t.realized_pct)}">${fmtPct(t.realized_pct||0)}</td></tr>`).join('');
   } else ot.innerHTML='<tr><td class="empty">لا صفقات مفتوحة من تيليجرام</td></tr>';
 
-  const lg=document.getElementById('logTbl');
-  const all=[...trades].sort((a,b)=> String(b.opened_at).localeCompare(String(a.opened_at)));
-  if(all.length){
-    lg.innerHTML='<tr><th>العملة</th><th>الاستراتيجية</th><th>الحالة</th>'+
-      '<th>الدخول</th><th>فُتحت</th><th>أُغلقت</th><th>النتيجة</th></tr>'+
-      all.map(t=>{
-        let badge, res;
-        if(t.status==='open'){ badge='<span class="badge b-open">مفتوحة</span>'; res='—'; }
-        else{ const r=t.result_pct||0;
-          const c=r>1e-6?'b-win':(r<-1e-6?'b-loss':'b-even');
-          const lbl=r>1e-6?'ربح':(r<-1e-6?'خسارة':'تعادل');
-          badge=`<span class="badge ${c}">${lbl}</span>`; res=`<span class="${cls(r)}">${fmtPct(r)}</span>`; }
-        return `<tr><td class="sym">${t.symbol}</td>
-          <td><span class="tag">${strat(t)}</span></td><td>${badge}</td>
-          <td>${price(t.entry)}</td><td>${dt(t.opened_at)}</td>
-          <td>${dt(t.closed_at)}</td><td>${res}</td></tr>`;
-      }).join('');
-  } else lg.innerHTML='<tr><td class="empty">لا توجد صفقات من تيليجرام بعد</td></tr>';
+  logRows=[...trades].sort((a,b)=> String(b.opened_at).localeCompare(String(a.opened_at)));
+  logPage=0;
+  renderLogPage();
 }
+
+/* ───────── سجل الصفقات بصفحات (٥٠ لكل صفحة) ───────── */
+let logRows=[], logPage=0;
+const LOG_PER=50;
+function renderLogPage(){
+  const lg=document.getElementById('logTbl');
+  const pager=document.getElementById('logPager');
+  if(!logRows.length){
+    lg.innerHTML='<tr><td class="empty">لا توجد صفقات من تيليجرام بعد</td></tr>';
+    pager.innerHTML=''; return;
+  }
+  const pages=Math.ceil(logRows.length/LOG_PER);
+  if(logPage>pages-1) logPage=pages-1;
+  if(logPage<0) logPage=0;
+  const slice=logRows.slice(logPage*LOG_PER, logPage*LOG_PER+LOG_PER);
+  lg.innerHTML='<tr><th>العملة</th><th>الاستراتيجية</th><th>الحالة</th>'+
+    '<th>الدخول</th><th>فُتحت</th><th>أُغلقت</th><th>النتيجة</th></tr>'+
+    slice.map(t=>{
+      let badge, res;
+      if(t.status==='open'){ badge='<span class="badge b-open">مفتوحة</span>'; res='—'; }
+      else{ const r=t.result_pct||0;
+        const c=r>1e-6?'b-win':(r<-1e-6?'b-loss':'b-even');
+        const lbl=r>1e-6?'ربح':(r<-1e-6?'خسارة':'تعادل');
+        badge=`<span class="badge ${c}">${lbl}</span>`; res=`<span class="${cls(r)}">${fmtPct(r)}</span>`; }
+      return `<tr><td class="sym">${t.symbol}</td>
+        <td><span class="tag">${strat(t)}</span></td><td>${badge}</td>
+        <td>${price(t.entry)}</td><td>${dt(t.opened_at)}</td>
+        <td>${dt(t.closed_at)}</td><td>${res}</td></tr>`;
+    }).join('');
+  const from=logPage*LOG_PER+1, to=Math.min((logPage+1)*LOG_PER, logRows.length);
+  pager.innerHTML =
+    `<button onclick="logGo(${logPage-1})" ${logPage<=0?'disabled':''}>‹ السابق</button>`+
+    `<span class="pinfo">${from}–${to} من ${logRows.length} · صفحة ${logPage+1}/${pages}</span>`+
+    `<button onclick="logGo(${logPage+1})" ${logPage>=pages-1?'disabled':''}>التالي ›</button>`;
+}
+function logGo(p){ logPage=p; renderLogPage();
+  document.getElementById('logTbl').scrollIntoView({behavior:'smooth',block:'nearest'}); }
 
 function drawEquity(pts){
   const ctx=document.getElementById('equity');
