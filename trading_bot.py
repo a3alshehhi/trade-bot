@@ -717,11 +717,11 @@ def format_update_card(tr, event, price):
     """بطاقة تحديث: تحقق هدف / ضرب وقف."""
     is_buy = tr["side"] == "buy"
     entry  = tr["entry"]
-    pnl    = (price - entry) / entry * 100 * (1 if is_buy else -1)
-    head   = {"tp1": "🎯 تحقق الهدف الأول ✅",
-              "tp2": "🎯 تحقق الهدف الثاني ✅✅",
-              "tp3": "🏆 تحقق الهدف الثالث ✅✅✅",
-              "sl":  "🛑 ضرب وقف الخسارة"}.get(event, f"🎯 {event}")
+    pnl    = (price - entry) / entry * 100 * (1 if is_buy else -1) if entry else 0.0
+    head   = {"tp1": "✅ تم جني الربح — الهدف الأول 💰",
+              "tp2": "✅ تم جني الربح — الهدف الثاني 💰",
+              "tp3": "✅ تم جني الربح — الهدف الثالث 💰",
+              "sl":  "🛑 ضرب وقف الخسارة"}.get(event, f"✅ {event}")
 
     lines = [SEP, head, SEP, "",
              f"💰 العملة:      {tr['symbol']}",
@@ -730,19 +730,6 @@ def format_update_card(tr, event, price):
              f"📥 سعر الدخول:   {_fmt_price(entry)}",
              f"💵 السعر الحالي:  {_fmt_price(price)}",
              f"{'📉 الخسارة' if event == 'sl' else '📈 نسبة الربح'}:  {pnl:+.2f}%"]
-
-    if event != "sl":
-        try:
-            n = int(event[2:])          # "tp1"→1, "tp2"→2, "tp3"→3 ...
-            targets = tr.get("targets", [])
-            if n < len(targets):
-                next_tp  = targets[n]
-                next_pnl = (next_tp - entry) / entry * 100 * (1 if is_buy else -1)
-                lines.append(f"➡️ الهدف التالي:  {_fmt_price(next_tp)}  (+{next_pnl:.2f}%)")
-            else:
-                lines.append("✅ اكتملت جميع الأهداف — تهانينا! 🎉")
-        except (ValueError, IndexError):
-            pass
 
     lines += [SEP, "",
               f"⏰ {datetime.now().strftime('%H:%M:%S')}",
@@ -770,7 +757,7 @@ def monitor(cfg, state_path):
             continue
         is_buy = tr["side"] == "buy"
 
-        # تحقق الأهداف بالترتيب
+        # تحقق الأهداف — يُغلق فور أول هدف يتحقق
         for i, tp in enumerate(tr["targets"]):
             key = f"tp{i+1}"
             if key in tr["hit"]:
@@ -778,14 +765,14 @@ def monitor(cfg, state_path):
             reached = price >= tp if is_buy else price <= tp
             if reached:
                 tr["hit"].append(key)
+                tr["status"]    = "closed_tp"
+                tr["closed_at"] = datetime.now().isoformat(timespec="seconds")
                 changed = True
-                print(f"  {tr['symbol']}: {key} تحقق عند {price}")
+                print(f"  {tr['symbol']}: {key} تحقق عند {price} — الصفقة مغلقة")
                 if token and chat_id:
                     send_telegram(token, chat_id, format_update_card(tr, key, price))
                     time.sleep(0.6)
-                if i == len(tr["targets"]) - 1:
-                    tr["status"] = "closed_tp"
-                    tr["closed_at"] = datetime.now().isoformat(timespec="seconds")
+                break   # إغلاق فور أول هدف
 
         # وقف الخسارة (إن لم تُغلق بالأهداف)
         if tr["status"] == "open":
