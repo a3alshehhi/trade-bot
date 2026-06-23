@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-23T15:50:01",
+  "updated_at": "2026-06-23T16:05:19",
   "stats": {
-    "open": 7,
+    "open": 8,
     "closed": 78,
     "win_rate": 11.5,
     "profit_factor": 0.21,
@@ -64,7 +64,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 11:59:59.999000",
+      "last_ts": "2026-06-23 15:59:59.999000",
       "closed_at": null
     },
     {
@@ -2496,7 +2496,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 11:59:59.999000",
+      "last_ts": "2026-06-23 15:59:59.999000",
       "closed_at": null
     },
     {
@@ -2653,7 +2653,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 11:59:59.999000",
+      "last_ts": "2026-06-23 15:59:59.999000",
       "closed_at": null
     },
     {
@@ -3044,7 +3044,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 14:59:59.999000",
+      "last_ts": "2026-06-23 15:59:59.999000",
       "closed_at": null
     },
     {
@@ -3072,7 +3072,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 11:59:59.999000",
+      "last_ts": "2026-06-23 15:59:59.999000",
       "closed_at": null
     },
     {
@@ -3100,7 +3100,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 15:44:59.999000",
+      "last_ts": "2026-06-23 15:59:59.999000",
       "closed_at": null
     },
     {
@@ -3206,7 +3206,35 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-23 14:59:59.999000",
+      "last_ts": "2026-06-23 15:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782230533382",
+      "symbol": "GUSDT",
+      "label": "RSI70 · 4h",
+      "strategy": "classic",
+      "timeframe": "4h",
+      "side": "buy",
+      "entry": 0.00302,
+      "stop": 0.00272943,
+      "stop_orig": 0.00272943,
+      "targets": [
+        0.00314784,
+        0.00331046,
+        0.00378046
+      ],
+      "risk": 0.00029057,
+      "opened_at": "2026-06-23T16:05:12",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-23 15:59:59.999000",
       "closed_at": null
     }
   ]
