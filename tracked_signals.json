@@ -3507,5 +3507,31 @@
     "exit_price": 0.067185,
     "close_card_sent": true,
     "closed_at": "2026-06-24T22:20:17"
+  },
+  "trendwave · 15m|HEIUSDT|2026-06-24 22:29:59.999000": {
+    "symbol": "HEIUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 1361,
+    "entry": 0.11803313,
+    "stop": 0.1153495,
+    "init_stop": 0.1153495,
+    "cur_stop": 0.1153495,
+    "last_alert_stop": 0.1153495,
+    "armed": false,
+    "targets": [
+      0.1277488,
+      0.1311
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-24 22:29:59.999000",
+    "last_bar": "2026-06-24 22:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.11803313,
+    "lo_seen": 0.11803313,
+    "created": "2026-06-24T22:32:56"
   }
 }
