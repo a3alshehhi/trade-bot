@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-24T14:05:22",
+  "updated_at": "2026-06-24T14:19:50",
   "stats": {
     "open": 12,
-    "closed": 95,
-    "win_rate": 12.6,
+    "closed": 96,
+    "win_rate": 12.5,
     "profit_factor": 0.3,
-    "total_pct": -77.08,
-    "avg_pct": -1.43,
-    "max_drawdown_pct": -77.08
+    "total_pct": -77.81,
+    "avg_pct": -1.45,
+    "max_drawdown_pct": -77.81
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-24",
-        "trades": 14,
-        "win_rate": 21.4,
-        "return_pct": -5.42,
+        "trades": 15,
+        "win_rate": 20.0,
+        "return_pct": -8.44,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -31,18 +31,18 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 95,
-        "win_rate": 12.6,
-        "return_pct": -77.08,
+        "trades": 96,
+        "win_rate": 12.5,
+        "return_pct": -77.81,
         "month": "2026-06"
       }
     ],
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 95,
-        "win_rate": 12.6,
-        "return_pct": -77.08
+        "trades": 96,
+        "win_rate": 12.5,
+        "return_pct": -77.81
       }
     ]
   },
@@ -3925,16 +3925,23 @@
       ],
       "risk": 0.0018731000000000025,
       "opened_at": "2026-06-24T10:05:13",
-      "status": "open",
+      "status": "closed",
       "hits": [],
       "breakeven": false,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-24 13:59:59.999000",
-      "closed_at": null
+      "remaining": 0.0,
+      "realized_pct": -3.196416382252564,
+      "result_pct": -3.196,
+      "exit_price": 0.0567269,
+      "events": [
+        {
+          "ts": "2026-06-24 14:14:59.999000",
+          "type": "sl",
+          "price": 0.0567269,
+          "pct": -3.196
+        }
+      ],
+      "last_ts": "2026-06-24 14:14:59.999000",
+      "closed_at": "2026-06-24T14:19:48"
     },
     {
       "id": "1782303364716",
@@ -4074,7 +4081,35 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 13:59:59.999000",
+      "last_ts": "2026-06-24 14:14:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782310565278",
+      "symbol": "ONGUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.0471,
+      "stop": 0.04496593,
+      "stop_orig": 0.04496593,
+      "targets": [
+        0.04792688,
+        0.04897872,
+        0.05201872
+      ],
+      "risk": 0.002134070000000002,
+      "opened_at": "2026-06-24T14:19:39",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-24 14:14:59.999000",
       "closed_at": null
     }
   ]

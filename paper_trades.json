@@ -3877,16 +3877,23 @@
     ],
     "risk": 0.0018731000000000025,
     "opened_at": "2026-06-24T10:05:13",
-    "status": "open",
+    "status": "closed",
     "hits": [],
     "breakeven": false,
-    "remaining": 1.0,
-    "realized_pct": 0.0,
-    "result_pct": null,
-    "exit_price": null,
-    "events": [],
-    "last_ts": "2026-06-24 13:59:59.999000",
-    "closed_at": null
+    "remaining": 0.0,
+    "realized_pct": -3.196416382252564,
+    "result_pct": -3.196,
+    "exit_price": 0.0567269,
+    "events": [
+      {
+        "ts": "2026-06-24 14:14:59.999000",
+        "type": "sl",
+        "price": 0.0567269,
+        "pct": -3.196
+      }
+    ],
+    "last_ts": "2026-06-24 14:14:59.999000",
+    "closed_at": "2026-06-24T14:19:48"
   },
   {
     "id": "1782303364716",
@@ -4026,7 +4033,35 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 13:59:59.999000",
+    "last_ts": "2026-06-24 14:14:59.999000",
+    "closed_at": null
+  },
+  {
+    "id": "1782310565278",
+    "symbol": "ONGUSDT",
+    "label": "RSI70 · 15m",
+    "strategy": "classic",
+    "timeframe": "15m",
+    "side": "buy",
+    "entry": 0.0471,
+    "stop": 0.04496593,
+    "stop_orig": 0.04496593,
+    "targets": [
+      0.04792688,
+      0.04897872,
+      0.05201872
+    ],
+    "risk": 0.002134070000000002,
+    "opened_at": "2026-06-24T14:19:39",
+    "status": "open",
+    "hits": [],
+    "breakeven": false,
+    "remaining": 1.0,
+    "realized_pct": 0.0,
+    "result_pct": null,
+    "exit_price": null,
+    "events": [],
+    "last_ts": "2026-06-24 14:14:59.999000",
     "closed_at": null
   }
 ]
