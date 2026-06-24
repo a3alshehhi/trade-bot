@@ -56,19 +56,11 @@ jobs:
           python trading_bot.py --mode reversal --trendwave --ml-filter --watchlist watchlist.txt \
             --timeframe 4h --state trendwave_alerts.json
           # متابعة الإشارات المُرسَلة والرد على رسالتها عند بلوغ هدف/وقف
+          # (المصدر الوحيد للمتابعة: سياسة هدف أول/وقف فقط، بفيبوناتشي ومتوسط الدخول الصحيح)
           python trading_bot.py --mode trackmon
 
-      - name: Paper trades — capture taps & monitor
-        env:
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          # تسجيل كل الإشارات الجديدة تلقائياً كصفقات ورقية (بلا ضغط زر)
-          python paper.py auto
-          # التقاط ضغطات زر "افتح صفقة ورقية" وأوامر /report و/trades
-          python paper.py poll
-          # متابعة الصفقات المفتوحة وإغلاقها عند الهدف/الوقف + تحديث نسخة اللوحة
-          python paper.py monitor
+      # ملاحظة: أُزيلت خطوة paper.py (auto/poll/monitor) لأنها كانت تتابع نفس الصفقات
+      # بسياسة قديمة مهجورة (تعادل + تتبّع + دخول مفرد) وتتعارض مع trackmon.
 
       - name: Persist alert & paper state
         run: |
