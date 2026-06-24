@@ -1330,7 +1330,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-06-24 16:59:59.999000"
+    "last_bar": "2026-06-24 17:44:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -1978,7 +1978,7 @@
     "is_trendwave": false,
     "breakeven_done": true,
     "bar_ts": "2026-06-23 17:29:59.999000",
-    "last_bar": "2026-06-24 16:59:59.999000",
+    "last_bar": "2026-06-24 17:44:59.999000",
     "hits": [
       1,
       2
@@ -2583,11 +2583,11 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 13:14:59.999000",
-    "last_bar": "2026-06-24 16:59:59.999000",
+    "last_bar": "2026-06-24 17:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.466,
-    "lo_seen": 0.404,
+    "lo_seen": 0.394,
     "created": "2026-06-24T13:18:07"
   },
   "RSI70 · 15m|ONGUSDT|2026-06-24 14:14:59.999000": {
@@ -2756,11 +2756,11 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 16:14:59.999000",
-    "last_bar": "2026-06-24 16:59:59.999000",
+    "last_bar": "2026-06-24 17:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1225,
-    "lo_seen": 0.11628533,
+    "lo_seen": 0.1138,
     "created": "2026-06-24T16:17:55"
   },
   "trendwave · 15m|EDUUSDT|2026-06-24 16:29:59.999000": {
@@ -2808,11 +2808,11 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 16:29:59.999000",
-    "last_bar": "2026-06-24 16:59:59.999000",
+    "last_bar": "2026-06-24 17:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00312,
-    "lo_seen": 0.00301,
+    "lo_seen": 0.00299,
     "created": "2026-06-24T16:32:55"
   },
   "trendwave · 15m|OGUSDT|2026-06-24 16:29:59.999000": {
@@ -2886,11 +2886,13 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 16:59:59.999000",
-    "last_bar": "2026-06-24 16:59:59.999000",
+    "last_bar": "2026-06-24 17:44:59.999000",
     "hits": [],
-    "stopped": false,
-    "hi_seen": 0.11853167,
-    "lo_seen": 0.11853167,
-    "created": "2026-06-24T17:03:19"
+    "stopped": true,
+    "hi_seen": 0.1211,
+    "lo_seen": 0.1138,
+    "created": "2026-06-24T17:03:19",
+    "exit_price": 0.1152283,
+    "close_card_sent": true
   }
 }
