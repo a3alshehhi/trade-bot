@@ -3060,7 +3060,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 05:29:59.999000",
+    "last_ts": "2026-06-24 05:44:59.999000",
     "closed_at": null
   },
   {
@@ -3486,7 +3486,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 05:29:59.999000",
+    "last_ts": "2026-06-24 05:44:59.999000",
     "closed_at": null
   },
   {
@@ -3574,5 +3574,33 @@
     ],
     "last_ts": "2026-06-24 01:59:59.999000",
     "closed_at": "2026-06-24T02:03:59"
+  },
+  {
+    "id": "1782279970053",
+    "symbol": "POLYXUSDT",
+    "label": "RSI70 · 15m",
+    "strategy": "classic",
+    "timeframe": "15m",
+    "side": "buy",
+    "entry": 0.0376,
+    "stop": 0.03666599,
+    "stop_orig": 0.03666599,
+    "targets": [
+      0.0380352,
+      0.0385888,
+      0.0401888
+    ],
+    "risk": 0.000934009999999999,
+    "opened_at": "2026-06-24T05:50:03",
+    "status": "open",
+    "hits": [],
+    "breakeven": false,
+    "remaining": 1.0,
+    "realized_pct": 0.0,
+    "result_pct": null,
+    "exit_price": null,
+    "events": [],
+    "last_ts": "2026-06-24 05:44:59.999000",
+    "closed_at": null
   }
 ]
