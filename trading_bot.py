@@ -2899,9 +2899,11 @@ def _fib_dca_ladder(entry, peak, ref_low, imp):
 
 def detect_trendwave_signal(df, cfg):
     """إشارة دخول حيّة لاستراتيجية trendwave عند آخر شمعة *مغلقة*:
-    RSI(21)<20 ثم >80 (موجة دفع) → عند عودة RSI تحت 80 (نهاية الموجة) ندخل مباشرةً،
-    بشرط أن يكون الإغلاق فوق متوسط 200 على *فريم أعلى* (1h→4h، 15m→1h، 4h/1d→يومي).
-    مستويات الدخول DCA على ارتدادات فيبو، والوقف تحت أعمق دخول/قاع الموجة.
+    RSI(21)<20 ثم >80 (موجة دفع) → بعد خفوت الموجة *ننتظر تشكُّل قاع محوري مؤكَّد*
+    (شمعة أدنى من شمعتين على كل جانب) ثم نُصدر الإشارة، بشرط الإغلاق فوق متوسط 200
+    على *فريم أعلى* (1h→4h، 15m→1h، 4h/1d→يومي).
+    لا دخول مباشر: سلّم دخول من القاع حتى ارتداد 0.236 للحركة (القمة→القاع)،
+    والوقف تحت القاع المؤكَّد، والأهداف ارتداد فيبو تصحيحي 0.382 ثم 0.5.
     يرجع dict أو None."""
     os_th = cfg.get("rsi_os", 20.0)
     ob_th = cfg.get("rsi_ob", 80.0)
@@ -2922,44 +2924,72 @@ def detect_trendwave_signal(df, cfg):
     sma = (pd.merge_asof(df[["date"]].copy(), sm, on="date")["ma"].values
            if len(sm) else np.full(n, np.nan))
 
-    # آلة الحالات للعثور على آخر دخول (يجب أن يقع عند الشمعة المغلقة الأخيرة)
+    # آلة الحالات: نلتقط آخر موجة دفع «خَفَتت» (RSI تجاوز 80 ثم عاد تحته).
+    # خلافاً للنسخة القديمة، لا ندخل فور خفوت الموجة، بل ننتظر تشكُّل القاع.
     state = 0
     ref_low = peak = None
-    trig = None
+    peak_idx = None
+    faded = None                                # (peak_idx, ref_low, peak) لآخر موجة خفتت
     for i in range(1, n):
         ri = r[i]
         if np.isnan(ri):
             continue
         if state == 0:
             if ri < os_th:
-                state = 1; ref_low = low[i]; peak = high[i]
+                state = 1; ref_low = low[i]; peak = high[i]; peak_idx = i
         elif state == 1:
-            ref_low = min(ref_low, low[i]); peak = max(peak, high[i])
+            if low[i] < ref_low:
+                ref_low = low[i]
+            if high[i] > peak:
+                peak = high[i]; peak_idx = i
             if ri > ob_th:
                 state = 2
         elif state == 2:
-            peak = max(peak, high[i])
-            if ri < ob_th:                     # نهاية الموجة → نقطة الدخول
-                trig = (i, ref_low, peak)
-                state = 0; ref_low = peak = None
+            if high[i] > peak:
+                peak = high[i]; peak_idx = i
+            if ri < ob_th:                     # خفوت الموجة → نبدأ انتظار القاع
+                faded = (peak_idx, ref_low, peak)
+                state = 0; ref_low = peak = None; peak_idx = None
 
-    if not trig or trig[0] != n - 1:
+    if not faded:
         return None
-    i, rl, pk = trig
-    m = sma[i]
-    if np.isnan(m) or close[i] <= m:           # فلتر الاتجاه غير محقَّق
+    pk_idx, rl, pk = faded
+
+    # ننتظر تشكُّل «قاع محوري مؤكَّد» بعد القمة: شمعة قاعها أدنى من شمعتين على كل جانب.
+    # التأكيد يحتاج شمعتين بعد القاع، فالقاع المؤكَّد حديثاً يقع عند المؤشر n-3.
+    piv = n - 3
+    if piv <= pk_idx + 1:                       # لا قاع مؤكَّد بعد القمة بعد
+        return None
+    seg = low[piv - 2:piv + 3]                  # نافذة 5 شموع حول القاع
+    if len(seg) < 5 or float(low[piv]) != float(np.nanmin(seg)):
+        return None                             # الشمعة piv ليست قاعاً محورياً مؤكَّداً
+
+    tr_low = float(low[piv])
+    m = sma[n - 1]
+    if np.isnan(m) or close[n - 1] <= m:        # فلتر الاتجاه عند شمعة الإشارة
         return None
     imp = pk - rl
-    if imp <= 0:
+    drop = pk - tr_low                          # حركة التصحيح (القمة → القاع)
+    if imp <= 0 or drop <= 0 or tr_low >= pk:
         return None
-    entry = float(close[i])
-    atrv = a[i] if not np.isnan(a[i]) else entry * 0.02
-    dca = _fib_dca_ladder(entry, pk, rl, imp)  # سلّم DCA بارتدادات فيبو تحت الدخول
-    deepest = min(dca) if dca else rl
-    stop = float(min(rl, deepest) - 0.5 * atrv)
-    targets = [round(rl + mm * imp, 8) for mm in (1.272, 1.618, 2.0)]
-    return {"entry": entry, "stop": round(stop, 8), "dca": dca,
-            "targets": targets, "rsi": round(float(r[i]), 1)}
+
+    atrv = a[n - 1] if not np.isnan(a[n - 1]) else tr_low * 0.02
+    c = float(close[n - 1])
+    # سلّم دخول فيبو من السعر الحالي نزولاً نحو القاع المؤكَّد (شراء على إعادة اختبار
+    # القاع) — لا دخول مباشر مفرد. كلها فوق الوقف وتحت السعر الحالي.
+    span = c - tr_low if c > tr_low else 0.5 * atrv
+    dca = sorted({round(c - rr * span, 8) for rr in (0.236, 0.5, 0.786)}, reverse=True)
+    if not dca:
+        return None
+    avg_entry = round(sum(dca) / len(dca), 8)
+    stop = round(tr_low - 0.5 * atrv, 8)        # الوقف تحت القاع المؤكَّد
+    # الأهداف = ارتداد فيبو التصحيحي للحركة (القمة → القاع): 0.382 ثم 0.5
+    targets = [round(tr_low + 0.382 * drop, 8), round(tr_low + 0.5 * drop, 8)]
+    if targets[0] <= avg_entry or stop >= avg_entry:
+        return None
+    return {"entry": avg_entry, "stop": stop, "dca": dca, "targets": targets,
+            "rsi": round(float(r[n - 1]), 1), "peak": round(pk, 8),
+            "trough": round(tr_low, 8)}
 
 
 TRACK_FILE = "tracked_signals.json"
@@ -3064,6 +3094,61 @@ def _advance_trade(df, tr):
 
     cur_stop = tr.get("cur_stop", init_stop)
     armed = tr.get("armed", False)
+
+    # ── إدارة trendwave: جني 50% عند الهدف الأول + رفع الوقف لمتوسط الدخول،
+    #    ثم جني 50% المتبقية وإغلاق عند الهدف الثاني. (لا وقف متحرك ولا أهداف إضافية)
+    if tr.get("is_trendwave"):
+        for j in idxs:
+            # (أ) ضرب الوقف أولاً — بالمستوى الجاري (الابتدائي قبل الهدف1، التعادل بعده)
+            if low[j] <= cur_stop:
+                if cur_stop >= entry:              # بعد الهدف1: خروج بلا خسارة على المتبقّي
+                    events.append(f"➖ {sym} — خروج عند التعادل على المتبقّي (بعد جني 50%)\n"
+                                  f"السعر: {fmt(cur_stop)}  (0.00%)")
+                else:                              # قبل الهدف1: وقف خسارة كامل
+                    events.append(f"🛑 {sym} — ضرب وقف الخسارة\n"
+                                  f"السعر: {fmt(cur_stop)}")
+                tr["stopped"] = True
+                tr["cur_stop"] = cur_stop
+                tr["last_bar"] = str(dates.iloc[j])
+                tr["hi_seen"] = max(tr.get("hi_seen", entry), float(high[j]))
+                tr["lo_seen"] = min(tr.get("lo_seen", entry), float(low[j]))
+                return events
+
+            # (ب) الهدف الأول → جني 50% + رفع الوقف لمتوسط الدخول (تعادل)
+            if 1 not in tr["hits"] and high[j] >= targets[0]:
+                tr["hits"].append(1)
+                gain = ((targets[0] - entry) / entry * 100) if entry else 0.0
+                cur_stop = entry                   # الوقف = متوسط الدخول
+                events.append(f"🎯 {sym} — تحقق الهدف الأول ✅ — جني 50% ورفع الوقف "
+                              f"لمتوسط الدخول (تعادل)\n"
+                              f"السعر: {fmt(targets[0])}  (+{gain:.2f}%)")
+
+            # (ج) الهدف الثاني → جني الـ50% المتبقية وإغلاق الصفقة
+            if len(targets) > 1 and 1 in tr["hits"] and 2 not in tr["hits"] \
+                    and high[j] >= targets[1]:
+                tr["hits"].append(2)
+                gain2 = ((targets[1] - entry) / entry * 100) if entry else 0.0
+                events.append(f"🏁 {sym} — تحقق الهدف الثاني ✅✅ — جني 50% وإغلاق الصفقة\n"
+                              f"السعر: {fmt(targets[1])}  (+{gain2:.2f}%)")
+                tr["stopped"] = True
+                tr["cur_stop"] = cur_stop
+                tr["last_bar"] = str(dates.iloc[j])
+                tr["hi_seen"] = max(tr.get("hi_seen", entry), float(high[j]))
+                tr["lo_seen"] = min(tr.get("lo_seen", entry), float(low[j]))
+                return events
+
+            tr["hi_seen"] = max(tr.get("hi_seen", entry), float(high[j]))
+            tr["lo_seen"] = min(tr.get("lo_seen", entry), float(low[j]))
+
+        tr["cur_stop"] = cur_stop
+        tr["last_bar"] = str(dates.iloc[idxs[-1]])
+        # أبلغ مرّة واحدة عن رفع الوقف للتعادل بعد الهدف الأول
+        eps = abs(cur_stop) * 1e-6
+        if cur_stop > tr.get("last_alert_stop", init_stop) + eps:
+            events.append(f"📈 {sym} — رُفع الوقف لمتوسط الدخول (تعادل)\n"
+                          f"الوقف الجديد: {fmt(cur_stop)}")
+            tr["last_alert_stop"] = cur_stop
+        return events
 
     for j in idxs:
         # (أ) ضرب الوقف (بالمستوى السابق) أولاً — يُنهي الصفقة.
@@ -3171,13 +3256,19 @@ def format_reversal_card(sig, cfg, label):
     tf = cfg.get("timeframe", "?")
     now = datetime.now().strftime("%H:%M:%S")
     fmt = _fmt_price
+    is_tw = bool(cfg.get("trendwave"))
     entry = sig["entry"]
     stop = sig["stop"]
-    # عند وجود سلّم دخول، المخاطرة تُقاس من متوسط الدخول (لا الدخول المباشر)
     levels = sig.get("dca") or sig.get("fib_entries") or []
-    all_entries = [entry] + list(levels)
-    avg_entry = sum(all_entries) / len(all_entries) if all_entries else entry
-    risk_ref = avg_entry if levels else entry
+    if is_tw:
+        # trendwave: لا دخول مباشر — الدخول (entry) هو نفسه متوسط سلّم الفيبو
+        avg_entry = entry
+        risk_ref = entry
+    else:
+        # عند وجود سلّم دخول، المخاطرة تُقاس من متوسط الدخول (لا الدخول المباشر)
+        all_entries = [entry] + list(levels)
+        avg_entry = sum(all_entries) / len(all_entries) if all_entries else entry
+        risk_ref = avg_entry if levels else entry
     risk_pct = ((risk_ref - stop) / risk_ref * 100) if risk_ref else 0.0
     nums = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣"]
 
@@ -3187,7 +3278,7 @@ def format_reversal_card(sig, cfg, label):
              f"💎 {sig['symbol']} · ⏱️ {tf}"]
     if sig.get("rsi") is not None:
         if cfg.get("trendwave"):
-            _note = "نهاية موجة شرائية + فلتر اتجاه"
+            _note = "ارتداد بعد تأكيد القاع + فلتر اتجاه"
         elif cfg.get("rsi_cross"):
             _note = f"تجاوز {int(cfg.get('rsi_ob', 80.0))}"
         else:
@@ -3198,7 +3289,13 @@ def format_reversal_card(sig, cfg, label):
     lines.append("")
 
     # الدخول + مستويات الدخول على فيبوناتشي
-    if sig.get("dca"):
+    if is_tw and sig.get("dca"):
+        # trendwave: سلّم دخول فيبو فقط (لا دخول مباشر)، والمتوسط هو مرجع الصفقة
+        lines.append("🪜 مستويات الدخول (فيبوناتشي):")
+        for k, lv in enumerate(sig["dca"], 1):
+            lines.append(f"   {k}) {fmt(lv)}")
+        lines.append(f"   ⚖️ متوسط الدخول: {fmt(avg_entry)}")
+    elif sig.get("dca"):
         lines.append(f"📍 الدخول المباشر: {fmt(entry)}")
         lines.append("🪜 مستويات الدخول (فيبوناتشي):")
         for k, lv in enumerate(sig["dca"], 1):
