@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-24T21:34:46",
+  "updated_at": "2026-06-24T21:49:00",
   "stats": {
-    "open": 31,
-    "closed": 104,
-    "win_rate": 3.8,
+    "open": 32,
+    "closed": 105,
+    "win_rate": 4.8,
     "profit_factor": 0.11,
-    "total_pct": -82.17,
-    "avg_pct": -1.57,
+    "total_pct": -82.03,
+    "avg_pct": -1.55,
     "max_drawdown_pct": -85.27
   },
   "periods": {
@@ -2115,9 +2115,41 @@
       "timeframe": "15m",
       "entry": 0.01063853,
       "stop": 0.01041877,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-06-24T21:32:57",
+      "closed_at": "2026-06-24T21:48:58",
+      "realized_pct": 0.77,
+      "result_pct": 0.77
+    },
+    {
+      "id": "RSI70 · 15m|HOTUSDT|2026-06-24 21:44:59.999000",
+      "symbol": "HOTUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.000307,
+      "stop": 0.00029719,
       "hits": [],
       "status": "open",
-      "opened_at": "2026-06-24T21:32:57",
+      "opened_at": "2026-06-24T21:46:07",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|EDUUSDT|2026-06-24 21:44:59.999000",
+      "symbol": "EDUUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.02979707,
+      "stop": 0.02940192,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T21:47:32",
       "closed_at": null,
       "realized_pct": 0.0
     }
