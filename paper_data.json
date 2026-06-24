@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-06-24T18:33:53",
+  "updated_at": "2026-06-24T18:49:37",
   "stats": {
-    "open": 20,
-    "closed": 99,
+    "open": 19,
+    "closed": 100,
     "win_rate": 1.0,
     "profit_factor": 0.01,
-    "total_pct": -84.28,
-    "avg_pct": -1.79,
-    "max_drawdown_pct": -84.48
+    "total_pct": -84.7,
+    "avg_pct": -1.8,
+    "max_drawdown_pct": -84.9
   },
   "periods": {
     "daily": [],
@@ -1774,10 +1774,11 @@
       "entry": 0.11628533,
       "stop": 0.11315546,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-24T16:17:55",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-24T18:49:34",
+      "realized_pct": -2.69,
+      "result_pct": -2.69
     },
     {
       "id": "trendwave · 15m|EDUUSDT|2026-06-24 16:29:59.999000",
