@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-24T18:49:37",
+  "updated_at": "2026-06-24T19:05:12",
   "stats": {
-    "open": 19,
+    "open": 21,
     "closed": 100,
     "win_rate": 1.0,
     "profit_factor": 0.01,
@@ -1879,6 +1879,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-24T18:32:33",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|TNSRUSDT|2026-06-24 18:59:59.999000",
+      "symbol": "TNSRUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.03324193,
+      "stop": 0.03204652,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T19:04:05",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|XPLUSDT|2026-06-24 18:59:59.999000",
+      "symbol": "XPLUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.08640233,
+      "stop": 0.08203841,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T19:04:06",
       "closed_at": null,
       "realized_pct": 0.0
     }
