@@ -2176,5 +2176,36 @@
     "hi_seen": 0.01257,
     "lo_seen": 0.01257,
     "created": "2026-06-23T23:46:06"
+  },
+  "RSI70 · 15m|HEIUSDT|2026-06-24 00:14:59.999000": {
+    "symbol": "HEIUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1225,
+    "entry": 0.1369,
+    "stop": 0.12228914,
+    "init_stop": 0.12228914,
+    "cur_stop": 0.12228914,
+    "last_alert_stop": 0.12228914,
+    "armed": false,
+    "targets": [
+      0.1433464,
+      0.1515466,
+      0.1752466
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-24 00:14:59.999000",
+    "last_bar": "2026-06-24 00:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1369,
+    "lo_seen": 0.1369,
+    "created": "2026-06-24T00:16:09"
   }
 }
