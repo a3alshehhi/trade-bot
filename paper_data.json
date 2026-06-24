@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-06-24T19:49:30",
+  "updated_at": "2026-06-24T20:05:20",
   "stats": {
-    "open": 22,
-    "closed": 100,
-    "win_rate": 1.0,
-    "profit_factor": 0.01,
-    "total_pct": -84.7,
-    "avg_pct": -1.8,
-    "max_drawdown_pct": -84.9
+    "open": 23,
+    "closed": 102,
+    "win_rate": 2.0,
+    "profit_factor": 0.09,
+    "total_pct": -82.71,
+    "avg_pct": -1.63,
+    "max_drawdown_pct": -85.27
   },
   "periods": {
     "daily": [],
@@ -1030,10 +1030,11 @@
       "entry": 0.3341,
       "stop": 0.32588643,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-23T00:01:41",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-24T20:05:04",
+      "realized_pct": -2.46,
+      "result_pct": -2.46
     },
     {
       "id": "RSI70 · 15m|DEXEUSDT|2026-06-23 00:14:59.999000",
@@ -1447,11 +1448,14 @@
       "timeframe": "4h",
       "entry": 0.306,
       "stop": 0.19678723,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-06-23T20:01:55",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-24T20:05:11",
+      "realized_pct": 15.84,
+      "result_pct": 15.84
     },
     {
       "id": "RSI70 · 15m|JASMYUSDT|2026-06-23 21:29:59.999000",
@@ -1921,6 +1925,48 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-24T19:18:12",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|ALICEUSDT|2026-06-24 19:59:59.999000",
+      "symbol": "ALICEUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.12087213,
+      "stop": 0.11597972,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T20:04:05",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|GUSDT|2026-06-24 19:59:59.999000",
+      "symbol": "GUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.00304419,
+      "stop": 0.00292187,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T20:04:06",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|IOUSDT|2026-06-24 19:59:59.999000",
+      "symbol": "IOUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.168973,
+      "stop": 0.16152352,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T20:04:07",
       "closed_at": null,
       "realized_pct": 0.0
     }
