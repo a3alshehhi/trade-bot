@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-24T12:20:07",
+  "updated_at": "2026-06-24T12:35:27",
   "stats": {
     "open": 14,
-    "closed": 91,
-    "win_rate": 13.2,
-    "profit_factor": 0.33,
-    "total_pct": -73.06,
-    "avg_pct": -1.32,
+    "closed": 92,
+    "win_rate": 13.0,
+    "profit_factor": 0.31,
+    "total_pct": -75.77,
+    "avg_pct": -1.42,
     "max_drawdown_pct": -75.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-24",
-        "trades": 10,
-        "win_rate": 30.0,
-        "return_pct": 11.16,
+        "trades": 11,
+        "win_rate": 27.3,
+        "return_pct": -0.01,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -31,18 +31,18 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 91,
-        "win_rate": 13.2,
-        "return_pct": -73.06,
+        "trades": 92,
+        "win_rate": 13.0,
+        "return_pct": -75.77,
         "month": "2026-06"
       }
     ],
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 91,
-        "win_rate": 13.2,
-        "return_pct": -73.06
+        "trades": 92,
+        "win_rate": 13.0,
+        "return_pct": -75.77
       }
     ]
   },
@@ -3698,16 +3698,23 @@
       ],
       "risk": 0.014709680000000003,
       "opened_at": "2026-06-24T06:49:59",
-      "status": "open",
+      "status": "closed",
       "hits": [],
       "breakeven": false,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-24 12:14:59.999000",
-      "closed_at": null
+      "remaining": 0.0,
+      "realized_pct": -10.047595628415303,
+      "result_pct": -10.048,
+      "exit_price": 0.13169032,
+      "events": [
+        {
+          "ts": "2026-06-24 12:29:59.999000",
+          "type": "sl",
+          "price": 0.13169032,
+          "pct": -10.048
+        }
+      ],
+      "last_ts": "2026-06-24 12:29:59.999000",
+      "closed_at": "2026-06-24T12:35:24"
     },
     {
       "id": "1782283567796",
@@ -3926,7 +3933,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 12:14:59.999000",
+      "last_ts": "2026-06-24 12:29:59.999000",
       "closed_at": null
     },
     {
@@ -3954,7 +3961,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 12:14:59.999000",
+      "last_ts": "2026-06-24 12:29:59.999000",
       "closed_at": null
     },
     {
@@ -3982,7 +3989,35 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 12:14:59.999000",
+      "last_ts": "2026-06-24 12:29:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782304277349",
+      "symbol": "ALPINEUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.326,
+      "stop": 0.31833864,
+      "stop_orig": 0.31833864,
+      "targets": [
+        0.329536,
+        0.334034,
+        0.347034
+      ],
+      "risk": 0.007661360000000006,
+      "opened_at": "2026-06-24T12:35:14",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-24 12:29:59.999000",
       "closed_at": null
     }
   ]

@@ -3650,16 +3650,23 @@
     ],
     "risk": 0.014709680000000003,
     "opened_at": "2026-06-24T06:49:59",
-    "status": "open",
+    "status": "closed",
     "hits": [],
     "breakeven": false,
-    "remaining": 1.0,
-    "realized_pct": 0.0,
-    "result_pct": null,
-    "exit_price": null,
-    "events": [],
-    "last_ts": "2026-06-24 12:14:59.999000",
-    "closed_at": null
+    "remaining": 0.0,
+    "realized_pct": -10.047595628415303,
+    "result_pct": -10.048,
+    "exit_price": 0.13169032,
+    "events": [
+      {
+        "ts": "2026-06-24 12:29:59.999000",
+        "type": "sl",
+        "price": 0.13169032,
+        "pct": -10.048
+      }
+    ],
+    "last_ts": "2026-06-24 12:29:59.999000",
+    "closed_at": "2026-06-24T12:35:24"
   },
   {
     "id": "1782283567796",
@@ -3878,7 +3885,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 12:14:59.999000",
+    "last_ts": "2026-06-24 12:29:59.999000",
     "closed_at": null
   },
   {
@@ -3906,7 +3913,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 12:14:59.999000",
+    "last_ts": "2026-06-24 12:29:59.999000",
     "closed_at": null
   },
   {
@@ -3934,7 +3941,35 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 12:14:59.999000",
+    "last_ts": "2026-06-24 12:29:59.999000",
+    "closed_at": null
+  },
+  {
+    "id": "1782304277349",
+    "symbol": "ALPINEUSDT",
+    "label": "RSI70 · 15m",
+    "strategy": "classic",
+    "timeframe": "15m",
+    "side": "buy",
+    "entry": 0.326,
+    "stop": 0.31833864,
+    "stop_orig": 0.31833864,
+    "targets": [
+      0.329536,
+      0.334034,
+      0.347034
+    ],
+    "risk": 0.007661360000000006,
+    "opened_at": "2026-06-24T12:35:14",
+    "status": "open",
+    "hits": [],
+    "breakeven": false,
+    "remaining": 1.0,
+    "realized_pct": 0.0,
+    "result_pct": null,
+    "exit_price": null,
+    "events": [],
+    "last_ts": "2026-06-24 12:29:59.999000",
     "closed_at": null
   }
 ]
