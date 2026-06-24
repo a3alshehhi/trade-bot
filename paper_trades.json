@@ -3623,7 +3623,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 07:59:59.999000",
+    "last_ts": "2026-06-24 08:14:59.999000",
     "closed_at": null
   },
   {
@@ -3651,7 +3651,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 07:59:59.999000",
+    "last_ts": "2026-06-24 08:14:59.999000",
     "closed_at": null
   },
   {
@@ -3714,7 +3714,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 07:59:59.999000",
+    "last_ts": "2026-06-24 08:14:59.999000",
     "closed_at": null
   },
   {
@@ -3742,7 +3742,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 07:59:59.999000",
+    "last_ts": "2026-06-24 08:14:59.999000",
     "closed_at": null
   },
   {
@@ -3771,6 +3771,34 @@
     "exit_price": null,
     "events": [],
     "last_ts": "2026-06-24 07:59:59.999000",
+    "closed_at": null
+  },
+  {
+    "id": "1782288967883",
+    "symbol": "PROMUSDT",
+    "label": "RSI70 · 15m",
+    "strategy": "classic",
+    "timeframe": "15m",
+    "side": "buy",
+    "entry": 1.1,
+    "stop": 1.06681449,
+    "stop_orig": 1.06681449,
+    "targets": [
+      1.116048,
+      1.136462,
+      1.195462
+    ],
+    "risk": 0.03318551000000003,
+    "opened_at": "2026-06-24T08:20:31",
+    "status": "open",
+    "hits": [],
+    "breakeven": false,
+    "remaining": 1.0,
+    "realized_pct": 0.0,
+    "result_pct": null,
+    "exit_price": null,
+    "events": [],
+    "last_ts": "2026-06-24 08:14:59.999000",
     "closed_at": null
   }
 ]

@@ -2399,5 +2399,36 @@
     "hi_seen": 0.00328,
     "lo_seen": 0.00328,
     "created": "2026-06-24T08:01:55"
+  },
+  "RSI70 · 15m|PROMUSDT|2026-06-24 08:14:59.999000": {
+    "symbol": "PROMUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1253,
+    "entry": 1.1,
+    "stop": 1.06681449,
+    "init_stop": 1.06681449,
+    "cur_stop": 1.06681449,
+    "last_alert_stop": 1.06681449,
+    "armed": false,
+    "targets": [
+      1.116048,
+      1.136462,
+      1.195462
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-24 08:14:59.999000",
+    "last_bar": "2026-06-24 08:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1.1,
+    "lo_seen": 1.1,
+    "created": "2026-06-24T08:16:08"
   }
 }
