@@ -3004,7 +3004,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 08:59:59.999000",
+    "last_ts": "2026-06-24 09:59:59.999000",
     "closed_at": null
   },
   {
@@ -3173,7 +3173,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 08:59:59.999000",
+    "last_ts": "2026-06-24 09:59:59.999000",
     "closed_at": null
   },
   {
@@ -3446,7 +3446,7 @@
         "pct": 7.574
       }
     ],
-    "last_ts": "2026-06-24 08:59:59.999000",
+    "last_ts": "2026-06-24 09:59:59.999000",
     "closed_at": null
   },
   {
@@ -3623,7 +3623,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 09:44:59.999000",
+    "last_ts": "2026-06-24 09:59:59.999000",
     "closed_at": null
   },
   {
@@ -3651,7 +3651,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 09:44:59.999000",
+    "last_ts": "2026-06-24 09:59:59.999000",
     "closed_at": null
   },
   {
@@ -3845,5 +3845,33 @@
     ],
     "last_ts": "2026-06-24 09:29:59.999000",
     "closed_at": "2026-06-24T09:33:55"
+  },
+  {
+    "id": "1782295281338",
+    "symbol": "PARTIUSDT",
+    "label": "RSI70 · 15m",
+    "strategy": "classic",
+    "timeframe": "15m",
+    "side": "buy",
+    "entry": 0.0586,
+    "stop": 0.0567269,
+    "stop_orig": 0.0567269,
+    "targets": [
+      0.0594704,
+      0.0605776,
+      0.0637776
+    ],
+    "risk": 0.0018731000000000025,
+    "opened_at": "2026-06-24T10:05:13",
+    "status": "open",
+    "hits": [],
+    "breakeven": false,
+    "remaining": 1.0,
+    "realized_pct": 0.0,
+    "result_pct": null,
+    "exit_price": null,
+    "events": [],
+    "last_ts": "2026-06-24 09:59:59.999000",
+    "closed_at": null
   }
 ]

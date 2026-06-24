@@ -2436,5 +2436,36 @@
     "hi_seen": 1.119,
     "lo_seen": 1.097,
     "created": "2026-06-24T08:16:08"
+  },
+  "RSI70 · 15m|PARTIUSDT|2026-06-24 09:59:59.999000": {
+    "symbol": "PARTIUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1264,
+    "entry": 0.0586,
+    "stop": 0.0567269,
+    "init_stop": 0.0567269,
+    "cur_stop": 0.0567269,
+    "last_alert_stop": 0.0567269,
+    "armed": false,
+    "targets": [
+      0.0594704,
+      0.0605776,
+      0.0637776
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-24 09:59:59.999000",
+    "last_bar": "2026-06-24 09:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0586,
+    "lo_seen": 0.0586,
+    "created": "2026-06-24T10:01:21"
   }
 }
