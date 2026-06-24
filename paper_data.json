@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-24T07:50:06",
+  "updated_at": "2026-06-24T08:04:33",
   "stats": {
-    "open": 13,
-    "closed": 86,
-    "win_rate": 12.8,
+    "open": 14,
+    "closed": 87,
+    "win_rate": 12.6,
     "profit_factor": 0.33,
-    "total_pct": -71.37,
-    "avg_pct": -1.33,
+    "total_pct": -72.65,
+    "avg_pct": -1.37,
     "max_drawdown_pct": -75.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-24",
-        "trades": 5,
-        "win_rate": 40.0,
-        "return_pct": 18.14,
+        "trades": 6,
+        "win_rate": 33.3,
+        "return_pct": 12.87,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -31,18 +31,18 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 86,
-        "win_rate": 12.8,
-        "return_pct": -71.37,
+        "trades": 87,
+        "win_rate": 12.6,
+        "return_pct": -72.65,
         "month": "2026-06"
       }
     ],
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 86,
-        "win_rate": 12.8,
-        "return_pct": -71.37
+        "trades": 87,
+        "win_rate": 12.6,
+        "return_pct": -72.65
       }
     ]
   },
@@ -72,7 +72,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 03:59:59.999000",
+      "last_ts": "2026-06-24 07:59:59.999000",
       "closed_at": null
     },
     {
@@ -2504,7 +2504,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 03:59:59.999000",
+      "last_ts": "2026-06-24 07:59:59.999000",
       "closed_at": null
     },
     {
@@ -2661,7 +2661,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 03:59:59.999000",
+      "last_ts": "2026-06-24 07:59:59.999000",
       "closed_at": null
     },
     {
@@ -3052,7 +3052,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 06:59:59.999000",
+      "last_ts": "2026-06-24 07:59:59.999000",
       "closed_at": null
     },
     {
@@ -3080,7 +3080,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 03:59:59.999000",
+      "last_ts": "2026-06-24 07:59:59.999000",
       "closed_at": null
     },
     {
@@ -3100,16 +3100,23 @@
       ],
       "risk": 0.004276359999999993,
       "opened_at": "2026-06-23T12:35:07",
-      "status": "open",
+      "status": "closed",
       "hits": [],
       "breakeven": false,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-24 07:44:59.999000",
-      "closed_at": null
+      "remaining": 0.0,
+      "realized_pct": -4.463841336116903,
+      "result_pct": -4.464,
+      "exit_price": 0.09152364,
+      "events": [
+        {
+          "ts": "2026-06-24 07:59:59.999000",
+          "type": "sl",
+          "price": 0.09152364,
+          "pct": -4.464
+        }
+      ],
+      "last_ts": "2026-06-24 07:59:59.999000",
+      "closed_at": "2026-06-24T08:04:27"
     },
     {
       "id": "1782217874368",
@@ -3214,7 +3221,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 06:59:59.999000",
+      "last_ts": "2026-06-24 07:59:59.999000",
       "closed_at": null
     },
     {
@@ -3225,7 +3232,7 @@
       "timeframe": "4h",
       "side": "buy",
       "entry": 0.00302,
-      "stop": 0.00272943,
+      "stop": 0.00302,
       "stop_orig": 0.00272943,
       "targets": [
         0.00314784,
@@ -3235,14 +3242,23 @@
       "risk": 0.00029057,
       "opened_at": "2026-06-23T16:05:12",
       "status": "open",
-      "hits": [],
-      "breakeven": false,
+      "hits": [
+        1
+      ],
+      "breakeven": true,
       "remaining": 1.0,
       "realized_pct": 0.0,
       "result_pct": null,
       "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-24 03:59:59.999000",
+      "events": [
+        {
+          "ts": "2026-06-24 07:59:59.999000",
+          "type": "tp1_be",
+          "price": 0.00314784,
+          "pct": 4.233
+        }
+      ],
+      "last_ts": "2026-06-24 07:59:59.999000",
       "closed_at": null
     },
     {
@@ -3478,7 +3494,7 @@
           "pct": 7.574
         }
       ],
-      "last_ts": "2026-06-24 06:59:59.999000",
+      "last_ts": "2026-06-24 07:59:59.999000",
       "closed_at": null
     },
     {
@@ -3506,7 +3522,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 03:59:59.999000",
+      "last_ts": "2026-06-24 07:59:59.999000",
       "closed_at": null
     },
     {
@@ -3655,7 +3671,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 07:44:59.999000",
+      "last_ts": "2026-06-24 07:59:59.999000",
       "closed_at": null
     },
     {
@@ -3683,7 +3699,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 07:44:59.999000",
+      "last_ts": "2026-06-24 07:59:59.999000",
       "closed_at": null
     },
     {
@@ -3746,7 +3762,63 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 07:44:59.999000",
+      "last_ts": "2026-06-24 07:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782288072939",
+      "symbol": "SAHARAUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.01369,
+      "stop": 0.01272581,
+      "stop_orig": 0.01272581,
+      "targets": [
+        0.01412792,
+        0.01468498,
+        0.01629498
+      ],
+      "risk": 0.0009641900000000002,
+      "opened_at": "2026-06-24T08:04:21",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-24 07:59:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782288115426",
+      "symbol": "GUSDT",
+      "label": "RSI70 · 4h",
+      "strategy": "classic",
+      "timeframe": "4h",
+      "side": "buy",
+      "entry": 0.00328,
+      "stop": 0.00283215,
+      "stop_orig": 0.00283215,
+      "targets": [
+        0.00347856,
+        0.00373114,
+        0.00446114
+      ],
+      "risk": 0.00044785000000000007,
+      "opened_at": "2026-06-24T08:04:21",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-24 07:59:59.999000",
       "closed_at": null
     }
   ]
