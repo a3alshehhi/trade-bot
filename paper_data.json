@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-24T14:49:35",
+  "updated_at": "2026-06-24T15:05:51",
   "stats": {
     "open": 13,
     "closed": 96,
@@ -3052,7 +3052,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 13:59:59.999000",
+      "last_ts": "2026-06-24 14:59:59.999000",
       "closed_at": null
     },
     {
@@ -3221,7 +3221,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 13:59:59.999000",
+      "last_ts": "2026-06-24 14:59:59.999000",
       "closed_at": null
     },
     {
@@ -3494,7 +3494,7 @@
           "pct": 7.574
         }
       ],
-      "last_ts": "2026-06-24 13:59:59.999000",
+      "last_ts": "2026-06-24 14:59:59.999000",
       "closed_at": null
     },
     {
@@ -4081,7 +4081,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 14:44:59.999000",
+      "last_ts": "2026-06-24 14:59:59.999000",
       "closed_at": null
     },
     {
@@ -4092,7 +4092,7 @@
       "timeframe": "15m",
       "side": "buy",
       "entry": 0.0471,
-      "stop": 0.04496593,
+      "stop": 0.0471,
       "stop_orig": 0.04496593,
       "targets": [
         0.04792688,
@@ -4102,14 +4102,23 @@
       "risk": 0.002134070000000002,
       "opened_at": "2026-06-24T14:19:39",
       "status": "open",
-      "hits": [],
-      "breakeven": false,
+      "hits": [
+        1
+      ],
+      "breakeven": true,
       "remaining": 1.0,
       "realized_pct": 0.0,
       "result_pct": null,
       "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-24 14:44:59.999000",
+      "events": [
+        {
+          "ts": "2026-06-24 14:59:59.999000",
+          "type": "tp1_be",
+          "price": 0.04792688,
+          "pct": 1.756
+        }
+      ],
+      "last_ts": "2026-06-24 14:59:59.999000",
       "closed_at": null
     },
     {
@@ -4137,7 +4146,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 14:44:59.999000",
+      "last_ts": "2026-06-24 14:59:59.999000",
       "closed_at": null
     }
   ]
