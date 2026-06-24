@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-24T20:05:20",
+  "updated_at": "2026-06-24T20:20:02",
   "stats": {
-    "open": 23,
+    "open": 24,
     "closed": 102,
     "win_rate": 2.0,
     "profit_factor": 0.09,
@@ -1967,6 +1967,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-24T20:04:07",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|RIFUSDT|2026-06-24 20:14:59.999000",
+      "symbol": "RIFUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0843,
+      "stop": 0.08082684,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T20:16:06",
       "closed_at": null,
       "realized_pct": 0.0
     }

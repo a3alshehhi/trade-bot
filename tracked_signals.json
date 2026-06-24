@@ -3115,5 +3115,36 @@
     "hi_seen": 0.168973,
     "lo_seen": 0.168973,
     "created": "2026-06-24T20:04:07"
+  },
+  "RSI70 · 15m|RIFUSDT|2026-06-24 20:14:59.999000": {
+    "symbol": "RIFUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1328,
+    "entry": 0.0843,
+    "stop": 0.08082684,
+    "init_stop": 0.08082684,
+    "cur_stop": 0.08082684,
+    "last_alert_stop": 0.08082684,
+    "armed": false,
+    "targets": [
+      0.0859048,
+      0.0879462,
+      0.0938462
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-24 20:14:59.999000",
+    "last_bar": "2026-06-24 20:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0843,
+    "lo_seen": 0.0843,
+    "created": "2026-06-24T20:16:06"
   }
 }
