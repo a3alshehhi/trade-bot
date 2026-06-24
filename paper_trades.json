@@ -3004,7 +3004,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 07:59:59.999000",
+    "last_ts": "2026-06-24 08:59:59.999000",
     "closed_at": null
   },
   {
@@ -3173,7 +3173,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 07:59:59.999000",
+    "last_ts": "2026-06-24 08:59:59.999000",
     "closed_at": null
   },
   {
@@ -3446,7 +3446,7 @@
         "pct": 7.574
       }
     ],
-    "last_ts": "2026-06-24 07:59:59.999000",
+    "last_ts": "2026-06-24 08:59:59.999000",
     "closed_at": null
   },
   {
@@ -3623,7 +3623,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 08:44:59.999000",
+    "last_ts": "2026-06-24 08:59:59.999000",
     "closed_at": null
   },
   {
@@ -3651,7 +3651,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 08:44:59.999000",
+    "last_ts": "2026-06-24 08:59:59.999000",
     "closed_at": null
   },
   {
@@ -3697,7 +3697,7 @@
     "timeframe": "15m",
     "side": "buy",
     "entry": 0.401,
-    "stop": 0.38808117,
+    "stop": 0.401,
     "stop_orig": 0.38808117,
     "targets": [
       0.407256,
@@ -3706,16 +3706,31 @@
     ],
     "risk": 0.012918830000000048,
     "opened_at": "2026-06-24T07:49:55",
-    "status": "open",
-    "hits": [],
-    "breakeven": false,
-    "remaining": 1.0,
-    "realized_pct": 0.0,
-    "result_pct": null,
-    "exit_price": null,
-    "events": [],
-    "last_ts": "2026-06-24 08:44:59.999000",
-    "closed_at": null
+    "status": "closed",
+    "hits": [
+      1
+    ],
+    "breakeven": true,
+    "remaining": 0.0,
+    "realized_pct": 0.9975062344139659,
+    "result_pct": 0.998,
+    "exit_price": 0.405,
+    "events": [
+      {
+        "ts": "2026-06-24 08:59:59.999000",
+        "type": "tp1_be",
+        "price": 0.407256,
+        "pct": 1.56
+      },
+      {
+        "ts": "2026-06-24 08:59:59.999000",
+        "type": "bear_div",
+        "price": 0.405,
+        "pct": 0.998
+      }
+    ],
+    "last_ts": "2026-06-24 08:59:59.999000",
+    "closed_at": "2026-06-24T09:05:24"
   },
   {
     "id": "1782288072939",
@@ -3725,7 +3740,7 @@
     "timeframe": "15m",
     "side": "buy",
     "entry": 0.01369,
-    "stop": 0.01272581,
+    "stop": 0.01369,
     "stop_orig": 0.01272581,
     "targets": [
       0.01412792,
@@ -3735,14 +3750,23 @@
     "risk": 0.0009641900000000002,
     "opened_at": "2026-06-24T08:04:21",
     "status": "open",
-    "hits": [],
-    "breakeven": false,
+    "hits": [
+      1
+    ],
+    "breakeven": true,
     "remaining": 1.0,
     "realized_pct": 0.0,
     "result_pct": null,
     "exit_price": null,
-    "events": [],
-    "last_ts": "2026-06-24 08:44:59.999000",
+    "events": [
+      {
+        "ts": "2026-06-24 08:59:59.999000",
+        "type": "tp1_be",
+        "price": 0.01412792,
+        "pct": 3.199
+      }
+    ],
+    "last_ts": "2026-06-24 08:59:59.999000",
     "closed_at": null
   },
   {
@@ -3807,7 +3831,7 @@
         "pct": 1.459
       }
     ],
-    "last_ts": "2026-06-24 08:44:59.999000",
+    "last_ts": "2026-06-24 08:59:59.999000",
     "closed_at": null
   }
 ]
