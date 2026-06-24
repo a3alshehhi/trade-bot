@@ -2975,14 +2975,15 @@ def detect_trendwave_signal(df, cfg):
 
     atrv = a[n - 1] if not np.isnan(a[n - 1]) else tr_low * 0.02
     c = float(close[n - 1])
-    # سلّم دخول فيبو من السعر الحالي نزولاً نحو القاع المؤكَّد (شراء على إعادة اختبار
-    # القاع) — لا دخول مباشر مفرد. كلها فوق الوقف وتحت السعر الحالي.
+    # سلّم دخول DCA بمستويات فيبوناتشي في منطقة القاع: من السعر الحالي نزولاً نحو القاع
+    # المؤكَّد (إعادة اختبار القاع). لا دخول مباشر؛ متوسط السلّم = مرجع الصفقة.
+    # (الدخول قرب القاع شرط لأن الأهداف ارتداد تصحيحي 0.382/0.5 يجب أن تفوق المتوسط.)
     span = c - tr_low if c > tr_low else 0.5 * atrv
     dca = sorted({round(c - rr * span, 8) for rr in (0.236, 0.5, 0.786)}, reverse=True)
     if not dca:
         return None
     avg_entry = round(sum(dca) / len(dca), 8)
-    stop = round(tr_low - 0.5 * atrv, 8)        # الوقف تحت القاع المؤكَّد
+    stop = round(tr_low - 0.5 * atrv, 8)         # الوقف تحت القاع المؤكَّد
     # الأهداف = ارتداد فيبو التصحيحي للحركة (القمة → القاع): 0.382 ثم 0.5
     targets = [round(tr_low + 0.382 * drop, 8), round(tr_low + 0.5 * drop, 8)]
     if targets[0] <= avg_entry or stop >= avg_entry:
@@ -3108,6 +3109,7 @@ def _advance_trade(df, tr):
                     events.append(f"🛑 {sym} — ضرب وقف الخسارة\n"
                                   f"السعر: {fmt(cur_stop)}")
                 tr["stopped"] = True
+                tr["exit_price"] = cur_stop
                 tr["cur_stop"] = cur_stop
                 tr["last_bar"] = str(dates.iloc[j])
                 tr["hi_seen"] = max(tr.get("hi_seen", entry), float(high[j]))
@@ -3131,6 +3133,7 @@ def _advance_trade(df, tr):
                 events.append(f"🏁 {sym} — تحقق الهدف الثاني ✅✅ — جني 50% وإغلاق الصفقة\n"
                               f"السعر: {fmt(targets[1])}  (+{gain2:.2f}%)")
                 tr["stopped"] = True
+                tr["exit_price"] = targets[1]
                 tr["cur_stop"] = cur_stop
                 tr["last_bar"] = str(dates.iloc[j])
                 tr["hi_seen"] = max(tr.get("hi_seen", entry), float(high[j]))
@@ -3165,6 +3168,7 @@ def _advance_trade(df, tr):
                 events.append(f"🛑 {sym} — ضرب وقف الخسارة\n"
                               f"السعر: {fmt(cur_stop)}")
             tr["stopped"] = True
+            tr["exit_price"] = cur_stop
             tr["cur_stop"] = cur_stop
             tr["last_bar"] = str(dates.iloc[j])
             tr["hi_seen"] = max(tr.get("hi_seen", entry), float(high[j]))
@@ -3179,6 +3183,7 @@ def _advance_trade(df, tr):
             events.append(f"🎯 {sym} — تحقق الهدف الأول ✅ — أغلق الصفقة بالكامل\n"
                           f"السعر: {fmt(targets[0])}  (+{gain:.2f}%)")
             tr["stopped"] = True
+            tr["exit_price"] = targets[0]
             tr["cur_stop"] = cur_stop
             tr["last_bar"] = str(dates.iloc[j])
             tr["hi_seen"] = max(tr.get("hi_seen", entry), float(high[j]))
@@ -3203,6 +3208,44 @@ def _advance_trade(df, tr):
         tr["last_alert_stop"] = cur_stop
 
     return events
+
+
+_CLOSE_SEP = "━" * 22
+
+
+def _trendwave_realized(tr):
+    """العائد المحقَّق لصفقة trendwave بإدارة 50/50."""
+    entry = tr["entry"]
+    targets = tr.get("targets", [])
+    hits = tr.get("hits", [])
+    exitp = tr.get("exit_price", tr.get("cur_stop", entry))
+    g = (lambda p: ((p - entry) / entry * 100) if entry else 0.0)
+    if 1 in hits and targets:
+        part1 = 0.5 * g(targets[0])
+        part2 = 0.5 * g(targets[1]) if (2 in hits and len(targets) > 1) else 0.5 * g(exitp)
+        return part1 + part2
+    return g(exitp)                            # خرج قبل أي هدف → الصفقة كاملة
+
+
+def format_close_card(tr):
+    """بطاقة إغلاق ملخّصة تُرسَل رداً على رسالة الصفقة عند انتهائها."""
+    fmt = _fmt_price
+    entry = tr["entry"]
+    exitp = tr.get("exit_price", tr.get("cur_stop", entry))
+    if tr.get("is_trendwave"):
+        res = _trendwave_realized(tr)
+    else:
+        res = ((exitp - entry) / entry * 100) if entry else 0.0
+    verdict = "ربح ✅" if res > 1e-6 else ("تعادل ⚪" if abs(res) <= 1e-6 else "خسارة 🔴")
+    hit_txt = "، ".join(f"هدف {h}" for h in tr.get("hits", [])) or "لا شيء"
+    lines = [_CLOSE_SEP, "🏁 أُغلقت الصفقة", _CLOSE_SEP, "",
+             f"💰 {tr['symbol']} — {tr.get('label', '')}",
+             f"🟢 متوسط الدخول: {fmt(entry)}",
+             f"🔚 الخروج: {fmt(exitp)}",
+             f"✅ الأهداف المتحققة: {hit_txt}",
+             f"📊 النتيجة النهائية: {res:+.2f}% — {verdict}",
+             _CLOSE_SEP, "⚠️ نتيجة افتراضية تعليمية — ليست نصيحة مالية"]
+    return "\n".join(lines)
 
 
 def monitor_tracked_signals(cfg, path=TRACK_FILE):
@@ -3244,6 +3287,15 @@ def monitor_tracked_signals(cfg, path=TRACK_FILE):
                 send_telegram(token, chat_id, txt, reply_to=mid)
                 time.sleep(0.4)
             print(f"  📲 {tr['symbol']}: {txt.splitlines()[0]}")
+
+        # بطاقة إغلاق ملخّصة (مرّة واحدة) عند انتهاء الصفقة
+        if tr.get("stopped") and not tr.get("close_card_sent"):
+            tr["close_card_sent"] = True
+            changed = True
+            if token and chat_id:
+                send_telegram(token, chat_id, format_close_card(tr), reply_to=mid)
+                time.sleep(0.4)
+            print(f"  🏁 {tr['symbol']}: أُغلقت الصفقة")
 
     if changed:
         with open(path, "w", encoding="utf-8") as f:
@@ -3392,9 +3444,9 @@ def live_reversal_scan(cfg, watchlist_path, state_path):
         if alerted.get(key):
             continue
         if token and chat_id:
-            pid = register_pending_signal(s, label, cfg)
+            # الإشارة نفسها = إشعار دخول الصفقة (الدخول حصراً من سلّم الفيبو).
+            # المتابعة عبر trackmon ترسل الأحداث وبطاقة الإغلاق رداً على هذه الرسالة.
             markup = {"inline_keyboard": [[
-                {"text": "📝 افتح صفقة ورقية", "callback_data": f"o|{pid}"},
                 {"text": "📊 المتتبّع", "url": DASHBOARD_URL},
             ]]}
             mid = send_telegram(token, chat_id, format_reversal_card(s, cfg, label),
