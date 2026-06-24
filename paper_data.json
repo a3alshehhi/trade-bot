@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-24T12:05:23",
+  "updated_at": "2026-06-24T12:20:07",
   "stats": {
-    "open": 12,
+    "open": 14,
     "closed": 91,
     "win_rate": 13.2,
     "profit_factor": 0.33,
@@ -3706,7 +3706,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 11:59:59.999000",
+      "last_ts": "2026-06-24 12:14:59.999000",
       "closed_at": null
     },
     {
@@ -3926,7 +3926,63 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 11:59:59.999000",
+      "last_ts": "2026-06-24 12:14:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782303364716",
+      "symbol": "ASTRUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.005357,
+      "stop": 0.00525075,
+      "stop_orig": 0.00525075,
+      "targets": [
+        0.00540569,
+        0.00546762,
+        0.00564662
+      ],
+      "risk": 0.00010624999999999957,
+      "opened_at": "2026-06-24T12:19:55",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-24 12:14:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782303365550",
+      "symbol": "CELOUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.06481,
+      "stop": 0.06254174,
+      "stop_orig": 0.06254174,
+      "targets": [
+        0.0658844,
+        0.0672511,
+        0.0712011
+      ],
+      "risk": 0.002268260000000008,
+      "opened_at": "2026-06-24T12:19:55",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-24 12:14:59.999000",
       "closed_at": null
     }
   ]

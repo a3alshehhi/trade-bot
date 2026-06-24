@@ -2467,5 +2467,67 @@
     "hi_seen": 0.059,
     "lo_seen": 0.0581,
     "created": "2026-06-24T10:01:21"
+  },
+  "RSI70 · 15m|ASTRUSDT|2026-06-24 12:14:59.999000": {
+    "symbol": "ASTRUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1271,
+    "entry": 0.005357,
+    "stop": 0.00525075,
+    "init_stop": 0.00525075,
+    "cur_stop": 0.00525075,
+    "last_alert_stop": 0.00525075,
+    "armed": false,
+    "targets": [
+      0.00540569,
+      0.00546762,
+      0.00564662
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-24 12:14:59.999000",
+    "last_bar": "2026-06-24 12:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.005357,
+    "lo_seen": 0.005357,
+    "created": "2026-06-24T12:16:04"
+  },
+  "RSI70 · 15m|CELOUSDT|2026-06-24 12:14:59.999000": {
+    "symbol": "CELOUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1272,
+    "entry": 0.06481,
+    "stop": 0.06254174,
+    "init_stop": 0.06254174,
+    "cur_stop": 0.06254174,
+    "last_alert_stop": 0.06254174,
+    "armed": false,
+    "targets": [
+      0.0658844,
+      0.0672511,
+      0.0712011
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-24 12:14:59.999000",
+    "last_bar": "2026-06-24 12:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.06481,
+    "lo_seen": 0.06481,
+    "created": "2026-06-24T12:16:05"
   }
 }
