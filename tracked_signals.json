@@ -2684,5 +2684,31 @@
     "hi_seen": 0.00204,
     "lo_seen": 0.00204,
     "created": "2026-06-24T15:31:12"
+  },
+  "trendwave · 4h|TONUSDT|2026-06-24 15:59:59.999000": {
+    "symbol": "TONUSDT",
+    "label": "trendwave · 4h",
+    "timeframe": "4h",
+    "message_id": 1296,
+    "entry": 1.55680933,
+    "stop": 1.51533732,
+    "init_stop": 1.51533732,
+    "cur_stop": 1.51533732,
+    "last_alert_stop": 1.51533732,
+    "armed": false,
+    "targets": [
+      2.064666,
+      2.2255
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-24 15:59:59.999000",
+    "last_bar": "2026-06-24 15:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1.55680933,
+    "lo_seen": 1.55680933,
+    "created": "2026-06-24T16:04:00"
   }
 }
