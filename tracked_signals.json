@@ -2922,5 +2922,31 @@
     "hi_seen": 0.00301463,
     "lo_seen": 0.00301463,
     "created": "2026-06-24T18:03:27"
+  },
+  "trendwave · 15m|HEIUSDT|2026-06-24 18:29:59.999000": {
+    "symbol": "HEIUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 1315,
+    "entry": 0.11463607,
+    "stop": 0.1118209,
+    "init_stop": 0.1118209,
+    "cur_stop": 0.1118209,
+    "last_alert_stop": 0.1118209,
+    "armed": false,
+    "targets": [
+      0.1257712,
+      0.1295
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-24 18:29:59.999000",
+    "last_bar": "2026-06-24 18:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.11463607,
+    "lo_seen": 0.11463607,
+    "created": "2026-06-24T18:32:33"
   }
 }

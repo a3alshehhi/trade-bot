@@ -1,4153 +1,1885 @@
 {
-  "updated_at": "2026-06-24T15:05:51",
+  "updated_at": "2026-06-24T18:33:53",
   "stats": {
-    "open": 13,
-    "closed": 96,
-    "win_rate": 12.5,
-    "profit_factor": 0.3,
-    "total_pct": -77.81,
-    "avg_pct": -1.45,
-    "max_drawdown_pct": -77.81
+    "open": 20,
+    "closed": 99,
+    "win_rate": 1.0,
+    "profit_factor": 0.01,
+    "total_pct": -84.28,
+    "avg_pct": -1.79,
+    "max_drawdown_pct": -84.48
   },
   "periods": {
-    "daily": [
-      {
-        "key": "2026-06-24",
-        "trades": 15,
-        "win_rate": 20.0,
-        "return_pct": -8.44,
-        "week": "2026-W26",
-        "month": "2026-06"
-      },
-      {
-        "key": "2026-06-23",
-        "trades": 81,
-        "win_rate": 11.1,
-        "return_pct": -75.77,
-        "week": "2026-W26",
-        "month": "2026-06"
-      }
-    ],
-    "weekly": [
-      {
-        "key": "2026-W26",
-        "trades": 96,
-        "win_rate": 12.5,
-        "return_pct": -77.81,
-        "month": "2026-06"
-      }
-    ],
-    "monthly": [
-      {
-        "key": "2026-06",
-        "trades": 96,
-        "win_rate": 12.5,
-        "return_pct": -77.81
-      }
-    ]
+    "daily": [],
+    "weekly": [],
+    "monthly": []
   },
   "trades": [
     {
-      "id": "1782038794288",
-      "symbol": "TNSRUSDT",
-      "label": "انعكاس 4h DCA",
-      "strategy": "dca",
-      "timeframe": "4h",
-      "side": "buy",
-      "entry": 0.0494,
-      "stop": 0.025908723908017867,
-      "stop_orig": 0.025908723908017867,
-      "targets": [
-        0.0612624,
-        0.0705006,
-        0.0807
-      ],
-      "risk": 0.023491276091982132,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "open",
-      "hits": [],
-      "breakeven": false,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-24 11:59:59.999000",
-      "closed_at": null
-    },
-    {
-      "id": "1782054194497",
+      "id": "RSI80 · 1d|BICOUSDT|2026-06-20 23:59:59.999000",
       "symbol": "BICOUSDT",
       "label": "RSI80 · 1d",
-      "strategy": "classic",
-      "timeframe": "1d",
       "side": "buy",
+      "timeframe": "1d",
       "entry": 0.0627,
       "stop": 0.05498868972339402,
-      "stop_orig": 0.05498868972339402,
-      "targets": [
-        0.0750488,
-        0.0907572,
-        0.1361572
-      ],
-      "risk": 0.007711310276605987,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -12.2987404730558,
-      "result_pct": -12.299,
-      "exit_price": 0.05498868972339402,
-      "events": [
-        {
-          "ts": "2026-06-21 23:59:59.999000",
-          "type": "sl",
-          "price": 0.05498868972339402,
-          "pct": -12.299
-        }
-      ],
-      "last_ts": "2026-06-21 23:59:59.999000",
-      "closed_at": "2026-06-23T03:34:03"
+      "status": "closed",
+      "opened_at": "2026-06-21T15:03:14",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782061015487",
+      "id": "RSI70 · 15m|2ZUSDT|2026-06-21 16:44:59.999000",
       "symbol": "2ZUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.07986,
-      "stop": 0.07986,
-      "stop_orig": 0.07805148790556007,
-      "targets": [
-        0.08139408,
-        0.08334552,
-        0.08898552
-      ],
-      "risk": 0.0018085120944399263,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.07805148790556007,
       "hits": [
-        1
+        1,
+        2
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 12.872526922113694,
-      "result_pct": 12.873,
-      "exit_price": 0.09014,
-      "events": [
-        {
-          "ts": "2026-06-21 16:59:59.999000",
-          "type": "tp1_be",
-          "price": 0.08139408,
-          "pct": 1.921
-        },
-        {
-          "ts": "2026-06-21 16:59:59.999000",
-          "type": "bear_div",
-          "price": 0.09014,
-          "pct": 12.873
-        }
-      ],
-      "last_ts": "2026-06-21 16:59:59.999000",
-      "closed_at": "2026-06-23T03:34:04"
+      "status": "closed",
+      "opened_at": "2026-06-21T16:56:55",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782061035777",
+      "id": "RSI70 · 1h|2ZUSDT|2026-06-21 15:59:59.999000",
       "symbol": "2ZUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 0.07856,
-      "stop": 0.07856,
-      "stop_orig": 0.07639814418865869,
-      "targets": [
-        0.08159008,
-        0.08544452,
-        0.09658452
-      ],
-      "risk": 0.0021618558113413178,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.07639814418865869,
       "hits": [
-        1
+        1,
+        2
       ],
-      "breakeven": true,
-      "remaining": 0.0,
+      "status": "closed",
+      "opened_at": "2026-06-21T16:57:15",
+      "closed_at": null,
       "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.07856,
-      "events": [
-        {
-          "ts": "2026-06-21 16:59:59.999000",
-          "type": "tp1_be",
-          "price": 0.08159008,
-          "pct": 3.857
-        },
-        {
-          "ts": "2026-06-21 19:59:59.999000",
-          "type": "be_sl",
-          "price": 0.07856,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-21 19:59:59.999000",
-      "closed_at": "2026-06-23T03:34:06"
+      "result_pct": 0.0
     },
     {
-      "id": "1782061036137",
+      "id": "RSI70 · 1h|LTCUSDT|2026-06-21 15:59:59.999000",
       "symbol": "LTCUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 45.93,
       "stop": 45.495823393275344,
-      "stop_orig": 45.495823393275344,
-      "targets": [
-        46.44408,
-        47.09802,
-        48.98802
-      ],
-      "risk": 0.4341766067246553,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.9453006895812222,
-      "result_pct": -0.945,
-      "exit_price": 45.495823393275344,
-      "events": [
-        {
-          "ts": "2026-06-21 16:59:59.999000",
-          "type": "sl",
-          "price": 45.495823393275344,
-          "pct": -0.945
-        }
-      ],
-      "last_ts": "2026-06-21 16:59:59.999000",
-      "closed_at": "2026-06-23T03:34:07"
+      "status": "closed",
+      "opened_at": "2026-06-21T16:57:16",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782061053927",
+      "id": "RSI70 · 4h|SAGAUSDT|2026-06-21 15:59:59.999000",
       "symbol": "SAGAUSDT",
       "label": "RSI70 · 4h",
-      "strategy": "classic",
-      "timeframe": "4h",
       "side": "buy",
+      "timeframe": "4h",
       "entry": 0.01596,
-      "stop": 0.01596,
-      "stop_orig": 0.014978806770639987,
-      "targets": [
-        0.0168848,
-        0.0180612,
-        0.0214612
-      ],
-      "risk": 0.0009811932293600119,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.014978806770639987,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
+      "status": "closed",
+      "opened_at": "2026-06-21T16:57:34",
+      "closed_at": null,
       "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.01596,
-      "events": [
-        {
-          "ts": "2026-06-21 19:59:59.999000",
-          "type": "tp1_be",
-          "price": 0.0168848,
-          "pct": 5.794
-        },
-        {
-          "ts": "2026-06-21 23:59:59.999000",
-          "type": "be_sl",
-          "price": 0.01596,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-21 23:59:59.999000",
-      "closed_at": "2026-06-23T03:34:08"
+      "result_pct": 0.0
     },
     {
-      "id": "1782079363641",
+      "id": "RSI70 · 4h|TNSRUSDT|2026-06-21 19:59:59.999000",
       "symbol": "TNSRUSDT",
       "label": "RSI70 · 4h",
-      "strategy": "classic",
-      "timeframe": "4h",
       "side": "buy",
+      "timeframe": "4h",
       "entry": 0.0482,
       "stop": 0.04193150483868239,
-      "stop_orig": 0.04193150483868239,
-      "targets": [
-        0.0537216,
-        0.0607454,
-        0.0810454
-      ],
-      "risk": 0.006268495161317611,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -13.005176683231559,
-      "result_pct": -13.005,
-      "exit_price": 0.04193150483868239,
-      "events": [
-        {
-          "ts": "2026-06-22 11:59:59.999000",
-          "type": "sl",
-          "price": 0.04193150483868239,
-          "pct": -13.005
-        }
-      ],
-      "last_ts": "2026-06-22 11:59:59.999000",
-      "closed_at": "2026-06-23T03:34:09"
+      "status": "closed",
+      "opened_at": "2026-06-21T22:02:43",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782130211849",
+      "id": "RSI70 · 15m|DCRUSDT|2026-06-22 11:59:59.999000",
       "symbol": "DCRUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 11.93,
       "stop": 11.833549552719532,
-      "stop_orig": 11.833549552719532,
-      "targets": [
-        12.02792,
-        12.15248,
-        12.51248
-      ],
-      "risk": 0.0964504472804677,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.8084698011774326,
-      "result_pct": -0.808,
-      "exit_price": 11.833549552719532,
-      "events": [
-        {
-          "ts": "2026-06-22 14:44:59.999000",
-          "type": "sl",
-          "price": 11.833549552719532,
-          "pct": -0.808
-        }
-      ],
-      "last_ts": "2026-06-22 14:44:59.999000",
-      "closed_at": "2026-06-23T03:34:10"
+      "status": "closed",
+      "opened_at": "2026-06-22T12:10:11",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782130212663",
+      "id": "RSI70 · 15m|TIAUSDT|2026-06-22 11:59:59.999000",
       "symbol": "TIAUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.3963,
-      "stop": 0.3963,
-      "stop_orig": 0.3911392248011571,
-      "targets": [
-        0.4019576,
-        0.4091544,
-        0.4299544
-      ],
-      "risk": 0.005160775198842893,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.3911392248011571,
       "hits": [
-        1
+        1,
+        2
       ],
-      "breakeven": true,
-      "remaining": 0.0,
+      "status": "closed",
+      "opened_at": "2026-06-22T12:10:12",
+      "closed_at": null,
       "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.3963,
-      "events": [
-        {
-          "ts": "2026-06-22 12:29:59.999000",
-          "type": "tp1_be",
-          "price": 0.4019576,
-          "pct": 1.428
-        },
-        {
-          "ts": "2026-06-22 12:44:59.999000",
-          "type": "be_sl",
-          "price": 0.3963,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-22 12:44:59.999000",
-      "closed_at": "2026-06-23T03:34:12"
+      "result_pct": 0.0
     },
     {
-      "id": "1782130237603",
+      "id": "RSI70 · 1h|WUSDT|2026-06-22 11:59:59.999000",
       "symbol": "WUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 0.01259,
       "stop": 0.01188325767984124,
-      "stop_orig": 0.01188325767984124,
-      "targets": [
-        0.01305784,
-        0.01365296,
-        0.01537296
-      ],
-      "risk": 0.0007067423201587604,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -5.6135212085683905,
-      "result_pct": -5.614,
-      "exit_price": 0.01188325767984124,
-      "events": [
-        {
-          "ts": "2026-06-22 13:59:59.999000",
-          "type": "sl",
-          "price": 0.01188325767984124,
-          "pct": -5.614
-        }
-      ],
-      "last_ts": "2026-06-22 13:59:59.999000",
-      "closed_at": "2026-06-23T03:34:13"
+      "status": "closed",
+      "opened_at": "2026-06-22T12:10:38",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782130259464",
+      "id": "RSI70 · 4h|LAYERUSDT|2026-06-22 11:59:59.999000",
       "symbol": "LAYERUSDT",
       "label": "RSI70 · 4h",
-      "strategy": "classic",
-      "timeframe": "4h",
       "side": "buy",
+      "timeframe": "4h",
       "entry": 0.0874,
       "stop": 0.08186154264035365,
-      "stop_orig": 0.08186154264035365,
-      "targets": [
-        0.0937648,
-        0.1018612,
-        0.1252612
-      ],
-      "risk": 0.005538457359646351,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -6.336907734149142,
-      "result_pct": -6.337,
-      "exit_price": 0.08186154264035365,
-      "events": [
-        {
-          "ts": "2026-06-22 15:59:59.999000",
-          "type": "sl",
-          "price": 0.08186154264035365,
-          "pct": -6.337
-        }
-      ],
-      "last_ts": "2026-06-22 15:59:59.999000",
-      "closed_at": "2026-06-23T03:34:14"
+      "status": "closed",
+      "opened_at": "2026-06-22T12:10:59",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782130260482",
+      "id": "RSI70 · 4h|WUSDT|2026-06-22 11:59:59.999000",
       "symbol": "WUSDT",
       "label": "RSI70 · 4h",
-      "strategy": "classic",
-      "timeframe": "4h",
       "side": "buy",
+      "timeframe": "4h",
       "entry": 0.01259,
       "stop": 0.011697041168959614,
-      "stop_orig": 0.011697041168959614,
-      "targets": [
-        0.01346856,
-        0.01458614,
-        0.01781614
-      ],
-      "risk": 0.0008929588310403868,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -7.092603900241357,
-      "result_pct": -7.093,
-      "exit_price": 0.011697041168959614,
-      "events": [
-        {
-          "ts": "2026-06-22 15:59:59.999000",
-          "type": "sl",
-          "price": 0.011697041168959614,
-          "pct": -7.093
-        }
-      ],
-      "last_ts": "2026-06-22 15:59:59.999000",
-      "closed_at": "2026-06-23T03:34:15"
+      "status": "closed",
+      "opened_at": "2026-06-22T12:11:00",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782134541189",
+      "id": "RSI70 · 15m|GTCUSDT|2026-06-22 13:14:59.999000",
       "symbol": "GTCUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.079,
       "stop": 0.07801254291758881,
-      "stop_orig": 0.07801254291758881,
-      "targets": [
-        0.079816,
-        0.080854,
-        0.083854
-      ],
-      "risk": 0.0009874570824111861,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -1.2499456739382104,
-      "result_pct": -1.25,
-      "exit_price": 0.07801254291758881,
-      "events": [
-        {
-          "ts": "2026-06-22 13:29:59.999000",
-          "type": "sl",
-          "price": 0.07801254291758881,
-          "pct": -1.25
-        }
-      ],
-      "last_ts": "2026-06-22 13:29:59.999000",
-      "closed_at": "2026-06-23T03:34:16"
+      "status": "closed",
+      "opened_at": "2026-06-22T13:22:22",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782134542094",
+      "id": "RSI70 · 15m|LPTUSDT|2026-06-22 13:14:59.999000",
       "symbol": "LPTUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 1.775,
       "stop": 1.7661522298147174,
-      "stop_orig": 1.7661522298147174,
-      "targets": [
-        1.786696,
-        1.801574,
-        1.844574
-      ],
-      "risk": 0.008847770185282489,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.49846592593140787,
-      "result_pct": -0.498,
-      "exit_price": 1.7661522298147174,
-      "events": [
-        {
-          "ts": "2026-06-22 13:29:59.999000",
-          "type": "sl",
-          "price": 1.7661522298147174,
-          "pct": -0.498
-        }
-      ],
-      "last_ts": "2026-06-22 13:29:59.999000",
-      "closed_at": "2026-06-23T03:34:17"
+      "status": "closed",
+      "opened_at": "2026-06-22T13:22:23",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782134569821",
+      "id": "RSI70 · 1h|BREVUSDT|2026-06-22 12:59:59.999000",
       "symbol": "BREVUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 0.0863,
-      "stop": 0.0863,
-      "stop_orig": 0.08446060296509166,
-      "targets": [
-        0.0884488,
-        0.0911822,
-        0.0990822
-      ],
-      "risk": 0.0018393970349083466,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.08446060296509166,
       "hits": [
-        1
+        1,
+        2
       ],
-      "breakeven": true,
-      "remaining": 0.0,
+      "status": "closed",
+      "opened_at": "2026-06-22T13:22:49",
+      "closed_at": null,
       "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.0863,
-      "events": [
-        {
-          "ts": "2026-06-22 15:59:59.999000",
-          "type": "tp1_be",
-          "price": 0.0884488,
-          "pct": 2.49
-        },
-        {
-          "ts": "2026-06-22 22:59:59.999000",
-          "type": "be_sl",
-          "price": 0.0863,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-22 22:59:59.999000",
-      "closed_at": "2026-06-23T03:34:19"
+      "result_pct": 0.0
     },
     {
-      "id": "1782135056791",
+      "id": "RSI70 · 15m|DCRUSDT|2026-06-22 13:29:59.999000",
       "symbol": "DCRUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 11.97,
       "stop": 11.871793672015462,
-      "stop_orig": 11.871793672015462,
-      "targets": [
-        12.0788,
-        12.2172,
-        12.6172
-      ],
-      "risk": 0.09820632798453843,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.8204371594364112,
-      "result_pct": -0.82,
-      "exit_price": 11.871793672015462,
-      "events": [
-        {
-          "ts": "2026-06-22 14:44:59.999000",
-          "type": "sl",
-          "price": 11.871793672015462,
-          "pct": -0.82
-        }
-      ],
-      "last_ts": "2026-06-22 14:44:59.999000",
-      "closed_at": "2026-06-23T03:34:20"
+      "status": "closed",
+      "opened_at": "2026-06-22T13:30:57",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782135057251",
+      "id": "RSI70 · 15m|ROSEUSDT|2026-06-22 13:29:59.999000",
       "symbol": "ROSEUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.00687,
       "stop": 0.006802726921688806,
-      "stop_orig": 0.006802726921688806,
-      "targets": [
-        0.00694072,
-        0.00703068,
-        0.00729068
-      ],
-      "risk": 6.727307831119397e-05,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.9792296697408147,
-      "result_pct": -0.979,
-      "exit_price": 0.006802726921688806,
-      "events": [
-        {
-          "ts": "2026-06-22 14:29:59.999000",
-          "type": "sl",
-          "price": 0.006802726921688806,
-          "pct": -0.979
-        }
-      ],
-      "last_ts": "2026-06-22 14:29:59.999000",
-      "closed_at": "2026-06-23T03:34:21"
+      "status": "closed",
+      "opened_at": "2026-06-22T13:30:58",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782135963219",
+      "id": "RSI70 · 15m|ETHUSDT|2026-06-22 13:44:59.999000",
       "symbol": "ETHUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 1774.08,
       "stop": 1763.8034518177715,
-      "stop_orig": 1763.8034518177715,
-      "targets": [
-        1782.32976,
-        1792.82394,
-        1823.15394
-      ],
-      "risk": 10.276548182228453,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.5792606975011528,
-      "result_pct": -0.579,
-      "exit_price": 1763.8034518177715,
-      "events": [
-        {
-          "ts": "2026-06-22 14:29:59.999000",
-          "type": "sl",
-          "price": 1763.8034518177715,
-          "pct": -0.579
-        }
-      ],
-      "last_ts": "2026-06-22 14:29:59.999000",
-      "closed_at": "2026-06-23T03:34:22"
+      "status": "closed",
+      "opened_at": "2026-06-22T13:46:04",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782135964547",
+      "id": "RSI70 · 15m|BTCUSDT|2026-06-22 13:44:59.999000",
       "symbol": "BTCUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 65410.0,
       "stop": 65067.51378716857,
-      "stop_orig": 65067.51378716857,
-      "targets": [
-        65781.552,
-        66254.188,
-        67620.188
-      ],
-      "risk": 342.4862128314271,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.5235991634787145,
-      "result_pct": -0.524,
-      "exit_price": 65067.51378716857,
-      "events": [
-        {
-          "ts": "2026-06-22 14:29:59.999000",
-          "type": "sl",
-          "price": 65067.51378716857,
-          "pct": -0.524
-        }
-      ],
-      "last_ts": "2026-06-22 14:29:59.999000",
-      "closed_at": "2026-06-23T03:34:23"
+      "status": "closed",
+      "opened_at": "2026-06-22T13:46:04",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782135965823",
+      "id": "RSI70 · 15m|ONGUSDT|2026-06-22 13:44:59.999000",
       "symbol": "ONGUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.04792,
       "stop": 0.04762613923413607,
-      "stop_orig": 0.04762613923413607,
-      "targets": [
-        0.04840688,
-        0.04902622,
-        0.05081622
-      ],
-      "risk": 0.0002938607658639278,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.6132319821868276,
-      "result_pct": -0.613,
-      "exit_price": 0.04762613923413607,
-      "events": [
-        {
-          "ts": "2026-06-22 14:44:59.999000",
-          "type": "sl",
-          "price": 0.04762613923413607,
-          "pct": -0.613
-        }
-      ],
-      "last_ts": "2026-06-22 14:44:59.999000",
-      "closed_at": "2026-06-23T03:34:24"
+      "status": "closed",
+      "opened_at": "2026-06-22T13:46:05",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782135966245",
+      "id": "RSI70 · 15m|REQUSDT|2026-06-22 13:44:59.999000",
       "symbol": "REQUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.0581,
-      "stop": 0.0581,
-      "stop_orig": 0.057384503403640166,
-      "targets": [
-        0.0587528,
-        0.0595832,
-        0.0619832
-      ],
-      "risk": 0.0007154965963598325,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.057384503403640166,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.0581,
-      "events": [
-        {
-          "ts": "2026-06-22 15:29:59.999000",
-          "type": "tp1_be",
-          "price": 0.0587528,
-          "pct": 1.124
-        },
-        {
-          "ts": "2026-06-22 15:44:59.999000",
-          "type": "be_sl",
-          "price": 0.0581,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-22 15:44:59.999000",
-      "closed_at": "2026-06-23T03:34:25"
+      "status": "open",
+      "opened_at": "2026-06-22T13:46:06",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
-      "id": "1782135967252",
+      "id": "RSI70 · 15m|STXUSDT|2026-06-22 13:44:59.999000",
       "symbol": "STXUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.1865,
-      "stop": 0.1865,
-      "stop_orig": 0.18488594943626274,
-      "targets": [
-        0.1887304,
-        0.1915676,
-        0.1997676
-      ],
-      "risk": 0.001614050563737257,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.18488594943626274,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.1865,
-      "events": [
-        {
-          "ts": "2026-06-22 14:14:59.999000",
-          "type": "tp1_be",
-          "price": 0.1887304,
-          "pct": 1.196
-        },
-        {
-          "ts": "2026-06-22 14:29:59.999000",
-          "type": "be_sl",
-          "price": 0.1865,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-22 14:29:59.999000",
-      "closed_at": "2026-06-23T03:34:27"
-    },
-    {
-      "id": "1782135968753",
-      "symbol": "ZECUSDT",
-      "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
-      "side": "buy",
-      "entry": 464.24,
-      "stop": 458.88728618287564,
-      "stop_orig": 458.88728618287564,
-      "targets": [
-        468.0752,
-        472.9538,
-        487.0538
-      ],
-      "risk": 5.352713817124368,
-      "opened_at": "2026-06-23T03:34:00",
       "status": "closed",
-      "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -1.1530057334836223,
-      "result_pct": -1.153,
-      "exit_price": 458.88728618287564,
-      "events": [
-        {
-          "ts": "2026-06-22 14:29:59.999000",
-          "type": "sl",
-          "price": 458.88728618287564,
-          "pct": -1.153
-        }
-      ],
-      "last_ts": "2026-06-22 14:29:59.999000",
-      "closed_at": "2026-06-23T03:34:28"
+      "opened_at": "2026-06-22T13:46:07",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782135968811",
+      "id": "RSI70 · 15m|VTHOUSDT|2026-06-22 13:44:59.999000",
       "symbol": "VTHOUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.000399,
-      "stop": 0.000399,
-      "stop_orig": 0.0003966443433271019,
-      "targets": [
-        0.00040145,
-        0.00040456,
-        0.00041356
-      ],
-      "risk": 2.355656672898079e-06,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.0003966443433271019,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 0.2506265664160462,
-      "result_pct": 0.251,
-      "exit_price": 0.0004,
-      "events": [
-        {
-          "ts": "2026-06-22 15:14:59.999000",
-          "type": "tp1_be",
-          "price": 0.00040145,
-          "pct": 0.614
-        },
-        {
-          "ts": "2026-06-22 15:44:59.999000",
-          "type": "bear_div",
-          "price": 0.0004,
-          "pct": 0.251
-        }
-      ],
-      "last_ts": "2026-06-22 15:44:59.999000",
-      "closed_at": "2026-06-23T03:34:29"
+      "status": "closed",
+      "opened_at": "2026-06-22T13:46:08",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782136866311",
+      "id": "RSI70 · 15m|ZECUSDT|2026-06-22 13:44:59.999000",
+      "symbol": "ZECUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 464.24,
+      "stop": 458.88728618287564,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-06-22T13:46:09",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|API3USDT|2026-06-22 13:59:59.999000",
       "symbol": "API3USDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.2655,
       "stop": 0.26363258477533486,
-      "stop_orig": 0.26363258477533486,
-      "targets": [
-        0.2679208,
-        0.2710002,
-        0.2799002
-      ],
-      "risk": 0.0018674152246651587,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.7033579000622067,
-      "result_pct": -0.703,
-      "exit_price": 0.26363258477533486,
-      "events": [
-        {
-          "ts": "2026-06-22 14:44:59.999000",
-          "type": "sl",
-          "price": 0.26363258477533486,
-          "pct": -0.703
-        }
-      ],
-      "last_ts": "2026-06-22 14:44:59.999000",
-      "closed_at": "2026-06-23T03:34:30"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:01:07",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782136867599",
+      "id": "RSI70 · 15m|AVAXUSDT|2026-06-22 13:59:59.999000",
       "symbol": "AVAXUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 6.463,
       "stop": 6.404277940142037,
-      "stop_orig": 6.404277940142037,
-      "targets": [
-        6.523928,
-        6.601432,
-        6.825432
-      ],
-      "risk": 0.058722059857963416,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.9085882695027605,
-      "result_pct": -0.909,
-      "exit_price": 6.404277940142037,
-      "events": [
-        {
-          "ts": "2026-06-22 14:14:59.999000",
-          "type": "sl",
-          "price": 6.404277940142037,
-          "pct": -0.909
-        }
-      ],
-      "last_ts": "2026-06-22 14:14:59.999000",
-      "closed_at": "2026-06-23T03:34:31"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:01:08",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782136868095",
+      "id": "RSI70 · 15m|DOGEUSDT|2026-06-22 13:59:59.999000",
       "symbol": "DOGEUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.08503,
       "stop": 0.08460945052357442,
-      "stop_orig": 0.08460945052357442,
-      "targets": [
-        0.08544616,
-        0.08597554,
-        0.08750554
-      ],
-      "risk": 0.00042054947642557183,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.49458952890223673,
-      "result_pct": -0.495,
-      "exit_price": 0.08460945052357442,
-      "events": [
-        {
-          "ts": "2026-06-22 14:14:59.999000",
-          "type": "sl",
-          "price": 0.08460945052357442,
-          "pct": -0.495
-        }
-      ],
-      "last_ts": "2026-06-22 14:14:59.999000",
-      "closed_at": "2026-06-23T03:34:32"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:01:09",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782136869033",
+      "id": "RSI70 · 15m|ICXUSDT|2026-06-22 13:59:59.999000",
       "symbol": "ICXUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.0283,
       "stop": 0.028167131971778236,
-      "stop_orig": 0.028167131971778236,
-      "targets": [
-        0.0285176,
-        0.0287944,
-        0.0295944
-      ],
-      "risk": 0.000132868028221763,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.4694983329390919,
-      "result_pct": -0.469,
-      "exit_price": 0.028167131971778236,
-      "events": [
-        {
-          "ts": "2026-06-22 14:29:59.999000",
-          "type": "sl",
-          "price": 0.028167131971778236,
-          "pct": -0.469
-        }
-      ],
-      "last_ts": "2026-06-22 14:29:59.999000",
-      "closed_at": "2026-06-23T03:34:33"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:01:10",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782136870471",
+      "id": "RSI70 · 15m|IMXUSDT|2026-06-22 13:59:59.999000",
       "symbol": "IMXUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.1435,
       "stop": 0.1426202972767112,
-      "stop_orig": 0.1426202972767112,
-      "targets": [
-        0.144588,
-        0.145972,
-        0.149972
-      ],
-      "risk": 0.0008797027232888,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.6130332566472474,
-      "result_pct": -0.613,
-      "exit_price": 0.1426202972767112,
-      "events": [
-        {
-          "ts": "2026-06-22 14:29:59.999000",
-          "type": "sl",
-          "price": 0.1426202972767112,
-          "pct": -0.613
-        }
-      ],
-      "last_ts": "2026-06-22 14:29:59.999000",
-      "closed_at": "2026-06-23T03:34:34"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:01:11",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782136872456",
+      "id": "RSI70 · 15m|QNTUSDT|2026-06-22 13:59:59.999000",
       "symbol": "QNTUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 73.4,
       "stop": 72.58732365680919,
-      "stop_orig": 72.58732365680919,
-      "targets": [
-        74.3248,
-        75.5012,
-        78.9012
-      ],
-      "risk": 0.8126763431908159,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -1.107188478461602,
-      "result_pct": -1.107,
-      "exit_price": 72.58732365680919,
-      "events": [
-        {
-          "ts": "2026-06-22 14:29:59.999000",
-          "type": "sl",
-          "price": 72.58732365680919,
-          "pct": -1.107
-        }
-      ],
-      "last_ts": "2026-06-22 14:29:59.999000",
-      "closed_at": "2026-06-23T03:34:35"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:01:12",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782136873170",
+      "id": "RSI70 · 15m|ROSEUSDT|2026-06-22 13:59:59.999000",
       "symbol": "ROSEUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.00687,
       "stop": 0.006800744131456165,
-      "stop_orig": 0.006800744131456165,
-      "targets": [
-        0.00694072,
-        0.00703068,
-        0.00729068
-      ],
-      "risk": 6.925586854383565e-05,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -1.008091245179558,
-      "result_pct": -1.008,
-      "exit_price": 0.006800744131456165,
-      "events": [
-        {
-          "ts": "2026-06-22 14:29:59.999000",
-          "type": "sl",
-          "price": 0.006800744131456165,
-          "pct": -1.008
-        }
-      ],
-      "last_ts": "2026-06-22 14:29:59.999000",
-      "closed_at": "2026-06-23T03:34:36"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:01:13",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782136874975",
+      "id": "RSI70 · 15m|SEIUSDT|2026-06-22 13:59:59.999000",
       "symbol": "SEIUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.05645,
       "stop": 0.056053572516512266,
-      "stop_orig": 0.056053572516512266,
-      "targets": [
-        0.056926,
-        0.0575315,
-        0.0592815
-      ],
-      "risk": 0.00039642748348773377,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.7022630354078544,
-      "result_pct": -0.702,
-      "exit_price": 0.056053572516512266,
-      "events": [
-        {
-          "ts": "2026-06-22 14:14:59.999000",
-          "type": "sl",
-          "price": 0.056053572516512266,
-          "pct": -0.702
-        }
-      ],
-      "last_ts": "2026-06-22 14:14:59.999000",
-      "closed_at": "2026-06-23T03:34:37"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:01:14",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782136875199",
+      "id": "RSI70 · 15m|SSVUSDT|2026-06-22 13:59:59.999000",
       "symbol": "SSVUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 2.416,
       "stop": 2.3963683035497443,
-      "stop_orig": 2.3963683035497443,
-      "targets": [
-        2.4432,
-        2.4778,
-        2.5778
-      ],
-      "risk": 0.019631696450255642,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.8125702173119057,
-      "result_pct": -0.813,
-      "exit_price": 2.3963683035497443,
-      "events": [
-        {
-          "ts": "2026-06-22 14:29:59.999000",
-          "type": "sl",
-          "price": 2.3963683035497443,
-          "pct": -0.813
-        }
-      ],
-      "last_ts": "2026-06-22 14:29:59.999000",
-      "closed_at": "2026-06-23T03:34:38"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:01:15",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782136876344",
+      "id": "RSI70 · 15m|VANAUSDT|2026-06-22 13:59:59.999000",
       "symbol": "VANAUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 1.162,
       "stop": 1.1567154643565494,
-      "stop_orig": 1.1567154643565494,
-      "targets": [
-        1.169616,
-        1.179304,
-        1.207304
-      ],
-      "risk": 0.00528453564345055,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.4547793152711317,
-      "result_pct": -0.455,
-      "exit_price": 1.1567154643565494,
-      "events": [
-        {
-          "ts": "2026-06-22 14:14:59.999000",
-          "type": "sl",
-          "price": 1.1567154643565494,
-          "pct": -0.455
-        }
-      ],
-      "last_ts": "2026-06-22 14:14:59.999000",
-      "closed_at": "2026-06-23T03:34:39"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:01:16",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782136877364",
+      "id": "RSI70 · 15m|XRPUSDT|2026-06-22 13:59:59.999000",
       "symbol": "XRPUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 1.1637,
       "stop": 1.1566674205918224,
-      "stop_orig": 1.1566674205918224,
-      "targets": [
-        1.1721048,
-        1.1827962,
-        1.2136962
-      ],
-      "risk": 0.007032579408177586,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.60432924363475,
-      "result_pct": -0.604,
-      "exit_price": 1.1566674205918224,
-      "events": [
-        {
-          "ts": "2026-06-22 14:14:59.999000",
-          "type": "sl",
-          "price": 1.1566674205918224,
-          "pct": -0.604
-        }
-      ],
-      "last_ts": "2026-06-22 14:14:59.999000",
-      "closed_at": "2026-06-23T03:34:40"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:01:17",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782136878290",
+      "id": "RSI70 · 15m|ZENUSDT|2026-06-22 13:59:59.999000",
       "symbol": "ZENUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 4.711,
       "stop": 4.679517632976213,
-      "stop_orig": 4.679517632976213,
-      "targets": [
-        4.742824,
-        4.783306,
-        4.900306
-      ],
-      "risk": 0.03148236702378693,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.6682735517679246,
-      "result_pct": -0.668,
-      "exit_price": 4.679517632976213,
-      "events": [
-        {
-          "ts": "2026-06-22 14:14:59.999000",
-          "type": "sl",
-          "price": 4.679517632976213,
-          "pct": -0.668
-        }
-      ],
-      "last_ts": "2026-06-22 14:14:59.999000",
-      "closed_at": "2026-06-23T03:34:41"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:01:19",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782136898575",
+      "id": "RSI70 · 1h|ZROUSDT|2026-06-22 13:59:59.999000",
       "symbol": "ZROUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 0.991,
       "stop": 0.9681815634586154,
-      "stop_orig": 0.9681815634586154,
-      "targets": [
-        1.014936,
-        1.045384,
-        1.133384
-      ],
-      "risk": 0.0228184365413846,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -2.302566754932856,
-      "result_pct": -2.303,
-      "exit_price": 0.9681815634586154,
-      "events": [
-        {
-          "ts": "2026-06-22 17:59:59.999000",
-          "type": "sl",
-          "price": 0.9681815634586154,
-          "pct": -2.303
-        }
-      ],
-      "last_ts": "2026-06-22 17:59:59.999000",
-      "closed_at": "2026-06-23T03:34:42"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:01:39",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782137760170",
+      "id": "RSI70 · 15m|CELRUSDT|2026-06-22 14:14:59.999000",
       "symbol": "CELRUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.002113,
       "stop": 0.002097807919714237,
-      "stop_orig": 0.002097807919714237,
-      "targets": [
-        0.00212878,
-        0.00214884,
-        0.00220684
-      ],
-      "risk": 1.5192080285762657e-05,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.7189815563541248,
-      "result_pct": -0.719,
-      "exit_price": 0.002097807919714237,
-      "events": [
-        {
-          "ts": "2026-06-22 14:44:59.999000",
-          "type": "sl",
-          "price": 0.002097807919714237,
-          "pct": -0.719
-        }
-      ],
-      "last_ts": "2026-06-22 14:44:59.999000",
-      "closed_at": "2026-06-23T03:34:43"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:16:01",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782137761272",
+      "id": "RSI70 · 15m|HIVEUSDT|2026-06-22 14:14:59.999000",
       "symbol": "HIVEUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.0506,
       "stop": 0.050269925352316246,
-      "stop_orig": 0.050269925352316246,
-      "targets": [
-        0.0510624,
-        0.0516506,
-        0.0533506
-      ],
-      "risk": 0.0003300746476837535,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.6523214381101848,
-      "result_pct": -0.652,
-      "exit_price": 0.050269925352316246,
-      "events": [
-        {
-          "ts": "2026-06-22 14:29:59.999000",
-          "type": "sl",
-          "price": 0.050269925352316246,
-          "pct": -0.652
-        }
-      ],
-      "last_ts": "2026-06-22 14:29:59.999000",
-      "closed_at": "2026-06-23T03:34:44"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:16:02",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782137762415",
+      "id": "RSI70 · 15m|PARTIUSDT|2026-06-22 14:14:59.999000",
       "symbol": "PARTIUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.0618,
       "stop": 0.06092154338811551,
-      "stop_orig": 0.06092154338811551,
-      "targets": [
-        0.0630784,
-        0.0647046,
-        0.0694046
-      ],
-      "risk": 0.0008784566118844941,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -1.4214508282920617,
-      "result_pct": -1.421,
-      "exit_price": 0.06092154338811551,
-      "events": [
-        {
-          "ts": "2026-06-22 14:44:59.999000",
-          "type": "sl",
-          "price": 0.06092154338811551,
-          "pct": -1.421
-        }
-      ],
-      "last_ts": "2026-06-22 14:44:59.999000",
-      "closed_at": "2026-06-23T03:34:45"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:16:03",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782137763568",
+      "id": "RSI70 · 15m|SIGNUSDT|2026-06-22 14:14:59.999000",
       "symbol": "SIGNUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.00945,
-      "stop": 0.00945,
-      "stop_orig": 0.009381527014492722,
-      "targets": [
-        0.00956424,
-        0.00970956,
-        0.01012956
-      ],
-      "risk": 6.847298550727819e-05,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.009381527014492722,
       "hits": [
-        1
+        1,
+        2
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 1.269841269841273,
-      "result_pct": 1.27,
-      "exit_price": 0.00957,
-      "events": [
-        {
-          "ts": "2026-06-22 15:14:59.999000",
-          "type": "tp1_be",
-          "price": 0.00956424,
-          "pct": 1.209
-        },
-        {
-          "ts": "2026-06-22 17:29:59.999000",
-          "type": "bear_div",
-          "price": 0.00957,
-          "pct": 1.27
-        }
-      ],
-      "last_ts": "2026-06-22 17:29:59.999000",
-      "closed_at": "2026-06-23T03:34:46"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:16:04",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782137764905",
+      "id": "RSI70 · 15m|TRXUSDT|2026-06-22 14:14:59.999000",
       "symbol": "TRXUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.3319,
       "stop": 0.33133943959746553,
-      "stop_orig": 0.33133943959746553,
-      "targets": [
-        0.3322808,
-        0.3327652,
-        0.3341652
-      ],
-      "risk": 0.000560560402534438,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.16889436653643808,
-      "result_pct": -0.169,
-      "exit_price": 0.33133943959746553,
-      "events": [
-        {
-          "ts": "2026-06-22 15:59:59.999000",
-          "type": "sl",
-          "price": 0.33133943959746553,
-          "pct": -0.169
-        }
-      ],
-      "last_ts": "2026-06-22 15:59:59.999000",
-      "closed_at": "2026-06-23T03:34:47"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:16:05",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782137765346",
+      "id": "RSI70 · 15m|VETUSDT|2026-06-22 14:14:59.999000",
       "symbol": "VETUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.005052,
       "stop": 0.00501568856750519,
-      "stop_orig": 0.00501568856750519,
-      "targets": [
-        0.00509606,
-        0.00515212,
-        0.00531412
-      ],
-      "risk": 3.631143249480974e-05,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -0.7187536123279837,
-      "result_pct": -0.719,
-      "exit_price": 0.00501568856750519,
-      "events": [
-        {
-          "ts": "2026-06-22 14:29:59.999000",
-          "type": "sl",
-          "price": 0.00501568856750519,
-          "pct": -0.719
-        }
-      ],
-      "last_ts": "2026-06-22 14:29:59.999000",
-      "closed_at": "2026-06-23T03:34:48"
+      "status": "closed",
+      "opened_at": "2026-06-22T14:16:06",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782140468544",
+      "id": "RSI70 · 15m|CUSDT|2026-06-22 14:59:59.999000",
       "symbol": "CUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.0968,
       "stop": 0.09454131,
-      "stop_orig": 0.09454131,
-      "targets": [
-        0.0978336,
-        0.0991484,
-        0.1029484
-      ],
-      "risk": 0.0022586899999999938,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -2.3333574380165225,
-      "result_pct": -2.333,
-      "exit_price": 0.09454131,
-      "events": [
-        {
-          "ts": "2026-06-22 15:59:59.999000",
-          "type": "sl",
-          "price": 0.09454131,
-          "pct": -2.333
-        }
-      ],
-      "last_ts": "2026-06-22 15:59:59.999000",
-      "closed_at": "2026-06-23T03:34:49"
+      "status": "closed",
+      "opened_at": "2026-06-22T15:01:09",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782140488941",
+      "id": "RSI70 · 1h|TIAUSDT|2026-06-22 14:59:59.999000",
       "symbol": "TIAUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 0.4086,
       "stop": 0.38131902,
-      "stop_orig": 0.38131902,
-      "targets": [
-        0.4215472,
-        0.4380168,
-        0.4856168
-      ],
-      "risk": 0.02728098000000001,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -6.676696035242292,
-      "result_pct": -6.677,
-      "exit_price": 0.38131902,
-      "events": [
-        {
-          "ts": "2026-06-23 00:59:59.999000",
-          "type": "sl",
-          "price": 0.38131902,
-          "pct": -6.677
-        }
-      ],
-      "last_ts": "2026-06-23 00:59:59.999000",
-      "closed_at": "2026-06-23T03:34:50"
+      "status": "closed",
+      "opened_at": "2026-06-22T15:01:29",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782142269993",
+      "id": "RSI70 · 15m|CUSDT|2026-06-22 15:29:59.999000",
       "symbol": "CUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.0973,
       "stop": 0.09477874,
-      "stop_orig": 0.09477874,
-      "targets": [
-        0.0984696,
-        0.0999574,
-        0.1042574
-      ],
-      "risk": 0.0025212599999999974,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -2.5912230215827314,
-      "result_pct": -2.591,
-      "exit_price": 0.09477874,
-      "events": [
-        {
-          "ts": "2026-06-22 15:59:59.999000",
-          "type": "sl",
-          "price": 0.09477874,
-          "pct": -2.591
-        }
-      ],
-      "last_ts": "2026-06-22 15:59:59.999000",
-      "closed_at": "2026-06-23T03:34:51"
+      "status": "closed",
+      "opened_at": "2026-06-22T15:31:10",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782142270761",
+      "id": "RSI70 · 15m|ENSOUSDT|2026-06-22 15:29:59.999000",
       "symbol": "ENSOUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.641,
-      "stop": 0.641,
-      "stop_orig": 0.62347474,
-      "targets": [
-        0.648344,
-        0.657686,
-        0.684686
-      ],
-      "risk": 0.017525259999999987,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.62347474,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 0.6240249609984405,
-      "result_pct": 0.624,
-      "exit_price": 0.645,
-      "events": [
-        {
-          "ts": "2026-06-22 15:44:59.999000",
-          "type": "tp1_be",
-          "price": 0.648344,
-          "pct": 1.146
-        },
-        {
-          "ts": "2026-06-22 17:29:59.999000",
-          "type": "bear_div",
-          "price": 0.645,
-          "pct": 0.624
-        }
-      ],
-      "last_ts": "2026-06-22 17:29:59.999000",
-      "closed_at": "2026-06-23T03:34:53"
+      "status": "open",
+      "opened_at": "2026-06-22T15:31:11",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
-      "id": "1782143155803",
+      "id": "RSI70 · 15m|ARPAUSDT|2026-06-22 15:44:59.999000",
       "symbol": "ARPAUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.00933,
       "stop": 0.00888274,
-      "stop_orig": 0.00888274,
-      "targets": [
-        0.009534,
-        0.0097935,
-        0.0105435
-      ],
-      "risk": 0.00044725999999999967,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -4.793783494105034,
-      "result_pct": -4.794,
-      "exit_price": 0.00888274,
-      "events": [
-        {
-          "ts": "2026-06-22 17:44:59.999000",
-          "type": "sl",
-          "price": 0.00888274,
-          "pct": -4.794
-        }
-      ],
-      "last_ts": "2026-06-22 17:44:59.999000",
-      "closed_at": "2026-06-23T03:34:54"
+      "status": "closed",
+      "opened_at": "2026-06-22T15:45:56",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782143156212",
+      "id": "RSI70 · 15m|POLUSDT|2026-06-22 15:44:59.999000",
       "symbol": "POLUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.08217,
       "stop": 0.08060167,
-      "stop_orig": 0.08060167,
-      "targets": [
-        0.0829044,
-        0.0838386,
-        0.0865386
-      ],
-      "risk": 0.0015683300000000067,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -1.9086406230984625,
-      "result_pct": -1.909,
-      "exit_price": 0.08060167,
-      "events": [
-        {
-          "ts": "2026-06-22 17:14:59.999000",
-          "type": "sl",
-          "price": 0.08060167,
-          "pct": -1.909
-        }
-      ],
-      "last_ts": "2026-06-22 17:14:59.999000",
-      "closed_at": "2026-06-23T03:34:55"
+      "status": "closed",
+      "opened_at": "2026-06-22T15:45:57",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782144097122",
+      "id": "RSI70 · 1h|ARPAUSDT|2026-06-22 15:59:59.999000",
       "symbol": "ARPAUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 0.00926,
       "stop": 0.00873737,
-      "stop_orig": 0.00873737,
-      "targets": [
-        0.00949936,
-        0.00980384,
-        0.01068384
-      ],
-      "risk": 0.0005226299999999996,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -5.643952483801292,
-      "result_pct": -5.644,
-      "exit_price": 0.00873737,
-      "events": [
-        {
-          "ts": "2026-06-22 22:59:59.999000",
-          "type": "sl",
-          "price": 0.00873737,
-          "pct": -5.644
-        }
-      ],
-      "last_ts": "2026-06-22 22:59:59.999000",
-      "closed_at": "2026-06-23T03:34:56"
+      "status": "closed",
+      "opened_at": "2026-06-22T16:01:37",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782144098475",
+      "id": "RSI70 · 1h|AWEUSDT|2026-06-22 15:59:59.999000",
       "symbol": "AWEUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 0.05908,
-      "stop": 0.05908,
-      "stop_orig": 0.05693525,
-      "targets": [
-        0.06008096,
-        0.06135424,
-        0.06503424
-      ],
-      "risk": 0.002144750000000001,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.05693525,
       "hits": [
-        1
+        1,
+        2
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 0.03385240352064859,
-      "result_pct": 0.034,
-      "exit_price": 0.0591,
-      "events": [
-        {
-          "ts": "2026-06-23 03:59:59.999000",
-          "type": "tp1_be",
-          "price": 0.06008096,
-          "pct": 1.694
-        },
-        {
-          "ts": "2026-06-23 03:59:59.999000",
-          "type": "bear_div",
-          "price": 0.0591,
-          "pct": 0.034
-        }
-      ],
-      "last_ts": "2026-06-23 03:59:59.999000",
-      "closed_at": "2026-06-23T04:04:56"
+      "status": "closed",
+      "opened_at": "2026-06-22T16:01:38",
+      "closed_at": null,
+      "realized_pct": 1.34,
+      "result_pct": 1.34
     },
     {
-      "id": "1782144099390",
+      "id": "RSI70 · 1h|BREVUSDT|2026-06-22 15:59:59.999000",
       "symbol": "BREVUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 0.0879,
-      "stop": 0.0879,
-      "stop_orig": 0.08231356,
-      "targets": [
-        0.090484,
-        0.093771,
-        0.103271
-      ],
-      "risk": 0.005586440000000012,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.08231356,
       "hits": [
-        1
+        1,
+        2
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.0879,
-      "events": [
-        {
-          "ts": "2026-06-22 16:59:59.999000",
-          "type": "tp1_be",
-          "price": 0.090484,
-          "pct": 2.94
-        },
-        {
-          "ts": "2026-06-22 17:59:59.999000",
-          "type": "be_sl",
-          "price": 0.0879,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-22 17:59:59.999000",
-      "closed_at": "2026-06-23T03:34:58"
+      "status": "closed",
+      "opened_at": "2026-06-22T16:01:40",
+      "closed_at": null,
+      "realized_pct": -6.36,
+      "result_pct": -6.36
     },
     {
-      "id": "1782144966631",
+      "id": "RSI70 · 15m|BREVUSDT|2026-06-22 16:14:59.999000",
       "symbol": "BREVUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.0911,
-      "stop": 0.0911,
-      "stop_orig": 0.08499145,
-      "targets": [
-        0.0939832,
-        0.0976508,
-        0.1082508
-      ],
-      "risk": 0.006108550000000004,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.08499145,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
+      "status": "closed",
+      "opened_at": "2026-06-22T16:16:07",
+      "closed_at": null,
       "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.0911,
-      "events": [
-        {
-          "ts": "2026-06-22 19:29:59.999000",
-          "type": "tp1_be",
-          "price": 0.0939832,
-          "pct": 3.165
-        },
-        {
-          "ts": "2026-06-22 19:44:59.999000",
-          "type": "be_sl",
-          "price": 0.0911,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-22 19:44:59.999000",
-      "closed_at": "2026-06-23T03:34:59"
+      "result_pct": 0.0
     },
     {
-      "id": "1782145871582",
+      "id": "RSI70 · 15m|ENJUSDT|2026-06-22 16:29:59.999000",
       "symbol": "ENJUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.03435,
       "stop": 0.03350229,
-      "stop_orig": 0.03350229,
-      "targets": [
-        0.03474712,
-        0.03525228,
-        0.03671228
-      ],
-      "risk": 0.0008477100000000015,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -2.467860262008738,
-      "result_pct": -2.468,
-      "exit_price": 0.03350229,
-      "events": [
-        {
-          "ts": "2026-06-22 20:44:59.999000",
-          "type": "sl",
-          "price": 0.03350229,
-          "pct": -2.468
-        }
-      ],
-      "last_ts": "2026-06-22 20:44:59.999000",
-      "closed_at": "2026-06-23T03:35:01"
+      "status": "closed",
+      "opened_at": "2026-06-22T16:31:12",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782145872324",
+      "id": "RSI70 · 15m|SIGNUSDT|2026-06-22 16:29:59.999000",
       "symbol": "SIGNUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.0097,
-      "stop": 0.0097,
-      "stop_orig": 0.00935762,
-      "targets": [
-        0.0098632,
-        0.0100708,
-        0.0106708
-      ],
-      "risk": 0.00034237999999999977,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.00935762,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
+      "status": "closed",
+      "opened_at": "2026-06-22T16:31:13",
+      "closed_at": null,
       "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.0097,
-      "events": [
-        {
-          "ts": "2026-06-22 16:59:59.999000",
-          "type": "tp1_be",
-          "price": 0.0098632,
-          "pct": 1.682
-        },
-        {
-          "ts": "2026-06-22 17:14:59.999000",
-          "type": "be_sl",
-          "price": 0.0097,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-22 17:14:59.999000",
-      "closed_at": "2026-06-23T03:35:03"
+      "result_pct": 0.0
     },
     {
-      "id": "1782147697752",
+      "id": "RSI70 · 1h|TRXUSDT|2026-06-22 16:59:59.999000",
       "symbol": "TRXUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 0.3331,
       "stop": 0.32968647,
-      "stop_orig": 0.32968647,
-      "targets": [
-        0.3346776,
-        0.3366844,
-        0.3424844
-      ],
-      "risk": 0.003413529999999998,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -1.0247763434404078,
-      "result_pct": -1.025,
-      "exit_price": 0.32968647,
-      "events": [
-        {
-          "ts": "2026-06-23 09:59:59.999000",
-          "type": "sl",
-          "price": 0.32968647,
-          "pct": -1.025
-        }
-      ],
-      "last_ts": "2026-06-23 09:59:59.999000",
-      "closed_at": "2026-06-23T10:04:58"
+      "status": "closed",
+      "opened_at": "2026-06-22T17:01:38",
+      "closed_at": null,
+      "realized_pct": -1.02,
+      "result_pct": -1.02
     },
     {
-      "id": "1782149460440",
+      "id": "RSI70 · 15m|FIDAUSDT|2026-06-22 17:29:59.999000",
       "symbol": "FIDAUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.02299,
-      "stop": 0.023149239319464877,
-      "stop_orig": 0.0221764,
-      "targets": [
-        0.02337352,
-        0.02386138,
-        0.02527138
-      ],
-      "risk": 0.0008136000000000011,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.0221764,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 4.393214441061334,
-      "result_pct": 4.393,
-      "exit_price": 0.024,
-      "events": [
-        {
-          "ts": "2026-06-22 17:44:59.999000",
-          "type": "tp1_be",
-          "price": 0.02337352,
-          "pct": 1.668
-        },
-        {
-          "ts": "2026-06-22 22:14:59.999000",
-          "type": "trail",
-          "price": 0.02303796
-        },
-        {
-          "ts": "2026-06-22 22:44:59.999000",
-          "type": "trail",
-          "price": 0.02312125
-        },
-        {
-          "ts": "2026-06-22 22:59:59.999000",
-          "type": "trail",
-          "price": 0.02312687
-        },
-        {
-          "ts": "2026-06-22 23:14:59.999000",
-          "type": "trail",
-          "price": 0.02314924
-        },
-        {
-          "ts": "2026-06-22 23:59:59.999000",
-          "type": "bear_div",
-          "price": 0.024,
-          "pct": 4.393
-        }
-      ],
-      "last_ts": "2026-06-22 23:59:59.999000",
-      "closed_at": "2026-06-23T03:35:05"
+      "status": "open",
+      "opened_at": "2026-06-22T17:31:01",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
-      "id": "1782149461486",
+      "id": "RSI70 · 15m|PORTALUSDT|2026-06-22 17:29:59.999000",
       "symbol": "PORTALUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.01651,
       "stop": 0.01560281,
-      "stop_orig": 0.01560281,
-      "targets": [
-        0.01693432,
-        0.01747408,
-        0.01903408
-      ],
-      "risk": 0.0009071900000000004,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -5.49479103573592,
-      "result_pct": -5.495,
-      "exit_price": 0.01560281,
-      "events": [
-        {
-          "ts": "2026-06-22 19:44:59.999000",
-          "type": "sl",
-          "price": 0.01560281,
-          "pct": -5.495
-        }
-      ],
-      "last_ts": "2026-06-22 19:44:59.999000",
-      "closed_at": "2026-06-23T03:35:06"
+      "status": "closed",
+      "opened_at": "2026-06-22T17:31:02",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782151301790",
+      "id": "RSI70 · 1h|FIDAUSDT|2026-06-22 17:59:59.999000",
       "symbol": "FIDAUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 0.0247,
-      "stop": 0.0247,
-      "stop_orig": 0.02268619,
-      "targets": [
-        0.02563568,
-        0.02682592,
-        0.03026592
-      ],
-      "risk": 0.0020138100000000013,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.02268619,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.0247,
-      "events": [
-        {
-          "ts": "2026-06-22 18:59:59.999000",
-          "type": "tp1_be",
-          "price": 0.02563568,
-          "pct": 3.788
-        },
-        {
-          "ts": "2026-06-22 19:59:59.999000",
-          "type": "be_sl",
-          "price": 0.0247,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-22 19:59:59.999000",
-      "closed_at": "2026-06-23T03:35:07"
+      "status": "closed",
+      "opened_at": "2026-06-22T18:01:42",
+      "closed_at": null,
+      "realized_pct": -8.15,
+      "result_pct": -8.15
     },
     {
-      "id": "1782153064849",
+      "id": "RSI70 · 15m|FIDAUSDT|2026-06-22 18:29:59.999000",
       "symbol": "FIDAUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.02406,
-      "stop": 0.02406,
-      "stop_orig": 0.02250157,
-      "targets": [
-        0.02473456,
-        0.02559264,
-        0.02807264
-      ],
-      "risk": 0.001558430000000003,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.02250157,
       "hits": [
-        1
+        1,
+        2
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.02406,
-      "events": [
-        {
-          "ts": "2026-06-22 18:59:59.999000",
-          "type": "tp1_be",
-          "price": 0.02473456,
-          "pct": 2.804
-        },
-        {
-          "ts": "2026-06-22 19:14:59.999000",
-          "type": "be_sl",
-          "price": 0.02406,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-22 19:14:59.999000",
-      "closed_at": "2026-06-23T03:35:09"
+      "status": "closed",
+      "opened_at": "2026-06-22T18:31:04",
+      "closed_at": null,
+      "realized_pct": -1.12,
+      "result_pct": -1.12
     },
     {
-      "id": "1782155766006",
+      "id": "RSI70 · 15m|ENSOUSDT|2026-06-22 19:14:59.999000",
       "symbol": "ENSOUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.665,
       "stop": 0.63706123,
-      "stop_orig": 0.63706123,
-      "targets": [
-        0.678056,
-        0.694664,
-        0.742664
-      ],
-      "risk": 0.02793877,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -4.2013187969924815,
-      "result_pct": -4.201,
-      "exit_price": 0.63706123,
-      "events": [
-        {
-          "ts": "2026-06-22 22:14:59.999000",
-          "type": "sl",
-          "price": 0.63706123,
-          "pct": -4.201
-        }
-      ],
-      "last_ts": "2026-06-22 22:14:59.999000",
-      "closed_at": "2026-06-23T03:35:10"
+      "status": "closed",
+      "opened_at": "2026-06-22T19:16:07",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782157556684",
+      "id": "RSI70 · 15m|ENSOUSDT|2026-06-22 19:44:59.999000",
       "symbol": "ENSOUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.669,
       "stop": 0.63911657,
-      "stop_orig": 0.63911657,
-      "targets": [
-        0.683144,
-        0.701136,
-        0.753136
-      ],
-      "risk": 0.029883430000000044,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -4.466880418535133,
-      "result_pct": -4.467,
-      "exit_price": 0.63911657,
-      "events": [
-        {
-          "ts": "2026-06-22 22:14:59.999000",
-          "type": "sl",
-          "price": 0.63911657,
-          "pct": -4.467
-        }
-      ],
-      "last_ts": "2026-06-22 22:14:59.999000",
-      "closed_at": "2026-06-23T03:35:11"
+      "status": "closed",
+      "opened_at": "2026-06-22T19:45:57",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782158481055",
+      "id": "RSI70 · 1h|ENSOUSDT|2026-06-22 19:59:59.999000",
       "symbol": "ENSOUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 0.673,
       "stop": 0.63258423,
-      "stop_orig": 0.63258423,
-      "targets": [
-        0.691768,
-        0.715642,
-        0.784642
-      ],
-      "risk": 0.04041577000000007,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -6.005315007429431,
-      "result_pct": -6.005,
-      "exit_price": 0.63258423,
-      "events": [
-        {
-          "ts": "2026-06-22 23:59:59.999000",
-          "type": "sl",
-          "price": 0.63258423,
-          "pct": -6.005
-        }
-      ],
-      "last_ts": "2026-06-22 23:59:59.999000",
-      "closed_at": "2026-06-23T03:35:12"
+      "status": "closed",
+      "opened_at": "2026-06-22T20:01:21",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782158499730",
+      "id": "RSI70 · 4h|SYNUSDT|2026-06-22 19:59:59.999000",
       "symbol": "SYNUSDT",
       "label": "RSI70 · 4h",
-      "strategy": "classic",
-      "timeframe": "4h",
       "side": "buy",
+      "timeframe": "4h",
       "entry": 0.274,
-      "stop": 0.274,
-      "stop_orig": 0.17895078,
-      "targets": [
-        0.3163232,
-        0.3701608,
-        0.5257608
-      ],
-      "risk": 0.09504922000000002,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.17895078,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.274,
-      "events": [
-        {
-          "ts": "2026-06-22 23:59:59.999000",
-          "type": "tp1_be",
-          "price": 0.3163232,
-          "pct": 15.446
-        },
-        {
-          "ts": "2026-06-23 03:59:59.999000",
-          "type": "be_sl",
-          "price": 0.274,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-23 03:59:59.999000",
-      "closed_at": "2026-06-23T04:04:58"
+      "status": "open",
+      "opened_at": "2026-06-22T20:01:39",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
-      "id": "1782162089351",
+      "id": "RSI70 · 1h|TRXUSDT|2026-06-22 20:59:59.999000",
       "symbol": "TRXUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 0.3337,
       "stop": 0.33008577,
-      "stop_orig": 0.33008577,
-      "targets": [
-        0.3353864,
-        0.3375316,
-        0.3437316
-      ],
-      "risk": 0.003614229999999996,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -1.0830776146239125,
-      "result_pct": -1.083,
-      "exit_price": 0.33008577,
-      "events": [
-        {
-          "ts": "2026-06-23 09:59:59.999000",
-          "type": "sl",
-          "price": 0.33008577,
-          "pct": -1.083
-        }
-      ],
-      "last_ts": "2026-06-23 09:59:59.999000",
-      "closed_at": "2026-06-23T10:05:00"
+      "status": "closed",
+      "opened_at": "2026-06-22T21:01:29",
+      "closed_at": null,
+      "realized_pct": -1.08,
+      "result_pct": -1.08
     },
     {
-      "id": "1782172900955",
+      "id": "RSI70 · 4h|TRXUSDT|2026-06-22 23:59:59.999000",
       "symbol": "TRXUSDT",
       "label": "RSI70 · 4h",
-      "strategy": "classic",
-      "timeframe": "4h",
       "side": "buy",
+      "timeframe": "4h",
       "entry": 0.3341,
       "stop": 0.32588643,
-      "stop_orig": 0.32588643,
-      "targets": [
-        0.3380712,
-        0.3431228,
-        0.3577228
-      ],
-      "risk": 0.008213570000000003,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "open",
       "hits": [],
-      "breakeven": false,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-24 11:59:59.999000",
-      "closed_at": null
+      "status": "open",
+      "opened_at": "2026-06-23T00:01:41",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
-      "id": "1782173753396",
+      "id": "RSI70 · 15m|DEXEUSDT|2026-06-23 00:14:59.999000",
       "symbol": "DEXEUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 22.376,
-      "stop": 22.376,
-      "stop_orig": 19.71291387,
-      "targets": [
-        23.67072,
-        25.31768,
-        30.07768
-      ],
-      "risk": 2.66308613,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 19.71291387,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 8.133714694315339,
-      "result_pct": 8.134,
-      "exit_price": 24.196,
-      "events": [
-        {
-          "ts": "2026-06-23 06:59:59.999000",
-          "type": "tp1_be",
-          "price": 23.67072,
-          "pct": 5.786
-        },
-        {
-          "ts": "2026-06-23 06:59:59.999000",
-          "type": "bear_div",
-          "price": 24.196,
-          "pct": 8.134
-        }
-      ],
-      "last_ts": "2026-06-23 06:59:59.999000",
-      "closed_at": "2026-06-23T07:03:55"
+      "status": "open",
+      "opened_at": "2026-06-23T00:15:54",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
-      "id": "1782174656156",
+      "id": "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000",
       "symbol": "HIVEUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.0524,
-      "stop": 0.0524,
-      "stop_orig": 0.05030932,
-      "targets": [
-        0.0533792,
-        0.0546248,
-        0.0582248
-      ],
-      "risk": 0.0020906800000000045,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.05030932,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
+      "status": "closed",
+      "opened_at": "2026-06-23T00:30:56",
+      "closed_at": null,
       "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.0524,
-      "events": [
-        {
-          "ts": "2026-06-23 00:44:59.999000",
-          "type": "tp1_be",
-          "price": 0.0533792,
-          "pct": 1.869
-        },
-        {
-          "ts": "2026-06-23 00:59:59.999000",
-          "type": "be_sl",
-          "price": 0.0524,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-23 00:59:59.999000",
-      "closed_at": "2026-06-23T03:35:16"
+      "result_pct": 0.0
     },
     {
-      "id": "1782176469772",
+      "id": "RSI70 · 15m|STORJUSDT|2026-06-23 00:59:59.999000",
       "symbol": "STORJUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.0787,
-      "stop": 0.0787,
-      "stop_orig": 0.07626029,
-      "targets": [
-        0.0798968,
-        0.0814192,
-        0.0858192
-      ],
-      "risk": 0.0024397100000000116,
-      "opened_at": "2026-06-23T03:34:00",
-      "status": "closed",
+      "stop": 0.07626029,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.0787,
-      "events": [
-        {
-          "ts": "2026-06-23 01:14:59.999000",
-          "type": "tp1_be",
-          "price": 0.0798968,
-          "pct": 1.521
-        },
-        {
-          "ts": "2026-06-23 01:29:59.999000",
-          "type": "be_sl",
-          "price": 0.0787,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-23 01:29:59.999000",
-      "closed_at": "2026-06-23T03:35:17"
+      "status": "closed",
+      "opened_at": "2026-06-23T01:01:09",
+      "closed_at": null,
+      "realized_pct": -3.1,
+      "result_pct": -3.1
     },
     {
-      "id": "1782187317443",
+      "id": "RSI70 · 4h|DEXEUSDT|2026-06-23 03:59:59.999000",
       "symbol": "DEXEUSDT",
       "label": "RSI70 · 4h",
-      "strategy": "classic",
-      "timeframe": "4h",
       "side": "buy",
+      "timeframe": "4h",
       "entry": 22.656,
       "stop": 17.40869129,
-      "stop_orig": 17.40869129,
-      "targets": [
-        25.173632,
-        28.376208,
-        37.632208
-      ],
-      "risk": 5.247308709999999,
-      "opened_at": "2026-06-23T04:04:53",
-      "status": "open",
       "hits": [],
-      "breakeven": false,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-24 11:59:59.999000",
-      "closed_at": null
+      "status": "open",
+      "opened_at": "2026-06-23T04:01:57",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
-      "id": "1782189063729",
+      "id": "RSI70 · 15m|SCRUSDT|2026-06-23 04:29:59.999000",
       "symbol": "SCRUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.03159,
-      "stop": 0.03159,
-      "stop_orig": 0.03053217,
-      "targets": [
-        0.03210408,
-        0.03275802,
-        0.03464802
-      ],
-      "risk": 0.0010578299999999992,
-      "opened_at": "2026-06-23T04:34:50",
-      "status": "closed",
+      "stop": 0.03053217,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
+      "status": "closed",
+      "opened_at": "2026-06-23T04:31:03",
+      "closed_at": null,
       "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.03159,
-      "events": [
-        {
-          "ts": "2026-06-23 05:29:59.999000",
-          "type": "tp1_be",
-          "price": 0.03210408,
-          "pct": 1.627
-        },
-        {
-          "ts": "2026-06-23 06:29:59.999000",
-          "type": "be_sl",
-          "price": 0.03159,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-23 06:29:59.999000",
-      "closed_at": "2026-06-23T06:34:14"
+      "result_pct": 0.0
     },
     {
-      "id": "1782190867193",
+      "id": "RSI70 · 15m|MOVRUSDT|2026-06-23 04:59:59.999000",
       "symbol": "MOVRUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 1.255,
-      "stop": 1.255,
-      "stop_orig": 1.20586377,
-      "targets": [
-        1.278664,
-        1.308766,
-        1.395766
-      ],
-      "risk": 0.04913623,
-      "opened_at": "2026-06-23T05:05:00",
-      "status": "closed",
+      "stop": 1.20586377,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 1.255,
-      "events": [
-        {
-          "ts": "2026-06-23 05:14:59.999000",
-          "type": "tp1_be",
-          "price": 1.278664,
-          "pct": 1.886
-        },
-        {
-          "ts": "2026-06-23 05:29:59.999000",
-          "type": "be_sl",
-          "price": 1.255,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-23 05:29:59.999000",
-      "closed_at": "2026-06-23T05:33:53"
+      "status": "open",
+      "opened_at": "2026-06-23T05:01:08",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
-      "id": "1782193554456",
+      "id": "RSI70 · 15m|SCRUSDT|2026-06-23 05:44:59.999000",
       "symbol": "SCRUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.03235,
-      "stop": 0.03235,
-      "stop_orig": 0.03089879,
-      "targets": [
-        0.0330436,
-        0.0339259,
-        0.0364759
-      ],
-      "risk": 0.001451209999999998,
-      "opened_at": "2026-06-23T05:48:36",
-      "status": "closed",
+      "stop": 0.03089879,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 3.2148377125193397,
-      "result_pct": 3.215,
-      "exit_price": 0.03339,
-      "events": [
-        {
-          "ts": "2026-06-23 08:59:59.999000",
-          "type": "tp1_be",
-          "price": 0.0330436,
-          "pct": 2.144
-        },
-        {
-          "ts": "2026-06-23 08:59:59.999000",
-          "type": "bear_div",
-          "price": 0.03339,
-          "pct": 3.215
-        }
-      ],
-      "last_ts": "2026-06-23 08:59:59.999000",
-      "closed_at": "2026-06-23T09:03:51"
+      "status": "closed",
+      "opened_at": "2026-06-23T05:45:55",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782194471531",
+      "id": "RSI70 · 15m|SCUSDT|2026-06-23 05:59:59.999000",
       "symbol": "SCUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.000713,
-      "stop": 0.000713,
-      "stop_orig": 0.00069728,
-      "targets": [
-        0.00072007,
-        0.00072907,
-        0.00075507
-      ],
-      "risk": 1.5719999999999992e-05,
-      "opened_at": "2026-06-23T06:05:06",
-      "status": "closed",
+      "stop": 0.00069728,
       "hits": [
-        1
+        1,
+        2
       ],
-      "breakeven": true,
-      "remaining": 0.0,
+      "status": "closed",
+      "opened_at": "2026-06-23T06:01:11",
+      "closed_at": null,
       "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.000713,
-      "events": [
-        {
-          "ts": "2026-06-23 06:14:59.999000",
-          "type": "tp1_be",
-          "price": 0.00072007,
-          "pct": 0.992
-        },
-        {
-          "ts": "2026-06-23 06:29:59.999000",
-          "type": "be_sl",
-          "price": 0.000713,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-23 06:29:59.999000",
-      "closed_at": "2026-06-23T06:34:16"
+      "result_pct": 0.0
     },
     {
-      "id": "1782194499722",
+      "id": "RSI70 · 1h|MOVRUSDT|2026-06-23 05:59:59.999000",
       "symbol": "MOVRUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 1.382,
       "stop": 1.25399611,
-      "stop_orig": 1.25399611,
-      "targets": [
-        1.441568,
-        1.517342,
-        1.736342
-      ],
-      "risk": 0.1280038899999998,
-      "opened_at": "2026-06-23T06:05:06",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -9.262220694645427,
-      "result_pct": -9.262,
-      "exit_price": 1.25399611,
-      "events": [
-        {
-          "ts": "2026-06-23 08:59:59.999000",
-          "type": "sl",
-          "price": 1.25399611,
-          "pct": -9.262
-        }
-      ],
-      "last_ts": "2026-06-23 08:59:59.999000",
-      "closed_at": "2026-06-23T09:03:52"
+      "status": "closed",
+      "opened_at": "2026-06-23T06:01:40",
+      "closed_at": null,
+      "realized_pct": -9.26,
+      "result_pct": -9.26
     },
     {
-      "id": "1782195360297",
+      "id": "RSI70 · 15m|QKCUSDT|2026-06-23 06:14:59.999000",
       "symbol": "QKCUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.002153,
       "stop": 0.00209692,
-      "stop_orig": 0.00209692,
-      "targets": [
-        0.00217422,
-        0.0022012,
-        0.0022792
-      ],
-      "risk": 5.608000000000002e-05,
-      "opened_at": "2026-06-23T06:19:54",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -2.6047375754760806,
-      "result_pct": -2.605,
-      "exit_price": 0.00209692,
-      "events": [
-        {
-          "ts": "2026-06-23 06:29:59.999000",
-          "type": "sl",
-          "price": 0.00209692,
-          "pct": -2.605
-        }
-      ],
-      "last_ts": "2026-06-23 06:29:59.999000",
-      "closed_at": "2026-06-23T06:34:17"
+      "status": "closed",
+      "opened_at": "2026-06-23T06:16:00",
+      "closed_at": null,
+      "realized_pct": -2.6,
+      "result_pct": -2.6
     },
     {
-      "id": "1782198063786",
+      "id": "RSI70 · 15m|DEXEUSDT|2026-06-23 06:59:59.999000",
       "symbol": "DEXEUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 24.196,
       "stop": 22.26452872,
-      "stop_orig": 22.26452872,
-      "targets": [
-        25.024512,
-        26.078428,
-        29.124428
-      ],
-      "risk": 1.9314712800000002,
-      "opened_at": "2026-06-23T07:03:50",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -7.982605719953711,
-      "result_pct": -7.983,
-      "exit_price": 22.26452872,
-      "events": [
-        {
-          "ts": "2026-06-23 13:29:59.999000",
-          "type": "sl",
-          "price": 22.26452872,
-          "pct": -7.983
-        }
-      ],
-      "last_ts": "2026-06-23 13:29:59.999000",
-      "closed_at": "2026-06-23T13:34:11"
+      "status": "closed",
+      "opened_at": "2026-06-23T07:01:04",
+      "closed_at": null,
+      "realized_pct": -7.98,
+      "result_pct": -7.98
     },
     {
-      "id": "1782198083800",
+      "id": "RSI70 · 1h|AWEUSDT|2026-06-23 06:59:59.999000",
       "symbol": "AWEUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 0.06105,
-      "stop": 0.06105,
-      "stop_orig": 0.05912944,
-      "targets": [
-        0.06188504,
-        0.06294726,
-        0.06601726
-      ],
-      "risk": 0.0019205600000000017,
-      "opened_at": "2026-06-23T07:03:50",
-      "status": "closed",
+      "stop": 0.05912944,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 1.900081900081902,
-      "result_pct": 1.9,
-      "exit_price": 0.06221,
-      "events": [
-        {
-          "ts": "2026-06-23 08:59:59.999000",
-          "type": "tp1_be",
-          "price": 0.06188504,
-          "pct": 1.368
-        },
-        {
-          "ts": "2026-06-23 08:59:59.999000",
-          "type": "bear_div",
-          "price": 0.06221,
-          "pct": 1.9
-        }
-      ],
-      "last_ts": "2026-06-23 08:59:59.999000",
-      "closed_at": "2026-06-23T09:03:54"
+      "status": "closed",
+      "opened_at": "2026-06-23T07:01:24",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782205280484",
+      "id": "RSI70 · 1h|AWEUSDT|2026-06-23 08:59:59.999000",
       "symbol": "AWEUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 0.06221,
-      "stop": 0.06221,
-      "stop_orig": 0.05965605,
-      "targets": [
-        0.06336056,
-        0.06482414,
-        0.06905414
-      ],
-      "risk": 0.0025539499999999993,
-      "opened_at": "2026-06-23T09:03:45",
-      "status": "closed",
+      "stop": 0.05965605,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": -3.150618871564063,
-      "result_pct": -3.151,
-      "exit_price": 0.06025,
-      "events": [
-        {
-          "ts": "2026-06-23 09:59:59.999000",
-          "type": "tp1_be",
-          "price": 0.06336056,
-          "pct": 1.849
-        },
-        {
-          "ts": "2026-06-23 09:59:59.999000",
-          "type": "bear_div",
-          "price": 0.06025,
-          "pct": -3.151
-        }
-      ],
-      "last_ts": "2026-06-23 09:59:59.999000",
-      "closed_at": "2026-06-23T10:05:04"
+      "status": "closed",
+      "opened_at": "2026-06-23T09:01:21",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
-      "id": "1782216089028",
+      "id": "RSI70 · 1h|DEXEUSDT|2026-06-23 11:59:59.999000",
       "symbol": "DEXEUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 22.861,
       "stop": 19.69446517,
-      "stop_orig": 19.69446517,
-      "targets": [
-        24.28764,
-        26.10241,
-        31.34741
-      ],
-      "risk": 3.16653483,
-      "opened_at": "2026-06-23T12:04:07",
-      "status": "open",
       "hits": [],
-      "breakeven": false,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-24 14:59:59.999000",
-      "closed_at": null
+      "status": "open",
+      "opened_at": "2026-06-23T12:01:30",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
-      "id": "1782216109135",
+      "id": "RSI70 · 4h|AWEUSDT|2026-06-23 11:59:59.999000",
       "symbol": "AWEUSDT",
       "label": "RSI70 · 4h",
-      "strategy": "classic",
-      "timeframe": "4h",
       "side": "buy",
+      "timeframe": "4h",
       "entry": 0.06256,
       "stop": 0.05711041,
-      "stop_orig": 0.05711041,
-      "targets": [
-        0.06509504,
-        0.06831976,
-        0.07763976
-      ],
-      "risk": 0.005449590000000004,
-      "opened_at": "2026-06-23T12:04:07",
-      "status": "open",
       "hits": [],
-      "breakeven": false,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-24 11:59:59.999000",
-      "closed_at": null
+      "status": "open",
+      "opened_at": "2026-06-23T12:01:50",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
-      "id": "1782217869711",
+      "id": "RSI70 · 15m|ALGOUSDT|2026-06-23 12:29:59.999000",
       "symbol": "ALGOUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.0958,
       "stop": 0.09152364,
-      "stop_orig": 0.09152364,
-      "targets": [
-        0.0978672,
-        0.1004968,
-        0.1080968
-      ],
-      "risk": 0.004276359999999993,
-      "opened_at": "2026-06-23T12:35:07",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -4.463841336116903,
-      "result_pct": -4.464,
-      "exit_price": 0.09152364,
-      "events": [
-        {
-          "ts": "2026-06-24 07:59:59.999000",
-          "type": "sl",
-          "price": 0.09152364,
-          "pct": -4.464
-        }
-      ],
-      "last_ts": "2026-06-24 07:59:59.999000",
-      "closed_at": "2026-06-24T08:04:27"
+      "status": "closed",
+      "opened_at": "2026-06-23T12:31:14",
+      "closed_at": null,
+      "realized_pct": -4.46,
+      "result_pct": -4.46
     },
     {
-      "id": "1782217874368",
+      "id": "RSI70 · 15m|GUSDT|2026-06-23 12:29:59.999000",
       "symbol": "GUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.003,
-      "stop": 0.003,
-      "stop_orig": 0.00277696,
-      "targets": [
-        0.00310608,
-        0.00324102,
-        0.00363102
-      ],
-      "risk": 0.00022303999999999987,
-      "opened_at": "2026-06-23T12:35:07",
-      "status": "closed",
+      "stop": 0.00277696,
       "hits": [
-        1
+        1,
+        2
       ],
-      "breakeven": true,
-      "remaining": 0.0,
+      "status": "closed",
+      "opened_at": "2026-06-23T12:31:15",
+      "closed_at": null,
       "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.003,
-      "events": [
-        {
-          "ts": "2026-06-23 12:44:59.999000",
-          "type": "tp1_be",
-          "price": 0.00310608,
-          "pct": 3.536
-        },
-        {
-          "ts": "2026-06-23 14:14:59.999000",
-          "type": "be_sl",
-          "price": 0.003,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-23 14:14:59.999000",
-      "closed_at": "2026-06-23T14:18:49"
+      "result_pct": 0.0
     },
     {
-      "id": "1782219697362",
+      "id": "RSI70 · 1h|GUSDT|2026-06-23 12:59:59.999000",
       "symbol": "GUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 0.0034,
       "stop": 0.00292643,
-      "stop_orig": 0.00292643,
-      "targets": [
-        0.0036312,
-        0.0039253,
-        0.0047753
-      ],
-      "risk": 0.00047357,
-      "opened_at": "2026-06-23T13:04:58",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -13.928529411764707,
-      "result_pct": -13.929,
-      "exit_price": 0.00292643,
-      "events": [
-        {
-          "ts": "2026-06-23 14:59:59.999000",
-          "type": "sl",
-          "price": 0.00292643,
-          "pct": -13.929
-        }
-      ],
-      "last_ts": "2026-06-23 14:59:59.999000",
-      "closed_at": "2026-06-23T15:05:12"
+      "status": "closed",
+      "opened_at": "2026-06-23T13:01:38",
+      "closed_at": null,
+      "realized_pct": -13.93,
+      "result_pct": -13.93
     },
     {
-      "id": "1782223454959",
+      "id": "trendwave · 1h|GUSDT|2026-06-23 13:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 0.00308,
       "stop": 0.00248811,
-      "stop_orig": 0.00248811,
-      "targets": [
-        0.00467424,
-        0.00525206,
-        0.00589
-      ],
-      "risk": 0.0005918899999999999,
-      "opened_at": "2026-06-23T14:05:16",
-      "status": "open",
       "hits": [],
-      "breakeven": false,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-24 14:59:59.999000",
-      "closed_at": null
+      "status": "open",
+      "opened_at": "2026-06-23T14:04:14",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
-      "id": "1782230533382",
+      "id": "RSI70 · 4h|GUSDT|2026-06-23 15:59:59.999000",
       "symbol": "GUSDT",
       "label": "RSI70 · 4h",
-      "strategy": "classic",
-      "timeframe": "4h",
       "side": "buy",
+      "timeframe": "4h",
       "entry": 0.00302,
-      "stop": 0.00302,
-      "stop_orig": 0.00272943,
-      "targets": [
-        0.00314784,
-        0.00331046,
-        0.00378046
-      ],
-      "risk": 0.00029057,
-      "opened_at": "2026-06-23T16:05:12",
-      "status": "open",
+      "stop": 0.00272943,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [
-        {
-          "ts": "2026-06-24 07:59:59.999000",
-          "type": "tp1_be",
-          "price": 0.00314784,
-          "pct": 4.233
-        }
-      ],
-      "last_ts": "2026-06-24 11:59:59.999000",
-      "closed_at": null
+      "status": "closed",
+      "opened_at": "2026-06-23T16:02:14",
+      "closed_at": null,
+      "realized_pct": -9.62,
+      "result_pct": -9.62
     },
     {
-      "id": "1782233168032",
+      "id": "RSI70 · 15m|WCTUSDT|2026-06-23 16:44:59.999000",
       "symbol": "WCTUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.04636,
-      "stop": 0.04636,
-      "stop_orig": 0.04509401,
-      "targets": [
-        0.04696656,
-        0.04773814,
-        0.04996814
-      ],
-      "risk": 0.0012659900000000016,
-      "opened_at": "2026-06-23T16:49:57",
-      "status": "closed",
+      "stop": 0.04509401,
       "hits": [
-        1
+        1,
+        2
       ],
-      "breakeven": true,
-      "remaining": 0.0,
+      "status": "closed",
+      "opened_at": "2026-06-23T16:46:09",
+      "closed_at": null,
       "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.04636,
-      "events": [
-        {
-          "ts": "2026-06-23 17:29:59.999000",
-          "type": "tp1_be",
-          "price": 0.04696656,
-          "pct": 1.308
-        },
-        {
-          "ts": "2026-06-23 20:14:59.999000",
-          "type": "be_sl",
-          "price": 0.04636,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-23 20:14:59.999000",
-      "closed_at": "2026-06-23T20:18:45"
+      "result_pct": 0.0
     },
     {
-      "id": "1782235878979",
+      "id": "RSI70 · 15m|HEIUSDT|2026-06-23 17:29:59.999000",
       "symbol": "HEIUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.1122,
-      "stop": 0.12350919723799533,
-      "stop_orig": 0.09834306,
-      "targets": [
-        0.118864,
-        0.127341,
-        0.151841
-      ],
-      "risk": 0.013856939999999998,
-      "opened_at": "2026-06-23T17:34:18",
-      "status": "closed",
+      "stop": 0.09834306,
       "hits": [
-        1
+        1,
+        2
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 23.618538324420673,
-      "result_pct": 23.619,
-      "exit_price": 0.1387,
-      "events": [
-        {
-          "ts": "2026-06-23 18:14:59.999000",
-          "type": "tp1_be",
-          "price": 0.118864,
-          "pct": 5.939
-        },
-        {
-          "ts": "2026-06-23 23:29:59.999000",
-          "type": "trail",
-          "price": 0.11396777
-        },
-        {
-          "ts": "2026-06-24 00:29:59.999000",
-          "type": "trail",
-          "price": 0.11448697
-        },
-        {
-          "ts": "2026-06-24 00:59:59.999000",
-          "type": "trail",
-          "price": 0.11634386
-        },
-        {
-          "ts": "2026-06-24 01:14:59.999000",
-          "type": "trail",
-          "price": 0.11739073
-        },
-        {
-          "ts": "2026-06-24 01:29:59.999000",
-          "type": "trail",
-          "price": 0.11984854
-        },
-        {
-          "ts": "2026-06-24 01:44:59.999000",
-          "type": "trail",
-          "price": 0.12310221
-        },
-        {
-          "ts": "2026-06-24 01:59:59.999000",
-          "type": "trail",
-          "price": 0.1235092
-        },
-        {
-          "ts": "2026-06-24 01:59:59.999000",
-          "type": "bear_div",
-          "price": 0.1387,
-          "pct": 23.619
-        }
-      ],
-      "last_ts": "2026-06-24 01:59:59.999000",
-      "closed_at": "2026-06-24T02:03:56"
+      "status": "open",
+      "opened_at": "2026-06-23T17:31:18",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
-      "id": "1782237673451",
+      "id": "RSI70 · 15m|EDUUSDT|2026-06-23 17:59:59.999000",
       "symbol": "EDUUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.0305,
-      "stop": 0.0305,
-      "stop_orig": 0.02908249,
-      "targets": [
-        0.03118,
-        0.032045,
-        0.034545
-      ],
-      "risk": 0.0014175100000000003,
-      "opened_at": "2026-06-23T18:03:57",
-      "status": "closed",
+      "stop": 0.02908249,
       "hits": [
-        1
+        1,
+        2
       ],
-      "breakeven": true,
-      "remaining": 0.0,
+      "status": "closed",
+      "opened_at": "2026-06-23T18:01:13",
+      "closed_at": null,
       "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.0305,
-      "events": [
-        {
-          "ts": "2026-06-23 18:29:59.999000",
-          "type": "tp1_be",
-          "price": 0.03118,
-          "pct": 2.23
-        },
-        {
-          "ts": "2026-06-23 20:59:59.999000",
-          "type": "be_sl",
-          "price": 0.0305,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-23 20:59:59.999000",
-      "closed_at": "2026-06-23T21:04:31"
+      "result_pct": 0.0
     },
     {
-      "id": "1782237674861",
+      "id": "RSI70 · 15m|SYNUSDT|2026-06-23 17:59:59.999000",
       "symbol": "SYNUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.3253,
       "stop": 0.28031103,
-      "stop_orig": 0.28031103,
-      "targets": [
-        0.345972,
-        0.372268,
-        0.448268
-      ],
-      "risk": 0.04498896999999996,
-      "opened_at": "2026-06-23T18:03:57",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -13.82999385182907,
-      "result_pct": -13.83,
-      "exit_price": 0.28031103,
-      "events": [
-        {
-          "ts": "2026-06-23 21:14:59.999000",
-          "type": "sl",
-          "price": 0.28031103,
-          "pct": -13.83
-        }
-      ],
-      "last_ts": "2026-06-23 21:14:59.999000",
-      "closed_at": "2026-06-23T21:18:49"
+      "status": "closed",
+      "opened_at": "2026-06-23T18:01:14",
+      "closed_at": null,
+      "realized_pct": -13.83,
+      "result_pct": -13.83
     },
     {
-      "id": "1782237694682",
+      "id": "RSI70 · 1h|HEIUSDT|2026-06-23 17:59:59.999000",
       "symbol": "HEIUSDT",
       "label": "RSI70 · 1h",
-      "strategy": "classic",
-      "timeframe": "1h",
       "side": "buy",
+      "timeframe": "1h",
       "entry": 0.1124,
-      "stop": 0.1124,
-      "stop_orig": 0.09433464,
-      "targets": [
-        0.1209136,
-        0.1317434,
-        0.1630434
-      ],
-      "risk": 0.018065360000000003,
-      "opened_at": "2026-06-23T18:03:57",
-      "status": "open",
+      "stop": 0.09433464,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [
-        {
-          "ts": "2026-06-23 18:59:59.999000",
-          "type": "tp1_be",
-          "price": 0.1209136,
-          "pct": 7.574
-        }
-      ],
-      "last_ts": "2026-06-24 14:59:59.999000",
-      "closed_at": null
+      "status": "open",
+      "opened_at": "2026-06-23T18:01:35",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
-      "id": "1782244915211",
+      "id": "RSI70 · 4h|SYNUSDT|2026-06-23 19:59:59.999000",
       "symbol": "SYNUSDT",
       "label": "RSI70 · 4h",
-      "strategy": "classic",
-      "timeframe": "4h",
       "side": "buy",
+      "timeframe": "4h",
       "entry": 0.306,
       "stop": 0.19678723,
-      "stop_orig": 0.19678723,
-      "targets": [
-        0.3544704,
-        0.4161276,
-        0.5943276
-      ],
-      "risk": 0.10921276999999999,
-      "opened_at": "2026-06-23T20:04:01",
-      "status": "open",
       "hits": [],
-      "breakeven": false,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-24 11:59:59.999000",
-      "closed_at": null
+      "status": "open",
+      "opened_at": "2026-06-23T20:01:55",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
-      "id": "1782250271958",
+      "id": "RSI70 · 15m|JASMYUSDT|2026-06-23 21:29:59.999000",
       "symbol": "JASMYUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.00473,
       "stop": 0.00457691,
-      "stop_orig": 0.00457691,
-      "targets": [
-        0.00480344,
-        0.00489686,
-        0.00516686
-      ],
-      "risk": 0.00015308999999999982,
-      "opened_at": "2026-06-23T21:35:04",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -3.236575052854119,
-      "result_pct": -3.237,
-      "exit_price": 0.00457691,
-      "events": [
-        {
-          "ts": "2026-06-24 07:29:59.999000",
-          "type": "sl",
-          "price": 0.00457691,
-          "pct": -3.237
-        }
-      ],
-      "last_ts": "2026-06-24 07:29:59.999000",
-      "closed_at": "2026-06-24T07:35:18"
+      "status": "closed",
+      "opened_at": "2026-06-23T21:31:11",
+      "closed_at": null,
+      "realized_pct": -3.24,
+      "result_pct": -3.24
     },
     {
-      "id": "1782258366288",
+      "id": "RSI70 · 15m|SAHARAUSDT|2026-06-23 23:44:59.999000",
       "symbol": "SAHARAUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.01257,
-      "stop": 0.01257,
-      "stop_orig": 0.01181191,
-      "targets": [
-        0.01292904,
-        0.01338576,
-        0.01470576
-      ],
-      "risk": 0.0007580899999999995,
-      "opened_at": "2026-06-23T23:49:59",
-      "status": "closed",
+      "stop": 0.01181191,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.01257,
-      "events": [
-        {
-          "ts": "2026-06-24 04:29:59.999000",
-          "type": "tp1_be",
-          "price": 0.01292904,
-          "pct": 2.856
-        },
-        {
-          "ts": "2026-06-24 04:59:59.999000",
-          "type": "be_sl",
-          "price": 0.01257,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-24 04:59:59.999000",
-      "closed_at": "2026-06-24T05:04:04"
+      "status": "closed",
+      "opened_at": "2026-06-23T23:46:06",
+      "closed_at": null,
+      "realized_pct": -6.03,
+      "result_pct": -6.03
     },
     {
-      "id": "1782260169622",
+      "id": "RSI70 · 15m|HEIUSDT|2026-06-24 00:14:59.999000",
       "symbol": "HEIUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.1369,
-      "stop": 0.1369,
-      "stop_orig": 0.12228914,
-      "targets": [
-        0.1433464,
-        0.1515466,
-        0.1752466
-      ],
-      "risk": 0.01461085999999999,
-      "opened_at": "2026-06-24T00:20:07",
-      "status": "closed",
+      "stop": 0.12228914,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 1.3148283418553661,
-      "result_pct": 1.315,
-      "exit_price": 0.1387,
-      "events": [
-        {
-          "ts": "2026-06-24 00:44:59.999000",
-          "type": "tp1_be",
-          "price": 0.1433464,
-          "pct": 4.709
-        },
-        {
-          "ts": "2026-06-24 01:59:59.999000",
-          "type": "bear_div",
-          "price": 0.1387,
-          "pct": 1.315
-        }
-      ],
-      "last_ts": "2026-06-24 01:59:59.999000",
-      "closed_at": "2026-06-24T02:03:59"
+      "status": "closed",
+      "opened_at": "2026-06-24T00:16:09",
+      "closed_at": null,
+      "realized_pct": -10.67,
+      "result_pct": -10.67
     },
     {
-      "id": "1782279970053",
+      "id": "RSI70 · 15m|POLYXUSDT|2026-06-24 05:44:59.999000",
       "symbol": "POLYXUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.0376,
       "stop": 0.03666599,
-      "stop_orig": 0.03666599,
-      "targets": [
-        0.0380352,
-        0.0385888,
-        0.0401888
-      ],
-      "risk": 0.000934009999999999,
-      "opened_at": "2026-06-24T05:50:03",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -2.4840691489361673,
-      "result_pct": -2.484,
-      "exit_price": 0.03666599,
-      "events": [
-        {
-          "ts": "2026-06-24 10:29:59.999000",
-          "type": "sl",
-          "price": 0.03666599,
-          "pct": -2.484
-        }
-      ],
-      "last_ts": "2026-06-24 10:29:59.999000",
-      "closed_at": "2026-06-24T10:33:37"
+      "status": "closed",
+      "opened_at": "2026-06-24T05:46:11",
+      "closed_at": null,
+      "realized_pct": -2.48,
+      "result_pct": -2.48
     },
     {
-      "id": "1782283567768",
+      "id": "RSI70 · 15m|ALICEUSDT|2026-06-24 06:44:59.999000",
       "symbol": "ALICEUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.1464,
       "stop": 0.13169032,
-      "stop_orig": 0.13169032,
-      "targets": [
-        0.1531456,
-        0.1617264,
-        0.1865264
-      ],
-      "risk": 0.014709680000000003,
-      "opened_at": "2026-06-24T06:49:59",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -10.047595628415303,
-      "result_pct": -10.048,
-      "exit_price": 0.13169032,
-      "events": [
-        {
-          "ts": "2026-06-24 12:29:59.999000",
-          "type": "sl",
-          "price": 0.13169032,
-          "pct": -10.048
-        }
-      ],
-      "last_ts": "2026-06-24 12:29:59.999000",
-      "closed_at": "2026-06-24T12:35:24"
+      "status": "closed",
+      "opened_at": "2026-06-24T06:46:07",
+      "closed_at": null,
+      "realized_pct": -10.05,
+      "result_pct": -10.05
     },
     {
-      "id": "1782283567796",
+      "id": "RSI70 · 15m|CHZUSDT|2026-06-24 06:44:59.999000",
       "symbol": "CHZUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.02027,
       "stop": 0.01976043,
-      "stop_orig": 0.01976043,
-      "targets": [
-        0.02050392,
-        0.02080148,
-        0.02166148
-      ],
-      "risk": 0.0005095700000000009,
-      "opened_at": "2026-06-24T06:49:59",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -2.5139121854958106,
-      "result_pct": -2.514,
-      "exit_price": 0.01976043,
-      "events": [
-        {
-          "ts": "2026-06-24 07:29:59.999000",
-          "type": "sl",
-          "price": 0.01976043,
-          "pct": -2.514
-        }
-      ],
-      "last_ts": "2026-06-24 07:29:59.999000",
-      "closed_at": "2026-06-24T07:35:21"
+      "status": "closed",
+      "opened_at": "2026-06-24T06:46:08",
+      "closed_at": null,
+      "realized_pct": -2.51,
+      "result_pct": -2.51
     },
     {
-      "id": "1782287164416",
+      "id": "RSI70 · 15m|MASKUSDT|2026-06-24 07:44:59.999000",
       "symbol": "MASKUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.401,
-      "stop": 0.401,
-      "stop_orig": 0.38808117,
-      "targets": [
-        0.407256,
-        0.415214,
-        0.438214
-      ],
-      "risk": 0.012918830000000048,
-      "opened_at": "2026-06-24T07:49:55",
-      "status": "closed",
+      "stop": 0.38808117,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 0.9975062344139659,
-      "result_pct": 0.998,
-      "exit_price": 0.405,
-      "events": [
-        {
-          "ts": "2026-06-24 08:59:59.999000",
-          "type": "tp1_be",
-          "price": 0.407256,
-          "pct": 1.56
-        },
-        {
-          "ts": "2026-06-24 08:59:59.999000",
-          "type": "bear_div",
-          "price": 0.405,
-          "pct": 0.998
-        }
-      ],
-      "last_ts": "2026-06-24 08:59:59.999000",
-      "closed_at": "2026-06-24T09:05:24"
+      "status": "closed",
+      "opened_at": "2026-06-24T07:46:05",
+      "closed_at": null,
+      "realized_pct": -3.22,
+      "result_pct": -3.22
     },
     {
-      "id": "1782288072939",
+      "id": "RSI70 · 15m|SAHARAUSDT|2026-06-24 07:59:59.999000",
       "symbol": "SAHARAUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.01369,
-      "stop": 0.01369,
-      "stop_orig": 0.01272581,
-      "targets": [
-        0.01412792,
-        0.01468498,
-        0.01629498
-      ],
-      "risk": 0.0009641900000000002,
-      "opened_at": "2026-06-24T08:04:21",
-      "status": "closed",
+      "stop": 0.01272581,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.01369,
-      "events": [
-        {
-          "ts": "2026-06-24 08:59:59.999000",
-          "type": "tp1_be",
-          "price": 0.01412792,
-          "pct": 3.199
-        },
-        {
-          "ts": "2026-06-24 09:14:59.999000",
-          "type": "be_sl",
-          "price": 0.01369,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-24 09:14:59.999000",
-      "closed_at": "2026-06-24T09:19:16"
+      "status": "closed",
+      "opened_at": "2026-06-24T08:01:13",
+      "closed_at": null,
+      "realized_pct": -7.04,
+      "result_pct": -7.04
     },
     {
-      "id": "1782288115426",
+      "id": "RSI70 · 4h|GUSDT|2026-06-24 07:59:59.999000",
       "symbol": "GUSDT",
       "label": "RSI70 · 4h",
-      "strategy": "classic",
-      "timeframe": "4h",
       "side": "buy",
+      "timeframe": "4h",
       "entry": 0.00328,
       "stop": 0.00283215,
-      "stop_orig": 0.00283215,
-      "targets": [
-        0.00347856,
-        0.00373114,
-        0.00446114
-      ],
-      "risk": 0.00044785000000000007,
-      "opened_at": "2026-06-24T08:04:21",
-      "status": "open",
       "hits": [],
-      "breakeven": false,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-24 11:59:59.999000",
-      "closed_at": null
+      "status": "open",
+      "opened_at": "2026-06-24T08:01:55",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
-      "id": "1782288967883",
+      "id": "RSI70 · 15m|PROMUSDT|2026-06-24 08:14:59.999000",
       "symbol": "PROMUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 1.1,
-      "stop": 1.1,
-      "stop_orig": 1.06681449,
-      "targets": [
-        1.116048,
-        1.136462,
-        1.195462
-      ],
-      "risk": 0.03318551000000003,
-      "opened_at": "2026-06-24T08:20:31",
-      "status": "closed",
+      "stop": 1.06681449,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 1.1,
-      "events": [
-        {
-          "ts": "2026-06-24 08:44:59.999000",
-          "type": "tp1_be",
-          "price": 1.116048,
-          "pct": 1.459
-        },
-        {
-          "ts": "2026-06-24 09:29:59.999000",
-          "type": "be_sl",
-          "price": 1.1,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-24 09:29:59.999000",
-      "closed_at": "2026-06-24T09:33:55"
+      "status": "closed",
+      "opened_at": "2026-06-24T08:16:08",
+      "closed_at": null,
+      "realized_pct": -3.02,
+      "result_pct": -3.02
     },
     {
-      "id": "1782295281338",
+      "id": "RSI70 · 15m|PARTIUSDT|2026-06-24 09:59:59.999000",
       "symbol": "PARTIUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.0586,
       "stop": 0.0567269,
-      "stop_orig": 0.0567269,
-      "targets": [
-        0.0594704,
-        0.0605776,
-        0.0637776
-      ],
-      "risk": 0.0018731000000000025,
-      "opened_at": "2026-06-24T10:05:13",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -3.196416382252564,
-      "result_pct": -3.196,
-      "exit_price": 0.0567269,
-      "events": [
-        {
-          "ts": "2026-06-24 14:14:59.999000",
-          "type": "sl",
-          "price": 0.0567269,
-          "pct": -3.196
-        }
-      ],
-      "last_ts": "2026-06-24 14:14:59.999000",
-      "closed_at": "2026-06-24T14:19:48"
+      "status": "closed",
+      "opened_at": "2026-06-24T10:01:21",
+      "closed_at": null,
+      "realized_pct": -3.2,
+      "result_pct": -3.2
     },
     {
-      "id": "1782303364716",
+      "id": "RSI70 · 15m|ASTRUSDT|2026-06-24 12:14:59.999000",
       "symbol": "ASTRUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.005357,
       "stop": 0.00525075,
-      "stop_orig": 0.00525075,
-      "targets": [
-        0.00540569,
-        0.00546762,
-        0.00564662
-      ],
-      "risk": 0.00010624999999999957,
-      "opened_at": "2026-06-24T12:19:55",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -1.9833862236326223,
-      "result_pct": -1.983,
-      "exit_price": 0.00525075,
-      "events": [
-        {
-          "ts": "2026-06-24 13:14:59.999000",
-          "type": "sl",
-          "price": 0.00525075,
-          "pct": -1.983
-        }
-      ],
-      "last_ts": "2026-06-24 13:14:59.999000",
-      "closed_at": "2026-06-24T13:20:09"
+      "status": "closed",
+      "opened_at": "2026-06-24T12:16:04",
+      "closed_at": null,
+      "realized_pct": -1.98,
+      "result_pct": -1.98
     },
     {
-      "id": "1782303365550",
+      "id": "RSI70 · 15m|CELOUSDT|2026-06-24 12:14:59.999000",
       "symbol": "CELOUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.06481,
       "stop": 0.06254174,
-      "stop_orig": 0.06254174,
-      "targets": [
-        0.0658844,
-        0.0672511,
-        0.0712011
-      ],
-      "risk": 0.002268260000000008,
-      "opened_at": "2026-06-24T12:19:55",
-      "status": "closed",
       "hits": [],
-      "breakeven": false,
-      "remaining": 0.0,
-      "realized_pct": -3.499861132541286,
-      "result_pct": -3.5,
-      "exit_price": 0.06254174,
-      "events": [
-        {
-          "ts": "2026-06-24 13:14:59.999000",
-          "type": "sl",
-          "price": 0.06254174,
-          "pct": -3.5
-        }
-      ],
-      "last_ts": "2026-06-24 13:14:59.999000",
-      "closed_at": "2026-06-24T13:20:10"
+      "status": "closed",
+      "opened_at": "2026-06-24T12:16:05",
+      "closed_at": null,
+      "realized_pct": -3.5,
+      "result_pct": -3.5
     },
     {
-      "id": "1782304277349",
+      "id": "RSI70 · 15m|ALPINEUSDT|2026-06-24 12:29:59.999000",
       "symbol": "ALPINEUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.326,
-      "stop": 0.326,
-      "stop_orig": 0.31833864,
-      "targets": [
-        0.329536,
-        0.334034,
-        0.347034
-      ],
-      "risk": 0.007661360000000006,
-      "opened_at": "2026-06-24T12:35:14",
-      "status": "closed",
+      "stop": 0.31833864,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 0.0,
-      "realized_pct": 0.0,
-      "result_pct": 0.0,
-      "exit_price": 0.326,
-      "events": [
-        {
-          "ts": "2026-06-24 12:44:59.999000",
-          "type": "tp1_be",
-          "price": 0.329536,
-          "pct": 1.085
-        },
-        {
-          "ts": "2026-06-24 13:59:59.999000",
-          "type": "be_sl",
-          "price": 0.326,
-          "pct": 0.0
-        }
-      ],
-      "last_ts": "2026-06-24 13:59:59.999000",
-      "closed_at": "2026-06-24T14:05:21"
+      "status": "closed",
+      "opened_at": "2026-06-24T12:31:18",
+      "closed_at": null,
+      "realized_pct": -2.35,
+      "result_pct": -2.35
     },
     {
-      "id": "1782307086119",
+      "id": "trendwave · 15m|LAZIOUSDT|2026-06-24 13:14:59.999000",
       "symbol": "LAZIOUSDT",
       "label": "trendwave · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.465,
       "stop": 0.388201,
-      "stop_orig": 0.388201,
-      "targets": [
-        0.581168,
-        0.630992,
-        0.686
-      ],
-      "risk": 0.076799,
-      "opened_at": "2026-06-24T13:19:58",
-      "status": "open",
       "hits": [],
-      "breakeven": false,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-24 14:59:59.999000",
-      "closed_at": null
+      "status": "closed",
+      "opened_at": "2026-06-24T13:18:07",
+      "closed_at": null,
+      "realized_pct": -16.52,
+      "result_pct": -16.52
     },
     {
-      "id": "1782310565278",
+      "id": "RSI70 · 15m|ONGUSDT|2026-06-24 14:14:59.999000",
       "symbol": "ONGUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.0471,
-      "stop": 0.0471,
-      "stop_orig": 0.04496593,
-      "targets": [
-        0.04792688,
-        0.04897872,
-        0.05201872
-      ],
-      "risk": 0.002134070000000002,
-      "opened_at": "2026-06-24T14:19:39",
-      "status": "open",
+      "stop": 0.04496593,
       "hits": [
         1
       ],
-      "breakeven": true,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [
-        {
-          "ts": "2026-06-24 14:59:59.999000",
-          "type": "tp1_be",
-          "price": 0.04792688,
-          "pct": 1.756
-        }
-      ],
-      "last_ts": "2026-06-24 14:59:59.999000",
-      "closed_at": null
+      "status": "closed",
+      "opened_at": "2026-06-24T14:16:06",
+      "closed_at": null,
+      "realized_pct": -4.53,
+      "result_pct": -4.53
     },
     {
-      "id": "1782312363871",
+      "id": "RSI70 · 15m|CELRUSDT|2026-06-24 14:44:59.999000",
       "symbol": "CELRUSDT",
       "label": "RSI70 · 15m",
-      "strategy": "classic",
-      "timeframe": "15m",
       "side": "buy",
+      "timeframe": "15m",
       "entry": 0.002024,
       "stop": 0.00195888,
-      "stop_orig": 0.00195888,
-      "targets": [
-        0.00205338,
-        0.00209074,
-        0.00219874
-      ],
-      "risk": 6.512000000000011e-05,
-      "opened_at": "2026-06-24T14:49:24",
-      "status": "open",
       "hits": [],
-      "breakeven": false,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-24 14:59:59.999000",
-      "closed_at": null
+      "status": "closed",
+      "opened_at": "2026-06-24T14:46:03",
+      "closed_at": null,
+      "realized_pct": -3.22,
+      "result_pct": -3.22
+    },
+    {
+      "id": "RSI70 · 15m|CELRUSDT|2026-06-24 15:29:59.999000",
+      "symbol": "CELRUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00204,
+      "stop": 0.00196608,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-06-24T15:31:12",
+      "closed_at": null,
+      "realized_pct": -3.62,
+      "result_pct": -3.62
+    },
+    {
+      "id": "trendwave · 4h|TONUSDT|2026-06-24 15:59:59.999000",
+      "symbol": "TONUSDT",
+      "label": "trendwave · 4h",
+      "side": "buy",
+      "timeframe": "4h",
+      "entry": 1.55680933,
+      "stop": 1.51533732,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T16:04:00",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|EDUUSDT|2026-06-24 16:14:59.999000",
+      "symbol": "EDUUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03024487,
+      "stop": 0.02966384,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-06-24T16:17:55",
+      "closed_at": null,
+      "realized_pct": -1.92,
+      "result_pct": -1.92
+    },
+    {
+      "id": "trendwave · 15m|HEIUSDT|2026-06-24 16:14:59.999000",
+      "symbol": "HEIUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.11628533,
+      "stop": 0.11315546,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T16:17:55",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|EDUUSDT|2026-06-24 16:29:59.999000",
+      "symbol": "EDUUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03009707,
+      "stop": 0.02967,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-06-24T16:32:54",
+      "closed_at": null,
+      "realized_pct": -1.42,
+      "result_pct": -1.42
+    },
+    {
+      "id": "trendwave · 15m|GUSDT|2026-06-24 16:29:59.999000",
+      "symbol": "GUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00305927,
+      "stop": 0.00297388,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T16:32:55",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|OGUSDT|2026-06-24 16:29:59.999000",
+      "symbol": "OGUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 2.64418467,
+      "stop": 2.60604948,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-06-24T16:32:56",
+      "closed_at": null,
+      "realized_pct": -1.44,
+      "result_pct": -1.44
+    },
+    {
+      "id": "trendwave · 15m|STRAXUSDT|2026-06-24 16:29:59.999000",
+      "symbol": "STRAXUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01011971,
+      "stop": 0.01001212,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-06-24T16:32:57",
+      "closed_at": null,
+      "realized_pct": -1.06,
+      "result_pct": -1.06
+    },
+    {
+      "id": "trendwave · 15m|HEIUSDT|2026-06-24 16:59:59.999000",
+      "symbol": "HEIUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.11853167,
+      "stop": 0.1152283,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-06-24T17:03:19",
+      "closed_at": null,
+      "realized_pct": -2.79,
+      "result_pct": -2.79
+    },
+    {
+      "id": "trendwave · 15m|GUSDT|2026-06-24 17:59:59.999000",
+      "symbol": "GUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00301463,
+      "stop": 0.0029568,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T18:03:27",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|HEIUSDT|2026-06-24 18:29:59.999000",
+      "symbol": "HEIUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.11463607,
+      "stop": 0.1118209,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T18:32:33",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
