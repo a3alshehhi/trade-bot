@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-24T19:05:12",
+  "updated_at": "2026-06-24T19:20:06",
   "stats": {
-    "open": 21,
+    "open": 22,
     "closed": 100,
     "win_rate": 1.0,
     "profit_factor": 0.01,
@@ -1907,6 +1907,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-24T19:04:06",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|HEIUSDT|2026-06-24 19:14:59.999000",
+      "symbol": "HEIUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.11423313,
+      "stop": 0.1113513,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T19:18:12",
       "closed_at": null,
       "realized_pct": 0.0
     }
