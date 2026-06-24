@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-24T20:20:02",
+  "updated_at": "2026-06-24T20:35:20",
   "stats": {
-    "open": 24,
+    "open": 27,
     "closed": 102,
     "win_rate": 2.0,
     "profit_factor": 0.09,
@@ -1981,6 +1981,48 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-24T20:16:06",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|CELOUSDT|2026-06-24 20:29:59.999000",
+      "symbol": "CELOUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06696,
+      "stop": 0.06352351,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T20:31:19",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|HEIUSDT|2026-06-24 20:29:59.999000",
+      "symbol": "HEIUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1148258,
+      "stop": 0.11149937,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T20:33:22",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|STRAXUSDT|2026-06-24 20:29:59.999000",
+      "symbol": "STRAXUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0105878,
+      "stop": 0.01030232,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T20:33:23",
       "closed_at": null,
       "realized_pct": 0.0
     }
