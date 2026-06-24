@@ -3004,7 +3004,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 03:59:59.999000",
+    "last_ts": "2026-06-24 04:59:59.999000",
     "closed_at": null
   },
   {
@@ -3060,7 +3060,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 04:44:59.999000",
+    "last_ts": "2026-06-24 04:59:59.999000",
     "closed_at": null
   },
   {
@@ -3166,7 +3166,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 03:59:59.999000",
+    "last_ts": "2026-06-24 04:59:59.999000",
     "closed_at": null
   },
   {
@@ -3430,7 +3430,7 @@
         "pct": 7.574
       }
     ],
-    "last_ts": "2026-06-24 03:59:59.999000",
+    "last_ts": "2026-06-24 04:59:59.999000",
     "closed_at": null
   },
   {
@@ -3486,7 +3486,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 04:44:59.999000",
+    "last_ts": "2026-06-24 04:59:59.999000",
     "closed_at": null
   },
   {
@@ -3506,25 +3506,31 @@
     ],
     "risk": 0.0007580899999999995,
     "opened_at": "2026-06-23T23:49:59",
-    "status": "open",
+    "status": "closed",
     "hits": [
       1
     ],
     "breakeven": true,
-    "remaining": 1.0,
+    "remaining": 0.0,
     "realized_pct": 0.0,
-    "result_pct": null,
-    "exit_price": null,
+    "result_pct": 0.0,
+    "exit_price": 0.01257,
     "events": [
       {
         "ts": "2026-06-24 04:29:59.999000",
         "type": "tp1_be",
         "price": 0.01292904,
         "pct": 2.856
+      },
+      {
+        "ts": "2026-06-24 04:59:59.999000",
+        "type": "be_sl",
+        "price": 0.01257,
+        "pct": 0.0
       }
     ],
-    "last_ts": "2026-06-24 04:44:59.999000",
-    "closed_at": null
+    "last_ts": "2026-06-24 04:59:59.999000",
+    "closed_at": "2026-06-24T05:04:04"
   },
   {
     "id": "1782260169622",
