@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-24T21:49:00",
+  "updated_at": "2026-06-24T22:05:21",
   "stats": {
-    "open": 32,
+    "open": 33,
     "closed": 105,
     "win_rate": 4.8,
     "profit_factor": 0.11,
@@ -1898,11 +1898,13 @@
       "timeframe": "1h",
       "entry": 0.03324193,
       "stop": 0.03204652,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-24T19:04:05",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 3.95
     },
     {
       "id": "trendwave · 1h|XPLUSDT|2026-06-24 18:59:59.999000",
@@ -2150,6 +2152,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-24T21:47:32",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|CELOUSDT|2026-06-24 21:59:59.999000",
+      "symbol": "CELOUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06670877,
+      "stop": 0.06568475,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T22:03:18",
       "closed_at": null,
       "realized_pct": 0.0
     }
