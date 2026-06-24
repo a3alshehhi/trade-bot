@@ -1333,7 +1333,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-06-24 21:59:59.999000"
+    "last_bar": "2026-06-24 22:14:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -1981,7 +1981,7 @@
     "is_trendwave": false,
     "breakeven_done": true,
     "bar_ts": "2026-06-23 17:29:59.999000",
-    "last_bar": "2026-06-24 21:59:59.999000",
+    "last_bar": "2026-06-24 22:14:59.999000",
     "hits": [
       1,
       2
@@ -2821,7 +2821,7 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 16:29:59.999000",
-    "last_bar": "2026-06-24 21:59:59.999000",
+    "last_bar": "2026-06-24 22:14:59.999000",
     "hits": [
       1
     ],
@@ -2929,7 +2929,7 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 17:59:59.999000",
-    "last_bar": "2026-06-24 21:59:59.999000",
+    "last_bar": "2026-06-24 22:14:59.999000",
     "hits": [
       1
     ],
@@ -2957,7 +2957,7 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 18:29:59.999000",
-    "last_bar": "2026-06-24 21:59:59.999000",
+    "last_bar": "2026-06-24 22:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1218,
@@ -3037,7 +3037,7 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 19:14:59.999000",
-    "last_bar": "2026-06-24 21:59:59.999000",
+    "last_bar": "2026-06-24 22:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1218,
@@ -3146,7 +3146,7 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 20:14:59.999000",
-    "last_bar": "2026-06-24 21:59:59.999000",
+    "last_bar": "2026-06-24 22:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0844,
@@ -3208,7 +3208,7 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 20:29:59.999000",
-    "last_bar": "2026-06-24 21:59:59.999000",
+    "last_bar": "2026-06-24 22:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1218,
@@ -3380,7 +3380,7 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 21:14:59.999000",
-    "last_bar": "2026-06-24 21:59:59.999000",
+    "last_bar": "2026-06-24 22:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1207,
@@ -3443,7 +3443,7 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 21:44:59.999000",
-    "last_bar": "2026-06-24 21:59:59.999000",
+    "last_bar": "2026-06-24 22:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.000309,
@@ -3469,10 +3469,10 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 21:44:59.999000",
-    "last_bar": "2026-06-24 21:59:59.999000",
+    "last_bar": "2026-06-24 22:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.03,
+    "hi_seen": 0.0302,
     "lo_seen": 0.02979707,
     "created": "2026-06-24T21:47:32"
   },
@@ -3484,7 +3484,7 @@
     "entry": 0.06670877,
     "stop": 0.06568475,
     "init_stop": 0.06568475,
-    "cur_stop": 0.06568475,
+    "cur_stop": 0.06670877,
     "last_alert_stop": 0.06568475,
     "armed": false,
     "targets": [
@@ -3495,11 +3495,17 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 21:59:59.999000",
-    "last_bar": "2026-06-24 21:59:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.06670877,
+    "last_bar": "2026-06-24 22:14:59.999000",
+    "hits": [
+      1,
+      2
+    ],
+    "stopped": true,
+    "hi_seen": 0.06759,
     "lo_seen": 0.06670877,
-    "created": "2026-06-24T22:03:18"
+    "created": "2026-06-24T22:03:18",
+    "exit_price": 0.067185,
+    "close_card_sent": true,
+    "closed_at": "2026-06-24T22:20:17"
   }
 }
