@@ -3060,7 +3060,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 07:14:59.999000",
+    "last_ts": "2026-06-24 07:29:59.999000",
     "closed_at": null
   },
   {
@@ -3478,16 +3478,23 @@
     ],
     "risk": 0.00015308999999999982,
     "opened_at": "2026-06-23T21:35:04",
-    "status": "open",
+    "status": "closed",
     "hits": [],
     "breakeven": false,
-    "remaining": 1.0,
-    "realized_pct": 0.0,
-    "result_pct": null,
-    "exit_price": null,
-    "events": [],
-    "last_ts": "2026-06-24 07:14:59.999000",
-    "closed_at": null
+    "remaining": 0.0,
+    "realized_pct": -3.236575052854119,
+    "result_pct": -3.237,
+    "exit_price": 0.00457691,
+    "events": [
+      {
+        "ts": "2026-06-24 07:29:59.999000",
+        "type": "sl",
+        "price": 0.00457691,
+        "pct": -3.237
+      }
+    ],
+    "last_ts": "2026-06-24 07:29:59.999000",
+    "closed_at": "2026-06-24T07:35:18"
   },
   {
     "id": "1782258366288",
@@ -3600,7 +3607,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 07:14:59.999000",
+    "last_ts": "2026-06-24 07:29:59.999000",
     "closed_at": null
   },
   {
@@ -3628,7 +3635,7 @@
     "result_pct": null,
     "exit_price": null,
     "events": [],
-    "last_ts": "2026-06-24 07:14:59.999000",
+    "last_ts": "2026-06-24 07:29:59.999000",
     "closed_at": null
   },
   {
@@ -3648,15 +3655,22 @@
     ],
     "risk": 0.0005095700000000009,
     "opened_at": "2026-06-24T06:49:59",
-    "status": "open",
+    "status": "closed",
     "hits": [],
     "breakeven": false,
-    "remaining": 1.0,
-    "realized_pct": 0.0,
-    "result_pct": null,
-    "exit_price": null,
-    "events": [],
-    "last_ts": "2026-06-24 07:14:59.999000",
-    "closed_at": null
+    "remaining": 0.0,
+    "realized_pct": -2.5139121854958106,
+    "result_pct": -2.514,
+    "exit_price": 0.01976043,
+    "events": [
+      {
+        "ts": "2026-06-24 07:29:59.999000",
+        "type": "sl",
+        "price": 0.01976043,
+        "pct": -2.514
+      }
+    ],
+    "last_ts": "2026-06-24 07:29:59.999000",
+    "closed_at": "2026-06-24T07:35:21"
   }
 ]
