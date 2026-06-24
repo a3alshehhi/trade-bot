@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-24T07:35:22",
+  "updated_at": "2026-06-24T07:50:06",
   "stats": {
-    "open": 12,
+    "open": 13,
     "closed": 86,
     "win_rate": 12.8,
     "profit_factor": 0.33,
@@ -3108,7 +3108,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 07:29:59.999000",
+      "last_ts": "2026-06-24 07:44:59.999000",
       "closed_at": null
     },
     {
@@ -3655,7 +3655,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 07:29:59.999000",
+      "last_ts": "2026-06-24 07:44:59.999000",
       "closed_at": null
     },
     {
@@ -3683,7 +3683,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 07:29:59.999000",
+      "last_ts": "2026-06-24 07:44:59.999000",
       "closed_at": null
     },
     {
@@ -3720,6 +3720,34 @@
       ],
       "last_ts": "2026-06-24 07:29:59.999000",
       "closed_at": "2026-06-24T07:35:21"
+    },
+    {
+      "id": "1782287164416",
+      "symbol": "MASKUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.401,
+      "stop": 0.38808117,
+      "stop_orig": 0.38808117,
+      "targets": [
+        0.407256,
+        0.415214,
+        0.438214
+      ],
+      "risk": 0.012918830000000048,
+      "opened_at": "2026-06-24T07:49:55",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-24 07:44:59.999000",
+      "closed_at": null
     }
   ]
 }
