@@ -1330,7 +1330,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-06-24 07:59:59.999000"
+    "last_bar": "2026-06-24 08:44:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -1978,7 +1978,7 @@
     "is_trendwave": false,
     "breakeven_done": true,
     "bar_ts": "2026-06-23 17:29:59.999000",
-    "last_bar": "2026-06-24 07:59:59.999000",
+    "last_bar": "2026-06-24 08:44:59.999000",
     "hits": [
       1,
       2
@@ -2238,7 +2238,7 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 05:44:59.999000",
-    "last_bar": "2026-06-24 07:59:59.999000",
+    "last_bar": "2026-06-24 08:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0377,
@@ -2269,10 +2269,10 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 06:44:59.999000",
-    "last_bar": "2026-06-24 07:59:59.999000",
+    "last_bar": "2026-06-24 08:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.1464,
+    "hi_seen": 0.1506,
     "lo_seen": 0.1327,
     "created": "2026-06-24T06:46:07"
   },
@@ -2331,11 +2331,11 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 07:44:59.999000",
-    "last_bar": "2026-06-24 07:59:59.999000",
+    "last_bar": "2026-06-24 08:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.404,
-    "lo_seen": 0.398,
+    "lo_seen": 0.397,
     "created": "2026-06-24T07:46:05"
   },
   "RSI70 · 15m|SAHARAUSDT|2026-06-24 07:59:59.999000": {
@@ -2362,11 +2362,11 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 07:59:59.999000",
-    "last_bar": "2026-06-24 07:59:59.999000",
+    "last_bar": "2026-06-24 08:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.01369,
-    "lo_seen": 0.01369,
+    "hi_seen": 0.01408,
+    "lo_seen": 0.01326,
     "created": "2026-06-24T08:01:13"
   },
   "RSI70 · 4h|GUSDT|2026-06-24 07:59:59.999000": {
@@ -2424,11 +2424,13 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 08:14:59.999000",
-    "last_bar": "2026-06-24 08:14:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 1.1,
-    "lo_seen": 1.1,
+    "last_bar": "2026-06-24 08:44:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": true,
+    "hi_seen": 1.119,
+    "lo_seen": 1.097,
     "created": "2026-06-24T08:16:08"
   }
 }
