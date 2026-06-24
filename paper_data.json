@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-24T13:05:24",
+  "updated_at": "2026-06-24T13:20:12",
   "stats": {
-    "open": 14,
-    "closed": 92,
-    "win_rate": 13.0,
-    "profit_factor": 0.31,
-    "total_pct": -75.77,
-    "avg_pct": -1.42,
-    "max_drawdown_pct": -75.77
+    "open": 13,
+    "closed": 94,
+    "win_rate": 12.8,
+    "profit_factor": 0.3,
+    "total_pct": -77.08,
+    "avg_pct": -1.45,
+    "max_drawdown_pct": -77.08
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-24",
-        "trades": 11,
-        "win_rate": 27.3,
-        "return_pct": -0.01,
+        "trades": 13,
+        "win_rate": 23.1,
+        "return_pct": -5.42,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -31,18 +31,18 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 92,
-        "win_rate": 13.0,
-        "return_pct": -75.77,
+        "trades": 94,
+        "win_rate": 12.8,
+        "return_pct": -77.08,
         "month": "2026-06"
       }
     ],
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 92,
-        "win_rate": 13.0,
-        "return_pct": -75.77
+        "trades": 94,
+        "win_rate": 12.8,
+        "return_pct": -77.08
       }
     ]
   },
@@ -3933,7 +3933,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 12:59:59.999000",
+      "last_ts": "2026-06-24 13:14:59.999000",
       "closed_at": null
     },
     {
@@ -3953,16 +3953,23 @@
       ],
       "risk": 0.00010624999999999957,
       "opened_at": "2026-06-24T12:19:55",
-      "status": "open",
+      "status": "closed",
       "hits": [],
       "breakeven": false,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-24 12:59:59.999000",
-      "closed_at": null
+      "remaining": 0.0,
+      "realized_pct": -1.9833862236326223,
+      "result_pct": -1.983,
+      "exit_price": 0.00525075,
+      "events": [
+        {
+          "ts": "2026-06-24 13:14:59.999000",
+          "type": "sl",
+          "price": 0.00525075,
+          "pct": -1.983
+        }
+      ],
+      "last_ts": "2026-06-24 13:14:59.999000",
+      "closed_at": "2026-06-24T13:20:09"
     },
     {
       "id": "1782303365550",
@@ -3981,16 +3988,23 @@
       ],
       "risk": 0.002268260000000008,
       "opened_at": "2026-06-24T12:19:55",
-      "status": "open",
+      "status": "closed",
       "hits": [],
       "breakeven": false,
-      "remaining": 1.0,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exit_price": null,
-      "events": [],
-      "last_ts": "2026-06-24 12:59:59.999000",
-      "closed_at": null
+      "remaining": 0.0,
+      "realized_pct": -3.499861132541286,
+      "result_pct": -3.5,
+      "exit_price": 0.06254174,
+      "events": [
+        {
+          "ts": "2026-06-24 13:14:59.999000",
+          "type": "sl",
+          "price": 0.06254174,
+          "pct": -3.5
+        }
+      ],
+      "last_ts": "2026-06-24 13:14:59.999000",
+      "closed_at": "2026-06-24T13:20:10"
     },
     {
       "id": "1782304277349",
@@ -4026,7 +4040,35 @@
           "pct": 1.085
         }
       ],
-      "last_ts": "2026-06-24 12:59:59.999000",
+      "last_ts": "2026-06-24 13:14:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782307086119",
+      "symbol": "LAZIOUSDT",
+      "label": "trendwave · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.465,
+      "stop": 0.388201,
+      "stop_orig": 0.388201,
+      "targets": [
+        0.581168,
+        0.630992,
+        0.686
+      ],
+      "risk": 0.076799,
+      "opened_at": "2026-06-24T13:19:58",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-24 13:14:59.999000",
       "closed_at": null
     }
   ]
