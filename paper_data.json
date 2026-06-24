@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-24T14:35:17",
+  "updated_at": "2026-06-24T14:49:35",
   "stats": {
-    "open": 12,
+    "open": 13,
     "closed": 96,
     "win_rate": 12.5,
     "profit_factor": 0.3,
@@ -4081,7 +4081,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 14:29:59.999000",
+      "last_ts": "2026-06-24 14:44:59.999000",
       "closed_at": null
     },
     {
@@ -4109,7 +4109,35 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 14:29:59.999000",
+      "last_ts": "2026-06-24 14:44:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782312363871",
+      "symbol": "CELRUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.002024,
+      "stop": 0.00195888,
+      "stop_orig": 0.00195888,
+      "targets": [
+        0.00205338,
+        0.00209074,
+        0.00219874
+      ],
+      "risk": 6.512000000000011e-05,
+      "opened_at": "2026-06-24T14:49:24",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-24 14:44:59.999000",
       "closed_at": null
     }
   ]

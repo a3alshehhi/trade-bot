@@ -2620,5 +2620,36 @@
     "hi_seen": 0.0471,
     "lo_seen": 0.0471,
     "created": "2026-06-24T14:16:06"
+  },
+  "RSI70 · 15m|CELRUSDT|2026-06-24 14:44:59.999000": {
+    "symbol": "CELRUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1291,
+    "entry": 0.002024,
+    "stop": 0.00195888,
+    "init_stop": 0.00195888,
+    "cur_stop": 0.00195888,
+    "last_alert_stop": 0.00195888,
+    "armed": false,
+    "targets": [
+      0.00205338,
+      0.00209074,
+      0.00219874
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-24 14:44:59.999000",
+    "last_bar": "2026-06-24 14:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.002024,
+    "lo_seen": 0.002024,
+    "created": "2026-06-24T14:46:03"
   }
 }
