@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-24T06:34:54",
+  "updated_at": "2026-06-24T06:50:11",
   "stats": {
-    "open": 12,
+    "open": 14,
     "closed": 84,
     "win_rate": 13.1,
     "profit_factor": 0.35,
@@ -3108,7 +3108,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 06:29:59.999000",
+      "last_ts": "2026-06-24 06:44:59.999000",
       "closed_at": null
     },
     {
@@ -3534,7 +3534,7 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 06:29:59.999000",
+      "last_ts": "2026-06-24 06:44:59.999000",
       "closed_at": null
     },
     {
@@ -3648,7 +3648,63 @@
       "result_pct": null,
       "exit_price": null,
       "events": [],
-      "last_ts": "2026-06-24 06:29:59.999000",
+      "last_ts": "2026-06-24 06:44:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782283567768",
+      "symbol": "ALICEUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.1464,
+      "stop": 0.13169032,
+      "stop_orig": 0.13169032,
+      "targets": [
+        0.1531456,
+        0.1617264,
+        0.1865264
+      ],
+      "risk": 0.014709680000000003,
+      "opened_at": "2026-06-24T06:49:59",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-24 06:44:59.999000",
+      "closed_at": null
+    },
+    {
+      "id": "1782283567796",
+      "symbol": "CHZUSDT",
+      "label": "RSI70 · 15m",
+      "strategy": "classic",
+      "timeframe": "15m",
+      "side": "buy",
+      "entry": 0.02027,
+      "stop": 0.01976043,
+      "stop_orig": 0.01976043,
+      "targets": [
+        0.02050392,
+        0.02080148,
+        0.02166148
+      ],
+      "risk": 0.0005095700000000009,
+      "opened_at": "2026-06-24T06:49:59",
+      "status": "open",
+      "hits": [],
+      "breakeven": false,
+      "remaining": 1.0,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exit_price": null,
+      "events": [],
+      "last_ts": "2026-06-24 06:44:59.999000",
       "closed_at": null
     }
   ]

@@ -2242,5 +2242,67 @@
     "hi_seen": 0.0376,
     "lo_seen": 0.0376,
     "created": "2026-06-24T05:46:11"
+  },
+  "RSI70 · 15m|ALICEUSDT|2026-06-24 06:44:59.999000": {
+    "symbol": "ALICEUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1237,
+    "entry": 0.1464,
+    "stop": 0.13169032,
+    "init_stop": 0.13169032,
+    "cur_stop": 0.13169032,
+    "last_alert_stop": 0.13169032,
+    "armed": false,
+    "targets": [
+      0.1531456,
+      0.1617264,
+      0.1865264
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-24 06:44:59.999000",
+    "last_bar": "2026-06-24 06:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1464,
+    "lo_seen": 0.1464,
+    "created": "2026-06-24T06:46:07"
+  },
+  "RSI70 · 15m|CHZUSDT|2026-06-24 06:44:59.999000": {
+    "symbol": "CHZUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1238,
+    "entry": 0.02027,
+    "stop": 0.01976043,
+    "init_stop": 0.01976043,
+    "cur_stop": 0.01976043,
+    "last_alert_stop": 0.01976043,
+    "armed": false,
+    "targets": [
+      0.02050392,
+      0.02080148,
+      0.02166148
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-24 06:44:59.999000",
+    "last_bar": "2026-06-24 06:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.02027,
+    "lo_seen": 0.02027,
+    "created": "2026-06-24T06:46:08"
   }
 }
