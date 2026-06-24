@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-24T23:34:18",
+  "updated_at": "2026-06-24T23:49:47",
   "stats": {
-    "open": 33,
-    "closed": 109,
+    "open": 32,
+    "closed": 110,
     "win_rate": 7.3,
     "profit_factor": 0.17,
-    "total_pct": -80.4,
-    "avg_pct": -1.41,
+    "total_pct": -80.47,
+    "avg_pct": -1.4,
     "max_drawdown_pct": -85.27
   },
   "periods": {
@@ -2204,10 +2204,11 @@
       "entry": 0.00308827,
       "stop": 0.00307688,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-24T22:48:07",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-24T23:49:45",
+      "realized_pct": -0.37,
+      "result_pct": -0.37
     },
     {
       "id": "RSI70 · 1h|MANTAUSDT|2026-06-24 22:59:59.999000",
