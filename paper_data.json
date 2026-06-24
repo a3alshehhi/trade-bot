@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-24T20:50:12",
+  "updated_at": "2026-06-24T21:04:20",
   "stats": {
-    "open": 26,
-    "closed": 103,
-    "win_rate": 2.9,
-    "profit_factor": 0.1,
-    "total_pct": -82.59,
-    "avg_pct": -1.61,
+    "open": 29,
+    "closed": 104,
+    "win_rate": 3.8,
+    "profit_factor": 0.11,
+    "total_pct": -82.17,
+    "avg_pct": -1.57,
     "max_drawdown_pct": -85.27
   },
   "periods": {
@@ -1996,11 +1996,14 @@
       "timeframe": "15m",
       "entry": 0.06696,
       "stop": 0.06352351,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-06-24T20:31:19",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-24T21:04:16",
+      "realized_pct": 2.38,
+      "result_pct": 2.38
     },
     {
       "id": "trendwave · 15m|HEIUSDT|2026-06-24 20:29:59.999000",
@@ -2033,6 +2036,62 @@
       "closed_at": "2026-06-24T20:50:11",
       "realized_pct": 0.73,
       "result_pct": 0.73
+    },
+    {
+      "id": "RSI70 · 1h|CELOUSDT|2026-06-24 20:59:59.999000",
+      "symbol": "CELOUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.06833,
+      "stop": 0.06361928,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T21:01:33",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|MANTAUSDT|2026-06-24 20:59:59.999000",
+      "symbol": "MANTAUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.08397,
+      "stop": 0.08025443,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T21:01:34",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|ALICEUSDT|2026-06-24 20:59:59.999000",
+      "symbol": "ALICEUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.12156187,
+      "stop": 0.11609189,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T21:03:23",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|HEIUSDT|2026-06-24 20:59:59.999000",
+      "symbol": "HEIUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.11595747,
+      "stop": 0.10925204,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T21:03:24",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
