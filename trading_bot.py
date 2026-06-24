@@ -3248,6 +3248,80 @@ def format_close_card(tr):
     return "\n".join(lines)
 
 
+def _dash_trade(key, tr):
+    """يحوّل صفقة مُتابَعة (tracked_signals) إلى تنسيق لوحة المتتبّع (paper_data.json)."""
+    entry = tr.get("entry")
+    stopped = bool(tr.get("stopped"))
+    hits = tr.get("hits", [])
+    targets = tr.get("targets", [])
+    g = (lambda p: ((p - entry) / entry * 100) if entry else 0.0)
+    if tr.get("is_trendwave"):
+        realized = 0.5 * g(targets[0]) if (1 in hits and targets) else 0.0
+    else:
+        realized = 0.0
+    out = {
+        "id": key, "symbol": tr.get("symbol"), "label": tr.get("label"),
+        "side": "buy", "timeframe": tr.get("timeframe"),
+        "entry": entry, "stop": tr.get("init_stop", tr.get("stop")),
+        "hits": hits, "status": "closed" if stopped else "open",
+        "opened_at": tr.get("created"), "closed_at": tr.get("closed_at"),
+        "realized_pct": round(realized, 2),
+    }
+    if stopped:
+        if tr.get("is_trendwave"):
+            out["result_pct"] = round(_trendwave_realized(tr), 2)
+        else:
+            exitp = tr.get("exit_price", tr.get("cur_stop", entry))
+            out["result_pct"] = round(((exitp - entry) / entry * 100) if entry else 0.0, 2)
+        out["realized_pct"] = out["result_pct"]
+    return out
+
+
+def _dash_stats(trades, closed):
+    out = {"open": sum(1 for t in trades if t["status"] == "open"),
+           "closed": len(closed), "win_rate": 0.0, "profit_factor": 0.0,
+           "total_pct": 0.0, "avg_pct": 0.0, "max_drawdown_pct": 0.0}
+    n = len(closed)
+    if n == 0:
+        return out
+    ps = [t["result_pct"] for t in closed]
+    wins = [p for p in ps if p > 1e-9]
+    gl = -sum(p for p in ps if p < -1e-9)
+    out["win_rate"] = round(len(wins) / n * 100, 1)
+    out["profit_factor"] = round(sum(wins) / gl, 2) if gl > 0 else 999.99
+    out["avg_pct"] = round(sum(ps) / n, 2)
+    eq = peak = 1.0
+    mdd = 0.0
+    for t in sorted(closed, key=lambda x: str(x.get("closed_at") or "")):
+        eq *= (1 + t["result_pct"] / 100.0)
+        peak = max(peak, eq)
+        mdd = min(mdd, (eq / peak - 1) * 100.0)
+    out["total_pct"] = round((eq - 1) * 100.0, 2)
+    out["max_drawdown_pct"] = round(mdd, 2)
+    return out
+
+
+def export_dashboard(track_path=TRACK_FILE, out_path="paper_data.json"):
+    """يكتب بيانات لوحة المتتبّع (paper_data.json) من صفقات trackmon المُتابَعة.
+    يحلّ محلّ مُصدِّر paper.py المحذوف حتى تبقى اللوحة محدّثة."""
+    try:
+        with open(track_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception:
+        data = {}
+    if not isinstance(data, dict):
+        data = {}
+    trades = [_dash_trade(k, v) for k, v in data.items() if isinstance(v, dict)]
+    closed = [t for t in trades if t["status"] == "closed" and t.get("result_pct") is not None]
+    payload = {"updated_at": datetime.now().isoformat(timespec="seconds"),
+               "stats": _dash_stats(trades, closed),
+               "periods": {"daily": [], "weekly": [], "monthly": []},
+               "trades": trades}
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+    print(f"[لوحة] حُدّثت {out_path} ({len(trades)} صفقة)")
+
+
 def monitor_tracked_signals(cfg, path=TRACK_FILE):
     """يتابع الإشارات المُرسَلة؛ يدير كل صفقة حيّاً (وقف متحرك + جني ربح جزئي)
     ويرسل كل حدث رداً على رسالة الصفقة الأصلية في تيليجرام (reply_to_message_id)."""
@@ -3291,6 +3365,7 @@ def monitor_tracked_signals(cfg, path=TRACK_FILE):
         # بطاقة إغلاق ملخّصة (مرّة واحدة) عند انتهاء الصفقة
         if tr.get("stopped") and not tr.get("close_card_sent"):
             tr["close_card_sent"] = True
+            tr["closed_at"] = datetime.now().isoformat(timespec="seconds")
             changed = True
             if token and chat_id:
                 send_telegram(token, chat_id, format_close_card(tr), reply_to=mid)
@@ -3300,6 +3375,11 @@ def monitor_tracked_signals(cfg, path=TRACK_FILE):
     if changed:
         with open(path, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
+    # حدّث لوحة المتتبّع دائماً (حتى عند تغيّر الأسعار فقط) لتبقى طازجة
+    try:
+        export_dashboard(path)
+    except Exception as e:
+        print(f"[لوحة] تعذّر التحديث: {e}")
     print("[متابعة] انتهت.")
 
 
