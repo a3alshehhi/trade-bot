@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-24T22:50:09",
+  "updated_at": "2026-06-24T23:04:22",
   "stats": {
     "open": 34,
-    "closed": 106,
-    "win_rate": 5.7,
-    "profit_factor": 0.12,
-    "total_pct": -81.93,
-    "avg_pct": -1.53,
+    "closed": 107,
+    "win_rate": 6.5,
+    "profit_factor": 0.17,
+    "total_pct": -80.24,
+    "avg_pct": -1.42,
     "max_drawdown_pct": -85.27
   },
   "periods": {
@@ -1899,12 +1899,14 @@
       "entry": 0.03324193,
       "stop": 0.03204652,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-24T19:04:05",
-      "closed_at": null,
-      "realized_pct": 3.95
+      "closed_at": "2026-06-24T23:04:11",
+      "realized_pct": 9.38,
+      "result_pct": 9.38
     },
     {
       "id": "trendwave · 1h|XPLUSDT|2026-06-24 18:59:59.999000",
@@ -2198,6 +2200,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-24T22:48:07",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|MANTAUSDT|2026-06-24 22:59:59.999000",
+      "symbol": "MANTAUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.08441,
+      "stop": 0.08044103,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-24T23:01:33",
       "closed_at": null,
       "realized_pct": 0.0
     }
