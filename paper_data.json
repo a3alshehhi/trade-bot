@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T04:49:02",
+  "updated_at": "2026-06-25T05:04:26",
   "stats": {
     "open": 38,
     "closed": 125,
@@ -2355,11 +2355,13 @@
       "timeframe": "15m",
       "entry": 2.61372133,
       "stop": 2.58552217,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-25T02:03:20",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.23
     },
     {
       "id": "RSI70 · 15m|OPENUSDT|2026-06-25 02:14:59.999000",
