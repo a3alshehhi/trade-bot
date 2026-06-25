@@ -4182,5 +4182,67 @@
     "hi_seen": 399.30922,
     "lo_seen": 399.30922,
     "created": "2026-06-25T04:04:59"
+  },
+  "RSI70 · 15m|0GUSDT|2026-06-25 04:29:59.999000": {
+    "symbol": "0GUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1427,
+    "entry": 0.253,
+    "stop": 0.23906412,
+    "init_stop": 0.23906412,
+    "cur_stop": 0.23906412,
+    "last_alert_stop": 0.23906412,
+    "armed": false,
+    "targets": [
+      0.259528,
+      0.267832,
+      0.291832
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 04:29:59.999000",
+    "last_bar": "2026-06-25 04:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.253,
+    "lo_seen": 0.253,
+    "created": "2026-06-25T04:31:13"
+  },
+  "RSI70 · 15m|ZKCUSDT|2026-06-25 04:29:59.999000": {
+    "symbol": "ZKCUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1428,
+    "entry": 0.0467,
+    "stop": 0.04562871,
+    "init_stop": 0.04562871,
+    "cur_stop": 0.04562871,
+    "last_alert_stop": 0.04562871,
+    "armed": false,
+    "targets": [
+      0.0472168,
+      0.0478742,
+      0.0497742
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 04:29:59.999000",
+    "last_bar": "2026-06-25 04:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0467,
+    "lo_seen": 0.0467,
+    "created": "2026-06-25T04:31:14"
   }
 }
