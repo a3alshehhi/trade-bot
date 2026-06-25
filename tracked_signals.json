@@ -1333,7 +1333,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-06-25 13:59:59.999000"
+    "last_bar": "2026-06-25 14:44:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -4812,7 +4812,7 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-25 08:29:59.999000",
-    "last_bar": "2026-06-25 13:59:59.999000",
+    "last_bar": "2026-06-25 14:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0546,
@@ -5462,12 +5462,15 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-25 14:14:59.999000",
-    "last_bar": "2026-06-25 14:14:59.999000",
+    "last_bar": "2026-06-25 14:44:59.999000",
     "hits": [],
-    "stopped": false,
-    "hi_seen": 0.0963,
-    "lo_seen": 0.0963,
-    "created": "2026-06-25T14:16:11"
+    "stopped": true,
+    "hi_seen": 0.097,
+    "lo_seen": 0.0914,
+    "created": "2026-06-25T14:16:11",
+    "exit_price": 0.09225325,
+    "close_card_sent": true,
+    "closed_at": "2026-06-25T14:50:09"
   },
   "trendwave · 15m|DCRUSDT|2026-06-25 14:29:59.999000": {
     "symbol": "DCRUSDT",
@@ -5488,10 +5491,10 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-25 14:29:59.999000",
-    "last_bar": "2026-06-25 14:29:59.999000",
+    "last_bar": "2026-06-25 14:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 11.51155333,
+    "hi_seen": 11.86,
     "lo_seen": 11.51155333,
     "created": "2026-06-25T14:32:48"
   },
@@ -5503,8 +5506,8 @@
     "entry": 0.00320419,
     "stop": 0.00311494,
     "init_stop": 0.00311494,
-    "cur_stop": 0.00311494,
-    "last_alert_stop": 0.00311494,
+    "cur_stop": 0.00320419,
+    "last_alert_stop": 0.00320419,
     "armed": false,
     "targets": [
       0.00329898,
@@ -5514,11 +5517,65 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-25 14:29:59.999000",
-    "last_bar": "2026-06-25 14:29:59.999000",
-    "hits": [],
+    "last_bar": "2026-06-25 14:44:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.00320419,
+    "hi_seen": 0.00332,
     "lo_seen": 0.00320419,
     "created": "2026-06-25T14:32:49"
+  },
+  "trendwave · 15m|DCRUSDT|2026-06-25 14:44:59.999000": {
+    "symbol": "DCRUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 1593,
+    "entry": 11.54111333,
+    "stop": 11.19041489,
+    "init_stop": 11.19041489,
+    "cur_stop": 11.19041489,
+    "last_alert_stop": 11.19041489,
+    "armed": false,
+    "targets": [
+      11.99052,
+      12.21
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 14:44:59.999000",
+    "last_bar": "2026-06-25 14:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 11.54111333,
+    "lo_seen": 11.54111333,
+    "created": "2026-06-25T14:48:12"
+  },
+  "trendwave · 15m|STRAXUSDT|2026-06-25 14:44:59.999000": {
+    "symbol": "STRAXUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 1594,
+    "entry": 0.0103817,
+    "stop": 0.0100568,
+    "init_stop": 0.0100568,
+    "cur_stop": 0.0100568,
+    "last_alert_stop": 0.0100568,
+    "armed": false,
+    "targets": [
+      0.01046178,
+      0.010555
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 14:44:59.999000",
+    "last_bar": "2026-06-25 14:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0103817,
+    "lo_seen": 0.0103817,
+    "created": "2026-06-25T14:48:13"
   }
 }
