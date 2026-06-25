@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-25T11:04:17",
+  "updated_at": "2026-06-25T11:18:58",
   "stats": {
-    "open": 37,
-    "closed": 150,
-    "win_rate": 24.0,
-    "profit_factor": 0.78,
-    "total_pct": -47.46,
-    "avg_pct": -0.32,
+    "open": 36,
+    "closed": 151,
+    "win_rate": 23.8,
+    "profit_factor": 0.77,
+    "total_pct": -48.66,
+    "avg_pct": -0.34,
     "max_drawdown_pct": -85.27
   },
   "periods": {
@@ -2586,10 +2586,11 @@
       "entry": 0.0467,
       "stop": 0.04562871,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-25T04:31:14",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T11:18:50",
+      "realized_pct": -2.29,
+      "result_pct": -2.29
     },
     {
       "id": "trendwave · 15m|DCRUSDT|2026-06-25 04:44:59.999000",
