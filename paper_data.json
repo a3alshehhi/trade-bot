@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-25T13:05:25",
+  "updated_at": "2026-06-25T13:20:10",
   "stats": {
-    "open": 30,
+    "open": 31,
     "closed": 164,
     "win_rate": 27.4,
     "profit_factor": 0.88,
@@ -3106,6 +3106,20 @@
       "closed_at": "2026-06-25T13:05:24",
       "realized_pct": 5.01,
       "result_pct": 5.01
+    },
+    {
+      "id": "RSI70 · 15m|DEXEUSDT|2026-06-25 13:14:59.999000",
+      "symbol": "DEXEUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 24.515,
+      "stop": 23.47702773,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T13:16:09",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }

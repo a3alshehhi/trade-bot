@@ -5344,5 +5344,36 @@
     "exit_price": 0.439344,
     "close_card_sent": true,
     "closed_at": "2026-06-25T13:05:24"
+  },
+  "RSI70 · 15m|DEXEUSDT|2026-06-25 13:14:59.999000": {
+    "symbol": "DEXEUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1568,
+    "entry": 24.515,
+    "stop": 23.47702773,
+    "init_stop": 23.47702773,
+    "cur_stop": 23.47702773,
+    "last_alert_stop": 23.47702773,
+    "armed": false,
+    "targets": [
+      24.977672,
+      25.566218,
+      27.267218
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 13:14:59.999000",
+    "last_bar": "2026-06-25 13:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 24.515,
+    "lo_seen": 24.515,
+    "created": "2026-06-25T13:16:09"
   }
 }
