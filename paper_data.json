@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-25T05:48:47",
+  "updated_at": "2026-06-25T06:05:19",
   "stats": {
-    "open": 39,
-    "closed": 125,
-    "win_rate": 13.6,
-    "profit_factor": 0.27,
-    "total_pct": -78.47,
-    "avg_pct": -1.15,
+    "open": 38,
+    "closed": 126,
+    "win_rate": 13.5,
+    "profit_factor": 0.26,
+    "total_pct": -79.66,
+    "avg_pct": -1.18,
     "max_drawdown_pct": -85.27
   },
   "periods": {
@@ -1937,11 +1937,13 @@
       "timeframe": "15m",
       "entry": 0.11423313,
       "stop": 0.1113513,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-24T19:18:12",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 4.89
     },
     {
       "id": "trendwave · 1h|ALICEUSDT|2026-06-24 19:59:59.999000",
@@ -2024,11 +2026,13 @@
       "timeframe": "15m",
       "entry": 0.1148258,
       "stop": 0.11149937,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-24T20:33:22",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 4.63
     },
     {
       "id": "trendwave · 15m|STRAXUSDT|2026-06-24 20:29:59.999000",
@@ -2101,11 +2105,13 @@
       "timeframe": "1h",
       "entry": 0.11595747,
       "stop": 0.10925204,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-24T21:03:24",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 4.27
     },
     {
       "id": "trendwave · 15m|HEIUSDT|2026-06-24 21:14:59.999000",
@@ -2324,11 +2330,13 @@
       "timeframe": "15m",
       "entry": 0.1126824,
       "stop": 0.11007765,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-25T01:02:47",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 5.2
     },
     {
       "id": "RSI70 · 15m|OPENUSDT|2026-06-25 01:29:59.999000",
@@ -2388,11 +2396,13 @@
       "timeframe": "15m",
       "entry": 0.11402873,
       "stop": 0.11129233,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-25T02:17:50",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 4.85
     },
     {
       "id": "trendwave · 15m|HEIUSDT|2026-06-25 02:59:59.999000",
@@ -2402,11 +2412,13 @@
       "timeframe": "15m",
       "entry": 0.1128434,
       "stop": 0.11112098,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-25T03:03:08",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 5.37
     },
     {
       "id": "trendwave · 1h|ALICEUSDT|2026-06-25 02:59:59.999000",
@@ -2430,11 +2442,13 @@
       "timeframe": "1h",
       "entry": 0.1123868,
       "stop": 0.10831551,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-25T03:03:54",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 5.55
     },
     {
       "id": "RSI70 · 15m|KAITOUSDT|2026-06-25 03:14:59.999000",
@@ -2461,11 +2475,13 @@
       "timeframe": "15m",
       "entry": 0.1142258,
       "stop": 0.11134066,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-25T03:47:24",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 4.76
     },
     {
       "id": "trendwave · 4h|NEARUSDT|2026-06-25 03:59:59.999000",
@@ -2532,10 +2548,11 @@
       "entry": 0.253,
       "stop": 0.23906412,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-25T04:31:13",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T06:05:16",
+      "realized_pct": -5.51,
+      "result_pct": -5.51
     },
     {
       "id": "RSI70 · 15m|ZKCUSDT|2026-06-25 04:29:59.999000",
