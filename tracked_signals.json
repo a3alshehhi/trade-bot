@@ -5794,5 +5794,31 @@
     "exit_price": 0.01067,
     "close_card_sent": true,
     "closed_at": "2026-06-25T16:34:58"
+  },
+  "trendwave · 15m|MANTAUSDT|2026-06-25 16:44:59.999000": {
+    "symbol": "MANTAUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 1632,
+    "entry": 0.08454789,
+    "stop": 0.08351795,
+    "init_stop": 0.08351795,
+    "cur_stop": 0.08351795,
+    "last_alert_stop": 0.08351795,
+    "armed": false,
+    "targets": [
+      0.08530004,
+      0.08568
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 16:44:59.999000",
+    "last_bar": "2026-06-25 16:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.08454789,
+    "lo_seen": 0.08454789,
+    "created": "2026-06-25T16:48:08"
   }
 }
