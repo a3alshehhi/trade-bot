@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-25T08:35:28",
+  "updated_at": "2026-06-25T08:49:04",
   "stats": {
     "open": 39,
-    "closed": 139,
-    "win_rate": 20.9,
-    "profit_factor": 0.76,
-    "total_pct": -46.88,
-    "avg_pct": -0.34,
+    "closed": 140,
+    "win_rate": 21.4,
+    "profit_factor": 0.77,
+    "total_pct": -46.06,
+    "avg_pct": -0.33,
     "max_drawdown_pct": -85.27
   },
   "periods": {
@@ -2777,11 +2777,14 @@
       "timeframe": "15m",
       "entry": 0.386,
       "stop": 0.3729781,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-06-25T08:31:12",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T08:49:01",
+      "realized_pct": 1.55,
+      "result_pct": 1.55
     },
     {
       "id": "RSI70 · 15m|MIRAUSDT|2026-06-25 08:29:59.999000",
@@ -2822,6 +2825,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T08:33:16",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|ALPINEUSDT|2026-06-25 08:44:59.999000",
+      "symbol": "ALPINEUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.334,
+      "stop": 0.32221028,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T08:46:04",
       "closed_at": null,
       "realized_pct": 0.0
     }
