@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-25T08:19:44",
+  "updated_at": "2026-06-25T08:35:28",
   "stats": {
-    "open": 36,
-    "closed": 137,
-    "win_rate": 19.7,
-    "profit_factor": 0.73,
-    "total_pct": -49.8,
-    "avg_pct": -0.39,
+    "open": 39,
+    "closed": 139,
+    "win_rate": 20.9,
+    "profit_factor": 0.76,
+    "total_pct": -46.88,
+    "avg_pct": -0.34,
     "max_drawdown_pct": -85.27
   },
   "periods": {
@@ -2595,11 +2595,15 @@
       "timeframe": "15m",
       "entry": 11.89375333,
       "stop": 11.73075279,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-25T04:47:32",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T08:35:15",
+      "realized_pct": 4.23,
+      "result_pct": 4.23
     },
     {
       "id": "trendwave · 15m|GUSDT|2026-06-25 05:29:59.999000",
@@ -2727,11 +2731,15 @@
       "timeframe": "15m",
       "entry": 0.06522803,
       "stop": 0.06439485,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-25T08:03:26",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T08:35:23",
+      "realized_pct": 1.53,
+      "result_pct": 1.53
     },
     {
       "id": "trendwave · 15m|HEIUSDT|2026-06-25 07:59:59.999000",
@@ -2744,6 +2752,76 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T08:03:26",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|AWEUSDT|2026-06-25 08:29:59.999000",
+      "symbol": "AWEUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06355,
+      "stop": 0.06071913,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T08:31:11",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|CITYUSDT|2026-06-25 08:29:59.999000",
+      "symbol": "CITYUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.386,
+      "stop": 0.3729781,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T08:31:12",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|MIRAUSDT|2026-06-25 08:29:59.999000",
+      "symbol": "MIRAUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0447,
+      "stop": 0.04358637,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T08:31:13",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|PARTIUSDT|2026-06-25 08:29:59.999000",
+      "symbol": "PARTIUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0541,
+      "stop": 0.05066984,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T08:31:14",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|GUSDT|2026-06-25 08:29:59.999000",
+      "symbol": "GUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00297971,
+      "stop": 0.00294103,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T08:33:16",
       "closed_at": null,
       "realized_pct": 0.0
     }
