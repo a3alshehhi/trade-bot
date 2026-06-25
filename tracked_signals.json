@@ -6182,5 +6182,36 @@
     "hi_seen": 0.0791868,
     "lo_seen": 0.0791868,
     "created": "2026-06-25T22:03:24"
+  },
+  "RSI70 · 15m|CGPTUSDT|2026-06-25 22:29:59.999000": {
+    "symbol": "CGPTUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1673,
+    "entry": 0.01923,
+    "stop": 0.01837184,
+    "init_stop": 0.01837184,
+    "cur_stop": 0.01837184,
+    "last_alert_stop": 0.01837184,
+    "armed": false,
+    "targets": [
+      0.01963256,
+      0.02014464,
+      0.02162464
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 22:29:59.999000",
+    "last_bar": "2026-06-25 22:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01923,
+    "lo_seen": 0.01923,
+    "created": "2026-06-25T22:31:12"
   }
 }

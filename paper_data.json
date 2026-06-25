@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-25T22:19:35",
+  "updated_at": "2026-06-25T22:35:16",
   "stats": {
-    "open": 25,
+    "open": 26,
     "closed": 194,
     "win_rate": 34.0,
     "profit_factor": 1.41,
@@ -3600,6 +3600,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T22:03:24",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|CGPTUSDT|2026-06-25 22:29:59.999000",
+      "symbol": "CGPTUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01923,
+      "stop": 0.01837184,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T22:31:12",
       "closed_at": null,
       "realized_pct": 0.0
     }
