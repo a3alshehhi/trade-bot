@@ -4244,5 +4244,31 @@
     "hi_seen": 0.0467,
     "lo_seen": 0.0467,
     "created": "2026-06-25T04:31:14"
+  },
+  "trendwave · 15m|DCRUSDT|2026-06-25 04:44:59.999000": {
+    "symbol": "DCRUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 1429,
+    "entry": 11.89375333,
+    "stop": 11.73075279,
+    "init_stop": 11.73075279,
+    "cur_stop": 11.73075279,
+    "last_alert_stop": 11.73075279,
+    "armed": false,
+    "targets": [
+      12.31806,
+      12.475
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 04:44:59.999000",
+    "last_bar": "2026-06-25 04:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 11.89375333,
+    "lo_seen": 11.89375333,
+    "created": "2026-06-25T04:47:32"
   }
 }
