@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-25T12:50:17",
+  "updated_at": "2026-06-25T13:05:25",
   "stats": {
-    "open": 31,
-    "closed": 163,
-    "win_rate": 27.0,
-    "profit_factor": 0.86,
-    "total_pct": -38.34,
-    "avg_pct": -0.19,
+    "open": 30,
+    "closed": 164,
+    "win_rate": 27.4,
+    "profit_factor": 0.88,
+    "total_pct": -35.25,
+    "avg_pct": -0.16,
     "max_drawdown_pct": -85.27
   },
   "periods": {
@@ -3098,11 +3098,14 @@
       "timeframe": "15m",
       "entry": 0.4184,
       "stop": 0.37247621,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-06-25T12:16:07",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T13:05:24",
+      "realized_pct": 5.01,
+      "result_pct": 5.01
     }
   ]
 }
