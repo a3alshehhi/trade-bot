@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-25T14:20:12",
+  "updated_at": "2026-06-25T14:34:20",
   "stats": {
-    "open": 25,
+    "open": 27,
     "closed": 172,
     "win_rate": 27.3,
     "profit_factor": 0.89,
@@ -3224,6 +3224,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T14:16:11",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|DCRUSDT|2026-06-25 14:29:59.999000",
+      "symbol": "DCRUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 11.51155333,
+      "stop": 11.18967757,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T14:32:48",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|GUSDT|2026-06-25 14:29:59.999000",
+      "symbol": "GUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00320419,
+      "stop": 0.00311494,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T14:32:49",
       "closed_at": null,
       "realized_pct": 0.0
     }
