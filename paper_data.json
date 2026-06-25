@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-25T20:48:46",
+  "updated_at": "2026-06-25T21:04:55",
   "stats": {
-    "open": 24,
-    "closed": 191,
-    "win_rate": 33.0,
-    "profit_factor": 1.34,
-    "total_pct": 83.8,
-    "avg_pct": 0.47,
+    "open": 23,
+    "closed": 193,
+    "win_rate": 33.7,
+    "profit_factor": 1.41,
+    "total_pct": 114.8,
+    "avg_pct": 0.54,
     "max_drawdown_pct": -85.27
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-25",
-        "trades": 81,
-        "win_rate": 67.9,
-        "return_pct": 841.12,
+        "trades": 83,
+        "win_rate": 68.7,
+        "return_pct": 999.84,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -55,9 +55,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 185,
-        "win_rate": 34.1,
-        "return_pct": 83.8,
+        "trades": 187,
+        "win_rate": 34.8,
+        "return_pct": 114.8,
         "month": "2026-06"
       },
       {
@@ -71,9 +71,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 191,
-        "win_rate": 33.0,
-        "return_pct": 83.8
+        "trades": 193,
+        "win_rate": 33.7,
+        "return_pct": 114.8
       }
     ]
   },
@@ -3386,12 +3386,14 @@
       "entry": 0.09139629,
       "stop": 0.08680755,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-25T16:04:04",
-      "closed_at": null,
-      "realized_pct": 3.52
+      "closed_at": "2026-06-25T21:04:48",
+      "realized_pct": 8.63,
+      "result_pct": 8.63
     },
     {
       "id": "trendwave · 15m|STRAXUSDT|2026-06-25 16:14:59.999000",
@@ -3517,11 +3519,15 @@
       "timeframe": "1h",
       "entry": 0.09321571,
       "stop": 0.08853082,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-25T20:04:02",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T21:04:53",
+      "realized_pct": 7.58,
+      "result_pct": 7.58
     },
     {
       "id": "trendwave · 15m|PSGUSDT|2026-06-25 20:44:59.999000",
@@ -3534,6 +3540,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T20:47:24",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|GPSUSDT|2026-06-25 20:59:59.999000",
+      "symbol": "GPSUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.00895941,
+      "stop": 0.0088535,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T21:03:48",
       "closed_at": null,
       "realized_pct": 0.0
     }
