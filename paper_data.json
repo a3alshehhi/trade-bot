@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-25T06:49:34",
+  "updated_at": "2026-06-25T07:04:42",
   "stats": {
-    "open": 31,
-    "closed": 133,
-    "win_rate": 17.3,
-    "profit_factor": 0.6,
-    "total_pct": -61.08,
-    "avg_pct": -0.6,
+    "open": 33,
+    "closed": 135,
+    "win_rate": 18.5,
+    "profit_factor": 0.72,
+    "total_pct": -51.55,
+    "avg_pct": -0.42,
     "max_drawdown_pct": -85.27
   },
   "periods": {
@@ -2110,12 +2110,14 @@
       "entry": 0.11595747,
       "stop": 0.10925204,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-24T21:03:24",
-      "closed_at": null,
-      "realized_pct": 4.27
+      "closed_at": "2026-06-25T07:04:31",
+      "realized_pct": 10.24,
+      "result_pct": 10.24
     },
     {
       "id": "trendwave · 15m|HEIUSDT|2026-06-24 21:14:59.999000",
@@ -2453,12 +2455,14 @@
       "entry": 0.1123868,
       "stop": 0.10831551,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-25T03:03:54",
-      "closed_at": null,
-      "realized_pct": 5.55
+      "closed_at": "2026-06-25T07:04:36",
+      "realized_pct": 12.94,
+      "result_pct": 12.94
     },
     {
       "id": "RSI70 · 15m|KAITOUSDT|2026-06-25 03:14:59.999000",
@@ -2608,6 +2612,62 @@
       "closed_at": "2026-06-25T06:49:33",
       "realized_pct": -0.94,
       "result_pct": -0.94
+    },
+    {
+      "id": "trendwave · 1h|ALICEUSDT|2026-06-25 06:59:59.999000",
+      "symbol": "ALICEUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.12189413,
+      "stop": 0.11963108,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T07:03:38",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|HEIUSDT|2026-06-25 06:59:59.999000",
+      "symbol": "HEIUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1188944,
+      "stop": 0.10833876,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T07:03:39",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|STRAXUSDT|2026-06-25 06:59:59.999000",
+      "symbol": "STRAXUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.01117721,
+      "stop": 0.01075598,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T07:03:40",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|XPLUSDT|2026-06-25 06:59:59.999000",
+      "symbol": "XPLUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.09213953,
+      "stop": 0.08999816,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T07:03:41",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
