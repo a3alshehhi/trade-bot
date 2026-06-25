@@ -5586,5 +5586,36 @@
     "exit_price": 0.010555,
     "close_card_sent": true,
     "closed_at": "2026-06-25T15:05:17"
+  },
+  "RSI70 · 15m|TNSRUSDT|2026-06-25 15:44:59.999000": {
+    "symbol": "TNSRUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1604,
+    "entry": 0.0449,
+    "stop": 0.03854463,
+    "init_stop": 0.03854463,
+    "cur_stop": 0.03854463,
+    "last_alert_stop": 0.03854463,
+    "armed": false,
+    "targets": [
+      0.047756,
+      0.051389,
+      0.061889
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 15:44:59.999000",
+    "last_bar": "2026-06-25 15:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0449,
+    "lo_seen": 0.0449,
+    "created": "2026-06-25T15:46:03"
   }
 }

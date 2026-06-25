@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-25T15:35:07",
+  "updated_at": "2026-06-25T15:49:43",
   "stats": {
-    "open": 26,
+    "open": 27,
     "closed": 175,
     "win_rate": 28.0,
     "profit_factor": 0.88,
@@ -3290,6 +3290,20 @@
       "closed_at": "2026-06-25T15:05:17",
       "realized_pct": 1.22,
       "result_pct": 1.22
+    },
+    {
+      "id": "RSI70 · 15m|TNSRUSDT|2026-06-25 15:44:59.999000",
+      "symbol": "TNSRUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0449,
+      "stop": 0.03854463,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T15:46:03",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
