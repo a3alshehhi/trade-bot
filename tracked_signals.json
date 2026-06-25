@@ -4456,5 +4456,67 @@
     "hi_seen": 0.09213953,
     "lo_seen": 0.09213953,
     "created": "2026-06-25T07:03:41"
+  },
+  "RSI70 · 15m|HYPERUSDT|2026-06-25 07:44:59.999000": {
+    "symbol": "HYPERUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1473,
+    "entry": 0.077,
+    "stop": 0.07432317,
+    "init_stop": 0.07432317,
+    "cur_stop": 0.07432317,
+    "last_alert_stop": 0.07432317,
+    "armed": false,
+    "targets": [
+      0.0782784,
+      0.0799046,
+      0.0846046
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 07:44:59.999000",
+    "last_bar": "2026-06-25 07:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.077,
+    "lo_seen": 0.077,
+    "created": "2026-06-25T07:46:07"
+  },
+  "RSI70 · 15m|SUIUSDT|2026-06-25 07:44:59.999000": {
+    "symbol": "SUIUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1474,
+    "entry": 0.7012,
+    "stop": 0.68716608,
+    "init_stop": 0.68716608,
+    "cur_stop": 0.68716608,
+    "last_alert_stop": 0.68716608,
+    "armed": false,
+    "targets": [
+      0.7078912,
+      0.7164028,
+      0.7410028
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 07:44:59.999000",
+    "last_bar": "2026-06-25 07:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.7012,
+    "lo_seen": 0.7012,
+    "created": "2026-06-25T07:46:08"
   }
 }

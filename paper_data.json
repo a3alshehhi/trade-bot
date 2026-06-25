@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-25T07:35:16",
+  "updated_at": "2026-06-25T07:50:10",
   "stats": {
-    "open": 33,
+    "open": 35,
     "closed": 135,
     "win_rate": 18.5,
     "profit_factor": 0.72,
@@ -2666,6 +2666,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T07:03:41",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|HYPERUSDT|2026-06-25 07:44:59.999000",
+      "symbol": "HYPERUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.077,
+      "stop": 0.07432317,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T07:46:07",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|SUIUSDT|2026-06-25 07:44:59.999000",
+      "symbol": "SUIUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.7012,
+      "stop": 0.68716608,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T07:46:08",
       "closed_at": null,
       "realized_pct": 0.0
     }
