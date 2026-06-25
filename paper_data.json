@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-25T19:34:09",
+  "updated_at": "2026-06-25T19:50:08",
   "stats": {
-    "open": 25,
-    "closed": 187,
-    "win_rate": 31.6,
-    "profit_factor": 1.2,
-    "total_pct": 30.6,
-    "avg_pct": 0.28,
+    "open": 24,
+    "closed": 188,
+    "win_rate": 31.9,
+    "profit_factor": 1.22,
+    "total_pct": 34.45,
+    "avg_pct": 0.3,
     "max_drawdown_pct": -85.27
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-25",
-        "trades": 77,
-        "win_rate": 66.2,
-        "return_pct": 568.7,
+        "trades": 78,
+        "win_rate": 66.7,
+        "return_pct": 588.43,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -55,9 +55,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 181,
-        "win_rate": 32.6,
-        "return_pct": 30.6,
+        "trades": 182,
+        "win_rate": 33.0,
+        "return_pct": 34.45,
         "month": "2026-06"
       },
       {
@@ -71,9 +71,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 187,
-        "win_rate": 31.6,
-        "return_pct": 30.6
+        "trades": 188,
+        "win_rate": 31.9,
+        "return_pct": 34.45
       }
     ]
   },
@@ -3434,11 +3434,14 @@
       "timeframe": "15m",
       "entry": 0.0378,
       "stop": 0.0353174,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-06-25T18:01:22",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T19:50:05",
+      "realized_pct": 2.95,
+      "result_pct": 2.95
     },
     {
       "id": "RSI70 · 1h|HEIUSDT|2026-06-25 17:59:59.999000",

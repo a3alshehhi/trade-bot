@@ -1333,7 +1333,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-06-25 18:59:59.999000"
+    "last_bar": "2026-06-25 19:44:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -4838,7 +4838,7 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-25 08:29:59.999000",
-    "last_bar": "2026-06-25 18:59:59.999000",
+    "last_bar": "2026-06-25 19:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0546,
@@ -5658,7 +5658,7 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-25 15:44:59.999000",
-    "last_bar": "2026-06-25 18:59:59.999000",
+    "last_bar": "2026-06-25 19:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0473,
@@ -5715,7 +5715,7 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-25 15:59:59.999000",
-    "last_bar": "2026-06-25 18:59:59.999000",
+    "last_bar": "2026-06-25 19:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.552,
@@ -5864,12 +5864,17 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-25 17:59:59.999000",
-    "last_bar": "2026-06-25 18:59:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.0381,
-    "lo_seen": 0.0363,
-    "created": "2026-06-25T18:01:22"
+    "last_bar": "2026-06-25 19:44:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": true,
+    "hi_seen": 0.0398,
+    "lo_seen": 0.0362,
+    "created": "2026-06-25T18:01:22",
+    "exit_price": 0.0389152,
+    "close_card_sent": true,
+    "closed_at": "2026-06-25T19:50:05"
   },
   "RSI70 · 1h|HEIUSDT|2026-06-25 17:59:59.999000": {
     "symbol": "HEIUSDT",
@@ -5921,11 +5926,11 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-25 18:14:59.999000",
-    "last_bar": "2026-06-25 18:59:59.999000",
+    "last_bar": "2026-06-25 19:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.547,
-    "lo_seen": 0.53888267,
+    "lo_seen": 0.534,
     "created": "2026-06-25T18:18:12"
   },
   "trendwave · 15m|XPLUSDT|2026-06-25 18:29:59.999000": {
@@ -5947,7 +5952,7 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-25 18:29:59.999000",
-    "last_bar": "2026-06-25 18:59:59.999000",
+    "last_bar": "2026-06-25 19:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.09786,
