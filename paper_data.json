@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-25T10:05:11",
+  "updated_at": "2026-06-25T10:19:55",
   "stats": {
     "open": 38,
-    "closed": 146,
-    "win_rate": 23.3,
+    "closed": 147,
+    "win_rate": 23.8,
     "profit_factor": 0.79,
-    "total_pct": -44.94,
-    "avg_pct": -0.3,
+    "total_pct": -44.27,
+    "avg_pct": -0.29,
     "max_drawdown_pct": -85.27
   },
   "periods": {
@@ -2798,11 +2798,14 @@
       "timeframe": "15m",
       "entry": 0.0447,
       "stop": 0.04358637,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-06-25T08:31:13",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T10:19:50",
+      "realized_pct": 1.22,
+      "result_pct": 1.22
     },
     {
       "id": "RSI70 · 15m|PARTIUSDT|2026-06-25 08:29:59.999000",
@@ -2922,6 +2925,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T10:03:55",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|MIRAUSDT|2026-06-25 10:14:59.999000",
+      "symbol": "MIRAUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0453,
+      "stop": 0.04424106,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T10:16:11",
       "closed_at": null,
       "realized_pct": 0.0
     }
