@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-25T09:04:09",
+  "updated_at": "2026-06-25T09:20:15",
   "stats": {
-    "open": 40,
+    "open": 41,
     "closed": 142,
     "win_rate": 21.1,
     "profit_factor": 0.75,
@@ -2883,6 +2883,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T09:02:38",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|ALPINEUSDT|2026-06-25 09:14:59.999000",
+      "symbol": "ALPINEUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.335,
+      "stop": 0.32254356,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T09:16:05",
       "closed_at": null,
       "realized_pct": 0.0
     }

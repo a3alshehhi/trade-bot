@@ -4905,5 +4905,36 @@
     "hi_seen": 0.12290673,
     "lo_seen": 0.12290673,
     "created": "2026-06-25T09:02:38"
+  },
+  "RSI70 · 15m|ALPINEUSDT|2026-06-25 09:14:59.999000": {
+    "symbol": "ALPINEUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1505,
+    "entry": 0.335,
+    "stop": 0.32254356,
+    "init_stop": 0.32254356,
+    "cur_stop": 0.32254356,
+    "last_alert_stop": 0.32254356,
+    "armed": false,
+    "targets": [
+      0.340984,
+      0.348596,
+      0.370596
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 09:14:59.999000",
+    "last_bar": "2026-06-25 09:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.335,
+    "lo_seen": 0.335,
+    "created": "2026-06-25T09:16:05"
   }
 }
