@@ -3301,6 +3301,57 @@ def _dash_stats(trades, closed):
     return out
 
 
+def _dash_period_keys(t):
+    """يُرجع (اليوم، الأسبوع ISO، الشهر) من وقت إغلاق الصفقة (أو فتحها احتياطاً)."""
+    ts = t.get("closed_at") or t.get("opened_at")
+    d = datetime.fromisoformat(str(ts))
+    iso = d.isocalendar()
+    return (d.strftime("%Y-%m-%d"),
+            f"{iso[0]}-W{iso[1]:02d}",
+            d.strftime("%Y-%m"))
+
+
+def _dash_compound(pcts):
+    """العائد التراكمي المركّب لقائمة نِسب مئوية."""
+    eq = 1.0
+    for p in pcts:
+        eq *= (1.0 + p / 100.0)
+    return (eq - 1.0) * 100.0
+
+
+def _dash_pack_period(groups, meta=None):
+    """يحوّل {مفتاح: [نِسب]} إلى صفوف مرتّبة تنازلياً بإحصاء كل فترة."""
+    rows = []
+    for k in sorted(groups.keys(), reverse=True):
+        ps = groups[k]
+        wins = sum(1 for p in ps if p > 1e-9)
+        row = {"key": k, "trades": len(ps),
+               "win_rate": round(wins / len(ps) * 100, 1),
+               "return_pct": round(_dash_compound(ps), 2)}
+        if meta:
+            row.update(meta.get(k, {}))
+        rows.append(row)
+    return rows
+
+
+def _dash_periods(closed):
+    """إحصائيات الفترات (يومي مع أسبوعه وشهره، أسبوعي مع شهره، شهري) بالنسبة المئوية."""
+    daily, weekly, monthly = {}, {}, {}
+    md, mw = {}, {}
+    for t in closed:
+        try:
+            day, week, month = _dash_period_keys(t)
+        except Exception:
+            continue
+        p = t["result_pct"]
+        daily.setdefault(day, []).append(p);   md[day] = {"week": week, "month": month}
+        weekly.setdefault(week, []).append(p);  mw[week] = {"month": month}
+        monthly.setdefault(month, []).append(p)
+    return {"daily": _dash_pack_period(daily, md),
+            "weekly": _dash_pack_period(weekly, mw),
+            "monthly": _dash_pack_period(monthly)}
+
+
 def export_dashboard(track_path=TRACK_FILE, out_path="paper_data.json"):
     """يكتب بيانات لوحة المتتبّع (paper_data.json) من صفقات trackmon المُتابَعة.
     يحلّ محلّ مُصدِّر paper.py المحذوف حتى تبقى اللوحة محدّثة."""
@@ -3315,7 +3366,7 @@ def export_dashboard(track_path=TRACK_FILE, out_path="paper_data.json"):
     closed = [t for t in trades if t["status"] == "closed" and t.get("result_pct") is not None]
     payload = {"updated_at": datetime.now().isoformat(timespec="seconds"),
                "stats": _dash_stats(trades, closed),
-               "periods": {"daily": [], "weekly": [], "monthly": []},
+               "periods": _dash_periods(closed),
                "trades": trades}
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
