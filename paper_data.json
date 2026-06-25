@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-25T21:49:43",
+  "updated_at": "2026-06-25T22:04:19",
   "stats": {
     "open": 25,
-    "closed": 193,
-    "win_rate": 33.7,
+    "closed": 194,
+    "win_rate": 34.0,
     "profit_factor": 1.41,
-    "total_pct": 114.8,
-    "avg_pct": 0.54,
+    "total_pct": 117.01,
+    "avg_pct": 0.55,
     "max_drawdown_pct": -85.27
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-25",
-        "trades": 83,
-        "win_rate": 68.7,
-        "return_pct": 999.84,
+        "trades": 84,
+        "win_rate": 69.0,
+        "return_pct": 1011.16,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -55,9 +55,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 187,
-        "win_rate": 34.8,
-        "return_pct": 114.8,
+        "trades": 188,
+        "win_rate": 35.1,
+        "return_pct": 117.01,
         "month": "2026-06"
       },
       {
@@ -71,9 +71,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 193,
-        "win_rate": 33.7,
-        "return_pct": 114.8
+        "trades": 194,
+        "win_rate": 34.0,
+        "return_pct": 117.01
       }
     ]
   },
@@ -3579,9 +3579,27 @@
       "timeframe": "15m",
       "entry": 0.01058361,
       "stop": 0.01043439,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-06-25T21:47:58",
+      "closed_at": "2026-06-25T22:04:17",
+      "realized_pct": 1.03,
+      "result_pct": 1.03
+    },
+    {
+      "id": "trendwave · 1h|RIFUSDT|2026-06-25 21:59:59.999000",
+      "symbol": "RIFUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0791868,
+      "stop": 0.07737689,
       "hits": [],
       "status": "open",
-      "opened_at": "2026-06-25T21:47:58",
+      "opened_at": "2026-06-25T22:03:24",
       "closed_at": null,
       "realized_pct": 0.0
     }
