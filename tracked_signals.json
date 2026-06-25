@@ -6245,5 +6245,31 @@
     "hi_seen": 0.10250011,
     "lo_seen": 0.10250011,
     "created": "2026-06-25T23:00:47"
+  },
+  "trendwave · 15m|BNTUSDT|2026-06-25 23:44:59.999000": {
+    "symbol": "BNTUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 1683,
+    "entry": 0.27278533,
+    "stop": 0.27064761,
+    "init_stop": 0.27064761,
+    "cur_stop": 0.27064761,
+    "last_alert_stop": 0.27064761,
+    "armed": false,
+    "targets": [
+      0.2789816,
+      0.2812
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 23:44:59.999000",
+    "last_bar": "2026-06-25 23:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.27278533,
+    "lo_seen": 0.27278533,
+    "created": "2026-06-25T23:47:41"
   }
 }
