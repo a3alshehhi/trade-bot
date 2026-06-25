@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-25T21:35:04",
+  "updated_at": "2026-06-25T21:49:43",
   "stats": {
-    "open": 23,
+    "open": 25,
     "closed": 193,
     "win_rate": 33.7,
     "profit_factor": 1.41,
@@ -3554,6 +3554,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T21:03:48",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|ESPUSDT|2026-06-25 21:44:59.999000",
+      "symbol": "ESPUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06234,
+      "stop": 0.05983981,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T21:46:03",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|STRAXUSDT|2026-06-25 21:44:59.999000",
+      "symbol": "STRAXUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01058361,
+      "stop": 0.01043439,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T21:47:58",
       "closed_at": null,
       "realized_pct": 0.0
     }
