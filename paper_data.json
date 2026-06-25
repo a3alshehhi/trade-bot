@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-25T16:05:27",
+  "updated_at": "2026-06-25T16:18:45",
   "stats": {
-    "open": 24,
+    "open": 25,
     "closed": 182,
     "win_rate": 29.7,
     "profit_factor": 1.15,
@@ -3254,11 +3254,13 @@
       "timeframe": "15m",
       "entry": 11.51155333,
       "stop": 11.18967757,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-25T14:32:48",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 2.08
     },
     {
       "id": "trendwave · 15m|GUSDT|2026-06-25 14:29:59.999000",
@@ -3285,11 +3287,13 @@
       "timeframe": "15m",
       "entry": 11.54111333,
       "stop": 11.19041489,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-25T14:48:12",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.95
     },
     {
       "id": "trendwave · 15m|STRAXUSDT|2026-06-25 14:44:59.999000",
@@ -3376,6 +3380,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T16:04:04",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|STRAXUSDT|2026-06-25 16:14:59.999000",
+      "symbol": "STRAXUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01044912,
+      "stop": 0.01030445,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T16:17:22",
       "closed_at": null,
       "realized_pct": 0.0
     }
