@@ -3997,5 +3997,36 @@
     "hi_seen": 0.1123868,
     "lo_seen": 0.1123868,
     "created": "2026-06-25T03:03:54"
+  },
+  "RSI70 · 15m|KAITOUSDT|2026-06-25 03:14:59.999000": {
+    "symbol": "KAITOUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1409,
+    "entry": 0.4504,
+    "stop": 0.43800293,
+    "init_stop": 0.43800293,
+    "cur_stop": 0.43800293,
+    "last_alert_stop": 0.43800293,
+    "armed": false,
+    "targets": [
+      0.4561936,
+      0.4635634,
+      0.4848634
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 03:14:59.999000",
+    "last_bar": "2026-06-25 03:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.4504,
+    "lo_seen": 0.4504,
+    "created": "2026-06-25T03:16:07"
   }
 }

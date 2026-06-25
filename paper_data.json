@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-25T03:05:08",
+  "updated_at": "2026-06-25T03:20:12",
   "stats": {
-    "open": 34,
+    "open": 35,
     "closed": 120,
     "win_rate": 10.8,
     "profit_factor": 0.23,
@@ -2420,6 +2420,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T03:03:54",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|KAITOUSDT|2026-06-25 03:14:59.999000",
+      "symbol": "KAITOUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.4504,
+      "stop": 0.43800293,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T03:16:07",
       "closed_at": null,
       "realized_pct": 0.0
     }
