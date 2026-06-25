@@ -1333,7 +1333,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-06-25 00:14:59.999000"
+    "last_bar": "2026-06-25 00:29:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -1981,15 +1981,18 @@
     "is_trendwave": false,
     "breakeven_done": true,
     "bar_ts": "2026-06-23 17:29:59.999000",
-    "last_bar": "2026-06-25 00:14:59.999000",
+    "last_bar": "2026-06-25 00:29:59.999000",
     "hits": [
       1,
       2
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.1465,
     "lo_seen": 0.1065,
-    "created": "2026-06-23T17:31:18"
+    "created": "2026-06-23T17:31:18",
+    "exit_price": 0.1122,
+    "close_card_sent": true,
+    "closed_at": "2026-06-25T00:34:26"
   },
   "RSI70 · 15m|EDUUSDT|2026-06-23 17:59:59.999000": {
     "symbol": "EDUUSDT",
@@ -2963,12 +2966,15 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 18:29:59.999000",
-    "last_bar": "2026-06-25 00:14:59.999000",
+    "last_bar": "2026-06-25 00:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.1218,
-    "lo_seen": 0.1131,
-    "created": "2026-06-24T18:32:33"
+    "lo_seen": 0.1115,
+    "created": "2026-06-24T18:32:33",
+    "exit_price": 0.1118209,
+    "close_card_sent": true,
+    "closed_at": "2026-06-25T00:34:30"
   },
   "trendwave · 1h|TNSRUSDT|2026-06-24 18:59:59.999000": {
     "symbol": "TNSRUSDT",
@@ -3047,11 +3053,11 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 19:14:59.999000",
-    "last_bar": "2026-06-25 00:14:59.999000",
+    "last_bar": "2026-06-25 00:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1218,
-    "lo_seen": 0.1132,
+    "lo_seen": 0.1115,
     "created": "2026-06-24T19:18:12"
   },
   "trendwave · 1h|ALICEUSDT|2026-06-24 19:59:59.999000": {
@@ -3156,7 +3162,7 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 20:14:59.999000",
-    "last_bar": "2026-06-25 00:14:59.999000",
+    "last_bar": "2026-06-25 00:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0846,
@@ -3218,11 +3224,11 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 20:29:59.999000",
-    "last_bar": "2026-06-25 00:14:59.999000",
+    "last_bar": "2026-06-25 00:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1218,
-    "lo_seen": 0.1132,
+    "lo_seen": 0.1115,
     "created": "2026-06-24T20:33:22"
   },
   "trendwave · 15m|STRAXUSDT|2026-06-24 20:29:59.999000": {
@@ -3395,12 +3401,15 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 21:14:59.999000",
-    "last_bar": "2026-06-25 00:14:59.999000",
+    "last_bar": "2026-06-25 00:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.1207,
-    "lo_seen": 0.1132,
-    "created": "2026-06-24T21:18:06"
+    "lo_seen": 0.1115,
+    "created": "2026-06-24T21:18:06",
+    "exit_price": 0.11262096,
+    "close_card_sent": true,
+    "closed_at": "2026-06-25T00:34:39"
   },
   "trendwave · 15m|STRAXUSDT|2026-06-24 21:29:59.999000": {
     "symbol": "STRAXUSDT",
@@ -3647,11 +3656,11 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 23:14:59.999000",
-    "last_bar": "2026-06-25 00:14:59.999000",
+    "last_bar": "2026-06-25 00:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.000312,
-    "lo_seen": 0.000309,
+    "hi_seen": 0.000313,
+    "lo_seen": 0.000308,
     "created": "2026-06-24T23:16:04"
   },
   "trendwave · 15m|HEIUSDT|2026-06-24 23:59:59.999000": {
@@ -3673,12 +3682,15 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 23:59:59.999000",
-    "last_bar": "2026-06-25 00:14:59.999000",
+    "last_bar": "2026-06-25 00:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.1173,
-    "lo_seen": 0.1134,
-    "created": "2026-06-25T00:02:57"
+    "lo_seen": 0.1115,
+    "created": "2026-06-25T00:02:57",
+    "exit_price": 0.11189457,
+    "close_card_sent": true,
+    "closed_at": "2026-06-25T00:34:43"
   },
   "trendwave · 4h|EPICUSDT|2026-06-24 23:59:59.999000": {
     "symbol": "EPICUSDT",
