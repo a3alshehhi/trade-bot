@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-25T02:05:19",
+  "updated_at": "2026-06-25T02:19:33",
   "stats": {
-    "open": 30,
+    "open": 32,
     "closed": 119,
     "win_rate": 10.1,
     "profit_factor": 0.22,
@@ -2345,6 +2345,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T02:03:20",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|OPENUSDT|2026-06-25 02:14:59.999000",
+      "symbol": "OPENUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1831,
+      "stop": 0.1761297,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T02:16:05",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|HEIUSDT|2026-06-25 02:14:59.999000",
+      "symbol": "HEIUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.11402873,
+      "stop": 0.11129233,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T02:17:50",
       "closed_at": null,
       "realized_pct": 0.0
     }
