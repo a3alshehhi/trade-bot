@@ -1333,7 +1333,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-06-25 14:59:59.999000"
+    "last_bar": "2026-06-25 15:14:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -4812,7 +4812,7 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-25 08:29:59.999000",
-    "last_bar": "2026-06-25 14:59:59.999000",
+    "last_bar": "2026-06-25 15:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0546,
@@ -5491,7 +5491,7 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-25 14:29:59.999000",
-    "last_bar": "2026-06-25 14:59:59.999000",
+    "last_bar": "2026-06-25 15:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 11.86,
@@ -5517,14 +5517,17 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-25 14:29:59.999000",
-    "last_bar": "2026-06-25 14:59:59.999000",
+    "last_bar": "2026-06-25 15:14:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.00332,
-    "lo_seen": 0.00320419,
-    "created": "2026-06-25T14:32:49"
+    "lo_seen": 0.00319,
+    "created": "2026-06-25T14:32:49",
+    "exit_price": 0.00320419,
+    "close_card_sent": true,
+    "closed_at": "2026-06-25T15:19:29"
   },
   "trendwave · 15m|DCRUSDT|2026-06-25 14:44:59.999000": {
     "symbol": "DCRUSDT",
@@ -5545,7 +5548,7 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-25 14:44:59.999000",
-    "last_bar": "2026-06-25 14:59:59.999000",
+    "last_bar": "2026-06-25 15:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 11.83,
