@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-25T12:20:16",
+  "updated_at": "2026-06-25T12:34:26",
   "stats": {
-    "open": 39,
-    "closed": 155,
-    "win_rate": 24.5,
+    "open": 35,
+    "closed": 159,
+    "win_rate": 25.2,
     "profit_factor": 0.76,
-    "total_pct": -49.76,
-    "avg_pct": -0.34,
+    "total_pct": -50.9,
+    "avg_pct": -0.35,
     "max_drawdown_pct": -85.27
   },
   "periods": {
@@ -2265,10 +2265,11 @@
       "entry": 0.00031,
       "stop": 0.00029875,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-24T23:16:04",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T12:34:06",
+      "realized_pct": -3.63,
+      "result_pct": -3.63
     },
     {
       "id": "trendwave · 15m|HEIUSDT|2026-06-24 23:59:59.999000",
@@ -2773,11 +2774,14 @@
       "timeframe": "15m",
       "entry": 0.06355,
       "stop": 0.06071913,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-06-25T08:31:11",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T12:34:14",
+      "realized_pct": 2.22,
+      "result_pct": 2.22
     },
     {
       "id": "RSI70 · 15m|CITYUSDT|2026-06-25 08:29:59.999000",
@@ -2996,10 +3000,11 @@
       "entry": 0.0454,
       "stop": 0.04425138,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-25T11:46:07",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T12:34:19",
+      "realized_pct": -2.53,
+      "result_pct": -2.53
     },
     {
       "id": "RSI70 · 15m|BNTUSDT|2026-06-25 11:59:59.999000",
@@ -3038,11 +3043,15 @@
       "timeframe": "15m",
       "entry": 0.01058267,
       "stop": 0.01053671,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-25T12:03:20",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T12:34:23",
+      "realized_pct": 1.78,
+      "result_pct": 1.78
     },
     {
       "id": "trendwave · 1h|ALICEUSDT|2026-06-25 11:59:59.999000",
