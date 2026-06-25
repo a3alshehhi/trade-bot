@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-25T06:35:22",
+  "updated_at": "2026-06-25T06:49:34",
   "stats": {
-    "open": 32,
-    "closed": 132,
-    "win_rate": 17.4,
+    "open": 31,
+    "closed": 133,
+    "win_rate": 17.3,
     "profit_factor": 0.6,
-    "total_pct": -60.71,
+    "total_pct": -61.08,
     "avg_pct": -0.6,
     "max_drawdown_pct": -85.27
   },
@@ -2603,10 +2603,11 @@
       "entry": 0.00302985,
       "stop": 0.00300129,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-25T05:32:32",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T06:49:33",
+      "realized_pct": -0.94,
+      "result_pct": -0.94
     }
   ]
 }
