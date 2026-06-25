@@ -1,18 +1,81 @@
 {
-  "updated_at": "2026-06-25T13:35:14",
+  "updated_at": "2026-06-25T13:49:47",
   "stats": {
-    "open": 31,
-    "closed": 164,
-    "win_rate": 27.4,
-    "profit_factor": 0.88,
-    "total_pct": -35.25,
-    "avg_pct": -0.16,
+    "open": 30,
+    "closed": 165,
+    "win_rate": 27.3,
+    "profit_factor": 0.87,
+    "total_pct": -37.99,
+    "avg_pct": -0.19,
     "max_drawdown_pct": -85.27
   },
   "periods": {
-    "daily": [],
-    "weekly": [],
-    "monthly": []
+    "daily": [
+      {
+        "key": "2026-06-25",
+        "trades": 55,
+        "win_rate": 67.3,
+        "return_pct": 217.5,
+        "week": "2026-W26",
+        "month": "2026-06"
+      },
+      {
+        "key": "2026-06-24",
+        "trades": 31,
+        "win_rate": 22.6,
+        "return_pct": -49.57,
+        "week": "2026-W26",
+        "month": "2026-06"
+      },
+      {
+        "key": "2026-06-23",
+        "trades": 19,
+        "win_rate": 0.0,
+        "return_pct": -54.11,
+        "week": "2026-W26",
+        "month": "2026-06"
+      },
+      {
+        "key": "2026-06-22",
+        "trades": 54,
+        "win_rate": 1.9,
+        "return_pct": -15.62,
+        "week": "2026-W26",
+        "month": "2026-06"
+      },
+      {
+        "key": "2026-06-21",
+        "trades": 6,
+        "win_rate": 0.0,
+        "return_pct": 0.0,
+        "week": "2026-W25",
+        "month": "2026-06"
+      }
+    ],
+    "weekly": [
+      {
+        "key": "2026-W26",
+        "trades": 159,
+        "win_rate": 28.3,
+        "return_pct": -37.99,
+        "month": "2026-06"
+      },
+      {
+        "key": "2026-W25",
+        "trades": 6,
+        "win_rate": 0.0,
+        "return_pct": 0.0,
+        "month": "2026-06"
+      }
+    ],
+    "monthly": [
+      {
+        "key": "2026-06",
+        "trades": 165,
+        "win_rate": 27.3,
+        "return_pct": -37.99
+      }
+    ]
   },
   "trades": [
     {
@@ -3116,10 +3179,11 @@
       "entry": 24.515,
       "stop": 23.47702773,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-25T13:16:09",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T13:49:46",
+      "realized_pct": -4.23,
+      "result_pct": -4.23
     }
   ]
 }

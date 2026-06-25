@@ -1328,12 +1328,12 @@
       1
     ],
     "stopped": false,
-    "hi_seen": 24.7,
+    "hi_seen": 25.5,
     "lo_seen": 20.663,
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-06-25 12:59:59.999000"
+    "last_bar": "2026-06-25 13:44:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -4789,7 +4789,7 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-25 08:29:59.999000",
-    "last_bar": "2026-06-25 12:59:59.999000",
+    "last_bar": "2026-06-25 13:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0546,
@@ -5369,11 +5369,14 @@
     "is_trendwave": false,
     "breakeven_done": false,
     "bar_ts": "2026-06-25 13:14:59.999000",
-    "last_bar": "2026-06-25 13:14:59.999000",
+    "last_bar": "2026-06-25 13:44:59.999000",
     "hits": [],
-    "stopped": false,
-    "hi_seen": 24.515,
-    "lo_seen": 24.515,
-    "created": "2026-06-25T13:16:09"
+    "stopped": true,
+    "hi_seen": 24.516,
+    "lo_seen": 23.466,
+    "created": "2026-06-25T13:16:09",
+    "exit_price": 23.47702773,
+    "close_card_sent": true,
+    "closed_at": "2026-06-25T13:49:46"
   }
 }
