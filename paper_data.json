@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-25T00:34:44",
+  "updated_at": "2026-06-25T00:50:04",
   "stats": {
-    "open": 26,
+    "open": 28,
     "closed": 118,
     "win_rate": 10.2,
     "profit_factor": 0.22,
@@ -2274,6 +2274,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T00:04:14",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|EDUUSDT|2026-06-25 00:44:59.999000",
+      "symbol": "EDUUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0306478,
+      "stop": 0.03034416,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T00:48:06",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|GUSDT|2026-06-25 00:44:59.999000",
+      "symbol": "GUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00302478,
+      "stop": 0.0029898,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T00:48:07",
       "closed_at": null,
       "realized_pct": 0.0
     }

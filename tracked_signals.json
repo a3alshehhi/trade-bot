@@ -3717,5 +3717,57 @@
     "hi_seen": 0.414824,
     "lo_seen": 0.414824,
     "created": "2026-06-25T00:04:14"
+  },
+  "trendwave · 15m|EDUUSDT|2026-06-25 00:44:59.999000": {
+    "symbol": "EDUUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 1393,
+    "entry": 0.0306478,
+    "stop": 0.03034416,
+    "init_stop": 0.03034416,
+    "cur_stop": 0.03034416,
+    "last_alert_stop": 0.03034416,
+    "armed": false,
+    "targets": [
+      0.0311112,
+      0.0313
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 00:44:59.999000",
+    "last_bar": "2026-06-25 00:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0306478,
+    "lo_seen": 0.0306478,
+    "created": "2026-06-25T00:48:06"
+  },
+  "trendwave · 15m|GUSDT|2026-06-25 00:44:59.999000": {
+    "symbol": "GUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 1394,
+    "entry": 0.00302478,
+    "stop": 0.0029898,
+    "init_stop": 0.0029898,
+    "cur_stop": 0.0029898,
+    "last_alert_stop": 0.0029898,
+    "armed": false,
+    "targets": [
+      0.00321246,
+      0.003275
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 00:44:59.999000",
+    "last_bar": "2026-06-25 00:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00302478,
+    "lo_seen": 0.00302478,
+    "created": "2026-06-25T00:48:07"
   }
 }
