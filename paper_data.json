@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-25T09:20:15",
+  "updated_at": "2026-06-25T09:34:02",
   "stats": {
-    "open": 41,
-    "closed": 142,
-    "win_rate": 21.1,
-    "profit_factor": 0.75,
-    "total_pct": -49.08,
-    "avg_pct": -0.37,
+    "open": 40,
+    "closed": 143,
+    "win_rate": 21.7,
+    "profit_factor": 0.76,
+    "total_pct": -48.35,
+    "avg_pct": -0.35,
     "max_drawdown_pct": -85.27
   },
   "periods": {
@@ -2852,11 +2852,14 @@
       "timeframe": "15m",
       "entry": 0.1351,
       "stop": 0.13102082,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-06-25T09:01:11",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T09:34:00",
+      "realized_pct": 1.43,
+      "result_pct": 1.43
     },
     {
       "id": "RSI70 · 1h|SEIUSDT|2026-06-25 08:59:59.999000",
