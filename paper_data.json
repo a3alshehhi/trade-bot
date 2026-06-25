@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-25T05:18:53",
+  "updated_at": "2026-06-25T05:34:01",
   "stats": {
-    "open": 38,
+    "open": 39,
     "closed": 125,
     "win_rate": 13.6,
     "profit_factor": 0.27,
@@ -2562,6 +2562,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T04:47:32",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|GUSDT|2026-06-25 05:29:59.999000",
+      "symbol": "GUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00302985,
+      "stop": 0.00300129,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T05:32:32",
       "closed_at": null,
       "realized_pct": 0.0
     }
