@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-25T11:34:35",
+  "updated_at": "2026-06-25T11:50:15",
   "stats": {
-    "open": 36,
+    "open": 37,
     "closed": 151,
     "win_rate": 23.8,
     "profit_factor": 0.77,
@@ -2971,6 +2971,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T11:01:19",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|MIRAUSDT|2026-06-25 11:44:59.999000",
+      "symbol": "MIRAUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0454,
+      "stop": 0.04425138,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T11:46:07",
       "closed_at": null,
       "realized_pct": 0.0
     }

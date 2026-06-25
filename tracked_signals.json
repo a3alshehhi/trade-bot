@@ -5086,5 +5086,36 @@
     "hi_seen": 0.0457,
     "lo_seen": 0.0453,
     "created": "2026-06-25T11:01:19"
+  },
+  "RSI70 · 15m|MIRAUSDT|2026-06-25 11:44:59.999000": {
+    "symbol": "MIRAUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1528,
+    "entry": 0.0454,
+    "stop": 0.04425138,
+    "init_stop": 0.04425138,
+    "cur_stop": 0.04425138,
+    "last_alert_stop": 0.04425138,
+    "armed": false,
+    "targets": [
+      0.0459168,
+      0.0465742,
+      0.0484742
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 11:44:59.999000",
+    "last_bar": "2026-06-25 11:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0454,
+    "lo_seen": 0.0454,
+    "created": "2026-06-25T11:46:07"
   }
 }
