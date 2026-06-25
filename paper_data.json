@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-25T03:20:12",
+  "updated_at": "2026-06-25T03:33:58",
   "stats": {
-    "open": 35,
-    "closed": 120,
-    "win_rate": 10.8,
+    "open": 34,
+    "closed": 121,
+    "win_rate": 10.7,
     "profit_factor": 0.23,
-    "total_pct": -79.61,
+    "total_pct": -79.84,
     "avg_pct": -1.24,
     "max_drawdown_pct": -85.27
   },
@@ -2291,11 +2291,13 @@
       "timeframe": "15m",
       "entry": 0.0306478,
       "stop": 0.03034416,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-25T00:48:06",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.76
     },
     {
       "id": "trendwave · 15m|GUSDT|2026-06-25 00:44:59.999000",
@@ -2306,10 +2308,11 @@
       "entry": 0.00302478,
       "stop": 0.0029898,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-25T00:48:07",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T03:33:52",
+      "realized_pct": -1.16,
+      "result_pct": -1.16
     },
     {
       "id": "trendwave · 15m|HEIUSDT|2026-06-25 00:59:59.999000",
