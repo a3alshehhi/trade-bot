@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-25T12:05:39",
+  "updated_at": "2026-06-25T12:20:16",
   "stats": {
     "open": 39,
-    "closed": 154,
-    "win_rate": 24.7,
-    "profit_factor": 0.77,
-    "total_pct": -48.6,
-    "avg_pct": -0.33,
+    "closed": 155,
+    "win_rate": 24.5,
+    "profit_factor": 0.76,
+    "total_pct": -49.76,
+    "avg_pct": -0.34,
     "max_drawdown_pct": -85.27
   },
   "periods": {
@@ -3024,10 +3024,11 @@
       "entry": 0.56094133,
       "stop": 0.54823918,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-25T12:03:19",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T12:20:12",
+      "realized_pct": -2.26,
+      "result_pct": -2.26
     },
     {
       "id": "trendwave · 15m|STRAXUSDT|2026-06-25 11:59:59.999000",
@@ -3068,6 +3069,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T12:05:01",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|SYNUSDT|2026-06-25 12:14:59.999000",
+      "symbol": "SYNUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.4184,
+      "stop": 0.37247621,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T12:16:07",
       "closed_at": null,
       "realized_pct": 0.0
     }
