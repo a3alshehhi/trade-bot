@@ -5437,5 +5437,36 @@
     "hi_seen": 0.1595,
     "lo_seen": 0.1595,
     "created": "2026-06-25T14:01:47"
+  },
+  "RSI70 · 15m|PUNDIXUSDT|2026-06-25 14:14:59.999000": {
+    "symbol": "PUNDIXUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1590,
+    "entry": 0.0963,
+    "stop": 0.09225325,
+    "init_stop": 0.09225325,
+    "cur_stop": 0.09225325,
+    "last_alert_stop": 0.09225325,
+    "armed": false,
+    "targets": [
+      0.0981224,
+      0.1004406,
+      0.1071406
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 14:14:59.999000",
+    "last_bar": "2026-06-25 14:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0963,
+    "lo_seen": 0.0963,
+    "created": "2026-06-25T14:16:11"
   }
 }

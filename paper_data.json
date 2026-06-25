@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-25T14:05:34",
+  "updated_at": "2026-06-25T14:20:12",
   "stats": {
-    "open": 24,
+    "open": 25,
     "closed": 172,
     "win_rate": 27.3,
     "profit_factor": 0.89,
@@ -3210,6 +3210,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T14:01:47",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|PUNDIXUSDT|2026-06-25 14:14:59.999000",
+      "symbol": "PUNDIXUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0963,
+      "stop": 0.09225325,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T14:16:11",
       "closed_at": null,
       "realized_pct": 0.0
     }
