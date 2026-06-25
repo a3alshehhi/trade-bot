@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-25T07:50:10",
+  "updated_at": "2026-06-25T08:05:41",
   "stats": {
-    "open": 35,
-    "closed": 135,
-    "win_rate": 18.5,
-    "profit_factor": 0.72,
-    "total_pct": -51.55,
-    "avg_pct": -0.42,
+    "open": 36,
+    "closed": 137,
+    "win_rate": 19.7,
+    "profit_factor": 0.73,
+    "total_pct": -49.8,
+    "avg_pct": -0.39,
     "max_drawdown_pct": -85.27
   },
   "periods": {
@@ -1997,11 +1997,14 @@
       "timeframe": "15m",
       "entry": 0.0843,
       "stop": 0.08082684,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-06-24T20:16:06",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T08:05:21",
+      "realized_pct": 1.9,
+      "result_pct": 1.9
     },
     {
       "id": "RSI70 · 15m|CELOUSDT|2026-06-24 20:29:59.999000",
@@ -2635,11 +2638,13 @@
       "timeframe": "1h",
       "entry": 0.1188944,
       "stop": 0.10833876,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-25T07:03:39",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 2.59
     },
     {
       "id": "trendwave · 1h|STRAXUSDT|2026-06-25 06:59:59.999000",
@@ -2677,11 +2682,14 @@
       "timeframe": "15m",
       "entry": 0.077,
       "stop": 0.07432317,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-06-25T07:46:07",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T08:05:37",
+      "realized_pct": 1.66,
+      "result_pct": 1.66
     },
     {
       "id": "RSI70 · 15m|SUIUSDT|2026-06-25 07:44:59.999000",
@@ -2694,6 +2702,48 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T07:46:08",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 4h|SYNUSDT|2026-06-25 07:59:59.999000",
+      "symbol": "SYNUSDT",
+      "label": "RSI70 · 4h",
+      "side": "buy",
+      "timeframe": "4h",
+      "entry": 0.37042,
+      "stop": 0.24405022,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T08:02:13",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|CELOUSDT|2026-06-25 07:59:59.999000",
+      "symbol": "CELOUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06522803,
+      "stop": 0.06439485,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T08:03:26",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|HEIUSDT|2026-06-25 07:59:59.999000",
+      "symbol": "HEIUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.12211993,
+      "stop": 0.11834782,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T08:03:26",
       "closed_at": null,
       "realized_pct": 0.0
     }
