@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-25T03:48:49",
+  "updated_at": "2026-06-25T04:05:28",
   "stats": {
-    "open": 35,
-    "closed": 121,
-    "win_rate": 10.7,
-    "profit_factor": 0.23,
-    "total_pct": -79.84,
-    "avg_pct": -1.24,
+    "open": 38,
+    "closed": 122,
+    "win_rate": 11.5,
+    "profit_factor": 0.24,
+    "total_pct": -79.49,
+    "avg_pct": -1.22,
     "max_drawdown_pct": -85.27
   },
   "periods": {
@@ -2336,11 +2336,14 @@
       "timeframe": "15m",
       "entry": 0.1829,
       "stop": 0.17607221,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-06-25T01:31:13",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T04:05:18",
+      "realized_pct": 1.75,
+      "result_pct": 1.75
     },
     {
       "id": "trendwave · 15m|OGUSDT|2026-06-25 01:59:59.999000",
@@ -2451,6 +2454,62 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T03:47:24",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 4h|NEARUSDT|2026-06-25 03:59:59.999000",
+      "symbol": "NEARUSDT",
+      "label": "trendwave · 4h",
+      "side": "buy",
+      "timeframe": "4h",
+      "entry": 1.90089133,
+      "stop": 1.82898677,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T04:04:56",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 4h|TONUSDT|2026-06-25 03:59:59.999000",
+      "symbol": "TONUSDT",
+      "label": "trendwave · 4h",
+      "side": "buy",
+      "timeframe": "4h",
+      "entry": 1.554994,
+      "stop": 1.49333331,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T04:04:57",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 4h|XLMUSDT|2026-06-25 03:59:59.999000",
+      "symbol": "XLMUSDT",
+      "label": "trendwave · 4h",
+      "side": "buy",
+      "timeframe": "4h",
+      "entry": 0.184117,
+      "stop": 0.17910223,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T04:04:58",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 4h|ZECUSDT|2026-06-25 03:59:59.999000",
+      "symbol": "ZECUSDT",
+      "label": "trendwave · 4h",
+      "side": "buy",
+      "timeframe": "4h",
+      "entry": 399.30922,
+      "stop": 379.92616202,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T04:04:59",
       "closed_at": null,
       "realized_pct": 0.0
     }
