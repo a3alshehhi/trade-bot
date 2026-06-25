@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-25T02:49:19",
+  "updated_at": "2026-06-25T03:05:08",
   "stats": {
-    "open": 32,
-    "closed": 119,
-    "win_rate": 10.1,
-    "profit_factor": 0.22,
-    "total_pct": -80.03,
-    "avg_pct": -1.27,
+    "open": 34,
+    "closed": 120,
+    "win_rate": 10.8,
+    "profit_factor": 0.23,
+    "total_pct": -79.61,
+    "avg_pct": -1.24,
     "max_drawdown_pct": -85.27
   },
   "periods": {
@@ -1921,11 +1921,13 @@
       "timeframe": "1h",
       "entry": 0.08640233,
       "stop": 0.08203841,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-24T19:04:06",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 4.73
     },
     {
       "id": "trendwave · 15m|HEIUSDT|2026-06-24 19:14:59.999000",
@@ -2229,11 +2231,14 @@
       "timeframe": "1h",
       "entry": 0.08441,
       "stop": 0.08044103,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-06-24T23:01:33",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T03:04:58",
+      "realized_pct": 2.1,
+      "result_pct": 2.1
     },
     {
       "id": "RSI70 · 15m|HOTUSDT|2026-06-24 23:14:59.999000",
@@ -2373,6 +2378,48 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T02:17:50",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|HEIUSDT|2026-06-25 02:59:59.999000",
+      "symbol": "HEIUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1128434,
+      "stop": 0.11112098,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T03:03:08",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|ALICEUSDT|2026-06-25 02:59:59.999000",
+      "symbol": "ALICEUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1235478,
+      "stop": 0.12119755,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T03:03:53",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|HEIUSDT|2026-06-25 02:59:59.999000",
+      "symbol": "HEIUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1123868,
+      "stop": 0.10831551,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T03:03:54",
       "closed_at": null,
       "realized_pct": 0.0
     }
