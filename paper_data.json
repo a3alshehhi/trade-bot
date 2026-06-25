@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-25T17:54:30",
+  "updated_at": "2026-06-25T18:05:20",
   "stats": {
-    "open": 22,
-    "closed": 186,
-    "win_rate": 31.2,
-    "profit_factor": 1.17,
-    "total_pct": 20.71,
-    "avg_pct": 0.24,
+    "open": 23,
+    "closed": 187,
+    "win_rate": 31.6,
+    "profit_factor": 1.2,
+    "total_pct": 30.6,
+    "avg_pct": 0.28,
     "max_drawdown_pct": -85.27
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-25",
-        "trades": 76,
-        "win_rate": 65.8,
-        "return_pct": 518.08,
+        "trades": 77,
+        "win_rate": 66.2,
+        "return_pct": 568.7,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -55,9 +55,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 180,
-        "win_rate": 32.2,
-        "return_pct": 20.71,
+        "trades": 181,
+        "win_rate": 32.6,
+        "return_pct": 30.6,
         "month": "2026-06"
       },
       {
@@ -71,9 +71,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 186,
-        "win_rate": 31.2,
-        "return_pct": 20.71
+        "trades": 187,
+        "win_rate": 31.6,
+        "return_pct": 30.6
       }
     ]
   },
@@ -3225,11 +3225,14 @@
       "timeframe": "1h",
       "entry": 0.1595,
       "stop": 0.13059221,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-06-25T14:01:47",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T18:05:14",
+      "realized_pct": 8.19,
+      "result_pct": 8.19
     },
     {
       "id": "RSI70 · 15m|PUNDIXUSDT|2026-06-25 14:14:59.999000",
@@ -3420,6 +3423,34 @@
       "closed_at": "2026-06-25T17:03:51",
       "realized_pct": 1.11,
       "result_pct": 1.11
+    },
+    {
+      "id": "RSI70 · 15m|PIVXUSDT|2026-06-25 17:59:59.999000",
+      "symbol": "PIVXUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0378,
+      "stop": 0.0353174,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T18:01:22",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|HEIUSDT|2026-06-25 17:59:59.999000",
+      "symbol": "HEIUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1707,
+      "stop": 0.13543018,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T18:01:50",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
