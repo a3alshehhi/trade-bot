@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-25T15:49:43",
+  "updated_at": "2026-06-25T16:05:27",
   "stats": {
-    "open": 27,
-    "closed": 175,
-    "win_rate": 28.0,
-    "profit_factor": 0.88,
-    "total_pct": -38.09,
-    "avg_pct": -0.17,
+    "open": 24,
+    "closed": 182,
+    "win_rate": 29.7,
+    "profit_factor": 1.15,
+    "total_pct": 12.69,
+    "avg_pct": 0.21,
     "max_drawdown_pct": -85.27
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-25",
-        "trades": 65,
-        "win_rate": 63.1,
-        "return_pct": 217.01,
+        "trades": 72,
+        "win_rate": 63.9,
+        "return_pct": 477.0,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -55,9 +55,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 169,
-        "win_rate": 29.0,
-        "return_pct": -38.09,
+        "trades": 176,
+        "win_rate": 30.7,
+        "return_pct": 12.69,
         "month": "2026-06"
       },
       {
@@ -71,9 +71,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 175,
-        "win_rate": 28.0,
-        "return_pct": -38.09
+        "trades": 182,
+        "win_rate": 29.7,
+        "return_pct": 12.69
       }
     ]
   },
@@ -1157,11 +1157,14 @@
       "timeframe": "4h",
       "entry": 22.656,
       "stop": 17.40869129,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-06-23T04:01:57",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T16:04:59",
+      "realized_pct": 11.11,
+      "result_pct": 11.11
     },
     {
       "id": "RSI70 · 15m|SCRUSDT|2026-06-23 04:29:59.999000",
@@ -1337,11 +1340,14 @@
       "timeframe": "4h",
       "entry": 0.06256,
       "stop": 0.05711041,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-06-23T12:01:50",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T16:05:01",
+      "realized_pct": 4.05,
+      "result_pct": 4.05
     },
     {
       "id": "RSI70 · 15m|ALGOUSDT|2026-06-23 12:29:59.999000",
@@ -1661,11 +1667,14 @@
       "timeframe": "4h",
       "entry": 0.00328,
       "stop": 0.00283215,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-06-24T08:01:55",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T16:05:04",
+      "realized_pct": 6.05,
+      "result_pct": 6.05
     },
     {
       "id": "RSI70 · 15m|PROMUSDT|2026-06-24 08:14:59.999000",
@@ -2588,10 +2597,11 @@
       "entry": 1.90089133,
       "stop": 1.82898677,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-25T04:04:56",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T16:05:09",
+      "realized_pct": -3.78,
+      "result_pct": -3.78
     },
     {
       "id": "trendwave · 4h|TONUSDT|2026-06-25 03:59:59.999000",
@@ -2616,10 +2626,11 @@
       "entry": 0.184117,
       "stop": 0.17910223,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-25T04:04:58",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T16:05:12",
+      "realized_pct": -2.72,
+      "result_pct": -2.72
     },
     {
       "id": "trendwave · 4h|ZECUSDT|2026-06-25 03:59:59.999000",
@@ -2800,11 +2811,14 @@
       "timeframe": "4h",
       "entry": 0.37042,
       "stop": 0.24405022,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-06-25T08:02:13",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T16:05:15",
+      "realized_pct": 15.49,
+      "result_pct": 15.49
     },
     {
       "id": "trendwave · 15m|CELOUSDT|2026-06-25 07:59:59.999000",
@@ -3161,11 +3175,15 @@
       "timeframe": "4h",
       "entry": 0.12026947,
       "stop": 0.10522478,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-25T12:05:01",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-25T16:05:20",
+      "realized_pct": 37.33,
+      "result_pct": 37.33
     },
     {
       "id": "RSI70 · 15m|SYNUSDT|2026-06-25 12:14:59.999000",
@@ -3302,6 +3320,62 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-25T15:46:03",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 4h|HEIUSDT|2026-06-25 15:59:59.999000",
+      "symbol": "HEIUSDT",
+      "label": "RSI70 · 4h",
+      "side": "buy",
+      "timeframe": "4h",
+      "entry": 0.1622,
+      "stop": 0.11410873,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T16:02:04",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|PSGUSDT|2026-06-25 15:59:59.999000",
+      "symbol": "PSGUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.53488267,
+      "stop": 0.52000622,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T16:03:15",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|SEIUSDT|2026-06-25 15:59:59.999000",
+      "symbol": "SEIUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.05650334,
+      "stop": 0.05512735,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T16:04:03",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|XPLUSDT|2026-06-25 15:59:59.999000",
+      "symbol": "XPLUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.09139629,
+      "stop": 0.08680755,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-25T16:04:04",
       "closed_at": null,
       "realized_pct": 0.0
     }
