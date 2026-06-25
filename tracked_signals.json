@@ -3798,5 +3798,36 @@
     "hi_seen": 0.1126824,
     "lo_seen": 0.1126824,
     "created": "2026-06-25T01:02:47"
+  },
+  "RSI70 · 15m|OPENUSDT|2026-06-25 01:29:59.999000": {
+    "symbol": "OPENUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1398,
+    "entry": 0.1829,
+    "stop": 0.17607221,
+    "init_stop": 0.17607221,
+    "cur_stop": 0.17607221,
+    "last_alert_stop": 0.17607221,
+    "armed": false,
+    "targets": [
+      0.1861096,
+      0.1901924,
+      0.2019924
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-25 01:29:59.999000",
+    "last_bar": "2026-06-25 01:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1829,
+    "lo_seen": 0.1829,
+    "created": "2026-06-25T01:31:13"
   }
 }
