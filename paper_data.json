@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-26T00:20:17",
+  "updated_at": "2026-06-26T00:35:15",
   "stats": {
-    "open": 27,
+    "open": 29,
     "closed": 199,
     "win_rate": 35.7,
     "profit_factor": 1.58,
@@ -3720,6 +3720,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T00:16:08",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|APEUSDT|2026-06-26 00:29:59.999000",
+      "symbol": "APEUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1459,
+      "stop": 0.13798015,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T00:31:09",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|BNTUSDT|2026-06-26 00:29:59.999000",
+      "symbol": "BNTUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.27292873,
+      "stop": 0.27034604,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T00:33:14",
       "closed_at": null,
       "realized_pct": 0.0
     }
