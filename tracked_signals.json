@@ -8407,5 +8407,69 @@
     "hi_seen": 0.101,
     "lo_seen": 0.101,
     "created": "2026-06-26T18:01:44"
+  },
+  "RSI70 · 15m|CHRUSDT|2026-06-26 18:14:59.999000": {
+    "symbol": "CHRUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1899,
+    "entry": 0.01598,
+    "stop": 0.01515231,
+    "init_stop": 0.01515231,
+    "cur_stop": 0.01515231,
+    "last_alert_stop": 0.01515231,
+    "armed": false,
+    "targets": [
+      0.01636624,
+      0.01685756,
+      0.01827756
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-26 18:14:59.999000",
+    "last_bar": "2026-06-26 18:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01598,
+    "lo_seen": 0.01598,
+    "created": "2026-06-26T18:16:01"
+  },
+  "RSI70 · 15m|TIAUSDT|2026-06-26 18:14:59.999000": {
+    "symbol": "TIAUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1900,
+    "entry": 0.3873,
+    "stop": 0.36738973,
+    "init_stop": 0.36738973,
+    "cur_stop": 0.36738973,
+    "last_alert_stop": 0.36738973,
+    "armed": false,
+    "targets": [
+      0.3966024,
+      0.4084356,
+      0.4426356
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-26 18:14:59.999000",
+    "last_bar": "2026-06-26 18:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.3873,
+    "lo_seen": 0.3873,
+    "created": "2026-06-26T18:16:02"
   }
 }

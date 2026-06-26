@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-26T18:05:38",
+  "updated_at": "2026-06-26T18:19:54",
   "stats": {
-    "open": 42,
+    "open": 44,
     "closed": 245,
     "win_rate": 49.8,
     "profit_factor": 2.21,
@@ -4691,6 +4691,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T18:01:44",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|CHRUSDT|2026-06-26 18:14:59.999000",
+      "symbol": "CHRUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01598,
+      "stop": 0.01515231,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T18:16:01",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|TIAUSDT|2026-06-26 18:14:59.999000",
+      "symbol": "TIAUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.3873,
+      "stop": 0.36738973,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T18:16:02",
       "closed_at": null,
       "realized_pct": 0.0
     }
