@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-26T07:48:46",
+  "updated_at": "2026-06-26T08:04:35",
   "stats": {
-    "open": 28,
-    "closed": 214,
-    "win_rate": 35.0,
-    "profit_factor": 1.4,
-    "total_pct": 134.33,
-    "avg_pct": 0.55,
+    "open": 26,
+    "closed": 216,
+    "win_rate": 35.6,
+    "profit_factor": 1.44,
+    "total_pct": 167.91,
+    "avg_pct": 0.61,
     "max_drawdown_pct": -85.27
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-26",
-        "trades": 19,
-        "win_rate": 42.1,
-        "return_pct": 6.63,
+        "trades": 21,
+        "win_rate": 47.6,
+        "return_pct": 21.9,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -63,9 +63,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 208,
-        "win_rate": 36.1,
-        "return_pct": 134.33,
+        "trades": 210,
+        "win_rate": 36.7,
+        "return_pct": 167.91,
         "month": "2026-06"
       },
       {
@@ -79,9 +79,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 214,
-        "win_rate": 35.0,
-        "return_pct": 134.33
+        "trades": 216,
+        "win_rate": 35.6,
+        "return_pct": 167.91
       }
     ]
   },
@@ -3838,11 +3838,15 @@
       "timeframe": "1h",
       "entry": 0.03809267,
       "stop": 0.03662286,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-26T05:03:19",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-26T08:04:28",
+      "realized_pct": 9.94,
+      "result_pct": 9.94
     },
     {
       "id": "trendwave · 15m|STRAXUSDT|2026-06-26 05:14:59.999000",
@@ -3868,12 +3872,14 @@
       "entry": 0.0997655,
       "stop": 0.09442413,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T06:04:05",
-      "closed_at": null,
-      "realized_pct": 1.5
+      "closed_at": "2026-06-26T08:04:30",
+      "realized_pct": 3.99,
+      "result_pct": 3.99
     },
     {
       "id": "RSI70 · 15m|WAXPUSDT|2026-06-26 06:44:59.999000",
