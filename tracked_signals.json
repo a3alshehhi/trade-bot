@@ -6547,5 +6547,31 @@
     "hi_seen": 0.09782328,
     "lo_seen": 0.09782328,
     "created": "2026-06-26T03:02:36"
+  },
+  "trendwave · 15m|STRAXUSDT|2026-06-26 03:44:59.999000": {
+    "symbol": "STRAXUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 1724,
+    "entry": 0.01023287,
+    "stop": 0.01001115,
+    "init_stop": 0.01001115,
+    "cur_stop": 0.01001115,
+    "last_alert_stop": 0.01001115,
+    "armed": false,
+    "targets": [
+      0.01041852,
+      0.01052
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-26 03:44:59.999000",
+    "last_bar": "2026-06-26 03:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01023287,
+    "lo_seen": 0.01023287,
+    "created": "2026-06-26T03:47:35"
   }
 }
