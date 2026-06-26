@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-26T17:34:59",
+  "updated_at": "2026-06-26T17:48:58",
   "stats": {
-    "open": 43,
-    "closed": 241,
-    "win_rate": 49.8,
-    "profit_factor": 2.23,
-    "total_pct": 1745.83,
-    "avg_pct": 1.37,
+    "open": 44,
+    "closed": 242,
+    "win_rate": 49.6,
+    "profit_factor": 2.21,
+    "total_pct": 1691.2,
+    "avg_pct": 1.35,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-26",
-        "trades": 46,
-        "win_rate": 65.2,
-        "return_pct": 162.7,
+        "trades": 47,
+        "win_rate": 63.8,
+        "return_pct": 154.93,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -63,9 +63,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 235,
-        "win_rate": 49.8,
-        "return_pct": 1535.97,
+        "trades": 236,
+        "win_rate": 49.6,
+        "return_pct": 1487.55,
         "month": "2026-06"
       },
       {
@@ -79,9 +79,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 241,
-        "win_rate": 49.8,
-        "return_pct": 1745.83
+        "trades": 242,
+        "win_rate": 49.6,
+        "return_pct": 1691.2
       }
     ]
   },
@@ -4587,10 +4587,11 @@
       "entry": 0.10502773,
       "stop": 0.10191498,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T17:03:02",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-26T17:48:53",
+      "realized_pct": -2.96,
+      "result_pct": -2.96
     },
     {
       "id": "RSI70 · 15m|SIGNUSDT|2026-06-26 17:14:59.999000",
@@ -4645,6 +4646,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T17:33:00",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|QNTUSDT|2026-06-26 17:44:59.999000",
+      "symbol": "QNTUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 68.03,
+      "stop": 65.68173239,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T17:46:00",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|TIAUSDT|2026-06-26 17:44:59.999000",
+      "symbol": "TIAUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.3877,
+      "stop": 0.36711058,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T17:46:01",
       "closed_at": null,
       "realized_pct": 0.0
     }
