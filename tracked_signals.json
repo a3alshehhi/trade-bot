@@ -7144,5 +7144,31 @@
     "exit_price": 0.1421976,
     "close_card_sent": true,
     "closed_at": "2026-06-26T10:20:01"
+  },
+  "trendwave · 15m|XPLUSDT|2026-06-26 10:29:59.999000": {
+    "symbol": "XPLUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 1779,
+    "entry": 0.10032965,
+    "stop": 0.09920108,
+    "init_stop": 0.09920108,
+    "cur_stop": 0.09920108,
+    "last_alert_stop": 0.09920108,
+    "armed": false,
+    "targets": [
+      0.10666646,
+      0.108735
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-26 10:29:59.999000",
+    "last_bar": "2026-06-26 10:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.10032965,
+    "lo_seen": 0.10032965,
+    "created": "2026-06-26T10:32:30"
   }
 }
