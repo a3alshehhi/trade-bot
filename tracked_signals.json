@@ -6928,5 +6928,36 @@
     "hi_seen": 0.0254,
     "lo_seen": 0.025,
     "created": "2026-06-26T07:31:08"
+  },
+  "RSI70 · 15m|POLUSDT|2026-06-26 08:14:59.999000": {
+    "symbol": "POLUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1757,
+    "entry": 0.07509,
+    "stop": 0.07254906,
+    "init_stop": 0.07254906,
+    "cur_stop": 0.07254906,
+    "last_alert_stop": 0.07254906,
+    "armed": false,
+    "targets": [
+      0.07633576,
+      0.07792044,
+      0.08250044
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-26 08:14:59.999000",
+    "last_bar": "2026-06-26 08:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.07509,
+    "lo_seen": 0.07509,
+    "created": "2026-06-26T08:16:00"
   }
 }

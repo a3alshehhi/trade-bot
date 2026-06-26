@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-26T08:04:35",
+  "updated_at": "2026-06-26T08:18:36",
   "stats": {
-    "open": 26,
+    "open": 27,
     "closed": 216,
     "win_rate": 35.6,
     "profit_factor": 1.44,
@@ -3979,6 +3979,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T07:31:08",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|POLUSDT|2026-06-26 08:14:59.999000",
+      "symbol": "POLUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.07509,
+      "stop": 0.07254906,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T08:16:00",
       "closed_at": null,
       "realized_pct": 0.0
     }
