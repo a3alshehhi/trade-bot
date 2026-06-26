@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-26T02:05:12",
+  "updated_at": "2026-06-26T02:20:00",
   "stats": {
-    "open": 25,
-    "closed": 204,
-    "win_rate": 35.3,
-    "profit_factor": 1.54,
-    "total_pct": 204.81,
-    "avg_pct": 0.7,
+    "open": 23,
+    "closed": 206,
+    "win_rate": 35.0,
+    "profit_factor": 1.45,
+    "total_pct": 156.0,
+    "avg_pct": 0.62,
     "max_drawdown_pct": -85.27
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-26",
-        "trades": 9,
-        "win_rate": 55.6,
-        "return_pct": 38.69,
+        "trades": 11,
+        "win_rate": 45.5,
+        "return_pct": 16.49,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -63,9 +63,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 198,
-        "win_rate": 36.4,
-        "return_pct": 204.81,
+        "trades": 200,
+        "win_rate": 36.0,
+        "return_pct": 156.0,
         "month": "2026-06"
       },
       {
@@ -79,9 +79,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 204,
-        "win_rate": 35.3,
-        "return_pct": 204.81
+        "trades": 206,
+        "win_rate": 35.0,
+        "return_pct": 156.0
       }
     ]
   },
@@ -3339,10 +3339,11 @@
       "entry": 0.0449,
       "stop": 0.03854463,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-25T15:46:03",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-26T02:19:50",
+      "realized_pct": -14.15,
+      "result_pct": -14.15
     },
     {
       "id": "RSI70 · 4h|HEIUSDT|2026-06-25 15:59:59.999000",
@@ -3651,10 +3652,11 @@
       "entry": 0.10250011,
       "stop": 0.10027966,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-25T23:00:47",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-26T02:19:56",
+      "realized_pct": -2.17,
+      "result_pct": -2.17
     },
     {
       "id": "trendwave · 15m|BNTUSDT|2026-06-25 23:44:59.999000",
