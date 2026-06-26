@@ -39,7 +39,8 @@ jobs:
         run: |
           # إشارة شراء بالزخم: فور تجاوز RSI(21) خط الـ70 — على 4 فريمات
           # --ml-filter: يرشّح الإشارات بالفلتر التعلّمي إن وُجد ml_model.joblib (وإلا يمرّر الكل)
-          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --ml-filter --watchlist watchlist.txt \
+          # 15m: فلتر اتجاه إضافي — السعر يجب أن يكون فوق متوسط 200 (SMA) لرفض الإشارات العكسية
+          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --ml-filter --ma200-15m --watchlist watchlist.txt \
             --timeframe 15m --state reversal_alerts.json
           python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --ml-filter --watchlist watchlist.txt \
             --timeframe 1h --state reversal_alerts.json
