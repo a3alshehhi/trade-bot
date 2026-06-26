@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-26T16:05:49",
+  "updated_at": "2026-06-26T16:19:52",
   "stats": {
-    "open": 33,
-    "closed": 239,
-    "win_rate": 49.4,
-    "profit_factor": 2.2,
-    "total_pct": 1606.35,
+    "open": 35,
+    "closed": 240,
+    "win_rate": 49.6,
+    "profit_factor": 2.21,
+    "total_pct": 1652.93,
     "avg_pct": 1.35,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-26",
-        "trades": 44,
-        "win_rate": 63.6,
-        "return_pct": 142.85,
+        "trades": 45,
+        "win_rate": 64.4,
+        "return_pct": 149.48,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -63,9 +63,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 233,
-        "win_rate": 49.4,
-        "return_pct": 1412.34,
+        "trades": 234,
+        "win_rate": 49.6,
+        "return_pct": 1453.63,
         "month": "2026-06"
       },
       {
@@ -79,9 +79,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 239,
-        "win_rate": 49.4,
-        "return_pct": 1606.35
+        "trades": 240,
+        "win_rate": 49.6,
+        "return_pct": 1652.93
       }
     ]
   },
@@ -4420,10 +4420,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T15:03:03",
-      "closed_at": null,
-      "realized_pct": 2.73
+      "closed_at": "2026-06-26T16:19:48",
+      "realized_pct": 2.73,
+      "result_pct": 2.73
     },
     {
       "id": "RSI70 · 15m|AGLDUSDT|2026-06-26 15:14:59.999000",
@@ -4468,6 +4469,48 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T16:02:25",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|FETUSDT|2026-06-26 16:14:59.999000",
+      "symbol": "FETUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1756,
+      "stop": 0.16858994,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T16:16:02",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|PUNDIXUSDT|2026-06-26 16:14:59.999000",
+      "symbol": "PUNDIXUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0857,
+      "stop": 0.07998436,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T16:16:03",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|SCRTUSDT|2026-06-26 16:14:59.999000",
+      "symbol": "SCRTUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0562,
+      "stop": 0.05306223,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T16:16:04",
       "closed_at": null,
       "realized_pct": 0.0
     }
