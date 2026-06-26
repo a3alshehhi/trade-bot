@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-26T02:48:48",
+  "updated_at": "2026-06-26T03:04:01",
   "stats": {
-    "open": 22,
-    "closed": 207,
-    "win_rate": 34.8,
-    "profit_factor": 1.44,
-    "total_pct": 152.57,
-    "avg_pct": 0.61,
+    "open": 20,
+    "closed": 210,
+    "win_rate": 34.3,
+    "profit_factor": 1.38,
+    "total_pct": 124.05,
+    "avg_pct": 0.54,
     "max_drawdown_pct": -85.27
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-26",
-        "trades": 12,
-        "win_rate": 41.7,
-        "return_pct": 14.92,
+        "trades": 15,
+        "win_rate": 33.3,
+        "return_pct": 1.95,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -63,9 +63,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 201,
-        "win_rate": 35.8,
-        "return_pct": 152.57,
+        "trades": 204,
+        "win_rate": 35.3,
+        "return_pct": 124.05,
         "month": "2026-06"
       },
       {
@@ -79,9 +79,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 207,
-        "win_rate": 34.8,
-        "return_pct": 152.57
+        "trades": 210,
+        "win_rate": 34.3,
+        "return_pct": 124.05
       }
     ]
   },
@@ -2989,10 +2989,11 @@
       "entry": 0.05885,
       "stop": 0.05455054,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-25T09:01:32",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-26T03:03:51",
+      "realized_pct": -7.31,
+      "result_pct": -7.31
     },
     {
       "id": "trendwave · 15m|HEIUSDT|2026-06-25 08:59:59.999000",
@@ -3385,10 +3386,11 @@
       "entry": 0.05650334,
       "stop": 0.05512735,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-25T16:04:03",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-26T03:03:54",
+      "realized_pct": -2.44,
+      "result_pct": -2.44
     },
     {
       "id": "trendwave · 1h|XPLUSDT|2026-06-25 15:59:59.999000",
@@ -3697,10 +3699,11 @@
       "entry": 0.05673208,
       "stop": 0.05565143,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T00:04:06",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-26T03:03:58",
+      "realized_pct": -1.9,
+      "result_pct": -1.9
     },
     {
       "id": "trendwave · 4h|ZECUSDT|2026-06-25 23:59:59.999000",
@@ -3774,6 +3777,20 @@
       "closed_at": "2026-06-26T01:49:46",
       "realized_pct": -3.63,
       "result_pct": -3.63
+    },
+    {
+      "id": "trendwave · 15m|XPLUSDT|2026-06-26 02:59:59.999000",
+      "symbol": "XPLUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.09782328,
+      "stop": 0.09566551,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T03:02:36",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
