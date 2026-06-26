@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-26T01:49:47",
+  "updated_at": "2026-06-26T02:05:12",
   "stats": {
-    "open": 26,
-    "closed": 203,
-    "win_rate": 35.0,
-    "profit_factor": 1.53,
-    "total_pct": 200.42,
+    "open": 25,
+    "closed": 204,
+    "win_rate": 35.3,
+    "profit_factor": 1.54,
+    "total_pct": 204.81,
     "avg_pct": 0.7,
     "max_drawdown_pct": -85.27
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-26",
-        "trades": 8,
-        "win_rate": 50.0,
-        "return_pct": 36.7,
+        "trades": 9,
+        "win_rate": 55.6,
+        "return_pct": 38.69,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -63,9 +63,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 197,
-        "win_rate": 36.0,
-        "return_pct": 200.42,
+        "trades": 198,
+        "win_rate": 36.4,
+        "return_pct": 204.81,
         "month": "2026-06"
       },
       {
@@ -79,9 +79,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 203,
-        "win_rate": 35.0,
-        "return_pct": 200.42
+        "trades": 204,
+        "win_rate": 35.3,
+        "return_pct": 204.81
       }
     ]
   },
@@ -3569,10 +3569,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-25T21:03:48",
-      "closed_at": null,
-      "realized_pct": 1.46
+      "closed_at": "2026-06-26T02:05:06",
+      "realized_pct": 1.46,
+      "result_pct": 1.46
     },
     {
       "id": "RSI70 · 15m|ESPUSDT|2026-06-25 21:44:59.999000",
