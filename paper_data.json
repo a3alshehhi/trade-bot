@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-26T21:55:38",
+  "updated_at": "2026-06-26T22:05:33",
   "stats": {
     "open": 51,
-    "closed": 254,
-    "win_rate": 50.8,
-    "profit_factor": 2.26,
-    "total_pct": 2210.33,
-    "avg_pct": 1.39,
+    "closed": 255,
+    "win_rate": 51.0,
+    "profit_factor": 2.28,
+    "total_pct": 2306.21,
+    "avg_pct": 1.4,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-26",
-        "trades": 59,
-        "win_rate": 66.1,
-        "return_pct": 228.81,
+        "trades": 60,
+        "win_rate": 66.7,
+        "return_pct": 242.46,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -63,9 +63,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 248,
-        "win_rate": 50.8,
-        "return_pct": 1947.66,
+        "trades": 249,
+        "win_rate": 51.0,
+        "return_pct": 2032.64,
         "month": "2026-06"
       },
       {
@@ -79,9 +79,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 254,
-        "win_rate": 50.8,
-        "return_pct": 2210.33
+        "trades": 255,
+        "win_rate": 51.0,
+        "return_pct": 2306.21
       }
     ]
   },
@@ -2075,11 +2075,13 @@
       "timeframe": "1h",
       "entry": 0.168973,
       "stop": 0.16152352,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-24T20:04:07",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 4.9
     },
     {
       "id": "RSI70 · 15m|RIFUSDT|2026-06-24 20:14:59.999000",
@@ -4889,10 +4891,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T20:47:28",
-      "closed_at": null,
-      "realized_pct": 4.15
+      "closed_at": "2026-06-26T22:05:25",
+      "realized_pct": 4.15,
+      "result_pct": 4.15
     },
     {
       "id": "trendwave · 15m|EDUUSDT|2026-06-26 20:44:59.999000",
@@ -4916,11 +4919,13 @@
       "timeframe": "1h",
       "entry": 0.20763747,
       "stop": 0.18318678,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-26T21:04:02",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 3.85
     },
     {
       "id": "trendwave · 15m|KAITOUSDT|2026-06-26 21:14:59.999000",
@@ -4975,6 +4980,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T21:45:57",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|ALICEUSDT|2026-06-26 21:59:59.999000",
+      "symbol": "ALICEUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.11864487,
+      "stop": 0.11718693,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T22:03:59",
       "closed_at": null,
       "realized_pct": 0.0
     }
