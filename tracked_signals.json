@@ -6687,5 +6687,36 @@
     "hi_seen": 0.0997655,
     "lo_seen": 0.0997655,
     "created": "2026-06-26T06:04:05"
+  },
+  "RSI70 · 15m|WAXPUSDT|2026-06-26 06:44:59.999000": {
+    "symbol": "WAXPUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1737,
+    "entry": 0.00399,
+    "stop": 0.00382329,
+    "init_stop": 0.00382329,
+    "cur_stop": 0.00382329,
+    "last_alert_stop": 0.00382329,
+    "armed": false,
+    "targets": [
+      0.0040716,
+      0.0041754,
+      0.0044754
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-26 06:44:59.999000",
+    "last_bar": "2026-06-26 06:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00399,
+    "lo_seen": 0.00399,
+    "created": "2026-06-26T06:46:07"
   }
 }

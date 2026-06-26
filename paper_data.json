@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-26T06:35:12",
+  "updated_at": "2026-06-26T06:50:01",
   "stats": {
-    "open": 23,
+    "open": 24,
     "closed": 212,
     "win_rate": 34.4,
     "profit_factor": 1.38,
@@ -3865,6 +3865,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T06:04:05",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|WAXPUSDT|2026-06-26 06:44:59.999000",
+      "symbol": "WAXPUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00399,
+      "stop": 0.00382329,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T06:46:07",
       "closed_at": null,
       "realized_pct": 0.0
     }
