@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-26T17:48:58",
+  "updated_at": "2026-06-26T18:05:38",
   "stats": {
-    "open": 44,
-    "closed": 242,
-    "win_rate": 49.6,
+    "open": 42,
+    "closed": 245,
+    "win_rate": 49.8,
     "profit_factor": 2.21,
-    "total_pct": 1691.2,
+    "total_pct": 1739.86,
     "avg_pct": 1.35,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-26",
-        "trades": 47,
-        "win_rate": 63.8,
-        "return_pct": 154.93,
+        "trades": 50,
+        "win_rate": 64.0,
+        "return_pct": 161.85,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -63,9 +63,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 236,
-        "win_rate": 49.6,
-        "return_pct": 1487.55,
+        "trades": 239,
+        "win_rate": 49.8,
+        "return_pct": 1530.68,
         "month": "2026-06"
       },
       {
@@ -79,9 +79,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 242,
-        "win_rate": 49.6,
-        "return_pct": 1691.2
+        "trades": 245,
+        "win_rate": 49.8,
+        "return_pct": 1739.86
       }
     ]
   },
@@ -4112,10 +4112,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T10:32:30",
-      "closed_at": null,
-      "realized_pct": 3.16
+      "closed_at": "2026-06-26T18:05:13",
+      "realized_pct": 3.16,
+      "result_pct": 3.16
     },
     {
       "id": "trendwave · 1h|GPSUSDT|2026-06-26 11:59:59.999000",
@@ -4247,10 +4248,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T12:33:18",
-      "closed_at": null,
-      "realized_pct": 2.65
+      "closed_at": "2026-06-26T18:05:19",
+      "realized_pct": 2.65,
+      "result_pct": 2.65
     },
     {
       "id": "RSI70 · 1h|KAITOUSDT|2026-06-26 12:59:59.999000",
@@ -4644,10 +4646,11 @@
       "entry": 0.410956,
       "stop": 0.39863923,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T17:33:00",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-26T18:05:35",
+      "realized_pct": -3.0,
+      "result_pct": -3.0
     },
     {
       "id": "RSI70 · 15m|QNTUSDT|2026-06-26 17:44:59.999000",
@@ -4674,6 +4677,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T17:46:01",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|PUNDIXUSDT|2026-06-26 17:59:59.999000",
+      "symbol": "PUNDIXUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.101,
+      "stop": 0.08504835,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T18:01:44",
       "closed_at": null,
       "realized_pct": 0.0
     }
