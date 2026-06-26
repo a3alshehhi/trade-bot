@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-26T08:33:53",
+  "updated_at": "2026-06-26T08:48:43",
   "stats": {
-    "open": 28,
-    "closed": 216,
-    "win_rate": 35.6,
+    "open": 27,
+    "closed": 217,
+    "win_rate": 35.5,
     "profit_factor": 1.44,
-    "total_pct": 167.91,
-    "avg_pct": 0.61,
+    "total_pct": 162.6,
+    "avg_pct": 0.6,
     "max_drawdown_pct": -85.27
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-26",
-        "trades": 21,
-        "win_rate": 47.6,
-        "return_pct": 21.9,
+        "trades": 22,
+        "win_rate": 45.5,
+        "return_pct": 19.49,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -63,9 +63,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 210,
-        "win_rate": 36.7,
-        "return_pct": 167.91,
+        "trades": 211,
+        "win_rate": 36.5,
+        "return_pct": 162.6,
         "month": "2026-06"
       },
       {
@@ -79,9 +79,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 216,
-        "win_rate": 35.6,
-        "return_pct": 167.91
+        "trades": 217,
+        "win_rate": 35.5,
+        "return_pct": 162.6
       }
     ]
   },
@@ -3556,10 +3556,11 @@
       "entry": 0.53940467,
       "stop": 0.52873774,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-25T20:47:24",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-26T08:48:36",
+      "realized_pct": -1.98,
+      "result_pct": -1.98
     },
     {
       "id": "trendwave · 1h|GPSUSDT|2026-06-25 20:59:59.999000",
