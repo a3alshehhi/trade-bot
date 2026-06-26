@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-26T07:04:04",
+  "updated_at": "2026-06-26T07:19:08",
   "stats": {
-    "open": 26,
+    "open": 28,
     "closed": 213,
     "win_rate": 34.7,
     "profit_factor": 1.39,
@@ -3926,6 +3926,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T07:01:32",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|SOLUSDT|2026-06-26 07:14:59.999000",
+      "symbol": "SOLUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 70.61,
+      "stop": 67.97796673,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T07:16:04",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|SCRTUSDT|2026-06-26 07:14:59.999000",
+      "symbol": "SCRTUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0513,
+      "stop": 0.04830055,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T07:16:05",
       "closed_at": null,
       "realized_pct": 0.0
     }
