@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-26T07:34:14",
+  "updated_at": "2026-06-26T07:48:46",
   "stats": {
-    "open": 29,
-    "closed": 213,
-    "win_rate": 34.7,
-    "profit_factor": 1.39,
-    "total_pct": 128.33,
-    "avg_pct": 0.54,
+    "open": 28,
+    "closed": 214,
+    "win_rate": 35.0,
+    "profit_factor": 1.4,
+    "total_pct": 134.33,
+    "avg_pct": 0.55,
     "max_drawdown_pct": -85.27
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-26",
-        "trades": 18,
-        "win_rate": 38.9,
-        "return_pct": 3.89,
+        "trades": 19,
+        "win_rate": 42.1,
+        "return_pct": 6.63,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -63,9 +63,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 207,
-        "win_rate": 35.7,
-        "return_pct": 128.33,
+        "trades": 208,
+        "win_rate": 36.1,
+        "return_pct": 134.33,
         "month": "2026-06"
       },
       {
@@ -79,9 +79,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 213,
-        "win_rate": 34.7,
-        "return_pct": 128.33
+        "trades": 214,
+        "win_rate": 35.0,
+        "return_pct": 134.33
       }
     ]
   },
@@ -3742,11 +3742,14 @@
       "timeframe": "15m",
       "entry": 0.1459,
       "stop": 0.13798015,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-06-26T00:31:09",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-26T07:48:39",
+      "realized_pct": 2.63,
+      "result_pct": 2.63
     },
     {
       "id": "trendwave · 15m|BNTUSDT|2026-06-26 00:29:59.999000",
