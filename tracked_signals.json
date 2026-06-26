@@ -8816,5 +8816,32 @@
     "hi_seen": 0.02944927,
     "lo_seen": 0.02944927,
     "created": "2026-06-26T20:47:29"
+  },
+  "trendwave · 1h|AGLDUSDT|2026-06-26 20:59:59.999000": {
+    "symbol": "AGLDUSDT",
+    "label": "trendwave · 1h",
+    "timeframe": "1h",
+    "message_id": 1940,
+    "entry": 0.20763747,
+    "stop": 0.18318678,
+    "init_stop": 0.18318678,
+    "cur_stop": 0.18318678,
+    "last_alert_stop": 0.18318678,
+    "armed": false,
+    "targets": [
+      0.223616,
+      0.234
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-26 20:59:59.999000",
+    "last_bar": "2026-06-26 20:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.20763747,
+    "lo_seen": 0.20763747,
+    "created": "2026-06-26T21:04:02"
   }
 }
