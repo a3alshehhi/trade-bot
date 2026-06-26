@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-26T22:35:09",
+  "updated_at": "2026-06-26T22:49:03",
   "stats": {
     "open": 53,
-    "closed": 255,
-    "win_rate": 51.0,
-    "profit_factor": 2.28,
-    "total_pct": 2306.21,
-    "avg_pct": 1.4,
+    "closed": 256,
+    "win_rate": 51.2,
+    "profit_factor": 2.29,
+    "total_pct": 2377.68,
+    "avg_pct": 1.41,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-26",
-        "trades": 60,
-        "win_rate": 66.7,
-        "return_pct": 242.46,
+        "trades": 61,
+        "win_rate": 67.2,
+        "return_pct": 252.63,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -63,9 +63,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 249,
-        "win_rate": 51.0,
-        "return_pct": 2032.64,
+        "trades": 250,
+        "win_rate": 51.2,
+        "return_pct": 2095.98,
         "month": "2026-06"
       },
       {
@@ -79,9 +79,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 255,
-        "win_rate": 51.0,
-        "return_pct": 2306.21
+        "trades": 256,
+        "win_rate": 51.2,
+        "return_pct": 2377.68
       }
     ]
   },
@@ -5010,12 +5010,14 @@
       "entry": 0.21043693,
       "stop": 0.20132986,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T22:17:54",
-      "closed_at": null,
-      "realized_pct": 1.15
+      "closed_at": "2026-06-26T22:49:01",
+      "realized_pct": 2.97,
+      "result_pct": 2.97
     },
     {
       "id": "trendwave · 15m|CITYUSDT|2026-06-26 22:29:59.999000",
@@ -5028,6 +5030,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T22:32:57",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|HYPERUSDT|2026-06-26 22:44:59.999000",
+      "symbol": "HYPERUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.08224047,
+      "stop": 0.08119387,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T22:47:23",
       "closed_at": null,
       "realized_pct": 0.0
     }
