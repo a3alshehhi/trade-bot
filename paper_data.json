@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-26T08:48:43",
+  "updated_at": "2026-06-26T09:05:20",
   "stats": {
-    "open": 27,
-    "closed": 217,
-    "win_rate": 35.5,
+    "open": 28,
+    "closed": 218,
+    "win_rate": 35.8,
     "profit_factor": 1.44,
-    "total_pct": 162.6,
+    "total_pct": 165.44,
     "avg_pct": 0.6,
     "max_drawdown_pct": -85.27
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-26",
-        "trades": 22,
-        "win_rate": 45.5,
-        "return_pct": 19.49,
+        "trades": 23,
+        "win_rate": 47.8,
+        "return_pct": 20.78,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -63,9 +63,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 211,
-        "win_rate": 36.5,
-        "return_pct": 162.6,
+        "trades": 212,
+        "win_rate": 36.8,
+        "return_pct": 165.44,
         "month": "2026-06"
       },
       {
@@ -79,9 +79,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 217,
-        "win_rate": 35.5,
-        "return_pct": 162.6
+        "trades": 218,
+        "win_rate": 35.8,
+        "return_pct": 165.44
       }
     ]
   },
@@ -3826,10 +3826,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T05:03:18",
-      "closed_at": null,
-      "realized_pct": 1.08
+      "closed_at": "2026-06-26T09:05:11",
+      "realized_pct": 1.08,
+      "result_pct": 1.08
     },
     {
       "id": "trendwave · 1h|TNSRUSDT|2026-06-26 04:59:59.999000",
@@ -4008,6 +4009,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T08:31:03",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|CYBERUSDT|2026-06-26 08:59:59.999000",
+      "symbol": "CYBERUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.353,
+      "stop": 0.34223485,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T09:01:15",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|KAITOUSDT|2026-06-26 08:59:59.999000",
+      "symbol": "KAITOUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.5021,
+      "stop": 0.48644617,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T09:01:16",
       "closed_at": null,
       "realized_pct": 0.0
     }
