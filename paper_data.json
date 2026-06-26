@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-26T14:05:28",
+  "updated_at": "2026-06-26T14:19:17",
   "stats": {
-    "open": 35,
+    "open": 36,
     "closed": 229,
     "win_rate": 47.2,
     "profit_factor": 1.92,
@@ -4289,11 +4289,13 @@
       "timeframe": "15m",
       "entry": 0.1708,
       "stop": 0.14691203,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-26T14:01:13",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 3.25
     },
     {
       "id": "RSI70 · 1h|AGLDUSDT|2026-06-26 13:59:59.999000",
@@ -4320,6 +4322,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T14:03:17",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|EPICUSDT|2026-06-26 14:14:59.999000",
+      "symbol": "EPICUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.455,
+      "stop": 0.43244828,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T14:16:03",
       "closed_at": null,
       "realized_pct": 0.0
     }
