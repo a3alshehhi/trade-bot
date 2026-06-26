@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-06-26T12:35:22",
+  "updated_at": "2026-06-26T12:49:11",
   "stats": {
     "open": 32,
     "closed": 226,
-    "win_rate": 36.3,
-    "profit_factor": 1.38,
-    "total_pct": 139.43,
-    "avg_pct": 0.54,
-    "max_drawdown_pct": -85.27
+    "win_rate": 46.5,
+    "profit_factor": 1.89,
+    "total_pct": 665.5,
+    "avg_pct": 1.05,
+    "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
@@ -22,8 +22,8 @@
       {
         "key": "2026-06-25",
         "trades": 85,
-        "win_rate": 69.4,
-        "return_pct": 1025.28,
+        "win_rate": 71.8,
+        "return_pct": 1181.45,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -31,31 +31,31 @@
         "key": "2026-06-24",
         "trades": 31,
         "win_rate": 22.6,
-        "return_pct": -49.57,
+        "return_pct": -36.32,
         "week": "2026-W26",
         "month": "2026-06"
       },
       {
         "key": "2026-06-23",
         "trades": 19,
-        "win_rate": 0.0,
-        "return_pct": -54.11,
+        "win_rate": 47.4,
+        "return_pct": -37.01,
         "week": "2026-W26",
         "month": "2026-06"
       },
       {
         "key": "2026-06-22",
         "trades": 54,
-        "win_rate": 1.9,
-        "return_pct": -15.62,
+        "win_rate": 18.5,
+        "return_pct": 21.14,
         "week": "2026-W26",
         "month": "2026-06"
       },
       {
         "key": "2026-06-21",
         "trades": 6,
-        "win_rate": 0.0,
-        "return_pct": 0.0,
+        "win_rate": 50.0,
+        "return_pct": 12.83,
         "week": "2026-W25",
         "month": "2026-06"
       }
@@ -64,15 +64,15 @@
       {
         "key": "2026-W26",
         "trades": 220,
-        "win_rate": 37.3,
-        "return_pct": 139.43,
+        "win_rate": 46.4,
+        "return_pct": 578.47,
         "month": "2026-06"
       },
       {
         "key": "2026-W25",
         "trades": 6,
-        "win_rate": 0.0,
-        "return_pct": 0.0,
+        "win_rate": 50.0,
+        "return_pct": 12.83,
         "month": "2026-06"
       }
     ],
@@ -80,8 +80,8 @@
       {
         "key": "2026-06",
         "trades": 226,
-        "win_rate": 36.3,
-        "return_pct": 139.43
+        "win_rate": 46.5,
+        "return_pct": 665.5
       }
     ]
   },
@@ -116,8 +116,8 @@
       "status": "closed",
       "opened_at": "2026-06-21T16:56:55",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 3.14,
+      "result_pct": 3.14
     },
     {
       "id": "RSI70 · 1h|2ZUSDT|2026-06-21 15:59:59.999000",
@@ -134,8 +134,8 @@
       "status": "closed",
       "opened_at": "2026-06-21T16:57:15",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 6.31,
+      "result_pct": 6.31
     },
     {
       "id": "RSI70 · 1h|LTCUSDT|2026-06-21 15:59:59.999000",
@@ -166,8 +166,8 @@
       "status": "closed",
       "opened_at": "2026-06-21T16:57:34",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 2.9,
+      "result_pct": 2.9
     },
     {
       "id": "RSI70 · 4h|TNSRUSDT|2026-06-21 19:59:59.999000",
@@ -214,8 +214,8 @@
       "status": "closed",
       "opened_at": "2026-06-22T12:10:12",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 2.34,
+      "result_pct": 2.34
     },
     {
       "id": "RSI70 · 1h|WUSDT|2026-06-22 11:59:59.999000",
@@ -307,8 +307,8 @@
       "status": "closed",
       "opened_at": "2026-06-22T13:22:49",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 4.07,
+      "result_pct": 4.07
     },
     {
       "id": "RSI70 · 15m|DCRUSDT|2026-06-22 13:29:59.999000",
@@ -401,7 +401,7 @@
       "status": "open",
       "opened_at": "2026-06-22T13:46:06",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.56
     },
     {
       "id": "RSI70 · 15m|STXUSDT|2026-06-22 13:44:59.999000",
@@ -417,8 +417,8 @@
       "status": "closed",
       "opened_at": "2026-06-22T13:46:07",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 0.6,
+      "result_pct": 0.6
     },
     {
       "id": "RSI70 · 15m|VTHOUSDT|2026-06-22 13:44:59.999000",
@@ -434,8 +434,8 @@
       "status": "closed",
       "opened_at": "2026-06-22T13:46:08",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 0.31,
+      "result_pct": 0.31
     },
     {
       "id": "RSI70 · 15m|ZECUSDT|2026-06-22 13:44:59.999000",
@@ -707,8 +707,8 @@
       "status": "closed",
       "opened_at": "2026-06-22T14:16:04",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 1.98,
+      "result_pct": 1.98
     },
     {
       "id": "RSI70 · 15m|TRXUSDT|2026-06-22 14:14:59.999000",
@@ -801,7 +801,7 @@
       "status": "open",
       "opened_at": "2026-06-22T15:31:11",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.57
     },
     {
       "id": "RSI70 · 15m|ARPAUSDT|2026-06-22 15:44:59.999000",
@@ -863,8 +863,8 @@
       "status": "closed",
       "opened_at": "2026-06-22T16:01:38",
       "closed_at": null,
-      "realized_pct": 1.34,
-      "result_pct": 1.34
+      "realized_pct": 2.77,
+      "result_pct": 2.77
     },
     {
       "id": "RSI70 · 1h|BREVUSDT|2026-06-22 15:59:59.999000",
@@ -881,8 +881,8 @@
       "status": "closed",
       "opened_at": "2026-06-22T16:01:40",
       "closed_at": null,
-      "realized_pct": -6.36,
-      "result_pct": -6.36
+      "realized_pct": 4.81,
+      "result_pct": 4.81
     },
     {
       "id": "RSI70 · 15m|BREVUSDT|2026-06-22 16:14:59.999000",
@@ -898,8 +898,8 @@
       "status": "closed",
       "opened_at": "2026-06-22T16:16:07",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 1.58,
+      "result_pct": 1.58
     },
     {
       "id": "RSI70 · 15m|ENJUSDT|2026-06-22 16:29:59.999000",
@@ -930,8 +930,8 @@
       "status": "closed",
       "opened_at": "2026-06-22T16:31:13",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 0.84,
+      "result_pct": 0.84
     },
     {
       "id": "RSI70 · 1h|TRXUSDT|2026-06-22 16:59:59.999000",
@@ -964,7 +964,7 @@
       "status": "open",
       "opened_at": "2026-06-22T17:31:01",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.83
     },
     {
       "id": "RSI70 · 15m|PORTALUSDT|2026-06-22 17:29:59.999000",
@@ -995,8 +995,8 @@
       "status": "closed",
       "opened_at": "2026-06-22T18:01:42",
       "closed_at": null,
-      "realized_pct": -8.15,
-      "result_pct": -8.15
+      "realized_pct": -2.18,
+      "result_pct": -2.18
     },
     {
       "id": "RSI70 · 15m|FIDAUSDT|2026-06-22 18:29:59.999000",
@@ -1013,8 +1013,8 @@
       "status": "closed",
       "opened_at": "2026-06-22T18:31:04",
       "closed_at": null,
-      "realized_pct": -1.12,
-      "result_pct": -1.12
+      "realized_pct": 4.59,
+      "result_pct": 4.59
     },
     {
       "id": "RSI70 · 15m|ENSOUSDT|2026-06-22 19:14:59.999000",
@@ -1075,7 +1075,7 @@
       "status": "open",
       "opened_at": "2026-06-22T20:01:39",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 7.72
     },
     {
       "id": "RSI70 · 1h|TRXUSDT|2026-06-22 20:59:59.999000",
@@ -1121,7 +1121,7 @@
       "status": "open",
       "opened_at": "2026-06-23T00:15:54",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 2.89
     },
     {
       "id": "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000",
@@ -1137,8 +1137,8 @@
       "status": "closed",
       "opened_at": "2026-06-23T00:30:56",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 0.93,
+      "result_pct": 0.93
     },
     {
       "id": "RSI70 · 15m|STORJUSDT|2026-06-23 00:59:59.999000",
@@ -1154,8 +1154,8 @@
       "status": "closed",
       "opened_at": "2026-06-23T01:01:09",
       "closed_at": null,
-      "realized_pct": -3.1,
-      "result_pct": -3.1
+      "realized_pct": -0.79,
+      "result_pct": -0.79
     },
     {
       "id": "RSI70 · 4h|DEXEUSDT|2026-06-23 03:59:59.999000",
@@ -1188,8 +1188,8 @@
       "status": "closed",
       "opened_at": "2026-06-23T04:31:03",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 0.81,
+      "result_pct": 0.81
     },
     {
       "id": "RSI70 · 15m|MOVRUSDT|2026-06-23 04:59:59.999000",
@@ -1207,7 +1207,7 @@
       "status": "open",
       "opened_at": "2026-06-23T05:01:08",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.94
     },
     {
       "id": "RSI70 · 15m|SCRUSDT|2026-06-23 05:44:59.999000",
@@ -1223,8 +1223,8 @@
       "status": "closed",
       "opened_at": "2026-06-23T05:45:55",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 1.07,
+      "result_pct": 1.07
     },
     {
       "id": "RSI70 · 15m|SCUSDT|2026-06-23 05:59:59.999000",
@@ -1241,8 +1241,8 @@
       "status": "closed",
       "opened_at": "2026-06-23T06:01:11",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 1.62,
+      "result_pct": 1.62
     },
     {
       "id": "RSI70 · 1h|MOVRUSDT|2026-06-23 05:59:59.999000",
@@ -1303,8 +1303,8 @@
       "status": "closed",
       "opened_at": "2026-06-23T07:01:24",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 0.68,
+      "result_pct": 0.68
     },
     {
       "id": "RSI70 · 1h|AWEUSDT|2026-06-23 08:59:59.999000",
@@ -1320,8 +1320,8 @@
       "status": "closed",
       "opened_at": "2026-06-23T09:01:21",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 0.92,
+      "result_pct": 0.92
     },
     {
       "id": "RSI70 · 1h|DEXEUSDT|2026-06-23 11:59:59.999000",
@@ -1387,8 +1387,8 @@
       "status": "closed",
       "opened_at": "2026-06-23T12:31:15",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 5.78,
+      "result_pct": 5.78
     },
     {
       "id": "RSI70 · 1h|GUSDT|2026-06-23 12:59:59.999000",
@@ -1433,8 +1433,8 @@
       "status": "closed",
       "opened_at": "2026-06-23T16:02:14",
       "closed_at": null,
-      "realized_pct": -9.62,
-      "result_pct": -9.62
+      "realized_pct": -2.69,
+      "result_pct": -2.69
     },
     {
       "id": "RSI70 · 15m|WCTUSDT|2026-06-23 16:44:59.999000",
@@ -1451,8 +1451,8 @@
       "status": "closed",
       "opened_at": "2026-06-23T16:46:09",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 2.14,
+      "result_pct": 2.14
     },
     {
       "id": "RSI70 · 15m|HEIUSDT|2026-06-23 17:29:59.999000",
@@ -1469,8 +1469,8 @@
       "status": "closed",
       "opened_at": "2026-06-23T17:31:18",
       "closed_at": "2026-06-25T00:34:26",
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 9.72,
+      "result_pct": 9.72
     },
     {
       "id": "RSI70 · 15m|EDUUSDT|2026-06-23 17:59:59.999000",
@@ -1487,8 +1487,8 @@
       "status": "closed",
       "opened_at": "2026-06-23T18:01:13",
       "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 3.65,
+      "result_pct": 3.65
     },
     {
       "id": "RSI70 · 15m|SYNUSDT|2026-06-23 17:59:59.999000",
@@ -1519,8 +1519,8 @@
       "status": "closed",
       "opened_at": "2026-06-23T18:01:35",
       "closed_at": "2026-06-25T01:04:09",
-      "realized_pct": 0.0,
-      "result_pct": 0.0
+      "realized_pct": 3.79,
+      "result_pct": 3.79
     },
     {
       "id": "RSI70 · 4h|SYNUSDT|2026-06-23 19:59:59.999000",
@@ -1568,8 +1568,8 @@
       "status": "closed",
       "opened_at": "2026-06-23T23:46:06",
       "closed_at": null,
-      "realized_pct": -6.03,
-      "result_pct": -6.03
+      "realized_pct": -1.59,
+      "result_pct": -1.59
     },
     {
       "id": "RSI70 · 15m|HEIUSDT|2026-06-24 00:14:59.999000",
@@ -1585,8 +1585,8 @@
       "status": "closed",
       "opened_at": "2026-06-24T00:16:09",
       "closed_at": null,
-      "realized_pct": -10.67,
-      "result_pct": -10.67
+      "realized_pct": -2.98,
+      "result_pct": -2.98
     },
     {
       "id": "RSI70 · 15m|POLYXUSDT|2026-06-24 05:44:59.999000",
@@ -1647,8 +1647,8 @@
       "status": "closed",
       "opened_at": "2026-06-24T07:46:05",
       "closed_at": null,
-      "realized_pct": -3.22,
-      "result_pct": -3.22
+      "realized_pct": -0.83,
+      "result_pct": -0.83
     },
     {
       "id": "RSI70 · 15m|SAHARAUSDT|2026-06-24 07:59:59.999000",
@@ -1664,8 +1664,8 @@
       "status": "closed",
       "opened_at": "2026-06-24T08:01:13",
       "closed_at": null,
-      "realized_pct": -7.04,
-      "result_pct": -7.04
+      "realized_pct": -1.92,
+      "result_pct": -1.92
     },
     {
       "id": "RSI70 · 4h|GUSDT|2026-06-24 07:59:59.999000",
@@ -1698,8 +1698,8 @@
       "status": "closed",
       "opened_at": "2026-06-24T08:16:08",
       "closed_at": null,
-      "realized_pct": -3.02,
-      "result_pct": -3.02
+      "realized_pct": -0.78,
+      "result_pct": -0.78
     },
     {
       "id": "RSI70 · 15m|PARTIUSDT|2026-06-24 09:59:59.999000",
@@ -1760,8 +1760,8 @@
       "status": "closed",
       "opened_at": "2026-06-24T12:31:18",
       "closed_at": null,
-      "realized_pct": -2.35,
-      "result_pct": -2.35
+      "realized_pct": -0.63,
+      "result_pct": -0.63
     },
     {
       "id": "trendwave · 15m|LAZIOUSDT|2026-06-24 13:14:59.999000",
@@ -1792,8 +1792,8 @@
       "status": "closed",
       "opened_at": "2026-06-24T14:16:06",
       "closed_at": null,
-      "realized_pct": -4.53,
-      "result_pct": -4.53
+      "realized_pct": -1.39,
+      "result_pct": -1.39
     },
     {
       "id": "RSI70 · 15m|CELRUSDT|2026-06-24 14:44:59.999000",
