@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-26T18:49:05",
+  "updated_at": "2026-06-26T19:04:14",
   "stats": {
-    "open": 46,
-    "closed": 247,
-    "win_rate": 49.8,
-    "profit_factor": 2.18,
-    "total_pct": 1705.82,
-    "avg_pct": 1.33,
+    "open": 47,
+    "closed": 248,
+    "win_rate": 50.0,
+    "profit_factor": 2.22,
+    "total_pct": 1932.63,
+    "avg_pct": 1.38,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-26",
-        "trades": 52,
-        "win_rate": 63.5,
-        "return_pct": 157.01,
+        "trades": 53,
+        "win_rate": 64.2,
+        "return_pct": 189.29,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -63,9 +63,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 241,
-        "win_rate": 49.8,
-        "return_pct": 1500.51,
+        "trades": 242,
+        "win_rate": 50.0,
+        "return_pct": 1701.53,
         "month": "2026-06"
       },
       {
@@ -79,9 +79,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 247,
-        "win_rate": 49.8,
-        "return_pct": 1705.82
+        "trades": 248,
+        "win_rate": 50.0,
+        "return_pct": 1932.63
       }
     ]
   },
@@ -4126,11 +4126,13 @@
       "timeframe": "1h",
       "entry": 0.0085978,
       "stop": 0.00837936,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-26T12:03:02",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.94
     },
     {
       "id": "trendwave · 1h|XPLUSDT|2026-06-26 11:59:59.999000",
@@ -4734,12 +4736,14 @@
       "entry": 0.397956,
       "stop": 0.38666825,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T18:33:11",
-      "closed_at": null,
-      "realized_pct": 5.39
+      "closed_at": "2026-06-26T19:04:09",
+      "realized_pct": 12.56,
+      "result_pct": 12.56
     },
     {
       "id": "trendwave · 15m|KAITOUSDT|2026-06-26 18:29:59.999000",
@@ -4777,9 +4781,39 @@
       "timeframe": "15m",
       "entry": 0.331,
       "stop": 0.32340594,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-26T18:46:05",
+      "closed_at": null,
+      "realized_pct": 0.53
+    },
+    {
+      "id": "trendwave · 15m|AGLDUSDT|2026-06-26 18:59:59.999000",
+      "symbol": "AGLDUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.19704513,
+      "stop": 0.18468458,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T19:02:34",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|CITYUSDT|2026-06-26 18:59:59.999000",
+      "symbol": "CITYUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.42258933,
+      "stop": 0.38494099,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T19:02:35",
       "closed_at": null,
       "realized_pct": 0.0
     }
