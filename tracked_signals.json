@@ -7683,5 +7683,37 @@
     "hi_seen": 0.00417,
     "lo_seen": 0.00417,
     "created": "2026-06-26T14:31:06"
+  },
+  "RSI70 · 15m|CITYUSDT|2026-06-26 14:44:59.999000": {
+    "symbol": "CITYUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1821,
+    "entry": 0.47,
+    "stop": 0.41005839,
+    "init_stop": 0.41005839,
+    "cur_stop": 0.41005839,
+    "last_alert_stop": 0.41005839,
+    "armed": false,
+    "targets": [
+      0.4972,
+      0.5318,
+      0.6318
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-26 14:44:59.999000",
+    "last_bar": "2026-06-26 14:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.47,
+    "lo_seen": 0.47,
+    "created": "2026-06-26T14:46:03"
   }
 }
