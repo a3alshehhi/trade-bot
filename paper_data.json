@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-26T18:35:30",
+  "updated_at": "2026-06-26T18:49:05",
   "stats": {
-    "open": 45,
+    "open": 46,
     "closed": 247,
     "win_rate": 49.8,
     "profit_factor": 2.18,
@@ -4733,11 +4733,13 @@
       "timeframe": "15m",
       "entry": 0.397956,
       "stop": 0.38666825,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-26T18:33:11",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 5.39
     },
     {
       "id": "trendwave · 15m|KAITOUSDT|2026-06-26 18:29:59.999000",
@@ -4764,6 +4766,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T18:33:13",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|XNOUSDT|2026-06-26 18:44:59.999000",
+      "symbol": "XNOUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.331,
+      "stop": 0.32340594,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T18:46:05",
       "closed_at": null,
       "realized_pct": 0.0
     }
