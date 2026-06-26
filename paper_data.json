@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-26T12:49:11",
+  "updated_at": "2026-06-26T13:05:16",
   "stats": {
-    "open": 32,
+    "open": 34,
     "closed": 226,
     "win_rate": 46.5,
     "profit_factor": 1.89,
@@ -4204,11 +4204,13 @@
       "timeframe": "15m",
       "entry": 0.437,
       "stop": 0.42280483,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-26T12:16:01",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.78
     },
     {
       "id": "trendwave · 15m|XPLUSDT|2026-06-26 12:29:59.999000",
@@ -4221,6 +4223,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T12:33:18",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|KAITOUSDT|2026-06-26 12:59:59.999000",
+      "symbol": "KAITOUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.5058,
+      "stop": 0.47326148,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T13:01:38",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|TNSRUSDT|2026-06-26 12:59:59.999000",
+      "symbol": "TNSRUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0404346,
+      "stop": 0.03829365,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T13:03:59",
       "closed_at": null,
       "realized_pct": 0.0
     }
