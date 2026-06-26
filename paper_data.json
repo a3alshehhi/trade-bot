@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-26T21:19:07",
+  "updated_at": "2026-06-26T21:34:07",
   "stats": {
     "open": 50,
-    "closed": 253,
-    "win_rate": 50.6,
-    "profit_factor": 2.25,
-    "total_pct": 2109.37,
-    "avg_pct": 1.38,
+    "closed": 254,
+    "win_rate": 50.8,
+    "profit_factor": 2.26,
+    "total_pct": 2210.33,
+    "avg_pct": 1.39,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-26",
-        "trades": 58,
-        "win_rate": 65.5,
-        "return_pct": 214.44,
+        "trades": 59,
+        "win_rate": 66.1,
+        "return_pct": 228.81,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -63,9 +63,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 247,
-        "win_rate": 50.6,
-        "return_pct": 1858.17,
+        "trades": 248,
+        "win_rate": 50.8,
+        "return_pct": 1947.66,
         "month": "2026-06"
       },
       {
@@ -79,9 +79,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 253,
-        "win_rate": 50.6,
-        "return_pct": 2109.37
+        "trades": 254,
+        "win_rate": 50.8,
+        "return_pct": 2210.33
       }
     ]
   },
@@ -4570,10 +4570,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T17:01:16",
-      "closed_at": null,
-      "realized_pct": 4.57
+      "closed_at": "2026-06-26T21:33:55",
+      "realized_pct": 4.57,
+      "result_pct": 4.57
     },
     {
       "id": "RSI70 · 15m|HOLOUSDT|2026-06-26 16:59:59.999000",
@@ -4946,6 +4947,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T21:17:28",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|XPLUSDT|2026-06-26 21:29:59.999000",
+      "symbol": "XPLUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.10375765,
+      "stop": 0.10257032,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T21:32:29",
       "closed_at": null,
       "realized_pct": 0.0
     }
