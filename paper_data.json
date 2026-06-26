@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-26T09:33:40",
+  "updated_at": "2026-06-26T09:50:12",
   "stats": {
     "open": 25,
-    "closed": 221,
-    "win_rate": 35.3,
-    "profit_factor": 1.37,
-    "total_pct": 129.5,
+    "closed": 222,
+    "win_rate": 35.6,
+    "profit_factor": 1.38,
+    "total_pct": 132.51,
     "avg_pct": 0.53,
     "max_drawdown_pct": -85.27
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-26",
-        "trades": 26,
-        "win_rate": 42.3,
-        "return_pct": 4.43,
+        "trades": 27,
+        "win_rate": 44.4,
+        "return_pct": 5.8,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -63,9 +63,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 215,
-        "win_rate": 36.3,
-        "return_pct": 129.5,
+        "trades": 216,
+        "win_rate": 36.6,
+        "return_pct": 132.51,
         "month": "2026-06"
       },
       {
@@ -79,9 +79,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 221,
-        "win_rate": 35.3,
-        "return_pct": 129.5
+        "trades": 222,
+        "win_rate": 35.6,
+        "return_pct": 132.51
       }
     ]
   },
@@ -4037,9 +4037,26 @@
       "timeframe": "15m",
       "entry": 0.5021,
       "stop": 0.48644617,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-06-26T09:01:16",
+      "closed_at": "2026-06-26T09:50:11",
+      "realized_pct": 1.31,
+      "result_pct": 1.31
+    },
+    {
+      "id": "RSI70 · 15m|PORTALUSDT|2026-06-26 09:44:59.999000",
+      "symbol": "PORTALUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01411,
+      "stop": 0.0135316,
       "hits": [],
       "status": "open",
-      "opened_at": "2026-06-26T09:01:16",
+      "opened_at": "2026-06-26T09:46:06",
       "closed_at": null,
       "realized_pct": 0.0
     }
