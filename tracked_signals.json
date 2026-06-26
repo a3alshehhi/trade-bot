@@ -8240,5 +8240,64 @@
     "hi_seen": 0.01057,
     "lo_seen": 0.01057,
     "created": "2026-06-26T17:16:07"
+  },
+  "RSI70 · 15m|BLURUSDT|2026-06-26 17:29:59.999000": {
+    "symbol": "BLURUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1886,
+    "entry": 0.01502,
+    "stop": 0.014441,
+    "init_stop": 0.014441,
+    "cur_stop": 0.014441,
+    "last_alert_stop": 0.014441,
+    "armed": false,
+    "targets": [
+      0.01530016,
+      0.01565654,
+      0.01668654
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-26 17:29:59.999000",
+    "last_bar": "2026-06-26 17:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01502,
+    "lo_seen": 0.01502,
+    "created": "2026-06-26T17:31:07"
+  },
+  "trendwave · 15m|CITYUSDT|2026-06-26 17:29:59.999000": {
+    "symbol": "CITYUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 1887,
+    "entry": 0.410956,
+    "stop": 0.39863923,
+    "init_stop": 0.39863923,
+    "cur_stop": 0.39863923,
+    "last_alert_stop": 0.39863923,
+    "armed": false,
+    "targets": [
+      0.448874,
+      0.4615
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-26 17:29:59.999000",
+    "last_bar": "2026-06-26 17:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.410956,
+    "lo_seen": 0.410956,
+    "created": "2026-06-26T17:33:00"
   }
 }

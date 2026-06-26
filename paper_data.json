@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-26T17:20:19",
+  "updated_at": "2026-06-26T17:34:59",
   "stats": {
-    "open": 41,
+    "open": 43,
     "closed": 241,
     "win_rate": 49.8,
     "profit_factor": 2.23,
@@ -4617,6 +4617,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T17:16:07",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|BLURUSDT|2026-06-26 17:29:59.999000",
+      "symbol": "BLURUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01502,
+      "stop": 0.014441,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T17:31:07",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|CITYUSDT|2026-06-26 17:29:59.999000",
+      "symbol": "CITYUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.410956,
+      "stop": 0.39863923,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T17:33:00",
       "closed_at": null,
       "realized_pct": 0.0
     }
