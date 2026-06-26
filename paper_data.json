@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-26T00:50:11",
+  "updated_at": "2026-06-26T01:05:21",
   "stats": {
-    "open": 29,
+    "open": 30,
     "closed": 199,
     "win_rate": 35.7,
     "profit_factor": 1.58,
@@ -3566,11 +3566,13 @@
       "timeframe": "1h",
       "entry": 0.00895941,
       "stop": 0.0088535,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-25T21:03:48",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.46
     },
     {
       "id": "RSI70 · 15m|ESPUSDT|2026-06-25 21:44:59.999000",
@@ -3748,6 +3750,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T00:33:14",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|2ZUSDT|2026-06-26 00:59:59.999000",
+      "symbol": "2ZUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06778,
+      "stop": 0.06531823,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T01:01:14",
       "closed_at": null,
       "realized_pct": 0.0
     }
