@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-26T07:19:08",
+  "updated_at": "2026-06-26T07:34:14",
   "stats": {
-    "open": 28,
+    "open": 29,
     "closed": 213,
     "win_rate": 34.7,
     "profit_factor": 1.39,
@@ -3786,11 +3786,13 @@
       "timeframe": "15m",
       "entry": 0.09782328,
       "stop": 0.09566551,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-26T03:02:36",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 3.49
     },
     {
       "id": "trendwave · 15m|STRAXUSDT|2026-06-26 03:44:59.999000",
@@ -3954,6 +3956,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T07:16:05",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|ARDRUSDT|2026-06-26 07:29:59.999000",
+      "symbol": "ARDRUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.02528,
+      "stop": 0.02427388,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T07:31:08",
       "closed_at": null,
       "realized_pct": 0.0
     }
