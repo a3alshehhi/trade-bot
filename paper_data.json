@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-26T04:49:38",
+  "updated_at": "2026-06-26T05:04:10",
   "stats": {
-    "open": 21,
+    "open": 23,
     "closed": 210,
     "win_rate": 34.3,
     "profit_factor": 1.38,
@@ -3807,6 +3807,34 @@
       "opened_at": "2026-06-26T03:47:35",
       "closed_at": null,
       "realized_pct": 0.91
+    },
+    {
+      "id": "trendwave · 1h|RIFUSDT|2026-06-26 04:59:59.999000",
+      "symbol": "RIFUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.07673607,
+      "stop": 0.0749452,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T05:03:18",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|TNSRUSDT|2026-06-26 04:59:59.999000",
+      "symbol": "TNSRUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.03809267,
+      "stop": 0.03662286,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-26T05:03:19",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
