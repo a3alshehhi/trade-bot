@@ -2750,6 +2750,14 @@ def detect_rsi_cross_signal(df, cfg):
     # تجاوز خط 80 صعوداً: الشمعة المغلقة ≥ 80 والسابقة < 80
     if not (r[i] >= ob and r[i - 1] < ob):
         return None
+    # فلتر الاتجاه لاستراتيجية الانعكاس (RSI70) على فريم 15m فقط:
+    # يجب أن يكون سعر الإغلاق فوق متوسط 200 (SMA) — لا دخول عكس الاتجاه العام.
+    if cfg.get("ma200_15m") and cfg.get("timeframe") == "15m":
+        if n < 200:
+            return None                      # بيانات غير كافية لتأكيد الاتجاه → تجاهل
+        ma200 = float(pd.Series(close).rolling(200).mean().iloc[i])
+        if np.isnan(ma200) or close[i] <= ma200:
+            return None                      # تحت المتوسط → إشارة مرفوضة
     entry = float(close[i])
     atrv = a[i] if not np.isnan(a[i]) else entry * 0.02
     stop = float(entry - 1.5 * atrv)
@@ -3044,6 +3052,7 @@ def track_signal(sig, label, cfg, message_id, path=TRACK_FILE):
         "targets": sig["targets"],
         "tp_split": tp_split,
         "is_trendwave": is_tw,
+        "mgmt": "5050",                 # إدارة 50/50 لكل العائلات (trendwave + RSI70/انعكاس)
         "breakeven_done": False,
         "bar_ts": sig.get("bar_ts"),
         "last_bar": sig.get("bar_ts"),  # آخر شمعة مغلقة عولِجت
@@ -3055,6 +3064,13 @@ def track_signal(sig, label, cfg, message_id, path=TRACK_FILE):
     }
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def _is_5050(tr):
+    """هل تُدار الصفقة بنظام 50/50 (جني 50% + تعادل عند الهدف1، ثم 50% وإغلاق عند الهدف2)؟
+    الافتراضي نعم لكل الإشارات المُتابَعة (trendwave و RSI70/الانعكاس). الصفقات القديمة
+    بلا حقل mgmt تُعامَل أيضاً كـ 50/50 (متوافق رجعياً: الحساب مطابق لإغلاق الهدف1 الكامل)."""
+    return tr.get("mgmt", "5050") == "5050" or bool(tr.get("is_trendwave"))
 
 
 def _advance_trade(df, tr):
@@ -3096,9 +3112,10 @@ def _advance_trade(df, tr):
     cur_stop = tr.get("cur_stop", init_stop)
     armed = tr.get("armed", False)
 
-    # ── إدارة trendwave: جني 50% عند الهدف الأول + رفع الوقف لمتوسط الدخول،
-    #    ثم جني 50% المتبقية وإغلاق عند الهدف الثاني. (لا وقف متحرك ولا أهداف إضافية)
-    if tr.get("is_trendwave"):
+    # ── إدارة 50/50 (trendwave + RSI70/انعكاس): جني 50% عند الهدف الأول + رفع الوقف
+    #    لمتوسط الدخول (تعادل)، ثم جني 50% المتبقية وإغلاق عند الهدف الثاني.
+    #    (لا وقف متحرك ولا أهداف إضافية)
+    if _is_5050(tr):
         for j in idxs:
             # (أ) ضرب الوقف أولاً — بالمستوى الجاري (الابتدائي قبل الهدف1، التعادل بعده)
             if low[j] <= cur_stop:
@@ -3214,7 +3231,8 @@ _CLOSE_SEP = "━" * 22
 
 
 def _trendwave_realized(tr):
-    """العائد المحقَّق لصفقة trendwave بإدارة 50/50."""
+    """العائد المحقَّق لصفقة بإدارة 50/50 (trendwave و RSI70/انعكاس):
+    50% عند الهدف1 + 50% عند الهدف2 (أو الخروج الجاري للمتبقّي)."""
     entry = tr["entry"]
     targets = tr.get("targets", [])
     hits = tr.get("hits", [])
@@ -3232,7 +3250,7 @@ def format_close_card(tr):
     fmt = _fmt_price
     entry = tr["entry"]
     exitp = tr.get("exit_price", tr.get("cur_stop", entry))
-    if tr.get("is_trendwave"):
+    if _is_5050(tr):
         res = _trendwave_realized(tr)
     else:
         res = ((exitp - entry) / entry * 100) if entry else 0.0
@@ -3255,7 +3273,7 @@ def _dash_trade(key, tr):
     hits = tr.get("hits", [])
     targets = tr.get("targets", [])
     g = (lambda p: ((p - entry) / entry * 100) if entry else 0.0)
-    if tr.get("is_trendwave"):
+    if _is_5050(tr):
         realized = 0.5 * g(targets[0]) if (1 in hits and targets) else 0.0
     else:
         realized = 0.0
@@ -3268,7 +3286,7 @@ def _dash_trade(key, tr):
         "realized_pct": round(realized, 2),
     }
     if stopped:
-        if tr.get("is_trendwave"):
+        if _is_5050(tr):
             out["result_pct"] = round(_trendwave_realized(tr), 2)
         else:
             exitp = tr.get("exit_price", tr.get("cur_stop", entry))
@@ -3613,6 +3631,8 @@ def build_argparser():
                    help="score: النظام متعدد العوامل | reversal: انعكاس RSI الزخمي")
     p.add_argument("--ma200-confirm", action="store_true",
                    help="(انعكاس، 1h فقط) اشتراط إغلاق فوق متوسط 200 (على 4h) عند التشبّع الشرائي")
+    p.add_argument("--ma200-15m", action="store_true",
+                   help="(RSI70/انعكاس، 15m فقط) اشتراط أن يكون سعر الإغلاق فوق متوسط 200 (SMA) لرفض الإشارات العكسية")
     p.add_argument("--dca-fib", action="store_true",
                    help="(انعكاس) دخول مباشر عند التأكيد ثم DCA على ارتدادات فيبوناتشي")
     p.add_argument("--cost", type=float, default=0.0,
@@ -3724,6 +3744,7 @@ if __name__ == "__main__":
         "ema_cross": args.ema_cross, "ema_fast": args.ema_fast, "ema_slow": args.ema_slow,
         "rsi2": args.rsi2, "rsi2_buy": args.rsi2_buy,
         "ml_filter": args.ml_filter,
+        "ma200_15m": getattr(args, "ma200_15m", False),
     }
     if args.trendwave:        # الإعداد الرابح المثبّت
         if args.trail_buf == 0.25:
