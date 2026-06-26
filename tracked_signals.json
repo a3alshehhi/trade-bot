@@ -6959,5 +6959,36 @@
     "hi_seen": 0.07509,
     "lo_seen": 0.07509,
     "created": "2026-06-26T08:16:00"
+  },
+  "RSI70 · 15m|SCRTUSDT|2026-06-26 08:29:59.999000": {
+    "symbol": "SCRTUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1758,
+    "entry": 0.0518,
+    "stop": 0.04894549,
+    "init_stop": 0.04894549,
+    "cur_stop": 0.04894549,
+    "last_alert_stop": 0.04894549,
+    "armed": false,
+    "targets": [
+      0.0531872,
+      0.0549518,
+      0.0600518
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "breakeven_done": false,
+    "bar_ts": "2026-06-26 08:29:59.999000",
+    "last_bar": "2026-06-26 08:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0518,
+    "lo_seen": 0.0518,
+    "created": "2026-06-26T08:31:03"
   }
 }
