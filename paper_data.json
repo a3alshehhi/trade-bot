@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-27T11:04:06",
+  "updated_at": "2026-06-27T11:20:20",
   "stats": {
-    "open": 49,
-    "closed": 316,
-    "win_rate": 50.6,
-    "profit_factor": 1.98,
-    "total_pct": 2219.1,
-    "avg_pct": 1.14,
+    "open": 48,
+    "closed": 317,
+    "win_rate": 50.5,
+    "profit_factor": 1.97,
+    "total_pct": 2180.14,
+    "avg_pct": 1.13,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 57,
-        "win_rate": 45.6,
-        "return_pct": -16.99,
+        "trades": 58,
+        "win_rate": 44.8,
+        "return_pct": -18.38,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 310,
-        "win_rate": 50.6,
-        "return_pct": 1955.43,
+        "trades": 311,
+        "win_rate": 50.5,
+        "return_pct": 1920.9,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 316,
-        "win_rate": 50.6,
-        "return_pct": 2219.1
+        "trades": 317,
+        "win_rate": 50.5,
+        "return_pct": 2180.14
       }
     ]
   },
@@ -5952,10 +5952,11 @@
       "entry": 0.09674633,
       "stop": 0.0951258,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T11:02:30",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T11:20:19",
+      "realized_pct": -1.68,
+      "result_pct": -1.68
     },
     {
       "id": "trendwave · 1h|STRAXUSDT|2026-06-27 10:59:59.999000",
