@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-27T11:34:41",
+  "updated_at": "2026-06-27T11:49:23",
   "stats": {
-    "open": 47,
-    "closed": 318,
-    "win_rate": 50.3,
-    "profit_factor": 1.95,
-    "total_pct": 2077.76,
-    "avg_pct": 1.11,
+    "open": 48,
+    "closed": 319,
+    "win_rate": 50.2,
+    "profit_factor": 1.93,
+    "total_pct": 1987.17,
+    "avg_pct": 1.09,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 59,
-        "win_rate": 44.1,
-        "return_pct": -22.05,
+        "trades": 60,
+        "win_rate": 43.3,
+        "return_pct": -25.29,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 312,
-        "win_rate": 50.3,
-        "return_pct": 1830.16,
+        "trades": 313,
+        "win_rate": 50.2,
+        "return_pct": 1749.87,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 318,
-        "win_rate": 50.3,
-        "return_pct": 2077.76
+        "trades": 319,
+        "win_rate": 50.2,
+        "return_pct": 1987.17
       }
     ]
   },
@@ -5911,10 +5911,11 @@
       "entry": 0.20389207,
       "stop": 0.19540943,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T10:17:34",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T11:49:19",
+      "realized_pct": -4.16,
+      "result_pct": -4.16
     },
     {
       "id": "trendwave · 15m|PUNDIXUSDT|2026-06-27 10:14:59.999000",
@@ -5970,6 +5971,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-27T11:03:05",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|CITYUSDT|2026-06-27 11:44:59.999000",
+      "symbol": "CITYUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.42146333,
+      "stop": 0.41283745,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T11:47:37",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|PUNDIXUSDT|2026-06-27 11:44:59.999000",
+      "symbol": "PUNDIXUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.09494487,
+      "stop": 0.09335006,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T11:47:38",
       "closed_at": null,
       "realized_pct": 0.0
     }
