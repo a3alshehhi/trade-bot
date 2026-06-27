@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-27T04:19:07",
+  "updated_at": "2026-06-27T04:35:39",
   "stats": {
-    "open": 53,
+    "open": 55,
     "closed": 285,
     "win_rate": 50.9,
     "profit_factor": 2.14,
@@ -5521,6 +5521,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-27T04:04:03",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|EPICUSDT|2026-06-27 04:29:59.999000",
+      "symbol": "EPICUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.45397067,
+      "stop": 0.45046189,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T04:33:17",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|XPLUSDT|2026-06-27 04:29:59.999000",
+      "symbol": "XPLUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.10780407,
+      "stop": 0.10642731,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T04:33:18",
       "closed_at": null,
       "realized_pct": 0.0
     }
