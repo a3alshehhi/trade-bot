@@ -10868,5 +10868,59 @@
     "hi_seen": 0.42192667,
     "lo_seen": 0.42192667,
     "created": "2026-06-27T10:32:42"
+  },
+  "trendwave · 15m|PUNDIXUSDT|2026-06-27 10:59:59.999000": {
+    "symbol": "PUNDIXUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2191,
+    "entry": 0.09674633,
+    "stop": 0.0951258,
+    "init_stop": 0.0951258,
+    "cur_stop": 0.0951258,
+    "last_alert_stop": 0.0951258,
+    "armed": false,
+    "targets": [
+      0.1002436,
+      0.1014
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 10:59:59.999000",
+    "last_bar": "2026-06-27 10:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.09674633,
+    "lo_seen": 0.09674633,
+    "created": "2026-06-27T11:02:30"
+  },
+  "trendwave · 1h|STRAXUSDT|2026-06-27 10:59:59.999000": {
+    "symbol": "STRAXUSDT",
+    "label": "trendwave · 1h",
+    "timeframe": "1h",
+    "message_id": 2192,
+    "entry": 0.0105778,
+    "stop": 0.0101899,
+    "init_stop": 0.0101899,
+    "cur_stop": 0.0101899,
+    "last_alert_stop": 0.0101899,
+    "armed": false,
+    "targets": [
+      0.01452504,
+      0.01579
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 10:59:59.999000",
+    "last_bar": "2026-06-27 10:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0105778,
+    "lo_seen": 0.0105778,
+    "created": "2026-06-27T11:03:05"
   }
 }
