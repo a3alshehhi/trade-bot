@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-27T18:19:09",
+  "updated_at": "2026-06-27T18:35:08",
   "stats": {
-    "open": 52,
-    "closed": 345,
-    "win_rate": 51.0,
-    "profit_factor": 1.87,
-    "total_pct": 2021.67,
-    "avg_pct": 1.02,
+    "open": 50,
+    "closed": 348,
+    "win_rate": 50.9,
+    "profit_factor": 1.86,
+    "total_pct": 1961.06,
+    "avg_pct": 1.0,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 86,
-        "win_rate": 48.8,
-        "return_pct": -24.06,
+        "trades": 89,
+        "win_rate": 48.3,
+        "return_pct": -26.23,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 339,
-        "win_rate": 51.0,
-        "return_pct": 1780.44,
+        "trades": 342,
+        "win_rate": 50.9,
+        "return_pct": 1726.73,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 345,
-        "win_rate": 51.0,
-        "return_pct": 2021.67
+        "trades": 348,
+        "win_rate": 50.9,
+        "return_pct": 1961.06
       }
     ]
   },
@@ -6011,10 +6011,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T11:47:38",
-      "closed_at": null,
-      "realized_pct": 2.17
+      "closed_at": "2026-06-27T18:34:52",
+      "realized_pct": 2.17,
+      "result_pct": 2.17
     },
     {
       "id": "RSI70 · 15m|CELOUSDT|2026-06-27 11:59:59.999000",
@@ -6276,10 +6277,11 @@
       "entry": 0.40594133,
       "stop": 0.39746762,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T15:03:22",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T18:34:58",
+      "realized_pct": -2.09,
+      "result_pct": -2.09
     },
     {
       "id": "RSI70 · 15m|ETHUSDT|2026-06-27 15:14:59.999000",
@@ -6380,10 +6382,11 @@
       "entry": 0.40639,
       "stop": 0.39465373,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T16:32:39",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T18:35:03",
+      "realized_pct": -2.89,
+      "result_pct": -2.89
     },
     {
       "id": "RSI70 · 15m|HOTUSDT|2026-06-27 16:44:59.999000",
@@ -6473,6 +6476,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-27T18:17:36",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|MANTAUSDT|2026-06-27 18:29:59.999000",
+      "symbol": "MANTAUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.08452,
+      "stop": 0.08165077,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T18:31:04",
       "closed_at": null,
       "realized_pct": 0.0
     }
