@@ -10189,5 +10189,32 @@
     "hi_seen": 0.44,
     "lo_seen": 0.42227267,
     "created": "2026-06-27T05:18:05"
+  },
+  "trendwave · 15m|LSKUSDT|2026-06-27 05:44:59.999000": {
+    "symbol": "LSKUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2103,
+    "entry": 0.09042873,
+    "stop": 0.08859165,
+    "init_stop": 0.08859165,
+    "cur_stop": 0.08859165,
+    "last_alert_stop": 0.08859165,
+    "armed": false,
+    "targets": [
+      0.09091,
+      0.0915
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 05:44:59.999000",
+    "last_bar": "2026-06-27 05:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.09042873,
+    "lo_seen": 0.09042873,
+    "created": "2026-06-27T05:47:54"
   }
 }
