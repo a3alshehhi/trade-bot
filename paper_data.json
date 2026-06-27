@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-27T09:50:28",
+  "updated_at": "2026-06-27T10:05:03",
   "stats": {
-    "open": 46,
-    "closed": 313,
-    "win_rate": 50.5,
-    "profit_factor": 1.98,
-    "total_pct": 2144.42,
+    "open": 45,
+    "closed": 315,
+    "win_rate": 50.8,
+    "profit_factor": 1.99,
+    "total_pct": 2257.05,
     "avg_pct": 1.14,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 54,
-        "win_rate": 44.4,
-        "return_pct": -19.66,
+        "trades": 56,
+        "win_rate": 46.4,
+        "return_pct": -15.63,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 307,
-        "win_rate": 50.5,
-        "return_pct": 1889.24,
+        "trades": 309,
+        "win_rate": 50.8,
+        "return_pct": 1989.07,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 313,
-        "win_rate": 50.5,
-        "return_pct": 2144.42
+        "trades": 315,
+        "win_rate": 50.8,
+        "return_pct": 2257.05
       }
     ]
   },
@@ -5724,10 +5724,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T07:03:16",
-      "closed_at": null,
-      "realized_pct": 4.03
+      "closed_at": "2026-06-27T10:04:56",
+      "realized_pct": 4.03,
+      "result_pct": 4.03
     },
     {
       "id": "trendwave · 1h|GPSUSDT|2026-06-27 06:59:59.999000",
@@ -5860,11 +5861,15 @@
       "timeframe": "1h",
       "entry": 0.13692227,
       "stop": 0.12677333,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-27T09:04:11",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T10:05:02",
+      "realized_pct": 0.95,
+      "result_pct": 0.95
     },
     {
       "id": "trendwave · 15m|AGLDUSDT|2026-06-27 09:29:59.999000",
@@ -5880,6 +5885,20 @@
       "closed_at": "2026-06-27T09:50:28",
       "realized_pct": -2.63,
       "result_pct": -2.63
+    },
+    {
+      "id": "trendwave · 1h|TNSRUSDT|2026-06-27 09:59:59.999000",
+      "symbol": "TNSRUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.03709707,
+      "stop": 0.03630678,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T10:03:42",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
