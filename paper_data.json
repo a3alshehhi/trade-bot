@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-27T01:50:34",
+  "updated_at": "2026-06-27T02:04:14",
   "stats": {
-    "open": 55,
-    "closed": 271,
-    "win_rate": 51.3,
-    "profit_factor": 2.26,
-    "total_pct": 2765.17,
-    "avg_pct": 1.39,
+    "open": 52,
+    "closed": 274,
+    "win_rate": 50.7,
+    "profit_factor": 2.24,
+    "total_pct": 2707.96,
+    "avg_pct": 1.37,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 12,
-        "win_rate": 41.7,
-        "return_pct": 2.56,
+        "trades": 15,
+        "win_rate": 33.3,
+        "return_pct": 0.51,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 265,
-        "win_rate": 51.3,
-        "return_pct": 2439.42,
+        "trades": 268,
+        "win_rate": 50.7,
+        "return_pct": 2388.71,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 271,
-        "win_rate": 51.3,
-        "return_pct": 2765.17
+        "trades": 274,
+        "win_rate": 50.7,
+        "return_pct": 2707.96
       }
     ]
   },
@@ -4943,10 +4943,11 @@
       "entry": 0.02944927,
       "stop": 0.02926149,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T20:47:29",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T02:03:59",
+      "realized_pct": -0.64,
+      "result_pct": -0.64
     },
     {
       "id": "trendwave · 1h|AGLDUSDT|2026-06-26 20:59:59.999000",
@@ -5178,10 +5179,11 @@
       "entry": 72.02486667,
       "stop": 71.44432253,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T00:18:07",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T02:04:08",
+      "realized_pct": -0.81,
+      "result_pct": -0.81
     },
     {
       "id": "trendwave · 15m|CITYUSDT|2026-06-27 00:29:59.999000",
@@ -5296,10 +5298,11 @@
       "entry": 0.02944927,
       "stop": 0.02928485,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T01:18:11",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T02:04:12",
+      "realized_pct": -0.56,
+      "result_pct": -0.56
     },
     {
       "id": "trendwave · 15m|CITYUSDT|2026-06-27 01:29:59.999000",
