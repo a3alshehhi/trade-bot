@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-27T02:35:07",
+  "updated_at": "2026-06-27T02:50:23",
   "stats": {
-    "open": 52,
+    "open": 54,
     "closed": 275,
     "win_rate": 50.9,
     "profit_factor": 2.25,
@@ -5347,6 +5347,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-27T02:32:59",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|HOLOUSDT|2026-06-27 02:44:59.999000",
+      "symbol": "HOLOUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0704,
+      "stop": 0.06820766,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T02:46:03",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|PROVEUSDT|2026-06-27 02:44:59.999000",
+      "symbol": "PROVEUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1978,
+      "stop": 0.19334414,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T02:46:03",
       "closed_at": null,
       "realized_pct": 0.0
     }
