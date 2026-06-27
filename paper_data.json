@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-27T08:18:57",
+  "updated_at": "2026-06-27T08:33:58",
   "stats": {
-    "open": 51,
-    "closed": 305,
-    "win_rate": 50.5,
+    "open": 50,
+    "closed": 306,
+    "win_rate": 50.7,
     "profit_factor": 2.02,
-    "total_pct": 2283.37,
+    "total_pct": 2301.25,
     "avg_pct": 1.18,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 46,
-        "win_rate": 43.5,
-        "return_pct": -14.69,
+        "trades": 47,
+        "win_rate": 44.7,
+        "return_pct": -14.05,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 299,
-        "win_rate": 50.5,
-        "return_pct": 2012.4,
+        "trades": 300,
+        "win_rate": 50.7,
+        "return_pct": 2028.24,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 305,
-        "win_rate": 50.5,
-        "return_pct": 2283.37
+        "trades": 306,
+        "win_rate": 50.7,
+        "return_pct": 2301.25
       }
     ]
   },
@@ -5759,10 +5759,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T08:02:29",
-      "closed_at": null,
-      "realized_pct": 0.75
+      "closed_at": "2026-06-27T08:33:55",
+      "realized_pct": 0.75,
+      "result_pct": 0.75
     },
     {
       "id": "trendwave · 1h|KAITOUSDT|2026-06-27 07:59:59.999000",
