@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-27T12:50:23",
+  "updated_at": "2026-06-27T13:05:01",
   "stats": {
-    "open": 53,
-    "closed": 319,
-    "win_rate": 50.2,
+    "open": 51,
+    "closed": 321,
+    "win_rate": 50.5,
     "profit_factor": 1.93,
-    "total_pct": 1987.17,
+    "total_pct": 2015.43,
     "avg_pct": 1.09,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 60,
-        "win_rate": 43.3,
-        "return_pct": -25.29,
+        "trades": 62,
+        "win_rate": 45.2,
+        "return_pct": -24.28,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 313,
-        "win_rate": 50.2,
-        "return_pct": 1749.87,
+        "trades": 315,
+        "win_rate": 50.5,
+        "return_pct": 1774.92,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 319,
-        "win_rate": 50.2,
-        "return_pct": 1987.17
+        "trades": 321,
+        "win_rate": 50.5,
+        "return_pct": 2015.43
       }
     ]
   },
@@ -6013,10 +6013,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T12:01:10",
-      "closed_at": null,
-      "realized_pct": 0.87
+      "closed_at": "2026-06-27T13:04:55",
+      "realized_pct": 0.87,
+      "result_pct": 0.87
     },
     {
       "id": "trendwave · 15m|AGLDUSDT|2026-06-27 12:14:59.999000",
@@ -6070,11 +6071,15 @@
       "timeframe": "15m",
       "entry": 0.01495956,
       "stop": 0.01478871,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-27T12:48:05",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T13:05:00",
+      "realized_pct": 0.48,
+      "result_pct": 0.48
     }
   ]
 }
