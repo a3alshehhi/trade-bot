@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-27T13:35:05",
+  "updated_at": "2026-06-27T13:50:09",
   "stats": {
-    "open": 54,
-    "closed": 321,
-    "win_rate": 50.5,
-    "profit_factor": 1.93,
-    "total_pct": 2015.43,
+    "open": 56,
+    "closed": 322,
+    "win_rate": 50.6,
+    "profit_factor": 1.94,
+    "total_pct": 2070.64,
     "avg_pct": 1.09,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 62,
-        "win_rate": 45.2,
-        "return_pct": -24.28,
+        "trades": 63,
+        "win_rate": 46.0,
+        "return_pct": -22.3,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 315,
-        "win_rate": 50.5,
-        "return_pct": 1774.92,
+        "trades": 316,
+        "win_rate": 50.6,
+        "return_pct": 1823.85,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 321,
-        "win_rate": 50.5,
-        "return_pct": 2015.43
+        "trades": 322,
+        "win_rate": 50.6,
+        "return_pct": 2070.64
       }
     ]
   },
@@ -6030,10 +6030,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T12:17:42",
-      "closed_at": null,
-      "realized_pct": 2.61
+      "closed_at": "2026-06-27T13:50:02",
+      "realized_pct": 2.61,
+      "result_pct": 2.61
     },
     {
       "id": "RSI70 · 15m|CELOUSDT|2026-06-27 12:29:59.999000",
@@ -6120,6 +6121,48 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-27T13:33:05",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|CELOUSDT|2026-06-27 13:44:59.999000",
+      "symbol": "CELOUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06514929,
+      "stop": 0.06393097,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T13:47:54",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|CITYUSDT|2026-06-27 13:44:59.999000",
+      "symbol": "CITYUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.41797067,
+      "stop": 0.41112933,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T13:47:55",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|DCRUSDT|2026-06-27 13:44:59.999000",
+      "symbol": "DCRUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 11.38824,
+      "stop": 11.23072774,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T13:47:56",
       "closed_at": null,
       "realized_pct": 0.0
     }
