@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-27T01:04:25",
+  "updated_at": "2026-06-27T01:20:42",
   "stats": {
-    "open": 55,
-    "closed": 267,
-    "win_rate": 52.1,
-    "profit_factor": 2.35,
-    "total_pct": 3144.48,
-    "avg_pct": 1.46,
+    "open": 53,
+    "closed": 271,
+    "win_rate": 51.3,
+    "profit_factor": 2.26,
+    "total_pct": 2765.17,
+    "avg_pct": 1.39,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 8,
-        "win_rate": 62.5,
-        "return_pct": 16.13,
+        "trades": 12,
+        "win_rate": 41.7,
+        "return_pct": 2.56,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 261,
-        "win_rate": 52.1,
-        "return_pct": 2775.6,
+        "trades": 265,
+        "win_rate": 51.3,
+        "return_pct": 2439.42,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 267,
-        "win_rate": 52.1,
-        "return_pct": 3144.48
+        "trades": 271,
+        "win_rate": 51.3,
+        "return_pct": 2765.17
       }
     ]
   },
@@ -4693,10 +4693,11 @@
       "entry": 68.03,
       "stop": 65.68173239,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T17:46:00",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T01:20:15",
+      "realized_pct": -3.45,
+      "result_pct": -3.45
     },
     {
       "id": "RSI70 · 15m|TIAUSDT|2026-06-26 17:44:59.999000",
@@ -4739,10 +4740,11 @@
       "entry": 0.01598,
       "stop": 0.01515231,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T18:16:01",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T01:20:19",
+      "realized_pct": -5.18,
+      "result_pct": -5.18
     },
     {
       "id": "RSI70 · 15m|TIAUSDT|2026-06-26 18:14:59.999000",
@@ -5212,10 +5214,11 @@
       "entry": 0.00329449,
       "stop": 0.00322819,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T00:48:10",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T01:20:36",
+      "realized_pct": -2.01,
+      "result_pct": -2.01
     },
     {
       "id": "trendwave · 15m|WUSDT|2026-06-27 00:44:59.999000",
@@ -5258,8 +5261,37 @@
       "entry": 0.00327971,
       "stop": 0.00322868,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T01:02:32",
+      "closed_at": "2026-06-27T01:20:39",
+      "realized_pct": -1.56,
+      "result_pct": -1.56
+    },
+    {
+      "id": "RSI70 · 15m|MIRAUSDT|2026-06-27 01:14:59.999000",
+      "symbol": "MIRAUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.045,
+      "stop": 0.04361456,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T01:16:05",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|EDUUSDT|2026-06-27 01:14:59.999000",
+      "symbol": "EDUUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.02944927,
+      "stop": 0.02928485,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T01:18:11",
       "closed_at": null,
       "realized_pct": 0.0
     }
