@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-27T07:05:36",
+  "updated_at": "2026-06-27T07:19:01",
   "stats": {
-    "open": 51,
-    "closed": 299,
-    "win_rate": 50.5,
-    "profit_factor": 2.08,
-    "total_pct": 2494.12,
+    "open": 48,
+    "closed": 302,
+    "win_rate": 51.0,
+    "profit_factor": 2.1,
+    "total_pct": 2615.15,
     "avg_pct": 1.24,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 40,
-        "win_rate": 42.5,
-        "return_pct": -7.14,
+        "trades": 43,
+        "win_rate": 46.5,
+        "return_pct": -2.81,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 293,
-        "win_rate": 50.5,
-        "return_pct": 2199.18,
+        "trades": 296,
+        "win_rate": 51.0,
+        "return_pct": 2306.45,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 299,
-        "win_rate": 50.5,
-        "return_pct": 2494.12
+        "trades": 302,
+        "win_rate": 51.0,
+        "return_pct": 2615.15
       }
     ]
   },
@@ -5661,10 +5661,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T06:31:12",
-      "closed_at": null,
-      "realized_pct": 0.73
+      "closed_at": "2026-06-27T07:18:52",
+      "realized_pct": 0.73,
+      "result_pct": 0.73
     },
     {
       "id": "trendwave · 15m|KAITOUSDT|2026-06-27 06:29:59.999000",
@@ -5674,11 +5675,15 @@
       "timeframe": "15m",
       "entry": 0.52218767,
       "stop": 0.51564954,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-27T06:33:06",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T07:18:56",
+      "realized_pct": 1.73,
+      "result_pct": 1.73
     },
     {
       "id": "trendwave · 15m|AGLDUSDT|2026-06-27 06:59:59.999000",
@@ -5688,11 +5693,15 @@
       "timeframe": "15m",
       "entry": 0.20623867,
       "stop": 0.19000502,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-27T07:03:15",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T07:18:59",
+      "realized_pct": 2.14,
+      "result_pct": 2.14
     },
     {
       "id": "trendwave · 15m|CITYUSDT|2026-06-27 06:59:59.999000",
