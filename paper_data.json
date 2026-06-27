@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-27T20:05:01",
+  "updated_at": "2026-06-27T20:18:57",
   "stats": {
-    "open": 40,
-    "closed": 362,
-    "win_rate": 51.1,
+    "open": 41,
+    "closed": 363,
+    "win_rate": 51.2,
     "profit_factor": 1.85,
-    "total_pct": 2281.05,
+    "total_pct": 2299.39,
     "avg_pct": 1.01,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 103,
-        "win_rate": 49.5,
-        "return_pct": -14.77,
+        "trades": 104,
+        "win_rate": 50.0,
+        "return_pct": -14.12,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 356,
-        "win_rate": 51.1,
-        "return_pct": 2010.34,
+        "trades": 357,
+        "win_rate": 51.3,
+        "return_pct": 2026.59,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 362,
-        "win_rate": 51.1,
-        "return_pct": 2281.05
+        "trades": 363,
+        "win_rate": 51.2,
+        "return_pct": 2299.39
       }
     ]
   },
@@ -6420,10 +6420,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T16:46:01",
-      "closed_at": null,
-      "realized_pct": 0.77
+      "closed_at": "2026-06-27T20:18:54",
+      "realized_pct": 0.77,
+      "result_pct": 0.77
     },
     {
       "id": "trendwave · 15m|AGLDUSDT|2026-06-27 16:44:59.999000",
@@ -6584,6 +6585,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-27T20:03:00",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|SUSDT|2026-06-27 20:14:59.999000",
+      "symbol": "SUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.02326,
+      "stop": 0.02148097,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T20:16:02",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|DCRUSDT|2026-06-27 20:14:59.999000",
+      "symbol": "DCRUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 11.57926667,
+      "stop": 11.48957512,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T20:17:28",
       "closed_at": null,
       "realized_pct": 0.0
     }
