@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-27T08:33:58",
+  "updated_at": "2026-06-27T08:50:35",
   "stats": {
-    "open": 50,
+    "open": 51,
     "closed": 306,
     "win_rate": 50.7,
     "profit_factor": 2.02,
@@ -5379,11 +5379,13 @@
       "timeframe": "15m",
       "entry": 0.0704,
       "stop": 0.06820766,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-27T02:46:03",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.7
     },
     {
       "id": "RSI70 · 15m|PROVEUSDT|2026-06-27 02:44:59.999000",
@@ -5457,11 +5459,13 @@
       "timeframe": "15m",
       "entry": 0.0707,
       "stop": 0.06850092,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-27T03:31:10",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.69
     },
     {
       "id": "trendwave · 15m|HEIUSDT|2026-06-27 03:29:59.999000",
@@ -5713,11 +5717,13 @@
       "timeframe": "15m",
       "entry": 0.41994133,
       "stop": 0.40814754,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-27T07:03:16",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 4.03
     },
     {
       "id": "trendwave · 1h|GPSUSDT|2026-06-27 06:59:59.999000",
@@ -5787,11 +5793,13 @@
       "timeframe": "15m",
       "entry": 0.41540467,
       "stop": 0.40141716,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-27T08:17:17",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 4.1
     },
     {
       "id": "trendwave · 15m|HYPERUSDT|2026-06-27 08:14:59.999000",
@@ -5818,6 +5826,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-27T08:17:19",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|AGLDUSDT|2026-06-27 08:44:59.999000",
+      "symbol": "AGLDUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.20818913,
+      "stop": 0.1988517,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T08:48:10",
       "closed_at": null,
       "realized_pct": 0.0
     }
