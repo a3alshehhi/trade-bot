@@ -11740,5 +11740,64 @@
     "hi_seen": 0.40639,
     "lo_seen": 0.40639,
     "created": "2026-06-27T16:32:39"
+  },
+  "RSI70 · 15m|HOTUSDT|2026-06-27 16:44:59.999000": {
+    "symbol": "HOTUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 2279,
+    "entry": 0.000319,
+    "stop": 0.00030839,
+    "init_stop": 0.00030839,
+    "cur_stop": 0.00030839,
+    "last_alert_stop": 0.00030839,
+    "armed": false,
+    "targets": [
+      0.0003239,
+      0.00033012,
+      0.00034812
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 16:44:59.999000",
+    "last_bar": "2026-06-27 16:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.000319,
+    "lo_seen": 0.000319,
+    "created": "2026-06-27T16:46:01"
+  },
+  "trendwave · 15m|AGLDUSDT|2026-06-27 16:44:59.999000": {
+    "symbol": "AGLDUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2280,
+    "entry": 0.21420673,
+    "stop": 0.205613,
+    "init_stop": 0.205613,
+    "cur_stop": 0.205613,
+    "last_alert_stop": 0.205613,
+    "armed": false,
+    "targets": [
+      0.2184434,
+      0.22065
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 16:44:59.999000",
+    "last_bar": "2026-06-27 16:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.21420673,
+    "lo_seen": 0.21420673,
+    "created": "2026-06-27T16:47:27"
   }
 }
