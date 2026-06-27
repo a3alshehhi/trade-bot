@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-27T01:20:42",
+  "updated_at": "2026-06-27T01:33:57",
   "stats": {
-    "open": 53,
+    "open": 54,
     "closed": 271,
     "win_rate": 51.3,
     "profit_factor": 2.26,
@@ -4507,11 +4507,13 @@
       "timeframe": "15m",
       "entry": 0.1756,
       "stop": 0.16858994,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-26T16:16:02",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.93
     },
     {
       "id": "RSI70 · 15m|PUNDIXUSDT|2026-06-26 16:14:59.999000",
@@ -4572,11 +4574,13 @@
       "timeframe": "15m",
       "entry": 0.1761,
       "stop": 0.16882806,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-26T16:46:03",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.97
     },
     {
       "id": "RSI70 · 15m|AGLDUSDT|2026-06-26 16:59:59.999000",
@@ -5292,6 +5296,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-27T01:18:11",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|CITYUSDT|2026-06-27 01:29:59.999000",
+      "symbol": "CITYUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.41544867,
+      "stop": 0.40464234,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T01:32:24",
       "closed_at": null,
       "realized_pct": 0.0
     }
