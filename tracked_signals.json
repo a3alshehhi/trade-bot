@@ -11143,5 +11143,32 @@
     "exit_price": 0.015045,
     "close_card_sent": true,
     "closed_at": "2026-06-27T13:05:00"
+  },
+  "trendwave · 15m|STRAXUSDT|2026-06-27 13:14:59.999000": {
+    "symbol": "STRAXUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2216,
+    "entry": 0.01056405,
+    "stop": 0.01037422,
+    "init_stop": 0.01037422,
+    "cur_stop": 0.01037422,
+    "last_alert_stop": 0.01037422,
+    "armed": false,
+    "targets": [
+      0.0106719,
+      0.010725
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 13:14:59.999000",
+    "last_bar": "2026-06-27 13:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01056405,
+    "lo_seen": 0.01056405,
+    "created": "2026-06-27T13:17:23"
   }
 }
