@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-06-26T23:48:59",
+  "updated_at": "2026-06-27T00:04:16",
   "stats": {
-    "open": 50,
-    "closed": 259,
-    "win_rate": 51.7,
-    "profit_factor": 2.33,
-    "total_pct": 2693.72,
-    "avg_pct": 1.44,
+    "open": 54,
+    "closed": 260,
+    "win_rate": 51.9,
+    "profit_factor": 2.34,
+    "total_pct": 2762.17,
+    "avg_pct": 1.45,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-06-27",
+        "trades": 1,
+        "win_rate": 100.0,
+        "return_pct": 2.45,
+        "week": "2026-W26",
+        "month": "2026-06"
+      },
       {
         "key": "2026-06-26",
         "trades": 64,
@@ -63,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 253,
-        "win_rate": 51.8,
-        "return_pct": 2376.09,
+        "trades": 254,
+        "win_rate": 52.0,
+        "return_pct": 2436.75,
         "month": "2026-06"
       },
       {
@@ -79,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 259,
-        "win_rate": 51.7,
-        "return_pct": 2693.72
+        "trades": 260,
+        "win_rate": 51.9,
+        "return_pct": 2762.17
       }
     ]
   },
@@ -4481,10 +4489,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T16:02:25",
-      "closed_at": null,
-      "realized_pct": 2.45
+      "closed_at": "2026-06-27T00:03:59",
+      "realized_pct": 2.45,
+      "result_pct": 2.45
     },
     {
       "id": "RSI70 · 15m|FETUSDT|2026-06-26 16:14:59.999000",
@@ -4944,11 +4953,13 @@
       "timeframe": "15m",
       "entry": 0.51100527,
       "stop": 0.50432928,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-26T21:17:27",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.2
     },
     {
       "id": "trendwave · 15m|PSGUSDT|2026-06-26 21:14:59.999000",
@@ -5049,6 +5060,76 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-26T22:47:23",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|AVAXUSDT|2026-06-26 23:59:59.999000",
+      "symbol": "AVAXUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 6.633,
+      "stop": 6.44978303,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T00:01:09",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|ESPUSDT|2026-06-26 23:59:59.999000",
+      "symbol": "ESPUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06975,
+      "stop": 0.06694707,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T00:01:11",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 4h|IOUSDT|2026-06-26 23:59:59.999000",
+      "symbol": "IOUSDT",
+      "label": "trendwave · 4h",
+      "side": "buy",
+      "timeframe": "4h",
+      "entry": 0.1758724,
+      "stop": 0.16310294,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T00:03:43",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 4h|NEARUSDT|2026-06-26 23:59:59.999000",
+      "symbol": "NEARUSDT",
+      "label": "trendwave · 4h",
+      "side": "buy",
+      "timeframe": "4h",
+      "entry": 1.77761867,
+      "stop": 1.71846891,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T00:03:44",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 4h|ZECUSDT|2026-06-26 23:59:59.999000",
+      "symbol": "ZECUSDT",
+      "label": "trendwave · 4h",
+      "side": "buy",
+      "timeframe": "4h",
+      "entry": 405.56185333,
+      "stop": 383.86478566,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T00:03:45",
       "closed_at": null,
       "realized_pct": 0.0
     }
