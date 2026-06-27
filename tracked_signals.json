@@ -11488,5 +11488,32 @@
     "hi_seen": 0.09727653,
     "lo_seen": 0.09727653,
     "created": "2026-06-27T14:47:23"
+  },
+  "trendwave · 15m|CITYUSDT|2026-06-27 14:59:59.999000": {
+    "symbol": "CITYUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2256,
+    "entry": 0.40594133,
+    "stop": 0.39746762,
+    "init_stop": 0.39746762,
+    "cur_stop": 0.39746762,
+    "last_alert_stop": 0.39746762,
+    "armed": false,
+    "targets": [
+      0.445166,
+      0.4585
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 14:59:59.999000",
+    "last_bar": "2026-06-27 14:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.40594133,
+    "lo_seen": 0.40594133,
+    "created": "2026-06-27T15:03:22"
   }
 }
