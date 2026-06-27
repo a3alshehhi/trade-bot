@@ -9341,5 +9341,91 @@
     "hi_seen": 0.41497067,
     "lo_seen": 0.41497067,
     "created": "2026-06-27T00:33:14"
+  },
+  "RSI70 · 15m|AGLDUSDT|2026-06-27 00:44:59.999000": {
+    "symbol": "AGLDUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 1994,
+    "entry": 0.2594,
+    "stop": 0.22537823,
+    "init_stop": 0.22537823,
+    "cur_stop": 0.22537823,
+    "last_alert_stop": 0.22537823,
+    "armed": false,
+    "targets": [
+      0.2747952,
+      0.2943788,
+      0.3509788
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 00:44:59.999000",
+    "last_bar": "2026-06-27 00:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.2594,
+    "lo_seen": 0.2594,
+    "created": "2026-06-27T00:46:06"
+  },
+  "trendwave · 15m|GUSDT|2026-06-27 00:44:59.999000": {
+    "symbol": "GUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 1995,
+    "entry": 0.00329449,
+    "stop": 0.00322819,
+    "init_stop": 0.00322819,
+    "cur_stop": 0.00322819,
+    "last_alert_stop": 0.00322819,
+    "armed": false,
+    "targets": [
+      0.00336696,
+      0.0034
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 00:44:59.999000",
+    "last_bar": "2026-06-27 00:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00329449,
+    "lo_seen": 0.00329449,
+    "created": "2026-06-27T00:48:10"
+  },
+  "trendwave · 15m|WUSDT|2026-06-27 00:44:59.999000": {
+    "symbol": "WUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 1996,
+    "entry": 0.01040941,
+    "stop": 0.01030498,
+    "init_stop": 0.01030498,
+    "cur_stop": 0.01030498,
+    "last_alert_stop": 0.01030498,
+    "armed": false,
+    "targets": [
+      0.01041584,
+      0.01043
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 00:44:59.999000",
+    "last_bar": "2026-06-27 00:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01040941,
+    "lo_seen": 0.01040941,
+    "created": "2026-06-27T00:48:11"
   }
 }

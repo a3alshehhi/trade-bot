@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-27T00:35:42",
+  "updated_at": "2026-06-27T00:50:38",
   "stats": {
-    "open": 56,
+    "open": 59,
     "closed": 261,
     "win_rate": 52.1,
     "profit_factor": 2.37,
@@ -5176,6 +5176,48 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-27T00:33:14",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|AGLDUSDT|2026-06-27 00:44:59.999000",
+      "symbol": "AGLDUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2594,
+      "stop": 0.22537823,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T00:46:06",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|GUSDT|2026-06-27 00:44:59.999000",
+      "symbol": "GUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00329449,
+      "stop": 0.00322819,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T00:48:10",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|WUSDT|2026-06-27 00:44:59.999000",
+      "symbol": "WUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01040941,
+      "stop": 0.01030498,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T00:48:11",
       "closed_at": null,
       "realized_pct": 0.0
     }
