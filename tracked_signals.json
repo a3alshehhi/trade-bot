@@ -10985,5 +10985,37 @@
     "hi_seen": 0.09494487,
     "lo_seen": 0.09494487,
     "created": "2026-06-27T11:47:38"
+  },
+  "RSI70 · 15m|CELOUSDT|2026-06-27 11:59:59.999000": {
+    "symbol": "CELOUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 2201,
+    "entry": 0.06557,
+    "stop": 0.06305254,
+    "init_stop": 0.06305254,
+    "cur_stop": 0.06305254,
+    "last_alert_stop": 0.06305254,
+    "armed": false,
+    "targets": [
+      0.0667124,
+      0.0681656,
+      0.0723656
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 11:59:59.999000",
+    "last_bar": "2026-06-27 11:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.06557,
+    "lo_seen": 0.06557,
+    "created": "2026-06-27T12:01:10"
   }
 }
