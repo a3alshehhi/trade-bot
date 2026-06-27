@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-27T20:42:35",
+  "updated_at": "2026-06-27T20:50:18",
   "stats": {
-    "open": 43,
-    "closed": 363,
-    "win_rate": 51.2,
-    "profit_factor": 1.85,
-    "total_pct": 2299.39,
-    "avg_pct": 1.01,
+    "open": 40,
+    "closed": 366,
+    "win_rate": 51.1,
+    "profit_factor": 1.82,
+    "total_pct": 2143.59,
+    "avg_pct": 0.98,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 104,
-        "win_rate": 50.0,
-        "return_pct": -14.12,
+        "trades": 107,
+        "win_rate": 49.5,
+        "return_pct": -19.69,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 357,
-        "win_rate": 51.3,
-        "return_pct": 2026.59,
+        "trades": 360,
+        "win_rate": 51.1,
+        "return_pct": 1888.5,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 363,
-        "win_rate": 51.2,
-        "return_pct": 2299.39
+        "trades": 366,
+        "win_rate": 51.1,
+        "return_pct": 2143.59
       }
     ]
   },
@@ -5153,10 +5153,11 @@
       "entry": 0.06975,
       "stop": 0.06694707,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T00:01:11",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T20:49:55",
+      "realized_pct": -4.02,
+      "result_pct": -4.02
     },
     {
       "id": "trendwave · 4h|IOUSDT|2026-06-26 23:59:59.999000",
@@ -6081,10 +6082,11 @@
       "entry": 0.06608,
       "stop": 0.06324377,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T12:31:03",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T20:50:04",
+      "realized_pct": -4.29,
+      "result_pct": -4.29
     },
     {
       "id": "trendwave · 15m|CITYUSDT|2026-06-27 12:44:59.999000",
@@ -6624,11 +6626,15 @@
       "timeframe": "15m",
       "entry": 0.21315393,
       "stop": 0.20326968,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-27T20:32:41",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T20:50:17",
+      "realized_pct": 1.79,
+      "result_pct": 1.79
     },
     {
       "id": "trendwave · 15m|STRAXUSDT|2026-06-27 20:29:59.999000",
