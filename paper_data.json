@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-27T09:05:47",
+  "updated_at": "2026-06-27T09:19:48",
   "stats": {
-    "open": 49,
-    "closed": 309,
+    "open": 47,
+    "closed": 311,
     "win_rate": 50.8,
     "profit_factor": 2.02,
-    "total_pct": 2314.82,
+    "total_pct": 2315.68,
     "avg_pct": 1.17,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 50,
-        "win_rate": 46.0,
-        "return_pct": -13.56,
+        "trades": 52,
+        "win_rate": 46.2,
+        "return_pct": -13.53,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 303,
+        "trades": 305,
         "win_rate": 50.8,
-        "return_pct": 2040.27,
+        "return_pct": 2041.03,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 309,
+        "trades": 311,
         "win_rate": 50.8,
-        "return_pct": 2314.82
+        "return_pct": 2315.68
       }
     ]
   },
@@ -5383,10 +5383,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T02:46:03",
-      "closed_at": null,
-      "realized_pct": 0.7
+      "closed_at": "2026-06-27T09:19:39",
+      "realized_pct": 0.7,
+      "result_pct": 0.7
     },
     {
       "id": "RSI70 · 15m|PROVEUSDT|2026-06-27 02:44:59.999000",
@@ -5816,10 +5817,11 @@
       "entry": 0.0799478,
       "stop": 0.07942376,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T08:17:18",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T09:19:45",
+      "realized_pct": -0.66,
+      "result_pct": -0.66
     },
     {
       "id": "trendwave · 15m|LAYERUSDT|2026-06-27 08:14:59.999000",
