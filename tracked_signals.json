@@ -9809,5 +9809,37 @@
     "hi_seen": 0.03809707,
     "lo_seen": 0.03809707,
     "created": "2026-06-27T03:04:11"
+  },
+  "RSI70 · 15m|POLYXUSDT|2026-06-27 03:14:59.999000": {
+    "symbol": "POLYXUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 2052,
+    "entry": 0.0358,
+    "stop": 0.03489508,
+    "init_stop": 0.03489508,
+    "cur_stop": 0.03489508,
+    "last_alert_stop": 0.03489508,
+    "armed": false,
+    "targets": [
+      0.0362352,
+      0.0367888,
+      0.0383888
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 03:14:59.999000",
+    "last_bar": "2026-06-27 03:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0358,
+    "lo_seen": 0.0358,
+    "created": "2026-06-27T03:16:05"
   }
 }
