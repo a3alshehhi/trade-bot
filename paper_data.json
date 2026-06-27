@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-27T12:35:03",
+  "updated_at": "2026-06-27T12:50:23",
   "stats": {
-    "open": 51,
+    "open": 53,
     "closed": 319,
     "win_rate": 50.2,
     "profit_factor": 1.93,
@@ -6045,6 +6045,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-27T12:31:03",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|CITYUSDT|2026-06-27 12:44:59.999000",
+      "symbol": "CITYUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.420478,
+      "stop": 0.4137865,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T12:48:04",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|PORTALUSDT|2026-06-27 12:44:59.999000",
+      "symbol": "PORTALUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01495956,
+      "stop": 0.01478871,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T12:48:05",
       "closed_at": null,
       "realized_pct": 0.0
     }
