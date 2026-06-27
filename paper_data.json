@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-27T22:19:16",
+  "updated_at": "2026-06-27T22:34:23",
   "stats": {
-    "open": 42,
-    "closed": 369,
-    "win_rate": 51.2,
-    "profit_factor": 1.83,
-    "total_pct": 2221.86,
-    "avg_pct": 0.98,
+    "open": 44,
+    "closed": 370,
+    "win_rate": 51.1,
+    "profit_factor": 1.82,
+    "total_pct": 2177.05,
+    "avg_pct": 0.97,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 110,
-        "win_rate": 50.0,
-        "return_pct": -16.89,
+        "trades": 111,
+        "win_rate": 49.5,
+        "return_pct": -18.49,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 363,
-        "win_rate": 51.2,
-        "return_pct": 1957.88,
+        "trades": 364,
+        "win_rate": 51.1,
+        "return_pct": 1918.16,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 369,
-        "win_rate": 51.2,
-        "return_pct": 2221.86
+        "trades": 370,
+        "win_rate": 51.1,
+        "return_pct": 2177.05
       }
     ]
   },
@@ -6590,10 +6590,11 @@
       "entry": 0.0952824,
       "stop": 0.09344583,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T20:03:00",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T22:34:16",
+      "realized_pct": -1.93,
+      "result_pct": -1.93
     },
     {
       "id": "RSI70 · 15m|SUSDT|2026-06-27 20:14:59.999000",
@@ -6728,6 +6729,48 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-27T22:17:35",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|CITYUSDT|2026-06-27 22:29:59.999000",
+      "symbol": "CITYUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.39640467,
+      "stop": 0.3856804,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T22:32:39",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|EPICUSDT|2026-06-27 22:29:59.999000",
+      "symbol": "EPICUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.447956,
+      "stop": 0.44370103,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T22:32:40",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|HEIUSDT|2026-06-27 22:29:59.999000",
+      "symbol": "HEIUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.14014193,
+      "stop": 0.13772699,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T22:32:41",
       "closed_at": null,
       "realized_pct": 0.0
     }
