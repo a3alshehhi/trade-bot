@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-27T13:19:01",
+  "updated_at": "2026-06-27T13:35:05",
   "stats": {
-    "open": 52,
+    "open": 54,
     "closed": 321,
     "win_rate": 50.5,
     "profit_factor": 1.93,
@@ -6092,6 +6092,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-27T13:17:23",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|CITYUSDT|2026-06-27 13:29:59.999000",
+      "symbol": "CITYUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.41846333,
+      "stop": 0.41090851,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T13:33:04",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|DCRUSDT|2026-06-27 13:29:59.999000",
+      "symbol": "DCRUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 11.37838667,
+      "stop": 11.23232218,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T13:33:05",
       "closed_at": null,
       "realized_pct": 0.0
     }
