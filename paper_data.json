@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-27T23:35:27",
+  "updated_at": "2026-06-27T23:50:11",
   "stats": {
-    "open": 40,
-    "closed": 378,
-    "win_rate": 51.3,
-    "profit_factor": 1.73,
-    "total_pct": 1732.19,
-    "avg_pct": 0.9,
+    "open": 39,
+    "closed": 379,
+    "win_rate": 51.2,
+    "profit_factor": 1.72,
+    "total_pct": 1657.62,
+    "avg_pct": 0.89,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 119,
-        "win_rate": 50.4,
-        "return_pct": -34.42,
+        "trades": 120,
+        "win_rate": 50.0,
+        "return_pct": -37.09,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 372,
-        "win_rate": 51.3,
-        "return_pct": 1523.88,
+        "trades": 373,
+        "win_rate": 51.2,
+        "return_pct": 1457.79,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 378,
-        "win_rate": 51.3,
-        "return_pct": 1732.19
+        "trades": 379,
+        "win_rate": 51.2,
+        "return_pct": 1657.62
       }
     ]
   },
@@ -6271,10 +6271,11 @@
       "entry": 0.5756,
       "stop": 0.55217219,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T14:31:05",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T23:50:02",
+      "realized_pct": -4.07,
+      "result_pct": -4.07
     },
     {
       "id": "trendwave · 15m|PUNDIXUSDT|2026-06-27 14:44:59.999000",
