@@ -11585,5 +11585,32 @@
     "hi_seen": 11.84,
     "lo_seen": 11.84,
     "created": "2026-06-27T15:16:07"
+  },
+  "trendwave · 15m|XPLUSDT|2026-06-27 15:44:59.999000": {
+    "symbol": "XPLUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2265,
+    "entry": 0.10427871,
+    "stop": 0.10302228,
+    "init_stop": 0.10302228,
+    "cur_stop": 0.10302228,
+    "last_alert_stop": 0.10302228,
+    "armed": false,
+    "targets": [
+      0.10886036,
+      0.11051
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 15:44:59.999000",
+    "last_bar": "2026-06-27 15:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.10427871,
+    "lo_seen": 0.10427871,
+    "created": "2026-06-27T15:48:05"
   }
 }
