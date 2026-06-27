@@ -9254,5 +9254,59 @@
     "hi_seen": 405.56185333,
     "lo_seen": 405.56185333,
     "created": "2026-06-27T00:03:45"
+  },
+  "trendwave · 15m|HYPERUSDT|2026-06-27 00:14:59.999000": {
+    "symbol": "HYPERUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 1988,
+    "entry": 0.08179853,
+    "stop": 0.08133932,
+    "init_stop": 0.08133932,
+    "cur_stop": 0.08133932,
+    "last_alert_stop": 0.08133932,
+    "armed": false,
+    "targets": [
+      0.083801,
+      0.08445
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 00:14:59.999000",
+    "last_bar": "2026-06-27 00:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.08179853,
+    "lo_seen": 0.08179853,
+    "created": "2026-06-27T00:18:07"
+  },
+  "trendwave · 15m|SOLUSDT|2026-06-27 00:14:59.999000": {
+    "symbol": "SOLUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 1989,
+    "entry": 72.02486667,
+    "stop": 71.44432253,
+    "init_stop": 71.44432253,
+    "cur_stop": 71.44432253,
+    "last_alert_stop": 71.44432253,
+    "armed": false,
+    "targets": [
+      73.36462,
+      73.885
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 00:14:59.999000",
+    "last_bar": "2026-06-27 00:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 72.02486667,
+    "lo_seen": 72.02486667,
+    "created": "2026-06-27T00:18:07"
   }
 }
