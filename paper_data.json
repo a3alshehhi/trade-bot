@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-27T22:34:23",
+  "updated_at": "2026-06-27T22:50:27",
   "stats": {
     "open": 44,
-    "closed": 370,
-    "win_rate": 51.1,
+    "closed": 371,
+    "win_rate": 51.2,
     "profit_factor": 1.82,
-    "total_pct": 2177.05,
-    "avg_pct": 0.97,
+    "total_pct": 2209.61,
+    "avg_pct": 0.98,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 111,
-        "win_rate": 49.5,
-        "return_pct": -18.49,
+        "trades": 112,
+        "win_rate": 50.0,
+        "return_pct": -17.33,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 364,
-        "win_rate": 51.1,
-        "return_pct": 1918.16,
+        "trades": 365,
+        "win_rate": 51.2,
+        "return_pct": 1947.02,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 370,
-        "win_rate": 51.1,
-        "return_pct": 2177.05
+        "trades": 371,
+        "win_rate": 51.2,
+        "return_pct": 2209.61
       }
     ]
   },
@@ -6651,12 +6651,14 @@
       "entry": 0.01050883,
       "stop": 0.01035601,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T20:32:42",
-      "closed_at": null,
-      "realized_pct": 0.57
+      "closed_at": "2026-06-27T22:50:17",
+      "realized_pct": 1.43,
+      "result_pct": 1.43
     },
     {
       "id": "RSI70 · 1h|0GUSDT|2026-06-27 20:59:59.999000",
@@ -6694,11 +6696,13 @@
       "timeframe": "15m",
       "entry": 0.21577653,
       "stop": 0.21115636,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-27T21:48:02",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.03
     },
     {
       "id": "trendwave · 15m|PIVXUSDT|2026-06-27 21:59:59.999000",
@@ -6768,9 +6772,25 @@
       "timeframe": "15m",
       "entry": 0.14014193,
       "stop": 0.13772699,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-27T22:32:41",
+      "closed_at": null,
+      "realized_pct": 0.58
+    },
+    {
+      "id": "trendwave · 15m|AGLDUSDT|2026-06-27 22:44:59.999000",
+      "symbol": "AGLDUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.21504573,
+      "stop": 0.20845512,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T22:48:09",
       "closed_at": null,
       "realized_pct": 0.0
     }
