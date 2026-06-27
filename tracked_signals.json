@@ -10784,5 +10784,59 @@
     "hi_seen": 0.03709707,
     "lo_seen": 0.03709707,
     "created": "2026-06-27T10:03:42"
+  },
+  "trendwave · 15m|AGLDUSDT|2026-06-27 10:14:59.999000": {
+    "symbol": "AGLDUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2186,
+    "entry": 0.20389207,
+    "stop": 0.19540943,
+    "init_stop": 0.19540943,
+    "cur_stop": 0.19540943,
+    "last_alert_stop": 0.19540943,
+    "armed": false,
+    "targets": [
+      0.21146,
+      0.215
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 10:14:59.999000",
+    "last_bar": "2026-06-27 10:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.20389207,
+    "lo_seen": 0.20389207,
+    "created": "2026-06-27T10:17:34"
+  },
+  "trendwave · 15m|PUNDIXUSDT|2026-06-27 10:14:59.999000": {
+    "symbol": "PUNDIXUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2187,
+    "entry": 0.096439,
+    "stop": 0.09414037,
+    "init_stop": 0.09414037,
+    "cur_stop": 0.09414037,
+    "last_alert_stop": 0.09414037,
+    "armed": false,
+    "targets": [
+      0.0997492,
+      0.101
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 10:14:59.999000",
+    "last_bar": "2026-06-27 10:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.096439,
+    "lo_seen": 0.096439,
+    "created": "2026-06-27T10:17:35"
   }
 }
