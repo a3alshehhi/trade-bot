@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-27T19:04:05",
+  "updated_at": "2026-06-27T19:18:57",
   "stats": {
-    "open": 51,
-    "closed": 348,
-    "win_rate": 50.9,
-    "profit_factor": 1.86,
-    "total_pct": 1961.06,
-    "avg_pct": 1.0,
+    "open": 50,
+    "closed": 349,
+    "win_rate": 51.0,
+    "profit_factor": 1.87,
+    "total_pct": 2056.9,
+    "avg_pct": 1.01,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 89,
-        "win_rate": 48.3,
-        "return_pct": -26.23,
+        "trades": 90,
+        "win_rate": 48.9,
+        "return_pct": -22.79,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 342,
-        "win_rate": 50.9,
-        "return_pct": 1726.73,
+        "trades": 343,
+        "win_rate": 51.0,
+        "return_pct": 1811.67,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 348,
-        "win_rate": 50.9,
-        "return_pct": 1961.06
+        "trades": 349,
+        "win_rate": 51.0,
+        "return_pct": 2056.9
       }
     ]
   },
@@ -6473,11 +6473,13 @@
       "timeframe": "15m",
       "entry": 0.04978827,
       "stop": 0.04699472,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-27T18:17:36",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.28
     },
     {
       "id": "RSI70 · 15m|MANTAUSDT|2026-06-27 18:29:59.999000",
@@ -6501,11 +6503,15 @@
       "timeframe": "15m",
       "entry": 0.04813607,
       "stop": 0.0453808,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-27T19:02:32",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T19:18:57",
+      "realized_pct": 4.65,
+      "result_pct": 4.65
     }
   ]
 }
