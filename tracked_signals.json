@@ -12228,5 +12228,59 @@
     "hi_seen": 11.57926667,
     "lo_seen": 11.57926667,
     "created": "2026-06-27T20:17:28"
+  },
+  "trendwave · 15m|AGLDUSDT|2026-06-27 20:29:59.999000": {
+    "symbol": "AGLDUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2363,
+    "entry": 0.21315393,
+    "stop": 0.20326968,
+    "init_stop": 0.20326968,
+    "cur_stop": 0.20326968,
+    "last_alert_stop": 0.20326968,
+    "armed": false,
+    "targets": [
+      0.2156006,
+      0.21835
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 20:29:59.999000",
+    "last_bar": "2026-06-27 20:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.21315393,
+    "lo_seen": 0.21315393,
+    "created": "2026-06-27T20:32:41"
+  },
+  "trendwave · 15m|STRAXUSDT|2026-06-27 20:29:59.999000": {
+    "symbol": "STRAXUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2364,
+    "entry": 0.01050883,
+    "stop": 0.01035601,
+    "init_stop": 0.01035601,
+    "cur_stop": 0.01035601,
+    "last_alert_stop": 0.01035601,
+    "armed": false,
+    "targets": [
+      0.01062864,
+      0.01069
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-27 20:29:59.999000",
+    "last_bar": "2026-06-27 20:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01050883,
+    "lo_seen": 0.01050883,
+    "created": "2026-06-27T20:32:42"
   }
 }
