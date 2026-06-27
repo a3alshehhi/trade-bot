@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-27T04:35:39",
+  "updated_at": "2026-06-27T04:48:51",
   "stats": {
-    "open": 55,
-    "closed": 285,
-    "win_rate": 50.9,
-    "profit_factor": 2.14,
-    "total_pct": 2556.36,
-    "avg_pct": 1.3,
+    "open": 51,
+    "closed": 289,
+    "win_rate": 50.2,
+    "profit_factor": 2.1,
+    "total_pct": 2373.19,
+    "avg_pct": 1.26,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 26,
-        "win_rate": 42.3,
-        "return_pct": -4.92,
+        "trades": 30,
+        "win_rate": 36.7,
+        "return_pct": -11.47,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 279,
-        "win_rate": 50.9,
-        "return_pct": 2254.34,
+        "trades": 283,
+        "win_rate": 50.2,
+        "return_pct": 2092.0,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 285,
-        "win_rate": 50.9,
-        "return_pct": 2556.36
+        "trades": 289,
+        "win_rate": 50.2,
+        "return_pct": 2373.19
       }
     ]
   },
@@ -4375,10 +4375,11 @@
       "entry": 0.455,
       "stop": 0.43244828,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T14:16:03",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T04:48:29",
+      "realized_pct": -4.96,
+      "result_pct": -4.96
     },
     {
       "id": "RSI70 · 15m|WAXPUSDT|2026-06-26 14:29:59.999000",
@@ -5343,10 +5344,11 @@
       "entry": 0.08084633,
       "stop": 0.08017546,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T01:48:09",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T04:48:41",
+      "realized_pct": -0.83,
+      "result_pct": -0.83
     },
     {
       "id": "trendwave · 15m|CITYUSDT|2026-06-27 02:29:59.999000",
@@ -5491,10 +5493,11 @@
       "entry": 0.45149267,
       "stop": 0.44945558,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T03:47:38",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T04:48:46",
+      "realized_pct": -0.45,
+      "result_pct": -0.45
     },
     {
       "id": "RSI70 · 15m|STORJUSDT|2026-06-27 03:59:59.999000",
@@ -5533,10 +5536,11 @@
       "entry": 0.45397067,
       "stop": 0.45046189,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T04:33:17",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T04:48:49",
+      "realized_pct": -0.77,
+      "result_pct": -0.77
     },
     {
       "id": "trendwave · 15m|XPLUSDT|2026-06-27 04:29:59.999000",
