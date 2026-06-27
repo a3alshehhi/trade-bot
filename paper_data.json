@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-27T01:33:57",
+  "updated_at": "2026-06-27T01:50:34",
   "stats": {
-    "open": 54,
+    "open": 55,
     "closed": 271,
     "win_rate": 51.3,
     "profit_factor": 2.26,
@@ -4607,11 +4607,13 @@
       "timeframe": "15m",
       "entry": 0.0682,
       "stop": 0.06611738,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-26T17:01:17",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.72
     },
     {
       "id": "trendwave · 15m|XPLUSDT|2026-06-26 16:59:59.999000",
@@ -5310,6 +5312,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-27T01:32:24",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|HYPERUSDT|2026-06-27 01:44:59.999000",
+      "symbol": "HYPERUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.08084633,
+      "stop": 0.08017546,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T01:48:09",
       "closed_at": null,
       "realized_pct": 0.0
     }
