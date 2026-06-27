@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-27T06:20:22",
+  "updated_at": "2026-06-27T06:35:17",
   "stats": {
     "open": 49,
-    "closed": 296,
+    "closed": 298,
     "win_rate": 50.7,
-    "profit_factor": 2.1,
-    "total_pct": 2538.14,
-    "avg_pct": 1.25,
+    "profit_factor": 2.09,
+    "total_pct": 2527.75,
+    "avg_pct": 1.24,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-27",
-        "trades": 37,
-        "win_rate": 43.2,
-        "return_pct": -5.57,
+        "trades": 39,
+        "win_rate": 43.6,
+        "return_pct": -5.94,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -71,9 +71,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 290,
+        "trades": 292,
         "win_rate": 50.7,
-        "return_pct": 2238.2,
+        "return_pct": 2228.99,
         "month": "2026-06"
       },
       {
@@ -87,9 +87,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 296,
+        "trades": 298,
         "win_rate": 50.7,
-        "return_pct": 2538.14
+        "return_pct": 2527.75
       }
     ]
   },
@@ -5596,10 +5596,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T05:18:05",
-      "closed_at": null,
-      "realized_pct": 3.08
+      "closed_at": "2026-06-27T06:35:12",
+      "realized_pct": 3.08,
+      "result_pct": 3.08
     },
     {
       "id": "trendwave · 15m|LSKUSDT|2026-06-27 05:44:59.999000",
@@ -5628,10 +5629,11 @@
       "entry": 0.203578,
       "stop": 0.19671431,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T06:02:46",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-27T06:35:14",
+      "realized_pct": -3.37,
+      "result_pct": -3.37
     },
     {
       "id": "trendwave · 1h|STRAXUSDT|2026-06-27 05:59:59.999000",
@@ -5644,6 +5646,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-27T06:03:24",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|CELOUSDT|2026-06-27 06:29:59.999000",
+      "symbol": "CELOUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06252,
+      "stop": 0.0605936,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T06:31:12",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|KAITOUSDT|2026-06-27 06:29:59.999000",
+      "symbol": "KAITOUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.52218767,
+      "stop": 0.51564954,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-27T06:33:06",
       "closed_at": null,
       "realized_pct": 0.0
     }
