@@ -15528,5 +15528,37 @@
     "hi_seen": 1.105,
     "lo_seen": 1.105,
     "created": "2026-06-28T18:01:40"
+  },
+  "RSI70 · 15m|VANAUSDT|2026-06-28 18:14:59.999000": {
+    "symbol": "VANAUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 2767,
+    "entry": 1.116,
+    "stop": 1.08169916,
+    "init_stop": 1.08169916,
+    "cur_stop": 1.08169916,
+    "last_alert_stop": 1.08169916,
+    "armed": false,
+    "targets": [
+      1.13096,
+      1.14999,
+      1.20499
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 18:14:59.999000",
+    "last_bar": "2026-06-28 18:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1.116,
+    "lo_seen": 1.116,
+    "created": "2026-06-28T18:16:05"
   }
 }
