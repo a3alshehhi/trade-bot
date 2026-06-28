@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-28T05:37:25",
+  "updated_at": "2026-06-28T05:51:38",
   "stats": {
     "open": 50,
-    "closed": 398,
-    "win_rate": 51.5,
+    "closed": 399,
+    "win_rate": 51.6,
     "profit_factor": 1.72,
-    "total_pct": 1962.1,
+    "total_pct": 1976.54,
     "avg_pct": 0.89,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 19,
-        "win_rate": 57.9,
-        "return_pct": 17.32,
+        "trades": 20,
+        "win_rate": 60.0,
+        "return_pct": 18.14,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 392,
-        "win_rate": 51.5,
-        "return_pct": 1727.65,
+        "trades": 393,
+        "win_rate": 51.7,
+        "return_pct": 1740.44,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 398,
-        "win_rate": 51.5,
-        "return_pct": 1962.1
+        "trades": 399,
+        "win_rate": 51.6,
+        "return_pct": 1976.54
       }
     ]
   },
@@ -6621,11 +6621,13 @@
       "timeframe": "15m",
       "entry": 0.02326,
       "stop": 0.02148097,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-27T20:16:02",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.74
     },
     {
       "id": "trendwave · 15m|DCRUSDT|2026-06-27 20:14:59.999000",
@@ -6923,10 +6925,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T02:01:12",
-      "closed_at": null,
-      "realized_pct": 0.7
+      "closed_at": "2026-06-28T05:51:24",
+      "realized_pct": 0.7,
+      "result_pct": 0.7
     },
     {
       "id": "RSI70 · 1h|POWRUSDT|2026-06-28 01:59:59.999000",
@@ -7324,9 +7327,25 @@
       "timeframe": "15m",
       "entry": 0.0434648,
       "stop": 0.03943439,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-28T05:35:03",
+      "closed_at": null,
+      "realized_pct": 3.12
+    },
+    {
+      "id": "trendwave · 15m|HYPERUSDT|2026-06-28 05:44:59.999000",
+      "symbol": "HYPERUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0815912,
+      "stop": 0.08048766,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T05:49:15",
       "closed_at": null,
       "realized_pct": 0.0
     }
