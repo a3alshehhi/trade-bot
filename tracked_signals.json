@@ -12747,5 +12747,37 @@
     "hi_seen": 0.552,
     "lo_seen": 0.54744867,
     "created": "2026-06-28T00:47:53"
+  },
+  "RSI70 · 15m|POWRUSDT|2026-06-28 01:14:59.999000": {
+    "symbol": "POWRUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 2431,
+    "entry": 0.0465,
+    "stop": 0.04363807,
+    "init_stop": 0.04363807,
+    "cur_stop": 0.04363807,
+    "last_alert_stop": 0.04363807,
+    "armed": false,
+    "targets": [
+      0.0478056,
+      0.0494664,
+      0.0542664
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 01:14:59.999000",
+    "last_bar": "2026-06-28 01:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0465,
+    "lo_seen": 0.0465,
+    "created": "2026-06-28T01:15:58"
   }
 }
