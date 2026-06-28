@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-28T22:19:06",
+  "updated_at": "2026-06-28T22:33:56",
   "stats": {
-    "open": 33,
+    "open": 36,
     "closed": 487,
     "win_rate": 49.9,
     "profit_factor": 1.45,
@@ -8528,9 +8528,53 @@
       "timeframe": "15m",
       "entry": 0.0091478,
       "stop": 0.00883665,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-28T22:17:32",
+      "closed_at": null,
+      "realized_pct": 1.07
+    },
+    {
+      "id": "trendwave · 15m|CELOUSDT|2026-06-28 22:29:59.999000",
+      "symbol": "CELOUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06607589,
+      "stop": 0.06374265,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T22:32:28",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|EDUUSDT|2026-06-28 22:29:59.999000",
+      "symbol": "EDUUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03024487,
+      "stop": 0.02974283,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T22:32:29",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|SUSDT|2026-06-28 22:29:59.999000",
+      "symbol": "SUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.02391273,
+      "stop": 0.02347735,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T22:32:30",
       "closed_at": null,
       "realized_pct": 0.0
     }
