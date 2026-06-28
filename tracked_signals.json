@@ -14424,5 +14424,96 @@
     "hi_seen": 0.01135,
     "lo_seen": 0.01135,
     "created": "2026-06-28T10:46:04"
+  },
+  "RSI70 · 15m|MANTAUSDT|2026-06-28 10:59:59.999000": {
+    "symbol": "MANTAUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 2630,
+    "entry": 0.09201,
+    "stop": 0.0887778,
+    "init_stop": 0.0887778,
+    "cur_stop": 0.0887778,
+    "last_alert_stop": 0.0887778,
+    "armed": false,
+    "targets": [
+      0.09344072,
+      0.09526068,
+      0.10052068
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 10:59:59.999000",
+    "last_bar": "2026-06-28 10:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.09201,
+    "lo_seen": 0.09201,
+    "created": "2026-06-28T11:02:54"
+  },
+  "RSI70 · 1h|ACTUSDT|2026-06-28 10:59:59.999000": {
+    "symbol": "ACTUSDT",
+    "label": "RSI70 · 1h",
+    "timeframe": "1h",
+    "message_id": 2631,
+    "entry": 0.01173,
+    "stop": 0.00941813,
+    "init_stop": 0.00941813,
+    "cur_stop": 0.00941813,
+    "last_alert_stop": 0.00941813,
+    "armed": false,
+    "targets": [
+      0.0127908,
+      0.0141402,
+      0.0180402
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 10:59:59.999000",
+    "last_bar": "2026-06-28 10:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01173,
+    "lo_seen": 0.01173,
+    "created": "2026-06-28T11:03:23"
+  },
+  "trendwave · 15m|PIVXUSDT|2026-06-28 10:59:59.999000": {
+    "symbol": "PIVXUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2632,
+    "entry": 0.0423346,
+    "stop": 0.04007811,
+    "init_stop": 0.04007811,
+    "cur_stop": 0.04007811,
+    "last_alert_stop": 0.04007811,
+    "armed": false,
+    "targets": [
+      0.0463042,
+      0.04785
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 10:59:59.999000",
+    "last_bar": "2026-06-28 10:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0423346,
+    "lo_seen": 0.0423346,
+    "created": "2026-06-28T11:04:59"
   }
 }
