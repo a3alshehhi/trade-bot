@@ -16297,5 +16297,32 @@
     "hi_seen": 0.01086258,
     "lo_seen": 0.01086258,
     "created": "2026-06-28T23:17:39"
+  },
+  "trendwave · 15m|QKCUSDT|2026-06-28 23:29:59.999000": {
+    "symbol": "QKCUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2886,
+    "entry": 0.00205059,
+    "stop": 0.00201344,
+    "init_stop": 0.00201344,
+    "cur_stop": 0.00201344,
+    "last_alert_stop": 0.00201344,
+    "armed": false,
+    "targets": [
+      0.00218,
+      0.0022285
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 23:29:59.999000",
+    "last_bar": "2026-06-28 23:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00205059,
+    "lo_seen": 0.00205059,
+    "created": "2026-06-28T23:32:26"
   }
 }
