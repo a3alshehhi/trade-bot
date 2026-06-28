@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-28T10:20:27",
+  "updated_at": "2026-06-28T10:37:00",
   "stats": {
-    "open": 45,
-    "closed": 425,
-    "win_rate": 51.3,
-    "profit_factor": 1.66,
-    "total_pct": 1798.04,
-    "avg_pct": 0.82,
+    "open": 44,
+    "closed": 426,
+    "win_rate": 51.4,
+    "profit_factor": 1.68,
+    "total_pct": 2037.2,
+    "avg_pct": 0.85,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 46,
-        "win_rate": 52.2,
-        "return_pct": 7.99,
+        "trades": 47,
+        "win_rate": 53.2,
+        "return_pct": 21.6,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 419,
-        "win_rate": 51.3,
-        "return_pct": 1582.25,
+        "trades": 420,
+        "win_rate": 51.4,
+        "return_pct": 1794.21,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 425,
-        "win_rate": 51.3,
-        "return_pct": 1798.04
+        "trades": 426,
+        "win_rate": 51.4,
+        "return_pct": 2037.2
       }
     ]
   },
@@ -7675,11 +7675,15 @@
       "timeframe": "15m",
       "entry": 0.00886384,
       "stop": 0.00825433,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-28T10:18:09",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T10:36:57",
+      "realized_pct": 12.6,
+      "result_pct": 12.6
     },
     {
       "id": "trendwave · 15m|HYPERUSDT|2026-06-28 10:14:59.999000",
@@ -7689,11 +7693,13 @@
       "timeframe": "15m",
       "entry": 0.0816302,
       "stop": 0.07967594,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-28T10:18:10",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.8
     }
   ]
 }
