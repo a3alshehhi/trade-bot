@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-28T04:51:27",
+  "updated_at": "2026-06-28T05:08:08",
   "stats": {
-    "open": 50,
-    "closed": 393,
+    "open": 52,
+    "closed": 395,
     "win_rate": 51.1,
     "profit_factor": 1.71,
-    "total_pct": 1853.92,
+    "total_pct": 1851.85,
     "avg_pct": 0.89,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 14,
+        "trades": 16,
         "win_rate": 50.0,
-        "return_pct": 11.17,
+        "return_pct": 11.05,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 387,
+        "trades": 389,
         "win_rate": 51.2,
-        "return_pct": 1631.77,
+        "return_pct": 1629.93,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 393,
+        "trades": 395,
         "win_rate": 51.1,
-        "return_pct": 1853.92
+        "return_pct": 1851.85
       }
     ]
   },
@@ -7036,10 +7036,11 @@
       "entry": 0.18902433,
       "stop": 0.18491615,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T03:32:58",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T05:07:52",
+      "realized_pct": -2.17,
+      "result_pct": -2.17
     },
     {
       "id": "trendwave · 15m|PIVXUSDT|2026-06-28 03:29:59.999000",
@@ -7094,11 +7095,13 @@
       "timeframe": "15m",
       "entry": 0.06686,
       "stop": 0.06389735,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-28T04:01:12",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.06
     },
     {
       "id": "RSI70 · 15m|ENJUSDT|2026-06-28 03:59:59.999000",
@@ -7138,11 +7141,15 @@
       "timeframe": "1h",
       "entry": 0.13833167,
       "stop": 0.13328599,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-28T04:03:51",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T05:07:59",
+      "realized_pct": 2.11,
+      "result_pct": 2.11
     },
     {
       "id": "trendwave · 1h|GUSDT|2026-06-28 03:59:59.999000",
@@ -7242,6 +7249,62 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-28T04:49:09",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|CELOUSDT|2026-06-28 04:59:59.999000",
+      "symbol": "CELOUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06735,
+      "stop": 0.0640645,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T05:03:34",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|VETUSDT|2026-06-28 04:59:59.999000",
+      "symbol": "VETUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.004677,
+      "stop": 0.00457311,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T05:03:35",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|HOTUSDT|2026-06-28 04:59:59.999000",
+      "symbol": "HOTUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00032495,
+      "stop": 0.0003188,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T05:05:42",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|XPLUSDT|2026-06-28 04:59:59.999000",
+      "symbol": "XPLUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.10070208,
+      "stop": 0.09925908,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T05:06:31",
       "closed_at": null,
       "realized_pct": 0.0
     }
