@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-28T14:04:31",
+  "updated_at": "2026-06-28T14:20:28",
   "stats": {
-    "open": 45,
-    "closed": 444,
-    "win_rate": 50.9,
-    "profit_factor": 1.59,
-    "total_pct": 1660.1,
-    "avg_pct": 0.78,
+    "open": 43,
+    "closed": 446,
+    "win_rate": 51.1,
+    "profit_factor": 1.6,
+    "total_pct": 1752.17,
+    "avg_pct": 0.79,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 65,
-        "win_rate": 49.2,
-        "return_pct": 0.14,
+        "trades": 67,
+        "win_rate": 50.7,
+        "return_pct": 5.38,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 438,
-        "win_rate": 50.9,
-        "return_pct": 1459.99,
+        "trades": 440,
+        "win_rate": 51.1,
+        "return_pct": 1541.59,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 444,
-        "win_rate": 50.9,
-        "return_pct": 1660.1
+        "trades": 446,
+        "win_rate": 51.1,
+        "return_pct": 1752.17
       }
     ]
   },
@@ -7886,10 +7886,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T12:18:08",
-      "closed_at": null,
-      "realized_pct": 1.81
+      "closed_at": "2026-06-28T14:20:20",
+      "realized_pct": 1.81,
+      "result_pct": 1.81
     },
     {
       "id": "trendwave · 15m|HOTUSDT|2026-06-28 12:29:59.999000",
@@ -7957,11 +7958,15 @@
       "timeframe": "15m",
       "entry": 0.096,
       "stop": 0.09152415,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-28T13:45:56",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T14:20:25",
+      "realized_pct": 3.36,
+      "result_pct": 3.36
     },
     {
       "id": "trendwave · 15m|PIVXUSDT|2026-06-28 13:44:59.999000",
