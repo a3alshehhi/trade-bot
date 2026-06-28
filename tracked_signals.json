@@ -14883,5 +14883,91 @@
     "hi_seen": 0.03464927,
     "lo_seen": 0.03464927,
     "created": "2026-06-28T13:03:42"
+  },
+  "RSI70 · 15m|MANTAUSDT|2026-06-28 13:44:59.999000": {
+    "symbol": "MANTAUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 2684,
+    "entry": 0.096,
+    "stop": 0.09152415,
+    "init_stop": 0.09152415,
+    "cur_stop": 0.09152415,
+    "last_alert_stop": 0.09152415,
+    "armed": false,
+    "targets": [
+      0.09796928,
+      0.10047432,
+      0.10771432
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 13:44:59.999000",
+    "last_bar": "2026-06-28 13:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.096,
+    "lo_seen": 0.096,
+    "created": "2026-06-28T13:45:56"
+  },
+  "trendwave · 15m|PIVXUSDT|2026-06-28 13:44:59.999000": {
+    "symbol": "PIVXUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2685,
+    "entry": 0.04123607,
+    "stop": 0.03930479,
+    "init_stop": 0.03930479,
+    "cur_stop": 0.03930479,
+    "last_alert_stop": 0.03930479,
+    "armed": false,
+    "targets": [
+      0.0456862,
+      0.04735
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 13:44:59.999000",
+    "last_bar": "2026-06-28 13:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.04123607,
+    "lo_seen": 0.04123607,
+    "created": "2026-06-28T13:47:27"
+  },
+  "trendwave · 15m|SUSDT|2026-06-28 13:44:59.999000": {
+    "symbol": "SUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2686,
+    "entry": 0.02489361,
+    "stop": 0.02443833,
+    "init_stop": 0.02443833,
+    "cur_stop": 0.02443833,
+    "last_alert_stop": 0.02443833,
+    "armed": false,
+    "targets": [
+      0.0282953,
+      0.029375
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 13:44:59.999000",
+    "last_bar": "2026-06-28 13:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.02489361,
+    "lo_seen": 0.02489361,
+    "created": "2026-06-28T13:47:28"
   }
 }
