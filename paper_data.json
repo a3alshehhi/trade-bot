@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-28T20:19:09",
+  "updated_at": "2026-06-28T20:34:02",
   "stats": {
-    "open": 36,
+    "open": 38,
     "closed": 474,
     "win_rate": 49.8,
     "profit_factor": 1.46,
@@ -8349,6 +8349,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-28T20:16:41",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|FETUSDT|2026-06-28 20:29:59.999000",
+      "symbol": "FETUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1797,
+      "stop": 0.17479159,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T20:31:06",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|SUSDT|2026-06-28 20:29:59.999000",
+      "symbol": "SUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.02516648,
+      "stop": 0.02459864,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T20:32:33",
       "closed_at": null,
       "realized_pct": 0.0
     }

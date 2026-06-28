@@ -15731,5 +15731,64 @@
     "hi_seen": 0.0513,
     "lo_seen": 0.0513,
     "created": "2026-06-28T20:16:41"
+  },
+  "RSI70 · 15m|FETUSDT|2026-06-28 20:29:59.999000": {
+    "symbol": "FETUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 2810,
+    "entry": 0.1797,
+    "stop": 0.17479159,
+    "init_stop": 0.17479159,
+    "cur_stop": 0.17479159,
+    "last_alert_stop": 0.17479159,
+    "armed": false,
+    "targets": [
+      0.1819304,
+      0.1847676,
+      0.1929676
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 20:29:59.999000",
+    "last_bar": "2026-06-28 20:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1797,
+    "lo_seen": 0.1797,
+    "created": "2026-06-28T20:31:06"
+  },
+  "trendwave · 15m|SUSDT|2026-06-28 20:29:59.999000": {
+    "symbol": "SUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2811,
+    "entry": 0.02516648,
+    "stop": 0.02459864,
+    "init_stop": 0.02459864,
+    "cur_stop": 0.02459864,
+    "last_alert_stop": 0.02459864,
+    "armed": false,
+    "targets": [
+      0.02835654,
+      0.029415
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 20:29:59.999000",
+    "last_bar": "2026-06-28 20:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.02516648,
+    "lo_seen": 0.02516648,
+    "created": "2026-06-28T20:32:33"
   }
 }
