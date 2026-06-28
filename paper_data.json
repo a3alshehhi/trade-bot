@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-28T16:06:25",
+  "updated_at": "2026-06-28T16:19:57",
   "stats": {
-    "open": 49,
-    "closed": 448,
+    "open": 47,
+    "closed": 450,
     "win_rate": 51.1,
-    "profit_factor": 1.61,
-    "total_pct": 1806.1,
+    "profit_factor": 1.6,
+    "total_pct": 1808.92,
     "avg_pct": 0.79,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 69,
+        "trades": 71,
         "win_rate": 50.7,
-        "return_pct": 8.45,
+        "return_pct": 8.61,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 442,
+        "trades": 444,
         "win_rate": 51.1,
-        "return_pct": 1589.39,
+        "return_pct": 1591.89,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 448,
+        "trades": 450,
         "win_rate": 51.1,
-        "return_pct": 1806.1
+        "return_pct": 1808.92
       }
     ]
   },
@@ -7901,10 +7901,11 @@
       "entry": 0.00032442,
       "stop": 0.00031605,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T12:32:27",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T16:19:48",
+      "realized_pct": -2.58,
+      "result_pct": -2.58
     },
     {
       "id": "trendwave · 15m|POWRUSDT|2026-06-28 12:29:59.999000",
@@ -8055,10 +8056,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T15:46:02",
-      "closed_at": null,
-      "realized_pct": 2.8
+      "closed_at": "2026-06-28T16:19:54",
+      "realized_pct": 2.8,
+      "result_pct": 2.8
     },
     {
       "id": "trendwave · 15m|GUSDT|2026-06-28 15:44:59.999000",
