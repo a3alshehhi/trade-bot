@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-28T07:04:17",
+  "updated_at": "2026-06-28T07:19:22",
   "stats": {
     "open": 41,
-    "closed": 412,
-    "win_rate": 51.0,
+    "closed": 413,
+    "win_rate": 51.1,
     "profit_factor": 1.66,
-    "total_pct": 1696.66,
+    "total_pct": 1704.2,
     "avg_pct": 0.83,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 33,
-        "win_rate": 48.5,
-        "return_pct": 2.22,
+        "trades": 34,
+        "win_rate": 50.0,
+        "return_pct": 2.65,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 406,
-        "win_rate": 51.0,
-        "return_pct": 1492.39,
+        "trades": 407,
+        "win_rate": 51.1,
+        "return_pct": 1499.08,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 412,
-        "win_rate": 51.0,
-        "return_pct": 1696.66
+        "trades": 413,
+        "win_rate": 51.1,
+        "return_pct": 1704.2
       }
     ]
   },
@@ -7281,11 +7281,13 @@
       "timeframe": "15m",
       "entry": 0.06735,
       "stop": 0.0640645,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-28T05:03:34",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.15
     },
     {
       "id": "RSI70 · 15m|VETUSDT|2026-06-28 04:59:59.999000",
@@ -7399,11 +7401,15 @@
       "timeframe": "15m",
       "entry": 0.02360208,
       "stop": 0.02280825,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-28T07:02:33",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T07:19:20",
+      "realized_pct": 0.42,
+      "result_pct": 0.42
     },
     {
       "id": "trendwave · 1h|AGLDUSDT|2026-06-28 06:59:59.999000",
@@ -7416,6 +7422,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-28T07:03:08",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|CELOUSDT|2026-06-28 07:14:59.999000",
+      "symbol": "CELOUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06893,
+      "stop": 0.0651055,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T07:16:08",
       "closed_at": null,
       "realized_pct": 0.0
     }
