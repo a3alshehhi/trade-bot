@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-28T17:19:46",
+  "updated_at": "2026-06-28T17:34:59",
   "stats": {
-    "open": 39,
-    "closed": 461,
-    "win_rate": 50.1,
-    "profit_factor": 1.49,
-    "total_pct": 1089.92,
-    "avg_pct": 0.68,
+    "open": 37,
+    "closed": 464,
+    "win_rate": 49.8,
+    "profit_factor": 1.48,
+    "total_pct": 1037.17,
+    "avg_pct": 0.66,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 82,
-        "win_rate": 45.1,
-        "return_pct": -32.3,
+        "trades": 85,
+        "win_rate": 43.5,
+        "return_pct": -35.3,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 455,
-        "win_rate": 50.1,
-        "return_pct": 954.64,
+        "trades": 458,
+        "win_rate": 49.8,
+        "return_pct": 907.88,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 461,
-        "win_rate": 50.1,
-        "return_pct": 1089.92
+        "trades": 464,
+        "win_rate": 49.8,
+        "return_pct": 1037.17
       }
     ]
   },
@@ -6179,10 +6179,11 @@
       "entry": 11.37838667,
       "stop": 11.23232218,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T13:33:05",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T17:34:41",
+      "realized_pct": -1.28,
+      "result_pct": -1.28
     },
     {
       "id": "trendwave · 15m|CELOUSDT|2026-06-27 13:44:59.999000",
@@ -6225,10 +6226,11 @@
       "entry": 11.38824,
       "stop": 11.23072774,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T13:47:56",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T17:34:44",
+      "realized_pct": -1.38,
+      "result_pct": -1.38
     },
     {
       "id": "trendwave · 15m|CITYUSDT|2026-06-27 13:59:59.999000",
@@ -8181,8 +8183,23 @@
       "entry": 0.02654971,
       "stop": 0.02606134,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T17:17:51",
+      "closed_at": "2026-06-28T17:34:57",
+      "realized_pct": -1.84,
+      "result_pct": -1.84
+    },
+    {
+      "id": "RSI70 · 15m|MAGICUSDT|2026-06-28 17:29:59.999000",
+      "symbol": "MAGICUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0524,
+      "stop": 0.04567299,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T17:31:07",
       "closed_at": null,
       "realized_pct": 0.0
     }
