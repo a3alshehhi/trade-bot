@@ -11,8 +11,8 @@ on:
       timeframe:
         description: "الإطار الزمني"
         type: choice
-        options: ["1d", "4h", "1h", "15m"]
-        default: "4h"
+        options: ["1d", "15m"]
+        default: "1d"
       assets:
         description: "الأصول"
         type: choice
