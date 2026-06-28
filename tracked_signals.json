@@ -15790,5 +15790,32 @@
     "hi_seen": 0.02516648,
     "lo_seen": 0.02516648,
     "created": "2026-06-28T20:32:33"
+  },
+  "trendwave · 15m|POWRUSDT|2026-06-28 20:44:59.999000": {
+    "symbol": "POWRUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2812,
+    "entry": 0.04969413,
+    "stop": 0.04862047,
+    "init_stop": 0.04862047,
+    "cur_stop": 0.04862047,
+    "last_alert_stop": 0.04862047,
+    "armed": false,
+    "targets": [
+      0.0498348,
+      0.05
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 20:44:59.999000",
+    "last_bar": "2026-06-28 20:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.04969413,
+    "lo_seen": 0.04969413,
+    "created": "2026-06-28T20:48:00"
   }
 }
