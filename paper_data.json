@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-28T17:49:00",
+  "updated_at": "2026-06-28T18:05:30",
   "stats": {
-    "open": 39,
-    "closed": 464,
-    "win_rate": 49.8,
+    "open": 35,
+    "closed": 469,
+    "win_rate": 49.7,
     "profit_factor": 1.48,
-    "total_pct": 1037.17,
+    "total_pct": 1040.86,
     "avg_pct": 0.66,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 85,
-        "win_rate": 43.5,
-        "return_pct": -35.3,
+        "trades": 90,
+        "win_rate": 43.3,
+        "return_pct": -35.09,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 458,
-        "win_rate": 49.8,
-        "return_pct": 907.88,
+        "trades": 463,
+        "win_rate": 49.7,
+        "return_pct": 911.15,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 464,
-        "win_rate": 49.8,
-        "return_pct": 1037.17
+        "trades": 469,
+        "win_rate": 49.7,
+        "return_pct": 1040.86
       }
     ]
   },
@@ -2094,10 +2094,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-24T20:04:07",
-      "closed_at": null,
-      "realized_pct": 4.9
+      "closed_at": "2026-06-28T18:04:59",
+      "realized_pct": 4.9,
+      "result_pct": 4.9
     },
     {
       "id": "RSI70 · 15m|RIFUSDT|2026-06-24 20:14:59.999000",
@@ -8019,10 +8020,11 @@
       "entry": 0.13033607,
       "stop": 0.12611997,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T14:03:20",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T18:05:18",
+      "realized_pct": -3.23,
+      "result_pct": -3.23
     },
     {
       "id": "trendwave · 15m|POWRUSDT|2026-06-28 14:29:59.999000",
@@ -8169,10 +8171,11 @@
       "entry": 0.00204078,
       "stop": 0.00201015,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T17:02:56",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T18:05:23",
+      "realized_pct": -1.5,
+      "result_pct": -1.5
     },
     {
       "id": "trendwave · 15m|SUSDT|2026-06-28 17:14:59.999000",
@@ -8200,10 +8203,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T17:31:07",
-      "closed_at": null,
-      "realized_pct": 2.93
+      "closed_at": "2026-06-28T18:05:25",
+      "realized_pct": 2.93,
+      "result_pct": 2.93
     },
     {
       "id": "RSI70 · 15m|GASUSDT|2026-06-28 17:44:59.999000",
@@ -8228,8 +8232,23 @@
       "entry": 1.105,
       "stop": 1.07718069,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T17:46:02",
+      "closed_at": "2026-06-28T18:05:29",
+      "realized_pct": -2.52,
+      "result_pct": -2.52
+    },
+    {
+      "id": "RSI70 · 1h|GASUSDT|2026-06-28 17:59:59.999000",
+      "symbol": "GASUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 1.105,
+      "stop": 1.04629989,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T18:01:40",
       "closed_at": null,
       "realized_pct": 0.0
     }
