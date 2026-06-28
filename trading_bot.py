@@ -1941,6 +1941,227 @@ def backtest_symbol_trendwave(item, kind, cfg):
     return backtest_symbol_osob(item, kind, c)
 
 
+def _simulate_choch_entry(df, i_lock, fib_levels, stop, targets, hold, cost, wait=None):
+    """دخول سلّمي عند 3 مستويات فيبو بعد CHoCH + وقف متحرك (لا هدف ثابت).
+    الوقف يرتفع تحت كل قاع محوري مؤكَّد بعد ربح ≥ 1R.
+    fib_levels: قائمة تنازلية [h1>h2>h3].
+    يرجع (R, outcome, j0) أو None."""
+    n = len(df)
+    if wait is None:
+        wait = hold
+    high_arr  = df["high"].values
+    low_arr   = df["low"].values
+    close_arr = df["close"].values
+    atr_arr   = atr(df, 14).values
+
+    top = fib_levels[0]
+
+    j0 = None
+    for j in range(i_lock + 1, min(i_lock + 1 + wait, n)):
+        if low_arr[j] <= top:
+            j0 = j
+            break
+    if j0 is None:
+        return None
+
+    filled     = []
+    nxt        = 0
+    cur_stop   = stop
+    armed      = False
+    end        = min(j0 + 1 + hold, n)
+
+    def _avg():
+        return sum(filled) / len(filled) if filled else top
+
+    for j in range(j0, end):
+        lo = low_arr[j]
+        hi = high_arr[j]
+
+        while nxt < len(fib_levels) and lo <= fib_levels[nxt]:
+            filled.append(fib_levels[nxt])
+            nxt += 1
+
+        if not filled:
+            continue
+
+        avg  = _avg()
+        risk = avg - stop
+        if risk <= 0:
+            return None
+        cost_r = cost * avg / risk
+
+        if lo <= cur_stop:
+            return (cur_stop - avg) / risk - cost_r, "trail_stop", j0
+
+        if not armed and (hi - avg) >= risk:
+            armed = True
+
+        k = j - 2
+        if armed and k - 2 >= j0 and k + 2 < n:
+            if (low_arr[k] <= low_arr[k-1] and low_arr[k] <= low_arr[k-2] and
+                    low_arr[k] <= low_arr[k+1] and low_arr[k] <= low_arr[k+2]):
+                atrk = atr_arr[k] if not np.isnan(atr_arr[k]) else avg * 0.01
+                new_stop = low_arr[k] - 0.5 * atrk
+                if new_stop > cur_stop and new_stop < close_arr[j]:
+                    cur_stop = new_stop
+
+    avg  = _avg() if filled else top
+    risk = avg - stop
+    if risk <= 0:
+        return None
+    cost_r = cost * avg / risk
+    return (close_arr[end - 1] - avg) / risk - cost_r, "time", j0
+
+
+def backtest_symbol_choch(item, kind, cfg):
+    """استراتيجية CHoCH (تغيير هيكل السوق) المستقلة:
+      1. RSI(21) < 20 ثم > 80 (موجة شرائية) → تخفت الموجة.
+      2. قاع محوري مؤكَّد بعد الموجة = HL.
+      3. CHoCH: إغلاق فوق h1 بـ0.5%+ بشمعة قوية (body>=0.5*ATR) + RSI>50 + MA200.
+      4. الدخول: 3 مستويات فيبو (0.382/0.5/0.618) تراجع من HH نحو HL.
+      5. الوقف متحرك: يرتفع تحت كل قاع محوري بعد ربح >= 1R.
+    يدعم الفريمات: 15m / 1h / 4h."""
+    sym   = item["symbol"]
+    hold  = cfg.get("bt_hold", 40)
+    bars  = cfg.get("bt_bars", 365)
+    cost  = cfg.get("cost", 0.0)
+    os_th = cfg.get("rsi_os", 20.0)
+    ob_th = cfg.get("rsi_ob", 80.0)
+
+    df = _bt_fetch_df(sym, kind, cfg)
+    if df is None or len(df) < 120:
+        return []
+    df = df.reset_index(drop=True)
+    n     = len(df)
+    close = df["close"].values
+    high  = df["high"].values
+    low   = df["low"].values
+    open_ = df["open"].values if "open" in df.columns else close
+    rsi21 = rsi(df["close"], 21).values
+    atrs  = atr(df, 14).values
+
+    htf = {"1h": "4h", "15m": "1h", "4h": "1D", "1d": "1D"}.get(cfg.get("timeframe"), "1D")
+    s  = df.set_index("date")["close"].resample(htf).last().dropna()
+    sm = s.rolling(200).mean().dropna().reset_index()
+    sm.columns = ["date", "ma"]
+    sma200 = (pd.merge_asof(df[["date"]].copy(), sm, on="date")["ma"].values
+              if len(sm) else np.full(n, np.nan))
+
+    sma200_same = (df["close"].rolling(200).mean().values
+                   if cfg.get("timeframe") == "15m" else np.full(n, np.nan))
+
+    warmup = 60
+    start  = max(warmup, n - bars)
+    trades = []
+
+    state   = 0
+    ref_low = peak = None
+    pk_idx  = fade_idx = None
+    hl      = hl_idx = h1 = None
+
+    i = start
+    while i < n - 1:
+        r = rsi21[i]
+        if np.isnan(r):
+            i += 1
+            continue
+
+        if state == 0:
+            if r < os_th:
+                state = 1
+                ref_low = low[i]; peak = high[i]; pk_idx = i
+
+        elif state == 1:
+            ref_low = min(ref_low, low[i])
+            if high[i] > peak: peak = high[i]; pk_idx = i
+            if r > ob_th: state = 2
+
+        elif state == 2:
+            if high[i] > peak: peak = high[i]; pk_idx = i
+            if r < ob_th:
+                state    = 3
+                fade_idx = i
+                hl       = None
+                hl_idx   = None
+
+        elif state == 3:
+            if r < os_th:
+                state = 1
+                ref_low = low[i]; peak = high[i]; pk_idx = i
+                hl = hl_idx = None
+                i += 1
+                continue
+            if (i >= fade_idx + 2) and (i <= n - 3):
+                if (low[i] <= low[i - 1] and low[i] <= low[i - 2] and
+                        low[i] <= low[i + 1] and low[i] <= low[i + 2]):
+                    hl     = float(low[i])
+                    hl_idx = i
+                    h1     = float(np.max(high[fade_idx:hl_idx + 1]))
+                    state  = 4
+
+        elif state == 4:
+            if r < os_th:
+                state = 1
+                ref_low = low[i]; peak = high[i]; pk_idx = i
+                hl = hl_idx = h1 = None
+                i += 1
+                continue
+
+            m        = sma200[i] if sma200 is not None else np.nan
+            m_same   = sma200_same[i]
+            trend_ok = (np.isnan(m) or close[i] > m) and (np.isnan(m_same) or close[i] > m_same)
+
+            atrv_i        = atrs[i] if not np.isnan(atrs[i]) else close[i] * 0.02
+            body_i        = abs(close[i] - open_[i])
+            strong_candle = body_i >= 0.5 * atrv_i
+            rsi_ok        = r > 50
+
+            if close[i] > h1 * 1.005 and strong_candle and rsi_ok and trend_ok:
+                hh   = float(close[i])
+                move = hh - hl
+                if move > 0:
+                    atrv = atrs[i] if not np.isnan(atrs[i]) else close[i] * 0.02
+
+                    fib_entries = sorted([
+                        round(hh - 0.382 * move, 8),
+                        round(hh - 0.500 * move, 8),
+                        round(hh - 0.618 * move, 8),
+                    ], reverse=True)
+
+                    stp = round(hl - 0.5 * atrv, 8)
+                    tp1 = round(hh + 0.382 * move, 8)
+                    tp2 = round(hh + 0.618 * move, 8)
+
+                    if fib_entries[0] > stp and tp1 > fib_entries[0]:
+                        res = _simulate_choch_entry(
+                            df, i, fib_entries, stp,
+                            [tp1, tp2], hold, cost, wait=hold)
+                        if res:
+                            r_val, outcome, j0 = res
+                            trades.append({
+                                "symbol": sym, "kind": kind, "side": "buy",
+                                "mode": "choch",
+                                "lock_bar": i, "fill_bar": j0,
+                                "date": str(df["date"].iloc[j0])[:10],
+                                "score": 0,
+                                "entry_ref": round(sum(fib_entries) / 3, 8),
+                                "stop": stp,
+                                "hl": round(hl, 8), "hh": round(hh, 8),
+                                "R_plain":   round(r_val, 3), "out_plain":   outcome,
+                                "R_managed": round(r_val, 3), "out_managed": outcome,
+                            })
+                            i = j0 + hold
+                            state   = 0
+                            ref_low = peak = hl = hl_idx = h1 = None
+                            continue
+
+            state   = 0
+            ref_low = peak = hl = hl_idx = h1 = None
+
+        i += 1
+    return trades
+
+
 def backtest_symbol_os_multi(item, kind, cfg):
     """استراتيجية «تكرار التشبّع البيعي بعد موجة شرائية مكتملة» (os-multi):
 
@@ -2442,7 +2663,15 @@ def run_backtest(cfg, watchlist_path, out_dir):
         print("🟦 فلتر العرض/الطلب: مفعّل — دخول عند منطقة طازجة فقط")
     print()
 
-    if cfg.get("trendwave"):
+    if cfg.get("choch"):
+        if cfg.get("timeframe") not in ("15m", "1h", "4h"):
+            print(f"⚠️  choch يعمل على 15m/1h/4h — الفريم ({cfg.get('timeframe')}) غير مدعوم.")
+            return []
+        bt_fn = backtest_symbol_choch
+        print("🔷 استراتيجية CHoCH (تغيير هيكل السوق)")
+        print(f"   RSI21<20→>80 → خفوت → HL محوري → كسر h1 بشمعة قوية + RSI>50 + MA200")
+        print(f"   دخول: فيبو 0.382/0.5/0.618 | وقف متحرك بعد 1R")
+    elif cfg.get("trendwave"):
         bt_fn = backtest_symbol_trendwave
         _tb = cfg.get("trail_buf", 0.5); _ta = cfg.get("trail_arm", 1.0)
         if _tb == 0.25: _tb = 0.5
@@ -3665,6 +3894,9 @@ def build_argparser():
     p.add_argument("--trendwave", action="store_true",
                    help="استراتيجية مستقلة (الإعداد الرابح): دخول مباشر + DCA فيبو + فلتر "
                         "اتجاه من فريم أعلى + وقف متحرك 0.5×ATR مؤجّل 1R، بلا دايفرجنس. كل الفريمات")
+    p.add_argument("--choch", action="store_true",
+                   help="استراتيجية CHoCH المستقلة: موجة RSI(20→80) → HL → كسر h1 بشمعة قوية + RSI>50 + MA200 "
+                        "→ دخول فيبو (0.382/0.5/0.618) + وقف متحرك. تدعم 15m/1h/4h")
     p.add_argument("--donchian", action="store_true",
                    help="(backtest) استراتيجية كلاسيكية: اختراق قناة Donchian (Turtle)")
     p.add_argument("--don-entry", type=int, default=20, help="(donchian) قمة الاختراق")
@@ -3754,7 +3986,7 @@ if __name__ == "__main__":
         "osob": args.osob, "trend_filter": args.trend_filter,
         "trail_buf": args.trail_buf, "trail_arm": args.trail_arm,
         "force_direct": args.force_direct, "no_div": args.no_divergence,
-        "htf_trend": args.htf_trend, "trendwave": args.trendwave,
+        "htf_trend": args.htf_trend, "trendwave": args.trendwave, "choch": getattr(args, "choch", False),
         "walk_forward": args.walk_forward, "wf_folds": args.wf_folds,
         "donchian": args.donchian, "don_entry": args.don_entry, "don_exit": args.don_exit,
         "ema_cross": args.ema_cross, "ema_fast": args.ema_fast, "ema_slow": args.ema_slow,
