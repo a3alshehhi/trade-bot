@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-28T18:49:13",
+  "updated_at": "2026-06-28T19:04:51",
   "stats": {
-    "open": 35,
+    "open": 36,
     "closed": 470,
     "win_rate": 49.8,
     "profit_factor": 1.48,
@@ -8250,11 +8250,13 @@
       "timeframe": "1h",
       "entry": 1.105,
       "stop": 1.04629989,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-28T18:01:40",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.13
     },
     {
       "id": "RSI70 · 15m|VANAUSDT|2026-06-28 18:14:59.999000",
@@ -8267,6 +8269,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-28T18:16:05",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|GUSDT|2026-06-28 18:59:59.999000",
+      "symbol": "GUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.00315463,
+      "stop": 0.00309796,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T19:03:41",
       "closed_at": null,
       "realized_pct": 0.0
     }
