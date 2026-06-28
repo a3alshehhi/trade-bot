@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-28T11:35:31",
+  "updated_at": "2026-06-28T11:49:21",
   "stats": {
-    "open": 47,
-    "closed": 428,
-    "win_rate": 51.4,
-    "profit_factor": 1.67,
-    "total_pct": 1981.48,
-    "avg_pct": 0.84,
+    "open": 46,
+    "closed": 429,
+    "win_rate": 51.5,
+    "profit_factor": 1.69,
+    "total_pct": 2218.14,
+    "avg_pct": 0.86,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 49,
-        "win_rate": 53.1,
-        "return_pct": 18.43,
+        "trades": 50,
+        "win_rate": 54.0,
+        "return_pct": 31.89,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 422,
-        "win_rate": 51.4,
-        "return_pct": 1744.83,
+        "trades": 423,
+        "win_rate": 51.5,
+        "return_pct": 1954.58,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 428,
-        "win_rate": 51.4,
-        "return_pct": 1981.48
+        "trades": 429,
+        "win_rate": 51.5,
+        "return_pct": 2218.14
       }
     ]
   },
@@ -7714,12 +7714,14 @@
       "entry": 0.01135,
       "stop": 0.00964799,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T10:46:04",
-      "closed_at": null,
-      "realized_pct": 3.47
+      "closed_at": "2026-06-28T11:49:18",
+      "realized_pct": 11.37,
+      "result_pct": 11.37
     },
     {
       "id": "RSI70 · 15m|MANTAUSDT|2026-06-28 10:59:59.999000",
