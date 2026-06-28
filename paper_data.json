@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-28T21:34:20",
+  "updated_at": "2026-06-28T21:50:09",
   "stats": {
-    "open": 33,
+    "open": 34,
     "closed": 482,
     "win_rate": 50.0,
     "profit_factor": 1.48,
@@ -8434,6 +8434,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-28T21:03:00",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|MOVRUSDT|2026-06-28 21:44:59.999000",
+      "symbol": "MOVRUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.178,
+      "stop": 1.14936174,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T21:46:03",
       "closed_at": null,
       "realized_pct": 0.0
     }

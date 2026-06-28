@@ -15902,5 +15902,37 @@
     "hi_seen": 0.0343478,
     "lo_seen": 0.0343478,
     "created": "2026-06-28T21:03:00"
+  },
+  "RSI70 · 15m|MOVRUSDT|2026-06-28 21:44:59.999000": {
+    "symbol": "MOVRUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 2833,
+    "entry": 1.178,
+    "stop": 1.14936174,
+    "init_stop": 1.14936174,
+    "cur_stop": 1.14936174,
+    "last_alert_stop": 1.14936174,
+    "armed": false,
+    "targets": [
+      1.191328,
+      1.208282,
+      1.257282
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 21:44:59.999000",
+    "last_bar": "2026-06-28 21:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1.178,
+    "lo_seen": 1.178,
+    "created": "2026-06-28T21:46:03"
   }
 }
