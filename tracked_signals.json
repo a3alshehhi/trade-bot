@@ -15699,5 +15699,37 @@
     "hi_seen": 0.12741553,
     "lo_seen": 0.12741553,
     "created": "2026-06-28T20:01:55"
+  },
+  "RSI70 · 4h|MAGICUSDT|2026-06-28 19:59:59.999000": {
+    "symbol": "MAGICUSDT",
+    "label": "RSI70 · 4h",
+    "timeframe": "4h",
+    "message_id": 2809,
+    "entry": 0.0513,
+    "stop": 0.04449651,
+    "init_stop": 0.04449651,
+    "cur_stop": 0.04449651,
+    "last_alert_stop": 0.04449651,
+    "armed": false,
+    "targets": [
+      0.054428,
+      0.058407,
+      0.069907
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 19:59:59.999000",
+    "last_bar": "2026-06-28 19:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0513,
+    "lo_seen": 0.0513,
+    "created": "2026-06-28T20:16:41"
   }
 }
