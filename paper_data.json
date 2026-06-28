@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-28T13:05:04",
+  "updated_at": "2026-06-28T13:20:22",
   "stats": {
-    "open": 46,
-    "closed": 439,
-    "win_rate": 51.3,
-    "profit_factor": 1.65,
-    "total_pct": 2013.29,
-    "avg_pct": 0.83,
+    "open": 44,
+    "closed": 441,
+    "win_rate": 51.0,
+    "profit_factor": 1.63,
+    "total_pct": 1897.98,
+    "avg_pct": 0.81,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 60,
-        "win_rate": 51.7,
-        "return_pct": 20.24,
+        "trades": 62,
+        "win_rate": 50.0,
+        "return_pct": 13.68,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 433,
-        "win_rate": 51.3,
-        "return_pct": 1773.02,
+        "trades": 435,
+        "win_rate": 51.0,
+        "return_pct": 1670.82,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 439,
-        "win_rate": 51.3,
-        "return_pct": 2013.29
+        "trades": 441,
+        "win_rate": 51.0,
+        "return_pct": 1897.98
       }
     ]
   },
@@ -7315,10 +7315,11 @@
       "entry": 0.004677,
       "stop": 0.00457311,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T05:03:35",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T13:20:05",
+      "realized_pct": -2.22,
+      "result_pct": -2.22
     },
     {
       "id": "trendwave · 15m|HOTUSDT|2026-06-28 04:59:59.999000",
@@ -7837,10 +7838,11 @@
       "entry": 0.04219707,
       "stop": 0.04080177,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T12:03:18",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T13:20:15",
+      "realized_pct": -3.31,
+      "result_pct": -3.31
     },
     {
       "id": "trendwave · 4h|EPICUSDT|2026-06-28 11:59:59.999000",
@@ -7878,11 +7880,13 @@
       "timeframe": "15m",
       "entry": 0.1307302,
       "stop": 0.12798146,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-28T12:18:08",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.81
     },
     {
       "id": "trendwave · 15m|HOTUSDT|2026-06-28 12:29:59.999000",
