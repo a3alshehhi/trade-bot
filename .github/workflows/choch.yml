@@ -1,0 +1,81 @@
+name: choch
+
+on:
+  workflow_dispatch:
+    inputs:
+      timeframe:
+        description: "الإطار الزمني"
+        type: choice
+        options: ["1h", "4h", "15m"]
+        default: "1h"
+      assets:
+        description: "الأصول"
+        type: choice
+        options: [crypto, stocks, all]
+        default: crypto
+      bt_bars:
+        description: "عدد الشموع للاختبار"
+        default: "8000"
+      bt_hold:
+        description: "أقصى شموع لإمساك الصفقة"
+        default: "60"
+      cost:
+        description: "تكلفة الصفقة ذهاب/إياب (0.002 = 0.2%)"
+        default: "0.002"
+
+permissions:
+  contents: read
+
+jobs:
+  choch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Run CHoCH backtest
+        run: |
+          set -o pipefail
+          python trading_bot.py --mode backtest \
+            --watchlist watchlist.txt \
+            --assets "${{ inputs.assets }}" \
+            --timeframe "${{ inputs.timeframe }}" \
+            --choch \
+            --bt-bars "${{ inputs.bt_bars }}" \
+            --bt-hold "${{ inputs.bt_hold }}" \
+            --min-score 0 \
+            --cost "${{ inputs.cost }}" \
+            --output-dir . 2>&1 | tee choch_log.txt
+
+      - name: Send report to Telegram
+        if: always()
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ -n "$TELEGRAM_TOKEN" ] && [ -f choch_log.txt ]; then
+            PREFIX=$'🔷 نتائج استراتيجية CHoCH\n\n'
+            BODY=$(tail -c 3500 choch_log.txt)
+            curl -s "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
+              --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+              --data-urlencode "text=${PREFIX}${BODY}" \
+              --data "disable_web_page_preview=true" >/dev/null || true
+          fi
+
+      - name: Upload CSV artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: choch-results
+          path: |
+            backtest_*.csv
+            choch_log.txt
+          if-no-files-found: ignore
