@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0d1117">
-<title>متتبّع الصفقات الورقية</title>
+<title>متتبّع الصفقا֪ الورقية</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
   :root{
@@ -75,13 +75,24 @@
   .modal-actions{display:flex;gap:8px;margin-top:6px}
   .modal-actions button{flex:1}
   .hint{color:var(--muted);font-size:11px;margin-top:4px}
+  /* ── تحذيرات PF ── */
+  .alerts{margin-bottom:14px;display:flex;flex-direction:column;gap:7px}
+  .alert-card{background:#da363318;border:1px solid #da363344;border-radius:11px;
+    padding:11px 15px;font-size:13px;display:flex;align-items:center;gap:10px;line-height:1.5}
+  .alert-card .icon{font-size:17px;flex-shrink:0}
+  /* ── رمز متكرر في المفتوحا֪ ── */
+  tr.dup-sym td{background:#d2992212}
+  tr.dup-sym .dup-badge{display:inline-block;background:#d2992233;color:var(--amber);
+    font-size:10px;padding:1px 6px;border-radius:10px;margin-right:4px}
+  /* ── خسارة كبيرة > 8% ── */
+  tr.big-loss td{background:#da363312}
   @media(max-width:560px){.kpi .val{font-size:18px}h1{font-size:17px}}
 </style>
 </head>
 <body>
 <header>
   <div>
-    <h1>📊 متتبّع الصفقات الورقية</h1>
+    <h1>📊 متتبّع الصفقا֪ الورقية</h1>
     <div class="sub" id="updated">جارٍ التحميل…</div>
   </div>
   <div class="row">
@@ -89,6 +100,9 @@
     <button onclick="load()">🔄 تحديث</button>
   </div>
 </header>
+
+<!-- تحذيرات PF -->
+<div class="alerts" id="alerts"></div>
 
 <!-- KPIs -->
 <div class="grid" id="kpis"></div>
@@ -117,18 +131,18 @@
   <div class="scroll"><table id="byTf"></table></div>
 </div>
 
-<!-- صفقا֪ مفتوحة -->
+<!-- صفقات مفتوحة -->
 <div class="panel">
   <h2>📂 صفقات مفتوحة <span class="sub" id="openCount"></span></h2>
   <div class="scroll"><table id="openTbl"></table></div>
 </div>
 
-<!-- سجل الصفقا֪ -->
+<!-- سجل الصفقات -->
 <div class="panel">
-  <h2>📜 سجل الصفقا֪</h2>
+  <h2>📜 سجل الصفقات</h2>
   <div class="filters">
-    <select id="f_strat" onchange="renderLog()"><option value="">كل الاستراتيجيا֪</option></select>
-    <select id="f_tf" onchange="renderLog()"><option value="">كل الفريما֪</option></select>
+    <select id="f_strat" onchange="renderLog()"><option value="">كل الاستراتيجيات</option></select>
+    <select id="f_tf" onchange="renderLog()"><option value="">كل الفريمات</option></select>
     <select id="f_res" onchange="renderLog()">
       <option value="">كل النتائج</option>
       <option value="win">ربح</option>
@@ -267,6 +281,7 @@ async function loadServer(){
     `<div class="kpi"><div class="lbl">${k[0]}</div>
      <div class="val ${k[2]}">${k[1]}</div></div>`).join('');
 
+  renderAlerts(closed);
   renderEquity(closed);
   renderDaily7(closed);
   renderByStrat(closed);
@@ -323,6 +338,37 @@ function renderDaily7(closed){
         x:{grid:{display:false},ticks:{color:'#8b949e'}}}}});
 }
 
+/* ─── Warning alerts: PF < 1 last 7 days ─── */
+function renderAlerts(closed){
+  const cutoff=new Date(); cutoff.setDate(cutoff.getDate()-7);
+  const recent=closed.filter(t=>new Date(t.closed_at||t.opened_at||0)>=cutoff);
+  const by={};
+  recent.forEach(t=>{
+    const k=t.label||'كلاسيكي';
+    if(!by[k]) by[k]=[];
+    by[k].push(t.result_pct||0);
+  });
+  const warnings=[];
+  Object.entries(by).forEach(([label,rs])=>{
+    const wins=rs.filter(r=>r>0), losses=rs.filter(r=>r<0);
+    const profW=wins.reduce((a,b)=>a+b,0);
+    const lossA=Math.abs(losses.reduce((a,b)=>a+b,0));
+    if(lossA===0) return;
+    const pf=profW/lossA;
+    if(pf<1) warnings.push({label,pf,count:rs.length,tot:rs.reduce((a,b)=>a+b,0)});
+  });
+  warnings.sort((a,b)=>a.pf-b.pf);
+  const el=document.getElementById('alerts');
+  if(!warnings.length){ el.innerHTML=''; return; }
+  el.innerHTML=warnings.map(w=>
+    `<div class="alert-card">
+      <span class="icon">🚨</span>
+      <span><b>${w.label}</b> — PF ${w.pf.toFixed(2)} — خاسر آخر 7 أيام
+      &nbsp;|&nbsp; ${w.count} صفقة &nbsp;|&nbsp; صافي: <span class="neg">${fmt(w.tot)}</span></span>
+    </div>`
+  ).join('');
+}
+
 /* ─── By strategy ─── */
 function renderByStrat(closed){
   const by={};
@@ -345,7 +391,7 @@ function renderByStrat(closed){
   if(!rows.length){ bs.innerHTML='<tr><td class="empty">لا صفقا֪ مغلقة بعد</td></tr>'; return; }
   bs.innerHTML='<tr><th>الاسترا֪يجية</th><th>صفقا֪</th><th>فوز%</th>'+
     '<th>إجمالي</th><th>متوسط ربح</th><th>متوسط خسارة</th>'+
-    '<th>أسوأ صفقة</th><th>أطول خسارة</th><th>مدة الربح</th><th>مدة الخسارة</th></tr>'+
+    '<th>أسو֣ خسارة</th><th>PF</th><th>أطول خسارة</th><th>مدة الربح</th><th>مدة الخسارة</th></tr>'+
     rows.map(([k,d])=>{
       const wins=d.rs.filter(r=>r>0), losses=d.rs.filter(r=>r<0);
       const tot=d.rs.reduce((a,b)=>a+b,0);
@@ -356,6 +402,10 @@ function renderByStrat(closed){
       const streak=maxStreak(d.rs);
       const dw=d.dur_win.length?(d.dur_win.reduce((a,b)=>a+b,0)/d.dur_win.length).toFixed(0)+'h':'—';
       const dl=d.dur_loss.length?(d.dur_loss.reduce((a,b)=>a+b,0)/d.dur_loss.length).toFixed(0)+'h':'—';
+      const profW=wins.reduce((a,b)=>a+b,0);
+      const lossA=Math.abs(losses.reduce((a,b)=>a+b,0));
+      const pf=lossA>0?(profW/lossA).toFixed(2):'∞';
+      const pfNum=lossA>0?profW/lossA:999;
       return `<tr>
         <td class="sym">${k}</td>
         <td>${d.rs.length}</td>
@@ -364,6 +414,7 @@ function renderByStrat(closed){
         <td class="pos">${fmt(aw)}</td>
         <td class="neg">${fmt(al)}</td>
         <td class="neg">${fmt(worst)}</td>
+        <td class="${pfNum>=1?'pos':'neg'}">${pf}</td>
         <td class="${streak>=3?'neg':'neu'}">${streak}</td>
         <td class="pos">${dw}</td>
         <td class="neg">${dl}</td></tr>`;
@@ -382,7 +433,7 @@ function renderByTf(closed){
   const keys=[...order.filter(k=>by[k]),...Object.keys(by).filter(k=>!order.includes(k))];
   const tbl=document.getElementById('byTf');
   if(!keys.length){ tbl.innerHTML='<tr><td class="empty">لا بيانات</td></tr>'; return; }
-  tbl.innerHTML='<tr><th>الفريم</th><th>صفقا֪</th><th>فوز%</th>'+
+  tbl.innerHTML='<tr><th>الفريم</th><th>صفقات</th><th>فوز%</th>'+
     '<th>إجمالي</th><th>متوسط</th><th>معامل الربح</th></tr>'+
     keys.map(k=>{
       const rs=by[k];
@@ -405,15 +456,20 @@ function renderByTf(closed){
 /* ─── Open trades ─── */
 function renderOpen(){
   const open=allTrades.filter(t=>t.status==='open');
-  document.getElementById('openCount').textContent = open.length ? open.length+' صفقة' : '';
+  document.getElementById('openCount').textContent = open.length ? open.length+' صفقا' : '';
   const ot=document.getElementById('openTbl');
   if(!open.length){ ot.innerHTML='<tr><td class="empty">لا صفقات مفتوحة</td></tr>'; return; }
 
-  const head='<tr><th>العملة</th><th>استرا֪يجية</th><th>فريم</th>'+
+  // عدّ تكرار كل رمز
+  const symCount={};
+  open.forEach(t=>{ const s=t.symbol.toUpperCase(); symCount[s]=(symCount[s]||0)+1; });
+
+  const head='<tr><th>العملة</th><th>استراتيجية</th><th>فريم</th>'+
     '<th>الدخول</th><th>السعر الحيّ</th><th>الوقف</th>'+
     '<th>تقدّم نحو الهدف</th><th>أهداف</th><th>محقَّق</th></tr>';
 
   const rows=open.map(t=>{
+    const isDup = symCount[t.symbol.toUpperCase()] > 1;
     const p=priceCache[t.symbol.toUpperCase()]||null;
     const buy=t.side!=='sell';
     const risk=Math.abs(t.entry-t.stop);
@@ -433,8 +489,9 @@ function renderOpen(){
     const realTxt=t.realized_pct!=null?`<span class="${cls(t.realized_pct)}">${fmt(t.realized_pct)}</span>`:'—';
     const priceTxt=p!==null?`<b>${px(p)}</b>`:'—';
     const pxCls=p!==null?(buy?p>t.entry?'pos':p<t.stop?'neg':'neu':p<t.entry?'pos':p>t.stop?'neg':'neu'):'';
-    return `<tr>
-      <td class="sym">${t.symbol}<div class="sub">${buy?'🟢':'🔴'} ${t.side==='sell'?'بيع':'شراء'}</div></td>
+    const dupBadge = isDup ? '<span class="dup-badge">⚠️ مكرر</span>' : '';
+    return `<tr class="${isDup?'dup-sym':''}">
+      <td class="sym">${dupBadge}${t.symbol}<div class="sub">${buy?'🟢':'🔴'} ${t.side==='sell'?'بيع':'شراء'}</div></td>
       <td><span class="tag">${strat(t)}</span></td>
       <td>${t.timeframe||'—'}</td>
       <td>${px(t.entry)}</td>
@@ -454,7 +511,7 @@ function populateFilters(){
   const fStrat=document.getElementById('f_strat');
   const fTf=document.getElementById('f_tf');
   fStrat.innerHTML='<option value="">كل الاستراتيجيات</option>'+strats.map(s=>`<option>${s}</option>`).join('');
-  fTf.innerHTML='<option value="">كل الفريما֪</option>'+tfs.map(t=>`<option>${t}</option>`).join('');
+  fTf.innerHTML='<option value="">كل الفريمات</option>'+tfs.map(t=>`<option>${t}</option>`).join('');
 }
 
 function renderLog(){
@@ -475,6 +532,7 @@ function renderLog(){
     '<th>الدخول</th><th>فُتحت</th><th>أُغلقت</th><th>مدة</th><th>النتيجة</th></tr>'+
     trades.map(t=>{
       let badge,res;
+      const bigLoss = t.status==='closed' && (t.result_pct||0) < -8;
       if(t.status==='open'){ badge='<span class="badge b-open">مفتوحة</span>'; res='—'; }
       else{
         const r=t.result_pct||0;
@@ -483,8 +541,8 @@ function renderLog(){
         badge=`<span class="badge ${c}">${lbl}</span>`;
         res=`<span class="${cls(r)}">${fmt(r)}</span>`;
       }
-      return `<tr>
-        <td class="sym">${t.symbol}</td>
+      return `<tr class="${bigLoss?'big-loss':''}">
+        <td class="sym">${t.symbol}${bigLoss?' <span style="font-size:10px;color:var(--red)">🔴 −8%+</span>':''}</td>
         <td><span class="tag">${strat(t)}</span></td>
         <td>${t.timeframe||'—'}</td>
         <td>${badge}</td>
