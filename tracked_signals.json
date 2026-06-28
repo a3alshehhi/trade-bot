@@ -15347,5 +15347,32 @@
     "hi_seen": 0.00204078,
     "lo_seen": 0.00204078,
     "created": "2026-06-28T17:02:56"
+  },
+  "trendwave · 15m|SUSDT|2026-06-28 17:14:59.999000": {
+    "symbol": "SUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2744,
+    "entry": 0.02654971,
+    "stop": 0.02606134,
+    "init_stop": 0.02606134,
+    "cur_stop": 0.02606134,
+    "last_alert_stop": 0.02606134,
+    "armed": false,
+    "targets": [
+      0.02936444,
+      0.03024
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 17:14:59.999000",
+    "last_bar": "2026-06-28 17:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.02654971,
+    "lo_seen": 0.02654971,
+    "created": "2026-06-28T17:17:51"
   }
 }
