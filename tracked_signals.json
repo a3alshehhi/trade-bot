@@ -13868,5 +13868,32 @@
     "hi_seen": 0.06893,
     "lo_seen": 0.06893,
     "created": "2026-06-28T07:16:08"
+  },
+  "trendwave · 15m|PIVXUSDT|2026-06-28 07:29:59.999000": {
+    "symbol": "PIVXUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2558,
+    "entry": 0.0412478,
+    "stop": 0.03966556,
+    "init_stop": 0.03966556,
+    "cur_stop": 0.03966556,
+    "last_alert_stop": 0.03966556,
+    "armed": false,
+    "targets": [
+      0.0461806,
+      0.04775
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 07:29:59.999000",
+    "last_bar": "2026-06-28 07:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0412478,
+    "lo_seen": 0.0412478,
+    "created": "2026-06-28T07:33:12"
   }
 }
