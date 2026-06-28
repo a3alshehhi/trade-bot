@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-28T05:08:08",
+  "updated_at": "2026-06-28T05:20:27",
   "stats": {
-    "open": 52,
-    "closed": 395,
-    "win_rate": 51.1,
+    "open": 50,
+    "closed": 397,
+    "win_rate": 51.4,
     "profit_factor": 1.71,
-    "total_pct": 1851.85,
+    "total_pct": 1882.6,
     "avg_pct": 0.89,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 16,
-        "win_rate": 50.0,
-        "return_pct": 11.05,
+        "trades": 18,
+        "win_rate": 55.6,
+        "return_pct": 12.8,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 389,
-        "win_rate": 51.2,
-        "return_pct": 1629.93,
+        "trades": 391,
+        "win_rate": 51.4,
+        "return_pct": 1657.19,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 395,
-        "win_rate": 51.1,
-        "return_pct": 1851.85
+        "trades": 397,
+        "win_rate": 51.4,
+        "return_pct": 1882.6
       }
     ]
   },
@@ -7098,10 +7098,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T04:01:12",
-      "closed_at": null,
-      "realized_pct": 1.06
+      "closed_at": "2026-06-28T05:20:17",
+      "realized_pct": 1.06,
+      "result_pct": 1.06
     },
     {
       "id": "RSI70 · 15m|ENJUSDT|2026-06-28 03:59:59.999000",
@@ -7114,10 +7115,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T04:01:13",
-      "closed_at": null,
-      "realized_pct": 0.51
+      "closed_at": "2026-06-28T05:20:20",
+      "realized_pct": 0.51,
+      "result_pct": 0.51
     },
     {
       "id": "trendwave · 15m|HYPERUSDT|2026-06-28 03:59:59.999000",
