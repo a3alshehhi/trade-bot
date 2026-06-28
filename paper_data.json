@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-28T12:20:28",
+  "updated_at": "2026-06-28T12:34:13",
   "stats": {
-    "open": 50,
-    "closed": 431,
-    "win_rate": 51.7,
-    "profit_factor": 1.73,
-    "total_pct": 2655.43,
-    "avg_pct": 0.9,
+    "open": 47,
+    "closed": 436,
+    "win_rate": 51.6,
+    "profit_factor": 1.72,
+    "total_pct": 2623.07,
+    "avg_pct": 0.89,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 52,
-        "win_rate": 55.8,
-        "return_pct": 56.77,
+        "trades": 57,
+        "win_rate": 54.4,
+        "return_pct": 54.93,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 425,
-        "win_rate": 51.8,
-        "return_pct": 2342.16,
+        "trades": 430,
+        "win_rate": 51.6,
+        "return_pct": 2313.47,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 431,
-        "win_rate": 51.7,
-        "return_pct": 2655.43
+        "trades": 436,
+        "win_rate": 51.6,
+        "return_pct": 2623.07
       }
     ]
   },
@@ -6763,10 +6763,11 @@
       "entry": 0.395912,
       "stop": 0.38550197,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T22:17:35",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T12:33:50",
+      "realized_pct": -2.63,
+      "result_pct": -2.63
     },
     {
       "id": "trendwave · 15m|CITYUSDT|2026-06-27 22:29:59.999000",
@@ -6777,10 +6778,11 @@
       "entry": 0.39640467,
       "stop": 0.3856804,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T22:32:39",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T12:33:52",
+      "realized_pct": -2.71,
+      "result_pct": -2.71
     },
     {
       "id": "trendwave · 15m|EPICUSDT|2026-06-27 22:29:59.999000",
@@ -7665,12 +7667,14 @@
       "entry": 0.0919,
       "stop": 0.08835937,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T10:16:05",
-      "closed_at": null,
-      "realized_pct": 0.88
+      "closed_at": "2026-06-28T12:34:02",
+      "realized_pct": 2.89,
+      "result_pct": 2.89
     },
     {
       "id": "trendwave · 15m|ACTUSDT|2026-06-28 10:14:59.999000",
@@ -7734,12 +7738,14 @@
       "entry": 0.09201,
       "stop": 0.0887778,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T11:02:54",
-      "closed_at": null,
-      "realized_pct": 0.78
+      "closed_at": "2026-06-28T12:34:05",
+      "realized_pct": 2.54,
+      "result_pct": 2.54
     },
     {
       "id": "RSI70 · 1h|ACTUSDT|2026-06-28 10:59:59.999000",
@@ -7782,10 +7788,11 @@
       "entry": 0.00319971,
       "stop": 0.00316386,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T11:17:24",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T12:34:08",
+      "realized_pct": -1.12,
+      "result_pct": -1.12
     },
     {
       "id": "RSI70 · 15m|COOKIEUSDT|2026-06-28 11:59:59.999000",
@@ -7872,6 +7879,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-28T12:18:08",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|HOTUSDT|2026-06-28 12:29:59.999000",
+      "symbol": "HOTUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00032442,
+      "stop": 0.00031605,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T12:32:27",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|POWRUSDT|2026-06-28 12:29:59.999000",
+      "symbol": "POWRUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.04969707,
+      "stop": 0.0484139,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T12:32:28",
       "closed_at": null,
       "realized_pct": 0.0
     }
