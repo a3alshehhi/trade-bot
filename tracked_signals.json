@@ -15048,5 +15048,32 @@
     "exit_price": 0.04855,
     "close_card_sent": true,
     "closed_at": "2026-06-28T15:04:05"
+  },
+  "trendwave · 15m|PIVXUSDT|2026-06-28 15:14:59.999000": {
+    "symbol": "PIVXUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2703,
+    "entry": 0.04078973,
+    "stop": 0.03918382,
+    "init_stop": 0.03918382,
+    "cur_stop": 0.03918382,
+    "last_alert_stop": 0.03918382,
+    "armed": false,
+    "targets": [
+      0.0455626,
+      0.04725
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 15:14:59.999000",
+    "last_bar": "2026-06-28 15:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.04078973,
+    "lo_seen": 0.04078973,
+    "created": "2026-06-28T15:18:06"
   }
 }
