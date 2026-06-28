@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-28T02:34:55",
+  "updated_at": "2026-06-28T02:50:16",
   "stats": {
     "open": 42,
-    "closed": 383,
-    "win_rate": 50.9,
+    "closed": 384,
+    "win_rate": 51.0,
     "profit_factor": 1.7,
-    "total_pct": 1584.68,
+    "total_pct": 1598.5,
     "avg_pct": 0.87,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 4,
-        "win_rate": 25.0,
-        "return_pct": -4.15,
+        "trades": 5,
+        "win_rate": 40.0,
+        "return_pct": -3.36,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 377,
-        "win_rate": 50.9,
-        "return_pct": 1393.14,
+        "trades": 378,
+        "win_rate": 51.1,
+        "return_pct": 1405.39,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 383,
-        "win_rate": 50.9,
-        "return_pct": 1584.68
+        "trades": 384,
+        "win_rate": 51.0,
+        "return_pct": 1598.5
       }
     ]
   },
@@ -6538,10 +6538,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T18:31:04",
-      "closed_at": null,
-      "realized_pct": 0.82
+      "closed_at": "2026-06-28T02:50:06",
+      "realized_pct": 0.82,
+      "result_pct": 0.82
     },
     {
       "id": "trendwave · 15m|PIVXUSDT|2026-06-27 18:59:59.999000",
@@ -6963,6 +6964,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-28T02:32:58",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|PIVXUSDT|2026-06-28 02:44:59.999000",
+      "symbol": "PIVXUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.05203313,
+      "stop": 0.04912081,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T02:48:05",
       "closed_at": null,
       "realized_pct": 0.0
     }
