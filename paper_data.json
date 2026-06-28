@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-28T08:04:59",
+  "updated_at": "2026-06-28T08:20:26",
   "stats": {
-    "open": 41,
+    "open": 43,
     "closed": 414,
     "win_rate": 51.0,
     "profit_factor": 1.65,
@@ -7254,11 +7254,13 @@
       "timeframe": "15m",
       "entry": 0.08731,
       "stop": 0.08484793,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-28T04:47:06",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.64
     },
     {
       "id": "trendwave · 15m|QKCUSDT|2026-06-28 04:44:59.999000",
@@ -7451,6 +7453,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-28T07:33:12",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|HOTUSDT|2026-06-28 08:14:59.999000",
+      "symbol": "HOTUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00031278,
+      "stop": 0.0003116,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T08:18:13",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|PIVXUSDT|2026-06-28 08:14:59.999000",
+      "symbol": "PIVXUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.04157653,
+      "stop": 0.0386282,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T08:18:13",
       "closed_at": null,
       "realized_pct": 0.0
     }
