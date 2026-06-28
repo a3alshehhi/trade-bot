@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-28T09:32:51",
+  "updated_at": "2026-06-28T09:50:24",
   "stats": {
-    "open": 45,
-    "closed": 418,
-    "win_rate": 51.2,
+    "open": 43,
+    "closed": 422,
+    "win_rate": 51.4,
     "profit_factor": 1.66,
-    "total_pct": 1750.51,
+    "total_pct": 1809.8,
     "avg_pct": 0.83,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 39,
-        "win_rate": 51.3,
-        "return_pct": 5.29,
+        "trades": 43,
+        "win_rate": 53.5,
+        "return_pct": 8.66,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 412,
-        "win_rate": 51.2,
-        "return_pct": 1540.12,
+        "trades": 416,
+        "win_rate": 51.4,
+        "return_pct": 1592.67,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 418,
-        "win_rate": 51.2,
-        "return_pct": 1750.51
+        "trades": 422,
+        "win_rate": 51.4,
+        "return_pct": 1809.8
       }
     ]
   },
@@ -7444,10 +7444,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T07:16:08",
-      "closed_at": null,
-      "realized_pct": 1.31
+      "closed_at": "2026-06-28T09:50:09",
+      "realized_pct": 1.31,
+      "result_pct": 1.31
     },
     {
       "id": "trendwave · 15m|PIVXUSDT|2026-06-28 07:29:59.999000",
@@ -7502,11 +7503,15 @@
       "timeframe": "15m",
       "entry": 0.08079413,
       "stop": 0.07990828,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-28T08:47:33",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T09:50:14",
+      "realized_pct": 3.22,
+      "result_pct": 3.22
     },
     {
       "id": "RSI70 · 1h|MANTAUSDT|2026-06-28 08:59:59.999000",
@@ -7531,10 +7536,11 @@
       "entry": 0.00868971,
       "stop": 0.00847661,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T09:02:34",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T09:50:17",
+      "realized_pct": -2.45,
+      "result_pct": -2.45
     },
     {
       "id": "trendwave · 15m|AGLDUSDT|2026-06-28 08:59:59.999000",
@@ -7575,10 +7581,39 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T09:15:56",
+      "closed_at": "2026-06-28T09:50:21",
+      "realized_pct": 1.17,
+      "result_pct": 1.17
+    },
+    {
+      "id": "RSI70 · 15m|LPTUSDT|2026-06-28 09:44:59.999000",
+      "symbol": "LPTUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.603,
+      "stop": 1.56183417,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T09:46:01",
       "closed_at": null,
-      "realized_pct": 1.17
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|PIVXUSDT|2026-06-28 09:44:59.999000",
+      "symbol": "PIVXUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.04257067,
+      "stop": 0.03922069,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T09:48:04",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
