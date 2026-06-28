@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-06-28 22:29:59.999000"
+    "last_bar": "2026-06-28 22:44:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -15022,7 +15022,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-28 13:44:59.999000",
-    "last_bar": "2026-06-28 22:29:59.999000",
+    "last_bar": "2026-06-28 22:44:59.999000",
     "hits": [
       1
     ],
@@ -15146,7 +15146,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-28 15:14:59.999000",
-    "last_bar": "2026-06-28 22:29:59.999000",
+    "last_bar": "2026-06-28 22:44:59.999000",
     "hits": [
       1
     ],
@@ -15997,7 +15997,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-28 21:59:59.999000",
-    "last_bar": "2026-06-28 22:29:59.999000",
+    "last_bar": "2026-06-28 22:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.617,
@@ -16024,7 +16024,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-28 21:59:59.999000",
-    "last_bar": "2026-06-28 22:29:59.999000",
+    "last_bar": "2026-06-28 22:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0307,
@@ -16051,7 +16051,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-28 21:59:59.999000",
-    "last_bar": "2026-06-28 22:29:59.999000",
+    "last_bar": "2026-06-28 22:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.04633,
@@ -16078,7 +16078,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-28 22:14:59.999000",
-    "last_bar": "2026-06-28 22:29:59.999000",
+    "last_bar": "2026-06-28 22:44:59.999000",
     "hits": [
       1
     ],
@@ -16095,7 +16095,7 @@
     "entry": 0.06607589,
     "stop": 0.06374265,
     "init_stop": 0.06374265,
-    "cur_stop": 0.06374265,
+    "cur_stop": 0.06607589,
     "last_alert_stop": 0.06374265,
     "armed": false,
     "targets": [
@@ -16107,12 +16107,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-28 22:29:59.999000",
-    "last_bar": "2026-06-28 22:29:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.06607589,
+    "last_bar": "2026-06-28 22:44:59.999000",
+    "hits": [
+      1,
+      2
+    ],
+    "stopped": true,
+    "hi_seen": 0.0702,
     "lo_seen": 0.06607589,
-    "created": "2026-06-28T22:32:28"
+    "created": "2026-06-28T22:32:28",
+    "exit_price": 0.06694,
+    "close_card_sent": true,
+    "closed_at": "2026-06-28T22:48:53"
   },
   "trendwave · 15m|EDUUSDT|2026-06-28 22:29:59.999000": {
     "symbol": "EDUUSDT",
@@ -16134,10 +16140,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-28 22:29:59.999000",
-    "last_bar": "2026-06-28 22:29:59.999000",
+    "last_bar": "2026-06-28 22:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.03024487,
+    "hi_seen": 0.0306,
     "lo_seen": 0.03024487,
     "created": "2026-06-28T22:32:29"
   },
@@ -16161,11 +16167,70 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-28 22:29:59.999000",
-    "last_bar": "2026-06-28 22:29:59.999000",
+    "last_bar": "2026-06-28 22:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.02391273,
+    "hi_seen": 0.02424,
     "lo_seen": 0.02391273,
     "created": "2026-06-28T22:32:30"
+  },
+  "RSI70 · 15m|GUSDT|2026-06-28 22:44:59.999000": {
+    "symbol": "GUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 2871,
+    "entry": 0.00343,
+    "stop": 0.00324744,
+    "init_stop": 0.00324744,
+    "cur_stop": 0.00324744,
+    "last_alert_stop": 0.00324744,
+    "armed": false,
+    "targets": [
+      0.0035116,
+      0.0036154,
+      0.0039154
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 22:44:59.999000",
+    "last_bar": "2026-06-28 22:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00343,
+    "lo_seen": 0.00343,
+    "created": "2026-06-28T22:45:58"
+  },
+  "trendwave · 15m|PIVXUSDT|2026-06-28 22:44:59.999000": {
+    "symbol": "PIVXUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2872,
+    "entry": 0.044578,
+    "stop": 0.04224901,
+    "init_stop": 0.04224901,
+    "cur_stop": 0.04224901,
+    "last_alert_stop": 0.04224901,
+    "armed": false,
+    "targets": [
+      0.0474166,
+      0.04875
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 22:44:59.999000",
+    "last_bar": "2026-06-28 22:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.044578,
+    "lo_seen": 0.044578,
+    "created": "2026-06-28T22:47:28"
   }
 }

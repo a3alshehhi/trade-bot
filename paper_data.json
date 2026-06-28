@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-28T22:33:56",
+  "updated_at": "2026-06-28T22:48:56",
   "stats": {
-    "open": 36,
-    "closed": 487,
-    "win_rate": 49.9,
+    "open": 37,
+    "closed": 488,
+    "win_rate": 50.0,
     "profit_factor": 1.45,
-    "total_pct": 1034.89,
+    "total_pct": 1047.37,
     "avg_pct": 0.64,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 108,
-        "win_rate": 45.4,
-        "return_pct": -35.43,
+        "trades": 109,
+        "win_rate": 45.9,
+        "return_pct": -34.72,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 481,
-        "win_rate": 49.9,
-        "return_pct": 905.86,
+        "trades": 482,
+        "win_rate": 50.0,
+        "return_pct": 916.92,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 487,
-        "win_rate": 49.9,
-        "return_pct": 1034.89
+        "trades": 488,
+        "win_rate": 50.0,
+        "return_pct": 1047.37
       }
     ]
   },
@@ -8544,11 +8544,15 @@
       "timeframe": "15m",
       "entry": 0.06607589,
       "stop": 0.06374265,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-28T22:32:28",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T22:48:53",
+      "realized_pct": 1.1,
+      "result_pct": 1.1
     },
     {
       "id": "trendwave · 15m|EDUUSDT|2026-06-28 22:29:59.999000",
@@ -8575,6 +8579,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-28T22:32:30",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|GUSDT|2026-06-28 22:44:59.999000",
+      "symbol": "GUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00343,
+      "stop": 0.00324744,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T22:45:58",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|PIVXUSDT|2026-06-28 22:44:59.999000",
+      "symbol": "PIVXUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.044578,
+      "stop": 0.04224901,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T22:47:28",
       "closed_at": null,
       "realized_pct": 0.0
     }
