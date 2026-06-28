@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-28T16:35:09",
+  "updated_at": "2026-06-28T16:49:09",
   "stats": {
-    "open": 47,
-    "closed": 451,
-    "win_rate": 51.0,
-    "profit_factor": 1.6,
-    "total_pct": 1787.73,
-    "avg_pct": 0.79,
+    "open": 41,
+    "closed": 457,
+    "win_rate": 50.5,
+    "profit_factor": 1.57,
+    "total_pct": 1618.26,
+    "avg_pct": 0.75,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 72,
-        "win_rate": 50.0,
-        "return_pct": 7.4,
+        "trades": 78,
+        "win_rate": 47.4,
+        "return_pct": -2.24,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 445,
-        "win_rate": 51.0,
-        "return_pct": 1573.11,
+        "trades": 451,
+        "win_rate": 50.6,
+        "return_pct": 1422.9,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 451,
-        "win_rate": 51.0,
-        "return_pct": 1787.73
+        "trades": 457,
+        "win_rate": 50.5,
+        "return_pct": 1618.26
       }
     ]
   },
@@ -6274,10 +6274,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T14:17:26",
-      "closed_at": null,
-      "realized_pct": 2.23
+      "closed_at": "2026-06-28T16:48:46",
+      "realized_pct": 2.23,
+      "result_pct": 2.23
     },
     {
       "id": "RSI70 · 15m|KAITOUSDT|2026-06-27 14:29:59.999000",
@@ -6861,10 +6862,11 @@
       "entry": 0.544478,
       "stop": 0.53976642,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T23:18:04",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T16:48:49",
+      "realized_pct": -0.87,
+      "result_pct": -0.87
     },
     {
       "id": "trendwave · 15m|AGLDUSDT|2026-06-27 23:29:59.999000",
@@ -7472,10 +7474,11 @@
       "entry": 0.0412478,
       "stop": 0.03966556,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T07:33:12",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T16:48:53",
+      "realized_pct": -3.84,
+      "result_pct": -3.84
     },
     {
       "id": "trendwave · 15m|HOTUSDT|2026-06-28 08:14:59.999000",
@@ -7486,10 +7489,11 @@
       "entry": 0.00031278,
       "stop": 0.0003116,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T08:18:13",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T16:48:56",
+      "realized_pct": -0.38,
+      "result_pct": -0.38
     },
     {
       "id": "trendwave · 15m|PIVXUSDT|2026-06-28 08:14:59.999000",
@@ -7781,10 +7785,11 @@
       "entry": 0.0423346,
       "stop": 0.04007811,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T11:04:59",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T16:49:00",
+      "realized_pct": -5.33,
+      "result_pct": -5.33
     },
     {
       "id": "trendwave · 15m|GUSDT|2026-06-28 11:14:59.999000",
@@ -8143,10 +8148,11 @@
       "entry": 0.04049952,
       "stop": 0.04011062,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T16:33:01",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T16:49:08",
+      "realized_pct": -0.96,
+      "result_pct": -0.96
     }
   ]
 }
