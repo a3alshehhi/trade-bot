@@ -13959,5 +13959,32 @@
     "hi_seen": 0.046,
     "lo_seen": 0.04157653,
     "created": "2026-06-28T08:18:13"
+  },
+  "trendwave · 15m|HYPERUSDT|2026-06-28 08:44:59.999000": {
+    "symbol": "HYPERUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2569,
+    "entry": 0.08079413,
+    "stop": 0.07990828,
+    "init_stop": 0.07990828,
+    "cur_stop": 0.07990828,
+    "last_alert_stop": 0.07990828,
+    "armed": false,
+    "targets": [
+      0.0829976,
+      0.0838
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-28 08:44:59.999000",
+    "last_bar": "2026-06-28 08:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.08079413,
+    "lo_seen": 0.08079413,
+    "created": "2026-06-28T08:47:33"
   }
 }
