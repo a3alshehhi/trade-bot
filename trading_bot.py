@@ -2750,6 +2750,11 @@ def detect_rsi_cross_signal(df, cfg):
     # تجاوز خط 80 صعوداً: الشمعة المغلقة ≥ 80 والسابقة < 80
     if not (r[i] >= ob and r[i - 1] < ob):
         return None
+    # فلتر القفزة الكبيرة: RSI عند الاختراق لا يتجاوز ob+8
+    # يمنع الدخول على قفزات عنيفة (مثلاً 64→86) حيث الزخم انتهى
+    ob_max = cfg.get("rsi_ob_max", ob + 8)
+    if r[i] > ob_max:
+        return None
     # فلتر الاتجاه لاستراتيجية الانعكاس (RSI70) على فريم 15m فقط:
     # يجب أن يكون سعر الإغلاق فوق متوسط 200 (SMA) — لا دخول عكس الاتجاه العام.
     if cfg.get("ma200_15m") and cfg.get("timeframe") == "15m":
@@ -3639,6 +3644,8 @@ def build_argparser():
                    help="تكلفة الصفقة ذهاباً وإياباً كنسبة (مثلاً 0.002 = 0.2%% عمولة+انزلاق)")
     p.add_argument("--rsi-ob", type=float, default=80.0,
                    help="عتبة التشبّع الشرائي لاستراتيجية الزخم RSI (افتراضي 80؛ جرّب 70/75)")
+    p.add_argument("--rsi-ob-max", type=float, default=None,
+                   help="سقف RSI عند الاختراق — يرفض القفزات الكبيرة (مثلاً --rsi-ob 70 --rsi-ob-max 78)")
     p.add_argument("--rsi-os", type=float, default=20.0,
                    help="عتبة التشبّع البيعي (افتراضي 20)")
     p.add_argument("--os-multi", action="store_true",
@@ -3733,7 +3740,7 @@ if __name__ == "__main__":
         "bt_offset": args.bt_offset, "strategy": args.strategy,
         "ma200_ob": args.ma200_confirm, "dca_fib": args.dca_fib,
         "rsi_cross": args.rsi_cross,
-        "rsi_ob": args.rsi_ob, "rsi_os": args.rsi_os, "bt_stop_mult": args.bt_stop_mult,
+        "rsi_ob": args.rsi_ob, "rsi_ob_max": args.rsi_ob_max, "rsi_os": args.rsi_os, "bt_stop_mult": args.bt_stop_mult,
         "os_multi": args.os_multi, "os_touches": args.os_touches,
         "osob": args.osob, "trend_filter": args.trend_filter,
         "trail_buf": args.trail_buf, "trail_arm": args.trail_arm,
