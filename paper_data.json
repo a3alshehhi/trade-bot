@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-28T09:50:24",
+  "updated_at": "2026-06-28T10:04:27",
   "stats": {
     "open": 43,
-    "closed": 422,
-    "win_rate": 51.4,
-    "profit_factor": 1.66,
-    "total_pct": 1809.8,
-    "avg_pct": 0.83,
+    "closed": 424,
+    "win_rate": 51.2,
+    "profit_factor": 1.65,
+    "total_pct": 1760.28,
+    "avg_pct": 0.82,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 43,
-        "win_rate": 53.5,
-        "return_pct": 8.66,
+        "trades": 45,
+        "win_rate": 51.1,
+        "return_pct": 5.84,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 416,
-        "win_rate": 51.4,
-        "return_pct": 1592.67,
+        "trades": 418,
+        "win_rate": 51.2,
+        "return_pct": 1548.78,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 422,
-        "win_rate": 51.4,
-        "return_pct": 1809.8
+        "trades": 424,
+        "win_rate": 51.2,
+        "return_pct": 1760.28
       }
     ]
   },
@@ -6885,10 +6885,11 @@
       "entry": 0.03539853,
       "stop": 0.03494238,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T00:04:10",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T10:04:15",
+      "realized_pct": -1.29,
+      "result_pct": -1.29
     },
     {
       "id": "trendwave · 15m|PSGUSDT|2026-06-28 00:44:59.999000",
@@ -7551,10 +7552,11 @@
       "entry": 0.19034633,
       "stop": 0.18783322,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T09:02:35",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T10:04:23",
+      "realized_pct": -1.32,
+      "result_pct": -1.32
     },
     {
       "id": "trendwave · 1h|GUSDT|2026-06-28 08:59:59.999000",
@@ -7612,6 +7614,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-28T09:48:04",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|EDUUSDT|2026-06-28 09:59:59.999000",
+      "symbol": "EDUUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0312,
+      "stop": 0.02930455,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T10:01:31",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|GUSDT|2026-06-28 09:59:59.999000",
+      "symbol": "GUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.00315912,
+      "stop": 0.00306629,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T10:03:20",
       "closed_at": null,
       "realized_pct": 0.0
     }
