@@ -8,9 +8,8 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
   :root{
-    --bg:#0d1117; --card:#161b22; --line:#21262d; --muted:#8b949e;
-    --text:#e6edf3; --green:#2ea043; --red:#da3633; --blue:#388bfd;
-    --amber:#d29922;
+    --bg:#0d1117;--card:#161b22;--line:#21262d;--muted:#8b949e;
+    --text:#e6edf3;--green:#2ea043;--red:#da3633;--blue:#388bfd;--amber:#d29922;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;
@@ -27,20 +26,18 @@
   button.primary{background:#1f6feb;border-color:#1f6feb;color:#fff;font-weight:600}
   button.mini{padding:5px 9px;font-size:12px}
   button.danger{color:var(--red)}
-  .grid{display:grid;gap:12px;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:16px}
-  .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;
-    padding:14px}
-  .kpi .lbl{color:var(--muted);font-size:12px;margin-bottom:6px}
-  .kpi .val{font-size:24px;font-weight:700}
+  .grid{display:grid;gap:10px;
+    grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin-bottom:16px}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  .kpi .lbl{color:var(--muted);font-size:11px;margin-bottom:5px}
+  .kpi .val{font-size:22px;font-weight:700}
   .pos{color:var(--green)} .neg{color:var(--red)} .neu{color:var(--amber)}
   .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;
     padding:16px;margin-bottom:16px}
   .panel h2{font-size:15px;margin-bottom:12px;font-weight:600;
-    display:flex;justify-content:space-between;align-items:center;gap:8px}
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
   table{width:100%;border-collapse:collapse;font-size:13px}
-  th,td{padding:9px 8px;text-align:center;border-bottom:1px solid var(--line);
-    white-space:nowrap}
+  th,td{padding:9px 8px;text-align:center;border-bottom:1px solid var(--line);white-space:nowrap}
   th{color:var(--muted);font-weight:600;font-size:12px}
   td.sym{font-weight:700;text-align:right}
   .tag{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;
@@ -54,9 +51,16 @@
   .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
   .empty{color:var(--muted);text-align:center;padding:26px;font-size:13px}
   .chartbox{position:relative;height:260px}
-  .foot{color:var(--muted);font-size:11px;text-align:center;margin-top:8px;
-    line-height:1.7}
-  /* modal */
+  .chartbox.sm{height:200px}
+  .foot{color:var(--muted);font-size:11px;text-align:center;margin-top:8px;line-height:1.7}
+  .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+  .filters select{background:var(--bg);color:var(--text);border:1px solid var(--line);
+    border-radius:8px;padding:6px 10px;font-size:12px;cursor:pointer}
+  /* Progress bar */
+  .prog-wrap{background:var(--line);border-radius:4px;height:6px;width:100%;min-width:80px;position:relative}
+  .prog-bar{height:6px;border-radius:4px;background:var(--green);transition:width .3s}
+  .prog-bar.neg{background:var(--red)}
+  /* Modal */
   .overlay{position:fixed;inset:0;background:#000a;display:none;
     align-items:center;justify-content:center;padding:16px;z-index:50}
   .overlay.show{display:flex}
@@ -71,7 +75,7 @@
   .modal-actions{display:flex;gap:8px;margin-top:6px}
   .modal-actions button{flex:1}
   .hint{color:var(--muted);font-size:11px;margin-top:4px}
-  @media(max-width:560px){.kpi .val{font-size:20px}h1{font-size:17px}}
+  @media(max-width:560px){.kpi .val{font-size:18px}h1{font-size:17px}}
 </style>
 </head>
 <body>
@@ -86,38 +90,65 @@
   </div>
 </header>
 
+<!-- KPIs -->
 <div class="grid" id="kpis"></div>
 
-<!-- صفقاتي اليدوية (محلية + أسعار حيّة) -->
+<!-- منحنى رأس المال -->
+<div class="panel">
+  <h2>📈 منحنى رأس المال (تراكمي %)</h2>
+  <div class="chartbox"><canvas id="equity"></canvas></div>
+</div>
+
+<!-- آخر 7 أيام -->
+<div class="panel">
+  <h2>📅 أداء آخر 7 أيام</h2>
+  <div class="chartbox sm"><canvas id="daily7"></canvas></div>
+</div>
+
+<!-- أداء بالاستراتيجية -->
+<div class="panel">
+  <h2>🧭 أداء بالاستراتيجية</h2>
+  <div class="scroll"><table id="byStrat"></table></div>
+</div>
+
+<!-- أداء بالفريم -->
+<div class="panel">
+  <h2>⏱ أداء بالفريم الزمني</h2>
+  <div class="scroll"><table id="byTf"></table></div>
+</div>
+
+<!-- صفقا֪ مفتوحة -->
+<div class="panel">
+  <h2>📂 صفقات مفتوحة <span class="sub" id="openCount"></span></h2>
+  <div class="scroll"><table id="openTbl"></table></div>
+</div>
+
+<!-- سجل الصفقا֪ -->
+<div class="panel">
+  <h2>📜 سجل الصفقا֪</h2>
+  <div class="filters">
+    <select id="f_strat" onchange="renderLog()"><option value="">كل الاستراتيجيا֪</option></select>
+    <select id="f_tf" onchange="renderLog()"><option value="">كل الفريما֪</option></select>
+    <select id="f_res" onchange="renderLog()">
+      <option value="">كل النتائج</option>
+      <option value="win">ربح</option>
+      <option value="loss">خسارة</option>
+      <option value="open">مفتوحة</option>
+    </select>
+  </div>
+  <div class="scroll"><table id="logTbl"></table></div>
+</div>
+
+<!-- صفقاتي اليدوية -->
 <div class="panel">
   <h2><span>🧮 صفقاتي (يدوية — أسعار حيّة)</span>
       <span class="sub" id="localSum"></span></h2>
   <div class="scroll"><table id="localTbl"></table></div>
-  <div class="hint">تُحفظ في متصفحك فقط (هذا الجهاز). الأسعار الحيّة للأزواج المنتهية بـ USDT.</div>
-</div>
-
-<div class="panel">
-  <h2>📈 منحنى رأس المال (صفقات تيليجرام المغلقة — تراكمي بالـ R)</h2>
-  <div class="chartbox"><canvas id="equity"></canvas></div>
-</div>
-
-<div class="panel">
-  <h2>🧭 الأداء حسب الاستراتيجية (تيليجرام)</h2>
-  <div class="scroll"><table id="byStrat"></table></div>
-</div>
-
-<div class="panel">
-  <h2>📂 صفقات تيليجرام المفتوحة</h2>
-  <div class="scroll"><table id="openTbl"></table></div>
-</div>
-
-<div class="panel">
-  <h2>📜 سجل صفقات تيليجرام</h2>
-  <div class="scroll"><table id="logTbl"></table></div>
+  <div class="hint">تُحفظ في متصفحك فقط. الأسعار الحيّة للأزواج المنتهية بـ USDT.</div>
 </div>
 
 <div class="foot">
-  ⚠️ أداة تتبّع ورقي تعليمية ونتائج افتراضية — ليست نصيحة مالية.<br>
+  ⚠️ أداة تتبّع ورقي تعليمية — ليست نصيحة مالية.<br>
   الإدارة: جني 50% عند الهدف الأول مع نقل الوقف للتعادل، 25% للثاني، 25% للثالث.
 </div>
 
@@ -132,8 +163,8 @@
         <select id="f_side"><option value="buy">شراء</option>
           <option value="sell">بيع</option></select></div>
       <div class="fld"><label>الفريم</label>
-        <select id="f_tf"><option>1h</option><option selected>4h</option>
-          <option>1d</option></select></div>
+        <select id="f_tf2"><option>15m</option><option>1h</option>
+          <option selected>4h</option><option>1d</option></select></div>
       <div class="fld"><label>الاستراتيجية</label>
         <input id="f_label" placeholder="يدوي"></div>
     </div>
@@ -155,134 +186,40 @@
 </div>
 
 <script>
-let chart;
-const fmtR = r => (r>=0?'+':'') + Number(r).toFixed(2) + 'R';
-const cls = r => r>1e-6?'pos':(r<-1e-6?'neg':'neu');
-const price = v => { v=Number(v); return v<1 ? v.toPrecision(4) : v.toLocaleString('en',{maximumFractionDigits:2}); };
-const strat = t => t.label || (t.strategy==='dca'?'DCA':'كلاسيكي');
-const dt = s => s? String(s).replace('T',' ').slice(5,16) : '—';
+/* ─── helpers ─── */
+const fmt  = (v,d=2) => (Number(v)>=0?'+':'')+Number(v).toFixed(d)+'%';
+const cls  = v => v>1e-6?'pos':(v<-1e-6?'neg':'neu');
+const px   = v => { v=Number(v); return v<1?v.toPrecision(4):v.toLocaleString('en',{maximumFractionDigits:4}); };
+const dt   = s => s? String(s).replace('T',' ').slice(5,16) : '—';
+const dur  = (a,b) => { if(!a||!b) return '—'; const h=Math.round((new Date(b)-new Date(a))/3600000); return h<1?'<1h':h+'h'; };
+const strat= t => t.label || 'كلاسيكي';
 
-/* ───────── الصفقات اليدوية (localStorage) ───────── */
-const LS_KEY = 'ptracker_local_v1';
-let editingId = null;
+let allTrades = [];
 let priceCache = {};
-const loadLocal = () => { try{return JSON.parse(localStorage.getItem(LS_KEY))||[]}catch(e){return[]} };
-const saveLocal = a => localStorage.setItem(LS_KEY, JSON.stringify(a));
+let equityChart, dailyChart;
 
-function openForm(t){
-  editingId = t? t.id : null;
-  document.getElementById('formTitle').textContent = t? '✏️ تعديل الصفقة' : '➕ صفقة جديدة';
-  const g = id => document.getElementById(id);
-  g('f_symbol').value = t? t.symbol : '';
-  g('f_side').value   = t? t.side   : 'buy';
-  g('f_tf').value     = t? t.timeframe : '4h';
-  g('f_label').value  = t? (t.label||'') : '';
-  g('f_entry').value  = t? t.entry : '';
-  g('f_stop').value   = t? t.stop  : '';
-  g('f_t1').value     = t&&t.t1!=null? t.t1 : '';
-  g('f_t2').value     = t&&t.t2!=null? t.t2 : '';
-  g('f_t3').value     = t&&t.t3!=null? t.t3 : '';
-  document.getElementById('overlay').classList.add('show');
-}
-function closeForm(){ document.getElementById('overlay').classList.remove('show'); }
-
-function saveForm(){
-  const g = id => document.getElementById(id).value.trim();
-  const num = v => v===''? null : Number(v);
-  const sym = g('f_symbol').toUpperCase();
-  const entry = num(g('f_entry')), stop = num(g('f_stop'));
-  if(!sym || entry==null || stop==null){ alert('الرجاء إدخال العملة والدخول والوقف.'); return; }
-  const arr = loadLocal();
-  const rec = {
-    id: editingId || ('L'+Date.now()),
-    symbol: sym, side: g('f_side'), timeframe: g('f_tf'),
-    label: g('f_label') || 'يدوي',
-    entry, stop, t1:num(g('f_t1')), t2:num(g('f_t2')), t3:num(g('f_t3')),
-    opened_at: editingId ? (arr.find(x=>x.id===editingId)||{}).opened_at || new Date().toISOString()
-                         : new Date().toISOString(),
-  };
-  const i = arr.findIndex(x=>x.id===rec.id);
-  if(i>=0) arr[i]=rec; else arr.push(rec);
-  saveLocal(arr); closeForm(); refreshPrices().then(renderLocal);
-}
-function editTrade(id){ const t=loadLocal().find(x=>x.id===id); if(t) openForm(t); }
-function delTrade(id){
-  if(!confirm('حذف هذه الصفقة؟')) return;
-  saveLocal(loadLocal().filter(x=>x.id!==id)); renderLocal();
-}
-
+/* ─── Binance live price ─── */
 async function fetchPrice(sym){
-  if(!/USDT$/.test(sym)) return null;
-  const urls=['https://data-api.binance.vision/api/v3/ticker/price?symbol='+sym,
-              'https://api.binance.com/api/v3/ticker/price?symbol='+sym];
+  if(!/USDT$/i.test(sym)) return null;
+  const urls=[
+    'https://data-api.binance.vision/api/v3/ticker/price?symbol='+sym.toUpperCase(),
+    'https://api.binance.com/api/v3/ticker/price?symbol='+sym.toUpperCase()
+  ];
   for(const u of urls){
     try{ const r=await fetch(u); if(r.ok){ const j=await r.json(); if(j.price) return Number(j.price); } }
     catch(e){}
   }
   return null;
 }
+
 async function refreshPrices(){
-  const syms=[...new Set(loadLocal().map(t=>t.symbol.toUpperCase()))];
+  const localSyms = loadLocal().map(t=>t.symbol.toUpperCase());
+  const openSyms  = allTrades.filter(t=>t.status==='open').map(t=>t.symbol.toUpperCase());
+  const syms = [...new Set([...localSyms,...openSyms])];
   await Promise.all(syms.map(async s=>{ const p=await fetchPrice(s); if(p!=null) priceCache[s]=p; }));
 }
 
-function liveStats(t){
-  const p = priceCache[t.symbol.toUpperCase()];
-  const buy = t.side!=='sell';
-  const risk = Math.abs(t.entry - t.stop);
-  const tps = [t.t1,t.t2,t.t3].filter(x=>x!=null);
-  let R=null, status='جارية', sClass='neu';
-  if(p!=null && risk>0){
-    R = buy ? (p-t.entry)/risk : (t.entry-p)/risk;
-    if((buy && p<=t.stop) || (!buy && p>=t.stop)){ status='ضرب الوقف 🛑'; sClass='neg'; }
-    else{
-      let hit=0;
-      tps.forEach((tp,i)=>{ if((buy && p>=tp)||(!buy && p<=tp)) hit=i+1; });
-      if(hit>0){ status='هدف '+hit+' ✅'; sClass='pos'; }
-    }
-  }
-  return {p,R,status,sClass,tps,buy};
-}
-
-function renderLocal(){
-  const arr = loadLocal();
-  const tb = document.getElementById('localTbl');
-  if(!arr.length){
-    tb.innerHTML='<tr><td class="empty">لا صفقات يدوية بعد — اضغط «➕ صفقة جديدة»</td></tr>';
-    document.getElementById('localSum').textContent=''; return;
-  }
-  let sumR=0, withPx=0;
-  const rows = arr.map(t=>{
-    const L=liveStats(t);
-    if(L.R!=null){ sumR+=L.R; withPx++; }
-    const pxTxt = L.p!=null? price(L.p) : '—';
-    const rTxt  = L.R!=null? `<span class="${cls(L.R)}">${fmtR(L.R)}</span>` : '—';
-    const tgs = L.tps.length? L.tps.map((tp,i)=>{
-        const done = L.p!=null && ((L.buy&&L.p>=tp)||(!L.buy&&L.p<=tp));
-        return (done?'✅':(i+1))+'·'+price(tp);
-      }).join(' ') : '—';
-    return `<tr>
-      <td class="sym">${t.symbol}<div class="sub">${t.side==='sell'?'🔴 بيع':'🟢 شراء'} · ${t.timeframe}</div></td>
-      <td><span class="tag man">${t.label||'يدوي'}</span></td>
-      <td>${price(t.entry)}</td>
-      <td><b>${pxTxt}</b></td>
-      <td>${price(t.stop)}</td>
-      <td style="text-align:right">${tgs}</td>
-      <td>${rTxt}</td>
-      <td><span class="${L.sClass}">${L.status}</span></td>
-      <td>
-        <button class="mini" onclick="editTrade('${t.id}')">✏️</button>
-        <button class="mini danger" onclick="delTrade('${t.id}')">🗑️</button>
-      </td></tr>`;
-  }).join('');
-  tb.innerHTML = '<tr><th>العملة</th><th>استراتيجية</th><th>الدخول</th>'+
-    '<th>السعر الحيّ</th><th>الوقف</th><th>الأهداف</th><th>R حيّ</th>'+
-    '<th>الحالة</th><th></th></tr>' + rows;
-  document.getElementById('localSum').textContent =
-    `${arr.length} صفقة · مجموع R الحيّ: ${withPx? fmtR(sumR):'—'}`;
-}
-
-/* ───────── بيانات الخادم (تيليجرام) ───────── */
+/* ─── Server data ─── */
 async function loadServer(){
   let data;
   try{
@@ -292,101 +229,381 @@ async function loadServer(){
     document.getElementById('updated').textContent = 'تعذّر تحميل بيانات الخادم';
     return;
   }
-  const trades = data.trades||[], s = data.stats||{};
-  document.getElementById('updated').textContent = 'آخر تحديث (تيليجرام): ' + dt(data.updated_at);
 
-  const pf = s.profit_factor===null||s.profit_factor>1e6 ? '∞' : Number(s.profit_factor||0).toFixed(2);
-  const kpis = [
-    ['نسبة الفوز', (s.win_rate||0)+'%', 'neu'],
-    ['معامل الربح', pf, (s.profit_factor>=1?'pos':'neg')],
-    ['إجمالي العائد', fmtR(s.total_R||0), cls(s.total_R||0)],
-    ['متوسط الصفقة', fmtR(s.avg_R||0), cls(s.avg_R||0)],
-    ['أقصى تراجع', fmtR(s.max_drawdown_R||0), 'neg'],
-    ['مفتوحة / مغلقة', (s.open||0)+' / '+(s.closed||0), 'neu'],
+  allTrades = data.trades || [];
+  const s   = data.stats  || {};
+  document.getElementById('updated').textContent = 'آخر تحديث: ' + dt(data.updated_at);
+
+  const closed = allTrades.filter(t=>t.status==='closed');
+  const wins   = closed.filter(t=>(t.result_pct||0)>0);
+  const losses = closed.filter(t=>(t.result_pct||0)<0);
+  const totalPct = closed.reduce((a,t)=>a+(t.result_pct||0),0);
+  const winRate  = closed.length ? Math.round(wins.length/closed.length*100) : 0;
+  const avgWin   = wins.length   ? wins.reduce((a,t)=>a+(t.result_pct||0),0)/wins.length : 0;
+  const avgLoss  = losses.length ? losses.reduce((a,t)=>a+(t.result_pct||0),0)/losses.length : 0;
+  const expectancy = winRate/100*avgWin + (1-winRate/100)*Math.abs(avgLoss)*-1;
+
+  /* max drawdown */
+  let peak=0,dd=0,eq2=0;
+  closed.forEach(t=>{ eq2+=(t.result_pct||0); if(eq2>peak)peak=eq2; if(peak-eq2>dd)dd=peak-eq2; });
+
+  const pf = losses.length && Math.abs(losses.reduce((a,t)=>a+(t.result_pct||0),0))>0
+    ? (wins.reduce((a,t)=>a+(t.result_pct||0),0)/Math.abs(losses.reduce((a,t)=>a+(t.result_pct||0),0))).toFixed(2)
+    : '∞';
+
+  const openCount = allTrades.filter(t=>t.status==='open').length;
+
+  const kpis=[
+    ['نسبة الفوز',    winRate+'%',        'neu'],
+    ['معامل الربح',   pf,                  Number(pf)>=1?'pos':'neg'],
+    ['إجمالي العائد', fmt(totalPct),       cls(totalPct)],
+    ['متوسط ربح',     fmt(avgWin),         'pos'],
+    ['متوسط خسارة',   fmt(avgLoss),        'neg'],
+    ['التوقع',        fmt(expectancy),     cls(expectancy)],
+    ['أقصى تراجع',   '-'+dd.toFixed(1)+'%','neg'],
+    ['مفتوحة',        openCount+'',        'neu'],
   ];
   document.getElementById('kpis').innerHTML = kpis.map(k=>
     `<div class="kpi"><div class="lbl">${k[0]}</div>
      <div class="val ${k[2]}">${k[1]}</div></div>`).join('');
 
-  const closed = trades.filter(t=>t.status==='closed' && t.result_R!=null)
-    .sort((a,b)=> String(a.closed_at).localeCompare(String(b.closed_at)));
-  let eq=0; const pts=[{x:'البداية',y:0}];
-  closed.forEach(t=>{ eq+=t.result_R; pts.push({x:t.symbol, y:Number(eq.toFixed(2))}); });
-  drawEquity(pts);
-
-  const by={};
-  closed.forEach(t=>{ const k=strat(t); (by[k]=by[k]||[]).push(t.result_R); });
-  const bs=document.getElementById('byStrat');
-  if(Object.keys(by).length){
-    bs.innerHTML = '<tr><th>الاستراتيجية</th><th>صفقات</th><th>فوز</th>'+
-      '<th>إجمالي R</th><th>متوسط R</th></tr>' +
-      Object.entries(by).map(([k,rs])=>{
-        const w=rs.filter(r=>r>0).length, tot=rs.reduce((a,b)=>a+b,0);
-        return `<tr><td class="sym">${k}</td><td>${rs.length}</td>
-          <td>${Math.round(w/rs.length*100)}%</td>
-          <td class="${cls(tot)}">${fmtR(tot)}</td>
-          <td class="${cls(tot/rs.length)}">${fmtR(tot/rs.length)}</td></tr>`;
-      }).join('');
-  } else bs.innerHTML = '<tr><td class="empty">لا صفقات مغلقة بعد</td></tr>';
-
-  const open = trades.filter(t=>t.status==='open');
-  const ot=document.getElementById('openTbl');
-  if(open.length){
-    ot.innerHTML='<tr><th>العملة</th><th>الاستراتيجية</th><th>فريم</th>'+
-      '<th>الدخول</th><th>الوقف</th><th>أهداف محقّقة</th><th>محقَّق</th></tr>'+
-      open.map(t=>`<tr><td class="sym">${t.symbol}</td>
-        <td><span class="tag">${strat(t)}</span></td><td>${t.timeframe}</td>
-        <td>${price(t.entry)}</td><td>${price(t.stop)}</td>
-        <td>${t.hits&&t.hits.length? t.hits.map(h=>'✅').join(''):'—'}</td>
-        <td class="${cls(t.realized_R)}">${fmtR(t.realized_R||0)}</td></tr>`).join('');
-  } else ot.innerHTML='<tr><td class="empty">لا صفقات مفتوحة من تيليجرام</td></tr>';
-
-  const lg=document.getElementById('logTbl');
-  const all=[...trades].sort((a,b)=> String(b.opened_at).localeCompare(String(a.opened_at)));
-  if(all.length){
-    lg.innerHTML='<tr><th>العملة</th><th>الاستراتيجية</th><th>الحالة</th>'+
-      '<th>الدخول</th><th>فُتحت</th><th>أُغلقت</th><th>النتيجة</th></tr>'+
-      all.map(t=>{
-        let badge, res;
-        if(t.status==='open'){ badge='<span class="badge b-open">مفتوحة</span>'; res='—'; }
-        else{ const r=t.result_R||0;
-          const c=r>1e-6?'b-win':(r<-1e-6?'b-loss':'b-even');
-          const lbl=r>1e-6?'ربح':(r<-1e-6?'خسارة':'تعادل');
-          badge=`<span class="badge ${c}">${lbl}</span>`; res=`<span class="${cls(r)}">${fmtR(r)}</span>`; }
-        return `<tr><td class="sym">${t.symbol}</td>
-          <td><span class="tag">${strat(t)}</span></td><td>${badge}</td>
-          <td>${price(t.entry)}</td><td>${dt(t.opened_at)}</td>
-          <td>${dt(t.closed_at)}</td><td>${res}</td></tr>`;
-      }).join('');
-  } else lg.innerHTML='<tr><td class="empty">لا توجد صفقات من تيليجرام بعد</td></tr>';
+  renderEquity(closed);
+  renderDaily7(closed);
+  renderByStrat(closed);
+  renderByTf(closed);
+  renderOpen();
+  populateFilters();
+  renderLog();
 }
 
-function drawEquity(pts){
-  const ctx=document.getElementById('equity');
-  const up = pts[pts.length-1].y>=0;
-  const col = up? '#2ea043':'#da3633';
-  if(chart) chart.destroy();
-  chart=new Chart(ctx,{type:'line',
-    data:{labels:pts.map(p=>p.x),
-      datasets:[{data:pts.map(p=>p.y),borderColor:col,borderWidth:2,
-        tension:.25,pointRadius:3,pointBackgroundColor:col,fill:true,
-        backgroundColor:col+'18'}]},
+/* ─── Equity curve ─── */
+function renderEquity(closed){
+  const sorted = [...closed].sort((a,b)=>String(a.closed_at||a.opened_at).localeCompare(String(b.closed_at||b.opened_at)));
+  let eq=0; const pts=[{x:'البداية',y:0}];
+  sorted.forEach(t=>{ eq+=t.result_pct||0; pts.push({x:t.symbol,y:parseFloat(eq.toFixed(2))}); });
+  const col = pts[pts.length-1]?.y>=0 ? '#2ea043':'#da3633';
+  const ctx = document.getElementById('equity');
+  if(equityChart) equityChart.destroy();
+  equityChart = new Chart(ctx,{type:'line',
+    data:{labels:pts.map(p=>p.x),datasets:[{data:pts.map(p=>p.y),borderColor:col,
+      borderWidth:2,tension:.25,pointRadius:2,pointBackgroundColor:col,
+      fill:true,backgroundColor:col+'18'}]},
     options:{responsive:true,maintainAspectRatio:false,
       plugins:{legend:{display:false},
-        tooltip:{callbacks:{label:c=>'تراكمي: '+(c.parsed.y>=0?'+':'')+c.parsed.y+'R'}}},
-      scales:{
-        y:{grid:{color:'#21262d'},ticks:{color:'#8b949e',callback:v=>v+'R'}},
-        x:{grid:{display:false},ticks:{color:'#8b949e',maxRotation:0,
-          autoSkip:true,maxTicksLimit:8}}}}});
+        tooltip:{callbacks:{label:c=>'تراكمي: '+(c.parsed.y>=0?'+':'')+c.parsed.y+'%'}}},
+      scales:{y:{grid:{color:'#21262d'},ticks:{color:'#8b949e',callback:v=>v+'%'}},
+        x:{grid:{display:false},ticks:{color:'#8b949e',maxRotation:0,autoSkip:true,maxTicksLimit:8}}}}});
 }
 
+/* ─── Daily 7-day chart ─── */
+function renderDaily7(closed){
+  const days=[];
+  for(let i=6;i>=0;i--){
+    const d=new Date(); d.setDate(d.getDate()-i);
+    days.push(d.toISOString().slice(0,10));
+  }
+  const byDay={};
+  days.forEach(d=>byDay[d]={pct:0,count:0});
+  closed.forEach(t=>{
+    const d=(t.closed_at||t.opened_at||'').slice(0,10);
+    if(byDay[d]!==undefined){ byDay[d].pct+=(t.result_pct||0); byDay[d].count++; }
+  });
+  const labels=days.map(d=>d.slice(5));
+  const vals=days.map(d=>parseFloat((byDay[d].pct).toFixed(2)));
+  const colors=vals.map(v=>v>=0?'#2ea04388':'#da363388');
+  const borders=vals.map(v=>v>=0?'#2ea043':'#da3633');
+  const ctx=document.getElementById('daily7');
+  if(dailyChart) dailyChart.destroy();
+  dailyChart=new Chart(ctx,{type:'bar',
+    data:{labels,datasets:[{data:vals,backgroundColor:colors,borderColor:borders,borderWidth:1.5,borderRadius:4}]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},
+        tooltip:{callbacks:{label:c=>(c.parsed.y>=0?'+':'')+c.parsed.y+'%  ('+days.map(d=>byDay[d])[c.dataIndex].count+' صفقة)'}}},
+      scales:{y:{grid:{color:'#21262d'},ticks:{color:'#8b949e',callback:v=>v+'%'}},
+        x:{grid:{display:false},ticks:{color:'#8b949e'}}}}});
+}
+
+/* ─── By strategy ─── */
+function renderByStrat(closed){
+  const by={};
+  closed.forEach(t=>{
+    const k=strat(t);
+    if(!by[k]) by[k]={rs:[],dur_win:[],dur_loss:[]};
+    by[k].rs.push(t.result_pct||0);
+    const h=(t.closed_at&&t.opened_at)?((new Date(t.closed_at)-new Date(t.opened_at))/3600000):null;
+    if(h!==null){ (t.result_pct||0)>0?by[k].dur_win.push(h):by[k].dur_loss.push(h); }
+  });
+
+  function maxStreak(rs){
+    let max=0,cur=0;
+    rs.forEach(r=>{ if(r<0){cur++;max=Math.max(max,cur);}else cur=0; });
+    return max;
+  }
+
+  const bs=document.getElementById('byStrat');
+  const rows=Object.entries(by).sort((a,b)=>b[1].rs.reduce((x,v)=>x+v,0)-a[1].rs.reduce((x,v)=>x+v,0));
+  if(!rows.length){ bs.innerHTML='<tr><td class="empty">لا صفقا֪ مغلقة بعد</td></tr>'; return; }
+  bs.innerHTML='<tr><th>الاسترا֪يجية</th><th>صفقا֪</th><th>فوز%</th>'+
+    '<th>إجمالي</th><th>متوسط ربح</th><th>متوسط خسارة</th>'+
+    '<th>أسوأ صفقة</th><th>أطول خسارة</th><th>مدة الربح</th><th>مدة الخسارة</th></tr>'+
+    rows.map(([k,d])=>{
+      const wins=d.rs.filter(r=>r>0), losses=d.rs.filter(r=>r<0);
+      const tot=d.rs.reduce((a,b)=>a+b,0);
+      const wr=Math.round(wins.length/d.rs.length*100);
+      const aw=wins.length?wins.reduce((a,b)=>a+b,0)/wins.length:0;
+      const al=losses.length?losses.reduce((a,b)=>a+b,0)/losses.length:0;
+      const worst=d.rs.length?Math.min(...d.rs):0;
+      const streak=maxStreak(d.rs);
+      const dw=d.dur_win.length?(d.dur_win.reduce((a,b)=>a+b,0)/d.dur_win.length).toFixed(0)+'h':'—';
+      const dl=d.dur_loss.length?(d.dur_loss.reduce((a,b)=>a+b,0)/d.dur_loss.length).toFixed(0)+'h':'—';
+      return `<tr>
+        <td class="sym">${k}</td>
+        <td>${d.rs.length}</td>
+        <td class="${wr>=50?'pos':'neg'}">${wr}%</td>
+        <td class="${cls(tot)}">${fmt(tot)}</td>
+        <td class="pos">${fmt(aw)}</td>
+        <td class="neg">${fmt(al)}</td>
+        <td class="neg">${fmt(worst)}</td>
+        <td class="${streak>=3?'neg':'neu'}">${streak}</td>
+        <td class="pos">${dw}</td>
+        <td class="neg">${dl}</td></tr>`;
+    }).join('');
+}
+
+/* ─── By timeframe ─── */
+function renderByTf(closed){
+  const by={};
+  closed.forEach(t=>{
+    const k=t.timeframe||'—';
+    if(!by[k]) by[k]=[];
+    by[k].push(t.result_pct||0);
+  });
+  const order=['15m','1h','4h','1d'];
+  const keys=[...order.filter(k=>by[k]),...Object.keys(by).filter(k=>!order.includes(k))];
+  const tbl=document.getElementById('byTf');
+  if(!keys.length){ tbl.innerHTML='<tr><td class="empty">لا بيانات</td></tr>'; return; }
+  tbl.innerHTML='<tr><th>الفريم</th><th>صفقا֪</th><th>فوز%</th>'+
+    '<th>إجمالي</th><th>متوسط</th><th>معامل الربح</th></tr>'+
+    keys.map(k=>{
+      const rs=by[k];
+      const wins=rs.filter(r=>r>0), losses=rs.filter(r=>r<0);
+      const tot=rs.reduce((a,b)=>a+b,0);
+      const wr=Math.round(wins.length/rs.length*100);
+      const profW=wins.reduce((a,b)=>a+b,0);
+      const lossA=Math.abs(losses.reduce((a,b)=>a+b,0));
+      const pf=lossA>0?(profW/lossA).toFixed(2):'∞';
+      return `<tr>
+        <td style="font-weight:700">${k}</td>
+        <td>${rs.length}</td>
+        <td class="${wr>=50?'pos':'neg'}">${wr}%</td>
+        <td class="${cls(tot)}">${fmt(tot)}</td>
+        <td class="${cls(tot/rs.length)}">${fmt(tot/rs.length)}</td>
+        <td class="${Number(pf)>=1?'pos':'neg'}">${pf}</td></tr>`;
+    }).join('');
+}
+
+/* ─── Open trades ─── */
+function renderOpen(){
+  const open=allTrades.filter(t=>t.status==='open');
+  document.getElementById('openCount').textContent = open.length ? open.length+' صفقة' : '';
+  const ot=document.getElementById('openTbl');
+  if(!open.length){ ot.innerHTML='<tr><td class="empty">لا صفقات مفتوحة</td></tr>'; return; }
+
+  const head='<tr><th>العملة</th><th>استرا֪يجية</th><th>فريم</th>'+
+    '<th>الدخول</th><th>السعر الحيّ</th><th>الوقف</th>'+
+    '<th>تقدّم نحو الهدف</th><th>أهداف</th><th>محقَّق</th></tr>';
+
+  const rows=open.map(t=>{
+    const p=priceCache[t.symbol.toUpperCase()]||null;
+    const buy=t.side!=='sell';
+    const risk=Math.abs(t.entry-t.stop);
+    // تقدير الهدف الأول: دخول + 1.618 × المخاطرة
+    const t1est=buy? t.entry+1.618*risk : t.entry-1.618*risk;
+    let prog=0, progClass='';
+    if(p!==null && risk>0){
+      prog=buy? (p-t.stop)/(t1est-t.stop)*100 : (t.stop-p)/(t.stop-t1est)*100;
+      prog=Math.max(0,Math.min(130,prog));
+      progClass=prog<0?'neg':'';
+    }
+    const progBar=p!==null
+      ? `<div class="prog-wrap"><div class="prog-bar ${progClass}" style="width:${Math.min(100,prog).toFixed(0)}%"></div></div>
+         <div style="font-size:10px;color:var(--muted);margin-top:2px">${prog.toFixed(0)}%</div>`
+      : '—';
+    const hitsTxt=t.hits&&t.hits.length?t.hits.map(()=>'✅').join(''):'—';
+    const realTxt=t.realized_pct!=null?`<span class="${cls(t.realized_pct)}">${fmt(t.realized_pct)}</span>`:'—';
+    const priceTxt=p!==null?`<b>${px(p)}</b>`:'—';
+    const pxCls=p!==null?(buy?p>t.entry?'pos':p<t.stop?'neg':'neu':p<t.entry?'pos':p>t.stop?'neg':'neu'):'';
+    return `<tr>
+      <td class="sym">${t.symbol}<div class="sub">${buy?'🟢':'🔴'} ${t.side==='sell'?'بيع':'شراء'}</div></td>
+      <td><span class="tag">${strat(t)}</span></td>
+      <td>${t.timeframe||'—'}</td>
+      <td>${px(t.entry)}</td>
+      <td class="${pxCls}">${priceTxt}</td>
+      <td>${px(t.stop)}</td>
+      <td style="min-width:100px">${progBar}</td>
+      <td>${hitsTxt}</td>
+      <td>${realTxt}</td></tr>`;
+  }).join('');
+  ot.innerHTML=head+rows;
+}
+
+/* ─── Log filters ─── */
+function populateFilters(){
+  const strats=[...new Set(allTrades.map(t=>strat(t)))].sort();
+  const tfs=[...new Set(allTrades.map(t=>t.timeframe||'').filter(Boolean))].sort();
+  const fStrat=document.getElementById('f_strat');
+  const fTf=document.getElementById('f_tf');
+  fStrat.innerHTML='<option value="">كل الاستراتيجيات</option>'+strats.map(s=>`<option>${s}</option>`).join('');
+  fTf.innerHTML='<option value="">كل الفريما֪</option>'+tfs.map(t=>`<option>${t}</option>`).join('');
+}
+
+function renderLog(){
+  const fStrat=document.getElementById('f_strat').value;
+  const fTf=document.getElementById('f_tf').value;
+  const fRes=document.getElementById('f_res').value;
+
+  let trades=[...allTrades].sort((a,b)=>String(b.opened_at).localeCompare(String(a.opened_at)));
+  if(fStrat) trades=trades.filter(t=>strat(t)===fStrat);
+  if(fTf)    trades=trades.filter(t=>t.timeframe===fTf);
+  if(fRes==='win')  trades=trades.filter(t=>t.status==='closed'&&(t.result_pct||0)>0);
+  if(fRes==='loss') trades=trades.filter(t=>t.status==='closed'&&(t.result_pct||0)<0);
+  if(fRes==='open') trades=trades.filter(t=>t.status==='open');
+
+  const lg=document.getElementById('logTbl');
+  if(!trades.length){ lg.innerHTML='<tr><td class="empty">لا نتائج</td></tr>'; return; }
+  lg.innerHTML='<tr><th>العملة</th><th>استراتيجية</th><th>فريم</th><th>الحالة</th>'+
+    '<th>الدخول</th><th>فُتحت</th><th>أُغلقت</th><th>مدة</th><th>النتيجة</th></tr>'+
+    trades.map(t=>{
+      let badge,res;
+      if(t.status==='open'){ badge='<span class="badge b-open">مفتوحة</span>'; res='—'; }
+      else{
+        const r=t.result_pct||0;
+        const c=r>0?'b-win':r<0?'b-loss':'b-even';
+        const lbl=r>0?'ربح':r<0?'خسارة':'تعادل';
+        badge=`<span class="badge ${c}">${lbl}</span>`;
+        res=`<span class="${cls(r)}">${fmt(r)}</span>`;
+      }
+      return `<tr>
+        <td class="sym">${t.symbol}</td>
+        <td><span class="tag">${strat(t)}</span></td>
+        <td>${t.timeframe||'—'}</td>
+        <td>${badge}</td>
+        <td>${px(t.entry)}</td>
+        <td>${dt(t.opened_at)}</td>
+        <td>${dt(t.closed_at)}</td>
+        <td>${dur(t.opened_at,t.closed_at)}</td>
+        <td>${res}</td></tr>`;
+    }).join('');
+}
+
+/* ─── Local trades ─── */
+const LS_KEY='ptracker_local_v1';
+let editingId=null;
+const loadLocal=()=>{ try{return JSON.parse(localStorage.getItem(LS_KEY))||[]}catch(e){return[]} };
+const saveLocal=a=>localStorage.setItem(LS_KEY,JSON.stringify(a));
+
+function openForm(t){
+  editingId=t?t.id:null;
+  document.getElementById('formTitle').textContent=t?'✏️ تعديل الصفقة':'➕ صفقة جديدة';
+  const g=id=>document.getElementById(id);
+  g('f_symbol').value=t?t.symbol:'';
+  g('f_side').value=t?t.side:'buy';
+  g('f_tf2').value=t?t.timeframe:'4h';
+  g('f_label').value=t?(t.label||''):'';
+  g('f_entry').value=t?t.entry:'';
+  g('f_stop').value=t?t.stop:'';
+  g('f_t1').value=t&&t.t1!=null?t.t1:'';
+  g('f_t2').value=t&&t.t2!=null?t.t2:'';
+  g('f_t3').value=t&&t.t3!=null?t.t3:'';
+  document.getElementById('overlay').classList.add('show');
+}
+function closeForm(){ document.getElementById('overlay').classList.remove('show'); }
+
+function saveForm(){
+  const g=id=>document.getElementById(id).value.trim();
+  const num=v=>v===''?null:Number(v);
+  const sym=g('f_symbol').toUpperCase();
+  const entry=num(g('f_entry')),stop=num(g('f_stop'));
+  if(!sym||entry==null||stop==null){ alert('الرجاء إدخال العملة والدخول والوقف.'); return; }
+  const arr=loadLocal();
+  const rec={
+    id:editingId||('L'+Date.now()),
+    symbol:sym,side:g('f_side'),timeframe:g('f_tf2'),
+    label:g('f_label')||'يدوي',
+    entry,stop,t1:num(g('f_t1')),t2:num(g('f_t2')),t3:num(g('f_t3')),
+    opened_at:editingId?(arr.find(x=>x.id===editingId)||{}).opened_at||new Date().toISOString()
+                        :new Date().toISOString(),
+  };
+  const i=arr.findIndex(x=>x.id===rec.id);
+  if(i>=0)arr[i]=rec;else arr.push(rec);
+  saveLocal(arr); closeForm(); refreshPrices().then(renderLocal);
+}
+function editTrade(id){ const t=loadLocal().find(x=>x.id===id); if(t) openForm(t); }
+function delTrade(id){
+  if(!confirm('حذف هذه الصفقة؟')) return;
+  saveLocal(loadLocal().filter(x=>x.id!==id)); renderLocal();
+}
+
+function liveStats(t){
+  const p=priceCache[t.symbol.toUpperCase()];
+  const buy=t.side!=='sell';
+  const risk=Math.abs(t.entry-t.stop);
+  const tps=[t.t1,t.t2,t.t3].filter(x=>x!=null);
+  let R=null,status='جارية',sClass='neu';
+  if(p!=null&&risk>0){
+    R=buy?(p-t.entry)/risk:(t.entry-p)/risk;
+    if((buy&&p<=t.stop)||(!buy&&p>=t.stop)){status='ضرب الوقف 🛑';sClass='neg';}
+    else{ let hit=0; tps.forEach((tp,i)=>{if((buy&&p>=tp)||(!buy&&p<=tp))hit=i+1;}); if(hit>0){status='هدف '+hit+' ✅';sClass='pos';} }
+  }
+  return {p,R,status,sClass,tps,buy};
+}
+
+function renderLocal(){
+  const arr=loadLocal();
+  const tb=document.getElementById('localTbl');
+  if(!arr.length){
+    tb.innerHTML='<tr><td class="empty">لا صفقات يدوية بعد — اضغط «➕ صفقة جديدة»</td></tr>';
+    document.getElementById('localSum').textContent=''; return;
+  }
+  let sumR=0,withPx=0;
+  const rows=arr.map(t=>{
+    const L=liveStats(t);
+    if(L.R!=null){sumR+=L.R;withPx++;}
+    const pxTxt=L.p!=null?px(L.p):'—';
+    const rTxt=L.R!=null?`<span class="${cls(L.R)}">${(L.R>=0?'+':'')+L.R.toFixed(2)}R</span>`:'—';
+    const tgs=L.tps.length?L.tps.map((tp,i)=>{
+      const done=L.p!=null&&((L.buy&&L.p>=tp)||(!L.buy&&L.p<=tp));
+      return (done?'✅':(i+1))+'·'+px(tp);
+    }).join(' '):'—';
+    return `<tr>
+      <td class="sym">${t.symbol}<div class="sub">${t.side==='sell'?'🔴 بيع':'🟢 شراء'} · ${t.timeframe}</div></td>
+      <td><span class="tag man">${t.label||'يدوي'}</span></td>
+      <td>${px(t.entry)}</td><td><b>${pxTxt}</b></td>
+      <td>${px(t.stop)}</td>
+      <td style="text-align:right">${tgs}</td>
+      <td>${rTxt}</td>
+      <td><span class="${L.sClass}">${L.status}</span></td>
+      <td>
+        <button class="mini" onclick="editTrade('${t.id}')">✏️</button>
+        <button class="mini danger" onclick="delTrade('${t.id}')">🗑️</button>
+      </td></tr>`;
+  }).join('');
+  tb.innerHTML='<tr><th>العملة</th><th>استراتيجية</th><th>الدخول</th>'+
+    '<th>السعر الحيّ</th><th>الوقف</th><th>الأهداف</th><th>R حيّ</th>'+
+    '<th>الحالة</th><th></th></tr>'+rows;
+  document.getElementById('localSum').textContent=
+    `${arr.length} صفقة · مجموع R الحيّ: ${withPx?((sumR>=0?'+':'')+sumR.toFixed(2)+'R'):'—'}`;
+}
+
+/* ─── Main load ─── */
 async function load(){
   await loadServer();
   await refreshPrices();
   renderLocal();
+  renderOpen(); // re-render open with live prices
 }
 load();
-setInterval(()=>{ refreshPrices().then(renderLocal); }, 30000);  // أسعار حيّة كل 30 ثانية
+setInterval(async()=>{ await refreshPrices(); renderLocal(); renderOpen(); }, 30000);
 </script>
 </body>
 </html>
