@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-28T10:37:00",
+  "updated_at": "2026-06-28T10:50:21",
   "stats": {
     "open": 44,
-    "closed": 426,
-    "win_rate": 51.4,
+    "closed": 427,
+    "win_rate": 51.5,
     "profit_factor": 1.68,
-    "total_pct": 2037.2,
+    "total_pct": 2054.29,
     "avg_pct": 0.85,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 47,
-        "win_rate": 53.2,
-        "return_pct": 21.6,
+        "trades": 48,
+        "win_rate": 54.2,
+        "return_pct": 22.57,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 420,
-        "win_rate": 51.4,
-        "return_pct": 1794.21,
+        "trades": 421,
+        "win_rate": 51.5,
+        "return_pct": 1809.36,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 426,
-        "win_rate": 51.4,
-        "return_pct": 2037.2
+        "trades": 427,
+        "win_rate": 51.5,
+        "return_pct": 2054.29
       }
     ]
   },
@@ -7696,10 +7696,25 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T10:18:10",
+      "closed_at": "2026-06-28T10:50:19",
+      "realized_pct": 0.8,
+      "result_pct": 0.8
+    },
+    {
+      "id": "RSI70 · 15m|ACTUSDT|2026-06-28 10:44:59.999000",
+      "symbol": "ACTUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01135,
+      "stop": 0.00964799,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T10:46:04",
       "closed_at": null,
-      "realized_pct": 0.8
+      "realized_pct": 0.0
     }
   ]
 }
