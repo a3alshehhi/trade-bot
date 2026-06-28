@@ -2980,6 +2980,11 @@ def detect_trendwave_signal(df, cfg):
     m = sma[n - 1]
     if np.isnan(m) or close[n - 1] <= m:        # فلتر الاتجاه عند شمعة الإشارة
         return None
+    # فلتر MA200 على نفس الفريم (15m فقط)
+    if cfg.get("timeframe") == "15m" and n >= 200:
+        ma200_same = float(pd.Series(close).rolling(200).mean().iloc[n - 1])
+        if not np.isnan(ma200_same) and close[n - 1] <= ma200_same:
+            return None
     imp = pk - rl
     drop = pk - tr_low                          # حركة التصحيح (القمة → القاع)
     if imp <= 0 or drop <= 0 or tr_low >= pk:
