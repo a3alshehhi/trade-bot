@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-27T23:50:11",
+  "updated_at": "2026-06-28T00:05:31",
   "stats": {
-    "open": 39,
+    "open": 40,
     "closed": 379,
     "win_rate": 51.2,
     "profit_factor": 1.72,
@@ -6380,11 +6380,13 @@
       "timeframe": "4h",
       "entry": 0.43739,
       "stop": 0.42003927,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-27T16:04:18",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 2.17
     },
     {
       "id": "trendwave · 15m|STRAXUSDT|2026-06-27 16:14:59.999000",
@@ -6846,6 +6848,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-27T23:33:11",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|TNSRUSDT|2026-06-27 23:59:59.999000",
+      "symbol": "TNSRUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.03539853,
+      "stop": 0.03494238,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-28T00:04:10",
       "closed_at": null,
       "realized_pct": 0.0
     }
