@@ -8,7 +8,6 @@
 ويبحث تلقائياً في الأسهم الأمريكية والعملات الرقمية،
 ويحلّلها باستراتيجية فنية متعددة العوامل،
 ثم يعطيك إشارات دخول/خروج مرتّبة مع الأسباب ووقف الخسارة والهدف.
-
 مصادر البيانات (مجانية، بدون مفاتيح):
   - الكريبتو : Binance Public API  (أزواج USDT)
   - الأسهم   : Yahoo Finance عبر مكتبة yfinance
@@ -3405,10 +3404,15 @@ def monitor_tracked_signals(cfg, path=TRACK_FILE):
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
     except Exception:
+        data = {}
+    if not isinstance(data, dict):
+        data = {}
+    if not data:
         print("[متابعة] لا توجد إشارات مُتابَعة.")
-        return
-    if not isinstance(data, dict) or not data:
-        print("[متابعة] لا توجد إشارات مُتابَعة.")
+        try:
+            export_dashboard(path)
+        except Exception as e:
+            print(f"[لوحة] تعذّر التحديث: {e}")
         return
 
     changed = False
