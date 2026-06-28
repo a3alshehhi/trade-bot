@@ -2,7 +2,7 @@ name: reversal-live
 
 # تنبيه حيّ لاستراتيجيات الانعكاس على تيليجرام، فور إغلاق الشمعة.
 # كل 15 دقيقة (دقائق 8/23/38/53 لتجنّب ذروة GitHub عند رأس الساعة).
-# يشمل: استراتيجية trendwave المستقلة (15m/1h/4h). RSI70 مُعطَّل.
+# يشمل: RSI70 مع فلتر الاختراق النظيف (70-78) + trendwave (15m/1h/4h).
 # هذا هو الوركفلو الذي يشغّله cron-job.org، فإضافة trendwave هنا تربطه بالجدولة تلقائياً.
 on:
   schedule:
@@ -37,15 +37,16 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          # === RSI70 مُعطَّل مؤقتاً (2026-06-28) — أداء سلبي في الإحصائية ===
-          # python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --ml-filter --ma200-15m --watchlist watchlist.txt \
-          #   --timeframe 15m --state reversal_alerts.json
-          # python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --ml-filter --watchlist watchlist.txt \
-          #   --timeframe 1h --state reversal_alerts.json
-          # python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --ml-filter --watchlist watchlist.txt \
-          #   --timeframe 4h --state reversal_alerts.json
-          # python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --ml-filter --watchlist watchlist.txt \
-          #   --timeframe 1d --state reversal_alerts.json
+          # === RSI70 مع فلتر القفزة: اختراق نظيف فقط (RSI بين 70-78) ===
+          # --rsi-ob-max 78: يرفض الاختراقات التي قفز فيها RSI بعيداً (مثلاً 64→86)
+          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --rsi-ob-max 78 --ml-filter --ma200-15m --watchlist watchlist.txt \
+            --timeframe 15m --state reversal_alerts.json
+          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --rsi-ob-max 78 --ml-filter --watchlist watchlist.txt \
+            --timeframe 1h --state reversal_alerts.json
+          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --rsi-ob-max 78 --ml-filter --watchlist watchlist.txt \
+            --timeframe 4h --state reversal_alerts.json
+          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --rsi-ob-max 78 --ml-filter --watchlist watchlist.txt \
+            --timeframe 1d --state reversal_alerts.json
           # === استراتيجية trendwave المستقلة (الإعداد الرابح) — على نفس الجدول ===
           # دخول مباشر بعد موجة RSI(20→80) + فلتر اتجاه من فريم أعلى. رسائل مُعنونة "trendwave".
           python trading_bot.py --mode reversal --trendwave --ml-filter --watchlist watchlist.txt \
