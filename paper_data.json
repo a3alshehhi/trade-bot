@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-28T07:50:22",
+  "updated_at": "2026-06-28T08:04:59",
   "stats": {
-    "open": 42,
-    "closed": 413,
-    "win_rate": 51.1,
-    "profit_factor": 1.66,
-    "total_pct": 1704.2,
-    "avg_pct": 0.83,
+    "open": 41,
+    "closed": 414,
+    "win_rate": 51.0,
+    "profit_factor": 1.65,
+    "total_pct": 1607.68,
+    "avg_pct": 0.82,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-28",
-        "trades": 34,
-        "win_rate": 50.0,
-        "return_pct": 2.65,
+        "trades": 35,
+        "win_rate": 48.6,
+        "return_pct": -2.84,
         "week": "2026-W26",
         "month": "2026-06"
       },
@@ -79,9 +79,9 @@
     "weekly": [
       {
         "key": "2026-W26",
-        "trades": 407,
-        "win_rate": 51.1,
-        "return_pct": 1499.08,
+        "trades": 408,
+        "win_rate": 51.0,
+        "return_pct": 1413.52,
         "month": "2026-06"
       },
       {
@@ -95,9 +95,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 413,
-        "win_rate": 51.1,
-        "return_pct": 1704.2
+        "trades": 414,
+        "win_rate": 51.0,
+        "return_pct": 1607.68
       }
     ]
   },
@@ -5207,10 +5207,11 @@
       "entry": 405.56185333,
       "stop": 383.86478566,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T00:03:45",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-28T08:04:41",
+      "realized_pct": -5.35,
+      "result_pct": -5.35
     },
     {
       "id": "trendwave · 15m|HYPERUSDT|2026-06-27 00:14:59.999000",
