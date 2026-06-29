@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T18:04:19",
+  "updated_at": "2026-06-29T18:19:21",
   "stats": {
     "open": 35,
     "closed": 564,
@@ -9686,11 +9686,13 @@
       "timeframe": "15m",
       "entry": 1.039e-05,
       "stop": 9.79e-06,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-29T15:46:05",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.4
     },
     {
       "id": "RSI70 · 15m|APEUSDT|2026-06-29 15:44:59.999000",
