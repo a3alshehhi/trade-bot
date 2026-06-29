@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-29T08:49:30",
+  "updated_at": "2026-06-29T09:04:27",
   "stats": {
-    "open": 29,
+    "open": 32,
     "closed": 533,
     "win_rate": 52.7,
     "profit_factor": 1.67,
@@ -8168,11 +8168,13 @@
       "timeframe": "1h",
       "entry": 0.11637213,
       "stop": 0.1137638,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-28T16:05:05",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 6.12
     },
     {
       "id": "trendwave · 1h|GUSDT|2026-06-28 15:59:59.999000",
@@ -9269,6 +9271,48 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-29T08:47:50",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|ARUSDT|2026-06-29 08:59:59.999000",
+      "symbol": "ARUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 1.944,
+      "stop": 1.86096598,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T09:01:37",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|MAGICUSDT|2026-06-29 08:59:59.999000",
+      "symbol": "MAGICUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.04444927,
+      "stop": 0.04387525,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T09:02:52",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|SUSDT|2026-06-29 08:59:59.999000",
+      "symbol": "SUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.02370853,
+      "stop": 0.02346986,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T09:02:53",
       "closed_at": null,
       "realized_pct": 0.0
     }
