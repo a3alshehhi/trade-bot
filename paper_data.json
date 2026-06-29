@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-29T14:56:47",
+  "updated_at": "2026-06-29T15:05:23",
   "stats": {
-    "open": 30,
-    "closed": 552,
-    "win_rate": 53.1,
+    "open": 31,
+    "closed": 554,
+    "win_rate": 53.2,
     "profit_factor": 1.66,
-    "total_pct": 5526.36,
+    "total_pct": 5663.79,
     "avg_pct": 0.88,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 60,
-        "win_rate": 75.0,
-        "return_pct": 355.49,
+        "trades": 62,
+        "win_rate": 75.8,
+        "return_pct": 366.62,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 60,
-        "win_rate": 75.0,
-        "return_pct": 355.49,
+        "trades": 62,
+        "win_rate": 75.8,
+        "return_pct": 366.62,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 552,
-        "win_rate": 53.1,
-        "return_pct": 5526.36
+        "trades": 554,
+        "win_rate": 53.2,
+        "return_pct": 5663.79
       }
     ]
   },
@@ -9554,10 +9554,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T13:01:36",
-      "closed_at": null,
-      "realized_pct": 1.67
+      "closed_at": "2026-06-29T15:05:16",
+      "realized_pct": 1.67,
+      "result_pct": 1.67
     },
     {
       "id": "RSI70 · 15m|EPICUSDT|2026-06-29 13:14:59.999000",
@@ -9599,9 +9600,55 @@
       "timeframe": "15m",
       "entry": 0.03124633,
       "stop": 0.03082279,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-06-29T14:47:24",
+      "closed_at": "2026-06-29T15:05:20",
+      "realized_pct": 0.76,
+      "result_pct": 0.76
+    },
+    {
+      "id": "RSI70 · 15m|ORDIUSDT|2026-06-29 14:59:59.999000",
+      "symbol": "ORDIUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 3.72,
+      "stop": 3.51829525,
       "hits": [],
       "status": "open",
-      "opened_at": "2026-06-29T14:47:24",
+      "opened_at": "2026-06-29T15:01:16",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 14:59:59.999000",
+      "symbol": "COOKIEUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0086478,
+      "stop": 0.0084192,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T15:03:18",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|EDUUSDT|2026-06-29 14:59:59.999000",
+      "symbol": "EDUUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03134487,
+      "stop": 0.03082473,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T15:03:19",
       "closed_at": null,
       "realized_pct": 0.0
     }
