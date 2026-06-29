@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-29T19:49:03",
+  "updated_at": "2026-06-29T20:03:50",
   "stats": {
-    "open": 42,
-    "closed": 566,
-    "win_rate": 53.0,
+    "open": 43,
+    "closed": 567,
+    "win_rate": 52.9,
     "profit_factor": 1.64,
-    "total_pct": 5519.68,
-    "avg_pct": 0.86,
+    "total_pct": 5316.81,
+    "avg_pct": 0.85,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 74,
-        "win_rate": 70.3,
-        "return_pct": 354.95,
+        "trades": 75,
+        "win_rate": 69.3,
+        "return_pct": 338.53,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 74,
-        "win_rate": 70.3,
-        "return_pct": 354.95,
+        "trades": 75,
+        "win_rate": 69.3,
+        "return_pct": 338.53,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 566,
-        "win_rate": 53.0,
-        "return_pct": 5519.68
+        "trades": 567,
+        "win_rate": 52.9,
+        "return_pct": 5316.81
       }
     ]
   },
@@ -9754,10 +9754,11 @@
       "entry": 0.08223481,
       "stop": 0.07926912,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T16:03:40",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-29T20:03:41",
+      "realized_pct": -3.61,
+      "result_pct": -3.61
     },
     {
       "id": "trendwave · 4h|APEUSDT|2026-06-29 15:59:59.999000",
@@ -10002,6 +10003,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-29T19:47:23",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|SOLUSDT|2026-06-29 19:59:59.999000",
+      "symbol": "SOLUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 75.98,
+      "stop": 72.4671438,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T20:01:10",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|SUSDT|2026-06-29 19:59:59.999000",
+      "symbol": "SUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.02440472,
+      "stop": 0.0238752,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T20:02:18",
       "closed_at": null,
       "realized_pct": 0.0
     }
