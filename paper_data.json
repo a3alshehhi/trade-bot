@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-29T15:18:48",
+  "updated_at": "2026-06-29T15:35:18",
   "stats": {
-    "open": 29,
+    "open": 30,
     "closed": 556,
     "win_rate": 53.1,
     "profit_factor": 1.65,
@@ -9619,11 +9619,13 @@
       "timeframe": "15m",
       "entry": 3.72,
       "stop": 3.51829525,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-29T15:01:16",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.21
     },
     {
       "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 14:59:59.999000",
@@ -9653,6 +9655,20 @@
       "closed_at": "2026-06-29T15:18:47",
       "realized_pct": -1.66,
       "result_pct": -1.66
+    },
+    {
+      "id": "RSI70 · 15m|HEIUSDT|2026-06-29 15:29:59.999000",
+      "symbol": "HEIUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1528,
+      "stop": 0.13956943,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T15:31:12",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
