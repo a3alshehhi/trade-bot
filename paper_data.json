@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T07:33:46",
+  "updated_at": "2026-06-29T07:48:50",
   "stats": {
     "open": 25,
     "closed": 532,
@@ -8965,11 +8965,13 @@
       "timeframe": "15m",
       "entry": 0.03595,
       "stop": 0.03429947,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-29T03:31:12",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.1
     },
     {
       "id": "RSI70 · 1h|GASUSDT|2026-06-29 03:59:59.999000",
