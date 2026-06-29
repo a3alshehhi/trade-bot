@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-29T09:04:27",
+  "updated_at": "2026-06-29T09:20:25",
   "stats": {
-    "open": 32,
-    "closed": 533,
-    "win_rate": 52.7,
+    "open": 31,
+    "closed": 534,
+    "win_rate": 52.6,
     "profit_factor": 1.67,
-    "total_pct": 5264.62,
-    "avg_pct": 0.9,
+    "total_pct": 5213.66,
+    "avg_pct": 0.89,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 41,
-        "win_rate": 80.5,
-        "return_pct": 334.3,
+        "trades": 42,
+        "win_rate": 78.6,
+        "return_pct": 330.18,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 41,
-        "win_rate": 80.5,
-        "return_pct": 334.3,
+        "trades": 42,
+        "win_rate": 78.6,
+        "return_pct": 330.18,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 533,
-        "win_rate": 52.7,
-        "return_pct": 5264.62
+        "trades": 534,
+        "win_rate": 52.6,
+        "return_pct": 5213.66
       }
     ]
   },
@@ -9269,10 +9269,11 @@
       "entry": 0.0314478,
       "stop": 0.03114787,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T08:47:50",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-29T09:20:20",
+      "realized_pct": -0.95,
+      "result_pct": -0.95
     },
     {
       "id": "RSI70 · 1h|ARUSDT|2026-06-29 08:59:59.999000",
@@ -9310,11 +9311,13 @@
       "timeframe": "15m",
       "entry": 0.02370853,
       "stop": 0.02346986,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-29T09:02:53",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.51
     }
   ]
 }
