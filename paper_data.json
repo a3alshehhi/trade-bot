@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-29T01:34:18",
+  "updated_at": "2026-06-29T01:50:12",
   "stats": {
-    "open": 31,
-    "closed": 504,
-    "win_rate": 50.8,
+    "open": 30,
+    "closed": 505,
+    "win_rate": 50.9,
     "profit_factor": 1.46,
-    "total_pct": 1140.94,
+    "total_pct": 1149.38,
     "avg_pct": 0.64,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 12,
-        "win_rate": 66.7,
-        "return_pct": 0.46,
+        "trades": 13,
+        "win_rate": 69.2,
+        "return_pct": 1.15,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 12,
-        "win_rate": 66.7,
-        "return_pct": 0.46,
+        "trades": 13,
+        "win_rate": 69.2,
+        "return_pct": 1.15,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 504,
-        "win_rate": 50.8,
-        "return_pct": 1140.94
+        "trades": 505,
+        "win_rate": 50.9,
+        "return_pct": 1149.38
       }
     ]
   },
@@ -8803,11 +8803,15 @@
       "timeframe": "15m",
       "entry": 0.00344956,
       "stop": 0.00338105,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-29T01:32:42",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-29T01:50:12",
+      "realized_pct": 0.68,
+      "result_pct": 0.68
     }
   ]
 }
