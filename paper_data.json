@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-29T04:35:14",
+  "updated_at": "2026-06-29T04:48:54",
   "stats": {
-    "open": 33,
+    "open": 35,
     "closed": 515,
     "win_rate": 51.7,
     "profit_factor": 1.53,
@@ -8510,11 +8510,13 @@
       "timeframe": "15m",
       "entry": 1.602,
       "stop": 1.56748945,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-28T22:01:05",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.5
     },
     {
       "id": "trendwave · 15m|EDUUSDT|2026-06-28 21:59:59.999000",
@@ -9022,6 +9024,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-29T04:18:08",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|HEIUSDT|2026-06-29 04:44:59.999000",
+      "symbol": "HEIUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.14167653,
+      "stop": 0.13830779,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T04:47:26",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|PIVXUSDT|2026-06-29 04:44:59.999000",
+      "symbol": "PIVXUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0446692,
+      "stop": 0.04183478,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T04:47:27",
       "closed_at": null,
       "realized_pct": 0.0
     }
