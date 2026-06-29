@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-29T02:19:02",
+  "updated_at": "2026-06-29T02:35:14",
   "stats": {
-    "open": 31,
+    "open": 32,
     "closed": 505,
     "win_rate": 50.9,
     "profit_factor": 1.46,
@@ -8824,6 +8824,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-29T02:01:22",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|POLYXUSDT|2026-06-29 02:29:59.999000",
+      "symbol": "POLYXUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0379,
+      "stop": 0.0363446,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T02:31:12",
       "closed_at": null,
       "realized_pct": 0.0
     }
