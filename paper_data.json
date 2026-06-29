@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-29T17:49:05",
+  "updated_at": "2026-06-29T18:04:19",
   "stats": {
-    "open": 34,
-    "closed": 563,
-    "win_rate": 52.9,
+    "open": 35,
+    "closed": 564,
+    "win_rate": 53.0,
     "profit_factor": 1.64,
-    "total_pct": 5226.02,
-    "avg_pct": 0.85,
+    "total_pct": 5490.73,
+    "avg_pct": 0.86,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 71,
-        "win_rate": 70.4,
-        "return_pct": 331.18,
+        "trades": 72,
+        "win_rate": 70.8,
+        "return_pct": 352.61,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 71,
-        "win_rate": 70.4,
-        "return_pct": 331.18,
+        "trades": 72,
+        "win_rate": 70.8,
+        "return_pct": 352.61,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 563,
-        "win_rate": 52.9,
-        "return_pct": 5226.02
+        "trades": 564,
+        "win_rate": 53.0,
+        "return_pct": 5490.73
       }
     ]
   },
@@ -9807,11 +9807,15 @@
       "timeframe": "1h",
       "entry": 0.09810967,
       "stop": 0.09426253,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-29T17:02:49",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-29T18:04:16",
+      "realized_pct": 4.97,
+      "result_pct": 4.97
     },
     {
       "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 17:14:59.999000",
@@ -9838,6 +9842,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-29T17:32:22",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|EGLDUSDT|2026-06-29 17:59:59.999000",
+      "symbol": "EGLDUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 2.7,
+      "stop": 2.57436231,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T18:01:14",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|TNSRUSDT|2026-06-29 17:59:59.999000",
+      "symbol": "TNSRUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.03464633,
+      "stop": 0.03403822,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T18:03:14",
       "closed_at": null,
       "realized_pct": 0.0
     }
