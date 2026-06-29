@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-29T02:35:14",
+  "updated_at": "2026-06-29T02:48:52",
   "stats": {
-    "open": 32,
+    "open": 35,
     "closed": 505,
     "win_rate": 50.9,
     "profit_factor": 1.46,
@@ -8821,11 +8821,13 @@
       "timeframe": "15m",
       "entry": 0.0375,
       "stop": 0.03617628,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-29T02:01:22",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.83
     },
     {
       "id": "RSI70 · 15m|POLYXUSDT|2026-06-29 02:29:59.999000",
@@ -8838,6 +8840,48 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-29T02:31:12",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|ACTUSDT|2026-06-29 02:44:59.999000",
+      "symbol": "ACTUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01135736,
+      "stop": 0.01092301,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T02:47:24",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 02:44:59.999000",
+      "symbol": "COOKIEUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00914927,
+      "stop": 0.00898194,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T02:47:25",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|EDUUSDT|2026-06-29 02:44:59.999000",
+      "symbol": "EDUUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03089413,
+      "stop": 0.03034424,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T02:47:26",
       "closed_at": null,
       "realized_pct": 0.0
     }
