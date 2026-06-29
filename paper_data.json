@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-29T00:19:52",
+  "updated_at": "2026-06-29T00:34:21",
   "stats": {
-    "open": 33,
-    "closed": 496,
+    "open": 31,
+    "closed": 498,
     "win_rate": 50.2,
-    "profit_factor": 1.45,
-    "total_pct": 1046.14,
+    "profit_factor": 1.44,
+    "total_pct": 1032.82,
     "avg_pct": 0.63,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 4,
-        "win_rate": 25.0,
-        "return_pct": -7.21,
+        "trades": 6,
+        "win_rate": 33.3,
+        "return_pct": -8.29,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 4,
-        "win_rate": 25.0,
-        "return_pct": -7.21,
+        "trades": 6,
+        "win_rate": 33.3,
+        "return_pct": -8.29,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 496,
+        "trades": 498,
         "win_rate": 50.2,
-        "return_pct": 1046.14
+        "return_pct": 1032.82
       }
     ]
   },
@@ -8681,10 +8681,11 @@
       "entry": 0.00205059,
       "stop": 0.00201344,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T23:32:26",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-29T00:34:17",
+      "realized_pct": -1.81,
+      "result_pct": -1.81
     },
     {
       "id": "trendwave · 15m|GUSDT|2026-06-29 00:14:59.999000",
@@ -8694,11 +8695,15 @@
       "timeframe": "15m",
       "entry": 0.00344449,
       "stop": 0.00336844,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-29T00:17:54",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-29T00:34:20",
+      "realized_pct": 0.66,
+      "result_pct": 0.66
     }
   ]
 }
