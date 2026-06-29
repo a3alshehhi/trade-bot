@@ -18096,5 +18096,32 @@
     "hi_seen": 0.456,
     "lo_seen": 0.451,
     "created": "2026-06-29T13:16:05"
+  },
+  "trendwave · 15m|EDUUSDT|2026-06-29 14:14:59.999000": {
+    "symbol": "EDUUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 3119,
+    "entry": 0.03109853,
+    "stop": 0.03082998,
+    "init_stop": 0.03082998,
+    "cur_stop": 0.03082998,
+    "last_alert_stop": 0.03082998,
+    "armed": false,
+    "targets": [
+      0.0314202,
+      0.03155
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-29 14:14:59.999000",
+    "last_bar": "2026-06-29 14:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.03109853,
+    "lo_seen": 0.03109853,
+    "created": "2026-06-29T14:17:16"
   }
 }
