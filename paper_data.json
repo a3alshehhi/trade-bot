@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-29T09:35:12",
+  "updated_at": "2026-06-29T09:50:06",
   "stats": {
     "open": 30,
-    "closed": 535,
-    "win_rate": 52.7,
+    "closed": 536,
+    "win_rate": 52.6,
     "profit_factor": 1.67,
-    "total_pct": 5279.55,
+    "total_pct": 5210.15,
     "avg_pct": 0.89,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 43,
-        "win_rate": 79.1,
-        "return_pct": 335.51,
+        "trades": 44,
+        "win_rate": 77.3,
+        "return_pct": 329.89,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 43,
-        "win_rate": 79.1,
-        "return_pct": 335.51,
+        "trades": 44,
+        "win_rate": 77.3,
+        "return_pct": 329.89,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 535,
-        "win_rate": 52.7,
-        "return_pct": 5279.55
+        "trades": 536,
+        "win_rate": 52.6,
+        "return_pct": 5210.15
       }
     ]
   },
@@ -9298,10 +9298,11 @@
       "entry": 0.04444927,
       "stop": 0.04387525,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T09:02:52",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-29T09:50:05",
+      "realized_pct": -1.29,
+      "result_pct": -1.29
     },
     {
       "id": "trendwave · 15m|SUSDT|2026-06-29 08:59:59.999000",
@@ -9320,6 +9321,20 @@
       "closed_at": "2026-06-29T09:35:12",
       "realized_pct": 1.24,
       "result_pct": 1.24
+    },
+    {
+      "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 09:44:59.999000",
+      "symbol": "COOKIEUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00869853,
+      "stop": 0.00849173,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T09:48:05",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
