@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-29T06:04:03",
+  "updated_at": "2026-06-29T06:19:45",
   "stats": {
     "open": 26,
-    "closed": 528,
+    "closed": 529,
     "win_rate": 52.7,
     "profit_factor": 1.65,
-    "total_pct": 4617.12,
+    "total_pct": 4630.79,
     "avg_pct": 0.88,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 36,
-        "win_rate": 83.3,
-        "return_pct": 281.88,
+        "trades": 37,
+        "win_rate": 83.8,
+        "return_pct": 282.99,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 36,
-        "win_rate": 83.3,
-        "return_pct": 281.88,
+        "trades": 37,
+        "win_rate": 83.8,
+        "return_pct": 282.99,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 528,
+        "trades": 529,
         "win_rate": 52.7,
-        "return_pct": 4617.12
+        "return_pct": 4630.79
       }
     ]
   },
@@ -9143,9 +9143,27 @@
       "timeframe": "15m",
       "entry": 0.02385428,
       "stop": 0.02328431,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-06-29T06:02:28",
+      "closed_at": "2026-06-29T06:19:44",
+      "realized_pct": 0.29,
+      "result_pct": 0.29
+    },
+    {
+      "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 06:14:59.999000",
+      "symbol": "COOKIEUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00924927,
+      "stop": 0.00906519,
       "hits": [],
       "status": "open",
-      "opened_at": "2026-06-29T06:02:28",
+      "opened_at": "2026-06-29T06:17:56",
       "closed_at": null,
       "realized_pct": 0.0
     }

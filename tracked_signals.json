@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-06-29 05:59:59.999000"
+    "last_bar": "2026-06-29 06:14:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -16696,11 +16696,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 02:29:59.999000",
-    "last_bar": "2026-06-29 05:59:59.999000",
+    "last_bar": "2026-06-29 06:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0382,
-    "lo_seen": 0.0369,
+    "lo_seen": 0.0368,
     "created": "2026-06-29T02:31:12"
   },
   "trendwave · 15m|ACTUSDT|2026-06-29 02:44:59.999000": {
@@ -16892,7 +16892,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 03:29:59.999000",
-    "last_bar": "2026-06-29 05:59:59.999000",
+    "last_bar": "2026-06-29 06:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.03629,
@@ -17045,7 +17045,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 04:14:59.999000",
-    "last_bar": "2026-06-29 05:59:59.999000",
+    "last_bar": "2026-06-29 06:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0811,
@@ -17225,7 +17225,7 @@
     "entry": 0.02385428,
     "stop": 0.02328431,
     "init_stop": 0.02328431,
-    "cur_stop": 0.02328431,
+    "cur_stop": 0.02385428,
     "last_alert_stop": 0.02328431,
     "armed": false,
     "targets": [
@@ -17237,11 +17237,44 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 05:59:59.999000",
-    "last_bar": "2026-06-29 05:59:59.999000",
+    "last_bar": "2026-06-29 06:14:59.999000",
+    "hits": [
+      1,
+      2
+    ],
+    "stopped": true,
+    "hi_seen": 0.02427,
+    "lo_seen": 0.02385428,
+    "created": "2026-06-29T06:02:28",
+    "exit_price": 0.023985,
+    "close_card_sent": true,
+    "closed_at": "2026-06-29T06:19:44"
+  },
+  "trendwave · 15m|COOKIEUSDT|2026-06-29 06:14:59.999000": {
+    "symbol": "COOKIEUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 3024,
+    "entry": 0.00924927,
+    "stop": 0.00906519,
+    "init_stop": 0.00906519,
+    "cur_stop": 0.00906519,
+    "last_alert_stop": 0.00906519,
+    "armed": false,
+    "targets": [
+      0.0094674,
+      0.00955
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-29 06:14:59.999000",
+    "last_bar": "2026-06-29 06:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.02385428,
-    "lo_seen": 0.02385428,
-    "created": "2026-06-29T06:02:28"
+    "hi_seen": 0.00924927,
+    "lo_seen": 0.00924927,
+    "created": "2026-06-29T06:17:56"
   }
 }
