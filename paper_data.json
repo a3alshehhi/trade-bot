@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-29T22:48:33",
+  "updated_at": "2026-06-29T23:05:11",
   "stats": {
     "open": 48,
-    "closed": 572,
+    "closed": 574,
     "win_rate": 53.0,
     "profit_factor": 1.64,
-    "total_pct": 5829.48,
+    "total_pct": 5856.79,
     "avg_pct": 0.86,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 80,
-        "win_rate": 68.8,
-        "return_pct": 380.03,
+        "trades": 82,
+        "win_rate": 68.3,
+        "return_pct": 382.25,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 80,
-        "win_rate": 68.8,
-        "return_pct": 380.03,
+        "trades": 82,
+        "win_rate": 68.3,
+        "return_pct": 382.25,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 572,
+        "trades": 574,
         "win_rate": 53.0,
-        "return_pct": 5829.48
+        "return_pct": 5856.79
       }
     ]
   },
@@ -9552,10 +9552,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T13:01:35",
-      "closed_at": null,
-      "realized_pct": 1.23
+      "closed_at": "2026-06-29T23:04:49",
+      "realized_pct": 1.23,
+      "result_pct": 1.23
     },
     {
       "id": "RSI70 · 1h|ORDIUSDT|2026-06-29 12:59:59.999000",
@@ -10091,10 +10092,11 @@
       "entry": 0.38798533,
       "stop": 0.38505078,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T21:17:08",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-29T23:05:04",
+      "realized_pct": -0.76,
+      "result_pct": -0.76
     },
     {
       "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 21:14:59.999000",
@@ -10192,6 +10194,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-29T22:32:13",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|AGLDUSDT|2026-06-29 22:59:59.999000",
+      "symbol": "AGLDUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2064346,
+      "stop": 0.20276005,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T23:02:51",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 22:59:59.999000",
+      "symbol": "COOKIEUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00894927,
+      "stop": 0.00882615,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T23:02:52",
       "closed_at": null,
       "realized_pct": 0.0
     }
