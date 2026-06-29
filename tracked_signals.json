@@ -16584,5 +16584,37 @@
     "exit_price": 0.00348,
     "close_card_sent": true,
     "closed_at": "2026-06-29T01:50:12"
+  },
+  "RSI70 · 15m|POLYXUSDT|2026-06-29 01:59:59.999000": {
+    "symbol": "POLYXUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 2941,
+    "entry": 0.0375,
+    "stop": 0.03617628,
+    "init_stop": 0.03617628,
+    "cur_stop": 0.03617628,
+    "last_alert_stop": 0.03617628,
+    "armed": false,
+    "targets": [
+      0.0381256,
+      0.0389214,
+      0.0412214
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-29 01:59:59.999000",
+    "last_bar": "2026-06-29 01:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0375,
+    "lo_seen": 0.0375,
+    "created": "2026-06-29T02:01:22"
   }
 }
