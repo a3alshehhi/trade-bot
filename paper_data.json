@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-29T03:20:16",
+  "updated_at": "2026-06-29T03:35:18",
   "stats": {
     "open": 34,
-    "closed": 508,
-    "win_rate": 51.2,
+    "closed": 509,
+    "win_rate": 51.3,
     "profit_factor": 1.47,
-    "total_pct": 1220.98,
+    "total_pct": 1231.94,
     "avg_pct": 0.65,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 16,
-        "win_rate": 75.0,
-        "return_pct": 6.94,
+        "trades": 17,
+        "win_rate": 76.5,
+        "return_pct": 7.83,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 16,
-        "win_rate": 75.0,
-        "return_pct": 6.94,
+        "trades": 17,
+        "win_rate": 76.5,
+        "return_pct": 7.83,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 508,
-        "win_rate": 51.2,
-        "return_pct": 1220.98
+        "trades": 509,
+        "win_rate": 51.3,
+        "return_pct": 1231.94
       }
     ]
   },
@@ -8824,10 +8824,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T02:01:22",
-      "closed_at": null,
-      "realized_pct": 0.83
+      "closed_at": "2026-06-29T03:35:14",
+      "realized_pct": 0.83,
+      "result_pct": 0.83
     },
     {
       "id": "RSI70 · 15m|POLYXUSDT|2026-06-29 02:29:59.999000",
@@ -8922,6 +8923,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-29T03:03:31",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|PYTHUSDT|2026-06-29 03:29:59.999000",
+      "symbol": "PYTHUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03595,
+      "stop": 0.03429947,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T03:31:12",
       "closed_at": null,
       "realized_pct": 0.0
     }
