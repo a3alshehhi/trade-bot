@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-29T13:33:57",
+  "updated_at": "2026-06-29T13:49:50",
   "stats": {
-    "open": 34,
-    "closed": 546,
-    "win_rate": 52.9,
-    "profit_factor": 1.66,
-    "total_pct": 5439.49,
-    "avg_pct": 0.89,
+    "open": 31,
+    "closed": 549,
+    "win_rate": 52.8,
+    "profit_factor": 1.65,
+    "total_pct": 5305.04,
+    "avg_pct": 0.88,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 54,
-        "win_rate": 75.9,
-        "return_pct": 348.46,
+        "trades": 57,
+        "win_rate": 73.7,
+        "return_pct": 337.58,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 54,
-        "win_rate": 75.9,
-        "return_pct": 348.46,
+        "trades": 57,
+        "win_rate": 73.7,
+        "return_pct": 337.58,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 546,
-        "win_rate": 52.9,
-        "return_pct": 5439.49
+        "trades": 549,
+        "win_rate": 52.8,
+        "return_pct": 5305.04
       }
     ]
   },
@@ -9199,10 +9199,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T07:01:09",
-      "closed_at": null,
-      "realized_pct": 0.58
+      "closed_at": "2026-06-29T13:49:36",
+      "realized_pct": 0.58,
+      "result_pct": 0.58
     },
     {
       "id": "trendwave · 1h|GPSUSDT|2026-06-29 06:59:59.999000",
@@ -9487,10 +9488,11 @@
       "entry": 0.00879853,
       "stop": 0.00862317,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T12:48:04",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-29T13:49:45",
+      "realized_pct": -1.99,
+      "result_pct": -1.99
     },
     {
       "id": "trendwave · 15m|MOVRUSDT|2026-06-29 12:44:59.999000",
@@ -9501,10 +9503,11 @@
       "entry": 1.16739,
       "stop": 1.15544445,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T12:48:05",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-29T13:49:47",
+      "realized_pct": -1.02,
+      "result_pct": -1.02
     },
     {
       "id": "trendwave · 15m|SOLUSDT|2026-06-29 12:44:59.999000",
