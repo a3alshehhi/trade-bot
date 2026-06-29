@@ -18047,5 +18047,37 @@
     "hi_seen": 3.524,
     "lo_seen": 3.524,
     "created": "2026-06-29T13:01:36"
+  },
+  "RSI70 · 15m|EPICUSDT|2026-06-29 13:14:59.999000": {
+    "symbol": "EPICUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 3106,
+    "entry": 0.456,
+    "stop": 0.44582808,
+    "init_stop": 0.44582808,
+    "cur_stop": 0.44582808,
+    "last_alert_stop": 0.44582808,
+    "armed": false,
+    "targets": [
+      0.460352,
+      0.465888,
+      0.481888
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-29 13:14:59.999000",
+    "last_bar": "2026-06-29 13:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.456,
+    "lo_seen": 0.456,
+    "created": "2026-06-29T13:16:05"
   }
 }
