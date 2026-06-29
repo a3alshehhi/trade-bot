@@ -18129,5 +18129,32 @@
     "exit_price": 0.03155,
     "close_card_sent": true,
     "closed_at": "2026-06-29T14:35:14"
+  },
+  "trendwave · 15m|EDUUSDT|2026-06-29 14:44:59.999000": {
+    "symbol": "EDUUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 3123,
+    "entry": 0.03124633,
+    "stop": 0.03082279,
+    "init_stop": 0.03082279,
+    "cur_stop": 0.03082279,
+    "last_alert_stop": 0.03082279,
+    "armed": false,
+    "targets": [
+      0.0314202,
+      0.03155
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-29 14:44:59.999000",
+    "last_bar": "2026-06-29 14:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.03124633,
+    "lo_seen": 0.03124633,
+    "created": "2026-06-29T14:47:24"
   }
 }
