@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-29T18:33:39",
+  "updated_at": "2026-06-29T18:49:24",
   "stats": {
     "open": 37,
-    "closed": 564,
-    "win_rate": 53.0,
-    "profit_factor": 1.64,
-    "total_pct": 5490.73,
+    "closed": 565,
+    "win_rate": 53.1,
+    "profit_factor": 1.65,
+    "total_pct": 5569.0,
     "avg_pct": 0.86,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 72,
-        "win_rate": 70.8,
-        "return_pct": 352.61,
+        "trades": 73,
+        "win_rate": 71.2,
+        "return_pct": 358.95,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 72,
-        "win_rate": 70.8,
-        "return_pct": 352.61,
+        "trades": 73,
+        "win_rate": 71.2,
+        "return_pct": 358.95,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 564,
-        "win_rate": 53.0,
-        "return_pct": 5490.73
+        "trades": 565,
+        "win_rate": 53.1,
+        "return_pct": 5569.0
       }
     ]
   },
@@ -9689,10 +9689,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T15:46:05",
-      "closed_at": null,
-      "realized_pct": 1.4
+      "closed_at": "2026-06-29T18:49:17",
+      "realized_pct": 1.4,
+      "result_pct": 1.4
     },
     {
       "id": "RSI70 · 15m|APEUSDT|2026-06-29 15:44:59.999000",
@@ -9900,6 +9901,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-29T18:32:14",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|MAGICUSDT|2026-06-29 18:44:59.999000",
+      "symbol": "MAGICUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0446478,
+      "stop": 0.0442587,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T18:47:29",
       "closed_at": null,
       "realized_pct": 0.0
     }
