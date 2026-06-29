@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-29T12:05:06",
+  "updated_at": "2026-06-29T12:18:56",
   "stats": {
-    "open": 30,
-    "closed": 541,
-    "win_rate": 52.5,
-    "profit_factor": 1.64,
-    "total_pct": 4919.22,
+    "open": 32,
+    "closed": 542,
+    "win_rate": 52.6,
+    "profit_factor": 1.65,
+    "total_pct": 4993.5,
     "avg_pct": 0.88,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 49,
-        "win_rate": 73.5,
-        "return_pct": 306.34,
+        "trades": 50,
+        "win_rate": 74.0,
+        "return_pct": 312.36,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 49,
-        "win_rate": 73.5,
-        "return_pct": 306.34,
+        "trades": 50,
+        "win_rate": 74.0,
+        "return_pct": 312.36,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 541,
-        "win_rate": 52.5,
-        "return_pct": 4919.22
+        "trades": 542,
+        "win_rate": 52.6,
+        "return_pct": 4993.5
       }
     ]
   },
@@ -9190,11 +9190,13 @@
       "timeframe": "15m",
       "entry": 0.01355,
       "stop": 0.01321827,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-29T07:01:09",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.58
     },
     {
       "id": "trendwave · 1h|GPSUSDT|2026-06-29 06:59:59.999000",
@@ -9412,9 +9414,55 @@
       "timeframe": "15m",
       "entry": 0.04409853,
       "stop": 0.04362149,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-06-29T11:33:10",
+      "closed_at": "2026-06-29T12:18:53",
+      "realized_pct": 1.48,
+      "result_pct": 1.48
+    },
+    {
+      "id": "RSI70 · 15m|ESPUSDT|2026-06-29 12:14:59.999000",
+      "symbol": "ESPUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06906,
+      "stop": 0.06681164,
       "hits": [],
       "status": "open",
-      "opened_at": "2026-06-29T11:33:10",
+      "opened_at": "2026-06-29T12:16:00",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|PROMUSDT|2026-06-29 12:14:59.999000",
+      "symbol": "PROMUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.149,
+      "stop": 1.11310538,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T12:16:02",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|MAGICUSDT|2026-06-29 12:14:59.999000",
+      "symbol": "MAGICUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0443434,
+      "stop": 0.04352949,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T12:17:28",
       "closed_at": null,
       "realized_pct": 0.0
     }
