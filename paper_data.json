@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-29T13:49:50",
+  "updated_at": "2026-06-29T14:04:59",
   "stats": {
-    "open": 31,
-    "closed": 549,
-    "win_rate": 52.8,
+    "open": 29,
+    "closed": 551,
+    "win_rate": 53.0,
     "profit_factor": 1.65,
-    "total_pct": 5305.04,
+    "total_pct": 5457.44,
     "avg_pct": 0.88,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 57,
-        "win_rate": 73.7,
-        "return_pct": 337.58,
+        "trades": 59,
+        "win_rate": 74.6,
+        "return_pct": 349.92,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 57,
-        "win_rate": 73.7,
-        "return_pct": 337.58,
+        "trades": 59,
+        "win_rate": 74.6,
+        "return_pct": 349.92,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 549,
-        "win_rate": 52.8,
-        "return_pct": 5305.04
+        "trades": 551,
+        "win_rate": 53.0,
+        "return_pct": 5457.44
       }
     ]
   },
@@ -7696,10 +7696,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T10:01:31",
-      "closed_at": null,
-      "realized_pct": 1.39
+      "closed_at": "2026-06-29T14:04:44",
+      "realized_pct": 1.39,
+      "result_pct": 1.39
     },
     {
       "id": "trendwave · 1h|GUSDT|2026-06-28 09:59:59.999000",
@@ -9367,10 +9368,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T10:01:26",
-      "closed_at": null,
-      "realized_pct": 1.41
+      "closed_at": "2026-06-29T14:04:52",
+      "realized_pct": 1.41,
+      "result_pct": 1.41
     },
     {
       "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 09:59:59.999000",
@@ -9549,11 +9551,13 @@
       "timeframe": "1h",
       "entry": 3.524,
       "stop": 3.27188554,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-29T13:01:36",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.67
     },
     {
       "id": "RSI70 · 15m|EPICUSDT|2026-06-29 13:14:59.999000",
