@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-29T23:33:33",
+  "updated_at": "2026-06-29T23:50:04",
   "stats": {
-    "open": 48,
+    "open": 49,
     "closed": 575,
     "win_rate": 52.9,
     "profit_factor": 1.64,
@@ -9454,11 +9454,13 @@
       "timeframe": "15m",
       "entry": 0.06906,
       "stop": 0.06681164,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-29T12:16:00",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.78
     },
     {
       "id": "RSI70 · 15m|PROMUSDT|2026-06-29 12:14:59.999000",
@@ -10237,6 +10239,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-29T23:17:03",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|AGLDUSDT|2026-06-29 23:44:59.999000",
+      "symbol": "AGLDUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2086692,
+      "stop": 0.20415877,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T23:47:42",
       "closed_at": null,
       "realized_pct": 0.0
     }
