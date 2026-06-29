@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-29T01:20:07",
+  "updated_at": "2026-06-29T01:34:18",
   "stats": {
     "open": 31,
-    "closed": 503,
-    "win_rate": 50.7,
-    "profit_factor": 1.45,
-    "total_pct": 1115.06,
+    "closed": 504,
+    "win_rate": 50.8,
+    "profit_factor": 1.46,
+    "total_pct": 1140.94,
     "avg_pct": 0.64,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 11,
-        "win_rate": 63.6,
-        "return_pct": -1.63,
+        "trades": 12,
+        "win_rate": 66.7,
+        "return_pct": 0.46,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 11,
-        "win_rate": 63.6,
-        "return_pct": -1.63,
+        "trades": 12,
+        "win_rate": 66.7,
+        "return_pct": 0.46,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 503,
-        "win_rate": 50.7,
-        "return_pct": 1115.06
+        "trades": 504,
+        "win_rate": 50.8,
+        "return_pct": 1140.94
       }
     ]
   },
@@ -8785,9 +8785,27 @@
       "timeframe": "15m",
       "entry": 0.00914633,
       "stop": 0.00876626,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-06-29T01:18:04",
+      "closed_at": "2026-06-29T01:34:17",
+      "realized_pct": 2.13,
+      "result_pct": 2.13
+    },
+    {
+      "id": "trendwave · 15m|GUSDT|2026-06-29 01:29:59.999000",
+      "symbol": "GUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00344956,
+      "stop": 0.00338105,
       "hits": [],
       "status": "open",
-      "opened_at": "2026-06-29T01:18:04",
+      "opened_at": "2026-06-29T01:32:42",
       "closed_at": null,
       "realized_pct": 0.0
     }
