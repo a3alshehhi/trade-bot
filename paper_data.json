@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-29T03:04:37",
+  "updated_at": "2026-06-29T03:20:16",
   "stats": {
-    "open": 35,
-    "closed": 507,
-    "win_rate": 51.1,
-    "profit_factor": 1.46,
-    "total_pct": 1178.53,
-    "avg_pct": 0.64,
+    "open": 34,
+    "closed": 508,
+    "win_rate": 51.2,
+    "profit_factor": 1.47,
+    "total_pct": 1220.98,
+    "avg_pct": 0.65,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 15,
-        "win_rate": 73.3,
-        "return_pct": 3.51,
+        "trades": 16,
+        "win_rate": 75.0,
+        "return_pct": 6.94,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 15,
-        "win_rate": 73.3,
-        "return_pct": 3.51,
+        "trades": 16,
+        "win_rate": 75.0,
+        "return_pct": 6.94,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 507,
-        "win_rate": 51.1,
-        "return_pct": 1178.53
+        "trades": 508,
+        "win_rate": 51.2,
+        "return_pct": 1220.98
       }
     ]
   },
@@ -8869,11 +8869,15 @@
       "timeframe": "15m",
       "entry": 0.00914927,
       "stop": 0.00898194,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-29T02:47:25",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-29T03:20:14",
+      "realized_pct": 3.32,
+      "result_pct": 3.32
     },
     {
       "id": "trendwave · 15m|EDUUSDT|2026-06-29 02:44:59.999000",
