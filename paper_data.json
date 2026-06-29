@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-29T12:18:56",
+  "updated_at": "2026-06-29T12:34:04",
   "stats": {
-    "open": 32,
-    "closed": 542,
-    "win_rate": 52.6,
+    "open": 30,
+    "closed": 544,
+    "win_rate": 52.8,
     "profit_factor": 1.65,
-    "total_pct": 4993.5,
+    "total_pct": 5218.56,
     "avg_pct": 0.88,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 50,
-        "win_rate": 74.0,
-        "return_pct": 312.36,
+        "trades": 52,
+        "win_rate": 75.0,
+        "return_pct": 330.58,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 50,
-        "win_rate": 74.0,
-        "return_pct": 312.36,
+        "trades": 52,
+        "win_rate": 75.0,
+        "return_pct": 330.58,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 542,
-        "win_rate": 52.6,
-        "return_pct": 4993.5
+        "trades": 544,
+        "win_rate": 52.8,
+        "return_pct": 5218.56
       }
     ]
   },
@@ -8975,12 +8975,14 @@
       "entry": 0.03595,
       "stop": 0.03429947,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T03:31:12",
-      "closed_at": null,
-      "realized_pct": 1.1
+      "closed_at": "2026-06-29T12:33:53",
+      "realized_pct": 3.6,
+      "result_pct": 3.6
     },
     {
       "id": "RSI70 · 1h|GASUSDT|2026-06-29 03:59:59.999000",
@@ -9460,11 +9462,15 @@
       "timeframe": "15m",
       "entry": 0.0443434,
       "stop": 0.04352949,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-29T12:17:28",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-29T12:34:03",
+      "realized_pct": 0.79,
+      "result_pct": 0.79
     }
   ]
 }

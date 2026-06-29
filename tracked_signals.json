@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-06-29 12:14:59.999000"
+    "last_bar": "2026-06-29 12:29:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -16913,14 +16913,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 03:29:59.999000",
-    "last_bar": "2026-06-29 12:14:59.999000",
+    "last_bar": "2026-06-29 12:29:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.03748,
+    "stopped": true,
+    "hi_seen": 0.0385,
     "lo_seen": 0.03498,
-    "created": "2026-06-29T03:31:12"
+    "created": "2026-06-29T03:31:12",
+    "exit_price": 0.03774838,
+    "close_card_sent": true,
+    "closed_at": "2026-06-29T12:33:53"
   },
   "RSI70 · 1h|GASUSDT|2026-06-29 03:59:59.999000": {
     "symbol": "GASUSDT",
@@ -17071,7 +17075,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 04:14:59.999000",
-    "last_bar": "2026-06-29 12:14:59.999000",
+    "last_bar": "2026-06-29 12:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0813,
@@ -17331,12 +17335,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 06:59:59.999000",
-    "last_bar": "2026-06-29 12:14:59.999000",
+    "last_bar": "2026-06-29 12:29:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.01372,
+    "hi_seen": 0.01374,
     "lo_seen": 0.01335,
     "created": "2026-06-29T07:01:09"
   },
@@ -17470,7 +17474,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 08:44:59.999000",
-    "last_bar": "2026-06-29 12:14:59.999000",
+    "last_bar": "2026-06-29 12:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0089,
@@ -17627,7 +17631,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 09:44:59.999000",
-    "last_bar": "2026-06-29 12:14:59.999000",
+    "last_bar": "2026-06-29 12:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0089,
@@ -17686,7 +17690,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 09:59:59.999000",
-    "last_bar": "2026-06-29 12:14:59.999000",
+    "last_bar": "2026-06-29 12:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0089,
@@ -17813,11 +17817,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 12:14:59.999000",
-    "last_bar": "2026-06-29 12:14:59.999000",
+    "last_bar": "2026-06-29 12:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.06906,
-    "lo_seen": 0.06906,
+    "hi_seen": 0.06928,
+    "lo_seen": 0.06887,
     "created": "2026-06-29T12:16:00"
   },
   "RSI70 · 15m|PROMUSDT|2026-06-29 12:14:59.999000": {
@@ -17845,11 +17849,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 12:14:59.999000",
-    "last_bar": "2026-06-29 12:14:59.999000",
+    "last_bar": "2026-06-29 12:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 1.149,
-    "lo_seen": 1.149,
+    "hi_seen": 1.152,
+    "lo_seen": 1.146,
     "created": "2026-06-29T12:16:02"
   },
   "trendwave · 15m|MAGICUSDT|2026-06-29 12:14:59.999000": {
@@ -17860,7 +17864,7 @@
     "entry": 0.0443434,
     "stop": 0.04352949,
     "init_stop": 0.04352949,
-    "cur_stop": 0.04352949,
+    "cur_stop": 0.0443434,
     "last_alert_stop": 0.04352949,
     "armed": false,
     "targets": [
@@ -17872,11 +17876,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 12:14:59.999000",
-    "last_bar": "2026-06-29 12:14:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.0443434,
+    "last_bar": "2026-06-29 12:29:59.999000",
+    "hits": [
+      1,
+      2
+    ],
+    "stopped": true,
+    "hi_seen": 0.0449,
     "lo_seen": 0.0443434,
-    "created": "2026-06-29T12:17:28"
+    "created": "2026-06-29T12:17:28",
+    "exit_price": 0.0448,
+    "close_card_sent": true,
+    "closed_at": "2026-06-29T12:34:03"
   }
 }
