@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-29T23:18:33",
+  "updated_at": "2026-06-29T23:33:33",
   "stats": {
-    "open": 49,
-    "closed": 574,
-    "win_rate": 53.0,
+    "open": 48,
+    "closed": 575,
+    "win_rate": 52.9,
     "profit_factor": 1.64,
-    "total_pct": 5856.79,
-    "avg_pct": 0.86,
+    "total_pct": 5822.84,
+    "avg_pct": 0.85,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 82,
-        "win_rate": 68.3,
-        "return_pct": 382.25,
+        "trades": 83,
+        "win_rate": 67.5,
+        "return_pct": 379.5,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 82,
-        "win_rate": 68.3,
-        "return_pct": 382.25,
+        "trades": 83,
+        "win_rate": 67.5,
+        "return_pct": 379.5,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 574,
-        "win_rate": 53.0,
-        "return_pct": 5856.79
+        "trades": 575,
+        "win_rate": 52.9,
+        "return_pct": 5822.84
       }
     ]
   },
@@ -9992,10 +9992,11 @@
       "entry": 0.08099853,
       "stop": 0.0805373,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T19:32:36",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-29T23:33:25",
+      "realized_pct": -0.57,
+      "result_pct": -0.57
     },
     {
       "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 19:44:59.999000",
