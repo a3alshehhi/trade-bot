@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-29T21:18:50",
+  "updated_at": "2026-06-29T21:33:47",
   "stats": {
-    "open": 45,
-    "closed": 569,
-    "win_rate": 52.9,
-    "profit_factor": 1.63,
-    "total_pct": 5303.12,
-    "avg_pct": 0.85,
+    "open": 43,
+    "closed": 571,
+    "win_rate": 53.1,
+    "profit_factor": 1.65,
+    "total_pct": 5940.01,
+    "avg_pct": 0.86,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 77,
-        "win_rate": 68.8,
-        "return_pct": 337.42,
+        "trades": 79,
+        "win_rate": 69.6,
+        "return_pct": 388.98,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 77,
-        "win_rate": 68.8,
-        "return_pct": 337.42,
+        "trades": 79,
+        "win_rate": 69.6,
+        "return_pct": 388.98,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 569,
-        "win_rate": 52.9,
-        "return_pct": 5303.12
+        "trades": 571,
+        "win_rate": 53.1,
+        "return_pct": 5940.01
       }
     ]
   },
@@ -9276,12 +9276,14 @@
       "entry": 0.00859853,
       "stop": 0.00838378,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T08:47:49",
-      "closed_at": null,
-      "realized_pct": 2.54
+      "closed_at": "2026-06-29T21:33:31",
+      "realized_pct": 6.03,
+      "result_pct": 6.03
     },
     {
       "id": "trendwave · 15m|EDUUSDT|2026-06-29 08:44:59.999000",
@@ -9650,12 +9652,14 @@
       "entry": 0.0086478,
       "stop": 0.0084192,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T15:03:18",
-      "closed_at": null,
-      "realized_pct": 2.24
+      "closed_at": "2026-06-29T21:33:36",
+      "realized_pct": 5.43,
+      "result_pct": 5.43
     },
     {
       "id": "trendwave · 15m|EDUUSDT|2026-06-29 14:59:59.999000",
