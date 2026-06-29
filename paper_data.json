@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-29T19:34:31",
+  "updated_at": "2026-06-29T19:49:03",
   "stats": {
-    "open": 41,
-    "closed": 565,
-    "win_rate": 53.1,
-    "profit_factor": 1.65,
-    "total_pct": 5569.0,
+    "open": 42,
+    "closed": 566,
+    "win_rate": 53.0,
+    "profit_factor": 1.64,
+    "total_pct": 5519.68,
     "avg_pct": 0.86,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 73,
-        "win_rate": 71.2,
-        "return_pct": 358.95,
+        "trades": 74,
+        "win_rate": 70.3,
+        "return_pct": 354.95,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 73,
-        "win_rate": 71.2,
-        "return_pct": 358.95,
+        "trades": 74,
+        "win_rate": 70.3,
+        "return_pct": 354.95,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 565,
-        "win_rate": 53.1,
-        "return_pct": 5569.0
+        "trades": 566,
+        "win_rate": 53.0,
+        "return_pct": 5519.68
       }
     ]
   },
@@ -9915,10 +9915,11 @@
       "entry": 0.0446478,
       "stop": 0.0442587,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T18:47:29",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-29T19:48:59",
+      "realized_pct": -0.87,
+      "result_pct": -0.87
     },
     {
       "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 18:59:59.999000",
@@ -9973,6 +9974,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-29T19:32:36",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 19:44:59.999000",
+      "symbol": "COOKIEUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00884927,
+      "stop": 0.00872673,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T19:47:22",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|XPLUSDT|2026-06-29 19:44:59.999000",
+      "symbol": "XPLUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.10419571,
+      "stop": 0.10219224,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T19:47:23",
       "closed_at": null,
       "realized_pct": 0.0
     }
