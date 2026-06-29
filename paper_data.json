@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-29T11:48:40",
+  "updated_at": "2026-06-29T12:05:06",
   "stats": {
-    "open": 32,
-    "closed": 539,
+    "open": 30,
+    "closed": 541,
     "win_rate": 52.5,
-    "profit_factor": 1.67,
-    "total_pct": 5629.78,
-    "avg_pct": 0.9,
+    "profit_factor": 1.64,
+    "total_pct": 4919.22,
+    "avg_pct": 0.88,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 47,
-        "win_rate": 74.5,
-        "return_pct": 363.87,
+        "trades": 49,
+        "win_rate": 73.5,
+        "return_pct": 306.34,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 47,
-        "win_rate": 74.5,
-        "return_pct": 363.87,
+        "trades": 49,
+        "win_rate": 73.5,
+        "return_pct": 306.34,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 539,
+        "trades": 541,
         "win_rate": 52.5,
-        "return_pct": 5629.78
+        "return_pct": 4919.22
       }
     ]
   },
@@ -8418,10 +8418,11 @@
       "entry": 0.0513,
       "stop": 0.04449651,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-28T20:16:41",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-29T12:04:52",
+      "realized_pct": -13.26,
+      "result_pct": -13.26
     },
     {
       "id": "RSI70 · 15m|FETUSDT|2026-06-28 20:29:59.999000",
@@ -9293,10 +9294,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T09:01:37",
-      "closed_at": null,
-      "realized_pct": 0.99
+      "closed_at": "2026-06-29T12:05:02",
+      "realized_pct": 0.99,
+      "result_pct": 0.99
     },
     {
       "id": "trendwave · 15m|MAGICUSDT|2026-06-29 08:59:59.999000",
