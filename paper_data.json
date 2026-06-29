@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-29T01:05:34",
+  "updated_at": "2026-06-29T01:20:07",
   "stats": {
     "open": 31,
-    "closed": 502,
-    "win_rate": 50.6,
+    "closed": 503,
+    "win_rate": 50.7,
     "profit_factor": 1.45,
-    "total_pct": 1111.67,
+    "total_pct": 1115.06,
     "avg_pct": 0.64,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 10,
-        "win_rate": 60.0,
-        "return_pct": -1.91,
+        "trades": 11,
+        "win_rate": 63.6,
+        "return_pct": -1.63,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 10,
-        "win_rate": 60.0,
-        "return_pct": -1.91,
+        "trades": 11,
+        "win_rate": 63.6,
+        "return_pct": -1.63,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 502,
-        "win_rate": 50.6,
-        "return_pct": 1111.67
+        "trades": 503,
+        "win_rate": 50.7,
+        "return_pct": 1115.06
       }
     ]
   },
@@ -8753,11 +8753,15 @@
       "timeframe": "15m",
       "entry": 0.0239756,
       "stop": 0.02346712,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-29T01:03:20",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-29T01:20:05",
+      "realized_pct": 0.28,
+      "result_pct": 0.28
     },
     {
       "id": "trendwave · 1h|ACTUSDT|2026-06-29 00:59:59.999000",
@@ -8770,6 +8774,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-29T01:04:09",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 01:14:59.999000",
+      "symbol": "COOKIEUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00914633,
+      "stop": 0.00876626,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T01:18:04",
       "closed_at": null,
       "realized_pct": 0.0
     }
