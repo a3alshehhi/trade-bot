@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-29T20:03:50",
+  "updated_at": "2026-06-29T20:19:30",
   "stats": {
-    "open": 43,
+    "open": 44,
     "closed": 567,
     "win_rate": 52.9,
     "profit_factor": 1.64,
@@ -10000,11 +10000,13 @@
       "timeframe": "15m",
       "entry": 0.10419571,
       "stop": 0.10219224,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-29T19:47:23",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.1
     },
     {
       "id": "RSI70 · 1h|SOLUSDT|2026-06-29 19:59:59.999000",
@@ -10031,6 +10033,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-29T20:02:18",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 20:14:59.999000",
+      "symbol": "COOKIEUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00884927,
+      "stop": 0.00872993,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T20:17:31",
       "closed_at": null,
       "realized_pct": 0.0
     }
