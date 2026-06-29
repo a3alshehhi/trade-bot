@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-29T21:11:38",
+  "updated_at": "2026-06-29T21:18:50",
   "stats": {
-    "open": 43,
+    "open": 45,
     "closed": 569,
     "win_rate": 52.9,
     "profit_factor": 1.63,
@@ -9275,11 +9275,13 @@
       "timeframe": "15m",
       "entry": 0.00859853,
       "stop": 0.00838378,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-29T08:47:49",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 2.54
     },
     {
       "id": "trendwave · 15m|EDUUSDT|2026-06-29 08:44:59.999000",
@@ -9354,11 +9356,13 @@
       "timeframe": "15m",
       "entry": 0.00869853,
       "stop": 0.00849173,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-29T09:48:05",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 2.29
     },
     {
       "id": "RSI70 · 1h|PYTHUSDT|2026-06-29 09:59:59.999000",
@@ -9385,11 +9389,13 @@
       "timeframe": "15m",
       "entry": 0.00864927,
       "stop": 0.00849589,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-29T10:02:35",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 2.59
     },
     {
       "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 10:44:59.999000",
@@ -9643,11 +9649,13 @@
       "timeframe": "15m",
       "entry": 0.0086478,
       "stop": 0.0084192,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-29T15:03:18",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 2.24
     },
     {
       "id": "trendwave · 15m|EDUUSDT|2026-06-29 14:59:59.999000",
@@ -9829,11 +9837,13 @@
       "timeframe": "15m",
       "entry": 0.0087478,
       "stop": 0.00851473,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-29T17:17:31",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.99
     },
     {
       "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 17:29:59.999000",
@@ -9843,11 +9853,13 @@
       "timeframe": "15m",
       "entry": 0.0087478,
       "stop": 0.00851368,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-29T17:32:22",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.99
     },
     {
       "id": "RSI70 · 1h|EGLDUSDT|2026-06-29 17:59:59.999000",
@@ -10063,6 +10075,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-29T21:01:08",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|CITYUSDT|2026-06-29 21:14:59.999000",
+      "symbol": "CITYUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.38798533,
+      "stop": 0.38505078,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T21:17:08",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 21:14:59.999000",
+      "symbol": "COOKIEUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00889853,
+      "stop": 0.00873175,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T21:17:09",
       "closed_at": null,
       "realized_pct": 0.0
     }
