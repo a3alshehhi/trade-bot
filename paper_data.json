@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-06-28T23:48:42",
+  "updated_at": "2026-06-29T00:00:27",
   "stats": {
-    "open": 36,
-    "closed": 492,
-    "win_rate": 50.4,
+    "open": 35,
+    "closed": 493,
+    "win_rate": 50.3,
     "profit_factor": 1.46,
-    "total_pct": 1135.22,
+    "total_pct": 1099.4,
     "avg_pct": 0.65,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-06-29",
+        "trades": 1,
+        "win_rate": 0.0,
+        "return_pct": -2.9,
+        "week": "2026-W27",
+        "month": "2026-06"
+      },
       {
         "key": "2026-06-28",
         "trades": 113,
@@ -78,6 +86,13 @@
     ],
     "weekly": [
       {
+        "key": "2026-W27",
+        "trades": 1,
+        "win_rate": 0.0,
+        "return_pct": -2.9,
+        "month": "2026-06"
+      },
+      {
         "key": "2026-W26",
         "trades": 486,
         "win_rate": 50.4,
@@ -95,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 492,
-        "win_rate": 50.4,
-        "return_pct": 1135.22
+        "trades": 493,
+        "win_rate": 50.3,
+        "return_pct": 1099.4
       }
     ]
   },
@@ -4212,10 +4227,11 @@
       "entry": 0.17008827,
       "stop": 0.16515517,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T12:03:41",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-29T00:00:03",
+      "realized_pct": -2.9,
+      "result_pct": -2.9
     },
     {
       "id": "trendwave · 4h|NEARUSDT|2026-06-26 11:59:59.999000",
@@ -8501,11 +8517,13 @@
       "timeframe": "15m",
       "entry": 0.0300478,
       "stop": 0.02974937,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-28T22:02:29",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.15
     },
     {
       "id": "trendwave · 15m|ONGUSDT|2026-06-28 21:59:59.999000",
@@ -8564,11 +8582,13 @@
       "timeframe": "15m",
       "entry": 0.03024487,
       "stop": 0.02974283,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-28T22:32:29",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.82
     },
     {
       "id": "trendwave · 15m|SUSDT|2026-06-28 22:29:59.999000",
