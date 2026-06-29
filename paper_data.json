@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-29T16:49:38",
+  "updated_at": "2026-06-29T17:03:42",
   "stats": {
-    "open": 31,
+    "open": 33,
     "closed": 562,
     "win_rate": 53.0,
     "profit_factor": 1.64,
@@ -9541,11 +9541,13 @@
       "timeframe": "1h",
       "entry": 1.983,
       "stop": 1.8779861,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-29T13:01:35",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.23
     },
     {
       "id": "RSI70 · 1h|ORDIUSDT|2026-06-29 12:59:59.999000",
@@ -9781,6 +9783,34 @@
       "closed_at": "2026-06-29T16:34:58",
       "realized_pct": -2.04,
       "result_pct": -2.04
+    },
+    {
+      "id": "RSI70 · 1h|ARUSDT|2026-06-29 16:59:59.999000",
+      "symbol": "ARUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 2.014,
+      "stop": 1.89136789,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T17:01:10",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|XPLUSDT|2026-06-29 16:59:59.999000",
+      "symbol": "XPLUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.09810967,
+      "stop": 0.09426253,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T17:02:49",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
