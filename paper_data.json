@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-29T20:49:55",
+  "updated_at": "2026-06-29T21:03:51",
   "stats": {
-    "open": 44,
-    "closed": 567,
+    "open": 43,
+    "closed": 569,
     "win_rate": 52.9,
-    "profit_factor": 1.64,
-    "total_pct": 5316.81,
+    "profit_factor": 1.63,
+    "total_pct": 5303.12,
     "avg_pct": 0.85,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-29",
-        "trades": 75,
-        "win_rate": 69.3,
-        "return_pct": 338.53,
+        "trades": 77,
+        "win_rate": 68.8,
+        "return_pct": 337.42,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -87,9 +87,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 75,
-        "win_rate": 69.3,
-        "return_pct": 338.53,
+        "trades": 77,
+        "win_rate": 68.8,
+        "return_pct": 337.42,
         "month": "2026-06"
       },
       {
@@ -110,9 +110,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 567,
+        "trades": 569,
         "win_rate": 52.9,
-        "return_pct": 5316.81
+        "return_pct": 5303.12
       }
     ]
   },
@@ -9888,10 +9888,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T18:32:12",
-      "closed_at": null,
-      "realized_pct": 2.41
+      "closed_at": "2026-06-29T21:03:42",
+      "realized_pct": 2.41,
+      "result_pct": 2.41
     },
     {
       "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 18:29:59.999000",
@@ -9945,10 +9946,11 @@
       "entry": 0.20411407,
       "stop": 0.19881656,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T19:17:27",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-29T21:03:46",
+      "realized_pct": -2.6,
+      "result_pct": -2.6
     },
     {
       "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 19:29:59.999000",
@@ -10047,6 +10049,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-29T20:17:31",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|CHZUSDT|2026-06-29 20:59:59.999000",
+      "symbol": "CHZUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.01897,
+      "stop": 0.01788747,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-29T21:01:08",
       "closed_at": null,
       "realized_pct": 0.0
     }
