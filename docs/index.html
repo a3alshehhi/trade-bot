@@ -237,7 +237,7 @@ async function refreshPrices(){
 async function loadServer(){
   let data;
   try{
-    const r = await fetch('paper_data.json?t='+Date.now());
+    const r = await fetch('https://raw.githubusercontent.com/a3alshehhi/trade-bot/main/paper_data.json?t='+Date.now());
     data = await r.json();
   }catch(e){
     document.getElementById('updated').textContent = 'تعذّر تحميل بيانات الخادم';
