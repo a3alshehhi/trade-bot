@@ -19380,5 +19380,32 @@
     "hi_seen": 0.00894927,
     "lo_seen": 0.00894927,
     "created": "2026-06-29T23:02:52"
+  },
+  "trendwave · 15m|ORDIUSDT|2026-06-29 23:14:59.999000": {
+    "symbol": "ORDIUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 3237,
+    "entry": 3.79673,
+    "stop": 3.69769826,
+    "init_stop": 3.69769826,
+    "cur_stop": 3.69769826,
+    "last_alert_stop": 3.69769826,
+    "armed": false,
+    "targets": [
+      3.903912,
+      3.953
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-29 23:14:59.999000",
+    "last_bar": "2026-06-29 23:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 3.79673,
+    "lo_seen": 3.79673,
+    "created": "2026-06-29T23:17:03"
   }
 }
