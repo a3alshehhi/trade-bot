@@ -16384,5 +16384,59 @@
     "exit_price": 0.003475,
     "close_card_sent": true,
     "closed_at": "2026-06-29T00:34:20"
+  },
+  "trendwave · 15m|ACTUSDT|2026-06-29 00:44:59.999000": {
+    "symbol": "ACTUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2916,
+    "entry": 0.01112531,
+    "stop": 0.01056761,
+    "init_stop": 0.01056761,
+    "cur_stop": 0.01056761,
+    "last_alert_stop": 0.01056761,
+    "armed": false,
+    "targets": [
+      0.01123402,
+      0.011365
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-29 00:44:59.999000",
+    "last_bar": "2026-06-29 00:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01112531,
+    "lo_seen": 0.01112531,
+    "created": "2026-06-29T00:47:24"
+  },
+  "trendwave · 15m|CELOUSDT|2026-06-29 00:44:59.999000": {
+    "symbol": "CELOUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 2917,
+    "entry": 0.06686833,
+    "stop": 0.06499924,
+    "init_stop": 0.06499924,
+    "cur_stop": 0.06499924,
+    "last_alert_stop": 0.06499924,
+    "armed": false,
+    "targets": [
+      0.06705412,
+      0.06725
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-29 00:44:59.999000",
+    "last_bar": "2026-06-29 00:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.06686833,
+    "lo_seen": 0.06686833,
+    "created": "2026-06-29T00:47:25"
   }
 }
