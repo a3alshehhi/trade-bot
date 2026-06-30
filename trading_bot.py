@@ -8,6 +8,7 @@
 ويبحث تلقائياً في الأسهم الأمريكية والعملات الرقمية،
 ويحلّلها باستراتيجية فنية متعددة العوامل،
 ثم يعطيك إشارات دخول/خروج مرتّبة مع الأسباب ووقف الخسارة والهدف.
+
 مصادر البيانات (مجانية، بدون مفاتيح):
   - الكريبتو : Binance Public API  (أزواج USDT)
   - الأسهم   : Yahoo Finance عبر مكتبة yfinance
@@ -1920,27 +1921,6 @@ def backtest_symbol_osob(item, kind, cfg):
     return trades
 
 
-def backtest_symbol_trendwave(item, kind, cfg):
-    """استراتيجية مستقلة «trendwave» — الإعداد الرابح الموحّد على كل الفريمات:
-
-      • الإعداد: RSI(21) ينزل تحت 20 ثم يتجاوز 80 (موجة دفع صاعدة مؤكَّدة).
-      • الدخول: سوقي مباشر عند نهاية الموجة + تعديل بمستويات فيبو تصحيحية (DCA).
-      • فلتر الاتجاه: إغلاق فوق متوسط 200 على *فريم أعلى* (1h→4h، 15m→1h، 4h/1d→1d).
-      • الخروج: إغلاق كامل عند الهدف الأول (أهداف فيبو امتدادية) أو وقف الخسارة — بلا تتبّع ولا دايفرجنس.
-
-    مبنيّة فوق محرّك osob لكنها مُقدَّمة كاستراتيجية مستقلة بإعداداتها المثبّتة.
-    نتائج الباك-تست الحقيقية (Binance): رابحة على 1d و4h و1h."""
-    c = dict(cfg)
-    c["force_direct"] = True      # دخول مباشر على كل الفريمات (بما فيها 1h/15m)
-    c["no_div"] = True            # بلا خروج دايفرجنس
-    c["tp1_exit"] = True          # خروج كامل عند الهدف الأول (بدل الوقف المتحرك)
-    c["trend_filter"] = True      # فلتر اتجاه مفعّل
-    c["htf_trend"] = True         # من فريم أعلى
-    c.setdefault("trail_buf", 0.5)
-    c.setdefault("trail_arm", 1.0)
-    return backtest_symbol_osob(item, kind, c)
-
-
 def _simulate_choch_entry(df, i_lock, fib_levels, stop, targets, hold, cost, wait=None):
     """دخول سلّمي عند 3 مستويات فيبو بعد CHoCH + وقف متحرك (لا هدف ثابت).
     الوقف يرتفع تحت كل قاع محوري مؤكَّد بعد ربح ≥ 1R.
@@ -1954,8 +1934,9 @@ def _simulate_choch_entry(df, i_lock, fib_levels, stop, targets, hold, cost, wai
     close_arr = df["close"].values
     atr_arr   = atr(df, 14).values
 
-    top = fib_levels[0]
+    top = fib_levels[0]   # أعلى مستوى فيبو — أول ملء
 
+    # ─── انتظر أول لمسة لأعلى مستوى خلال نافذة الانتظار ───
     j0 = None
     for j in range(i_lock + 1, min(i_lock + 1 + wait, n)):
         if low_arr[j] <= top:
@@ -1966,8 +1947,8 @@ def _simulate_choch_entry(df, i_lock, fib_levels, stop, targets, hold, cost, wai
 
     filled     = []
     nxt        = 0
-    cur_stop   = stop
-    armed      = False
+    cur_stop   = stop          # الوقف الحالي (يرتفع مع الحركة)
+    armed      = False         # يُفعَّل التتبّع بعد ربح ≥ 1R
     end        = min(j0 + 1 + hold, n)
 
     def _avg():
@@ -1977,6 +1958,7 @@ def _simulate_choch_entry(df, i_lock, fib_levels, stop, targets, hold, cost, wai
         lo = low_arr[j]
         hi = high_arr[j]
 
+        # ملء مستويات الفيبو
         while nxt < len(fib_levels) and lo <= fib_levels[nxt]:
             filled.append(fib_levels[nxt])
             nxt += 1
@@ -1985,17 +1967,20 @@ def _simulate_choch_entry(df, i_lock, fib_levels, stop, targets, hold, cost, wai
             continue
 
         avg  = _avg()
-        risk = avg - stop
+        risk = avg - stop      # المخاطرة الأصلية (ثابتة للـR)
         if risk <= 0:
             return None
         cost_r = cost * avg / risk
 
+        # وقف الخسارة
         if lo <= cur_stop:
             return (cur_stop - avg) / risk - cost_r, "trail_stop", j0
 
+        # تفعيل التتبّع بعد ربح ≥ 1R
         if not armed and (hi - avg) >= risk:
             armed = True
 
+        # رفع الوقف تحت كل قاع محوري مؤكَّد (2 شموع يمين+يسار)
         k = j - 2
         if armed and k - 2 >= j0 and k + 2 < n:
             if (low_arr[k] <= low_arr[k-1] and low_arr[k] <= low_arr[k-2] and
@@ -2005,6 +1990,7 @@ def _simulate_choch_entry(df, i_lock, fib_levels, stop, targets, hold, cost, wai
                 if new_stop > cur_stop and new_stop < close_arr[j]:
                     cur_stop = new_stop
 
+    # انتهت مدة الإمساك
     avg  = _avg() if filled else top
     risk = avg - stop
     if risk <= 0:
@@ -2013,20 +1999,22 @@ def _simulate_choch_entry(df, i_lock, fib_levels, stop, targets, hold, cost, wai
     return (close_arr[end - 1] - avg) / risk - cost_r, "time", j0
 
 
-def backtest_symbol_choch(item, kind, cfg):
-    """استراتيجية CHoCH (تغيير هيكل السوق) المستقلة:
-      1. RSI(21) < 20 ثم > 80 (موجة شرائية) → تخفت الموجة.
-      2. قاع محوري مؤكَّد بعد الموجة = HL.
-      3. CHoCH: إغلاق فوق h1 بـ0.5%+ بشمعة قوية (body>=0.5*ATR) + RSI>50 + MA200.
-      4. الدخول: 3 مستويات فيبو (0.382/0.5/0.618) تراجع من HH نحو HL.
-      5. الوقف متحرك: يرتفع تحت كل قاع محوري بعد ربح >= 1R.
-    يدعم الفريمات: 15m / 1h / 4h."""
-    sym   = item["symbol"]
-    hold  = cfg.get("bt_hold", 40)
-    bars  = cfg.get("bt_bars", 365)
-    cost  = cfg.get("cost", 0.0)
-    os_th = cfg.get("rsi_os", 20.0)
-    ob_th = cfg.get("rsi_ob", 80.0)
+def backtest_symbol_trendwave(item, kind, cfg):
+    """استراتيجية trendwave مع شرط CHoCH (تغيير هيكل السوق):
+
+      1. موجة RSI(21): ينزل تحت 20 ثم يتجاوز 80 (موجة دفع مؤكَّدة) → تخفت الموجة.
+      2. ينتظر قاع محوري مؤكَّد بعد الموجة = HL (Higher Low).
+      3. CHoCH: أول إغلاق فوق قمة الموجة (peak) + فوق MA200 (نفس الفريم) + RSI21≥70 = HH.
+      4. الدخول: 3 مستويات فيبو للتراجع من HH نحو HL (0.382 / 0.5 / 0.618).
+      5. الوقف: تحت HL − 0.5×ATR.
+      6. الهدف: HH + 0.382×(HH−HL) (امتداد).
+    """
+    sym = item["symbol"]
+    hold      = cfg.get("bt_hold", 40)
+    bars      = cfg.get("bt_bars", 365)
+    cost      = cfg.get("cost", 0.0)
+    os_th     = cfg.get("rsi_os", 20.0)
+    ob_th     = cfg.get("rsi_ob", 80.0)
 
     df = _bt_fetch_df(sym, kind, cfg)
     if df is None or len(df) < 120:
@@ -2040,24 +2028,21 @@ def backtest_symbol_choch(item, kind, cfg):
     rsi21 = rsi(df["close"], 21).values
     atrs  = atr(df, 14).values
 
-    htf = {"1h": "4h", "15m": "1h", "4h": "1D", "1d": "1D"}.get(cfg.get("timeframe"), "1D")
-    s  = df.set_index("date")["close"].resample(htf).last().dropna()
-    sm = s.rolling(200).mean().dropna().reset_index()
-    sm.columns = ["date", "ma"]
-    sma200 = (pd.merge_asof(df[["date"]].copy(), sm, on="date")["ma"].values
-              if len(sm) else np.full(n, np.nan))
-
-    sma200_same = (df["close"].rolling(200).mean().values
-                   if cfg.get("timeframe") == "15m" else np.full(n, np.nan))
+    # ─── MA200 على نفس الفريم (لكل الفريمات) ───
+    sma200 = df["close"].rolling(200).mean().values
+    sma200_same = np.full(n, np.nan)            # لم يعد مستخدماً (الفلتر صار على نفس الفريم)
 
     warmup = 60
     start  = max(warmup, n - bars)
     trades = []
 
-    state   = 0
-    ref_low = peak = None
-    pk_idx  = fade_idx = None
-    hl      = hl_idx = h1 = None
+    # ─── آلة الحالات ───
+    # 0=انتظار | 1=RSI<os (بناء الموجة) | 2=RSI>ob (موجة شرائية)
+    # 3=بحث HL بعد خفوت الموجة | 4=HL مؤكَّد، بحث CHoCH
+    state    = 0
+    ref_low  = peak = None
+    pk_idx   = fade_idx = None
+    hl       = hl_idx = h1 = None
 
     i = start
     while i < n - 1:
@@ -2078,28 +2063,33 @@ def backtest_symbol_choch(item, kind, cfg):
 
         elif state == 2:
             if high[i] > peak: peak = high[i]; pk_idx = i
-            if r < ob_th:
+            if r < ob_th:              # انتهت الموجة → ابحث عن HL
                 state    = 3
                 fade_idx = i
                 hl       = None
                 hl_idx   = None
 
         elif state == 3:
+            # موجة جديدة قبل تشكّل HL → ابدأ من جديد
             if r < os_th:
                 state = 1
                 ref_low = low[i]; peak = high[i]; pk_idx = i
                 hl = hl_idx = None
                 i += 1
                 continue
+            # تحقّق من قاع محوري مؤكَّد (2 شموع يمين + يسار)
             if (i >= fade_idx + 2) and (i <= n - 3):
                 if (low[i] <= low[i - 1] and low[i] <= low[i - 2] and
                         low[i] <= low[i + 1] and low[i] <= low[i + 2]):
                     hl     = float(low[i])
                     hl_idx = i
-                    h1     = float(np.max(high[fade_idx:hl_idx + 1]))
+                    # h1 = أعلى قمة في منطقة التصحيح (من خفوت الموجة حتى HL)
+                    # CHoCH = كسر h1 (لا يشترط كسر قمة الموجة الأصلية)
+                    h1 = float(np.max(high[fade_idx:hl_idx + 1]))
                     state  = 4
 
         elif state == 4:
+            # موجة جديدة قبل CHoCH → أعد الإعداد
             if r < os_th:
                 state = 1
                 ref_low = low[i]; peak = high[i]; pk_idx = i
@@ -2107,21 +2097,23 @@ def backtest_symbol_choch(item, kind, cfg):
                 i += 1
                 continue
 
-            m        = sma200[i] if sma200 is not None else np.nan
-            m_same   = sma200_same[i]
-            trend_ok = (np.isnan(m) or close[i] > m) and (np.isnan(m_same) or close[i] > m_same)
+            m         = sma200[i] if sma200 is not None else np.nan
+            m_same    = sma200_same[i]
+            trend_ok  = (np.isnan(m) or close[i] > m) and (np.isnan(m_same) or close[i] > m_same)
 
-            atrv_i        = atrs[i] if not np.isnan(atrs[i]) else close[i] * 0.02
-            body_i        = abs(close[i] - open_[i])
+            atrv_i    = atrs[i] if not np.isnan(atrs[i]) else close[i] * 0.02
+            body_i    = abs(close[i] - open_[i])
             strong_candle = body_i >= 0.5 * atrv_i
-            rsi_ok        = r > 50
+            rsi_ok    = r >= 70
 
             if close[i] > h1 * 1.005 and strong_candle and rsi_ok and trend_ok:
+                # ─── CHoCH مؤكَّد ───
                 hh   = float(close[i])
                 move = hh - hl
                 if move > 0:
                     atrv = atrs[i] if not np.isnan(atrs[i]) else close[i] * 0.02
 
+                    # مستويات الدخول (تراجع فيبو من HH نحو HL)
                     fib_entries = sorted([
                         round(hh - 0.382 * move, 8),
                         round(hh - 0.500 * move, 8),
@@ -2155,11 +2147,23 @@ def backtest_symbol_choch(item, kind, cfg):
                             ref_low = peak = hl = hl_idx = h1 = None
                             continue
 
-            state   = 0
-            ref_low = peak = hl = hl_idx = h1 = None
+                state   = 0
+                ref_low = peak = hl = hl_idx = h1 = None
 
         i += 1
     return trades
+
+
+def backtest_symbol_choch(item, kind, cfg):
+    """استراتيجية CHoCH (تغيير هيكل السوق) المستقلة — مبنية على موجة RSI:
+      1. RSI(21) < 20 ثم > 80 → تخفت الموجة.
+      2. قاع محوري مؤكَّد بعد الموجة = HL.
+      3. CHoCH: إغلاق فوق h1 بـ0.5%+ بشمعة قوية + RSI>50 + MA200.
+      4. الدخول: 3 مستويات فيبو (0.382/0.5/0.618) تراجع من HH نحو HL.
+      5. الوقف متحرك: يرتفع تحت كل قاع محوري بعد ربح ≥ 1R.
+    يدعم الفريمات: 15m / 1h / 4h."""
+    # مطابق لـ backtest_symbol_trendwave (المحلي) مع إزالة قيد الفريم
+    return backtest_symbol_trendwave(item, kind, cfg)
 
 
 def backtest_symbol_os_multi(item, kind, cfg):
@@ -2664,6 +2668,7 @@ def run_backtest(cfg, watchlist_path, out_dir):
     print()
 
     if cfg.get("choch"):
+        # CHoCH: تدعم 15m / 1h / 4h
         if cfg.get("timeframe") not in ("15m", "1h", "4h"):
             print(f"⚠️  choch يعمل على 15m/1h/4h — الفريم ({cfg.get('timeframe')}) غير مدعوم.")
             return []
@@ -2672,13 +2677,17 @@ def run_backtest(cfg, watchlist_path, out_dir):
         print(f"   RSI21<20→>80 → خفوت → HL محوري → كسر h1 بشمعة قوية + RSI>50 + MA200")
         print(f"   دخول: فيبو 0.382/0.5/0.618 | وقف متحرك بعد 1R")
     elif cfg.get("trendwave"):
+        # trendwave يعمل على 1h و4h فقط
+        if cfg.get("timeframe") not in ("1h", "4h"):
+            print(f"⚠️  trendwave يعمل على 1h/4h فقط — الفريم ({cfg.get('timeframe')}) غير مدعوم. استخدم --timeframe 1h أو 4h")
+            return []
         bt_fn = backtest_symbol_trendwave
         _tb = cfg.get("trail_buf", 0.5); _ta = cfg.get("trail_arm", 1.0)
         if _tb == 0.25: _tb = 0.5
         if _ta == 0.0: _ta = 1.0
-        print("🌟 استراتيجية مستقلة: trendwave (الإعداد الرابح الموحّد)")
-        print(f"   RSI21<{cfg.get('rsi_os',20.0):.0f} → >{cfg.get('rsi_ob',80.0):.0f} → دخول سوقي مباشر + DCA فيبو")
-        print(f"   🔎 فلتر اتجاه من فريم أعلى | خروج: وقف متحرك فقط ({_tb}×ATR، مؤجّل {_ta}×المخاطرة)")
+        print("🌟 استراتيجية trendwave + CHoCH")
+        print(f"   RSI21<{cfg.get('rsi_os',20.0):.0f}→>{cfg.get('rsi_ob',80.0):.0f} → خفوت الموجة → HL محوري → CHoCH (close>peak + MA200)")
+        print(f"   دخول: 3 مستويات فيبو (0.382/0.5/0.618) تراجع من HH | وقف: تحت HL | هدف: HH+0.382×حركة")
     elif cfg.get("osob"):
         bt_fn = backtest_symbol_osob
         _direct = cfg.get("force_direct") or cfg.get("timeframe") in ("1d", "4h")
@@ -3139,38 +3148,35 @@ def _fib_dca_ladder(entry, peak, ref_low, imp):
 
 
 def detect_trendwave_signal(df, cfg):
-    """إشارة دخول حيّة لاستراتيجية trendwave عند آخر شمعة *مغلقة*:
-    RSI(21)<20 ثم >80 (موجة دفع) → بعد خفوت الموجة *ننتظر تشكُّل قاع محوري مؤكَّد*
-    (شمعة أدنى من شمعتين على كل جانب) ثم نُصدر الإشارة، بشرط الإغلاق فوق متوسط 200
-    على *فريم أعلى* (1h→4h، 15m→1h، 4h/1d→يومي).
-    لا دخول مباشر: سلّم دخول من القاع حتى ارتداد 0.236 للحركة (القمة→القاع)،
-    والوقف تحت القاع المؤكَّد، والأهداف ارتداد فيبو تصحيحي 0.382 ثم 0.5.
+    """إشارة دخول حيّة لاستراتيجية trendwave مع شرط CHoCH (تغيير هيكل السوق):
+
+    1. RSI(21)<20 ثم >80 (موجة دفع) → تخفت الموجة.
+    2. ينتظر قاع محوري مؤكَّد (HL) بعد الموجة (2 شموع يسار + يمين).
+    3. CHoCH: أول إغلاق فوق قمة الموجة (peak) + فوق MA200 (نفس الفريم) + RSI21≥70 = HH.
+    4. الدخول: 3 مستويات فيبو (0.382 / 0.5 / 0.618) تراجع من HH نحو HL.
+    5. الوقف: تحت HL − 0.5×ATR.
+    6. الأهداف: امتداد فيبو فوق HH (0.382 و 0.618 من الحركة HL→HH).
     يرجع dict أو None."""
     os_th = cfg.get("rsi_os", 20.0)
     ob_th = cfg.get("rsi_ob", 80.0)
     if df is None or len(df) < 60:
         return None
     df = df.reset_index(drop=True)
-    n = len(df)
+    n     = len(df)
     close = df["close"].values
-    high = df["high"].values
-    low = df["low"].values
-    r = rsi(df["close"], 21).values
-    a = atr(df, 14).values
-    # فلتر الاتجاه من فريم أعلى
-    htf = {"1h": "4h", "15m": "1h", "4h": "1D", "1d": "1D"}.get(cfg.get("timeframe"), "1D")
-    s = df.set_index("date")["close"].resample(htf).last().dropna()
-    sm = s.rolling(200).mean().dropna().reset_index()
-    sm.columns = ["date", "ma"]
-    sma = (pd.merge_asof(df[["date"]].copy(), sm, on="date")["ma"].values
-           if len(sm) else np.full(n, np.nan))
+    high  = df["high"].values
+    low   = df["low"].values
+    r     = rsi(df["close"], 21).values
+    a_arr = atr(df, 14).values
 
-    # آلة الحالات: نلتقط آخر موجة دفع «خَفَتت» (RSI تجاوز 80 ثم عاد تحته).
-    # خلافاً للنسخة القديمة، لا ندخل فور خفوت الموجة، بل ننتظر تشكُّل القاع.
-    state = 0
-    ref_low = peak = None
+    # ─── MA200 على نفس الفريم (لكل الفريمات) ───
+    sma = df["close"].rolling(200).mean().values
+
+    # ─── آلة الحالات: نلتقط آخر موجة دفع «خَفَتت» ───
+    state    = 0
+    ref_low  = peak = None
     peak_idx = None
-    faded = None                                # (peak_idx, ref_low, peak) لآخر موجة خفتت
+    faded    = None          # (peak_idx, ref_low, peak, fade_idx)
     for i in range(1, n):
         ri = r[i]
         if np.isnan(ri):
@@ -3179,64 +3185,101 @@ def detect_trendwave_signal(df, cfg):
             if ri < os_th:
                 state = 1; ref_low = low[i]; peak = high[i]; peak_idx = i
         elif state == 1:
-            if low[i] < ref_low:
-                ref_low = low[i]
-            if high[i] > peak:
-                peak = high[i]; peak_idx = i
-            if ri > ob_th:
-                state = 2
+            if low[i]  < ref_low: ref_low  = low[i]
+            if high[i] > peak:    peak = high[i]; peak_idx = i
+            if ri > ob_th: state = 2
         elif state == 2:
-            if high[i] > peak:
-                peak = high[i]; peak_idx = i
-            if ri < ob_th:                     # خفوت الموجة → نبدأ انتظار القاع
-                faded = (peak_idx, ref_low, peak)
+            if high[i] > peak: peak = high[i]; peak_idx = i
+            if ri < ob_th:                      # خفوت الموجة
+                faded = (peak_idx, ref_low, peak, i)
                 state = 0; ref_low = peak = None; peak_idx = None
 
     if not faded:
         return None
-    pk_idx, rl, pk = faded
+    pk_idx, rl, pk, fade_idx = faded
 
-    # ننتظر تشكُّل «قاع محوري مؤكَّد» بعد القمة: شمعة قاعها أدنى من شمعتين على كل جانب.
-    # التأكيد يحتاج شمعتين بعد القاع، فالقاع المؤكَّد حديثاً يقع عند المؤشر n-3.
-    piv = n - 3
-    if piv <= pk_idx + 1:                       # لا قاع مؤكَّد بعد القمة بعد
-        return None
-    seg = low[piv - 2:piv + 3]                  # نافذة 5 شموع حول القاع
-    if len(seg) < 5 or float(low[piv]) != float(np.nanmin(seg)):
-        return None                             # الشمعة piv ليست قاعاً محورياً مؤكَّداً
+    # ─── مرحلة 1: أوجد أول قاع محوري مؤكَّد بعد خفوت الموجة = HL ───
+    hl_idx = None
+    hl_val = None
+    for j in range(fade_idx + 2, n - 2):
+        if (low[j] <= low[j - 1] and low[j] <= low[j - 2] and
+                low[j] <= low[j + 1] and low[j] <= low[j + 2]):
+            hl_idx = j
+            hl_val = float(low[j])
+            break                               # أول قاع محوري بعد الموجة
 
-    tr_low = float(low[piv])
-    m = sma[n - 1]
-    if np.isnan(m) or close[n - 1] <= m:        # فلتر الاتجاه عند شمعة الإشارة
-        return None
-    # فلتر MA200 على نفس الفريم (15m فقط)
-    if cfg.get("timeframe") == "15m" and n >= 200:
-        ma200_same = float(pd.Series(close).rolling(200).mean().iloc[n - 1])
-        if not np.isnan(ma200_same) and close[n - 1] <= ma200_same:
-            return None
-    imp = pk - rl
-    drop = pk - tr_low                          # حركة التصحيح (القمة → القاع)
-    if imp <= 0 or drop <= 0 or tr_low >= pk:
+    if hl_idx is None:
         return None
 
-    atrv = a[n - 1] if not np.isnan(a[n - 1]) else tr_low * 0.02
-    c = float(close[n - 1])
-    # سلّم دخول DCA بمستويات فيبوناتشي في منطقة القاع: من السعر الحالي نزولاً نحو القاع
-    # المؤكَّد (إعادة اختبار القاع). لا دخول مباشر؛ متوسط السلّم = مرجع الصفقة.
-    # (الدخول قرب القاع شرط لأن الأهداف ارتداد تصحيحي 0.382/0.5 يجب أن تفوق المتوسط.)
-    span = c - tr_low if c > tr_low else 0.5 * atrv
-    dca = sorted({round(c - rr * span, 8) for rr in (0.236, 0.5, 0.786)}, reverse=True)
-    if not dca:
+    # ─── مرحلة 2: CHoCH = أول إغلاق فوق قمة الموجة + فوق MA200 بعد HL ───
+    choch_idx = None
+    for j in range(hl_idx + 1, n):
+        m = sma[j]
+        if not np.isnan(m) and close[j] > pk and close[j] > m:
+            # شرط الزخم: RSI(21) ≥ 70 (زخم صاعد قوي)
+            if np.isnan(r[j]) or r[j] < 70:
+                continue
+            # شرط حداثة الاختراق: السعر كان تحت MA200 في آخر 10 شموع
+            recently_crossed = any(
+                (not np.isnan(sma[k]) and close[k] < sma[k])
+                for k in range(max(0, j - 10), j)
+            )
+            if not recently_crossed:
+                continue
+            choch_idx = j
+            break
+
+    if choch_idx is None:
         return None
-    avg_entry = round(sum(dca) / len(dca), 8)
-    stop = round(tr_low - 0.5 * atrv, 8)         # الوقف تحت القاع المؤكَّد
-    # الأهداف = ارتداد فيبو التصحيحي للحركة (القمة → القاع): 0.382 ثم 0.5
-    targets = [round(tr_low + 0.382 * drop, 8), round(tr_low + 0.5 * drop, 8)]
-    if targets[0] <= avg_entry or stop >= avg_entry:
+
+    # الإشارة يجب أن تكون حديثة (CHoCH في الـ 5 شموع الأخيرة)
+    if choch_idx < n - 5:
         return None
-    return {"entry": avg_entry, "stop": stop, "dca": dca, "targets": targets,
-            "rsi": round(float(r[n - 1]), 1), "peak": round(pk, 8),
-            "trough": round(tr_low, 8)}
+
+    hh   = float(close[choch_idx])
+    hl   = hl_val
+    imp  = hh - hl          # حجم الحركة من HL إلى HH (= move)
+    if imp <= 0:
+        return None
+
+    atrv = a_arr[n - 1] if not np.isnan(a_arr[n - 1]) else hl * 0.02
+
+    # ─── الدخول: فوري عند إغلاق CHoCH (مثل RSI70) ───
+    entry = hh
+
+    # ─── سلّم DCA: ارتدادات فيبو من الدخول نحو HL (0.236 / 0.382 / 0.5) ───
+    fib_e = sorted([
+        round(entry - 0.236 * imp, 8),
+        round(entry - 0.382 * imp, 8),
+        round(entry - 0.500 * imp, 8),
+    ], reverse=True)                            # تنازلي: الأعلى يُملأ أولاً
+
+    stop = round(hl - 0.5 * atrv, 8)
+    # خفّض الوقف ليكون تحت أعمق مستوى دخول في السلّم
+    if fib_e:
+        stop = min(stop, round(min(fib_e) - 0.5 * atrv, 8))
+
+    # ─── الأهداف: امتداد فيبو فوق HL (مطابق لـ RSI70) ───
+    targets = [
+        round(hl + 1.272 * imp, 8),
+        round(hl + 1.618 * imp, 8),
+        round(hl + 2.618 * imp, 8),
+    ]
+
+    if entry <= stop or targets[0] <= entry:
+        return None
+
+    return {
+        "entry":       entry,
+        "stop":        stop,
+        "dca":         None,
+        "fib_entries": fib_e,
+        "targets":     targets,
+        "rsi":         round(float(r[n - 1]), 1),
+        "peak":        round(pk, 8),
+        "trough":      round(hl, 8),
+        "choch":       round(hh, 8),
+    }
 
 
 TRACK_FILE = "tracked_signals.json"
@@ -3722,7 +3765,7 @@ def format_reversal_card(sig, cfg, label):
              f"💎 {sig['symbol']} · ⏱️ {tf}"]
     if sig.get("rsi") is not None:
         if cfg.get("trendwave"):
-            _note = "ارتداد بعد تأكيد القاع + فلتر اتجاه"
+            _note = "CHoCH مؤكَّد (قمة أعلى فوق MA200)"
         elif cfg.get("rsi_cross"):
             _note = f"تجاوز {int(cfg.get('rsi_ob', 80.0))}"
         else:
@@ -3785,9 +3828,13 @@ def live_reversal_scan(cfg, watchlist_path, state_path):
         alerted = {}
     need = 1000 if cfg.get("timeframe") in ("1h", "15m") else 320
     if cfg.get("trendwave"):
+        # trendwave يعمل على 1h و4h فقط
+        if cfg.get("timeframe") not in ("1h", "4h"):
+            print(f"⚠️  trendwave يعمل على 1h/4h فقط — الفريم الحالي ({cfg.get('timeframe')}) غير مدعوم.")
+            return
         detector = detect_trendwave_signal
         # فلتر الفريم الأعلى يحتاج 200 شمعة على الفريم الأعلى → شموع أكثر
-        tw_need = {"15m": 1200, "1h": 1200, "4h": 1300, "1d": 400}.get(cfg.get("timeframe"), 1000)
+        tw_need = {"1h": 1200, "4h": 1300}.get(cfg.get("timeframe"), 1200)
     elif cfg.get("rsi_cross"):
         detector = detect_rsi_cross_signal
     else:
