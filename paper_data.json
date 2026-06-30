@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-30T05:49:41",
+  "updated_at": "2026-06-30T06:03:52",
   "stats": {
-    "open": 33,
-    "closed": 609,
-    "win_rate": 52.2,
-    "profit_factor": 1.59,
-    "total_pct": 4827.22,
-    "avg_pct": 0.78,
+    "open": 32,
+    "closed": 611,
+    "win_rate": 52.0,
+    "profit_factor": 1.57,
+    "total_pct": 4227.19,
+    "avg_pct": 0.75,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-30",
-        "trades": 34,
-        "win_rate": 41.2,
-        "return_pct": -16.81,
+        "trades": 36,
+        "win_rate": 38.9,
+        "return_pct": -26.94,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -95,9 +95,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 117,
-        "win_rate": 59.8,
-        "return_pct": 298.89,
+        "trades": 119,
+        "win_rate": 58.8,
+        "return_pct": 250.32,
         "month": "2026-06"
       },
       {
@@ -118,9 +118,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 609,
-        "win_rate": 52.2,
-        "return_pct": 4827.22
+        "trades": 611,
+        "win_rate": 52.0,
+        "return_pct": 4227.19
       }
     ]
   },
@@ -10321,10 +10321,11 @@
       "entry": 0.20539293,
       "stop": 0.19358229,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-30T00:02:51",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-30T06:03:46",
+      "realized_pct": -5.75,
+      "result_pct": -5.75
     },
     {
       "id": "trendwave · 15m|MAGICUSDT|2026-06-30 00:29:59.999000",
@@ -10492,10 +10493,11 @@
       "entry": 1.218,
       "stop": 1.13487641,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-30T03:01:16",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-30T06:03:49",
+      "realized_pct": -6.82,
+      "result_pct": -6.82
     },
     {
       "id": "trendwave · 15m|AGLDUSDT|2026-06-30 03:14:59.999000",
@@ -10572,6 +10574,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-30T05:03:36",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|AGLDUSDT|2026-06-30 05:59:59.999000",
+      "symbol": "AGLDUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.19194633,
+      "stop": 0.18960783,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-30T06:02:21",
       "closed_at": null,
       "realized_pct": 0.0
     }
