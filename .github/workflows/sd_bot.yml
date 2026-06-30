@@ -1,12 +1,12 @@
 name: SD Bot (AI Supply/Demand signals)
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:          # تشغيل يدوي
   schedule:
-    - cron: "7 * * * *"
+    - cron: "7 * * * *"       # كل ساعة (الدقيقة 7 لتفادي ازدحام رأس الساعة)
 
 permissions:
-  contents: write
+  contents: write             # للسماح بحفظ حالة منع التكرار
 
 concurrency:
   group: sd-bot
@@ -31,12 +31,20 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python sd_bot.py
 
-      - name: Persist model + dedup state
+      - name: Persist model + dedup state + tracked signals
         run: |
-          if [ -n "$(git status --porcelain sd_state.json sd_model.joblib)" ]; then
+          # tracked_signals.json مشترك مع reversal.yml: نضيف إشاراتنا فقط، ونعيد
+          # المزامنة بـ rebase لتفادي التعارض مع تشغيل المتابعة المتزامن.
+          for f in sd_state.json sd_model.joblib tracked_signals.json; do
+            [ -f "$f" ] && git add "$f"
+          done
+          if ! git diff --cached --quiet; then
             git config user.name "github-actions"
             git config user.email "actions@github.com"
-            git add sd_state.json sd_model.joblib
-            git commit -m "update sd state/model [skip ci]"
-            git push
+            git commit -m "update sd state + tracked signals [skip ci]"
+            for i in 1 2 3 4 5; do
+              git pull --rebase --autostash origin main && git push && break
+              echo "push attempt $i failed, retrying in 5s..."
+              sleep 5
+            done
           fi
