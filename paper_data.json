@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-30T09:34:56",
+  "updated_at": "2026-06-30T09:49:53",
   "stats": {
-    "open": 33,
-    "closed": 629,
-    "win_rate": 51.5,
-    "profit_factor": 1.51,
-    "total_pct": 3127.34,
-    "avg_pct": 0.69,
+    "open": 31,
+    "closed": 631,
+    "win_rate": 51.3,
+    "profit_factor": 1.5,
+    "total_pct": 3016.96,
+    "avg_pct": 0.68,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-30",
-        "trades": 54,
-        "win_rate": 37.0,
-        "return_pct": -45.51,
+        "trades": 56,
+        "win_rate": 35.7,
+        "return_pct": -47.37,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -95,9 +95,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 137,
-        "win_rate": 55.5,
-        "return_pct": 161.28,
+        "trades": 139,
+        "win_rate": 54.7,
+        "return_pct": 152.34,
         "month": "2026-06"
       },
       {
@@ -118,9 +118,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 629,
-        "win_rate": 51.5,
-        "return_pct": 3127.34
+        "trades": 631,
+        "win_rate": 51.3,
+        "return_pct": 3016.96
       }
     ]
   },
@@ -10779,10 +10779,11 @@
       "entry": 3.84756,
       "stop": 3.78249573,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-30T08:32:47",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-30T09:49:48",
+      "realized_pct": -1.69,
+      "result_pct": -1.69
     },
     {
       "id": "trendwave · 15m|COOKIEUSDT|2026-06-30 08:44:59.999000",
@@ -10880,10 +10881,11 @@
       "entry": 0.0809868,
       "stop": 0.0795643,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-30T09:32:47",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-30T09:49:52",
+      "realized_pct": -1.76,
+      "result_pct": -1.76
     }
   ]
 }
