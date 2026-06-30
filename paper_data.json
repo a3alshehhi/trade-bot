@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-30T05:19:06",
+  "updated_at": "2026-06-30T05:34:47",
   "stats": {
-    "open": 34,
-    "closed": 608,
-    "win_rate": 52.3,
-    "profit_factor": 1.6,
-    "total_pct": 5011.76,
+    "open": 33,
+    "closed": 609,
+    "win_rate": 52.2,
+    "profit_factor": 1.59,
+    "total_pct": 4827.22,
     "avg_pct": 0.78,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-30",
-        "trades": 33,
-        "win_rate": 42.4,
-        "return_pct": -13.69,
+        "trades": 34,
+        "win_rate": 41.2,
+        "return_pct": -16.81,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -95,9 +95,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 116,
-        "win_rate": 60.3,
-        "return_pct": 313.83,
+        "trades": 117,
+        "win_rate": 59.8,
+        "return_pct": 298.89,
         "month": "2026-06"
       },
       {
@@ -118,9 +118,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 608,
-        "win_rate": 52.3,
-        "return_pct": 5011.76
+        "trades": 609,
+        "win_rate": 52.2,
+        "return_pct": 4827.22
       }
     ]
   },
@@ -10504,10 +10504,11 @@
       "entry": 0.19893253,
       "stop": 0.19175388,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-30T03:17:10",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-30T05:34:45",
+      "realized_pct": -3.61,
+      "result_pct": -3.61
     },
     {
       "id": "RSI70 · 4h|ONGUSDT|2026-06-30 03:59:59.999000",
