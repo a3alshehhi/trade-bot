@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-30T01:04:12",
+  "updated_at": "2026-06-30T01:18:40",
   "stats": {
-    "open": 46,
-    "closed": 585,
-    "win_rate": 53.0,
-    "profit_factor": 1.64,
-    "total_pct": 5959.74,
-    "avg_pct": 0.84,
+    "open": 41,
+    "closed": 591,
+    "win_rate": 52.6,
+    "profit_factor": 1.63,
+    "total_pct": 5603.61,
+    "avg_pct": 0.82,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-30",
-        "trades": 10,
-        "win_rate": 60.0,
-        "return_pct": 2.31,
+        "trades": 16,
+        "win_rate": 43.8,
+        "return_pct": -3.7,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -95,9 +95,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 93,
-        "win_rate": 66.7,
-        "return_pct": 390.58,
+        "trades": 99,
+        "win_rate": 63.6,
+        "return_pct": 361.75,
         "month": "2026-06"
       },
       {
@@ -118,9 +118,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 585,
-        "win_rate": 53.0,
-        "return_pct": 5959.74
+        "trades": 591,
+        "win_rate": 52.6,
+        "return_pct": 5603.61
       }
     ]
   },
@@ -10135,10 +10135,11 @@
       "entry": 0.00894927,
       "stop": 0.00882591,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T22:02:50",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-30T01:18:26",
+      "realized_pct": -1.38,
+      "result_pct": -1.38
     },
     {
       "id": "trendwave · 15m|ORDIUSDT|2026-06-29 21:59:59.999000",
@@ -10194,10 +10195,11 @@
       "entry": 0.00894927,
       "stop": 0.00882406,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T22:17:40",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-30T01:18:28",
+      "realized_pct": -1.4,
+      "result_pct": -1.4
     },
     {
       "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 22:29:59.999000",
@@ -10208,10 +10210,11 @@
       "entry": 0.00899853,
       "stop": 0.00882234,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T22:32:13",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-30T01:18:30",
+      "realized_pct": -1.96,
+      "result_pct": -1.96
     },
     {
       "id": "trendwave · 15m|AGLDUSDT|2026-06-29 22:59:59.999000",
@@ -10239,10 +10242,11 @@
       "entry": 0.00894927,
       "stop": 0.00882615,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T23:02:52",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-30T01:18:32",
+      "realized_pct": -1.38,
+      "result_pct": -1.38
     },
     {
       "id": "trendwave · 15m|ORDIUSDT|2026-06-29 23:14:59.999000",
@@ -10255,10 +10259,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T23:17:03",
-      "closed_at": null,
-      "realized_pct": 1.41
+      "closed_at": "2026-06-30T01:18:35",
+      "realized_pct": 1.41,
+      "result_pct": 1.41
     },
     {
       "id": "trendwave · 15m|AGLDUSDT|2026-06-29 23:44:59.999000",
@@ -10350,10 +10355,11 @@
       "entry": 0.00894927,
       "stop": 0.00883481,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-30T00:47:05",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-30T01:18:37",
+      "realized_pct": -1.28,
+      "result_pct": -1.28
     },
     {
       "id": "trendwave · 15m|ORDIUSDT|2026-06-30 00:44:59.999000",
@@ -10380,6 +10386,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-30T00:47:07",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|AGLDUSDT|2026-06-30 01:14:59.999000",
+      "symbol": "AGLDUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2074038,
+      "stop": 0.20170672,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-30T01:16:58",
       "closed_at": null,
       "realized_pct": 0.0
     }
