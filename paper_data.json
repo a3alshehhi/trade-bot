@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-30T07:19:41",
+  "updated_at": "2026-06-30T07:34:00",
   "stats": {
-    "open": 35,
-    "closed": 613,
-    "win_rate": 52.2,
-    "profit_factor": 1.57,
-    "total_pct": 4429.67,
-    "avg_pct": 0.76,
+    "open": 33,
+    "closed": 615,
+    "win_rate": 52.4,
+    "profit_factor": 1.59,
+    "total_pct": 4966.48,
+    "avg_pct": 0.78,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-30",
-        "trades": 38,
-        "win_rate": 42.1,
-        "return_pct": -23.52,
+        "trades": 40,
+        "win_rate": 45.0,
+        "return_pct": -14.46,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -95,9 +95,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 121,
-        "win_rate": 59.5,
-        "return_pct": 266.71,
+        "trades": 123,
+        "win_rate": 60.2,
+        "return_pct": 310.17,
         "month": "2026-06"
       },
       {
@@ -118,9 +118,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 613,
-        "win_rate": 52.2,
-        "return_pct": 4429.67
+        "trades": 615,
+        "win_rate": 52.4,
+        "return_pct": 4966.48
       }
     ]
   },
@@ -9369,12 +9369,14 @@
       "entry": 0.00869853,
       "stop": 0.00849173,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T09:48:05",
-      "closed_at": null,
-      "realized_pct": 2.29
+      "closed_at": "2026-06-30T07:33:49",
+      "realized_pct": 5.46,
+      "result_pct": 5.46
     },
     {
       "id": "RSI70 · 1h|PYTHUSDT|2026-06-29 09:59:59.999000",
@@ -9402,12 +9404,14 @@
       "entry": 0.00864927,
       "stop": 0.00849589,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T10:02:35",
-      "closed_at": null,
-      "realized_pct": 2.59
+      "closed_at": "2026-06-30T07:33:51",
+      "realized_pct": 6.06,
+      "result_pct": 6.06
     },
     {
       "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 10:44:59.999000",
