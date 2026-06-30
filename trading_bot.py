@@ -2099,6 +2099,12 @@ def backtest_symbol_trendwave(item, kind, cfg):
 
             m         = sma200[i] if sma200 is not None else np.nan
             m_same    = sma200_same[i]
+            # ── الشرط الأهم (يُفحص أولاً): حداثة الاختراق — السعر كان تحت MA200
+            #    في آخر 10 شموع. يرفض الإشارات المتأخرة بعيداً فوق المتوسط. ──
+            recently_below = any(
+                (not np.isnan(sma200[k]) and close[k] < sma200[k])
+                for k in range(max(0, i - 10), i)
+            )
             trend_ok  = (np.isnan(m) or close[i] > m) and (np.isnan(m_same) or close[i] > m_same)
 
             atrv_i    = atrs[i] if not np.isnan(atrs[i]) else close[i] * 0.02
@@ -2106,7 +2112,7 @@ def backtest_symbol_trendwave(item, kind, cfg):
             strong_candle = body_i >= 0.5 * atrv_i
             rsi_ok    = r >= 70
 
-            if close[i] > h1 * 1.005 and strong_candle and rsi_ok and trend_ok:
+            if recently_below and close[i] > h1 * 1.005 and strong_candle and rsi_ok and trend_ok:
                 # ─── CHoCH مؤكَّد ───
                 hh   = float(close[i])
                 move = hh - hl
@@ -3215,19 +3221,24 @@ def detect_trendwave_signal(df, cfg):
     choch_idx = None
     for j in range(hl_idx + 1, n):
         m = sma[j]
-        if not np.isnan(m) and close[j] > pk and close[j] > m:
-            # شرط الزخم: RSI(21) ≥ 70 (زخم صاعد قوي)
-            if np.isnan(r[j]) or r[j] < 70:
-                continue
-            # شرط حداثة الاختراق: السعر كان تحت MA200 في آخر 10 شموع
-            recently_crossed = any(
-                (not np.isnan(sma[k]) and close[k] < sma[k])
-                for k in range(max(0, j - 10), j)
-            )
-            if not recently_crossed:
-                continue
-            choch_idx = j
-            break
+        if np.isnan(m):
+            continue
+        # ── الشرط الأهم (يُفحص أولاً): حداثة الاختراق — السعر كان تحت MA200
+        #    في آخر 10 شموع. غيره يُرفض مباشرةً. ──
+        recently_crossed = any(
+            (not np.isnan(sma[k]) and close[k] < sma[k])
+            for k in range(max(0, j - 10), j)
+        )
+        if not recently_crossed:
+            continue
+        # CHoCH: إغلاق فوق قمة الموجة + فوق MA200
+        if not (close[j] > pk and close[j] > m):
+            continue
+        # شرط الزخم: RSI(21) ≥ 70 (زخم صاعد قوي)
+        if np.isnan(r[j]) or r[j] < 70:
+            continue
+        choch_idx = j
+        break
 
     if choch_idx is None:
         return None
