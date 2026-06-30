@@ -20100,5 +20100,59 @@
     "hi_seen": 0.19194633,
     "lo_seen": 0.19194633,
     "created": "2026-06-30T06:02:21"
+  },
+  "trendwave · 15m|ONGUSDT|2026-06-30 06:14:59.999000": {
+    "symbol": "ONGUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 3354,
+    "entry": 0.05437774,
+    "stop": 0.05296061,
+    "init_stop": 0.05296061,
+    "cur_stop": 0.05296061,
+    "last_alert_stop": 0.05296061,
+    "armed": false,
+    "targets": [
+      0.05466546,
+      0.054905
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-30 06:14:59.999000",
+    "last_bar": "2026-06-30 06:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.05437774,
+    "lo_seen": 0.05437774,
+    "created": "2026-06-30T06:17:20"
+  },
+  "trendwave · 15m|ORDIUSDT|2026-06-30 06:14:59.999000": {
+    "symbol": "ORDIUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 3355,
+    "entry": 3.82365667,
+    "stop": 3.72347295,
+    "init_stop": 3.72347295,
+    "cur_stop": 3.72347295,
+    "last_alert_stop": 3.72347295,
+    "armed": false,
+    "targets": [
+      3.917508,
+      3.964
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-30 06:14:59.999000",
+    "last_bar": "2026-06-30 06:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 3.82365667,
+    "lo_seen": 3.82365667,
+    "created": "2026-06-30T06:17:21"
   }
 }
