@@ -20035,5 +20035,32 @@
     "exit_price": 0.00352,
     "close_card_sent": true,
     "closed_at": "2026-06-30T04:49:47"
+  },
+  "trendwave · 1h|AGLDUSDT|2026-06-30 04:59:59.999000": {
+    "symbol": "AGLDUSDT",
+    "label": "trendwave · 1h",
+    "timeframe": "1h",
+    "message_id": 3344,
+    "entry": 0.19449853,
+    "stop": 0.18971718,
+    "init_stop": 0.18971718,
+    "cur_stop": 0.18971718,
+    "last_alert_stop": 0.18971718,
+    "armed": false,
+    "targets": [
+      0.2263352,
+      0.2362
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-30 04:59:59.999000",
+    "last_bar": "2026-06-30 04:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.19449853,
+    "lo_seen": 0.19449853,
+    "created": "2026-06-30T05:03:36"
   }
 }
