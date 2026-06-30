@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-30T02:49:51",
+  "updated_at": "2026-06-30T03:04:56",
   "stats": {
-    "open": 40,
+    "open": 42,
     "closed": 595,
     "win_rate": 52.4,
     "profit_factor": 1.61,
@@ -10093,11 +10093,13 @@
       "timeframe": "1h",
       "entry": 0.01897,
       "stop": 0.01788747,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-29T21:01:08",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.33
     },
     {
       "id": "trendwave · 15m|CITYUSDT|2026-06-29 21:14:59.999000",
@@ -10450,6 +10452,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-30T02:47:43",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|CHZUSDT|2026-06-30 02:59:59.999000",
+      "symbol": "CHZUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.01933,
+      "stop": 0.01805955,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-30T03:01:15",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|GASUSDT|2026-06-30 02:59:59.999000",
+      "symbol": "GASUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 1.218,
+      "stop": 1.13487641,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-30T03:01:16",
       "closed_at": null,
       "realized_pct": 0.0
     }
