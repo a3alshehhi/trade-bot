@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-30T08:48:34",
+  "updated_at": "2026-06-30T09:04:51",
   "stats": {
-    "open": 34,
-    "closed": 623,
-    "win_rate": 52.0,
+    "open": 36,
+    "closed": 624,
+    "win_rate": 51.9,
     "profit_factor": 1.53,
-    "total_pct": 3668.88,
-    "avg_pct": 0.72,
+    "total_pct": 3493.62,
+    "avg_pct": 0.71,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-30",
-        "trades": 48,
-        "win_rate": 41.7,
-        "return_pct": -36.37,
+        "trades": 49,
+        "win_rate": 40.8,
+        "return_pct": -39.33,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -95,9 +95,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 131,
-        "win_rate": 58.0,
-        "return_pct": 205.12,
+        "trades": 132,
+        "win_rate": 57.6,
+        "return_pct": 190.93,
         "month": "2026-06"
       },
       {
@@ -118,9 +118,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 623,
-        "win_rate": 52.0,
-        "return_pct": 3668.88
+        "trades": 624,
+        "win_rate": 51.9,
+        "return_pct": 3493.62
       }
     ]
   },
@@ -9898,10 +9898,11 @@
       "entry": 2.7,
       "stop": 2.57436231,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T18:01:14",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-30T09:04:39",
+      "realized_pct": -4.65,
+      "result_pct": -4.65
     },
     {
       "id": "trendwave · 1h|TNSRUSDT|2026-06-29 17:59:59.999000",
@@ -10806,6 +10807,48 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-30T08:47:05",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|COOKIEUSDT|2026-06-30 08:59:59.999000",
+      "symbol": "COOKIEUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00904927,
+      "stop": 0.00892772,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-30T09:02:47",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|ONGUSDT|2026-06-30 08:59:59.999000",
+      "symbol": "ONGUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.05039847,
+      "stop": 0.04910021,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-30T09:02:48",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|ACTUSDT|2026-06-30 08:59:59.999000",
+      "symbol": "ACTUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.01115795,
+      "stop": 0.01063826,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-30T09:03:35",
       "closed_at": null,
       "realized_pct": 0.0
     }
