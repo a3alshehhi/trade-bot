@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-30T01:34:55",
+  "updated_at": "2026-06-30T01:49:46",
   "stats": {
     "open": 41,
-    "closed": 591,
-    "win_rate": 52.6,
+    "closed": 592,
+    "win_rate": 52.5,
     "profit_factor": 1.63,
-    "total_pct": 5603.61,
+    "total_pct": 5526.61,
     "avg_pct": 0.82,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-30",
-        "trades": 16,
-        "win_rate": 43.8,
-        "return_pct": -3.7,
+        "trades": 17,
+        "win_rate": 41.2,
+        "return_pct": -5.0,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -95,9 +95,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 99,
-        "win_rate": 63.6,
-        "return_pct": 361.75,
+        "trades": 100,
+        "win_rate": 63.0,
+        "return_pct": 355.51,
         "month": "2026-06"
       },
       {
@@ -118,9 +118,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 591,
-        "win_rate": 52.6,
-        "return_pct": 5603.61
+        "trades": 592,
+        "win_rate": 52.5,
+        "return_pct": 5526.61
       }
     ]
   },
@@ -10384,10 +10384,11 @@
       "entry": 0.02464214,
       "stop": 0.02430903,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-30T00:47:07",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-30T01:49:43",
+      "realized_pct": -1.35,
+      "result_pct": -1.35
     },
     {
       "id": "trendwave · 15m|AGLDUSDT|2026-06-30 01:14:59.999000",
@@ -10397,9 +10398,25 @@
       "timeframe": "15m",
       "entry": 0.2074038,
       "stop": 0.20170672,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-30T01:16:58",
+      "closed_at": null,
+      "realized_pct": 1.62
+    },
+    {
+      "id": "trendwave · 15m|COOKIEUSDT|2026-06-30 01:44:59.999000",
+      "symbol": "COOKIEUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00889853,
+      "stop": 0.00873849,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-30T01:47:38",
       "closed_at": null,
       "realized_pct": 0.0
     }
