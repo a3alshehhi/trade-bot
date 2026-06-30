@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-30T11:19:41",
+  "updated_at": "2026-06-30T11:34:14",
   "stats": {
-    "open": 37,
-    "closed": 632,
-    "win_rate": 51.3,
-    "profit_factor": 1.5,
-    "total_pct": 2925.01,
-    "avg_pct": 0.68,
+    "open": 36,
+    "closed": 633,
+    "win_rate": 51.2,
+    "profit_factor": 1.49,
+    "total_pct": 2867.53,
+    "avg_pct": 0.67,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-30",
-        "trades": 57,
-        "win_rate": 35.1,
-        "return_pct": -48.93,
+        "trades": 58,
+        "win_rate": 34.5,
+        "return_pct": -49.9,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -95,9 +95,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 140,
-        "win_rate": 54.3,
-        "return_pct": 144.9,
+        "trades": 141,
+        "win_rate": 53.9,
+        "return_pct": 140.24,
         "month": "2026-06"
       },
       {
@@ -118,9 +118,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 632,
-        "win_rate": 51.3,
-        "return_pct": 2925.01
+        "trades": 633,
+        "win_rate": 51.2,
+        "return_pct": 2867.53
       }
     ]
   },
@@ -10967,10 +10967,11 @@
       "entry": 0.04916545,
       "stop": 0.04823334,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-30T11:02:17",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-30T11:34:13",
+      "realized_pct": -1.9,
+      "result_pct": -1.9
     },
     {
       "id": "trendwave · 1h|AGLDUSDT|2026-06-30 10:59:59.999000",
