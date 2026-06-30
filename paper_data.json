@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-30T01:49:46",
+  "updated_at": "2026-06-30T02:03:41",
   "stats": {
-    "open": 41,
-    "closed": 592,
+    "open": 40,
+    "closed": 594,
     "win_rate": 52.5,
-    "profit_factor": 1.63,
-    "total_pct": 5526.61,
-    "avg_pct": 0.82,
+    "profit_factor": 1.61,
+    "total_pct": 5114.03,
+    "avg_pct": 0.81,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-30",
-        "trades": 17,
-        "win_rate": 41.2,
-        "return_pct": -5.0,
+        "trades": 19,
+        "win_rate": 42.1,
+        "return_pct": -11.97,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -95,9 +95,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 100,
-        "win_rate": 63.0,
-        "return_pct": 355.51,
+        "trades": 102,
+        "win_rate": 62.7,
+        "return_pct": 322.11,
         "month": "2026-06"
       },
       {
@@ -118,9 +118,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 592,
+        "trades": 594,
         "win_rate": 52.5,
-        "return_pct": 5526.61
+        "return_pct": 5114.03
       }
     ]
   },
@@ -9431,10 +9431,11 @@
       "entry": 0.134,
       "stop": 0.12220064,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T11:01:28",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-30T02:03:28",
+      "realized_pct": -8.81,
+      "result_pct": -8.81
     },
     {
       "id": "trendwave · 15m|MAGICUSDT|2026-06-29 11:29:59.999000",
@@ -10401,10 +10402,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-30T01:16:58",
-      "closed_at": null,
-      "realized_pct": 1.62
+      "closed_at": "2026-06-30T02:03:39",
+      "realized_pct": 1.62,
+      "result_pct": 1.62
     },
     {
       "id": "trendwave · 15m|COOKIEUSDT|2026-06-30 01:44:59.999000",
@@ -10417,6 +10419,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-30T01:47:38",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 1h|GPSUSDT|2026-06-30 01:59:59.999000",
+      "symbol": "GPSUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.00899463,
+      "stop": 0.00892216,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-30T02:02:44",
       "closed_at": null,
       "realized_pct": 0.0
     }
