@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-30T14:48:24",
+  "updated_at": "2026-06-30T15:05:05",
   "stats": {
-    "open": 28,
-    "closed": 648,
-    "win_rate": 50.3,
+    "open": 27,
+    "closed": 649,
+    "win_rate": 50.4,
     "profit_factor": 1.43,
-    "total_pct": 1910.29,
-    "avg_pct": 0.6,
+    "total_pct": 1995.53,
+    "avg_pct": 0.61,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-30",
-        "trades": 73,
-        "win_rate": 30.1,
-        "return_pct": -66.06,
+        "trades": 74,
+        "win_rate": 31.1,
+        "return_pct": -64.62,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -95,9 +95,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 156,
-        "win_rate": 50.0,
-        "return_pct": 62.75,
+        "trades": 157,
+        "win_rate": 50.3,
+        "return_pct": 69.65,
         "month": "2026-06"
       },
       {
@@ -118,9 +118,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 648,
-        "win_rate": 50.3,
-        "return_pct": 1910.29
+        "trades": 649,
+        "win_rate": 50.4,
+        "return_pct": 1995.53
       }
     ]
   },
@@ -11085,11 +11085,15 @@
       "timeframe": "1h",
       "entry": 0.0746,
       "stop": 0.07032001,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-06-30T14:01:11",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-30T15:05:04",
+      "realized_pct": 4.24,
+      "result_pct": 4.24
     },
     {
       "id": "trendwave · 15m|ORDIUSDT|2026-06-30 13:59:59.999000",
