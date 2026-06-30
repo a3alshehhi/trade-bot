@@ -21000,5 +21000,32 @@
     "hi_seen": 0.18712873,
     "lo_seen": 0.18712873,
     "created": "2026-06-30T12:32:07"
+  },
+  "trendwave · 15m|ONGUSDT|2026-06-30 12:44:59.999000": {
+    "symbol": "ONGUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 3456,
+    "entry": 0.04779627,
+    "stop": 0.04668008,
+    "init_stop": 0.04668008,
+    "cur_stop": 0.04668008,
+    "last_alert_stop": 0.04668008,
+    "armed": false,
+    "targets": [
+      0.05053722,
+      0.051565
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-30 12:44:59.999000",
+    "last_bar": "2026-06-30 12:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.04779627,
+    "lo_seen": 0.04779627,
+    "created": "2026-06-30T12:47:29"
   }
 }
