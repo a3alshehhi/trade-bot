@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-06-30T06:34:52",
+  "updated_at": "2026-06-30T06:48:38",
   "stats": {
     "open": 33,
-    "closed": 612,
-    "win_rate": 52.1,
+    "closed": 613,
+    "win_rate": 52.2,
     "profit_factor": 1.57,
-    "total_pct": 4259.65,
-    "avg_pct": 0.75,
+    "total_pct": 4429.67,
+    "avg_pct": 0.76,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
       {
         "key": "2026-06-30",
-        "trades": 37,
-        "win_rate": 40.5,
-        "return_pct": -26.39,
+        "trades": 38,
+        "win_rate": 42.1,
+        "return_pct": -23.52,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -95,9 +95,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 120,
-        "win_rate": 59.2,
-        "return_pct": 252.94,
+        "trades": 121,
+        "win_rate": 59.5,
+        "return_pct": 266.71,
         "month": "2026-06"
       },
       {
@@ -118,9 +118,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 612,
-        "win_rate": 52.1,
-        "return_pct": 4259.65
+        "trades": 613,
+        "win_rate": 52.2,
+        "return_pct": 4429.67
       }
     ]
   },
@@ -9069,12 +9069,14 @@
       "entry": 0.07913753,
       "stop": 0.07788371,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T04:18:08",
-      "closed_at": null,
-      "realized_pct": 1.62
+      "closed_at": "2026-06-30T06:48:26",
+      "realized_pct": 3.9,
+      "result_pct": 3.9
     },
     {
       "id": "trendwave · 15m|HEIUSDT|2026-06-29 04:44:59.999000",
@@ -10617,9 +10619,25 @@
       "timeframe": "15m",
       "entry": 3.82365667,
       "stop": 3.72347295,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-30T06:17:21",
+      "closed_at": null,
+      "realized_pct": 1.23
+    },
+    {
+      "id": "trendwave · 15m|AGLDUSDT|2026-06-30 06:44:59.999000",
+      "symbol": "AGLDUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1938126,
+      "stop": 0.18936755,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-30T06:47:09",
       "closed_at": null,
       "realized_pct": 0.0
     }
