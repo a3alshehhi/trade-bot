@@ -1,0 +1,42 @@
+name: SD Bot (AI Supply/Demand signals)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sd-bot
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install requests scikit-learn joblib
+
+      - name: Run SD bot
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python sd_bot.py
+
+      - name: Persist model + dedup state
+        run: |
+          if [ -n "$(git status --porcelain sd_state.json sd_model.joblib)" ]; then
+            git config user.name "github-actions"
+            git config user.email "actions@github.com"
+            git add sd_state.json sd_model.joblib
+            git commit -m "update sd state/model [skip ci]"
+            git push
+          fi
