@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-06-30T00:19:56",
+  "updated_at": "2026-06-30T00:34:28",
   "stats": {
-    "open": 51,
-    "closed": 575,
-    "win_rate": 52.9,
-    "profit_factor": 1.64,
-    "total_pct": 5822.84,
+    "open": 52,
+    "closed": 576,
+    "win_rate": 53.0,
+    "profit_factor": 1.65,
+    "total_pct": 5887.99,
     "avg_pct": 0.85,
     "max_drawdown_pct": -70.43
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-06-30",
+        "trades": 1,
+        "win_rate": 100.0,
+        "return_pct": 1.1,
+        "week": "2026-W27",
+        "month": "2026-06"
+      },
       {
         "key": "2026-06-29",
         "trades": 83,
@@ -87,9 +95,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 83,
-        "win_rate": 67.5,
-        "return_pct": 379.5,
+        "trades": 84,
+        "win_rate": 67.9,
+        "return_pct": 384.77,
         "month": "2026-06"
       },
       {
@@ -110,9 +118,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 575,
-        "win_rate": 52.9,
-        "return_pct": 5822.84
+        "trades": 576,
+        "win_rate": 53.0,
+        "return_pct": 5887.99
       }
     ]
   },
@@ -10025,10 +10033,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T19:47:23",
-      "closed_at": null,
-      "realized_pct": 1.1
+      "closed_at": "2026-06-30T00:34:16",
+      "realized_pct": 1.1,
+      "result_pct": 1.1
     },
     {
       "id": "RSI70 · 1h|SOLUSDT|2026-06-29 19:59:59.999000",
@@ -10287,6 +10296,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-30T00:02:51",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|MAGICUSDT|2026-06-30 00:29:59.999000",
+      "symbol": "MAGICUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.04449413,
+      "stop": 0.04391458,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-30T00:32:32",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|MOVRUSDT|2026-06-30 00:29:59.999000",
+      "symbol": "MOVRUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.17797067,
+      "stop": 1.17189855,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-30T00:32:33",
       "closed_at": null,
       "realized_pct": 0.0
     }
