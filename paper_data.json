@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-30T09:49:53",
+  "updated_at": "2026-06-30T10:04:52",
   "stats": {
     "open": 31,
-    "closed": 631,
+    "closed": 632,
     "win_rate": 51.3,
     "profit_factor": 1.5,
-    "total_pct": 3016.96,
+    "total_pct": 2925.01,
     "avg_pct": 0.68,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-30",
-        "trades": 56,
-        "win_rate": 35.7,
-        "return_pct": -47.37,
+        "trades": 57,
+        "win_rate": 35.1,
+        "return_pct": -48.93,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -95,9 +95,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 139,
-        "win_rate": 54.7,
-        "return_pct": 152.34,
+        "trades": 140,
+        "win_rate": 54.3,
+        "return_pct": 144.9,
         "month": "2026-06"
       },
       {
@@ -118,9 +118,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 631,
+        "trades": 632,
         "win_rate": 51.3,
-        "return_pct": 3016.96
+        "return_pct": 2925.01
       }
     ]
   },
@@ -10750,10 +10750,11 @@
       "entry": 3.805428,
       "stop": 3.69307373,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-30T08:02:55",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-06-30T10:04:48",
+      "realized_pct": -2.95,
+      "result_pct": -2.95
     },
     {
       "id": "trendwave · 15m|COOKIEUSDT|2026-06-30 08:29:59.999000",
@@ -10886,6 +10887,20 @@
       "closed_at": "2026-06-30T09:49:52",
       "realized_pct": -1.76,
       "result_pct": -1.76
+    },
+    {
+      "id": "trendwave · 1h|GUSDT|2026-06-30 09:59:59.999000",
+      "symbol": "GUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.00337956,
+      "stop": 0.00330015,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-30T10:03:38",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
