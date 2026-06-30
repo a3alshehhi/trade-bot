@@ -264,10 +264,15 @@ def load_model():
     return joblib.load(MODEL_PATH) if os.path.exists(MODEL_PATH) else None
 
 def model_is_fresh():
+    # نعتمد على التاريخ المخزّن داخل النموذج لا وقت الملف (git checkout يعيد ضبط الوقت)
+    # فيُعاد التدريب مرة واحدة يومياً (أول تشغيل في يوم جديد).
     if not os.path.exists(MODEL_PATH):
         return False
-    age_h = (time.time() - os.path.getmtime(MODEL_PATH)) / 3600.0
-    return age_h < MODEL_MAX_AGE_H
+    try:
+        import joblib
+        return joblib.load(MODEL_PATH).get("date") == dt.date.today().isoformat()
+    except Exception:
+        return False
 
 def load_state():
     try:
