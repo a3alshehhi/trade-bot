@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-30T03:49:13",
+  "updated_at": "2026-06-30T04:04:52",
   "stats": {
-    "open": 34,
-    "closed": 604,
-    "win_rate": 52.0,
+    "open": 35,
+    "closed": 605,
+    "win_rate": 52.1,
     "profit_factor": 1.59,
-    "total_pct": 4711.84,
+    "total_pct": 4775.83,
     "avg_pct": 0.78,
     "max_drawdown_pct": -70.43
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-06-30",
-        "trades": 29,
-        "win_rate": 34.5,
-        "return_pct": -18.76,
+        "trades": 30,
+        "win_rate": 36.7,
+        "return_pct": -17.68,
         "week": "2026-W27",
         "month": "2026-06"
       },
@@ -95,9 +95,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 112,
-        "win_rate": 58.9,
-        "return_pct": 289.55,
+        "trades": 113,
+        "win_rate": 59.3,
+        "return_pct": 294.73,
         "month": "2026-06"
       },
       {
@@ -118,9 +118,9 @@
     "monthly": [
       {
         "key": "2026-06",
-        "trades": 604,
-        "win_rate": 52.0,
-        "return_pct": 4711.84
+        "trades": 605,
+        "win_rate": 52.1,
+        "return_pct": 4775.83
       }
     ]
   },
@@ -10103,10 +10103,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T21:01:08",
-      "closed_at": null,
-      "realized_pct": 1.33
+      "closed_at": "2026-06-30T04:04:44",
+      "realized_pct": 1.33,
+      "result_pct": 1.33
     },
     {
       "id": "trendwave · 15m|CITYUSDT|2026-06-29 21:14:59.999000",
@@ -10503,6 +10504,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-30T03:17:10",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 4h|ONGUSDT|2026-06-30 03:59:59.999000",
+      "symbol": "ONGUSDT",
+      "label": "RSI70 · 4h",
+      "side": "buy",
+      "timeframe": "4h",
+      "entry": 0.05492,
+      "stop": 0.04796835,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-30T04:01:38",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|ORDIUSDT|2026-06-30 03:59:59.999000",
+      "symbol": "ORDIUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 3.879642,
+      "stop": 3.78028981,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-30T04:02:48",
       "closed_at": null,
       "realized_pct": 0.0
     }
