@@ -252,7 +252,11 @@ def train(basket=None):
                 y = label_setup(st, h, l, c)
                 if y is None:
                     continue
-                X.append([st["f"][k] for k in ML_KEYS]); Y.append(y)
+                feat = [st["f"][k] for k in ML_KEYS]
+                # تجاهل العيّنات ذات الميزات غير المنتهية (NaN/inf من فترة إحماء ATR/الحجم/المتوسط)
+                if not all(isinstance(x, (int, float)) and math.isfinite(x) for x in feat):
+                    continue
+                X.append(feat); Y.append(y)
         except Exception as ex:
             print("train skip", s, ex)
         time.sleep(0.05)
@@ -321,7 +325,11 @@ def scan(basket=None):
                 key = f"{s}:{st['ts']}"          # منع التكرار: نفس اللمسة لا تُرسل مرتين
                 if key in sent:
                     continue
-                prob = model.predict_proba([[f[k] for k in ML_KEYS]])[0][1]
+                feat = [f[k] for k in ML_KEYS]
+                # تخطّي الإعدادات ذات الميزات غير المنتهية (NaN/inf) كي لا ينهار التنبّؤ
+                if not all(isinstance(x, (int, float)) and math.isfinite(x) for x in feat):
+                    continue
+                prob = model.predict_proba([feat])[0][1]
                 if prob < CFG["ml_threshold"]:
                     continue
                 entry, stop = st["entry"], st["stop"]
