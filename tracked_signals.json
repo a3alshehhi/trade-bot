@@ -20415,5 +20415,59 @@
     "hi_seen": 3.805428,
     "lo_seen": 3.805428,
     "created": "2026-06-30T08:02:55"
+  },
+  "trendwave · 15m|COOKIEUSDT|2026-06-30 08:29:59.999000": {
+    "symbol": "COOKIEUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 3389,
+    "entry": 0.0091478,
+    "stop": 0.0089283,
+    "init_stop": 0.0089283,
+    "cur_stop": 0.0089283,
+    "last_alert_stop": 0.0089283,
+    "armed": false,
+    "targets": [
+      0.0093438,
+      0.00945
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-30 08:29:59.999000",
+    "last_bar": "2026-06-30 08:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0091478,
+    "lo_seen": 0.0091478,
+    "created": "2026-06-30T08:32:46"
+  },
+  "trendwave · 15m|ORDIUSDT|2026-06-30 08:29:59.999000": {
+    "symbol": "ORDIUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 3390,
+    "entry": 3.84756,
+    "stop": 3.78249573,
+    "init_stop": 3.78249573,
+    "cur_stop": 3.78249573,
+    "last_alert_stop": 3.78249573,
+    "armed": false,
+    "targets": [
+      3.949026,
+      3.9895
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-30 08:29:59.999000",
+    "last_bar": "2026-06-30 08:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 3.84756,
+    "lo_seen": 3.84756,
+    "created": "2026-06-30T08:32:47"
   }
 }
