@@ -39,6 +39,13 @@ ML_KEYS = ["strength", "heightATR", "baseVolZ", "touchVolZ", "bos", "fvg", "swee
 TG_TOKEN = os.environ.get("TELEGRAM_TOKEN", os.environ.get("TG_TOKEN", ""))
 TG_CHAT = os.environ.get("TELEGRAM_CHAT_ID", os.environ.get("TG_CHAT", ""))
 
+# سجل المتتبّع المشترك: نكتب فيه إشاراتنا لتظهر وتُتابَع في اللوحة مثل بقية البوتات.
+# (يتابعها trackmon في reversal.yml كل 15 دقيقة ويُصدّر paper_data.json للوحة)
+TRACK_FILE = "tracked_signals.json"
+DASH_LABEL = "العرض/الطلب"
+_TF_MS = {"1m": 60000, "3m": 180000, "5m": 300000, "15m": 900000, "30m": 1800000,
+          "1h": 3600000, "2h": 7200000, "4h": 14400000, "1d": 86400000}
+
 # ----------------------- جلب البيانات -----------------------
 def fetch_klines(symbol, interval, pages=2):
     all_rows, end_time = [], None
@@ -320,14 +327,16 @@ def scan(basket=None):
                 entry, stop = st["entry"], st["stop"]
                 signals.append(dict(key=key, sym=s, prob=round(float(prob), 3),
                     entry=round(entry, 8), stop=round(stop, 8),
-                    tp1=round(entry + (entry - stop), 8), reasons=_reasons(f)))
+                    tp1=round(entry + (entry - stop), 8), ts=st["ts"],
+                    reasons=_reasons(f)))
         except Exception as ex:
             print("scan skip", s, ex)
         time.sleep(0.05)
     signals.sort(key=lambda x: x["prob"], reverse=True)
     signals = signals[:CFG["top_n"]]
     if signals:
-        send_telegram(format_message(signals))
+        mid = send_telegram(format_message(signals))
+        track_for_dashboard(signals, mid)        # تظهر في لوحة المتتبّع مثل بقية البوتات
         for sig in signals:
             state.setdefault("sent", []).append(sig["key"])
         save_state(state)
@@ -360,13 +369,60 @@ def format_message(signals):
 
 def send_telegram(text):
     if not TG_TOKEN or not TG_CHAT:
-        print("TG not configured; message:\n", text); return
+        print("TG not configured; message:\n", text); return None
     try:
-        requests.post(f"https://api.telegram.org/bot{TG_TOKEN}/sendMessage",
+        r = requests.post(f"https://api.telegram.org/bot{TG_TOKEN}/sendMessage",
                       data={"chat_id": TG_CHAT, "text": text, "parse_mode": "HTML"}, timeout=15)
         print(f"sent {text.count(chr(0x1F7E2))} signals to telegram")
+        return (r.json().get("result") or {}).get("message_id")
     except Exception as ex:
         print("telegram error", ex)
+        return None
+
+
+def track_for_dashboard(signals, message_id, tf=None, path=TRACK_FILE):
+    """يسجّل إشارات هذا الفحص في tracked_signals.json بنفس صيغة بقية البوتات،
+    فتظهر وتُتابَع في لوحة المتتبّع (إدارة 50/50: هدف1 +1R جني 50%+تعادل، هدف2 +2R).
+    لا يمسّ إشارات البوتات الأخرى — يُضيف فقط ويُنظّف إشاراته القديمة (>14 يوماً)."""
+    tf = tf or CFG["entry_tf"]
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if not isinstance(data, dict):
+            data = {}
+    except Exception:
+        data = {}
+    # تنظيف إشارات هذا البوت القديمة فقط (دون المساس بإشارات البوتات الأخرى)
+    cutoff = (dt.datetime.now() - dt.timedelta(days=14)).isoformat()
+    data = {k: v for k, v in data.items()
+            if not (isinstance(v, dict) and v.get("label") == DASH_LABEL
+                    and v.get("created", "") < cutoff)}
+    added = 0
+    for s in signals:
+        entry, stop, tp1 = s["entry"], s["stop"], s["tp1"]
+        R = entry - stop
+        if R <= 0:
+            continue
+        tp2 = round(entry + 2 * R, 8)
+        bar_ts = dt.datetime.utcfromtimestamp(s["ts"] / 1000).strftime("%Y-%m-%d %H:%M:%S")
+        key = f"{DASH_LABEL}|{s['sym']}|{bar_ts}"
+        if key in data:
+            continue
+        data[key] = {
+            "symbol": s["sym"], "label": DASH_LABEL, "timeframe": tf,
+            "message_id": message_id,
+            "entry": entry, "stop": stop, "init_stop": stop, "cur_stop": stop,
+            "last_alert_stop": stop, "armed": False,
+            "targets": [tp1, tp2], "tp_split": [50, 50],
+            "is_trendwave": False, "mgmt": "5050", "breakeven_done": False,
+            "bar_ts": bar_ts, "last_bar": bar_ts,
+            "hits": [], "stopped": False, "hi_seen": entry, "lo_seen": entry,
+            "created": dt.datetime.now().isoformat(timespec="seconds"),
+        }
+        added += 1
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f"tracked {added} signals to {path}")
 
 # ----------------------- main -----------------------
 if __name__ == "__main__":
