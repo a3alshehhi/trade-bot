@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-30T06:48:38",
+  "updated_at": "2026-06-30T07:05:02",
   "stats": {
-    "open": 33,
+    "open": 35,
     "closed": 613,
     "win_rate": 52.2,
     "profit_factor": 1.57,
@@ -10638,6 +10638,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-06-30T06:47:09",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|ESPUSDT|2026-06-30 06:59:59.999000",
+      "symbol": "ESPUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.07173,
+      "stop": 0.06887253,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-30T07:01:18",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|HYPERUSDT|2026-06-30 06:59:59.999000",
+      "symbol": "HYPERUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0813956,
+      "stop": 0.08065494,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-06-30T07:02:56",
       "closed_at": null,
       "realized_pct": 0.0
     }

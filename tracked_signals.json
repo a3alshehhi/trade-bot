@@ -20193,5 +20193,64 @@
     "hi_seen": 0.1938126,
     "lo_seen": 0.1938126,
     "created": "2026-06-30T06:47:09"
+  },
+  "RSI70 · 1h|ESPUSDT|2026-06-30 06:59:59.999000": {
+    "symbol": "ESPUSDT",
+    "label": "RSI70 · 1h",
+    "timeframe": "1h",
+    "message_id": 3364,
+    "entry": 0.07173,
+    "stop": 0.06887253,
+    "init_stop": 0.06887253,
+    "cur_stop": 0.06887253,
+    "last_alert_stop": 0.06887253,
+    "armed": false,
+    "targets": [
+      0.07302744,
+      0.07467786,
+      0.07944786
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-30 06:59:59.999000",
+    "last_bar": "2026-06-30 06:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.07173,
+    "lo_seen": 0.07173,
+    "created": "2026-06-30T07:01:18"
+  },
+  "trendwave · 15m|HYPERUSDT|2026-06-30 06:59:59.999000": {
+    "symbol": "HYPERUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": 3365,
+    "entry": 0.0813956,
+    "stop": 0.08065494,
+    "init_stop": 0.08065494,
+    "cur_stop": 0.08065494,
+    "last_alert_stop": 0.08065494,
+    "armed": false,
+    "targets": [
+      0.0834302,
+      0.08415
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-06-30 06:59:59.999000",
+    "last_bar": "2026-06-30 06:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0813956,
+    "lo_seen": 0.0813956,
+    "created": "2026-06-30T07:02:56"
   }
 }
