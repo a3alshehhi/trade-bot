@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-01T13:34:47",
+  "updated_at": "2026-07-01T13:48:26",
   "stats": {
-    "open": 19,
-    "closed": 667,
-    "win_rate": 50.2,
+    "open": 20,
+    "closed": 668,
+    "win_rate": 50.3,
     "profit_factor": 1.41,
-    "total_pct": 1897.91,
+    "total_pct": 1912.69,
     "avg_pct": 0.59,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 8,
-        "win_rate": 75.0,
-        "return_pct": 35.67,
+        "trades": 9,
+        "win_rate": 77.8,
+        "return_pct": 36.67,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 175,
-        "win_rate": 49.7,
-        "return_pct": 61.74,
+        "trades": 176,
+        "win_rate": 50.0,
+        "return_pct": 62.94,
         "month": "2026-07"
       },
       {
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 8,
-        "win_rate": 75.0,
-        "return_pct": 35.67
+        "trades": 9,
+        "win_rate": 77.8,
+        "return_pct": 36.67
       },
       {
         "key": "2026-06",
@@ -11294,6 +11294,38 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-01T13:23:19",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|BMTUSDT|2026-07-01 13:30:00",
+      "symbol": "BMTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01146,
+      "stop": 0.0114034,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-01T13:34:29",
+      "closed_at": "2026-07-01T13:48:24",
+      "realized_pct": 0.74,
+      "result_pct": 0.74
+    },
+    {
+      "id": "العرض/الطلب|CELOUSDT|2026-07-01 13:30:00",
+      "symbol": "CELOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06655,
+      "stop": 0.06494528,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T13:34:29",
       "closed_at": null,
       "realized_pct": 0.0
     }
