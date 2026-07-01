@@ -21376,5 +21376,35 @@
     "exit_price": 0.2434264,
     "close_card_sent": true,
     "closed_at": "2026-07-01T05:03:59"
+  },
+  "العرض/الطلب|ARUSDT|2026-07-01 06:00:00": {
+    "symbol": "ARUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 3522,
+    "entry": 2.015,
+    "stop": 1.977042,
+    "init_stop": 1.977042,
+    "cur_stop": 1.977042,
+    "last_alert_stop": 1.977042,
+    "armed": false,
+    "targets": [
+      2.052958,
+      2.090916
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-01 06:00:00",
+    "last_bar": "2026-07-01 06:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 2.015,
+    "lo_seen": 2.015,
+    "created": "2026-07-01T06:48:38"
   }
 }
