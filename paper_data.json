@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-01T20:19:26",
+  "updated_at": "2026-07-01T20:34:38",
   "stats": {
-    "open": 38,
+    "open": 39,
     "closed": 698,
     "win_rate": 51.6,
     "profit_factor": 1.44,
@@ -12081,9 +12081,25 @@
       "timeframe": "15m",
       "entry": 0.1195,
       "stop": 0.11607356,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T20:16:10",
+      "closed_at": null,
+      "realized_pct": 0.65
+    },
+    {
+      "id": "RSI70 · 15m|QKCUSDT|2026-07-01 20:29:59.999000",
+      "symbol": "QKCUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.002048,
+      "stop": 0.00197759,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T20:31:13",
       "closed_at": null,
       "realized_pct": 0.0
     }
