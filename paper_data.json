@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-07-01T01:04:08",
+  "updated_at": "2026-07-01T01:18:49",
   "stats": {
-    "open": 22,
-    "closed": 659,
-    "win_rate": 49.9,
+    "open": 21,
+    "closed": 660,
+    "win_rate": 50.0,
     "profit_factor": 1.38,
-    "total_pct": 1372.64,
+    "total_pct": 1406.36,
     "avg_pct": 0.55,
     "max_drawdown_pct": -76.96
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-07-01",
+        "trades": 1,
+        "win_rate": 100.0,
+        "return_pct": 2.29,
+        "week": "2026-W27",
+        "month": "2026-07"
+      },
       {
         "key": "2026-06-30",
         "trades": 84,
@@ -95,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 167,
-        "win_rate": 48.5,
-        "return_pct": 19.22,
+        "trades": 168,
+        "win_rate": 48.8,
+        "return_pct": 21.95,
         "month": "2026-06"
       },
       {
@@ -116,6 +124,12 @@
       }
     ],
     "monthly": [
+      {
+        "key": "2026-07",
+        "trades": 1,
+        "win_rate": 100.0,
+        "return_pct": 2.29
+      },
       {
         "key": "2026-06",
         "trades": 659,
@@ -11117,10 +11131,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-30T14:02:18",
-      "closed_at": null,
-      "realized_pct": 2.29
+      "closed_at": "2026-07-01T01:18:46",
+      "realized_pct": 2.29,
+      "result_pct": 2.29
     },
     {
       "id": "RSI70 · 1h|GLMUSDT|2026-06-30 15:59:59.999000",
