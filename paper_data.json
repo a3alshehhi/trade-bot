@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-01T14:48:30",
+  "updated_at": "2026-07-01T15:03:39",
   "stats": {
-    "open": 29,
+    "open": 32,
     "closed": 669,
     "win_rate": 50.2,
     "profit_factor": 1.41,
@@ -11469,6 +11469,48 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-01T14:46:00",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|CELRUSDT|2026-07-01 14:59:59.999000",
+      "symbol": "CELRUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.001898,
+      "stop": 0.0018534,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:01:15",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|ICPUSDT|2026-07-01 14:59:59.999000",
+      "symbol": "ICPUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 2.184,
+      "stop": 2.13214878,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:01:16",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|BANDUSDT|2026-07-01 14:59:59.999000",
+      "symbol": "BANDUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1552,
+      "stop": 0.14452007,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:01:36",
       "closed_at": null,
       "realized_pct": 0.0
     }

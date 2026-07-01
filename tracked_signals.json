@@ -21899,5 +21899,101 @@
     "hi_seen": 0.01194,
     "lo_seen": 0.01194,
     "created": "2026-07-01T14:46:00"
+  },
+  "RSI70 · 15m|CELRUSDT|2026-07-01 14:59:59.999000": {
+    "symbol": "CELRUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 3554,
+    "entry": 0.001898,
+    "stop": 0.0018534,
+    "init_stop": 0.0018534,
+    "cur_stop": 0.0018534,
+    "last_alert_stop": 0.0018534,
+    "armed": false,
+    "targets": [
+      0.0019184,
+      0.00194435,
+      0.00201935
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-01 14:59:59.999000",
+    "last_bar": "2026-07-01 14:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.001898,
+    "lo_seen": 0.001898,
+    "created": "2026-07-01T15:01:15"
+  },
+  "RSI70 · 15m|ICPUSDT|2026-07-01 14:59:59.999000": {
+    "symbol": "ICPUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 3555,
+    "entry": 2.184,
+    "stop": 2.13214878,
+    "init_stop": 2.13214878,
+    "cur_stop": 2.13214878,
+    "last_alert_stop": 2.13214878,
+    "armed": false,
+    "targets": [
+      2.207664,
+      2.237766,
+      2.324766
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-01 14:59:59.999000",
+    "last_bar": "2026-07-01 14:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 2.184,
+    "lo_seen": 2.184,
+    "created": "2026-07-01T15:01:16"
+  },
+  "RSI70 · 1h|BANDUSDT|2026-07-01 14:59:59.999000": {
+    "symbol": "BANDUSDT",
+    "label": "RSI70 · 1h",
+    "timeframe": "1h",
+    "message_id": 3556,
+    "entry": 0.1552,
+    "stop": 0.14452007,
+    "init_stop": 0.14452007,
+    "cur_stop": 0.14452007,
+    "last_alert_stop": 0.14452007,
+    "armed": false,
+    "targets": [
+      0.1604224,
+      0.1670656,
+      0.1862656
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-01 14:59:59.999000",
+    "last_bar": "2026-07-01 14:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1552,
+    "lo_seen": 0.1552,
+    "created": "2026-07-01T15:01:36"
   }
 }
