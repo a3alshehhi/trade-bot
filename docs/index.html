@@ -663,5 +663,93 @@ async function load(){
 load();
 setInterval(async()=>{ await refreshPrices(); renderLocal(); renderOpen(); }, 30000);
 </script>
+
+<!-- ==== إضافات: بطاقة اليوم + ترقيم السجل (مُضافة تلقائياً) ==== -->
+<script>
+(function(){
+"use strict";
+var RAW="https://raw.githubusercontent.com/a3alshehhi/trade-bot/main/paper_data.json";
+var PAGE=50, curPage=1;
+function td(v){return (v||"").slice(0,10);}
+function today(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+function col(x){return x>=0?"#3fb950":"#f85149";}
+function sign(x){return (x>=0?"+":"")+x.toFixed(2)+"%";}
+function buildToday(){
+  fetch(RAW,{cache:"no-store"}).then(function(r){return r.json();}).then(function(d){
+    var tr=d.trades||[], T=today();
+    var opened=tr.filter(function(t){return td(t.opened_at)===T;});
+    var closed=tr.filter(function(t){return t.status==="closed"&&td(t.closed_at)===T;});
+    var win=closed.filter(function(t){return t.realized_pct>0;}).length;
+    var net=closed.reduce(function(a,t){return a+(t.realized_pct||0);},0);
+    var wr=closed.length?100*win/closed.length:0;
+    var openNow=tr.filter(function(t){return t.status==="open";}).length;
+    var byl={};
+    tr.filter(function(t){return td(t.opened_at)===T||td(t.closed_at)===T;}).forEach(function(t){byl[t.label]=byl[t.label]||{o:0,c:0,w:0,net:0};});
+    opened.forEach(function(t){byl[t.label].o++;});
+    closed.forEach(function(t){var b=byl[t.label];b.c++;if(t.realized_pct>0)b.w++;b.net+=t.realized_pct||0;});
+    var rows=Object.keys(byl).sort(function(a,b){return byl[b].net-byl[a].net;}).map(function(k){
+      var v=byl[k];
+      return "<tr><td style='padding:4px 6px'>"+k+"</td><td style='text-align:center'>"+v.o+"</td><td style='text-align:center'>"+v.c+"</td><td style='text-align:center'>"+(v.c?Math.round(100*v.w/v.c)+"%":"—")+"</td><td style='text-align:center;color:"+col(v.net)+"'>"+sign(v.net)+"</td></tr>";
+    }).join("");
+    if(!rows)rows="<tr><td colspan='5' style='color:#8b949e;padding:6px'>لا صفقات اليوم بعد</td></tr>";
+    var kpi=function(l,v,c){return "<div class='kpi'><div class='lbl'>"+l+"</div><div class='val' style='color:"+(c||"#e6edf3")+"'>"+v+"</div></div>";};
+    var html=""
+     +"<h2>📌 اليوم — "+T+"</h2>"
+     +"<div class='grid'>"
+     + kpi("أُغلقت اليوم", closed.length)
+     + kpi("فُتحت اليوم", opened.length)
+     + kpi("نسبة الفوز", wr.toFixed(1)+"%")
+     + kpi("صافي اليوم", sign(net), col(net))
+     + kpi("مفتوحة الآن", openNow)
+     +"</div>"
+     +"<table style='width:100%;border-collapse:collapse;margin-top:10px;font-size:14px'><thead><tr style='color:#8b949e'>"
+     +"<th style='text-align:right;padding:4px 6px'>البوت</th><th>فُتحت</th><th>أُغلقت</th><th>فوز</th><th>صافي</th>"
+     +"</tr></thead><tbody>"+rows+"</tbody></table>";
+    var card=document.getElementById("todayCard");
+    if(card)card.innerHTML=html;
+  }).catch(function(){});
+}
+function place(){
+  var card=document.getElementById("todayCard");
+  if(!card){card=document.createElement("div");card.id="todayCard";card.className="panel";card.style.border="1px solid #2ea043";
+    var anc=document.getElementById("kpis");if(anc&&anc.parentNode)anc.parentNode.insertBefore(card,anc);else document.body.insertBefore(card,document.body.firstChild);}
+}
+function renderPager(pages,n){
+  var tbl=document.getElementById("logTbl");if(!tbl)return;
+  var bar=document.getElementById("logPager");
+  if(!bar){bar=document.createElement("div");bar.id="logPager";bar.style.cssText="display:flex;gap:6px;flex-wrap:wrap;align-items:center;justify-content:center;margin-top:12px";tbl.parentNode.appendChild(bar);}
+  function b(lbl,pg,dis,act){return "<button data-pg='"+pg+"' "+(dis?"disabled":"")+" style='padding:4px 11px;border:1px solid #30363d;border-radius:6px;cursor:"+(dis?"default":"pointer")+";background:"+(act?"#238636":"#21262d")+";color:#e6edf3;opacity:"+(dis?"0.4":"1")+"'>"+lbl+"</button>";}
+  var html="<span style='color:#8b949e;font-size:13px;margin-inline-end:6px'>"+n+" صفقة · صفحة "+curPage+"/"+pages+"</span>";
+  html+=b("« الأحدث",1,curPage===1,false)+b("‹",Math.max(1,curPage-1),curPage===1,false);
+  var a=Math.max(1,curPage-2),z=Math.min(pages,curPage+2);
+  for(var p=a;p<=z;p++)html+=b(p,p,false,p===curPage);
+  html+=b("›",Math.min(pages,curPage+1),curPage===pages,false)+b("» الأقدم",pages,curPage===pages,false);
+  bar.innerHTML=html;
+  [].forEach.call(bar.querySelectorAll("button"),function(btn){btn.onclick=function(){curPage=+btn.getAttribute("data-pg");paginate();var t=document.getElementById("logTbl");window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-70,behavior:"smooth"});};});
+}
+function paginate(){
+  var tbl=document.getElementById("logTbl");if(!tbl)return;
+  var tb=tbl.tBodies[0]||tbl;var all=[].slice.call(tb.rows);
+  var data=all.filter(function(r){return r.getElementsByTagName("th").length===0;});
+  var head=all.filter(function(r){return r.getElementsByTagName("th").length>0;});
+  head.forEach(function(r){r.style.display="";});
+  var n=data.length;var pages=Math.max(1,Math.ceil(n/PAGE));
+  if(curPage>pages)curPage=pages;if(curPage<1)curPage=1;
+  data.forEach(function(r,i){r.style.display=(Math.floor(i/PAGE)+1===curPage)?"":"none";});
+  renderPager(pages,n);
+}
+function boot(){
+  place();buildToday();setInterval(buildToday,120000);
+  var tbl=document.getElementById("logTbl");
+  if(tbl){var tb=tbl.tBodies[0]||tbl;
+    var mo=new MutationObserver(function(){curPage=1;paginate();});
+    mo.observe(tb,{childList:true});
+    setTimeout(paginate,1200);setTimeout(paginate,3000);
+  }
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot);else boot();
+})();
+</script>
+
 </body>
 </html>
