@@ -21867,5 +21867,37 @@
     "hi_seen": 0.001892,
     "lo_seen": 0.001892,
     "created": "2026-07-01T14:31:17"
+  },
+  "RSI70 · 15m|BMTUSDT|2026-07-01 14:44:59.999000": {
+    "symbol": "BMTUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 3553,
+    "entry": 0.01194,
+    "stop": 0.01161837,
+    "init_stop": 0.01161837,
+    "cur_stop": 0.01161837,
+    "last_alert_stop": 0.01161837,
+    "armed": false,
+    "targets": [
+      0.0120896,
+      0.0122799,
+      0.0128299
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-01 14:44:59.999000",
+    "last_bar": "2026-07-01 14:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01194,
+    "lo_seen": 0.01194,
+    "created": "2026-07-01T14:46:00"
   }
 }
