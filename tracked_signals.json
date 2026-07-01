@@ -21413,5 +21413,35 @@
     "hi_seen": 2.04,
     "lo_seen": 1.992,
     "created": "2026-07-01T06:48:38"
+  },
+  "العرض/الطلب|DEXEUSDT|2026-07-01 09:00:00": {
+    "symbol": "DEXEUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 3527,
+    "entry": 22.814,
+    "stop": 22.32158,
+    "init_stop": 22.32158,
+    "cur_stop": 22.32158,
+    "last_alert_stop": 22.32158,
+    "armed": false,
+    "targets": [
+      23.30642,
+      23.79884
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-01 09:00:00",
+    "last_bar": "2026-07-01 09:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 22.814,
+    "lo_seen": 22.814,
+    "created": "2026-07-01T09:33:22"
   }
 }
