@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-01T21:48:39",
+  "updated_at": "2026-07-01T22:04:10",
   "stats": {
-    "open": 39,
-    "closed": 703,
-    "win_rate": 51.5,
-    "profit_factor": 1.43,
-    "total_pct": 2427.11,
-    "avg_pct": 0.6,
+    "open": 43,
+    "closed": 704,
+    "win_rate": 51.4,
+    "profit_factor": 1.42,
+    "total_pct": 2350.54,
+    "avg_pct": 0.59,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 44,
-        "win_rate": 75.0,
-        "return_pct": 71.6,
+        "trades": 45,
+        "win_rate": 73.3,
+        "return_pct": 66.4,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 211,
-        "win_rate": 54.0,
-        "return_pct": 104.59,
+        "trades": 212,
+        "win_rate": 53.8,
+        "return_pct": 98.39,
         "month": "2026-07"
       },
       {
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 44,
-        "win_rate": 75.0,
-        "return_pct": 71.6
+        "trades": 45,
+        "win_rate": 73.3,
+        "return_pct": 66.4
       },
       {
         "key": "2026-06",
@@ -11375,11 +11375,13 @@
       "timeframe": "15m",
       "entry": 0.00496,
       "stop": 0.00486354,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T14:16:05",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.46
     },
     {
       "id": "RSI70 · 15m|DUSKUSDT|2026-07-01 14:14:59.999000",
@@ -12123,11 +12125,13 @@
       "timeframe": "1h",
       "entry": 0.1715,
       "stop": 0.1691416,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T20:50:58",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.69
     },
     {
       "id": "RSI70 · 1h|BMTUSDT|2026-07-01 20:59:59.999000",
@@ -12137,11 +12141,13 @@
       "timeframe": "1h",
       "entry": 0.01251,
       "stop": 0.01170478,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T21:01:46",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.54
     },
     {
       "id": "RSI70 · 1h|CTSIUSDT|2026-07-01 20:59:59.999000",
@@ -12166,10 +12172,11 @@
       "entry": 0.02341,
       "stop": 0.0227011,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T21:20:57",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-01T22:04:04",
+      "realized_pct": -3.03,
+      "result_pct": -3.03
     },
     {
       "id": "العرض/الطلب|COOKIEUSDT|2026-07-01 21:00:00",
@@ -12179,9 +12186,81 @@
       "timeframe": "1h",
       "entry": 0.0096,
       "stop": 0.0090718,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T21:20:57",
+      "closed_at": null,
+      "realized_pct": 2.75
+    },
+    {
+      "id": "RSI70 · 1h|AVAUSDT|2026-07-01 21:59:59.999000",
+      "symbol": "AVAUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1757,
+      "stop": 0.16592139,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T22:01:37",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|CHRUSDT|2026-07-01 21:59:59.999000",
+      "symbol": "CHRUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.01541,
+      "stop": 0.01447439,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T22:01:38",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|CRVUSDT|2026-07-01 21:59:59.999000",
+      "symbol": "CRVUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.2036,
+      "stop": 0.19112694,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T22:01:39",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|SCRUSDT|2026-07-01 21:59:59.999000",
+      "symbol": "SCRUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.02924,
+      "stop": 0.02746151,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T22:01:40",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|SHELLUSDT|2026-07-01 21:59:59.999000",
+      "symbol": "SHELLUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0233,
+      "stop": 0.02149784,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T22:01:41",
       "closed_at": null,
       "realized_pct": 0.0
     }
