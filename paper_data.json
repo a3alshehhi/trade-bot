@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-01T20:34:38",
+  "updated_at": "2026-07-01T20:49:50",
   "stats": {
-    "open": 39,
-    "closed": 698,
-    "win_rate": 51.6,
-    "profit_factor": 1.44,
-    "total_pct": 2614.6,
-    "avg_pct": 0.61,
+    "open": 36,
+    "closed": 701,
+    "win_rate": 51.5,
+    "profit_factor": 1.43,
+    "total_pct": 2423.04,
+    "avg_pct": 0.6,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 39,
-        "win_rate": 79.5,
-        "return_pct": 84.34,
+        "trades": 42,
+        "win_rate": 76.2,
+        "return_pct": 71.33,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 206,
-        "win_rate": 54.4,
-        "return_pct": 119.77,
+        "trades": 209,
+        "win_rate": 54.1,
+        "return_pct": 104.26,
         "month": "2026-07"
       },
       {
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 39,
-        "win_rate": 79.5,
-        "return_pct": 84.34
+        "trades": 42,
+        "win_rate": 76.2,
+        "return_pct": 71.33
       },
       {
         "key": "2026-06",
@@ -11820,11 +11820,13 @@
       "timeframe": "15m",
       "entry": 0.5933,
       "stop": 0.52490406,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T15:47:57",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.51
     },
     {
       "id": "RSI70 · 15m|LAYERUSDT|2026-07-01 15:59:59.999000",
@@ -11958,10 +11960,11 @@
       "entry": 0.07076,
       "stop": 0.06703416,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T16:45:57",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-01T20:49:42",
+      "realized_pct": -5.27,
+      "result_pct": -5.27
     },
     {
       "id": "RSI70 · 15m|STRAXUSDT|2026-07-01 16:44:59.999000",
@@ -11972,10 +11975,11 @@
       "entry": 0.00992,
       "stop": 0.00966989,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T16:45:58",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-01T20:49:44",
+      "realized_pct": -2.52,
+      "result_pct": -2.52
     },
     {
       "id": "RSI70 · 1h|CTSIUSDT|2026-07-01 16:59:59.999000",
@@ -12084,10 +12088,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T20:16:10",
-      "closed_at": null,
-      "realized_pct": 0.65
+      "closed_at": "2026-07-01T20:49:48",
+      "realized_pct": 0.65,
+      "result_pct": 0.65
     },
     {
       "id": "RSI70 · 15m|QKCUSDT|2026-07-01 20:29:59.999000",
