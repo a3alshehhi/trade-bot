@@ -23887,5 +23887,37 @@
     "hi_seen": 0.155,
     "lo_seen": 0.155,
     "created": "2026-07-01T23:20:50"
+  },
+  "RSI70 · 15m|ALICEUSDT|2026-07-01 23:29:59.999000": {
+    "symbol": "ALICEUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 3780,
+    "entry": 0.124,
+    "stop": 0.11808073,
+    "init_stop": 0.11808073,
+    "cur_stop": 0.11808073,
+    "last_alert_stop": 0.11808073,
+    "armed": false,
+    "targets": [
+      0.1267744,
+      0.1303036,
+      0.1405036
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-01 23:29:59.999000",
+    "last_bar": "2026-07-01 23:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.124,
+    "lo_seen": 0.124,
+    "created": "2026-07-01T23:31:12"
   }
 }

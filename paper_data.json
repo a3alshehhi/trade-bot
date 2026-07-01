@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-01T23:20:03",
+  "updated_at": "2026-07-01T23:35:07",
   "stats": {
-    "open": 38,
+    "open": 41,
     "closed": 714,
     "win_rate": 52.0,
     "profit_factor": 1.43,
@@ -12359,6 +12359,48 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-01T23:01:38",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|1000SATSUSDT|2026-07-01 23:00:00",
+      "symbol": "1000SATSUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 9.56e-06,
+      "stop": 9.4e-06,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T23:20:50",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ADAUSDT|2026-07-01 23:00:00",
+      "symbol": "ADAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.155,
+      "stop": 0.1525226,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T23:20:50",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|ALICEUSDT|2026-07-01 23:29:59.999000",
+      "symbol": "ALICEUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.124,
+      "stop": 0.11808073,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T23:31:12",
       "closed_at": null,
       "realized_pct": 0.0
     }
