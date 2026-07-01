@@ -28,9 +28,14 @@ CFG = dict(
     entry_tf="1h", htf="4h", pages_1h=4, pages_4h=2,
     top_n=8,
 )
+# ── تجاوز فريم الدخول/السياق عبر البيئة (لتشغيل البوت على كل الفريمات: 15m/1h/4h) ──
+# مثال: SD_ENTRY_TF=15m SD_HTF=1h  |  SD_ENTRY_TF=4h SD_HTF=1d
+CFG["entry_tf"] = os.environ.get("SD_ENTRY_TF", CFG["entry_tf"])
+CFG["htf"]      = os.environ.get("SD_HTF", CFG["htf"])
 BINANCE_BASES = ["https://data-api.binance.vision", "https://api.binance.com"]
-MODEL_PATH = "sd_model.joblib"
-STATE_PATH = "sd_state.json"
+# ملفات النموذج/الحالة قابلة للتخصيص لكل فريم (لتفادي التضارب بين الفريمات)
+MODEL_PATH = os.environ.get("SD_MODEL", "sd_model.joblib")
+STATE_PATH = os.environ.get("SD_STATE", "sd_state.json")
 WATCHLIST = "watchlist.txt"
 MODEL_MAX_AGE_H = 24                  # يعيد التدريب إذا تجاوز عمر النموذج هذا
 ML_KEYS = ["strength", "heightATR", "baseVolZ", "touchVolZ", "bos", "fvg", "sweep",
