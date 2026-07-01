@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-01T01:48:49",
+  "updated_at": "2026-07-01T02:03:10",
   "stats": {
-    "open": 21,
-    "closed": 660,
+    "open": 19,
+    "closed": 662,
     "win_rate": 50.0,
     "profit_factor": 1.38,
-    "total_pct": 1406.36,
+    "total_pct": 1372.56,
     "avg_pct": 0.55,
-    "max_drawdown_pct": -76.96
+    "max_drawdown_pct": -77.2
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 1,
-        "win_rate": 100.0,
-        "return_pct": 2.29,
+        "trades": 3,
+        "win_rate": 66.7,
+        "return_pct": -0.01,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,10 +103,10 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 168,
+        "trades": 170,
         "win_rate": 48.8,
-        "return_pct": 21.95,
-        "month": "2026-06"
+        "return_pct": 19.21,
+        "month": "2026-07"
       },
       {
         "key": "2026-W26",
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 1,
-        "win_rate": 100.0,
-        "return_pct": 2.29
+        "trades": 3,
+        "win_rate": 66.7,
+        "return_pct": -0.01
       },
       {
         "key": "2026-06",
@@ -11164,10 +11164,11 @@
       "entry": 3.622208,
       "stop": 3.50453017,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-30T16:03:01",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-01T02:03:06",
+      "realized_pct": -3.25,
+      "result_pct": -3.25
     },
     {
       "id": "trendwave · 1h|SOLUSDT|2026-06-30 15:59:59.999000",
@@ -11209,10 +11210,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-30T23:04:52",
-      "closed_at": null,
-      "realized_pct": 1.04
+      "closed_at": "2026-07-01T02:03:09",
+      "realized_pct": 1.04,
+      "result_pct": 1.04
     }
   ]
 }
