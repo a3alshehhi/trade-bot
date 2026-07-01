@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-01T13:48:26",
+  "updated_at": "2026-07-01T14:04:17",
   "stats": {
     "open": 20,
-    "closed": 668,
-    "win_rate": 50.3,
+    "closed": 669,
+    "win_rate": 50.2,
     "profit_factor": 1.41,
-    "total_pct": 1912.69,
+    "total_pct": 1874.85,
     "avg_pct": 0.59,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 9,
-        "win_rate": 77.8,
-        "return_pct": 36.67,
+        "trades": 10,
+        "win_rate": 70.0,
+        "return_pct": 34.1,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 176,
-        "win_rate": 50.0,
-        "return_pct": 62.94,
+        "trades": 177,
+        "win_rate": 49.7,
+        "return_pct": 59.88,
         "month": "2026-07"
       },
       {
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 9,
-        "win_rate": 77.8,
-        "return_pct": 36.67
+        "trades": 10,
+        "win_rate": 70.0,
+        "return_pct": 34.1
       },
       {
         "key": "2026-06",
@@ -11247,10 +11247,11 @@
       "entry": 2.015,
       "stop": 1.977042,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T06:48:38",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-01T14:04:13",
+      "realized_pct": -1.88,
+      "result_pct": -1.88
     },
     {
       "id": "العرض/الطلب|DEXEUSDT|2026-07-01 09:00:00",
@@ -11326,6 +11327,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-01T13:34:29",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|ICPUSDT|2026-07-01 13:59:59.999000",
+      "symbol": "ICPUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 2.163,
+      "stop": 2.12117652,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T14:01:19",
       "closed_at": null,
       "realized_pct": 0.0
     }
