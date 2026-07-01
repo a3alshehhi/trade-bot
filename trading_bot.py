@@ -2694,10 +2694,7 @@ def run_backtest(cfg, watchlist_path, out_dir):
         print(f"   RSI21<20→>80 → خفوت → HL محوري → كسر h1 بشمعة قوية + RSI>50 + MA200")
         print(f"   دخول: فيبو 0.382/0.5/0.618 | وقف متحرك بعد 1R")
     elif cfg.get("trendwave"):
-        # trendwave يعمل على 1h و4h فقط
-        if cfg.get("timeframe") not in ("1h", "4h"):
-            print(f"⚠️  trendwave يعمل على 1h/4h فقط — الفريم ({cfg.get('timeframe')}) غير مدعوم. استخدم --timeframe 1h أو 4h")
-            return []
+        # trendwave يعمل على كل الفريمات (15m/1h/4h)
         bt_fn = backtest_symbol_trendwave
         _tb = cfg.get("trail_buf", 0.5); _ta = cfg.get("trail_arm", 1.0)
         if _tb == 0.25: _tb = 0.5
@@ -3858,13 +3855,10 @@ def live_reversal_scan(cfg, watchlist_path, state_path):
         alerted = {}
     need = 1000 if cfg.get("timeframe") in ("1h", "15m") else 320
     if cfg.get("trendwave"):
-        # trendwave يعمل على 1h و4h فقط
-        if cfg.get("timeframe") not in ("1h", "4h"):
-            print(f"⚠️  trendwave يعمل على 1h/4h فقط — الفريم الحالي ({cfg.get('timeframe')}) غير مدعوم.")
-            return
+        # trendwave يعمل على كل الفريمات (15m/1h/4h) — MA200 على نفس الفريم
         detector = detect_trendwave_signal
-        # فلتر الفريم الأعلى يحتاج 200 شمعة على الفريم الأعلى → شموع أكثر
-        tw_need = {"1h": 1200, "4h": 1300}.get(cfg.get("timeframe"), 1200)
+        # حاجة الشموع: كافية لحساب MA200 (نفس الفريم) + هامش
+        tw_need = {"15m": 1200, "1h": 1200, "4h": 1300}.get(cfg.get("timeframe"), 1200)
     elif cfg.get("rsi_cross"):
         detector = detect_rsi_cross_signal
     else:
