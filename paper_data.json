@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-01T22:04:10",
+  "updated_at": "2026-07-01T22:19:19",
   "stats": {
-    "open": 43,
-    "closed": 704,
-    "win_rate": 51.4,
+    "open": 42,
+    "closed": 705,
+    "win_rate": 51.3,
     "profit_factor": 1.42,
-    "total_pct": 2350.54,
-    "avg_pct": 0.59,
+    "total_pct": 2220.66,
+    "avg_pct": 0.58,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 45,
-        "win_rate": 73.3,
-        "return_pct": 66.4,
+        "trades": 46,
+        "win_rate": 71.7,
+        "return_pct": 57.59,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 212,
-        "win_rate": 53.8,
-        "return_pct": 98.39,
+        "trades": 213,
+        "win_rate": 53.5,
+        "return_pct": 87.87,
         "month": "2026-07"
       },
       {
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 45,
-        "win_rate": 73.3,
-        "return_pct": 66.4
+        "trades": 46,
+        "win_rate": 71.7,
+        "return_pct": 57.59
       },
       {
         "key": "2026-06",
@@ -11690,10 +11690,11 @@
       "entry": 0.06999,
       "stop": 0.0662771,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T15:31:24",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-01T22:19:03",
+      "realized_pct": -5.3,
+      "result_pct": -5.3
     },
     {
       "id": "RSI70 · 15m|IMXUSDT|2026-07-01 15:29:59.999000",
@@ -11703,11 +11704,13 @@
       "timeframe": "15m",
       "entry": 0.1196,
       "stop": 0.11634692,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T15:31:25",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.65
     },
     {
       "id": "RSI70 · 15m|INITUSDT|2026-07-01 15:29:59.999000",
