@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-01T15:19:35",
+  "updated_at": "2026-07-01T15:35:32",
   "stats": {
-    "open": 33,
-    "closed": 670,
-    "win_rate": 50.3,
-    "profit_factor": 1.41,
-    "total_pct": 1902.9,
+    "open": 45,
+    "closed": 672,
+    "win_rate": 50.4,
+    "profit_factor": 1.42,
+    "total_pct": 1948.17,
     "avg_pct": 0.59,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 11,
-        "win_rate": 72.7,
-        "return_pct": 36.01,
+        "trades": 13,
+        "win_rate": 76.9,
+        "return_pct": 39.08,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 178,
-        "win_rate": 50.0,
-        "return_pct": 62.15,
+        "trades": 180,
+        "win_rate": 50.6,
+        "return_pct": 65.81,
         "month": "2026-07"
       },
       {
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 11,
-        "win_rate": 72.7,
-        "return_pct": 36.01
+        "trades": 13,
+        "win_rate": 76.9,
+        "return_pct": 39.08
       },
       {
         "key": "2026-06",
@@ -11414,11 +11414,13 @@
       "timeframe": "15m",
       "entry": 0.453,
       "stop": 0.4444397,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T14:16:08",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.42
     },
     {
       "id": "RSI70 · 15m|SOMIUSDT|2026-07-01 14:14:59.999000",
@@ -11428,11 +11430,13 @@
       "timeframe": "15m",
       "entry": 0.0983,
       "stop": 0.09588604,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T14:16:10",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.55
     },
     {
       "id": "RSI70 · 15m|WCTUSDT|2026-07-01 14:14:59.999000",
@@ -11442,11 +11446,13 @@
       "timeframe": "15m",
       "entry": 0.04276,
       "stop": 0.04165117,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T14:16:11",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.6
     },
     {
       "id": "RSI70 · 15m|CELRUSDT|2026-07-01 14:29:59.999000",
@@ -11457,12 +11463,14 @@
       "entry": 0.001892,
       "stop": 0.00185038,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T14:31:17",
-      "closed_at": null,
-      "realized_pct": 0.5
+      "closed_at": "2026-07-01T15:35:12",
+      "realized_pct": 1.62,
+      "result_pct": 1.62
     },
     {
       "id": "RSI70 · 15m|BMTUSDT|2026-07-01 14:44:59.999000",
@@ -11475,10 +11483,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T14:46:00",
-      "closed_at": null,
-      "realized_pct": 0.63
+      "closed_at": "2026-07-01T15:35:14",
+      "realized_pct": 0.63,
+      "result_pct": 0.63
     },
     {
       "id": "RSI70 · 15m|CELRUSDT|2026-07-01 14:59:59.999000",
@@ -11488,11 +11497,13 @@
       "timeframe": "15m",
       "entry": 0.001898,
       "stop": 0.0018534,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T15:01:15",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.54
     },
     {
       "id": "RSI70 · 15m|ICPUSDT|2026-07-01 14:59:59.999000",
@@ -11549,6 +11560,202 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-01T15:16:05",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|ATOMUSDT|2026-07-01 15:29:59.999000",
+      "symbol": "ATOMUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.554,
+      "stop": 1.52128625,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:31:19",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|BMTUSDT|2026-07-01 15:29:59.999000",
+      "symbol": "BMTUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01207,
+      "stop": 0.01168283,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:31:20",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|BREVUSDT|2026-07-01 15:29:59.999000",
+      "symbol": "BREVUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0718,
+      "stop": 0.06898835,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:31:21",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|DCRUSDT|2026-07-01 15:29:59.999000",
+      "symbol": "DCRUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 11.16,
+      "stop": 10.91785741,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:31:22",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|CYBERUSDT|2026-07-01 15:29:59.999000",
+      "symbol": "CYBERUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.344,
+      "stop": 0.33763029,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:31:23",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|DOGEUSDT|2026-07-01 15:29:59.999000",
+      "symbol": "DOGEUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.07337,
+      "stop": 0.07187532,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:31:24",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|ESPUSDT|2026-07-01 15:29:59.999000",
+      "symbol": "ESPUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06999,
+      "stop": 0.0662771,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:31:24",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|IMXUSDT|2026-07-01 15:29:59.999000",
+      "symbol": "IMXUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1196,
+      "stop": 0.11634692,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:31:25",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|INITUSDT|2026-07-01 15:29:59.999000",
+      "symbol": "INITUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0543,
+      "stop": 0.05314382,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:31:26",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|IOTXUSDT|2026-07-01 15:29:59.999000",
+      "symbol": "IOTXUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00276,
+      "stop": 0.00270634,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:31:27",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|KSMUSDT|2026-07-01 15:29:59.999000",
+      "symbol": "KSMUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 3.16,
+      "stop": 3.06063554,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:31:28",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|LSKUSDT|2026-07-01 15:29:59.999000",
+      "symbol": "LSKUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0863,
+      "stop": 0.08435119,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:31:29",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|RLCUSDT|2026-07-01 15:29:59.999000",
+      "symbol": "RLCUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.297,
+      "stop": 0.29020315,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:31:30",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|XTZUSDT|2026-07-01 15:29:59.999000",
+      "symbol": "XTZUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2125,
+      "stop": 0.20790033,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:31:31",
       "closed_at": null,
       "realized_pct": 0.0
     }
