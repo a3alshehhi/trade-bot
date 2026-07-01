@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-01 01:59:59.999000"
+    "last_bar": "2026-07-01 03:59:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -1902,7 +1902,7 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-23 13:59:59.999000",
-    "last_bar": "2026-07-01 01:59:59.999000",
+    "last_bar": "2026-07-01 03:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00448,
@@ -3795,7 +3795,7 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-24 23:59:59.999000",
-    "last_bar": "2026-06-30 23:59:59.999000",
+    "last_bar": "2026-07-01 03:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.465,
@@ -7329,7 +7329,7 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-26 11:59:59.999000",
-    "last_bar": "2026-06-30 23:59:59.999000",
+    "last_bar": "2026-07-01 03:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.462,
@@ -7384,12 +7384,15 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-26 11:59:59.999000",
-    "last_bar": "2026-06-30 23:59:59.999000",
+    "last_bar": "2026-07-01 03:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 1.95,
-    "lo_seen": 1.752,
-    "created": "2026-06-26T12:03:42"
+    "lo_seen": 1.723,
+    "created": "2026-06-26T12:03:42",
+    "exit_price": 1.72308452,
+    "close_card_sent": true,
+    "closed_at": "2026-07-01T04:03:52"
   },
   "trendwave · 4h|PORTALUSDT|2026-06-26 11:59:59.999000": {
     "symbol": "PORTALUSDT",
@@ -9383,11 +9386,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-26 23:59:59.999000",
-    "last_bar": "2026-06-30 23:59:59.999000",
+    "last_bar": "2026-07-01 03:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.95,
-    "lo_seen": 1.759,
+    "lo_seen": 1.723,
     "created": "2026-06-27T00:03:44"
   },
   "trendwave · 4h|ZECUSDT|2026-06-26 23:59:59.999000": {
@@ -17030,7 +17033,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 03:59:59.999000",
-    "last_bar": "2026-06-30 23:59:59.999000",
+    "last_bar": "2026-07-01 03:59:59.999000",
     "hits": [
       1
     ],
@@ -17483,7 +17486,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 07:59:59.999000",
-    "last_bar": "2026-06-30 23:59:59.999000",
+    "last_bar": "2026-07-01 03:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 414.26,
@@ -18552,7 +18555,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 15:59:59.999000",
-    "last_bar": "2026-06-30 23:59:59.999000",
+    "last_bar": "2026-07-01 03:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1508,
@@ -18614,7 +18617,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 16:59:59.999000",
-    "last_bar": "2026-07-01 01:59:59.999000",
+    "last_bar": "2026-07-01 03:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.043,
@@ -21010,7 +21013,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-30 11:59:59.999000",
-    "last_bar": "2026-06-30 23:59:59.999000",
+    "last_bar": "2026-07-01 03:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.71832,
@@ -21097,7 +21100,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-30 12:59:59.999000",
-    "last_bar": "2026-07-01 01:59:59.999000",
+    "last_bar": "2026-07-01 03:59:59.999000",
     "hits": [
       1
     ],
@@ -21264,10 +21267,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-30 15:59:59.999000",
-    "last_bar": "2026-07-01 01:59:59.999000",
+    "last_bar": "2026-07-01 03:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 74.36,
+    "hi_seen": 75.69,
     "lo_seen": 72.25,
     "created": "2026-06-30T16:03:02"
   },
@@ -21335,5 +21338,37 @@
     "exit_price": 1.96,
     "close_card_sent": true,
     "closed_at": "2026-07-01T02:03:09"
+  },
+  "RSI70 · 1h|SFPUSDT|2026-07-01 03:59:59.999000": {
+    "symbol": "SFPUSDT",
+    "label": "RSI70 · 1h",
+    "timeframe": "1h",
+    "message_id": 3516,
+    "entry": 0.2281,
+    "stop": 0.21353583,
+    "init_stop": 0.21353583,
+    "cur_stop": 0.21353583,
+    "last_alert_stop": 0.21353583,
+    "armed": false,
+    "targets": [
+      0.2348456,
+      0.2434264,
+      0.2682264
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-01 03:59:59.999000",
+    "last_bar": "2026-07-01 03:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.2281,
+    "lo_seen": 0.2281,
+    "created": "2026-07-01T04:01:20"
   }
 }

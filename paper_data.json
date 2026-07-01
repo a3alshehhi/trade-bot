@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-01T03:48:40",
+  "updated_at": "2026-07-01T04:03:59",
   "stats": {
     "open": 19,
-    "closed": 662,
-    "win_rate": 50.0,
+    "closed": 663,
+    "win_rate": 49.9,
     "profit_factor": 1.38,
-    "total_pct": 1372.56,
-    "avg_pct": 0.55,
-    "max_drawdown_pct": -77.2
+    "total_pct": 1330.45,
+    "avg_pct": 0.54,
+    "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 3,
-        "win_rate": 66.7,
-        "return_pct": -0.01,
+        "trades": 4,
+        "win_rate": 50.0,
+        "return_pct": -2.87,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 170,
-        "win_rate": 48.8,
-        "return_pct": 19.21,
+        "trades": 171,
+        "win_rate": 48.5,
+        "return_pct": 15.81,
         "month": "2026-07"
       },
       {
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 3,
-        "win_rate": 66.7,
-        "return_pct": -0.01
+        "trades": 4,
+        "win_rate": 50.0,
+        "return_pct": -2.87
       },
       {
         "key": "2026-06",
@@ -4264,10 +4264,11 @@
       "entry": 1.77376533,
       "stop": 1.72308452,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T12:03:42",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-01T04:03:52",
+      "realized_pct": -2.86,
+      "result_pct": -2.86
     },
     {
       "id": "trendwave · 4h|PORTALUSDT|2026-06-26 11:59:59.999000",
@@ -11215,6 +11216,20 @@
       "closed_at": "2026-07-01T02:03:09",
       "realized_pct": 1.04,
       "result_pct": 1.04
+    },
+    {
+      "id": "RSI70 · 1h|SFPUSDT|2026-07-01 03:59:59.999000",
+      "symbol": "SFPUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.2281,
+      "stop": 0.21353583,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T04:01:20",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
