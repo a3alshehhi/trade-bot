@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-01T23:35:07",
+  "updated_at": "2026-07-01T23:48:34",
   "stats": {
-    "open": 41,
-    "closed": 714,
+    "open": 40,
+    "closed": 715,
     "win_rate": 52.0,
     "profit_factor": 1.43,
-    "total_pct": 2458.83,
+    "total_pct": 2470.6,
     "avg_pct": 0.59,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 55,
-        "win_rate": 76.4,
-        "return_pct": 73.76,
+        "trades": 56,
+        "win_rate": 76.8,
+        "return_pct": 74.56,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 222,
-        "win_rate": 55.4,
-        "return_pct": 107.16,
+        "trades": 223,
+        "win_rate": 55.6,
+        "return_pct": 108.11,
         "month": "2026-07"
       },
       {
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 55,
-        "win_rate": 76.4,
-        "return_pct": 73.76
+        "trades": 56,
+        "win_rate": 76.8,
+        "return_pct": 74.56
       },
       {
         "key": "2026-06",
@@ -11378,10 +11378,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T14:16:05",
-      "closed_at": null,
-      "realized_pct": 0.46
+      "closed_at": "2026-07-01T23:48:22",
+      "realized_pct": 0.46,
+      "result_pct": 0.46
     },
     {
       "id": "RSI70 · 15m|DUSKUSDT|2026-07-01 14:14:59.999000",
