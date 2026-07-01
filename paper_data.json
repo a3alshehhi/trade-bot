@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-01T15:03:39",
+  "updated_at": "2026-07-01T15:19:35",
   "stats": {
-    "open": 32,
-    "closed": 669,
-    "win_rate": 50.2,
+    "open": 33,
+    "closed": 670,
+    "win_rate": 50.3,
     "profit_factor": 1.41,
-    "total_pct": 1874.85,
+    "total_pct": 1902.9,
     "avg_pct": 0.59,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 10,
-        "win_rate": 70.0,
-        "return_pct": 34.1,
+        "trades": 11,
+        "win_rate": 72.7,
+        "return_pct": 36.01,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 177,
-        "win_rate": 49.7,
-        "return_pct": 59.88,
+        "trades": 178,
+        "win_rate": 50.0,
+        "return_pct": 62.15,
         "month": "2026-07"
       },
       {
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 10,
-        "win_rate": 70.0,
-        "return_pct": 34.1
+        "trades": 11,
+        "win_rate": 72.7,
+        "return_pct": 36.01
       },
       {
         "key": "2026-06",
@@ -11324,11 +11324,13 @@
       "timeframe": "15m",
       "entry": 0.06655,
       "stop": 0.06494528,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T13:34:29",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.21
     },
     {
       "id": "RSI70 · 15m|ICPUSDT|2026-07-01 13:59:59.999000",
@@ -11339,12 +11341,14 @@
       "entry": 2.163,
       "stop": 2.12117652,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T14:01:19",
-      "closed_at": null,
-      "realized_pct": 0.43
+      "closed_at": "2026-07-01T15:19:19",
+      "realized_pct": 1.42,
+      "result_pct": 1.42
     },
     {
       "id": "RSI70 · 15m|AIXBTUSDT|2026-07-01 14:14:59.999000",
@@ -11452,11 +11456,13 @@
       "timeframe": "15m",
       "entry": 0.001892,
       "stop": 0.00185038,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T14:31:17",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.5
     },
     {
       "id": "RSI70 · 15m|BMTUSDT|2026-07-01 14:44:59.999000",
@@ -11466,11 +11472,13 @@
       "timeframe": "15m",
       "entry": 0.01194,
       "stop": 0.01161837,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T14:46:00",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.63
     },
     {
       "id": "RSI70 · 15m|CELRUSDT|2026-07-01 14:59:59.999000",
@@ -11494,11 +11502,13 @@
       "timeframe": "15m",
       "entry": 2.184,
       "stop": 2.13214878,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T15:01:16",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.54
     },
     {
       "id": "RSI70 · 1h|BANDUSDT|2026-07-01 14:59:59.999000",
@@ -11511,6 +11521,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-01T15:01:36",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|PORTOUSDT|2026-07-01 15:14:59.999000",
+      "symbol": "PORTOUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.455,
+      "stop": 0.44519864,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:16:04",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|SKLUSDT|2026-07-01 15:14:59.999000",
+      "symbol": "SKLUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00356,
+      "stop": 0.00346984,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T15:16:05",
       "closed_at": null,
       "realized_pct": 0.0
     }
