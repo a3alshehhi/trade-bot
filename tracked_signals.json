@@ -23676,5 +23676,65 @@
     "hi_seen": 0.1234,
     "lo_seen": 0.1213,
     "created": "2026-07-01T22:31:12"
+  },
+  "العرض/الطلب|ETHUSDT|2026-07-01 22:00:00": {
+    "symbol": "ETHUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 3757,
+    "entry": 1624.5,
+    "stop": 1609.04558,
+    "init_stop": 1609.04558,
+    "cur_stop": 1609.04558,
+    "last_alert_stop": 1609.04558,
+    "armed": false,
+    "targets": [
+      1639.95442,
+      1655.40884
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-01 22:00:00",
+    "last_bar": "2026-07-01 22:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1624.5,
+    "lo_seen": 1624.5,
+    "created": "2026-07-01T22:50:58"
+  },
+  "العرض/الطلب|AVAXUSDT|2026-07-01 22:00:00": {
+    "symbol": "AVAXUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 3757,
+    "entry": 6.751,
+    "stop": 6.665224,
+    "init_stop": 6.665224,
+    "cur_stop": 6.665224,
+    "last_alert_stop": 6.665224,
+    "armed": false,
+    "targets": [
+      6.836776,
+      6.922552
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-01 22:00:00",
+    "last_bar": "2026-07-01 22:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 6.751,
+    "lo_seen": 6.751,
+    "created": "2026-07-01T22:50:58"
   }
 }
