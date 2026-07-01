@@ -21508,5 +21508,65 @@
     "hi_seen": 0.06538,
     "lo_seen": 0.06538,
     "created": "2026-07-01T13:23:19"
+  },
+  "العرض/الطلب|BMTUSDT|2026-07-01 13:30:00": {
+    "symbol": "BMTUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 3536,
+    "entry": 0.01146,
+    "stop": 0.0114034,
+    "init_stop": 0.0114034,
+    "cur_stop": 0.0114034,
+    "last_alert_stop": 0.0114034,
+    "armed": false,
+    "targets": [
+      0.0115166,
+      0.0115732
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-01 13:30:00",
+    "last_bar": "2026-07-01 13:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01146,
+    "lo_seen": 0.01146,
+    "created": "2026-07-01T13:34:29"
+  },
+  "العرض/الطلب|CELOUSDT|2026-07-01 13:30:00": {
+    "symbol": "CELOUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 3536,
+    "entry": 0.06655,
+    "stop": 0.06494528,
+    "init_stop": 0.06494528,
+    "cur_stop": 0.06494528,
+    "last_alert_stop": 0.06494528,
+    "armed": false,
+    "targets": [
+      0.06815472,
+      0.06975944
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-01 13:30:00",
+    "last_bar": "2026-07-01 13:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.06655,
+    "lo_seen": 0.06655,
+    "created": "2026-07-01T13:34:29"
   }
 }
