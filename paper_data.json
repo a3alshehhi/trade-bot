@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-01T16:48:43",
+  "updated_at": "2026-07-01T17:05:27",
   "stats": {
-    "open": 49,
-    "closed": 680,
-    "win_rate": 51.0,
+    "open": 50,
+    "closed": 681,
+    "win_rate": 51.1,
     "profit_factor": 1.42,
-    "total_pct": 2093.4,
-    "avg_pct": 0.59,
+    "total_pct": 2130.25,
+    "avg_pct": 0.6,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 21,
-        "win_rate": 85.7,
-        "return_pct": 48.94,
+        "trades": 22,
+        "win_rate": 86.4,
+        "return_pct": 51.45,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 188,
-        "win_rate": 52.7,
-        "return_pct": 77.57,
+        "trades": 189,
+        "win_rate": 52.9,
+        "return_pct": 80.55,
         "month": "2026-07"
       },
       {
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 21,
-        "win_rate": 85.7,
-        "return_pct": 48.94
+        "trades": 22,
+        "win_rate": 86.4,
+        "return_pct": 51.45
       },
       {
         "key": "2026-06",
@@ -11540,10 +11540,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T15:01:36",
-      "closed_at": null,
-      "realized_pct": 1.68
+      "closed_at": "2026-07-01T17:05:03",
+      "realized_pct": 1.68,
+      "result_pct": 1.68
     },
     {
       "id": "RSI70 · 15m|PORTOUSDT|2026-07-01 15:14:59.999000",
@@ -11952,6 +11953,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-01T16:45:58",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|CTSIUSDT|2026-07-01 16:59:59.999000",
+      "symbol": "CTSIUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.02314,
+      "stop": 0.02201522,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T17:01:52",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|PONDUSDT|2026-07-01 16:59:59.999000",
+      "symbol": "PONDUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.00136,
+      "stop": 0.00108133,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T17:01:53",
       "closed_at": null,
       "realized_pct": 0.0
     }
