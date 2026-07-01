@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-01T17:05:27",
+  "updated_at": "2026-07-01T17:20:12",
   "stats": {
-    "open": 50,
-    "closed": 681,
-    "win_rate": 51.1,
-    "profit_factor": 1.42,
-    "total_pct": 2130.25,
+    "open": 47,
+    "closed": 684,
+    "win_rate": 51.3,
+    "profit_factor": 1.43,
+    "total_pct": 2169.73,
     "avg_pct": 0.6,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 22,
-        "win_rate": 86.4,
-        "return_pct": 51.45,
+        "trades": 25,
+        "win_rate": 88.0,
+        "return_pct": 54.13,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 189,
-        "win_rate": 52.9,
-        "return_pct": 80.55,
+        "trades": 192,
+        "win_rate": 53.6,
+        "return_pct": 83.75,
         "month": "2026-07"
       },
       {
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 22,
-        "win_rate": 86.4,
-        "return_pct": 51.45
+        "trades": 25,
+        "win_rate": 88.0,
+        "return_pct": 54.13
       },
       {
         "key": "2026-06",
@@ -11454,10 +11454,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T14:16:11",
-      "closed_at": null,
-      "realized_pct": 0.6
+      "closed_at": "2026-07-01T17:19:45",
+      "realized_pct": 0.6,
+      "result_pct": 0.6
     },
     {
       "id": "RSI70 · 15m|CELRUSDT|2026-07-01 14:29:59.999000",
@@ -11557,10 +11558,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T15:16:04",
-      "closed_at": null,
-      "realized_pct": 0.48
+      "closed_at": "2026-07-01T17:19:48",
+      "realized_pct": 0.48,
+      "result_pct": 0.48
     },
     {
       "id": "RSI70 · 15m|SKLUSDT|2026-07-01 15:14:59.999000",
@@ -11867,10 +11869,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T16:16:06",
-      "closed_at": null,
-      "realized_pct": 0.68
+      "closed_at": "2026-07-01T17:20:05",
+      "realized_pct": 0.68,
+      "result_pct": 0.68
     },
     {
       "id": "العرض/الطلب|ETHUSDT|2026-07-01 16:00:00",
