@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-01T19:18:41",
+  "updated_at": "2026-07-01T19:35:06",
   "stats": {
-    "open": 42,
-    "closed": 692,
-    "win_rate": 51.6,
+    "open": 41,
+    "closed": 693,
+    "win_rate": 51.7,
     "profit_factor": 1.44,
-    "total_pct": 2414.4,
-    "avg_pct": 0.6,
+    "total_pct": 2443.82,
+    "avg_pct": 0.61,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 33,
-        "win_rate": 84.8,
-        "return_pct": 70.74,
+        "trades": 34,
+        "win_rate": 85.3,
+        "return_pct": 72.74,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 200,
-        "win_rate": 54.5,
-        "return_pct": 103.56,
+        "trades": 201,
+        "win_rate": 54.7,
+        "return_pct": 105.94,
         "month": "2026-07"
       },
       {
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 33,
-        "win_rate": 84.8,
-        "return_pct": 70.74
+        "trades": 34,
+        "win_rate": 85.3,
+        "return_pct": 72.74
       },
       {
         "key": "2026-06",
@@ -11408,10 +11408,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T14:16:07",
-      "closed_at": null,
-      "realized_pct": 1.17
+      "closed_at": "2026-07-01T19:34:44",
+      "realized_pct": 1.17,
+      "result_pct": 1.17
     },
     {
       "id": "RSI70 · 15m|PORTOUSDT|2026-07-01 14:14:59.999000",
@@ -12042,11 +12043,13 @@
       "timeframe": "15m",
       "entry": 1614.81,
       "stop": 1606.4245,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T18:41:02",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.26
     }
   ]
 }
