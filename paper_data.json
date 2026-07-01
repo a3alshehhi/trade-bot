@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-01T18:05:26",
+  "updated_at": "2026-07-01T18:18:36",
   "stats": {
-    "open": 46,
-    "closed": 685,
-    "win_rate": 51.4,
+    "open": 44,
+    "closed": 687,
+    "win_rate": 51.5,
     "profit_factor": 1.43,
-    "total_pct": 2191.29,
+    "total_pct": 2291.81,
     "avg_pct": 0.6,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 26,
-        "win_rate": 88.5,
-        "return_pct": 55.59,
+        "trades": 28,
+        "win_rate": 89.3,
+        "return_pct": 62.42,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 193,
-        "win_rate": 53.9,
-        "return_pct": 85.5,
+        "trades": 195,
+        "win_rate": 54.4,
+        "return_pct": 93.63,
         "month": "2026-07"
       },
       {
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 26,
-        "win_rate": 88.5,
-        "return_pct": 55.59
+        "trades": 28,
+        "win_rate": 89.3,
+        "return_pct": 62.42
       },
       {
         "key": "2026-06",
@@ -11325,12 +11325,14 @@
       "entry": 0.06655,
       "stop": 0.06494528,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T13:34:29",
-      "closed_at": null,
-      "realized_pct": 1.21
+      "closed_at": "2026-07-01T18:18:18",
+      "realized_pct": 3.62,
+      "result_pct": 3.62
     },
     {
       "id": "RSI70 · 15m|ICPUSDT|2026-07-01 13:59:59.999000",
@@ -11606,10 +11608,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T15:31:20",
-      "closed_at": null,
-      "realized_pct": 0.74
+      "closed_at": "2026-07-01T18:18:23",
+      "realized_pct": 0.74,
+      "result_pct": 0.74
     },
     {
       "id": "RSI70 · 15m|BREVUSDT|2026-07-01 15:29:59.999000",
