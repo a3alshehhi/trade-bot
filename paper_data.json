@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-01T09:48:21",
+  "updated_at": "2026-07-01T10:04:01",
   "stats": {
-    "open": 18,
+    "open": 19,
     "closed": 666,
     "win_rate": 50.2,
     "profit_factor": 1.41,
@@ -11265,6 +11265,22 @@
       "opened_at": "2026-07-01T09:33:22",
       "closed_at": null,
       "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|BIOUSDT|2026-07-01 09:00:00",
+      "symbol": "BIOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.02946,
+      "stop": 0.02907794,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "opened_at": "2026-07-01T09:49:34",
+      "closed_at": null,
+      "realized_pct": 0.65
     }
   ]
 }
