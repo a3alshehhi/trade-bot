@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-01T15:50:14",
+  "updated_at": "2026-07-01T16:05:15",
   "stats": {
-    "open": 45,
+    "open": 46,
     "closed": 674,
     "win_rate": 50.6,
     "profit_factor": 1.42,
@@ -11531,11 +11531,13 @@
       "timeframe": "1h",
       "entry": 0.1552,
       "stop": 0.14452007,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T15:01:36",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.68
     },
     {
       "id": "RSI70 · 15m|PORTOUSDT|2026-07-01 15:14:59.999000",
@@ -11587,11 +11589,13 @@
       "timeframe": "15m",
       "entry": 0.01207,
       "stop": 0.01168283,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T15:31:20",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.74
     },
     {
       "id": "RSI70 · 15m|BREVUSDT|2026-07-01 15:29:59.999000",
@@ -11771,11 +11775,13 @@
       "timeframe": "15m",
       "entry": 0.022,
       "stop": 0.02125526,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T15:46:19",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.8
     },
     {
       "id": "trendwave · 15m|KAITOUSDT|2026-07-01 15:44:59.999000",
@@ -11788,6 +11794,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-01T15:47:57",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|LAYERUSDT|2026-07-01 15:59:59.999000",
+      "symbol": "LAYERUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0663,
+      "stop": 0.06446693,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T16:01:20",
       "closed_at": null,
       "realized_pct": 0.0
     }
