@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-01 03:59:59.999000"
+    "last_bar": "2026-07-01 04:59:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -1902,7 +1902,7 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-23 13:59:59.999000",
-    "last_bar": "2026-07-01 03:59:59.999000",
+    "last_bar": "2026-07-01 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00448,
@@ -18617,10 +18617,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 16:59:59.999000",
-    "last_bar": "2026-07-01 03:59:59.999000",
+    "last_bar": "2026-07-01 04:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 2.043,
+    "hi_seen": 2.063,
     "lo_seen": 1.91,
     "created": "2026-06-29T17:01:10"
   },
@@ -21100,7 +21100,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-30 12:59:59.999000",
-    "last_bar": "2026-07-01 03:59:59.999000",
+    "last_bar": "2026-07-01 04:59:59.999000",
     "hits": [
       1
     ],
@@ -21267,10 +21267,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-30 15:59:59.999000",
-    "last_bar": "2026-07-01 03:59:59.999000",
+    "last_bar": "2026-07-01 04:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 75.69,
+    "hi_seen": 75.87,
     "lo_seen": 72.25,
     "created": "2026-06-30T16:03:02"
   },
@@ -21347,7 +21347,7 @@
     "entry": 0.2281,
     "stop": 0.21353583,
     "init_stop": 0.21353583,
-    "cur_stop": 0.21353583,
+    "cur_stop": 0.2281,
     "last_alert_stop": 0.21353583,
     "armed": false,
     "targets": [
@@ -21364,11 +21364,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 03:59:59.999000",
-    "last_bar": "2026-07-01 03:59:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.2281,
-    "lo_seen": 0.2281,
-    "created": "2026-07-01T04:01:20"
+    "last_bar": "2026-07-01 04:59:59.999000",
+    "hits": [
+      1,
+      2
+    ],
+    "stopped": true,
+    "hi_seen": 0.2455,
+    "lo_seen": 0.227,
+    "created": "2026-07-01T04:01:20",
+    "exit_price": 0.2434264,
+    "close_card_sent": true,
+    "closed_at": "2026-07-01T05:03:59"
   }
 }
