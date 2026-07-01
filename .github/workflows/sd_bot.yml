@@ -25,17 +25,21 @@ jobs:
       - name: Install deps
         run: pip install requests scikit-learn joblib
 
-      - name: Run SD bot
+      - name: Run SD bot (كل الفريمات 15m/1h/4h)
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python sd_bot.py
+        run: |
+          # كل فريم دخول مع سياقه الأعلى ونموذج/حالة مستقلّين لتفادي التضارب
+          SD_ENTRY_TF=15m SD_HTF=1h SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_15m.json python sd_bot.py
+          SD_ENTRY_TF=1h  SD_HTF=4h SD_MODEL=sd_model_1h.joblib  SD_STATE=sd_state_1h.json  python sd_bot.py
+          SD_ENTRY_TF=4h  SD_HTF=1d SD_MODEL=sd_model_4h.joblib  SD_STATE=sd_state_4h.json  python sd_bot.py
 
       - name: Persist model + dedup state + tracked signals
         run: |
           # tracked_signals.json مشترك مع reversal.yml: نضيف إشاراتنا فقط، ونعيد
           # المزامنة بـ rebase لتفادي التعارض مع تشغيل المتابعة المتزامن.
-          for f in sd_state.json sd_model.joblib tracked_signals.json; do
+          for f in sd_state*.json sd_model*.joblib tracked_signals.json; do
             [ -f "$f" ] && git add "$f"
           done
           if ! git diff --cached --quiet; then
