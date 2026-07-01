@@ -22756,5 +22756,65 @@
     "hi_seen": 0.002255,
     "lo_seen": 0.002204,
     "created": "2026-07-01T16:16:06"
+  },
+  "العرض/الطلب|ETHUSDT|2026-07-01 16:00:00": {
+    "symbol": "ETHUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 3630,
+    "entry": 1617.04,
+    "stop": 1589.8179,
+    "init_stop": 1589.8179,
+    "cur_stop": 1589.8179,
+    "last_alert_stop": 1589.8179,
+    "armed": false,
+    "targets": [
+      1644.2621,
+      1671.4842
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-01 16:00:00",
+    "last_bar": "2026-07-01 16:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1617.04,
+    "lo_seen": 1617.04,
+    "created": "2026-07-01T16:36:16"
+  },
+  "العرض/الطلب|ALPINEUSDT|2026-07-01 16:00:00": {
+    "symbol": "ALPINEUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 3630,
+    "entry": 0.315,
+    "stop": 0.310686,
+    "init_stop": 0.310686,
+    "cur_stop": 0.310686,
+    "last_alert_stop": 0.310686,
+    "armed": false,
+    "targets": [
+      0.319314,
+      0.323628
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-01 16:00:00",
+    "last_bar": "2026-07-01 16:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.315,
+    "lo_seen": 0.315,
+    "created": "2026-07-01T16:36:16"
   }
 }
