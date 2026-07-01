@@ -36,6 +36,14 @@ jobs:
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          # ── تنفيذ آلي تجريبي على Bybit Testnet لكل البوتات (عبر trackmon) ──
+          # يتفعّل فقط بإضافة السرّين. testnet إجباري (لا mainnet بلا SD_ALLOW_MAINNET=1).
+          # SD_LABELS يحدّد أي بوتات تُنفَّذ ("*"=الكل). مثال لتقييد: "العرض/الطلب,trendwave"
+          SD_EXECUTE: "1"
+          BYBIT_ENV: testnet
+          BYBIT_API_KEY: ${{ secrets.BYBIT_API_KEY }}
+          BYBIT_API_SECRET: ${{ secrets.BYBIT_API_SECRET }}
+          SD_LABELS: "*"
         run: |
           # إشارة شراء بالزخم: فور تجاوز RSI(21) خط الـ70 — على 4 فريمات
           # --ml-filter: يرشّح الإشارات بالفلتر التعلّمي إن وُجد ml_model.joblib (وإلا يمرّر الكل)
@@ -66,7 +74,8 @@ jobs:
       - name: Persist alert & paper state
         run: |
           for f in reversal_alerts.json trendwave_alerts.json pending_signals.json tracked_signals.json \
-                   paper_trades.json tg_offset.json paper_data.json; do
+                   paper_trades.json tg_offset.json paper_data.json \
+                   sd_positions.json sd_ledger.json sd_executed.json; do
             [ -f "$f" ] && git add "$f"
           done
           if ! git diff --cached --quiet; then
