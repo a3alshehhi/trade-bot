@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-01 22:59:59.999000"
+    "last_bar": "2026-07-01 23:14:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -21682,7 +21682,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 14:14:59.999000",
-    "last_bar": "2026-07-01 22:59:59.999000",
+    "last_bar": "2026-07-01 23:14:59.999000",
     "hits": [
       1
     ],
@@ -22343,7 +22343,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 15:29:59.999000",
-    "last_bar": "2026-07-01 22:59:59.999000",
+    "last_bar": "2026-07-01 23:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.07399,
@@ -22485,14 +22485,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 15:29:59.999000",
-    "last_bar": "2026-07-01 22:59:59.999000",
+    "last_bar": "2026-07-01 23:14:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0028,
     "lo_seen": 0.00272,
-    "created": "2026-07-01T15:31:27"
+    "created": "2026-07-01T15:31:27",
+    "exit_price": 0.00276,
+    "close_card_sent": true,
+    "closed_at": "2026-07-01T23:19:41"
   },
   "RSI70 · 15m|KSMUSDT|2026-07-01 15:29:59.999000": {
     "symbol": "KSMUSDT",
@@ -22519,7 +22522,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 15:29:59.999000",
-    "last_bar": "2026-07-01 22:59:59.999000",
+    "last_bar": "2026-07-01 23:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 3.2,
@@ -22551,14 +22554,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 15:29:59.999000",
-    "last_bar": "2026-07-01 22:59:59.999000",
+    "last_bar": "2026-07-01 23:14:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0874,
     "lo_seen": 0.0847,
-    "created": "2026-07-01T15:31:29"
+    "created": "2026-07-01T15:31:29",
+    "exit_price": 0.0863,
+    "close_card_sent": true,
+    "closed_at": "2026-07-01T23:19:44"
   },
   "RSI70 · 15m|RLCUSDT|2026-07-01 15:29:59.999000": {
     "symbol": "RLCUSDT",
@@ -22585,14 +22591,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 15:29:59.999000",
-    "last_bar": "2026-07-01 22:59:59.999000",
+    "last_bar": "2026-07-01 23:14:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.3004,
     "lo_seen": 0.2907,
-    "created": "2026-07-01T15:31:30"
+    "created": "2026-07-01T15:31:30",
+    "exit_price": 0.297,
+    "close_card_sent": true,
+    "closed_at": "2026-07-01T23:19:46"
   },
   "RSI70 · 15m|XTZUSDT|2026-07-01 15:29:59.999000": {
     "symbol": "XTZUSDT",
@@ -22619,7 +22628,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 15:29:59.999000",
-    "last_bar": "2026-07-01 22:59:59.999000",
+    "last_bar": "2026-07-01 23:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2144,
@@ -22684,7 +22693,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 15:44:59.999000",
-    "last_bar": "2026-07-01 22:59:59.999000",
+    "last_bar": "2026-07-01 23:14:59.999000",
     "hits": [
       1
     ],
@@ -22753,11 +22762,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 16:14:59.999000",
-    "last_bar": "2026-07-01 22:59:59.999000",
+    "last_bar": "2026-07-01 23:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.564,
-    "lo_seen": 1.542,
+    "lo_seen": 1.538,
     "created": "2026-07-01T16:16:04"
   },
   "RSI70 · 15m|STXUSDT|2026-07-01 16:14:59.999000": {
@@ -22785,14 +22794,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 16:14:59.999000",
-    "last_bar": "2026-07-01 22:59:59.999000",
+    "last_bar": "2026-07-01 23:14:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.1703,
     "lo_seen": 0.165,
-    "created": "2026-07-01T16:16:05"
+    "created": "2026-07-01T16:16:05",
+    "exit_price": 0.1676,
+    "close_card_sent": true,
+    "closed_at": "2026-07-01T23:19:51"
   },
   "RSI70 · 15m|XVGUSDT|2026-07-01 16:14:59.999000": {
     "symbol": "XVGUSDT",
@@ -22923,7 +22935,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 16:44:59.999000",
-    "last_bar": "2026-07-01 22:59:59.999000",
+    "last_bar": "2026-07-01 23:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0732,

@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-01T23:04:43",
+  "updated_at": "2026-07-01T23:20:03",
   "stats": {
-    "open": 42,
-    "closed": 710,
-    "win_rate": 51.7,
-    "profit_factor": 1.42,
-    "total_pct": 2401.32,
+    "open": 38,
+    "closed": 714,
+    "win_rate": 52.0,
+    "profit_factor": 1.43,
+    "total_pct": 2458.83,
     "avg_pct": 0.59,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 51,
-        "win_rate": 74.5,
-        "return_pct": 69.85,
+        "trades": 55,
+        "win_rate": 76.4,
+        "return_pct": 73.76,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 218,
-        "win_rate": 54.6,
-        "return_pct": 102.5,
+        "trades": 222,
+        "win_rate": 55.4,
+        "return_pct": 107.16,
         "month": "2026-07"
       },
       {
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 51,
-        "win_rate": 74.5,
-        "return_pct": 69.85
+        "trades": 55,
+        "win_rate": 76.4,
+        "return_pct": 73.76
       },
       {
         "key": "2026-06",
@@ -11745,10 +11745,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T15:31:27",
-      "closed_at": null,
-      "realized_pct": 0.44
+      "closed_at": "2026-07-01T23:19:41",
+      "realized_pct": 0.44,
+      "result_pct": 0.44
     },
     {
       "id": "RSI70 · 15m|KSMUSDT|2026-07-01 15:29:59.999000",
@@ -11775,10 +11776,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T15:31:29",
-      "closed_at": null,
-      "realized_pct": 0.54
+      "closed_at": "2026-07-01T23:19:44",
+      "realized_pct": 0.54,
+      "result_pct": 0.54
     },
     {
       "id": "RSI70 · 15m|RLCUSDT|2026-07-01 15:29:59.999000",
@@ -11791,10 +11793,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T15:31:30",
-      "closed_at": null,
-      "realized_pct": 0.55
+      "closed_at": "2026-07-01T23:19:46",
+      "realized_pct": 0.55,
+      "result_pct": 0.55
     },
     {
       "id": "RSI70 · 15m|XTZUSDT|2026-07-01 15:29:59.999000",
@@ -11883,10 +11886,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T16:16:05",
-      "closed_at": null,
-      "realized_pct": 0.75
+      "closed_at": "2026-07-01T23:19:51",
+      "realized_pct": 0.75,
+      "result_pct": 0.75
     },
     {
       "id": "RSI70 · 15m|XVGUSDT|2026-07-01 16:14:59.999000",
