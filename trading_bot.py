@@ -4074,6 +4074,13 @@ if __name__ == "__main__":
         monitor(cfg, args.state)
     elif args.mode == "trackmon":
         monitor_tracked_signals(cfg)
+        # تنفيذ آلي تجريبي (اختياري): يفتح/يدير صفقات كل البوتات (العرض/الطلب،
+        # RSI70/الانعكاس، trendwave) على Bybit Testnet. صامت ما لم يُفعّل SD_EXECUTE=1.
+        try:
+            import sd_autotrade
+            sd_autotrade.run_cycle()
+        except Exception as _ex:
+            print("autotrade skip:", _ex)
     elif args.mode == "reversal":
         if not args.watchlist:
             sys.exit("⚠️ وضع reversal يتطلب --watchlist")
