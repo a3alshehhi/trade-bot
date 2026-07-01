@@ -21478,5 +21478,35 @@
     "exit_price": 0.02946,
     "close_card_sent": true,
     "closed_at": "2026-07-01T11:03:53"
+  },
+  "العرض/الطلب|2ZUSDT|2026-07-01 13:00:00": {
+    "symbol": "2ZUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 3535,
+    "entry": 0.06538,
+    "stop": 0.0639875,
+    "init_stop": 0.0639875,
+    "cur_stop": 0.0639875,
+    "last_alert_stop": 0.0639875,
+    "armed": false,
+    "targets": [
+      0.0667725,
+      0.068165
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-01 13:00:00",
+    "last_bar": "2026-07-01 13:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.06538,
+    "lo_seen": 0.06538,
+    "created": "2026-07-01T13:23:19"
   }
 }
