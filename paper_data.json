@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-01T22:54:38",
+  "updated_at": "2026-07-01T23:04:43",
   "stats": {
-    "open": 41,
-    "closed": 707,
-    "win_rate": 51.5,
+    "open": 42,
+    "closed": 710,
+    "win_rate": 51.7,
     "profit_factor": 1.42,
-    "total_pct": 2249.06,
-    "avg_pct": 0.58,
+    "total_pct": 2401.32,
+    "avg_pct": 0.59,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 48,
-        "win_rate": 72.9,
-        "return_pct": 59.51,
+        "trades": 51,
+        "win_rate": 74.5,
+        "return_pct": 69.85,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 215,
-        "win_rate": 54.0,
-        "return_pct": 90.17,
+        "trades": 218,
+        "win_rate": 54.6,
+        "return_pct": 102.5,
         "month": "2026-07"
       },
       {
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 48,
-        "win_rate": 72.9,
-        "return_pct": 59.51
+        "trades": 51,
+        "win_rate": 74.5,
+        "return_pct": 69.85
       },
       {
         "key": "2026-06",
@@ -11913,11 +11913,13 @@
       "timeframe": "1h",
       "entry": 1617.04,
       "stop": 1589.8179,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T16:36:16",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.84
     },
     {
       "id": "العرض/الطلب|ALPINEUSDT|2026-07-01 16:00:00",
@@ -12139,12 +12141,14 @@
       "entry": 0.1715,
       "stop": 0.1691416,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T20:50:58",
-      "closed_at": null,
-      "realized_pct": 0.69
+      "closed_at": "2026-07-01T23:04:30",
+      "realized_pct": 2.06,
+      "result_pct": 2.06
     },
     {
       "id": "RSI70 · 1h|BMTUSDT|2026-07-01 20:59:59.999000",
@@ -12157,10 +12161,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T21:01:46",
-      "closed_at": null,
-      "realized_pct": 1.54
+      "closed_at": "2026-07-01T23:04:32",
+      "realized_pct": 1.54,
+      "result_pct": 1.54
     },
     {
       "id": "RSI70 · 1h|CTSIUSDT|2026-07-01 20:59:59.999000",
@@ -12286,12 +12291,72 @@
       "entry": 0.1213,
       "stop": 0.11686855,
       "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-01T22:31:12",
+      "closed_at": "2026-07-01T23:04:38",
+      "realized_pct": 2.75,
+      "result_pct": 2.75
+    },
+    {
+      "id": "العرض/الطلب|ETHUSDT|2026-07-01 22:00:00",
+      "symbol": "ETHUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 1624.5,
+      "stop": 1609.04558,
+      "hits": [
         1
       ],
       "status": "open",
-      "opened_at": "2026-07-01T22:31:12",
+      "opened_at": "2026-07-01T22:50:58",
       "closed_at": null,
-      "realized_pct": 0.84
+      "realized_pct": 0.48
+    },
+    {
+      "id": "العرض/الطلب|AVAXUSDT|2026-07-01 22:00:00",
+      "symbol": "AVAXUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 6.751,
+      "stop": 6.665224,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T22:50:58",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|DIAUSDT|2026-07-01 22:59:59.999000",
+      "symbol": "DIAUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1099,
+      "stop": 0.10364118,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T23:01:37",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|OGUSDT|2026-07-01 22:59:59.999000",
+      "symbol": "OGUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 2.564,
+      "stop": 2.45841598,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T23:01:38",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
