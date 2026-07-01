@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-01T14:18:41",
+  "updated_at": "2026-07-01T14:34:51",
   "stats": {
-    "open": 27,
+    "open": 28,
     "closed": 669,
     "win_rate": 50.2,
     "profit_factor": 1.41,
@@ -11338,11 +11338,13 @@
       "timeframe": "15m",
       "entry": 2.163,
       "stop": 2.12117652,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T14:01:19",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.43
     },
     {
       "id": "RSI70 · 15m|AIXBTUSDT|2026-07-01 14:14:59.999000",
@@ -11439,6 +11441,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-01T14:16:11",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|CELRUSDT|2026-07-01 14:29:59.999000",
+      "symbol": "CELRUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.001892,
+      "stop": 0.00185038,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T14:31:17",
       "closed_at": null,
       "realized_pct": 0.0
     }
