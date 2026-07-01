@@ -2546,6 +2546,7 @@ def backtest_symbol_rsi_cross(item, kind, cfg):
     low = df["low"].values
     r = rsi(df["close"], 21).values
     a = atr(df, 14).values
+    sma200 = pd.Series(close).rolling(200).mean().values   # لبوابة حداثة الاختراق
 
     warmup = 30
     start = max(warmup, n - bars)
@@ -2553,6 +2554,16 @@ def backtest_symbol_rsi_cross(item, kind, cfg):
     i = start
     while i < n - 1:
         if np.isnan(r[i]) or np.isnan(r[i - 1]) or not (r[i] >= ob and r[i - 1] < ob):
+            i += 1
+            continue
+        # الشرط الأهم (لكل الفريمات): حداثة اختراق MA200 — فوق المتوسط الآن
+        # وكان تحته خلال آخر 10 شموع. مطابق لـ detect_rsi_cross_signal.
+        m_now = sma200[i]
+        if np.isnan(m_now) or close[i] <= m_now:
+            i += 1
+            continue
+        if not any((not np.isnan(sma200[k]) and close[k] < sma200[k])
+                   for k in range(max(0, i - 10), i)):
             i += 1
             continue
         entry = float(close[i])
@@ -2993,19 +3004,27 @@ def detect_rsi_cross_signal(df, cfg):
     # تجاوز خط 80 صعوداً: الشمعة المغلقة ≥ 80 والسابقة < 80
     if not (r[i] >= ob and r[i - 1] < ob):
         return None
+    # ═══ الشرط الأهم (يُفحَص أولاً، على كل الفريمات) — حداثة اختراق MA200 ═══
+    # يجب أن يكون السعر قد كان تحت متوسط 200 (SMA) خلال آخر 10 شموع، ويُغلق
+    # الآن فوقه = اختراق حديث. يرفض الإشارات المتأخرة البعيدة فوق المتوسط.
+    # هذا الفلتر إجباري لكل فريم زمني ولا يعتمد على أي علم اختياري.
+    if n < 200:
+        return None                          # بيانات غير كافية لـ MA200 → مرفوضة
+    ma200_s = pd.Series(close).rolling(200).mean().values
+    m_now = ma200_s[i]
+    if np.isnan(m_now) or close[i] <= m_now:
+        return None                          # ليس فوق المتوسط الآن → مرفوضة
+    recently_below = any(
+        (not np.isnan(ma200_s[k]) and close[k] < ma200_s[k])
+        for k in range(max(0, i - 10), i)
+    )
+    if not recently_below:
+        return None                          # اختراق قديم (فوق المتوسط منذ >10 شموع) → مرفوضة
     # فلتر القفزة الكبيرة: RSI عند الاختراق لا يتجاوز ob+8
     # يمنع الدخول على قفزات عنيفة (مثلاً 64→86) حيث الزخم انتهى
     ob_max = cfg.get("rsi_ob_max", ob + 8)
     if r[i] > ob_max:
         return None
-    # فلتر الاتجاه لاستراتيجية الانعكاس (RSI70) على فريم 15m فقط:
-    # يجب أن يكون سعر الإغلاق فوق متوسط 200 (SMA) — لا دخول عكس الاتجاه العام.
-    if cfg.get("ma200_15m") and cfg.get("timeframe") == "15m":
-        if n < 200:
-            return None                      # بيانات غير كافية لتأكيد الاتجاه → تجاهل
-        ma200 = float(pd.Series(close).rolling(200).mean().iloc[i])
-        if np.isnan(ma200) or close[i] <= ma200:
-            return None                      # تحت المتوسط → إشارة مرفوضة
     entry = float(close[i])
     atrv = a[i] if not np.isnan(a[i]) else entry * 0.02
     stop = float(entry - 1.5 * atrv)
