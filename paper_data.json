@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-01T19:49:52",
+  "updated_at": "2026-07-01T20:05:09",
   "stats": {
-    "open": 40,
-    "closed": 694,
-    "win_rate": 51.6,
-    "profit_factor": 1.43,
-    "total_pct": 2373.61,
-    "avg_pct": 0.6,
+    "open": 39,
+    "closed": 696,
+    "win_rate": 51.7,
+    "profit_factor": 1.45,
+    "total_pct": 2753.28,
+    "avg_pct": 0.62,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 35,
-        "win_rate": 82.9,
-        "return_pct": 67.97,
+        "trades": 37,
+        "win_rate": 83.8,
+        "return_pct": 93.75,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 202,
-        "win_rate": 54.5,
-        "return_pct": 100.26,
+        "trades": 204,
+        "win_rate": 54.9,
+        "return_pct": 130.99,
         "month": "2026-07"
       },
       {
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 35,
-        "win_rate": 82.9,
-        "return_pct": 67.97
+        "trades": 37,
+        "win_rate": 83.8,
+        "return_pct": 93.75
       },
       {
         "key": "2026-06",
@@ -11997,11 +11997,15 @@
       "timeframe": "1h",
       "entry": 0.00136,
       "stop": 0.00108133,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-07-01T17:01:53",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-01T20:05:05",
+      "realized_pct": 15.05,
+      "result_pct": 15.05
     },
     {
       "id": "العرض/الطلب|COOKIEUSDT|2026-07-01 18:30:00",
@@ -12047,10 +12051,25 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T18:41:02",
+      "closed_at": "2026-07-01T20:05:07",
+      "realized_pct": 0.26,
+      "result_pct": 0.26
+    },
+    {
+      "id": "RSI70 · 4h|RIFUSDT|2026-07-01 19:59:59.999000",
+      "symbol": "RIFUSDT",
+      "label": "RSI70 · 4h",
+      "side": "buy",
+      "timeframe": "4h",
+      "entry": 0.117,
+      "stop": 0.08353251,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T20:02:12",
       "closed_at": null,
-      "realized_pct": 0.26
+      "realized_pct": 0.0
     }
   ]
 }
