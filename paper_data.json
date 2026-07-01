@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-01T19:35:06",
+  "updated_at": "2026-07-01T19:49:52",
   "stats": {
-    "open": 41,
-    "closed": 693,
-    "win_rate": 51.7,
-    "profit_factor": 1.44,
-    "total_pct": 2443.82,
-    "avg_pct": 0.61,
+    "open": 40,
+    "closed": 694,
+    "win_rate": 51.6,
+    "profit_factor": 1.43,
+    "total_pct": 2373.61,
+    "avg_pct": 0.6,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 34,
-        "win_rate": 85.3,
-        "return_pct": 72.74,
+        "trades": 35,
+        "win_rate": 82.9,
+        "return_pct": 67.97,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 201,
-        "win_rate": 54.7,
-        "return_pct": 105.94,
+        "trades": 202,
+        "win_rate": 54.5,
+        "return_pct": 100.26,
         "month": "2026-07"
       },
       {
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 34,
-        "win_rate": 85.3,
-        "return_pct": 72.74
+        "trades": 35,
+        "win_rate": 82.9,
+        "return_pct": 67.97
       },
       {
         "key": "2026-06",
@@ -11833,10 +11833,11 @@
       "entry": 0.0663,
       "stop": 0.06446693,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T16:01:20",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-01T19:49:45",
+      "realized_pct": -2.76,
+      "result_pct": -2.76
     },
     {
       "id": "RSI70 · 15m|ATOMUSDT|2026-07-01 16:14:59.999000",
