@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-01T09:32:59",
+  "updated_at": "2026-07-01T09:48:21",
   "stats": {
-    "open": 17,
+    "open": 18,
     "closed": 666,
     "win_rate": 50.2,
     "profit_factor": 1.41,
@@ -11249,6 +11249,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-01T06:48:38",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|DEXEUSDT|2026-07-01 09:00:00",
+      "symbol": "DEXEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 22.814,
+      "stop": 22.32158,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T09:33:22",
       "closed_at": null,
       "realized_pct": 0.0
     }
