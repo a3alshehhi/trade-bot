@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-01T21:19:15",
+  "updated_at": "2026-07-01T21:33:43",
   "stats": {
-    "open": 37,
+    "open": 39,
     "closed": 703,
     "win_rate": 51.5,
     "profit_factor": 1.43,
@@ -12152,6 +12152,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-01T21:01:47",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|CTSIUSDT|2026-07-01 21:00:00",
+      "symbol": "CTSIUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.02341,
+      "stop": 0.0227011,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T21:20:57",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|COOKIEUSDT|2026-07-01 21:00:00",
+      "symbol": "COOKIEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0096,
+      "stop": 0.0090718,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T21:20:57",
       "closed_at": null,
       "realized_pct": 0.0
     }
