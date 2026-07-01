@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-01T22:19:19",
+  "updated_at": "2026-07-01T22:33:56",
   "stats": {
-    "open": 42,
+    "open": 43,
     "closed": 705,
     "win_rate": 51.3,
     "profit_factor": 1.42,
@@ -11580,11 +11580,13 @@
       "timeframe": "15m",
       "entry": 0.00356,
       "stop": 0.00346984,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T15:16:05",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.57
     },
     {
       "id": "RSI70 · 15m|ATOMUSDT|2026-07-01 15:29:59.999000",
@@ -11768,11 +11770,13 @@
       "timeframe": "15m",
       "entry": 0.0863,
       "stop": 0.08435119,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T15:31:29",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.54
     },
     {
       "id": "RSI70 · 15m|RLCUSDT|2026-07-01 15:29:59.999000",
@@ -11782,11 +11786,13 @@
       "timeframe": "15m",
       "entry": 0.297,
       "stop": 0.29020315,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T15:31:30",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.55
     },
     {
       "id": "RSI70 · 15m|XTZUSDT|2026-07-01 15:29:59.999000",
@@ -11872,11 +11878,13 @@
       "timeframe": "15m",
       "entry": 0.1676,
       "stop": 0.16233091,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T16:16:05",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.75
     },
     {
       "id": "RSI70 · 15m|XVGUSDT|2026-07-01 16:14:59.999000",
@@ -12264,6 +12272,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-01T22:01:41",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|ALICEUSDT|2026-07-01 22:29:59.999000",
+      "symbol": "ALICEUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1213,
+      "stop": 0.11686855,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T22:31:12",
       "closed_at": null,
       "realized_pct": 0.0
     }
