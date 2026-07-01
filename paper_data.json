@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-01T20:49:50",
+  "updated_at": "2026-07-01T21:04:35",
   "stats": {
-    "open": 36,
-    "closed": 701,
+    "open": 37,
+    "closed": 703,
     "win_rate": 51.5,
     "profit_factor": 1.43,
-    "total_pct": 2423.04,
+    "total_pct": 2427.11,
     "avg_pct": 0.6,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-01",
-        "trades": 42,
-        "win_rate": 76.2,
-        "return_pct": 71.33,
+        "trades": 44,
+        "win_rate": 75.0,
+        "return_pct": 71.6,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 209,
-        "win_rate": 54.1,
-        "return_pct": 104.26,
+        "trades": 211,
+        "win_rate": 54.0,
+        "return_pct": 104.59,
         "month": "2026-07"
       },
       {
@@ -126,9 +126,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 42,
-        "win_rate": 76.2,
-        "return_pct": 71.33
+        "trades": 44,
+        "win_rate": 75.0,
+        "return_pct": 71.6
       },
       {
         "key": "2026-06",
@@ -11989,11 +11989,15 @@
       "timeframe": "1h",
       "entry": 0.02314,
       "stop": 0.02201522,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-07-01T17:01:52",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-01T21:04:29",
+      "realized_pct": 3.73,
+      "result_pct": 3.73
     },
     {
       "id": "RSI70 · 1h|PONDUSDT|2026-07-01 16:59:59.999000",
@@ -12103,8 +12107,51 @@
       "entry": 0.002048,
       "stop": 0.00197759,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T20:31:13",
+      "closed_at": "2026-07-01T21:04:32",
+      "realized_pct": -3.44,
+      "result_pct": -3.44
+    },
+    {
+      "id": "العرض/الطلب|AVAUSDT|2026-07-01 20:00:00",
+      "symbol": "AVAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1715,
+      "stop": 0.1691416,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T20:50:58",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|BMTUSDT|2026-07-01 20:59:59.999000",
+      "symbol": "BMTUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.01251,
+      "stop": 0.01170478,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T21:01:46",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|CTSIUSDT|2026-07-01 20:59:59.999000",
+      "symbol": "CTSIUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.02392,
+      "stop": 0.02235181,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-01T21:01:47",
       "closed_at": null,
       "realized_pct": 0.0
     }
