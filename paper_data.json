@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-01T19:03:53",
+  "updated_at": "2026-07-01T19:18:41",
   "stats": {
     "open": 42,
     "closed": 692,
@@ -11405,11 +11405,13 @@
       "timeframe": "15m",
       "entry": 0.02239,
       "stop": 0.02126647,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T14:16:07",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.17
     },
     {
       "id": "RSI70 · 15m|PORTOUSDT|2026-07-01 14:14:59.999000",
