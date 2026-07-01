@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-01T21:33:43",
+  "updated_at": "2026-07-01T21:48:39",
   "stats": {
     "open": 39,
     "closed": 703,
@@ -11733,11 +11733,13 @@
       "timeframe": "15m",
       "entry": 0.00276,
       "stop": 0.00270634,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T15:31:27",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.44
     },
     {
       "id": "RSI70 · 15m|KSMUSDT|2026-07-01 15:29:59.999000",
