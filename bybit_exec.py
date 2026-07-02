@@ -72,15 +72,16 @@ def _pick_base_url():
         try:
             r = requests.get(f"{u}/v5/market/time", timeout=8)
             if r.json().get("retCode") == 0:
+                print(f"bybit_exec: النطاق المعتمد → {u}")
                 return u
-        except Exception:
-            continue
+            print(f"bybit_exec: {u} مرفوض (HTTP {r.status_code})")
+        except Exception as ex:
+            print(f"bybit_exec: {u} فشل — {type(ex).__name__}")
+    print("bybit_exec: ⚠️ كل النطاقات محجوبة — سيُستخدم الافتراضي (يتوقع 403).")
     return [u for u in _BASE_CANDIDATES if u][0].rstrip("/")
 
 
 BASE_URL = _pick_base_url()
-if BASE_URL != _BASE_CANDIDATES[1]:
-    print(f"bybit_exec: استخدام نطاق بديل → {BASE_URL}")
 API_KEY = os.environ.get("BYBIT_API_KEY", "")
 API_SECRET = os.environ.get("BYBIT_API_SECRET", "")
 RECV_WINDOW = "10000"
