@@ -12,8 +12,8 @@ module.exports.config = { api: { bodyParser: false } };
 
 // نطاقات Bybit التجريبية (نجرّب الأول ثم البديل).
 const UPSTREAMS = [
+  "https://api-demo.bybit.com",
   "https://api-testnet.bybit.com",
-  "https://api-testnet.bytick.com",
 ];
 
 // قراءة الجسم الخام من دفق الطلب.
