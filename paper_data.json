@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-02T08:58:37",
+  "updated_at": "2026-07-02T09:03:57",
   "stats": {
-    "open": 35,
-    "closed": 746,
+    "open": 34,
+    "closed": 748,
     "win_rate": 52.5,
-    "profit_factor": 1.39,
-    "total_pct": 1848.11,
+    "profit_factor": 1.38,
+    "total_pct": 1783.2,
     "avg_pct": 0.54,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-02",
-        "trades": 31,
-        "win_rate": 64.5,
-        "return_pct": -24.22,
+        "trades": 33,
+        "win_rate": 63.6,
+        "return_pct": -26.74,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -111,9 +111,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 254,
-        "win_rate": 56.7,
-        "return_pct": 57.71,
+        "trades": 256,
+        "win_rate": 56.6,
+        "return_pct": 52.46,
         "month": "2026-07"
       },
       {
@@ -134,9 +134,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 87,
-        "win_rate": 72.4,
-        "return_pct": 32.29
+        "trades": 89,
+        "win_rate": 71.9,
+        "return_pct": 27.88
       },
       {
         "key": "2026-06",
@@ -12435,10 +12435,11 @@
       "entry": 0.124,
       "stop": 0.11808073,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T23:31:12",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-02T09:03:45",
+      "realized_pct": -4.77,
+      "result_pct": -4.77
     },
     {
       "id": "العرض/الطلب|ADXUSDT|2026-07-02 00:00:00",
@@ -12648,10 +12649,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-02T05:01:48",
-      "closed_at": null,
-      "realized_pct": 1.51
+      "closed_at": "2026-07-02T09:03:48",
+      "realized_pct": 1.51,
+      "result_pct": 1.51
     },
     {
       "id": "RSI70 · 1h|SXTUSDT|2026-07-02 04:59:59.999000",
@@ -12815,11 +12817,13 @@
       "timeframe": "1h",
       "entry": 0.00991,
       "stop": 0.00901558,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-02T07:03:27",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.1
     },
     {
       "id": "العرض/الطلب|ARDRUSDT|2026-07-02 07:45:00",
@@ -12846,9 +12850,25 @@
       "timeframe": "1h",
       "entry": 0.00991,
       "stop": 0.00901446,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-02T08:03:07",
+      "closed_at": null,
+      "realized_pct": 1.1
+    },
+    {
+      "id": "trendwave · 1h|GPSUSDT|2026-07-02 08:59:59.999000",
+      "symbol": "GPSUSDT",
+      "label": "trendwave · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.00991,
+      "stop": 0.00900272,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T09:03:27",
       "closed_at": null,
       "realized_pct": 0.0
     }
