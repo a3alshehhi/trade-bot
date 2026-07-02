@@ -39,8 +39,10 @@ FEE_RATE = 0.001                                              # عمولة تق�
 POS_PATH = os.environ.get("SD_POS", "sd_positions.json")
 LEDGER_PATH = os.environ.get("SD_LEDGER", "sd_ledger.json")
 EXEC_PATH = os.environ.get("SD_EXECUTED", "sd_executed.json")
+LAST_PATH = os.environ.get("SD_LAST_ENTRY", "sd_last_entry.json")  # آخر دخول لكل عملة (تهدئة)
 TRACK_PATH = os.environ.get("SD_TRACK", "tracked_signals.json")
 MAX_SIGNAL_AGE_H = float(os.environ.get("SD_MAX_SIGNAL_AGE_H", "3"))  # لا تنفّذ إشارات أقدم من كذا
+COOLDOWN_H = float(os.environ.get("SD_COOLDOWN_H", "12"))  # لا تعِد فتح نفس العملة قبل مرور كذا ساعة
 
 # البوتات المسموح بتنفيذها آلياً (تُطابق حقل label في tracked_signals.json).
 # تشمل: العرض/الطلب + عائلة RSI70/الانعكاس + trendwave. "*" = الكل.
@@ -227,6 +229,9 @@ def execute_from_tracker():
         return
     positions = load_positions()
     executed = _load_executed()
+    last_entry = _load(LAST_PATH, {})            # عملة -> آخر وقت دخول (لفترة التهدئة)
+    if not isinstance(last_entry, dict):
+        last_entry = {}
     equity = _get_equity()
     if equity <= 0:
         return
@@ -248,6 +253,17 @@ def execute_from_tracker():
         ekey = f"{label}|{sym}|{tr.get('bar_ts')}"
         if ekey in executed or sym in positions:       # منع التكرار / صفقة لكل رمز
             continue
+        # فترة التهدئة: لا تعِد فتح نفس العملة قبل مرور COOLDOWN_H ساعة من آخر دخول
+        last_ts = last_entry.get(sym)
+        if last_ts:
+            try:
+                since_h = (now - dt.datetime.fromisoformat(last_ts)).total_seconds() / 3600
+                if since_h < COOLDOWN_H:
+                    print(f"autotrade: {sym} في فترة تهدئة "
+                          f"({since_h:.1f}h < {COOLDOWN_H}h) — تخطّي")
+                    continue
+            except Exception:
+                pass
         # الحداثة: تجاهل الإشارات القديمة (كي لا يُنفّذ سجلّ متراكم عند أول تشغيل)
         created = tr.get("created", "")
         try:
@@ -272,9 +288,11 @@ def execute_from_tracker():
         if _open_position(sym, tr.get("timeframe", ""), entry, stop, tp1, tp2,
                           tr.get("prob"), label or "إشارة", positions, equity):
             executed.add(ekey)
+            last_entry[sym] = now.isoformat(timespec="seconds")   # ابدأ التهدئة
             opened += 1
     if opened:
         _save(EXEC_PATH, sorted(executed)[-1000:])
+        _save(LAST_PATH, last_entry)
 
 
 # ── إدارة المراكز المفتوحة ───────────────────────────────────────────────────
