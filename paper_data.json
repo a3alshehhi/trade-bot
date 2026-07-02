@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-02T05:48:34",
+  "updated_at": "2026-07-02T06:03:55",
   "stats": {
-    "open": 40,
-    "closed": 732,
+    "open": 36,
+    "closed": 736,
     "win_rate": 52.3,
     "profit_factor": 1.38,
-    "total_pct": 1728.29,
+    "total_pct": 1708.73,
     "avg_pct": 0.54,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-02",
-        "trades": 17,
-        "win_rate": 64.7,
-        "return_pct": -28.88,
+        "trades": 21,
+        "win_rate": 61.9,
+        "return_pct": -29.64,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -111,9 +111,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 240,
-        "win_rate": 56.2,
-        "return_pct": 48.01,
+        "trades": 244,
+        "win_rate": 56.1,
+        "return_pct": 46.43,
         "month": "2026-07"
       },
       {
@@ -134,9 +134,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 73,
-        "win_rate": 74.0,
-        "return_pct": 24.15
+        "trades": 77,
+        "win_rate": 72.7,
+        "return_pct": 22.82
       },
       {
         "key": "2026-06",
@@ -12299,10 +12299,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T22:01:40",
-      "closed_at": null,
-      "realized_pct": 1.44
+      "closed_at": "2026-07-02T06:03:40",
+      "realized_pct": 1.44,
+      "result_pct": 1.44
     },
     {
       "id": "RSI70 · 1h|SHELLUSDT|2026-07-01 21:59:59.999000",
@@ -12515,10 +12516,11 @@
       "entry": 1.145,
       "stop": 1.11268431,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-02T01:01:11",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-02T06:03:46",
+      "realized_pct": -2.82,
+      "result_pct": -2.82
     },
     {
       "id": "RSI70 · 1h|PIXELUSDT|2026-07-02 00:59:59.999000",
@@ -12608,10 +12610,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-02T04:53:39",
-      "closed_at": null,
-      "realized_pct": 0.83
+      "closed_at": "2026-07-02T06:03:49",
+      "realized_pct": 0.83,
+      "result_pct": 0.83
     },
     {
       "id": "RSI70 · 1h|BREVUSDT|2026-07-02 04:59:59.999000",
@@ -12664,10 +12667,11 @@
       "entry": 33.95,
       "stop": 33.79114,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-02T05:34:33",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-02T06:03:53",
+      "realized_pct": -0.47,
+      "result_pct": -0.47
     },
     {
       "id": "العرض/الطلب|ARUSDT|2026-07-02 05:00:00",
