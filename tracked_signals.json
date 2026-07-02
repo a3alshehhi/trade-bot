@@ -24154,5 +24154,35 @@
     "hi_seen": 0.00539,
     "lo_seen": 0.00511,
     "created": "2026-07-02T01:01:37"
+  },
+  "العرض/الطلب|BANDUSDT|2026-07-02 02:00:00": {
+    "symbol": "BANDUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 3825,
+    "entry": 0.1501,
+    "stop": 0.1474006,
+    "init_stop": 0.1474006,
+    "cur_stop": 0.1474006,
+    "last_alert_stop": 0.1474006,
+    "armed": false,
+    "targets": [
+      0.1527994,
+      0.1554988
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-02 02:00:00",
+    "last_bar": "2026-07-02 02:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1501,
+    "lo_seen": 0.1501,
+    "created": "2026-07-02T02:07:38"
   }
 }
