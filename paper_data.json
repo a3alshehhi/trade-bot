@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-02T01:48:56",
+  "updated_at": "2026-07-02T02:03:47",
   "stats": {
-    "open": 35,
-    "closed": 726,
+    "open": 34,
+    "closed": 727,
     "win_rate": 52.1,
     "profit_factor": 1.38,
-    "total_pct": 1600.69,
+    "total_pct": 1620.59,
     "avg_pct": 0.54,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-02",
-        "trades": 11,
-        "win_rate": 54.5,
-        "return_pct": -33.84,
+        "trades": 12,
+        "win_rate": 58.3,
+        "return_pct": -33.07,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -111,9 +111,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 234,
-        "win_rate": 55.6,
-        "return_pct": 37.68,
+        "trades": 235,
+        "win_rate": 55.7,
+        "return_pct": 39.29,
         "month": "2026-07"
       },
       {
@@ -134,9 +134,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 67,
-        "win_rate": 73.1,
-        "return_pct": 15.49
+        "trades": 68,
+        "win_rate": 73.5,
+        "return_pct": 16.84
       },
       {
         "key": "2026-06",
@@ -12485,10 +12485,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-02T00:50:56",
-      "closed_at": null,
-      "realized_pct": 1.17
+      "closed_at": "2026-07-02T02:03:43",
+      "realized_pct": 1.17,
+      "result_pct": 1.17
     },
     {
       "id": "RSI70 · 15m|PROMUSDT|2026-07-02 00:59:59.999000",
@@ -12512,11 +12513,13 @@
       "timeframe": "1h",
       "entry": 0.00515,
       "stop": 0.0047753,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-02T01:01:37",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.69
     }
   ]
 }
