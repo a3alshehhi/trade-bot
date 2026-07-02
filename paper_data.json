@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-02T10:17:37",
+  "updated_at": "2026-07-02T10:32:47",
   "stats": {
-    "open": 30,
+    "open": 33,
     "closed": 753,
     "win_rate": 52.9,
     "profit_factor": 1.39,
@@ -12728,11 +12728,13 @@
       "timeframe": "15m",
       "entry": 0.0153,
       "stop": 0.01503926,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-02T06:18:00",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.85
     },
     {
       "id": "العرض/الطلب|ETHUSDT|2026-07-02 06:00:00",
@@ -12899,6 +12901,48 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-02T10:01:41",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|CHZUSDT|2026-07-02 10:15:00",
+      "symbol": "CHZUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01806,
+      "stop": 0.01791898,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T10:18:08",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ATOMUSDT|2026-07-02 10:15:00",
+      "symbol": "ATOMUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.556,
+      "stop": 1.550448,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T10:18:08",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|CHRUSDT|2026-07-02 10:00:00",
+      "symbol": "CHRUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.01545,
+      "stop": 0.0150147,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T10:20:53",
       "closed_at": null,
       "realized_pct": 0.0
     }
