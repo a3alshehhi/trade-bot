@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-02 19:59:59.999000"
+    "last_bar": "2026-07-02 20:44:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -25125,7 +25125,7 @@
     "entry": 0.1687,
     "stop": 0.16228098,
     "init_stop": 0.16228098,
-    "cur_stop": 0.16228098,
+    "cur_stop": 0.1687,
     "last_alert_stop": 0.16228098,
     "armed": false,
     "targets": [
@@ -25142,12 +25142,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 10:44:59.999000",
-    "last_bar": "2026-07-02 19:59:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.1712,
+    "last_bar": "2026-07-02 20:44:59.999000",
+    "hits": [
+      1,
+      2
+    ],
+    "stopped": true,
+    "hi_seen": 0.1758,
     "lo_seen": 0.1651,
-    "created": "2026-07-02T10:46:10"
+    "created": "2026-07-02T10:46:10",
+    "exit_price": 0.1754362,
+    "close_card_sent": true,
+    "closed_at": "2026-07-02T20:46:52"
   },
   "العرض/الطلب|DIAUSDT|2026-07-02 11:00:00": {
     "symbol": "DIAUSDT",
