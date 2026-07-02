@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-02T23:17:53",
+  "updated_at": "2026-07-02T23:33:17",
   "stats": {
     "open": 30,
     "closed": 775,
@@ -13231,11 +13231,13 @@
       "timeframe": "15m",
       "entry": 220.0,
       "stop": 219.0526,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-02T22:19:28",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.22
     },
     {
       "id": "العرض/الطلب|ALPINEUSDT|2026-07-02 23:00:00",
@@ -13259,11 +13261,13 @@
       "timeframe": "15m",
       "entry": 0.00795,
       "stop": 0.00792744,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-02T23:03:26",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.14
     }
   ]
 }

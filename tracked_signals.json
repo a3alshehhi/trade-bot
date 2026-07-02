@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-02 22:59:59.999000"
+    "last_bar": "2026-07-02 23:29:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -25633,8 +25633,8 @@
     "entry": 220.0,
     "stop": 219.0526,
     "init_stop": 219.0526,
-    "cur_stop": 219.0526,
-    "last_alert_stop": 219.0526,
+    "cur_stop": 220.0,
+    "last_alert_stop": 220.0,
     "armed": false,
     "targets": [
       220.9474,
@@ -25648,10 +25648,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 22:15:00",
-    "last_bar": "2026-07-02 22:59:59.999000",
-    "hits": [],
+    "last_bar": "2026-07-02 23:29:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 220.9,
+    "hi_seen": 221.4,
     "lo_seen": 219.7,
     "created": "2026-07-02T22:19:28"
   },
@@ -25678,11 +25680,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 23:00:00",
-    "last_bar": "2026-07-02 23:00:00",
+    "last_bar": "2026-07-02 23:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.318,
-    "lo_seen": 0.318,
+    "lo_seen": 0.317,
     "created": "2026-07-02T23:03:26"
   },
   "العرض/الطلب|ARPAUSDT|2026-07-02 23:00:00": {
@@ -25693,8 +25695,8 @@
     "entry": 0.00795,
     "stop": 0.00792744,
     "init_stop": 0.00792744,
-    "cur_stop": 0.00792744,
-    "last_alert_stop": 0.00792744,
+    "cur_stop": 0.00795,
+    "last_alert_stop": 0.00795,
     "armed": false,
     "targets": [
       0.00797256,
@@ -25708,11 +25710,13 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 23:00:00",
-    "last_bar": "2026-07-02 23:00:00",
-    "hits": [],
+    "last_bar": "2026-07-02 23:29:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.00795,
-    "lo_seen": 0.00795,
+    "hi_seen": 0.00798,
+    "lo_seen": 0.00794,
     "created": "2026-07-02T23:03:26"
   }
 }
