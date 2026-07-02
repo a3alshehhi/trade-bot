@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-02T05:34:18",
+  "updated_at": "2026-07-02T05:48:34",
   "stats": {
-    "open": 38,
-    "closed": 731,
-    "win_rate": 52.4,
+    "open": 40,
+    "closed": 732,
+    "win_rate": 52.3,
     "profit_factor": 1.38,
-    "total_pct": 1733.61,
+    "total_pct": 1728.29,
     "avg_pct": 0.54,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-02",
-        "trades": 16,
-        "win_rate": 68.8,
-        "return_pct": -28.67,
+        "trades": 17,
+        "win_rate": 64.7,
+        "return_pct": -28.88,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -111,9 +111,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 239,
-        "win_rate": 56.5,
-        "return_pct": 48.44,
+        "trades": 240,
+        "win_rate": 56.2,
+        "return_pct": 48.01,
         "month": "2026-07"
       },
       {
@@ -134,9 +134,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 72,
-        "win_rate": 75.0,
-        "return_pct": 24.51
+        "trades": 73,
+        "win_rate": 74.0,
+        "return_pct": 24.15
       },
       {
         "key": "2026-06",
@@ -12591,10 +12591,11 @@
       "entry": 0.0802,
       "stop": 0.0799652,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-02T04:33:56",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-02T05:48:30",
+      "realized_pct": -0.29,
+      "result_pct": -0.29
     },
     {
       "id": "العرض/الطلب|BIOUSDT|2026-07-02 04:00:00",
@@ -12651,6 +12652,48 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-02T05:01:49",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|DASHUSDT|2026-07-02 05:30:00",
+      "symbol": "DASHUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 33.95,
+      "stop": 33.79114,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T05:34:33",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ARUSDT|2026-07-02 05:00:00",
+      "symbol": "ARUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 1.983,
+      "stop": 1.968406,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T05:38:50",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|DIAUSDT|2026-07-02 05:00:00",
+      "symbol": "DIAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1073,
+      "stop": 0.1051708,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T05:38:50",
       "closed_at": null,
       "realized_pct": 0.0
     }
