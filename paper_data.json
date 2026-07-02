@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-02T04:33:43",
+  "updated_at": "2026-07-02T04:48:36",
   "stats": {
     "open": 35,
-    "closed": 729,
+    "closed": 730,
     "win_rate": 52.3,
     "profit_factor": 1.38,
-    "total_pct": 1655.97,
+    "total_pct": 1665.8,
     "avg_pct": 0.54,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-02",
-        "trades": 14,
-        "win_rate": 64.3,
-        "return_pct": -31.69,
+        "trades": 15,
+        "win_rate": 66.7,
+        "return_pct": -31.31,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -111,9 +111,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 237,
-        "win_rate": 56.1,
-        "return_pct": 42.16,
+        "trades": 238,
+        "win_rate": 56.3,
+        "return_pct": 42.95,
         "month": "2026-07"
       },
       {
@@ -134,9 +134,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 70,
-        "win_rate": 74.3,
-        "return_pct": 19.24
+        "trades": 71,
+        "win_rate": 74.6,
+        "return_pct": 19.91
       },
       {
         "key": "2026-06",
@@ -11891,10 +11891,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T16:16:04",
-      "closed_at": null,
-      "realized_pct": 0.56
+      "closed_at": "2026-07-02T04:48:25",
+      "realized_pct": 0.56,
+      "result_pct": 0.56
     },
     {
       "id": "RSI70 · 15m|STXUSDT|2026-07-01 16:14:59.999000",
@@ -11972,11 +11973,13 @@
       "timeframe": "15m",
       "entry": 0.0731,
       "stop": 0.06961874,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T16:45:55",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.17
     },
     {
       "id": "RSI70 · 15m|COOKIEUSDT|2026-07-01 16:44:59.999000",
@@ -12574,6 +12577,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-02T04:01:32",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|BATUSDT|2026-07-02 04:30:00",
+      "symbol": "BATUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0802,
+      "stop": 0.0799652,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T04:33:56",
       "closed_at": null,
       "realized_pct": 0.0
     }
