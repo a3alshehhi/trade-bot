@@ -23939,5 +23939,65 @@
     "hi_seen": 0.1247,
     "lo_seen": 0.1225,
     "created": "2026-07-01T23:31:12"
+  },
+  "العرض/الطلب|ADXUSDT|2026-07-02 00:00:00": {
+    "symbol": "ADXUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 3795,
+    "entry": 0.0553,
+    "stop": 0.0550756,
+    "init_stop": 0.0550756,
+    "cur_stop": 0.0550756,
+    "last_alert_stop": 0.0550756,
+    "armed": false,
+    "targets": [
+      0.0555244,
+      0.0557488
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-02 00:00:00",
+    "last_bar": "2026-07-02 00:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0553,
+    "lo_seen": 0.0553,
+    "created": "2026-07-02T00:16:55"
+  },
+  "العرض/الطلب|BLURUSDT|2026-07-02 00:15:00": {
+    "symbol": "BLURUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 3795,
+    "entry": 0.01491,
+    "stop": 0.01476056,
+    "init_stop": 0.01476056,
+    "cur_stop": 0.01476056,
+    "last_alert_stop": 0.01476056,
+    "armed": false,
+    "targets": [
+      0.01505944,
+      0.01520888
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-02 00:15:00",
+    "last_bar": "2026-07-02 00:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01491,
+    "lo_seen": 0.01491,
+    "created": "2026-07-02T00:16:55"
   }
 }
