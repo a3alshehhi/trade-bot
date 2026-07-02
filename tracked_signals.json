@@ -25374,5 +25374,35 @@
     "hi_seen": 0.02322,
     "lo_seen": 0.0231,
     "created": "2026-07-02T13:48:53"
+  },
+  "العرض/الطلب|API3USDT|2026-07-02 14:00:00": {
+    "symbol": "API3USDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 3976,
+    "entry": 0.2239,
+    "stop": 0.221979,
+    "init_stop": 0.221979,
+    "cur_stop": 0.221979,
+    "last_alert_stop": 0.221979,
+    "armed": false,
+    "targets": [
+      0.225821,
+      0.227742
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-02 14:00:00",
+    "last_bar": "2026-07-02 14:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.2239,
+    "lo_seen": 0.2239,
+    "created": "2026-07-02T14:04:05"
   }
 }
