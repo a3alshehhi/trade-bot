@@ -25278,5 +25278,95 @@
     "hi_seen": 0.0431,
     "lo_seen": 0.0431,
     "created": "2026-07-02T13:37:42"
+  },
+  "العرض/الطلب|ALTUSDT|2026-07-02 13:45:00": {
+    "symbol": "ALTUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 3969,
+    "entry": 0.00607,
+    "stop": 0.00602694,
+    "init_stop": 0.00602694,
+    "cur_stop": 0.00602694,
+    "last_alert_stop": 0.00602694,
+    "armed": false,
+    "targets": [
+      0.00611306,
+      0.00615612
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-02 13:45:00",
+    "last_bar": "2026-07-02 13:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00607,
+    "lo_seen": 0.00607,
+    "created": "2026-07-02T13:48:53"
+  },
+  "العرض/الطلب|AXLUSDT|2026-07-02 13:45:00": {
+    "symbol": "AXLUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 3969,
+    "entry": 0.0431,
+    "stop": 0.0427762,
+    "init_stop": 0.0427762,
+    "cur_stop": 0.0427762,
+    "last_alert_stop": 0.0427762,
+    "armed": false,
+    "targets": [
+      0.0434238,
+      0.0437476
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-02 13:45:00",
+    "last_bar": "2026-07-02 13:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0431,
+    "lo_seen": 0.0431,
+    "created": "2026-07-02T13:48:53"
+  },
+  "العرض/الطلب|CTSIUSDT|2026-07-02 13:45:00": {
+    "symbol": "CTSIUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 3969,
+    "entry": 0.02322,
+    "stop": 0.02301822,
+    "init_stop": 0.02301822,
+    "cur_stop": 0.02301822,
+    "last_alert_stop": 0.02301822,
+    "armed": false,
+    "targets": [
+      0.02342178,
+      0.02362356
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-02 13:45:00",
+    "last_bar": "2026-07-02 13:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.02322,
+    "lo_seen": 0.02322,
+    "created": "2026-07-02T13:48:53"
   }
 }
