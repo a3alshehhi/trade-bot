@@ -80,7 +80,7 @@ jobs:
         run: |
           for f in reversal_alerts.json trendwave_alerts.json pending_signals.json tracked_signals.json \
                    paper_trades.json tg_offset.json paper_data.json \
-                   sd_positions.json sd_ledger.json sd_executed.json; do
+                   sd_positions.json sd_ledger.json sd_executed.json sd_last_entry.json; do
             [ -f "$f" ] && git add "$f"
           done
           if ! git diff --cached --quiet; then
