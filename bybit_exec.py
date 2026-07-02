@@ -54,8 +54,33 @@ _load_env_file()
 
 # ── الإعدادات ───────────────────────────────────────────────────────────────
 ENV = os.environ.get("BYBIT_ENV", "testnet").lower()
-BASE_URL = ("https://api-testnet.bybit.com" if ENV != "mainnet"
-            else "https://api.bybit.com")
+
+# Bybit يحجب الطلبات من IP أمريكي (403 CloudFront) — وخوادم GitHub Actions أمريكية.
+# لذا نجرّب عدة نطاقات ونستخدم أول نطاق يستجيب. يمكن فرض نطاق (مثل بروكسي)
+# عبر متغيّر البيئة BYBIT_BASE_URL.
+_BASE_CANDIDATES = [os.environ.get("BYBIT_BASE_URL")] + (
+    ["https://api-testnet.bybit.com", "https://api-testnet.bytick.com"]
+    if ENV != "mainnet"
+    else ["https://api.bybit.com", "https://api.bytick.com"])
+
+
+def _pick_base_url():
+    for u in _BASE_CANDIDATES:
+        if not u:
+            continue
+        u = u.rstrip("/")
+        try:
+            r = requests.get(f"{u}/v5/market/time", timeout=8)
+            if r.json().get("retCode") == 0:
+                return u
+        except Exception:
+            continue
+    return [u for u in _BASE_CANDIDATES if u][0].rstrip("/")
+
+
+BASE_URL = _pick_base_url()
+if BASE_URL != _BASE_CANDIDATES[1]:
+    print(f"bybit_exec: استخدام نطاق بديل → {BASE_URL}")
 API_KEY = os.environ.get("BYBIT_API_KEY", "")
 API_SECRET = os.environ.get("BYBIT_API_SECRET", "")
 RECV_WINDOW = "10000"
