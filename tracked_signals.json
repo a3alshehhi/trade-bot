@@ -24189,5 +24189,35 @@
     "hi_seen": 0.1518,
     "lo_seen": 0.1499,
     "created": "2026-07-02T02:07:38"
+  },
+  "العرض/الطلب|CHZUSDT|2026-07-02 03:45:00": {
+    "symbol": "CHZUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 3828,
+    "entry": 0.01815,
+    "stop": 0.01801794,
+    "init_stop": 0.01801794,
+    "cur_stop": 0.01801794,
+    "last_alert_stop": 0.01801794,
+    "armed": false,
+    "targets": [
+      0.01828206,
+      0.01841412
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-02 03:45:00",
+    "last_bar": "2026-07-02 03:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01815,
+    "lo_seen": 0.01815,
+    "created": "2026-07-02T03:48:46"
   }
 }
