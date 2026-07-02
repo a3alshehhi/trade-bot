@@ -2,7 +2,8 @@ name: reversal-live
 
 # تنبيه حيّ لاستراتيجيات الانعكاس على تيليجرام، فور إغلاق الشمعة.
 # كل 15 دقيقة (دقائق 8/23/38/53 لتجنّب ذروة GitHub عند رأس الساعة).
-# يشمل: زخم RSI70 (15m/1h/4h/1d) + استراتيجية trendwave المستقلة (15m/1h/4h).
+# يشمل: زخم RSI70 (15m/1h) + استراتيجية trendwave المستقلة (15m/1h).
+# ⛔ فريم 4h معطّل بطلب بو محمد (2026-07-02) — لإعادة تفعيله أزل التعليق عن أسطر 4h أدناه.
 # هذا هو الوركفلو الذي يشغّله cron-job.org، فإضافة trendwave هنا تربطه بالجدولة تلقائياً.
 on:
   schedule:
@@ -49,21 +50,23 @@ jobs:
           # --ml-filter: يرشّح الإشارات بالفلتر التعلّمي إن وُجد ml_model.joblib (وإلا يمرّر الكل)
           # === RSI70 مع فلتر القفزة: اختراق نظيف فقط (RSI بين 70-78) ===
           # --rsi-ob-max 78: يرفض الاختراقات التي قفز فيها RSI بعيداً (مثلاً 64→86)
-          # RSI70 على كل الفريمات (15m/1h/4h) — بوابة حداثة اختراق MA200 مفعّلة داخلياً لكل فريم
+          # RSI70 على فريمي 15m/1h — بوابة حداثة اختراق MA200 مفعّلة داخلياً لكل فريم
           python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --rsi-ob-max 78 --ml-filter --watchlist watchlist.txt \
             --timeframe 15m --state reversal_alerts.json
           python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --rsi-ob-max 78 --ml-filter --watchlist watchlist.txt \
             --timeframe 1h --state reversal_alerts.json
-          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --rsi-ob-max 78 --ml-filter --watchlist watchlist.txt \
-            --timeframe 4h --state reversal_alerts.json
+          # ⛔ 4h معطّل (2026-07-02):
+          # python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --rsi-ob-max 78 --ml-filter --watchlist watchlist.txt \
+          #   --timeframe 4h --state reversal_alerts.json
           # === استراتيجية trendwave المستقلة (الإعداد الرابح) — على نفس الجدول ===
           # دخول مباشر بعد موجة RSI(20→80) + فلتر اتجاه من فريم أعلى. رسائل مُعنونة "trendwave".
           python trading_bot.py --mode reversal --trendwave --ml-filter --watchlist watchlist.txt \
             --timeframe 15m --state trendwave_alerts.json
           python trading_bot.py --mode reversal --trendwave --ml-filter --watchlist watchlist.txt \
             --timeframe 1h --state trendwave_alerts.json
-          python trading_bot.py --mode reversal --trendwave --ml-filter --watchlist watchlist.txt \
-            --timeframe 4h --state trendwave_alerts.json
+          # ⛔ 4h معطّل (2026-07-02):
+          # python trading_bot.py --mode reversal --trendwave --ml-filter --watchlist watchlist.txt \
+          #   --timeframe 4h --state trendwave_alerts.json
           # متابعة الإشارات المُرسَلة والرد على رسالتها عند بلوغ هدف/وقف
           # (المصدر الوحيد للمتابعة: سياسة هدف أول/وقف فقط، بفيبوناتشي ومتوسط الدخول الصحيح)
           python trading_bot.py --mode trackmon
