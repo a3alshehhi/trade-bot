@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-02T22:47:37",
+  "updated_at": "2026-07-02T23:03:39",
   "stats": {
-    "open": 29,
-    "closed": 774,
+    "open": 28,
+    "closed": 775,
     "win_rate": 53.0,
     "profit_factor": 1.39,
-    "total_pct": 2109.0,
+    "total_pct": 2119.38,
     "avg_pct": 0.54,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-02",
-        "trades": 59,
-        "win_rate": 64.4,
-        "return_pct": -14.07,
+        "trades": 60,
+        "win_rate": 65.0,
+        "return_pct": -13.66,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -111,9 +111,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 282,
-        "win_rate": 57.4,
-        "return_pct": 78.83,
+        "trades": 283,
+        "win_rate": 57.6,
+        "return_pct": 79.67,
         "month": "2026-07"
       },
       {
@@ -134,9 +134,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 115,
-        "win_rate": 70.4,
-        "return_pct": 50.0
+        "trades": 116,
+        "win_rate": 70.7,
+        "return_pct": 50.71
       },
       {
         "key": "2026-06",
@@ -13157,10 +13157,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-02T15:20:57",
-      "closed_at": null,
-      "realized_pct": 0.47
+      "closed_at": "2026-07-02T23:03:36",
+      "realized_pct": 0.47,
+      "result_pct": 0.47
     },
     {
       "id": "RSI70 · 1h|BNTUSDT|2026-07-02 15:59:59.999000",
