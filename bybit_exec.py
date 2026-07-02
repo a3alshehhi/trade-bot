@@ -200,7 +200,10 @@ def instrument_filters(symbol):
     return {
         "basePrecision": lot.get("basePrecision"),
         "minOrderQty": lot.get("minOrderQty"),
+        "maxOrderQty": lot.get("maxOrderQty"),
         "minOrderAmt": lot.get("minOrderAmt"),
+        "maxOrderAmt": lot.get("maxOrderAmt"),
+        "maxMktOrderQty": lot.get("maxMktOrderQty"),   # أقصى كمية لأمر سوق (خطأ 170381)
         "quotePrecision": lot.get("quotePrecision"),
     }
 
