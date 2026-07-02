@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-02T23:03:39",
+  "updated_at": "2026-07-02T23:17:53",
   "stats": {
-    "open": 28,
+    "open": 30,
     "closed": 775,
     "win_rate": 53.0,
     "profit_factor": 1.39,
@@ -13234,6 +13234,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-02T22:19:28",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ALPINEUSDT|2026-07-02 23:00:00",
+      "symbol": "ALPINEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.318,
+      "stop": 0.316862,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T23:03:26",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ARPAUSDT|2026-07-02 23:00:00",
+      "symbol": "ARPAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00795,
+      "stop": 0.00792744,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T23:03:26",
       "closed_at": null,
       "realized_pct": 0.0
     }
