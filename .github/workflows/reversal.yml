@@ -44,6 +44,8 @@ jobs:
           BYBIT_ENV: testnet
           BYBIT_API_KEY: ${{ secrets.BYBIT_API_KEY }}
           BYBIT_API_SECRET: ${{ secrets.BYBIT_API_SECRET }}
+          # Bybit يحجب IP أمريكا (خوادم GitHub) — عند إنشاء بروكسي خاص ضع رابطه في هذا السر
+          BYBIT_BASE_URL: ${{ secrets.BYBIT_BASE_URL }}
           SD_LABELS: "*"
         run: |
           # إشارة شراء بالزخم: فور تجاوز RSI(21) خط الـ70 — على 4 فريمات
