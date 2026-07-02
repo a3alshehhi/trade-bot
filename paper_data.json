@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-02T06:19:54",
+  "updated_at": "2026-07-02T06:35:02",
   "stats": {
-    "open": 35,
+    "open": 37,
     "closed": 737,
     "win_rate": 52.4,
     "profit_factor": 1.38,
@@ -12699,6 +12699,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-02T05:38:50",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|CHRUSDT|2026-07-02 06:15:00",
+      "symbol": "CHRUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0153,
+      "stop": 0.01503926,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T06:18:00",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ETHUSDT|2026-07-02 06:00:00",
+      "symbol": "ETHUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 1624.45,
+      "stop": 1613.26982,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T06:20:40",
       "closed_at": null,
       "realized_pct": 0.0
     }
