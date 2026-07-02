@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-02T10:32:47",
+  "updated_at": "2026-07-02T10:48:38",
   "stats": {
-    "open": 33,
+    "open": 35,
     "closed": 753,
     "win_rate": 52.9,
     "profit_factor": 1.39,
@@ -12943,6 +12943,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-02T10:20:53",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|AVAUSDT|2026-07-02 10:00:00",
+      "symbol": "AVAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1719,
+      "stop": 0.1699098,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T10:36:07",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 15m|IOUSDT|2026-07-02 10:44:59.999000",
+      "symbol": "IOUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1687,
+      "stop": 0.16228098,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T10:46:10",
       "closed_at": null,
       "realized_pct": 0.0
     }

@@ -25069,5 +25069,37 @@
     "hi_seen": 0.1719,
     "lo_seen": 0.1719,
     "created": "2026-07-02T10:36:07"
+  },
+  "RSI70 · 15m|IOUSDT|2026-07-02 10:44:59.999000": {
+    "symbol": "IOUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 3943,
+    "entry": 0.1687,
+    "stop": 0.16228098,
+    "init_stop": 0.16228098,
+    "cur_stop": 0.16228098,
+    "last_alert_stop": 0.16228098,
+    "armed": false,
+    "targets": [
+      0.1716648,
+      0.1754362,
+      0.1863362
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-02 10:44:59.999000",
+    "last_bar": "2026-07-02 10:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1687,
+    "lo_seen": 0.1687,
+    "created": "2026-07-02T10:46:10"
   }
 }
