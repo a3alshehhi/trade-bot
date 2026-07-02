@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-02T12:48:35",
+  "updated_at": "2026-07-02T13:03:54",
   "stats": {
-    "open": 33,
+    "open": 34,
     "closed": 757,
     "win_rate": 52.8,
     "profit_factor": 1.4,
@@ -12290,11 +12290,13 @@
       "timeframe": "1h",
       "entry": 0.2036,
       "stop": 0.19112694,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-01T22:01:39",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.48
     },
     {
       "id": "RSI70 · 1h|SCRUSDT|2026-07-01 21:59:59.999000",
@@ -12787,11 +12789,13 @@
       "timeframe": "1h",
       "entry": 0.0774,
       "stop": 0.0762032,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-02T06:53:40",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.77
     },
     {
       "id": "RSI70 · 1h|MIRAUSDT|2026-07-02 06:59:59.999000",
@@ -13010,6 +13014,20 @@
       "closed_at": "2026-07-02T12:48:34",
       "realized_pct": -0.18,
       "result_pct": -0.18
+    },
+    {
+      "id": "RSI70 · 1h|ZKPUSDT|2026-07-02 12:59:59.999000",
+      "symbol": "ZKPUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0478,
+      "stop": 0.04567981,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T13:01:54",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
