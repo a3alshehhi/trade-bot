@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-02T13:32:48",
+  "updated_at": "2026-07-02T13:48:35",
   "stats": {
-    "open": 34,
+    "open": 36,
     "closed": 757,
     "win_rate": 52.8,
     "profit_factor": 1.4,
@@ -12923,11 +12923,13 @@
       "timeframe": "15m",
       "entry": 0.01806,
       "stop": 0.01791898,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-02T10:18:08",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.39
     },
     {
       "id": "العرض/الطلب|ATOMUSDT|2026-07-02 10:15:00",
@@ -13026,6 +13028,36 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-02T13:01:54",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ASTRUSDT|2026-07-02 13:30:00",
+      "symbol": "ASTRUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00509,
+      "stop": 0.00506581,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "opened_at": "2026-07-02T13:34:07",
+      "closed_at": null,
+      "realized_pct": 0.24
+    },
+    {
+      "id": "العرض/الطلب|AXLUSDT|2026-07-02 13:00:00",
+      "symbol": "AXLUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0431,
+      "stop": 0.0421486,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T13:37:42",
       "closed_at": null,
       "realized_pct": 0.0
     }
