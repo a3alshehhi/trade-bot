@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-02T00:18:28",
+  "updated_at": "2026-07-02T00:49:20",
   "stats": {
     "open": 35,
-    "closed": 720,
-    "win_rate": 51.9,
-    "profit_factor": 1.38,
-    "total_pct": 1530.88,
+    "closed": 722,
+    "win_rate": 51.8,
+    "profit_factor": 1.37,
+    "total_pct": 1447.44,
     "avg_pct": 0.53,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-02",
-        "trades": 5,
-        "win_rate": 40.0,
-        "return_pct": -36.56,
+        "trades": 7,
+        "win_rate": 28.6,
+        "return_pct": -39.8,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -111,9 +111,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 228,
-        "win_rate": 55.3,
-        "return_pct": 32.03,
+        "trades": 230,
+        "win_rate": 54.8,
+        "return_pct": 25.28,
         "month": "2026-07"
       },
       {
@@ -134,9 +134,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 61,
-        "win_rate": 73.8,
-        "return_pct": 10.75
+        "trades": 63,
+        "win_rate": 71.4,
+        "return_pct": 5.08
       },
       {
         "key": "2026-06",
@@ -11692,10 +11692,11 @@
       "entry": 0.07337,
       "stop": 0.07187532,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T15:31:24",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-02T00:49:03",
+      "realized_pct": -2.04,
+      "result_pct": -2.04
     },
     {
       "id": "RSI70 · 15m|ESPUSDT|2026-07-01 15:29:59.999000",
@@ -11773,10 +11774,11 @@
       "entry": 3.16,
       "stop": 3.06063554,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T15:31:28",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-02T00:49:05",
+      "realized_pct": -3.14,
+      "result_pct": -3.14
     },
     {
       "id": "RSI70 · 15m|LSKUSDT|2026-07-01 15:29:59.999000",
@@ -12419,6 +12421,36 @@
       "opened_at": "2026-07-01T23:31:12",
       "closed_at": null,
       "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ADXUSDT|2026-07-02 00:00:00",
+      "symbol": "ADXUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0553,
+      "stop": 0.0550756,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T00:16:55",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|BLURUSDT|2026-07-02 00:15:00",
+      "symbol": "BLURUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01491,
+      "stop": 0.01476056,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "opened_at": "2026-07-02T00:16:55",
+      "closed_at": null,
+      "realized_pct": 0.5
     }
   ]
 }

@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-01 23:59:59.999000"
+    "last_bar": "2026-07-02 00:44:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -22354,12 +22354,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 15:29:59.999000",
-    "last_bar": "2026-07-01 23:59:59.999000",
+    "last_bar": "2026-07-02 00:44:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.07399,
-    "lo_seen": 0.07217,
-    "created": "2026-07-01T15:31:24"
+    "lo_seen": 0.07168,
+    "created": "2026-07-01T15:31:24",
+    "exit_price": 0.07187532,
+    "close_card_sent": true,
+    "closed_at": "2026-07-02T00:49:03"
   },
   "RSI70 · 15m|ESPUSDT|2026-07-01 15:29:59.999000": {
     "symbol": "ESPUSDT",
@@ -22533,12 +22536,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 15:29:59.999000",
-    "last_bar": "2026-07-01 23:59:59.999000",
+    "last_bar": "2026-07-02 00:44:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 3.2,
-    "lo_seen": 3.07,
-    "created": "2026-07-01T15:31:28"
+    "lo_seen": 3.06,
+    "created": "2026-07-01T15:31:28",
+    "exit_price": 3.06063554,
+    "close_card_sent": true,
+    "closed_at": "2026-07-02T00:49:05"
   },
   "RSI70 · 15m|LSKUSDT|2026-07-01 15:29:59.999000": {
     "symbol": "LSKUSDT",
@@ -22639,7 +22645,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 15:29:59.999000",
-    "last_bar": "2026-07-01 23:59:59.999000",
+    "last_bar": "2026-07-02 00:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2144,
@@ -22704,7 +22710,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 15:44:59.999000",
-    "last_bar": "2026-07-01 23:59:59.999000",
+    "last_bar": "2026-07-02 00:44:59.999000",
     "hits": [
       1
     ],
@@ -22773,11 +22779,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 16:14:59.999000",
-    "last_bar": "2026-07-01 23:59:59.999000",
+    "last_bar": "2026-07-02 00:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.564,
-    "lo_seen": 1.538,
+    "lo_seen": 1.537,
     "created": "2026-07-01T16:16:04"
   },
   "RSI70 · 15m|STXUSDT|2026-07-01 16:14:59.999000": {
@@ -22949,7 +22955,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 16:44:59.999000",
-    "last_bar": "2026-07-01 23:59:59.999000",
+    "last_bar": "2026-07-02 00:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0732,
@@ -23933,11 +23939,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 23:29:59.999000",
-    "last_bar": "2026-07-01 23:59:59.999000",
+    "last_bar": "2026-07-02 00:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.1247,
-    "lo_seen": 0.1225,
+    "hi_seen": 0.125,
+    "lo_seen": 0.1216,
     "created": "2026-07-01T23:31:12"
   },
   "العرض/الطلب|ADXUSDT|2026-07-02 00:00:00": {
@@ -23963,11 +23969,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 00:00:00",
-    "last_bar": "2026-07-02 00:00:00",
+    "last_bar": "2026-07-02 00:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.0553,
-    "lo_seen": 0.0553,
+    "hi_seen": 0.0555,
+    "lo_seen": 0.0551,
     "created": "2026-07-02T00:16:55"
   },
   "العرض/الطلب|BLURUSDT|2026-07-02 00:15:00": {
@@ -23978,8 +23984,8 @@
     "entry": 0.01491,
     "stop": 0.01476056,
     "init_stop": 0.01476056,
-    "cur_stop": 0.01476056,
-    "last_alert_stop": 0.01476056,
+    "cur_stop": 0.01491,
+    "last_alert_stop": 0.01491,
     "armed": false,
     "targets": [
       0.01505944,
@@ -23993,11 +23999,13 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 00:15:00",
-    "last_bar": "2026-07-02 00:15:00",
-    "hits": [],
+    "last_bar": "2026-07-02 00:44:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.01491,
-    "lo_seen": 0.01491,
+    "hi_seen": 0.01516,
+    "lo_seen": 0.01479,
     "created": "2026-07-02T00:16:55"
   }
 }
