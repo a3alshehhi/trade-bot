@@ -32,6 +32,19 @@ module.exports = async function handler(req, res) {
     if (path.startsWith("/api/")) path = path.slice(4);      // يبقي "/v5/..."
     else if (path === "/api") path = "/";
 
+    // إزالة معامل "path" الذي يحقنه rewrite في vercel.json — وإلا يُضاف
+    // إلى سلسلة الاستعلام فيفسد توقيع Bybit (خطأ 10004). نحافظ على ترتيب
+    // بقية المعاملات كما هي حرفياً ليبقى التوقيع صحيحاً.
+    const _qi = path.indexOf("?");
+    if (_qi !== -1) {
+      const _qs = path
+        .slice(_qi + 1)
+        .split("&")
+        .filter((kv) => kv && kv.split("=")[0] !== "path")
+        .join("&");
+      path = path.slice(0, _qi) + (_qs ? "?" + _qs : "");
+    }
+
     // الجسم الخام (لطلبات POST). GET بلا جسم.
     let body;
     const method = (req.method || "GET").toUpperCase();
