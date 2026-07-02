@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-02T02:03:47",
+  "updated_at": "2026-07-02T02:18:25",
   "stats": {
-    "open": 34,
+    "open": 35,
     "closed": 727,
     "win_rate": 52.1,
     "profit_factor": 1.38,
@@ -12520,6 +12520,20 @@
       "opened_at": "2026-07-02T01:01:37",
       "closed_at": null,
       "realized_pct": 1.69
+    },
+    {
+      "id": "العرض/الطلب|BANDUSDT|2026-07-02 02:00:00",
+      "symbol": "BANDUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1501,
+      "stop": 0.1474006,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T02:07:38",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
