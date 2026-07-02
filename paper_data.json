@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-02T04:48:36",
+  "updated_at": "2026-07-02T05:05:14",
   "stats": {
-    "open": 35,
-    "closed": 730,
-    "win_rate": 52.3,
+    "open": 38,
+    "closed": 731,
+    "win_rate": 52.4,
     "profit_factor": 1.38,
-    "total_pct": 1665.8,
+    "total_pct": 1733.61,
     "avg_pct": 0.54,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-02",
-        "trades": 15,
-        "win_rate": 66.7,
-        "return_pct": -31.31,
+        "trades": 16,
+        "win_rate": 68.8,
+        "return_pct": -28.67,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -111,9 +111,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 238,
-        "win_rate": 56.3,
-        "return_pct": 42.95,
+        "trades": 239,
+        "win_rate": 56.5,
+        "return_pct": 48.44,
         "month": "2026-07"
       },
       {
@@ -134,9 +134,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 71,
-        "win_rate": 74.6,
-        "return_pct": 19.91
+        "trades": 72,
+        "win_rate": 75.0,
+        "return_pct": 24.51
       },
       {
         "key": "2026-06",
@@ -11974,12 +11974,14 @@
       "entry": 0.0731,
       "stop": 0.06961874,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T16:45:55",
-      "closed_at": null,
-      "realized_pct": 1.17
+      "closed_at": "2026-07-02T05:04:56",
+      "realized_pct": 3.84,
+      "result_pct": 3.84
     },
     {
       "id": "RSI70 · 15m|COOKIEUSDT|2026-07-01 16:44:59.999000",
@@ -12591,6 +12593,64 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-02T04:33:56",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|BIOUSDT|2026-07-02 04:00:00",
+      "symbol": "BIOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.02943,
+      "stop": 0.0289431,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "opened_at": "2026-07-02T04:53:39",
+      "closed_at": null,
+      "realized_pct": 0.83
+    },
+    {
+      "id": "RSI70 · 1h|BREVUSDT|2026-07-02 04:59:59.999000",
+      "symbol": "BREVUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.078,
+      "stop": 0.07167611,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T05:01:48",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|SOMIUSDT|2026-07-02 04:59:59.999000",
+      "symbol": "SOMIUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1053,
+      "stop": 0.0986911,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T05:01:48",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|SXTUSDT|2026-07-02 04:59:59.999000",
+      "symbol": "SXTUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.00706,
+      "stop": 0.0066519,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-02T05:01:49",
       "closed_at": null,
       "realized_pct": 0.0
     }

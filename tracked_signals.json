@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-02 04:44:59.999000"
+    "last_bar": "2026-07-02 04:59:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -1902,7 +1902,7 @@
     "is_trendwave": true,
     "breakeven_done": false,
     "bar_ts": "2026-06-23 13:59:59.999000",
-    "last_bar": "2026-07-02 03:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00448,
@@ -18620,7 +18620,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-29 16:59:59.999000",
-    "last_bar": "2026-07-02 03:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.063,
@@ -21277,7 +21277,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-06-30 15:59:59.999000",
-    "last_bar": "2026-07-02 03:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 78.96,
@@ -21443,7 +21443,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 09:00:00",
-    "last_bar": "2026-07-02 03:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [
       1
     ],
@@ -22645,7 +22645,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 15:29:59.999000",
-    "last_bar": "2026-07-02 04:44:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [
       1
     ],
@@ -22966,14 +22966,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 16:44:59.999000",
-    "last_bar": "2026-07-02 04:44:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.0765,
+    "stopped": true,
+    "hi_seen": 0.0794,
     "lo_seen": 0.0704,
-    "created": "2026-07-01T16:45:55"
+    "created": "2026-07-01T16:45:55",
+    "exit_price": 0.0769934,
+    "close_card_sent": true,
+    "closed_at": "2026-07-02T05:04:56"
   },
   "RSI70 · 15m|COOKIEUSDT|2026-07-01 16:44:59.999000": {
     "symbol": "COOKIEUSDT",
@@ -23467,7 +23471,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 20:59:59.999000",
-    "last_bar": "2026-07-02 03:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.02402,
@@ -23567,11 +23571,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 21:59:59.999000",
-    "last_bar": "2026-07-02 03:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1787,
-    "lo_seen": 0.1728,
+    "lo_seen": 0.1727,
     "created": "2026-07-01T22:01:37"
   },
   "RSI70 · 1h|CHRUSDT|2026-07-01 21:59:59.999000": {
@@ -23599,11 +23603,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 21:59:59.999000",
-    "last_bar": "2026-07-02 03:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01581,
-    "lo_seen": 0.01527,
+    "lo_seen": 0.01508,
     "created": "2026-07-01T22:01:38"
   },
   "RSI70 · 1h|CRVUSDT|2026-07-01 21:59:59.999000": {
@@ -23631,7 +23635,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 21:59:59.999000",
-    "last_bar": "2026-07-02 03:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2089,
@@ -23663,7 +23667,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 21:59:59.999000",
-    "last_bar": "2026-07-02 03:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [
       1
     ],
@@ -23697,7 +23701,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 21:59:59.999000",
-    "last_bar": "2026-07-02 03:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0239,
@@ -23835,11 +23839,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 22:59:59.999000",
-    "last_bar": "2026-07-02 03:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1101,
-    "lo_seen": 0.1076,
+    "lo_seen": 0.1075,
     "created": "2026-07-01T23:01:37"
   },
   "RSI70 · 1h|OGUSDT|2026-07-01 22:59:59.999000": {
@@ -23867,11 +23871,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 22:59:59.999000",
-    "last_bar": "2026-07-02 03:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.6,
-    "lo_seen": 2.52,
+    "lo_seen": 2.495,
     "created": "2026-07-01T23:01:38"
   },
   "العرض/الطلب|1000SATSUSDT|2026-07-01 23:00:00": {
@@ -23897,7 +23901,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 23:00:00",
-    "last_bar": "2026-07-02 03:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 9.62e-06,
@@ -23927,7 +23931,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 23:00:00",
-    "last_bar": "2026-07-02 03:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1566,
@@ -23959,7 +23963,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 23:29:59.999000",
-    "last_bar": "2026-07-02 04:44:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.125,
@@ -23989,7 +23993,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 00:00:00",
-    "last_bar": "2026-07-02 04:44:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [
       1
     ],
@@ -24129,7 +24133,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 00:59:59.999000",
-    "last_bar": "2026-07-02 04:44:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.15,
@@ -24196,11 +24200,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 02:00:00",
-    "last_bar": "2026-07-02 03:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1519,
-    "lo_seen": 0.1499,
+    "lo_seen": 0.1487,
     "created": "2026-07-02T02:07:38"
   },
   "العرض/الطلب|CHZUSDT|2026-07-02 03:45:00": {
@@ -24263,11 +24267,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 03:59:59.999000",
-    "last_bar": "2026-07-02 03:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.03016,
-    "lo_seen": 0.03016,
+    "lo_seen": 0.02926,
     "created": "2026-07-02T04:01:32"
   },
   "العرض/الطلب|BATUSDT|2026-07-02 04:30:00": {
@@ -24293,10 +24297,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 04:30:00",
-    "last_bar": "2026-07-02 04:44:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.0803,
+    "hi_seen": 0.0804,
     "lo_seen": 0.0801,
     "created": "2026-07-02T04:33:56"
   },
@@ -24308,8 +24312,8 @@
     "entry": 0.02943,
     "stop": 0.0289431,
     "init_stop": 0.0289431,
-    "cur_stop": 0.0289431,
-    "last_alert_stop": 0.0289431,
+    "cur_stop": 0.02943,
+    "last_alert_stop": 0.02943,
     "armed": false,
     "targets": [
       0.0299169,
@@ -24323,11 +24327,109 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 04:00:00",
-    "last_bar": "2026-07-02 04:00:00",
+    "last_bar": "2026-07-02 04:59:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": false,
+    "hi_seen": 0.03004,
+    "lo_seen": 0.02942,
+    "created": "2026-07-02T04:53:39"
+  },
+  "RSI70 · 1h|BREVUSDT|2026-07-02 04:59:59.999000": {
+    "symbol": "BREVUSDT",
+    "label": "RSI70 · 1h",
+    "timeframe": "1h",
+    "message_id": 3851,
+    "entry": 0.078,
+    "stop": 0.07167611,
+    "init_stop": 0.07167611,
+    "cur_stop": 0.07167611,
+    "last_alert_stop": 0.07167611,
+    "armed": false,
+    "targets": [
+      0.0810464,
+      0.0849216,
+      0.0961216
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-02 04:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.02943,
-    "lo_seen": 0.02943,
-    "created": "2026-07-02T04:53:39"
+    "hi_seen": 0.078,
+    "lo_seen": 0.078,
+    "created": "2026-07-02T05:01:48"
+  },
+  "RSI70 · 1h|SOMIUSDT|2026-07-02 04:59:59.999000": {
+    "symbol": "SOMIUSDT",
+    "label": "RSI70 · 1h",
+    "timeframe": "1h",
+    "message_id": 3852,
+    "entry": 0.1053,
+    "stop": 0.0986911,
+    "init_stop": 0.0986911,
+    "cur_stop": 0.0986911,
+    "last_alert_stop": 0.0986911,
+    "armed": false,
+    "targets": [
+      0.1084824,
+      0.1125306,
+      0.1242306
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-02 04:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1053,
+    "lo_seen": 0.1053,
+    "created": "2026-07-02T05:01:48"
+  },
+  "RSI70 · 1h|SXTUSDT|2026-07-02 04:59:59.999000": {
+    "symbol": "SXTUSDT",
+    "label": "RSI70 · 1h",
+    "timeframe": "1h",
+    "message_id": 3853,
+    "entry": 0.00706,
+    "stop": 0.0066519,
+    "init_stop": 0.0066519,
+    "cur_stop": 0.0066519,
+    "last_alert_stop": 0.0066519,
+    "armed": false,
+    "targets": [
+      0.00725312,
+      0.00749878,
+      0.00820878
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-02 04:59:59.999000",
+    "last_bar": "2026-07-02 04:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00706,
+    "lo_seen": 0.00706,
+    "created": "2026-07-02T05:01:49"
   }
 }
