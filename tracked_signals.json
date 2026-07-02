@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-02 14:14:59.999000"
+    "last_bar": "2026-07-02 14:29:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -24612,7 +24612,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 06:15:00",
-    "last_bar": "2026-07-02 14:14:59.999000",
+    "last_bar": "2026-07-02 14:29:59.999000",
     "hits": [
       1
     ],
@@ -25122,7 +25122,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 10:44:59.999000",
-    "last_bar": "2026-07-02 14:14:59.999000",
+    "last_bar": "2026-07-02 14:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1712,
@@ -25249,14 +25249,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 13:30:00",
-    "last_bar": "2026-07-02 14:14:59.999000",
+    "last_bar": "2026-07-02 14:29:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.005132,
-    "lo_seen": 0.005088,
-    "created": "2026-07-02T13:34:07"
+    "lo_seen": 0.005063,
+    "created": "2026-07-02T13:34:07",
+    "exit_price": 0.00509,
+    "close_card_sent": true,
+    "closed_at": "2026-07-02T14:33:43"
   },
   "العرض/الطلب|AXLUSDT|2026-07-02 13:00:00": {
     "symbol": "AXLUSDT",
@@ -25377,12 +25380,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 13:45:00",
-    "last_bar": "2026-07-02 14:14:59.999000",
+    "last_bar": "2026-07-02 14:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.02322,
-    "lo_seen": 0.02309,
-    "created": "2026-07-02T13:48:53"
+    "lo_seen": 0.02291,
+    "created": "2026-07-02T13:48:53",
+    "exit_price": 0.02301822,
+    "close_card_sent": true,
+    "closed_at": "2026-07-02T14:33:46"
   },
   "العرض/الطلب|API3USDT|2026-07-02 14:00:00": {
     "symbol": "API3USDT",
@@ -25407,11 +25413,14 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 14:00:00",
-    "last_bar": "2026-07-02 14:14:59.999000",
+    "last_bar": "2026-07-02 14:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.2247,
-    "lo_seen": 0.2234,
-    "created": "2026-07-02T14:04:05"
+    "lo_seen": 0.2217,
+    "created": "2026-07-02T14:04:05",
+    "exit_price": 0.221979,
+    "close_card_sent": true,
+    "closed_at": "2026-07-02T14:33:49"
   }
 }
