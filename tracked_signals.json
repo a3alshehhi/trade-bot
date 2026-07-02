@@ -24770,5 +24770,35 @@
     "hi_seen": 0.00991,
     "lo_seen": 0.00991,
     "created": "2026-07-02T07:03:27"
+  },
+  "العرض/الطلب|ARDRUSDT|2026-07-02 07:45:00": {
+    "symbol": "ARDRUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 3891,
+    "entry": 0.02481,
+    "stop": 0.02411242,
+    "init_stop": 0.02411242,
+    "cur_stop": 0.02411242,
+    "last_alert_stop": 0.02411242,
+    "armed": false,
+    "targets": [
+      0.02550758,
+      0.02620516
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-02 07:45:00",
+    "last_bar": "2026-07-02 07:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.02481,
+    "lo_seen": 0.02481,
+    "created": "2026-07-02T07:48:04"
   }
 }
