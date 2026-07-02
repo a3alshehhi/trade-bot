@@ -25621,5 +25621,35 @@
     "hi_seen": 0.001189,
     "lo_seen": 0.001189,
     "created": "2026-07-02T22:01:30"
+  },
+  "العرض/الطلب|BCHUSDT|2026-07-02 22:15:00": {
+    "symbol": "BCHUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4045,
+    "entry": 220.0,
+    "stop": 219.0526,
+    "init_stop": 219.0526,
+    "cur_stop": 219.0526,
+    "last_alert_stop": 219.0526,
+    "armed": false,
+    "targets": [
+      220.9474,
+      221.8948
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-02 22:15:00",
+    "last_bar": "2026-07-02 22:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 220.0,
+    "lo_seen": 220.0,
+    "created": "2026-07-02T22:19:28"
   }
 }
