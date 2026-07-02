@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-02T12:03:04",
+  "updated_at": "2026-07-02T12:17:40",
   "stats": {
-    "open": 34,
-    "closed": 755,
-    "win_rate": 53.0,
+    "open": 33,
+    "closed": 756,
+    "win_rate": 52.9,
     "profit_factor": 1.4,
-    "total_pct": 2250.04,
+    "total_pct": 2241.58,
     "avg_pct": 0.56,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-02",
-        "trades": 40,
-        "win_rate": 70.0,
-        "return_pct": -8.58,
+        "trades": 41,
+        "win_rate": 68.3,
+        "return_pct": -8.91,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -111,9 +111,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 263,
-        "win_rate": 57.8,
-        "return_pct": 90.25,
+        "trades": 264,
+        "win_rate": 57.6,
+        "return_pct": 89.57,
         "month": "2026-07"
       },
       {
@@ -134,9 +134,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 96,
-        "win_rate": 74.0,
-        "return_pct": 59.58
+        "trades": 97,
+        "win_rate": 73.2,
+        "return_pct": 59.01
       },
       {
         "key": "2026-06",
@@ -12934,10 +12934,11 @@
       "entry": 1.556,
       "stop": 1.550448,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-02T10:18:08",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-02T12:17:37",
+      "realized_pct": -0.36,
+      "result_pct": -0.36
     },
     {
       "id": "العرض/الطلب|CHRUSDT|2026-07-02 10:00:00",
