@@ -32,7 +32,8 @@ import datetime as dt
 import bybit_exec as bx
 
 # ── إعدادات ──────────────────────────────────────────────────────────────────
-RISK_PCT = float(os.environ.get("SD_RISK_PCT", "0.005"))     # 0.5% لكل صفقة
+RISK_PCT = float(os.environ.get("SD_RISK_PCT", "0.005"))     # 0.5% لكل صفقة (غير مستخدم عند تثبيت القيمة)
+ORDER_USD = float(os.environ.get("SD_ORDER_USD", "100"))     # قيمة ثابتة لكل أمر شراء (USDT)
 MAX_CONCURRENT = int(os.environ.get("SD_MAX_POS", "5"))       # حد المراكز المتزامنة
 FEE_RATE = 0.001                                              # عمولة تقديرية للطرف الواحد
 POS_PATH = os.environ.get("SD_POS", "sd_positions.json")
@@ -119,13 +120,26 @@ def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equit
     if R <= 0 or tp1 <= entry:                     # long فقط: وقف تحت الدخول وهدف فوقه
         return False
     stop_pct = R / entry
-    notional = (equity * RISK_PCT) / stop_pct      # الحجم بالـ USDT من المخاطرة
-    notional = min(notional, equity / MAX_CONCURRENT)   # لا تتجاوز حصّة المركز
+    notional = ORDER_USD                            # قيمة ثابتة لكل أمر شراء (USDT)
 
     filt = bx.instrument_filters(sym)
+    if not filt:                                    # الزوج غير مُدرَج للتداول (Spot/Demo)
+        print(f"autotrade: {sym} غير متاح للتداول على المنصّة — تخطّي")
+        return False
     min_amt = float(filt.get("minOrderAmt") or 5)
     avail = bx.wallet_balance()["coins"].get("USDT", {}).get("amount", 0.0)
     notional = min(notional, avail * 0.98)
+
+    # سقف Bybit لكمية أمر السوق (يمنع خطأ 170381): إن كانت القيمة تُنتج كمية
+    # أساس تتجاوز الحد الأقصى، نخفّض القيمة لتبقى تحت السقف.
+    px = bx.last_price(sym) or entry
+    max_mkt_qty = float(filt.get("maxMktOrderQty") or 0)
+    max_amt = float(filt.get("maxOrderAmt") or 0)
+    if max_mkt_qty > 0 and px > 0:
+        notional = min(notional, max_mkt_qty * px * 0.98)
+    if max_amt > 0:
+        notional = min(notional, max_amt * 0.98)
+
     if notional < min_amt:
         print(f"autotrade: {sym} حجم {notional:.2f} < الحد الأدنى {min_amt} — تخطّي")
         return False
