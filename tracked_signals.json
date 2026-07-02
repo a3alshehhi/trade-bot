@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-02 07:59:59.999000"
+    "last_bar": "2026-07-02 08:14:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -22648,12 +22648,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 15:29:59.999000",
-    "last_bar": "2026-07-02 07:59:59.999000",
+    "last_bar": "2026-07-02 08:14:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.2154,
+    "hi_seen": 0.2162,
     "lo_seen": 0.2089,
     "created": "2026-07-01T15:31:31"
   },
@@ -23969,11 +23969,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 23:29:59.999000",
-    "last_bar": "2026-07-02 07:59:59.999000",
+    "last_bar": "2026-07-02 08:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.125,
-    "lo_seen": 0.1184,
+    "lo_seen": 0.1183,
     "created": "2026-07-01T23:31:12"
   },
   "العرض/الطلب|ADXUSDT|2026-07-02 00:00:00": {
@@ -24585,7 +24585,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 06:15:00",
-    "last_bar": "2026-07-02 07:59:59.999000",
+    "last_bar": "2026-07-02 08:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01541,
@@ -24645,14 +24645,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 06:45:00",
-    "last_bar": "2026-07-02 07:59:59.999000",
+    "last_bar": "2026-07-02 08:14:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.00788,
+    "stopped": true,
+    "hi_seen": 0.0079,
     "lo_seen": 0.00784,
-    "created": "2026-07-02T06:49:26"
+    "created": "2026-07-02T06:49:26",
+    "exit_price": 0.00788672,
+    "close_card_sent": true,
+    "closed_at": "2026-07-02T08:18:09"
   },
   "العرض/الطلب|ARBUSDT|2026-07-02 06:00:00": {
     "symbol": "ARBUSDT",
@@ -24808,14 +24812,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 07:45:00",
-    "last_bar": "2026-07-02 07:59:59.999000",
+    "last_bar": "2026-07-02 08:14:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.02554,
-    "lo_seen": 0.0248,
-    "created": "2026-07-02T07:48:04"
+    "lo_seen": 0.02308,
+    "created": "2026-07-02T07:48:04",
+    "exit_price": 0.02481,
+    "close_card_sent": true,
+    "closed_at": "2026-07-02T08:18:13"
   },
   "trendwave · 1h|GPSUSDT|2026-07-02 07:59:59.999000": {
     "symbol": "GPSUSDT",
