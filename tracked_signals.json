@@ -25103,5 +25103,35 @@
     "hi_seen": 0.1701,
     "lo_seen": 0.1681,
     "created": "2026-07-02T10:46:10"
+  },
+  "العرض/الطلب|DIAUSDT|2026-07-02 11:00:00": {
+    "symbol": "DIAUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 3946,
+    "entry": 0.1077,
+    "stop": 0.1062684,
+    "init_stop": 0.1062684,
+    "cur_stop": 0.1062684,
+    "last_alert_stop": 0.1062684,
+    "armed": false,
+    "targets": [
+      0.1091316,
+      0.1105632
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-02 11:00:00",
+    "last_bar": "2026-07-02 11:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1077,
+    "lo_seen": 0.1077,
+    "created": "2026-07-02T11:06:10"
   }
 }
