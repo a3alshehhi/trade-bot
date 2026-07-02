@@ -24299,5 +24299,35 @@
     "hi_seen": 0.0803,
     "lo_seen": 0.0801,
     "created": "2026-07-02T04:33:56"
+  },
+  "العرض/الطلب|BIOUSDT|2026-07-02 04:00:00": {
+    "symbol": "BIOUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 3850,
+    "entry": 0.02943,
+    "stop": 0.0289431,
+    "init_stop": 0.0289431,
+    "cur_stop": 0.0289431,
+    "last_alert_stop": 0.0289431,
+    "armed": false,
+    "targets": [
+      0.0299169,
+      0.0304038
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-02 04:00:00",
+    "last_bar": "2026-07-02 04:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.02943,
+    "lo_seen": 0.02943,
+    "created": "2026-07-02T04:53:39"
   }
 }
