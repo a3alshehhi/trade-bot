@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-02 14:29:59.999000"
+    "last_bar": "2026-07-02 14:44:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -24612,14 +24612,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 06:15:00",
-    "last_bar": "2026-07-02 14:29:59.999000",
+    "last_bar": "2026-07-02 14:44:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.0158,
+    "stopped": true,
+    "hi_seen": 0.01601,
     "lo_seen": 0.01504,
-    "created": "2026-07-02T06:18:00"
+    "created": "2026-07-02T06:18:00",
+    "exit_price": 0.01582148,
+    "close_card_sent": true,
+    "closed_at": "2026-07-02T14:47:30"
   },
   "العرض/الطلب|ETHUSDT|2026-07-02 06:00:00": {
     "symbol": "ETHUSDT",
@@ -25122,7 +25126,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 10:44:59.999000",
-    "last_bar": "2026-07-02 14:29:59.999000",
+    "last_bar": "2026-07-02 14:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1712,
