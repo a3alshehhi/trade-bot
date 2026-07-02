@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-02T11:47:37",
+  "updated_at": "2026-07-02T12:03:04",
   "stats": {
-    "open": 36,
-    "closed": 753,
-    "win_rate": 52.9,
-    "profit_factor": 1.39,
-    "total_pct": 2049.85,
-    "avg_pct": 0.55,
+    "open": 34,
+    "closed": 755,
+    "win_rate": 53.0,
+    "profit_factor": 1.4,
+    "total_pct": 2250.04,
+    "avg_pct": 0.56,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-02",
-        "trades": 38,
-        "win_rate": 68.4,
-        "return_pct": -16.37,
+        "trades": 40,
+        "win_rate": 70.0,
+        "return_pct": -8.58,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -111,9 +111,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 261,
-        "win_rate": 57.5,
-        "return_pct": 74.05,
+        "trades": 263,
+        "win_rate": 57.8,
+        "return_pct": 90.25,
         "month": "2026-07"
       },
       {
@@ -134,9 +134,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 94,
-        "win_rate": 73.4,
-        "return_pct": 45.99
+        "trades": 96,
+        "win_rate": 74.0,
+        "return_pct": 59.58
       },
       {
         "key": "2026-06",
@@ -9302,11 +9302,13 @@
       "timeframe": "4h",
       "entry": 375.08498667,
       "stop": 361.1993687,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-29T08:04:42",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 8.84
     },
     {
       "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 08:44:59.999000",
@@ -12133,10 +12135,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T20:02:12",
-      "closed_at": null,
-      "realized_pct": 6.75
+      "closed_at": "2026-07-02T12:02:52",
+      "realized_pct": 6.75,
+      "result_pct": 6.75
     },
     {
       "id": "RSI70 · 15m|ALICEUSDT|2026-07-01 20:14:59.999000",
@@ -12425,12 +12428,14 @@
       "entry": 0.155,
       "stop": 0.1525226,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T23:20:50",
-      "closed_at": null,
-      "realized_pct": 0.8
+      "closed_at": "2026-07-02T12:02:57",
+      "realized_pct": 2.4,
+      "result_pct": 2.4
     },
     {
       "id": "RSI70 · 15m|ALICEUSDT|2026-07-01 23:29:59.999000",
