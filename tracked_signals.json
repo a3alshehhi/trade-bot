@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-02 08:59:59.999000"
+    "last_bar": "2026-07-02 09:44:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -22648,14 +22648,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-01 15:29:59.999000",
-    "last_bar": "2026-07-02 08:59:59.999000",
+    "last_bar": "2026-07-02 09:44:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.2163,
+    "stopped": true,
+    "hi_seen": 0.2177,
     "lo_seen": 0.2089,
-    "created": "2026-07-01T15:31:31"
+    "created": "2026-07-01T15:31:31",
+    "exit_price": 0.2173822,
+    "close_card_sent": true,
+    "closed_at": "2026-07-02T09:48:01"
   },
   "RSI70 · 15m|SHELLUSDT|2026-07-01 15:44:59.999000": {
     "symbol": "SHELLUSDT",
@@ -24591,10 +24595,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 06:15:00",
-    "last_bar": "2026-07-02 08:59:59.999000",
+    "last_bar": "2026-07-02 09:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.01541,
+    "hi_seen": 0.01546,
     "lo_seen": 0.01504,
     "created": "2026-07-02T06:18:00"
   },

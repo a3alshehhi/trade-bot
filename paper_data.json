@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-02T09:32:50",
+  "updated_at": "2026-07-02T09:48:13",
   "stats": {
-    "open": 34,
-    "closed": 748,
-    "win_rate": 52.5,
+    "open": 33,
+    "closed": 749,
+    "win_rate": 52.6,
     "profit_factor": 1.38,
-    "total_pct": 1783.2,
+    "total_pct": 1814.27,
     "avg_pct": 0.54,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-02",
-        "trades": 33,
-        "win_rate": 63.6,
-        "return_pct": -26.74,
+        "trades": 34,
+        "win_rate": 64.7,
+        "return_pct": -25.53,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -111,9 +111,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 256,
-        "win_rate": 56.6,
-        "return_pct": 52.46,
+        "trades": 257,
+        "win_rate": 56.8,
+        "return_pct": 54.97,
         "month": "2026-07"
       },
       {
@@ -134,9 +134,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 89,
-        "win_rate": 71.9,
-        "return_pct": 27.88
+        "trades": 90,
+        "win_rate": 72.2,
+        "return_pct": 29.99
       },
       {
         "key": "2026-06",
@@ -11824,12 +11824,14 @@
       "entry": 0.2125,
       "stop": 0.20790033,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T15:31:31",
-      "closed_at": null,
-      "realized_pct": 0.51
+      "closed_at": "2026-07-02T09:48:01",
+      "realized_pct": 1.65,
+      "result_pct": 1.65
     },
     {
       "id": "RSI70 · 15m|SHELLUSDT|2026-07-01 15:44:59.999000",
