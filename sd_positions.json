@@ -1,21 +1,4 @@
 {
-  "CHZUSDT": {
-    "symbol": "CHZUSDT",
-    "tf": "15m",
-    "label": "RSI70 · 15m",
-    "prob": null,
-    "entry": 0.01837,
-    "init_stop": 0.01798471,
-    "stop": 0.01837471,
-    "R": 0.00038528999999999994,
-    "tp1": 0.01855224,
-    "tp2": 0.01878406,
-    "qty": 5429.34782608,
-    "qty_open": 2714.67782608,
-    "tp1_done": true,
-    "opened_ts": "2026-07-03T00:48:42",
-    "armed": true
-  },
   "IOUSDT": {
     "symbol": "IOUSDT",
     "tf": "1h",
@@ -55,14 +38,15 @@
     "prob": null,
     "entry": 0.1041,
     "init_stop": 0.10027341,
-    "stop": 0.1041,
+    "stop": 0.10427341,
     "R": 0.0038265900000000047,
     "tp1": 0.105868,
     "tp2": 0.108117,
     "qty": 2859.73282442,
     "qty_open": 1429.87282442,
     "tp1_done": true,
-    "opened_ts": "2026-07-03T13:18:44"
+    "opened_ts": "2026-07-03T13:18:44",
+    "armed": true
   },
   "BICOUSDT": {
     "symbol": "BICOUSDT",
@@ -151,39 +135,6 @@
     "tp1_done": true,
     "armed": true,
     "opened_ts": "2026-07-03T18:03:31"
-  },
-  "ARBUSDT": {
-    "symbol": "ARBUSDT",
-    "tf": "15m",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "levels": [
-      0.0801
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 300.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.08020020020036836,
-        "qty": 3740.63904143,
-        "usd": 300.0
-      }
-    ],
-    "avg_entry": 0.08020020020036836,
-    "entry": 0.08020020020036836,
-    "init_stop": 0.0797574,
-    "stop": 0.08020020020036836,
-    "R": 0.000442800200368354,
-    "tp1": 0.0804426,
-    "tp2": 0.0807852,
-    "qty": 3740.63904143,
-    "qty_open": 1870.32904143,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-03T20:03:01"
   },
   "COOKIEUSDT": {
     "symbol": "COOKIEUSDT",

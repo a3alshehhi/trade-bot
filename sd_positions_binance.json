@@ -1,21 +1,4 @@
 {
-  "BNTUSDT": {
-    "symbol": "BNTUSDT",
-    "tf": "1h",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "entry": 0.2662,
-    "init_stop": 0.2638704,
-    "stop": 0.2678704,
-    "R": 0.0023295999999999872,
-    "tp1": 0.2685296,
-    "tp2": 0.2708592,
-    "qty": 373.9257,
-    "qty_open": 187.0257,
-    "tp1_done": true,
-    "opened_ts": "2026-07-03T16:47:48",
-    "armed": true
-  },
   "BICOUSDT": {
     "symbol": "BICOUSDT",
     "tf": "15m",
@@ -156,39 +139,6 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-03T19:33:28"
-  },
-  "ARBUSDT": {
-    "symbol": "ARBUSDT",
-    "tf": "15m",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "levels": [
-      0.0801
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.08028561124486694,
-        "qty": 1245.5532,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.08028561124486694,
-    "entry": 0.08028561124486694,
-    "init_stop": 0.0797574,
-    "stop": 0.08028561124486694,
-    "R": 0.0005282112448669329,
-    "tp1": 0.0804426,
-    "tp2": 0.0807852,
-    "qty": 1245.5532,
-    "qty_open": 622.8532,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-03T20:03:29"
   },
   "COOKIEUSDT": {
     "symbol": "COOKIEUSDT",
