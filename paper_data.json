@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-03T17:32:43",
+  "updated_at": "2026-07-03T17:48:32",
   "stats": {
     "open": 32,
-    "closed": 820,
+    "closed": 821,
     "win_rate": 53.7,
     "profit_factor": 1.43,
-    "total_pct": 3261.91,
+    "total_pct": 3269.98,
     "avg_pct": 0.56,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-03",
-        "trades": 45,
-        "win_rate": 64.4,
-        "return_pct": 51.48,
+        "trades": 46,
+        "win_rate": 65.2,
+        "return_pct": 51.84,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 328,
-        "win_rate": 58.5,
-        "return_pct": 172.17,
+        "trades": 329,
+        "win_rate": 58.7,
+        "return_pct": 172.82,
         "month": "2026-07"
       },
       {
@@ -142,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 161,
-        "win_rate": 68.9,
-        "return_pct": 128.29
+        "trades": 162,
+        "win_rate": 69.1,
+        "return_pct": 128.84
       },
       {
         "key": "2026-06",
@@ -14052,6 +14052,24 @@
       "closed_at": "2026-07-03T16:33:18",
       "realized_pct": -0.53,
       "result_pct": -0.53
+    },
+    {
+      "id": "العرض/الطلب|CTSIUSDT|2026-07-03 17:30:00",
+      "symbol": "CTSIUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.02352,
+      "stop": 0.02348204,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-03T17:33:21",
+      "closed_at": "2026-07-03T17:48:32",
+      "realized_pct": 0.24,
+      "result_pct": 0.24
     }
   ]
 }
