@@ -26515,5 +26515,35 @@
     "hi_seen": 0.0688,
     "lo_seen": 0.0688,
     "created": "2026-07-03T07:01:43"
+  },
+  "العرض/الطلب|ARKMUSDT|2026-07-03 07:30:00": {
+    "symbol": "ARKMUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4165,
+    "entry": 0.1213,
+    "stop": 0.1200198,
+    "init_stop": 0.1200198,
+    "cur_stop": 0.1200198,
+    "last_alert_stop": 0.1200198,
+    "armed": false,
+    "targets": [
+      0.1225802,
+      0.1238604
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 07:30:00",
+    "last_bar": "2026-07-03 07:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1213,
+    "lo_seen": 0.1213,
+    "created": "2026-07-03T07:33:40"
   }
 }
