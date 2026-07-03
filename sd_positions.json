@@ -240,5 +240,44 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-03T22:33:26"
+  },
+  "GPSUSDT": {
+    "symbol": "GPSUSDT",
+    "tf": "1h",
+    "label": "RSI50 · 1h",
+    "prob": null,
+    "levels": [
+      0.00937632,
+      0.00923,
+      0.00908368,
+      0.00887536
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 75.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.0098458458458569,
+        "qty": 7617.42578283,
+        "usd": 75.0
+      }
+    ],
+    "avg_entry": 0.0098458458458569,
+    "entry": 0.0098458458458569,
+    "init_stop": 0.00869509,
+    "stop": 0.00869509,
+    "R": 0.0011507558458569,
+    "tp1": 0.01018728,
+    "tp2": 0.01061632,
+    "qty": 7617.42578283,
+    "qty_open": 7617.42578283,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-03T23:03:03"
   }
 }

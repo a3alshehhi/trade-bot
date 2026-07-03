@@ -27966,5 +27966,43 @@
     "hi_seen": 0.04494,
     "lo_seen": 0.04494,
     "created": "2026-07-03T22:31:16"
+  },
+  "RSI50 · 1h|GPSUSDT|2026-07-03 22:59:59.999000": {
+    "symbol": "GPSUSDT",
+    "label": "RSI50 · 1h",
+    "timeframe": "1h",
+    "message_id": -1,
+    "entry": 0.00985,
+    "dca_levels": [
+      0.00937632,
+      0.00923,
+      0.00908368,
+      0.00887536
+    ],
+    "stop": 0.00869509,
+    "init_stop": 0.00869509,
+    "cur_stop": 0.00869509,
+    "last_alert_stop": 0.00869509,
+    "armed": false,
+    "targets": [
+      0.01018728,
+      0.01061632,
+      0.01185632
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 22:59:59.999000",
+    "last_bar": "2026-07-03 22:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00985,
+    "lo_seen": 0.00985,
+    "created": "2026-07-03T23:01:34"
   }
 }
