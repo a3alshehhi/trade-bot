@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>لوحة الحساب التجريبي (Bybit Testnet)</title>
+<title>لوحة الحساب التجريبي</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   :root{
     --bg:#0d1117; --card:#161b22; --line:#232a33; --muted:#8b949e;
     --txt:#e6edf3; --green:#3fb950; --red:#f85149; --accent:#58a6ff; --amber:#d29922;
+    --bybit:#f7a600; --binance:#f0b90b;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--txt);
@@ -39,16 +40,30 @@
   button:hover{border-color:var(--accent)}
   a{color:var(--accent);text-decoration:none}
   .wrap{overflow-x:auto}
+  /* تبويبات المنصّات */
+  .tabs{display:flex;gap:8px;margin:12px 0 16px}
+  .tab{font-size:13px;font-weight:600;padding:8px 18px;border-radius:10px;
+    background:var(--card);border:1px solid var(--line);color:var(--muted)}
+  .tab .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-left:6px;vertical-align:middle}
+  .tab[data-p="bybit"] .dot{background:var(--bybit)}
+  .tab[data-p="binance"] .dot{background:var(--binance)}
+  .tab.active{color:var(--txt);border-color:var(--accent);background:#1b2430}
 </style>
 </head>
 <body>
   <div class="bar">
     <div>
-      <h1>📊 لوحة الحساب التجريبي — Bybit Testnet</h1>
+      <h1>📊 لوحة الحساب التجريبي</h1>
       <div class="sub">تنفيذ آلي لإشارات: العرض/الطلب · RSI70 · trendwave — أموال وهمية، ليست نصيحة مالية.
         <a href="index.html">↩ لوحة الإشارات</a></div>
     </div>
     <button onclick="load()">🔄 تحديث</button>
+  </div>
+
+  <!-- تبويبات المنصّات -->
+  <div class="tabs" id="tabs">
+    <button class="tab active" data-p="bybit"><span class="dot"></span>Bybit Testnet</button>
+    <button class="tab" data-p="binance"><span class="dot"></span>Binance Demo</button>
   </div>
 
   <div class="cards" id="cards"></div>
@@ -81,6 +96,13 @@
 const $ = s => document.querySelector(s);
 let chart;
 
+// المنصّة النشطة: bybit = ملفات أصلية، binance = لاحقة _binance
+const PLATFORMS = {
+  bybit:   { name:"Bybit Testnet", suffix:"" },
+  binance: { name:"Binance Demo",  suffix:"_binance" },
+};
+let PLATFORM = "bybit";
+
 function fmt(v){ v=Number(v); if(!isFinite(v)) return "—";
   return (Math.abs(v)<1 ? v.toFixed(8).replace(/0+$/,'').replace(/\.$/,'') : v.toLocaleString(undefined,{maximumFractionDigits:2})); }
 function fmtUsd(v){ v=Number(v)||0; const s=v>=0?'+':'−'; return s+Math.abs(v).toLocaleString(undefined,{maximumFractionDigits:2}); }
@@ -93,8 +115,9 @@ async function getJSON(name){
 }
 
 async function load(){
-  const positions = (await getJSON('sd_positions.json')) || {};
-  const ledger = (await getJSON('sd_ledger.json')) || [];
+  const suf = PLATFORMS[PLATFORM].suffix;
+  const positions = (await getJSON('sd_positions'+suf+'.json')) || {};
+  const ledger = (await getJSON('sd_ledger'+suf+'.json')) || [];
 
   // ── ملخّص ──
   const legs = ledger.length;
@@ -146,7 +169,7 @@ async function load(){
   // ── الصفقات المُغلقة ──
   const lb = $('#ledTbl tbody'); lb.innerHTML='';
   const recent = [...sorted].reverse().slice(0,50);
-  if(!recent.length){ lb.innerHTML=`<tr><td colspan="8" class="empty">لا صفقات مُغلقة بعد.</td></tr>`; }
+  if(!recent.length){ lb.innerHTML=`<tr><td colspan="8" class="empty">لا صفقات مُغلقة بعد على هذه المنصّة.</td></tr>`; }
   for(const x of recent){
     const win = Number(x.pnl_usdt)>=0;
     lb.innerHTML += `<tr>
@@ -158,8 +181,18 @@ async function load(){
       <td class="${cls(x.pnl_pct)}">${Number(x.pnl_pct)>=0?'+':''}${Number(x.pnl_pct||0).toFixed(2)}%</td>
       <td><span class="pill ${win?'win':'loss'}">${fmtUsd(x.pnl_usdt)}</span></td></tr>`;
   }
-  $('#foot').innerHTML = `آخر تحديث: ${new Date().toLocaleString('ar')} · حساب تجريبي (أموال وهمية) — أداة تعليمية، ليست نصيحة مالية.`;
+  $('#foot').innerHTML = `المنصّة: <b>${PLATFORMS[PLATFORM].name}</b> · آخر تحديث: ${new Date().toLocaleString('ar')} · حساب تجريبي (أموال وهمية) — أداة تعليمية، ليست نصيحة مالية.`;
 }
+
+// تبديل التبويبات
+document.querySelectorAll('#tabs .tab').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('#tabs .tab').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    PLATFORM = btn.dataset.p;
+    load();
+  });
+});
 
 load();
 setInterval(load, 60000);
