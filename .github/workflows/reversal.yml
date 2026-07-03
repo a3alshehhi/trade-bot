@@ -57,15 +57,16 @@ jobs:
         run: |
           # إشارة شراء بالزخم: فور تجاوز RSI(21) خط الـ70 — على 4 فريمات
           # --ml-filter: يرشّح الإشارات بالفلتر التعلّمي إن وُجد ml_model.joblib (وإلا يمرّر الكل)
-          # === RSI70 مع فلتر القفزة: اختراق نظيف فقط (RSI بين 70-78) ===
+          # === عتبة اختراق RSI مختلفة لكل فريم (2026-07-03): 1h=50 ، 15m=60 ===
           # --rsi-ob-max 78: يرفض الاختراقات التي قفز فيها RSI بعيداً (مثلاً 64→86)
-          # RSI70 على فريمي 15m/1h — بوابة حداثة اختراق MA200 مفعّلة داخلياً لكل فريم
-          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --rsi-ob-max 78 --ml-filter --watchlist watchlist.txt \
+          # الشرط #2: لا يُعاد الدخول لنفس العملة إلا بعد تصحيح ≥38.2% للموجة السابقة (داخلياً)
+          # بوابة حداثة اختراق MA200 مفعّلة داخلياً لكل فريم
+          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 60 --rsi-ob-max 78 --ml-filter --watchlist watchlist.txt \
             --timeframe 15m --state reversal_alerts.json
-          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --rsi-ob-max 78 --ml-filter --watchlist watchlist.txt \
+          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 50 --rsi-ob-max 78 --ml-filter --watchlist watchlist.txt \
             --timeframe 1h --state reversal_alerts.json
           # ⛔ 4h معطّل (2026-07-02):
-          # python trading_bot.py --mode reversal --rsi-cross --rsi-ob 70 --rsi-ob-max 78 --ml-filter --watchlist watchlist.txt \
+          # python trading_bot.py --mode reversal --rsi-cross --rsi-ob 50 --rsi-ob-max 78 --ml-filter --watchlist watchlist.txt \
           #   --timeframe 4h --state reversal_alerts.json
           # === استراتيجية trendwave المستقلة (الإعداد الرابح) — على نفس الجدول ===
           # دخول مباشر بعد موجة RSI(20→80) + فلتر اتجاه من فريم أعلى. رسائل مُعنونة "trendwave".
