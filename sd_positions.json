@@ -15,22 +15,6 @@
     "tp1_done": true,
     "opened_ts": "2026-07-03T00:48:42"
   },
-  "ANKRUSDT": {
-    "symbol": "ANKRUSDT",
-    "tf": "15m",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "entry": 0.00358,
-    "init_stop": 0.00356866,
-    "stop": 0.00356866,
-    "R": 1.1339999999999874e-05,
-    "tp1": 0.00359134,
-    "tp2": 0.00360268,
-    "qty": 27905.02793296,
-    "qty_open": 27905.02793296,
-    "tp1_done": false,
-    "opened_ts": "2026-07-03T01:33:47"
-  },
   "LAUSDT": {
     "symbol": "LAUSDT",
     "tf": "1h",
@@ -46,5 +30,21 @@
     "qty_open": 1486.38595447,
     "tp1_done": false,
     "opened_ts": "2026-07-03T02:03:35"
+  },
+  "AXLUSDT": {
+    "symbol": "AXLUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "entry": 0.0427,
+    "init_stop": 0.042381,
+    "stop": 0.042381,
+    "R": 0.00031899999999999984,
+    "tp1": 0.043019,
+    "tp2": 0.043338,
+    "qty": 2332.47723558,
+    "qty_open": 2332.47723558,
+    "tp1_done": false,
+    "opened_ts": "2026-07-03T02:47:44"
   }
 }
