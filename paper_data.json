@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-03T12:18:36",
+  "updated_at": "2026-07-03T12:33:03",
   "stats": {
-    "open": 36,
-    "closed": 804,
-    "win_rate": 53.6,
+    "open": 38,
+    "closed": 805,
+    "win_rate": 53.7,
     "profit_factor": 1.42,
-    "total_pct": 3021.51,
+    "total_pct": 3028.37,
     "avg_pct": 0.56,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-03",
-        "trades": 29,
-        "win_rate": 69.0,
-        "return_pct": 40.65,
+        "trades": 30,
+        "win_rate": 70.0,
+        "return_pct": 40.96,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 312,
-        "win_rate": 58.7,
-        "return_pct": 152.71,
+        "trades": 313,
+        "win_rate": 58.8,
+        "return_pct": 153.26,
         "month": "2026-07"
       },
       {
@@ -142,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 145,
-        "win_rate": 70.3,
-        "return_pct": 111.97
+        "trades": 146,
+        "win_rate": 70.5,
+        "return_pct": 112.43
       },
       {
         "key": "2026-06",
@@ -13776,10 +13776,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T11:03:45",
-      "closed_at": null,
-      "realized_pct": 0.22
+      "closed_at": "2026-07-03T12:32:57",
+      "realized_pct": 0.22,
+      "result_pct": 0.22
     },
     {
       "id": "العرض/الطلب|ARPAUSDT|2026-07-03 11:00:00",
@@ -13855,6 +13856,50 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-03T12:01:56",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|AXLUSDT|2026-07-03 12:15:00",
+      "symbol": "AXLUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0435,
+      "stop": 0.0432834,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "opened_at": "2026-07-03T12:19:26",
+      "closed_at": null,
+      "realized_pct": 0.25
+    },
+    {
+      "id": "العرض/الطلب|ASTRUSDT|2026-07-03 12:15:00",
+      "symbol": "ASTRUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.005261,
+      "stop": 0.00524513,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T12:19:26",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ETHUSDT|2026-07-03 12:00:00",
+      "symbol": "ETHUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 1735.13,
+      "stop": 1712.38666,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T12:23:38",
       "closed_at": null,
       "realized_pct": 0.0
     }

@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-03 12:14:59.999000"
+    "last_bar": "2026-07-03 12:29:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -25910,7 +25910,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 00:44:59.999000",
-    "last_bar": "2026-07-03 12:14:59.999000",
+    "last_bar": "2026-07-03 12:29:59.999000",
     "hits": [
       1
     ],
@@ -26728,7 +26728,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 10:45:00",
-    "last_bar": "2026-07-03 12:14:59.999000",
+    "last_bar": "2026-07-03 12:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.627,
@@ -26758,14 +26758,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 11:00:00",
-    "last_bar": "2026-07-03 12:14:59.999000",
+    "last_bar": "2026-07-03 12:29:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 1748.0,
-    "lo_seen": 1737.47,
-    "created": "2026-07-03T11:03:45"
+    "lo_seen": 1731.55,
+    "created": "2026-07-03T11:03:45",
+    "exit_price": 1738.92,
+    "close_card_sent": true,
+    "closed_at": "2026-07-03T12:32:57"
   },
   "العرض/الطلب|ARPAUSDT|2026-07-03 11:00:00": {
     "symbol": "ARPAUSDT",
@@ -26938,8 +26941,8 @@
     "entry": 0.0435,
     "stop": 0.0432834,
     "init_stop": 0.0432834,
-    "cur_stop": 0.0432834,
-    "last_alert_stop": 0.0432834,
+    "cur_stop": 0.0435,
+    "last_alert_stop": 0.0435,
     "armed": false,
     "targets": [
       0.0437166,
@@ -26953,10 +26956,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 12:15:00",
-    "last_bar": "2026-07-03 12:15:00",
-    "hits": [],
+    "last_bar": "2026-07-03 12:29:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.0435,
+    "hi_seen": 0.0439,
     "lo_seen": 0.0435,
     "created": "2026-07-03T12:19:26"
   },
@@ -26983,11 +26988,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 12:15:00",
-    "last_bar": "2026-07-03 12:15:00",
+    "last_bar": "2026-07-03 12:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.005261,
-    "lo_seen": 0.005261,
+    "hi_seen": 0.005274,
+    "lo_seen": 0.005246,
     "created": "2026-07-03T12:19:26"
   },
   "العرض/الطلب|ETHUSDT|2026-07-03 12:00:00": {
