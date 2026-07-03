@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-03T07:45:32",
+  "updated_at": "2026-07-03T08:02:55",
   "stats": {
-    "open": 32,
+    "open": 33,
     "closed": 797,
     "win_rate": 53.3,
     "profit_factor": 1.39,
@@ -13664,9 +13664,25 @@
       "timeframe": "15m",
       "entry": 0.1213,
       "stop": 0.1200198,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-03T07:33:40",
+      "closed_at": null,
+      "realized_pct": 0.53
+    },
+    {
+      "id": "RSI70 · 1h|IOUSDT|2026-07-03 07:59:59.999000",
+      "symbol": "IOUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1824,
+      "stop": 0.17192506,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T08:01:35",
       "closed_at": null,
       "realized_pct": 0.0
     }
