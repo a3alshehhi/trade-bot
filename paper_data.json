@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-03T05:48:28",
+  "updated_at": "2026-07-03T06:03:26",
   "stats": {
-    "open": 31,
-    "closed": 795,
-    "win_rate": 53.5,
-    "profit_factor": 1.4,
-    "total_pct": 2320.89,
-    "avg_pct": 0.54,
+    "open": 29,
+    "closed": 797,
+    "win_rate": 53.3,
+    "profit_factor": 1.39,
+    "total_pct": 2214.5,
+    "avg_pct": 0.53,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-03",
-        "trades": 20,
-        "win_rate": 70.0,
-        "return_pct": 9.08,
+        "trades": 22,
+        "win_rate": 63.6,
+        "return_pct": 4.29,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 303,
-        "win_rate": 58.4,
-        "return_pct": 95.99,
+        "trades": 305,
+        "win_rate": 58.0,
+        "return_pct": 87.38,
         "month": "2026-07"
       },
       {
@@ -142,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 136,
-        "win_rate": 70.6,
-        "return_pct": 64.39
+        "trades": 138,
+        "win_rate": 69.6,
+        "return_pct": 57.17
       },
       {
         "key": "2026-06",
@@ -13575,10 +13575,11 @@
       "entry": 0.223,
       "stop": 0.216642,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T03:06:24",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-03T06:03:21",
+      "realized_pct": -2.85,
+      "result_pct": -2.85
     },
     {
       "id": "العرض/الطلب|AVAXUSDT|2026-07-03 03:00:00",
@@ -13602,11 +13603,13 @@
       "timeframe": "1h",
       "entry": 0.1088,
       "stop": 0.1073834,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-03T04:23:33",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.65
     },
     {
       "id": "العرض/الطلب|ALTUSDT|2026-07-03 05:00:00",
@@ -13617,10 +13620,11 @@
       "entry": 0.00616,
       "stop": 0.00606232,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T05:20:50",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-03T06:03:26",
+      "realized_pct": -1.59,
+      "result_pct": -1.59
     }
   ]
 }
