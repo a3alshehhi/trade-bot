@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-03T15:55:30",
+  "updated_at": "2026-07-03T16:03:04",
   "stats": {
-    "open": 32,
-    "closed": 816,
-    "win_rate": 53.6,
-    "profit_factor": 1.41,
-    "total_pct": 2826.28,
-    "avg_pct": 0.55,
+    "open": 33,
+    "closed": 818,
+    "win_rate": 53.7,
+    "profit_factor": 1.43,
+    "total_pct": 3263.01,
+    "avg_pct": 0.57,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-03",
-        "trades": 41,
-        "win_rate": 63.4,
-        "return_pct": 31.85,
+        "trades": 43,
+        "win_rate": 65.1,
+        "return_pct": 51.53,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 324,
-        "win_rate": 58.3,
-        "return_pct": 136.9,
+        "trades": 326,
+        "win_rate": 58.6,
+        "return_pct": 172.26,
         "month": "2026-07"
       },
       {
@@ -142,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 157,
-        "win_rate": 68.8,
-        "return_pct": 98.71
+        "trades": 159,
+        "win_rate": 69.2,
+        "return_pct": 128.37
       },
       {
         "key": "2026-06",
@@ -5256,12 +5256,14 @@
       "entry": 1.77761867,
       "stop": 1.71846891,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-27T00:03:44",
-      "closed_at": null,
-      "realized_pct": 5.57
+      "closed_at": "2026-07-03T16:02:46",
+      "realized_pct": 13.07,
+      "result_pct": 13.07
     },
     {
       "id": "trendwave · 4h|ZECUSDT|2026-06-26 23:59:59.999000",
@@ -13860,11 +13862,13 @@
       "timeframe": "1h",
       "entry": 0.1041,
       "stop": 0.10027341,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-03T12:01:56",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.85
     },
     {
       "id": "العرض/الطلب|AXLUSDT|2026-07-03 12:15:00",
@@ -13984,6 +13988,52 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-03T15:16:00",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|DGBUSDT|2026-07-03 15:45:00",
+      "symbol": "DGBUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00245,
+      "stop": 0.00243842,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T15:49:27",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|APTUSDT|2026-07-03 15:00:00",
+      "symbol": "APTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.612,
+      "stop": 0.605316,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-03T15:53:41",
+      "closed_at": "2026-07-03T16:03:02",
+      "realized_pct": 1.64,
+      "result_pct": 1.64
+    },
+    {
+      "id": "RSI50 · 1h|VANRYUSDT|2026-07-03 15:59:59.999000",
+      "symbol": "VANRYUSDT",
+      "label": "RSI50 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.003069,
+      "stop": 0.00284338,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T16:01:36",
       "closed_at": null,
       "realized_pct": 0.0
     }
