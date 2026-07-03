@@ -27388,5 +27388,43 @@
     "exit_price": 0.02359592,
     "close_card_sent": true,
     "closed_at": "2026-07-03T17:48:32"
+  },
+  "RSI50 · 1h|CELOUSDT|2026-07-03 17:59:59.999000": {
+    "symbol": "CELOUSDT",
+    "label": "RSI50 · 1h",
+    "timeframe": "1h",
+    "message_id": -1,
+    "entry": 0.06351,
+    "dca_levels": [
+      0.06266578,
+      0.062405,
+      0.06214422,
+      0.06177294
+    ],
+    "stop": 0.06123818,
+    "init_stop": 0.06123818,
+    "cur_stop": 0.06123818,
+    "last_alert_stop": 0.06123818,
+    "armed": false,
+    "targets": [
+      0.06411112,
+      0.06487578,
+      0.06708578
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 17:59:59.999000",
+    "last_bar": "2026-07-03 17:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.06351,
+    "lo_seen": 0.06351,
+    "created": "2026-07-03T18:01:42"
   }
 }

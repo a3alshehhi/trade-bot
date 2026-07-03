@@ -62,5 +62,44 @@
     "qty_open": 32308.659,
     "tp1_done": false,
     "opened_ts": "2026-07-03T16:48:26"
+  },
+  "CELOUSDT": {
+    "symbol": "CELOUSDT",
+    "tf": "1h",
+    "label": "RSI50 · 1h",
+    "prob": null,
+    "levels": [
+      0.06266578,
+      0.062405,
+      0.06214422,
+      0.06177294
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 25.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.06359599752229994,
+        "qty": 393.1065,
+        "usd": 25.0
+      }
+    ],
+    "avg_entry": 0.06359599752229994,
+    "entry": 0.06359599752229994,
+    "init_stop": 0.06123818,
+    "stop": 0.06123818,
+    "R": 0.0023578175222999376,
+    "tp1": 0.06411112,
+    "tp2": 0.06487578,
+    "qty": 393.1065,
+    "qty_open": 393.1065,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-03T18:03:51"
   }
 }

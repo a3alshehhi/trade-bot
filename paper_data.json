@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-03T17:48:32",
+  "updated_at": "2026-07-03T18:03:23",
   "stats": {
-    "open": 32,
+    "open": 33,
     "closed": 821,
     "win_rate": 53.7,
     "profit_factor": 1.43,
@@ -14070,6 +14070,20 @@
       "closed_at": "2026-07-03T17:48:32",
       "realized_pct": 0.24,
       "result_pct": 0.24
+    },
+    {
+      "id": "RSI50 · 1h|CELOUSDT|2026-07-03 17:59:59.999000",
+      "symbol": "CELOUSDT",
+      "label": "RSI50 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.06351,
+      "stop": 0.06123818,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T18:01:42",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
