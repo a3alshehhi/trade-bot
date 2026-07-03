@@ -26299,5 +26299,35 @@
     "hi_seen": 224.3,
     "lo_seen": 220.5,
     "created": "2026-07-03T02:53:41"
+  },
+  "العرض/الطلب|0GUSDT|2026-07-03 03:00:00": {
+    "symbol": "0GUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 4125,
+    "entry": 0.223,
+    "stop": 0.216642,
+    "init_stop": 0.216642,
+    "cur_stop": 0.216642,
+    "last_alert_stop": 0.216642,
+    "armed": false,
+    "targets": [
+      0.229358,
+      0.235716
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 03:00:00",
+    "last_bar": "2026-07-03 03:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.223,
+    "lo_seen": 0.223,
+    "created": "2026-07-03T03:06:24"
   }
 }
