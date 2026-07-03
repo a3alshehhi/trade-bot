@@ -1,1 +1,66 @@
-{}
+{
+  "BNTUSDT": {
+    "symbol": "BNTUSDT",
+    "tf": "1h",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "entry": 0.2662,
+    "init_stop": 0.2638704,
+    "stop": 0.2638704,
+    "R": 0.0023295999999999872,
+    "tp1": 0.2685296,
+    "tp2": 0.2708592,
+    "qty": 373.9257,
+    "qty_open": 373.9257,
+    "tp1_done": false,
+    "opened_ts": "2026-07-03T16:47:48"
+  },
+  "BICOUSDT": {
+    "symbol": "BICOUSDT",
+    "tf": "15m",
+    "label": "RSI60 · 15m",
+    "prob": null,
+    "entry": 0.01581,
+    "init_stop": 0.01514393,
+    "stop": 0.01514393,
+    "R": 0.0006660700000000012,
+    "tp1": 0.0161228,
+    "tp2": 0.0165207,
+    "qty": 6363.05058,
+    "qty_open": 6363.05058,
+    "tp1_done": false,
+    "opened_ts": "2026-07-03T16:47:59"
+  },
+  "DGBUSDT": {
+    "symbol": "DGBUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "entry": 0.00245,
+    "init_stop": 0.00243842,
+    "stop": 0.00243842,
+    "R": 1.157999999999975e-05,
+    "tp1": 0.00246158,
+    "tp2": 0.00247316,
+    "qty": 40653.2061,
+    "qty_open": 40653.2061,
+    "tp1_done": false,
+    "opened_ts": "2026-07-03T16:48:11"
+  },
+  "VANRYUSDT": {
+    "symbol": "VANRYUSDT",
+    "tf": "1h",
+    "label": "RSI50 · 1h",
+    "prob": null,
+    "entry": 0.003069,
+    "init_stop": 0.00284338,
+    "stop": 0.00284338,
+    "R": 0.00022562000000000016,
+    "tp1": 0.00316937,
+    "tp2": 0.00329704,
+    "qty": 32308.659,
+    "qty_open": 32308.659,
+    "tp1_done": false,
+    "opened_ts": "2026-07-03T16:48:26"
+  }
+}
