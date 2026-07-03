@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-03T00:33:43",
+  "updated_at": "2026-07-03T00:48:36",
   "stats": {
-    "open": 31,
-    "closed": 776,
-    "win_rate": 53.1,
+    "open": 32,
+    "closed": 778,
+    "win_rate": 53.0,
     "profit_factor": 1.39,
-    "total_pct": 2124.26,
+    "total_pct": 2111.82,
     "avg_pct": 0.54,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-03",
-        "trades": 1,
-        "win_rate": 100.0,
-        "return_pct": 0.22,
+        "trades": 3,
+        "win_rate": 33.3,
+        "return_pct": -0.34,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 284,
-        "win_rate": 57.7,
-        "return_pct": 80.07,
+        "trades": 286,
+        "win_rate": 57.3,
+        "return_pct": 79.06,
         "month": "2026-07"
       },
       {
@@ -142,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 117,
-        "win_rate": 70.9,
-        "return_pct": 51.04
+        "trades": 119,
+        "win_rate": 69.7,
+        "return_pct": 50.19
       },
       {
         "key": "2026-06",
@@ -13257,10 +13257,11 @@
       "entry": 0.318,
       "stop": 0.316862,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-02T23:03:26",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-03T00:48:28",
+      "realized_pct": -0.36,
+      "result_pct": -0.36
     },
     {
       "id": "العرض/الطلب|ARPAUSDT|2026-07-02 23:00:00",
@@ -13305,6 +13306,49 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-03T00:08:31",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|API3USDT|2026-07-03 00:30:00",
+      "symbol": "API3USDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2242,
+      "stop": 0.2233052,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T00:37:44",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|BMTUSDT|2026-07-03 00:30:00",
+      "symbol": "BMTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01212,
+      "stop": 0.01209544,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-03T00:37:44",
+      "closed_at": "2026-07-03T00:48:34",
+      "realized_pct": -0.2,
+      "result_pct": -0.2
+    },
+    {
+      "id": "RSI70 · 15m|CHZUSDT|2026-07-03 00:44:59.999000",
+      "symbol": "CHZUSDT",
+      "label": "RSI70 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01837,
+      "stop": 0.01798471,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T00:46:06",
       "closed_at": null,
       "realized_pct": 0.0
     }

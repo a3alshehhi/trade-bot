@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-03 00:29:59.999000"
+    "last_bar": "2026-07-03 00:44:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -25683,12 +25683,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 23:00:00",
-    "last_bar": "2026-07-03 00:29:59.999000",
+    "last_bar": "2026-07-03 00:44:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.319,
-    "lo_seen": 0.317,
-    "created": "2026-07-02T23:03:26"
+    "lo_seen": 0.316,
+    "created": "2026-07-02T23:03:26",
+    "exit_price": 0.316862,
+    "close_card_sent": true,
+    "closed_at": "2026-07-03T00:48:28"
   },
   "العرض/الطلب|ARPAUSDT|2026-07-02 23:00:00": {
     "symbol": "ARPAUSDT",
@@ -25713,7 +25716,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 23:00:00",
-    "last_bar": "2026-07-03 00:29:59.999000",
+    "last_bar": "2026-07-03 00:44:59.999000",
     "hits": [
       1
     ],
@@ -25745,7 +25748,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 00:00:00",
-    "last_bar": "2026-07-03 00:29:59.999000",
+    "last_bar": "2026-07-03 00:44:59.999000",
     "hits": [
       1
     ],
@@ -25777,11 +25780,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 00:00:00",
-    "last_bar": "2026-07-03 00:29:59.999000",
+    "last_bar": "2026-07-03 00:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.06653,
-    "lo_seen": 0.06629,
+    "lo_seen": 0.06622,
     "created": "2026-07-03T00:08:31"
   },
   "العرض/الطلب|API3USDT|2026-07-03 00:30:00": {
@@ -25807,11 +25810,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 00:30:00",
-    "last_bar": "2026-07-03 00:30:00",
+    "last_bar": "2026-07-03 00:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.2242,
-    "lo_seen": 0.2242,
+    "hi_seen": 0.2247,
+    "lo_seen": 0.2241,
     "created": "2026-07-03T00:37:44"
   },
   "العرض/الطلب|BMTUSDT|2026-07-03 00:30:00": {
@@ -25837,11 +25840,46 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 00:30:00",
-    "last_bar": "2026-07-03 00:30:00",
+    "last_bar": "2026-07-03 00:44:59.999000",
+    "hits": [],
+    "stopped": true,
+    "hi_seen": 0.01213,
+    "lo_seen": 0.01209,
+    "created": "2026-07-03T00:37:44",
+    "exit_price": 0.01209544,
+    "close_card_sent": true,
+    "closed_at": "2026-07-03T00:48:34"
+  },
+  "RSI70 · 15m|CHZUSDT|2026-07-03 00:44:59.999000": {
+    "symbol": "CHZUSDT",
+    "label": "RSI70 · 15m",
+    "timeframe": "15m",
+    "message_id": 4063,
+    "entry": 0.01837,
+    "stop": 0.01798471,
+    "init_stop": 0.01798471,
+    "cur_stop": 0.01798471,
+    "last_alert_stop": 0.01798471,
+    "armed": false,
+    "targets": [
+      0.01855224,
+      0.01878406,
+      0.01945406
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 00:44:59.999000",
+    "last_bar": "2026-07-03 00:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.01212,
-    "lo_seen": 0.01212,
-    "created": "2026-07-03T00:37:44"
+    "hi_seen": 0.01837,
+    "lo_seen": 0.01837,
+    "created": "2026-07-03T00:46:06"
   }
 }
