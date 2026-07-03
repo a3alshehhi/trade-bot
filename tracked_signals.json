@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-03 00:59:59.999000"
+    "last_bar": "2026-07-03 01:14:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -25719,14 +25719,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-02 23:00:00",
-    "last_bar": "2026-07-03 00:59:59.999000",
+    "last_bar": "2026-07-03 01:14:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.00799,
+    "stopped": true,
+    "hi_seen": 0.008,
     "lo_seen": 0.00794,
-    "created": "2026-07-02T23:03:26"
+    "created": "2026-07-02T23:03:26",
+    "exit_price": 0.00799512,
+    "close_card_sent": true,
+    "closed_at": "2026-07-03T01:18:12"
   },
   "العرض/الطلب|ARKMUSDT|2026-07-03 00:00:00": {
     "symbol": "ARKMUSDT",
@@ -25820,10 +25824,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 00:30:00",
-    "last_bar": "2026-07-03 00:59:59.999000",
+    "last_bar": "2026-07-03 01:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.2247,
+    "hi_seen": 0.225,
     "lo_seen": 0.2234,
     "created": "2026-07-03T00:37:44"
   },
@@ -25868,8 +25872,8 @@
     "entry": 0.01837,
     "stop": 0.01798471,
     "init_stop": 0.01798471,
-    "cur_stop": 0.01798471,
-    "last_alert_stop": 0.01798471,
+    "cur_stop": 0.01837,
+    "last_alert_stop": 0.01837,
     "armed": false,
     "targets": [
       0.01855224,
@@ -25885,10 +25889,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 00:44:59.999000",
-    "last_bar": "2026-07-03 00:59:59.999000",
-    "hits": [],
+    "last_bar": "2026-07-03 01:14:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.01842,
+    "hi_seen": 0.01856,
     "lo_seen": 0.01834,
     "created": "2026-07-03T00:46:06"
   }
