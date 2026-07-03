@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-03T10:32:46",
+  "updated_at": "2026-07-03T10:48:11",
   "stats": {
-    "open": 34,
-    "closed": 798,
+    "open": 33,
+    "closed": 799,
     "win_rate": 53.4,
-    "profit_factor": 1.39,
-    "total_pct": 2226.76,
+    "profit_factor": 1.4,
+    "total_pct": 2252.82,
     "avg_pct": 0.53,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-03",
-        "trades": 23,
-        "win_rate": 65.2,
-        "return_pct": 4.84,
+        "trades": 24,
+        "win_rate": 66.7,
+        "return_pct": 6.01,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 306,
-        "win_rate": 58.2,
-        "return_pct": 88.37,
+        "trades": 307,
+        "win_rate": 58.3,
+        "return_pct": 90.48,
         "month": "2026-07"
       },
       {
@@ -142,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 139,
-        "win_rate": 69.8,
-        "return_pct": 58.0
+        "trades": 140,
+        "win_rate": 70.0,
+        "return_pct": 59.77
       },
       {
         "key": "2026-06",
@@ -13511,12 +13511,14 @@
       "entry": 0.0427,
       "stop": 0.042381,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T02:34:33",
-      "closed_at": null,
-      "realized_pct": 0.37
+      "closed_at": "2026-07-03T10:48:04",
+      "realized_pct": 1.12,
+      "result_pct": 1.12
     },
     {
       "id": "العرض/الطلب|BCHUSDT|2026-07-03 02:45:00",
@@ -13713,11 +13715,13 @@
       "timeframe": "15m",
       "entry": 6.858,
       "stop": 6.830488,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-03T10:19:25",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.2
     }
   ]
 }

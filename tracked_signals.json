@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-03 09:59:59.999000"
+    "last_bar": "2026-07-03 10:44:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -25902,7 +25902,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 00:44:59.999000",
-    "last_bar": "2026-07-03 09:59:59.999000",
+    "last_bar": "2026-07-03 10:44:59.999000",
     "hits": [
       1
     ],
@@ -26213,14 +26213,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 02:30:00",
-    "last_bar": "2026-07-03 09:59:59.999000",
+    "last_bar": "2026-07-03 10:44:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.0433,
+    "stopped": true,
+    "hi_seen": 0.0434,
     "lo_seen": 0.0426,
-    "created": "2026-07-03T02:34:33"
+    "created": "2026-07-03T02:34:33",
+    "exit_price": 0.043338,
+    "close_card_sent": true,
+    "closed_at": "2026-07-03T10:48:04"
   },
   "العرض/الطلب|BCHUSDT|2026-07-03 02:45:00": {
     "symbol": "BCHUSDT",
@@ -26627,8 +26631,8 @@
     "entry": 6.858,
     "stop": 6.830488,
     "init_stop": 6.830488,
-    "cur_stop": 6.830488,
-    "last_alert_stop": 6.830488,
+    "cur_stop": 6.858,
+    "last_alert_stop": 6.858,
     "armed": false,
     "targets": [
       6.885512,
@@ -26642,11 +26646,13 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 10:15:00",
-    "last_bar": "2026-07-03 10:15:00",
-    "hits": [],
+    "last_bar": "2026-07-03 10:44:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 6.858,
-    "lo_seen": 6.858,
+    "hi_seen": 6.908,
+    "lo_seen": 6.848,
     "created": "2026-07-03T10:19:25"
   }
 }
