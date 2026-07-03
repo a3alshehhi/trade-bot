@@ -47,22 +47,6 @@
     "tp1_done": false,
     "opened_ts": "2026-07-03T02:47:44"
   },
-  "ALTUSDT": {
-    "symbol": "ALTUSDT",
-    "tf": "15m",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "entry": 0.00604,
-    "init_stop": 0.00600758,
-    "stop": 0.00606858,
-    "R": 3.242000000000002e-05,
-    "tp1": 0.00607242,
-    "tp2": 0.00610484,
-    "qty": 16230.70674248,
-    "qty_open": 8115.4067424800005,
-    "tp1_done": true,
-    "opened_ts": "2026-07-03T03:03:05"
-  },
   "0GUSDT": {
     "symbol": "0GUSDT",
     "tf": "1h",
@@ -78,5 +62,21 @@
     "qty_open": 445.78313253,
     "tp1_done": false,
     "opened_ts": "2026-07-03T03:18:41"
+  },
+  "AVAXUSDT": {
+    "symbol": "AVAXUSDT",
+    "tf": "1h",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "entry": 6.823,
+    "init_stop": 6.755962,
+    "stop": 6.755962,
+    "R": 0.06703800000000015,
+    "tp1": 6.890038,
+    "tp2": 6.957076,
+    "qty": 14.63950762,
+    "qty_open": 14.63950762,
+    "tp1_done": false,
+    "opened_ts": "2026-07-03T04:47:46"
   }
 }
