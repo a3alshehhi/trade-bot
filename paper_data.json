@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-03T21:48:07",
+  "updated_at": "2026-07-03T22:03:05",
   "stats": {
-    "open": 35,
-    "closed": 830,
-    "win_rate": 54.2,
-    "profit_factor": 1.44,
-    "total_pct": 3723.36,
-    "avg_pct": 0.57,
+    "open": 33,
+    "closed": 833,
+    "win_rate": 54.4,
+    "profit_factor": 1.45,
+    "total_pct": 3973.69,
+    "avg_pct": 0.58,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-03",
-        "trades": 55,
-        "win_rate": 70.9,
-        "return_pct": 72.27,
+        "trades": 58,
+        "win_rate": 72.4,
+        "return_pct": 83.55,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 338,
-        "win_rate": 59.8,
-        "return_pct": 209.53,
+        "trades": 341,
+        "win_rate": 60.1,
+        "return_pct": 229.79,
         "month": "2026-07"
       },
       {
@@ -142,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 171,
-        "win_rate": 70.8,
-        "return_pct": 159.63
+        "trades": 174,
+        "win_rate": 71.3,
+        "return_pct": 176.63
       },
       {
         "key": "2026-06",
@@ -13662,12 +13662,14 @@
       "entry": 0.1102,
       "stop": 0.108583,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T06:20:56",
-      "closed_at": null,
-      "realized_pct": 0.73
+      "closed_at": "2026-07-03T22:02:55",
+      "realized_pct": 2.2,
+      "result_pct": 2.2
     },
     {
       "id": "RSI70 · 1h|MANAUSDT|2026-07-03 06:59:59.999000",
@@ -14258,12 +14260,14 @@
       "entry": 0.01,
       "stop": 0.00913493,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T21:32:04",
-      "closed_at": null,
-      "realized_pct": 1.09
+      "closed_at": "2026-07-03T22:03:02",
+      "realized_pct": 3.56,
+      "result_pct": 3.56
     },
     {
       "id": "RSI60 · 15m|PSGUSDT|2026-07-03 21:44:59.999000",
@@ -14273,9 +14277,27 @@
       "timeframe": "15m",
       "entry": 0.533,
       "stop": 0.5254066,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-03T21:45:59",
+      "closed_at": "2026-07-03T22:03:04",
+      "realized_pct": 0.67,
+      "result_pct": 0.67
+    },
+    {
+      "id": "trendwave · 15m|COOKIEUSDT|2026-07-03 21:59:59.999000",
+      "symbol": "COOKIEUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01,
+      "stop": 0.00911966,
       "hits": [],
       "status": "open",
-      "opened_at": "2026-07-03T21:45:59",
+      "opened_at": "2026-07-03T22:02:13",
       "closed_at": null,
       "realized_pct": 0.0
     }
