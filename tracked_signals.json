@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-03 01:59:59.999000"
+    "last_bar": "2026-07-03 02:14:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -25895,7 +25895,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 00:44:59.999000",
-    "last_bar": "2026-07-03 01:59:59.999000",
+    "last_bar": "2026-07-03 02:14:59.999000",
     "hits": [
       1
     ],
@@ -25927,7 +25927,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 01:15:00",
-    "last_bar": "2026-07-03 01:59:59.999000",
+    "last_bar": "2026-07-03 02:14:59.999000",
     "hits": [
       1
     ],
@@ -25959,7 +25959,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 01:15:00",
-    "last_bar": "2026-07-03 01:59:59.999000",
+    "last_bar": "2026-07-03 02:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00359,
@@ -25989,11 +25989,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 01:15:00",
-    "last_bar": "2026-07-03 01:59:59.999000",
+    "last_bar": "2026-07-03 02:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1524,
-    "lo_seen": 0.1519,
+    "lo_seen": 0.1515,
     "created": "2026-07-03T01:18:27"
   },
   "العرض/الطلب|BNTUSDT|2026-07-03 01:30:00": {
@@ -26019,14 +26019,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 01:30:00",
-    "last_bar": "2026-07-03 01:59:59.999000",
+    "last_bar": "2026-07-03 02:14:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.2649,
     "lo_seen": 0.2634,
-    "created": "2026-07-03T01:34:36"
+    "created": "2026-07-03T01:34:36",
+    "exit_price": 0.264,
+    "close_card_sent": true,
+    "closed_at": "2026-07-03T02:18:04"
   },
   "العرض/الطلب|CGPTUSDT|2026-07-03 01:45:00": {
     "symbol": "CGPTUSDT",
@@ -26036,7 +26039,7 @@
     "entry": 0.01888,
     "stop": 0.01883196,
     "init_stop": 0.01883196,
-    "cur_stop": 0.01883196,
+    "cur_stop": 0.01888,
     "last_alert_stop": 0.01883196,
     "armed": false,
     "targets": [
@@ -26051,12 +26054,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 01:45:00",
-    "last_bar": "2026-07-03 01:59:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.01891,
-    "lo_seen": 0.01888,
-    "created": "2026-07-03T01:49:26"
+    "last_bar": "2026-07-03 02:14:59.999000",
+    "hits": [
+      1,
+      2
+    ],
+    "stopped": true,
+    "hi_seen": 0.01913,
+    "lo_seen": 0.01886,
+    "created": "2026-07-03T01:49:26",
+    "exit_price": 0.01897608,
+    "close_card_sent": true,
+    "closed_at": "2026-07-03T02:18:08"
   },
   "العرض/الطلب|CHZUSDT|2026-07-03 01:45:00": {
     "symbol": "CHZUSDT",

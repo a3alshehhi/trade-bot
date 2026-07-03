@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-03T02:03:27",
+  "updated_at": "2026-07-03T02:18:09",
   "stats": {
-    "open": 33,
-    "closed": 784,
-    "win_rate": 53.1,
+    "open": 31,
+    "closed": 786,
+    "win_rate": 53.2,
     "profit_factor": 1.39,
-    "total_pct": 2158.33,
-    "avg_pct": 0.54,
+    "total_pct": 2170.54,
+    "avg_pct": 0.53,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-03",
-        "trades": 9,
-        "win_rate": 55.6,
-        "return_pct": 1.76,
+        "trades": 11,
+        "win_rate": 63.6,
+        "return_pct": 2.31,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 292,
-        "win_rate": 57.5,
-        "return_pct": 82.83,
+        "trades": 294,
+        "win_rate": 57.8,
+        "return_pct": 83.82,
         "month": "2026-07"
       },
       {
@@ -142,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 125,
-        "win_rate": 69.6,
-        "return_pct": 53.35
+        "trades": 127,
+        "win_rate": 70.1,
+        "return_pct": 54.18
       },
       {
         "key": "2026-06",
@@ -13419,10 +13419,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T01:34:36",
-      "closed_at": null,
-      "realized_pct": 0.16
+      "closed_at": "2026-07-03T02:18:04",
+      "realized_pct": 0.16,
+      "result_pct": 0.16
     },
     {
       "id": "العرض/الطلب|CGPTUSDT|2026-07-03 01:45:00",
@@ -13432,11 +13433,15 @@
       "timeframe": "15m",
       "entry": 0.01888,
       "stop": 0.01883196,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-07-03T01:49:26",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-03T02:18:08",
+      "realized_pct": 0.38,
+      "result_pct": 0.38
     },
     {
       "id": "العرض/الطلب|CHZUSDT|2026-07-03 01:45:00",
