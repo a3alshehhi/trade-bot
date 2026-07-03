@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-03T01:48:15",
+  "updated_at": "2026-07-03T02:03:27",
   "stats": {
-    "open": 31,
-    "closed": 783,
+    "open": 33,
+    "closed": 784,
     "win_rate": 53.1,
     "profit_factor": 1.39,
-    "total_pct": 2176.77,
+    "total_pct": 2158.33,
     "avg_pct": 0.54,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-03",
-        "trades": 8,
-        "win_rate": 62.5,
-        "return_pct": 2.59,
+        "trades": 9,
+        "win_rate": 55.6,
+        "return_pct": 1.76,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 291,
-        "win_rate": 57.7,
-        "return_pct": 84.32,
+        "trades": 292,
+        "win_rate": 57.5,
+        "return_pct": 82.83,
         "month": "2026-07"
       },
       {
@@ -142,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 124,
-        "win_rate": 70.2,
-        "return_pct": 54.6
+        "trades": 125,
+        "win_rate": 69.6,
+        "return_pct": 53.35
       },
       {
         "key": "2026-06",
@@ -13423,6 +13423,49 @@
       "opened_at": "2026-07-03T01:34:36",
       "closed_at": null,
       "realized_pct": 0.16
+    },
+    {
+      "id": "العرض/الطلب|CGPTUSDT|2026-07-03 01:45:00",
+      "symbol": "CGPTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01888,
+      "stop": 0.01883196,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T01:49:26",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|CHZUSDT|2026-07-03 01:45:00",
+      "symbol": "CHZUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01856,
+      "stop": 0.01841048,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-03T01:49:26",
+      "closed_at": "2026-07-03T02:03:26",
+      "realized_pct": -0.81,
+      "result_pct": -0.81
+    },
+    {
+      "id": "RSI70 · 1h|LAUSDT|2026-07-03 01:59:59.999000",
+      "symbol": "LAUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0668,
+      "stop": 0.06337908,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T02:01:41",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
