@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-03T04:47:38",
+  "updated_at": "2026-07-03T05:02:52",
   "stats": {
-    "open": 31,
-    "closed": 794,
-    "win_rate": 53.4,
+    "open": 30,
+    "closed": 795,
+    "win_rate": 53.5,
     "profit_factor": 1.4,
-    "total_pct": 2287.23,
+    "total_pct": 2320.89,
     "avg_pct": 0.54,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-03",
-        "trades": 19,
-        "win_rate": 68.4,
-        "return_pct": 7.56,
+        "trades": 20,
+        "win_rate": 70.0,
+        "return_pct": 9.08,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 302,
-        "win_rate": 58.3,
-        "return_pct": 93.26,
+        "trades": 303,
+        "win_rate": 58.4,
+        "return_pct": 95.99,
         "month": "2026-07"
       },
       {
@@ -142,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 135,
-        "win_rate": 70.4,
-        "return_pct": 62.11
+        "trades": 136,
+        "win_rate": 70.6,
+        "return_pct": 64.39
       },
       {
         "key": "2026-06",
@@ -12287,10 +12287,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T22:01:38",
-      "closed_at": null,
-      "realized_pct": 1.41
+      "closed_at": "2026-07-03T05:02:45",
+      "realized_pct": 1.41,
+      "result_pct": 1.41
     },
     {
       "id": "RSI70 · 1h|CRVUSDT|2026-07-01 21:59:59.999000",
