@@ -27070,5 +27070,35 @@
     "exit_price": 0.2675382,
     "close_card_sent": true,
     "closed_at": "2026-07-03T13:03:50"
+  },
+  "العرض/الطلب|BANDUSDT|2026-07-03 13:30:00": {
+    "symbol": "BANDUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4252,
+    "entry": 0.1542,
+    "stop": 0.1536538,
+    "init_stop": 0.1536538,
+    "cur_stop": 0.1536538,
+    "last_alert_stop": 0.1536538,
+    "armed": false,
+    "targets": [
+      0.1547462,
+      0.1552924
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 13:30:00",
+    "last_bar": "2026-07-03 13:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1542,
+    "lo_seen": 0.1542,
+    "created": "2026-07-03T13:34:04"
   }
 }
