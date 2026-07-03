@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-03T12:04:03",
+  "updated_at": "2026-07-03T12:18:36",
   "stats": {
-    "open": 37,
-    "closed": 803,
-    "win_rate": 53.5,
+    "open": 36,
+    "closed": 804,
+    "win_rate": 53.6,
     "profit_factor": 1.42,
-    "total_pct": 3002.89,
+    "total_pct": 3021.51,
     "avg_pct": 0.56,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-03",
-        "trades": 28,
-        "win_rate": 67.9,
-        "return_pct": 39.81,
+        "trades": 29,
+        "win_rate": 69.0,
+        "return_pct": 40.65,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 311,
-        "win_rate": 58.5,
-        "return_pct": 151.2,
+        "trades": 312,
+        "win_rate": 58.7,
+        "return_pct": 152.71,
         "month": "2026-07"
       },
       {
@@ -142,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 144,
-        "win_rate": 70.1,
-        "return_pct": 110.7
+        "trades": 145,
+        "win_rate": 70.3,
+        "return_pct": 111.97
       },
       {
         "key": "2026-06",
@@ -13724,12 +13724,14 @@
       "entry": 6.858,
       "stop": 6.830488,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T10:19:25",
-      "closed_at": null,
-      "realized_pct": 0.2
+      "closed_at": "2026-07-03T12:18:31",
+      "realized_pct": 0.6,
+      "result_pct": 0.6
     },
     {
       "id": "العرض/الطلب|ARBUSDT|2026-07-03 10:45:00",
