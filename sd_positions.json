@@ -119,45 +119,6 @@
     "armed": true,
     "opened_ts": "2026-07-03T18:03:31"
   },
-  "COOKIEUSDT": {
-    "symbol": "COOKIEUSDT",
-    "tf": "15m",
-    "label": "RSI60 · 15m",
-    "prob": null,
-    "levels": [
-      0.009509,
-      0.00945,
-      0.009391,
-      0.009307
-    ],
-    "filled": [
-      true,
-      false,
-      false,
-      false
-    ],
-    "leg_usd": 75.0,
-    "n_legs": 4,
-    "fills": [
-      {
-        "price": 0.00967767767767992,
-        "qty": 7749.79313198,
-        "usd": 75.0
-      }
-    ],
-    "avg_entry": 0.00967767767767992,
-    "entry": 0.00967767767767992,
-    "init_stop": 0.00924514,
-    "stop": 0.00967767767767992,
-    "R": 0.0004325376776799193,
-    "tp1": 0.009836,
-    "tp2": 0.010009,
-    "qty": 7749.79313198,
-    "qty_open": 3874.90313198,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-03T20:18:37"
-  },
   "SCUSDT": {
     "symbol": "SCUSDT",
     "tf": "15m",

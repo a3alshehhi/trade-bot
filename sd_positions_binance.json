@@ -279,5 +279,38 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-03T21:05:14"
+  },
+  "CHRUSDT": {
+    "symbol": "CHRUSDT",
+    "tf": "1h",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.01603
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.016016016016016016,
+        "qty": 6243.75,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.016016016016016016,
+    "entry": 0.016016016016016016,
+    "init_stop": 0.01559274,
+    "stop": 0.01559274,
+    "R": 0.0004232760160160151,
+    "tp1": 0.01646726,
+    "tp2": 0.01690452,
+    "qty": 6243.75,
+    "qty_open": 6243.75,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-03T21:33:41"
   }
 }

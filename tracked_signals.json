@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-03 21:14:59.999000"
+    "last_bar": "2026-07-03 21:29:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -27241,7 +27241,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 15:14:59.999000",
-    "last_bar": "2026-07-03 21:14:59.999000",
+    "last_bar": "2026-07-03 21:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.016,
@@ -27606,14 +27606,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 20:14:59.999000",
-    "last_bar": "2026-07-03 21:14:59.999000",
+    "last_bar": "2026-07-03 21:29:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.0099,
+    "stopped": true,
+    "hi_seen": 0.0101,
     "lo_seen": 0.0096,
-    "created": "2026-07-03T20:16:04"
+    "created": "2026-07-03T20:16:04",
+    "exit_price": 0.010009,
+    "close_card_sent": true,
+    "closed_at": "2026-07-03T21:32:50"
   },
   "RSI60 · 15m|SCUSDT|2026-07-03 20:59:59.999000": {
     "symbol": "SCUSDT",
@@ -27646,7 +27650,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 20:59:59.999000",
-    "last_bar": "2026-07-03 21:14:59.999000",
+    "last_bar": "2026-07-03 21:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00064,
@@ -27796,5 +27800,39 @@
     "hi_seen": 0.01603,
     "lo_seen": 0.01603,
     "created": "2026-07-03T21:23:43"
+  },
+  "trendwave · 15m|COOKIEUSDT|2026-07-03 21:29:59.999000": {
+    "symbol": "COOKIEUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.01,
+    "dca_levels": [
+      0.0096944,
+      0.0096,
+      0.0095056,
+      0.0093712
+    ],
+    "stop": 0.00913493,
+    "init_stop": 0.00913493,
+    "cur_stop": 0.00913493,
+    "last_alert_stop": 0.00913493,
+    "armed": false,
+    "targets": [
+      0.0102176,
+      0.0104944,
+      0.0112944
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 21:29:59.999000",
+    "last_bar": "2026-07-03 21:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01,
+    "lo_seen": 0.01,
+    "created": "2026-07-03T21:32:04"
   }
 }
