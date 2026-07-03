@@ -33,7 +33,7 @@ import bybit_exec as bx
 
 # ── إعدادات ──────────────────────────────────────────────────────────────────
 RISK_PCT = float(os.environ.get("SD_RISK_PCT", "0.005"))     # 0.5% لكل صفقة (غير مستخدم عند تثبيت القيمة)
-ORDER_USD = float(os.environ.get("SD_ORDER_USD", "100"))     # قيمة ثابتة لكل أمر شراء (USDT)
+ORDER_USD = float(os.environ.get("SD_ORDER_USD", "300"))     # قيمة ثابتة لكل أمر شراء (USDT)
 MAX_CONCURRENT = int(os.environ.get("SD_MAX_POS", "5"))       # حد المراكز المتزامنة
 FEE_RATE = 0.001                                              # عمولة تقديرية للطرف الواحد
 POS_PATH = os.environ.get("SD_POS", "sd_positions.json")
