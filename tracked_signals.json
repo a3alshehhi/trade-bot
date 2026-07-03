@@ -26483,5 +26483,37 @@
     "hi_seen": 0.1102,
     "lo_seen": 0.1102,
     "created": "2026-07-03T06:20:56"
+  },
+  "RSI70 · 1h|MANAUSDT|2026-07-03 06:59:59.999000": {
+    "symbol": "MANAUSDT",
+    "label": "RSI70 · 1h",
+    "timeframe": "1h",
+    "message_id": 4162,
+    "entry": 0.0688,
+    "stop": 0.06538923,
+    "init_stop": 0.06538923,
+    "cur_stop": 0.06538923,
+    "last_alert_stop": 0.06538923,
+    "armed": false,
+    "targets": [
+      0.0703232,
+      0.0722608,
+      0.0778608
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 06:59:59.999000",
+    "last_bar": "2026-07-03 06:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0688,
+    "lo_seen": 0.0688,
+    "created": "2026-07-03T07:01:43"
   }
 }
