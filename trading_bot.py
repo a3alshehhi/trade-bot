@@ -940,6 +940,14 @@ def send_telegram(token, chat_id, text, reply_markup=None, reply_to=None):
     يرجع message_id لأول مقطع عند النجاح، أو None عند الفشل."""
     if not token or not chat_id:
         return None
+    # ── كتم مؤقت لرسائل الإشارات/المتابعة (2026-07-03، بطلب بو محمد) ──────────
+    # نوقف كل رسائل trading_bot (بطاقات الإشارة/الانعكاس/المتابعة/الملخّص) مؤقتاً.
+    # تبقى فقط رسائل صفقات بايبت/بايننس ومتابعتها — تُرسَل عبر sd_bot.send_telegram
+    # (دالة منفصلة غير متأثرة). نُرجع معرّفاً وهمياً (‎-1‎) بدل None حتى يستمر
+    # track_signal في ملء tracked_signals.json (مصدر تنفيذ الصفقات) دون إرسال فعلي.
+    # لإعادة تفعيل رسائل الإشارات لاحقاً: اضبط TG_MUTE_SIGNALS=0.
+    if os.environ.get("TG_MUTE_SIGNALS", "1") == "1":
+        return -1
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     msg_id = None
     chunks = [text[i:i + 3500] for i in range(0, len(text), 3500)] or [text]
@@ -3074,8 +3082,8 @@ def detect_rsi_cross_signal(df, cfg):
     if imp > 0:
         # الأهداف بامتدادات فيبوناتشي على الموجة (القاع + نسبة × المدى)
         targets = [round(lo_win + ext * imp, 8) for ext in (1.272, 1.618, 2.618)]
-        # مستويات دخول فيبوناتشي على ارتدادات نفس الموجة
-        fib_e = [round(entry - rr * imp, 8) for rr in (0.236, 0.382, 0.5)]
+        # مستويات دخول فيبوناتشي (سلّم DCA رباعي) على ارتدادات نفس الموجة
+        fib_e = [round(entry - rr * imp, 8) for rr in (0.382, 0.5, 0.618, 0.786)]
     else:
         # احتياط (موجة غير صالحة): أهداف بمضاعفات المخاطرة
         risk = entry - stop
@@ -3317,11 +3325,12 @@ def detect_trendwave_signal(df, cfg):
     # ─── الدخول: فوري عند إغلاق CHoCH (مثل RSI70) ───
     entry = hh
 
-    # ─── سلّم DCA: ارتدادات فيبو من الدخول نحو HL (0.236 / 0.382 / 0.5) ───
+    # ─── سلّم DCA رباعي: ارتدادات فيبو من الدخول نحو HL (0.382/0.5/0.618/0.786) ───
     fib_e = sorted([
-        round(entry - 0.236 * imp, 8),
         round(entry - 0.382 * imp, 8),
         round(entry - 0.500 * imp, 8),
+        round(entry - 0.618 * imp, 8),
+        round(entry - 0.786 * imp, 8),
     ], reverse=True)                            # تنازلي: الأعلى يُملأ أولاً
 
     stop = round(hl - 0.5 * atrv, 8)
@@ -3395,6 +3404,10 @@ def track_signal(sig, label, cfg, message_id, path=TRACK_FILE):
         "timeframe": cfg.get("timeframe"),
         "message_id": message_id,
         "entry": sig["entry"],
+        # سلّم دخول DCA بفيبوناتشي (تنازلي: الأعلى أولاً) — يقرؤه المنفّذ sd_autotrade
+        # لتنفيذ الدخول التدريجي. فارغ = دخول مفرد (سلوك قديم).
+        "dca_levels": sorted(sig.get("dca") or sig.get("fib_entries") or [],
+                             reverse=True),
         "stop": sig["stop"],            # الوقف الابتدائي (يبقى ثابتاً للمرجع)
         "init_stop": sig["stop"],
         "cur_stop": sig["stop"],        # الوقف الجاري (يرتفع مع التتبّع)

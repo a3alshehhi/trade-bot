@@ -159,37 +159,23 @@ def _now():
     return dt.datetime.now().isoformat(timespec="seconds")
 
 
-# ── فتح مركز واحد (منطق مشترك للتنفيذ المباشر والمبني على المتتبّع) ───────────
-def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equity):
-    """يحسب الحجم بالمخاطرة، يشتري سوقاً، ويسجّل المركز. يرجع True عند النجاح."""
-    R = entry - stop
-    if R <= 0 or tp1 <= entry:                     # long فقط: وقف تحت الدخول وهدف فوقه
-        return False
-    stop_pct = R / entry
-    notional = ORDER_USD                            # قيمة ثابتة لكل أمر شراء (USDT)
-
-    filt = bx.instrument_filters(sym)
-    if not filt:                                    # الزوج غير مُدرَج للتداول (Spot/Demo)
-        print(f"autotrade[{EX_NAME}]: {sym} غير متاح للتداول على المنصّة — تخطّي")
-        return False
+# ── شراء ساق سوق واحدة بقيمة USDT (منطق مشترك: تقييد الرصيد وحدود الزوج) ───────
+def _buy_leg(sym, filt, usd):
+    """يشتري ساقاً سوقيّة بقيمة usd (مقيَّدة بالرصيد وحدود الزوج).
+    يرجع (qty, notional, fill_price) أو (0,0,0) عند التعذّر/التخطّي."""
     min_amt = float(filt.get("minOrderAmt") or 5)
     avail = bx.wallet_balance()["coins"].get("USDT", {}).get("amount", 0.0)
-    notional = min(notional, avail * 0.98)
-
-    # سقف كمية أمر السوق (يمنع خطأ التجاوز): إن كانت القيمة تُنتج كمية أساس
-    # تتجاوز الحد الأقصى، نخفّض القيمة لتبقى تحت السقف.
-    px = bx.last_price(sym) or entry
+    notional = min(usd, avail * 0.98)
+    px = bx.last_price(sym) or 0.0
     max_mkt_qty = float(filt.get("maxMktOrderQty") or 0)
     max_amt = float(filt.get("maxOrderAmt") or 0)
     if max_mkt_qty > 0 and px > 0:
         notional = min(notional, max_mkt_qty * px * 0.98)
     if max_amt > 0:
         notional = min(notional, max_amt * 0.98)
-
     if notional < min_amt:
-        print(f"autotrade[{EX_NAME}]: {sym} حجم {notional:.2f} < الحد الأدنى {min_amt} — تخطّي")
-        return False
-
+        print(f"autotrade[{EX_NAME}]: {sym} حجم ساق {notional:.2f} < الحد الأدنى {min_amt} — تخطّي")
+        return 0.0, 0.0, 0.0
     base = sym.replace("USDT", "")
     try:
         before = bx.coin_qty(base)
@@ -197,29 +183,103 @@ def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equit
         after = bx.coin_qty(base)
     except Exception as ex:
         print(f"autotrade[{EX_NAME}]: فشل شراء {sym} —", ex)
-        return False
+        return 0.0, 0.0, 0.0
     qty = max(after - before, 0.0)
     if qty <= 0:
         print(f"autotrade[{EX_NAME}]: {sym} لم تُرصد كمية بعد الشراء — تخطّي")
+        return 0.0, 0.0, 0.0
+    return qty, notional, (notional / qty)
+
+
+def _recompute_avg(pos):
+    """يحدّث متوسط الدخول والمخاطرة R من السيقان المملوءة."""
+    cost = sum(f["usd"] for f in pos["fills"])
+    qty = sum(f["qty"] for f in pos["fills"])
+    if qty > 0:
+        pos["avg_entry"] = cost / qty
+    pos["R"] = max(pos["avg_entry"] - pos["init_stop"], 1e-12)
+
+
+# ── فتح مركز DCA (ساق أولى فوريّة الآن + سلّم فيبو ينتظر الارتدادات) ───────────
+def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equity,
+                   levels=None):
+    """دخول DCA تدريجي: يشتري الساق الأولى سوقاً الآن (ضمان المشاركة)، ويجهّز باقي
+    السيقان لتُملأ عند نزول السعر لمستويات فيبو في الدورات التالية. الوقف الابتدائي
+    من الإشارة (تحت أعمق مستوى). يرجع True عند نجاح فتح الساق الأولى."""
+    if tp1 <= entry:                                # long فقط: هدف فوق الدخول
+        return False
+    filt = bx.instrument_filters(sym)
+    if not filt:                                    # الزوج غير مُدرَج للتداول (Spot/Demo)
+        print(f"autotrade[{EX_NAME}]: {sym} غير متاح للتداول على المنصّة — تخطّي")
         return False
 
+    # سلّم الفيبو تنازلياً (الأعلى أولاً). إن غاب → دخول مفرد بمستوى واحد.
+    levels = sorted([float(x) for x in (levels or []) if x], reverse=True) or [entry]
+    n = len(levels)
+    leg_usd = ORDER_USD / n
+    if stop >= min(levels):                         # الوقف يجب أن يبقى تحت أعمق مستوى
+        stop = min(levels) * 0.999
+
+    qty, notional, fill = _buy_leg(sym, filt, leg_usd)   # الساق الأولى الآن
+    if qty <= 0:
+        return False
+
+    base = sym.replace("USDT", "")
+    filled = [False] * n
+    filled[0] = True                                # المستوى الأعلى مُثِّل بالشراء الفوري
     positions[sym] = {
         "symbol": sym, "tf": tf, "label": label, "prob": prob,
-        "entry": entry, "init_stop": stop, "stop": stop, "R": R,
-        "tp1": tp1, "tp2": tp2 if tp2 and tp2 > tp1 else entry + 2 * R,
-        "qty": qty, "qty_open": qty, "tp1_done": False,
+        "levels": [round(x, 8) for x in levels], "filled": filled,
+        "leg_usd": round(leg_usd, 2), "n_legs": n,
+        "fills": [{"price": fill, "qty": qty, "usd": notional}],
+        "avg_entry": fill, "entry": fill,
+        "init_stop": stop, "stop": stop, "R": max(fill - stop, 1e-12),
+        "tp1": tp1, "tp2": tp2 if tp2 and tp2 > tp1 else fill + 2 * (fill - stop),
+        "qty": qty, "qty_open": qty, "tp1_done": False, "armed": False,
         "opened_ts": _now(),
     }
     _save(POS_PATH, positions)
+    lvl_txt = " / ".join(_fmt(x) for x in levels)
     _notify(
-        f"{SEP}\n🟢 دخول تجريبي [{EX_NAME}] — {sym} · {tf}  [{label}]\n{SEP}\n"
-        f"📍 الدخول ≈ {_fmt(entry)}\n🛑 الوقف {_fmt(stop)}  (−{stop_pct*100:.2f}%)\n"
+        f"{SEP}\n🟢 دخول DCA [{EX_NAME}] — {sym} · {tf}  [{label}]\n{SEP}\n"
+        f"🪜 سلّم الفيبو ({n}): {lvl_txt}\n"
+        f"📍 ساق 1/{n} الآن ≈ {_fmt(fill)}  (≈ {_fmt(notional)} USDT)\n"
+        f"🛑 الوقف {_fmt(stop)}\n"
         f"🎯 هدف1 {_fmt(positions[sym]['tp1'])} · هدف2 {_fmt(positions[sym]['tp2'])}\n"
-        f"📦 الكمية {_fmt(qty)} {base} (≈ {_fmt(notional)} USDT)\n"
         + (f"🤖 ثقة الفلتر {int((prob or 0)*100)}%\n" if prob else "")
         + "⚠️ حساب تجريبي — ليست نصيحة مالية."
     )
     return True
+
+
+def _fill_dca_legs(sym, pos, price):
+    """يملأ سيقان DCA المتبقّية سوقاً عند نزول السعر لمستوياتها. يرجع True إن تغيّر."""
+    levels = pos.get("levels") or []
+    filled = pos.get("filled") or []
+    if not levels or all(filled):
+        return False
+    filt = bx.instrument_filters(sym)
+    if not filt:
+        return False
+    changed = False
+    for idx in range(len(levels)):
+        if idx >= len(filled) or filled[idx]:
+            continue
+        if price <= levels[idx]:                    # بلغ السعر مستوى الفيبو → املأ الساق
+            qty, notional, fill = _buy_leg(sym, filt, pos["leg_usd"])
+            if qty <= 0:
+                continue
+            pos["fills"].append({"price": fill, "qty": qty, "usd": notional})
+            pos["filled"][idx] = True
+            pos["qty"] += qty
+            pos["qty_open"] += qty
+            _recompute_avg(pos)
+            changed = True
+            k = sum(1 for f in pos["filled"] if f)
+            _notify(f"➕ ساق DCA {k}/{pos['n_legs']} [{EX_NAME}] {sym} @ {_fmt(fill)} "
+                    f"(≈ {_fmt(notional)} USDT) — متوسط الدخول {_fmt(pos['avg_entry'])} · "
+                    f"وقف {_fmt(pos['stop'])}")
+    return changed
 
 
 def _get_equity():
@@ -330,7 +390,8 @@ def execute_from_tracker():
         tp1 = float(targets[0])
         tp2 = float(targets[1]) if len(targets) > 1 else 0.0
         if _open_position(sym, tr.get("timeframe", ""), entry, stop, tp1, tp2,
-                          tr.get("prob"), label or "إشارة", positions, equity):
+                          tr.get("prob"), label or "إشارة", positions, equity,
+                          levels=tr.get("dca_levels")):
             executed.add(ekey)
             last_entry[sym] = now.isoformat(timespec="seconds")   # ابدأ التهدئة
             opened += 1
@@ -351,8 +412,9 @@ def _sell(sym, qty):
 
 
 def _record_exit(pos, qty, price, reason):
-    """يسجّل ساق خروج في السجلّ ويرجع الربح/الخسارة بالـ USDT (تقديري بعد العمولة)."""
-    entry = pos["entry"]
+    """يسجّل ساق خروج في السجلّ ويرجع الربح/الخسارة بالـ USDT (تقديري بعد العمولة).
+    الربح يُحسب من *متوسط دخول* DCA."""
+    entry = pos.get("avg_entry", pos.get("entry"))
     gross = qty * (price - entry)
     fees = qty * (entry + price) * FEE_RATE          # عمولة الدخول والخروج تقديراً
     pnl = gross - fees
@@ -401,7 +463,13 @@ def _manage_one(sym, positions):
         return False
     if not price:
         return False
-    R, entry = pos["R"], pos["entry"]
+
+    # (0) ملء سيقان DCA المتبقّية عند بلوغ مستوياتها (يحدّث المتوسط والمخاطرة R)
+    if _fill_dca_legs(sym, pos, price):
+        changed = True
+
+    entry = pos.get("avg_entry", pos.get("entry"))   # متوسط دخول DCA
+    R = pos["R"]
 
     # (1) الوقف أولاً — حماية رأس المال
     if price <= pos["stop"]:
@@ -410,10 +478,10 @@ def _manage_one(sym, positions):
         pnl = _record_exit(pos, sold or pos["qty_open"], price, reason)
         del positions[sym]
         _notify(f"🛑 خروج [{EX_NAME}] {sym} @ {_fmt(price)} ({reason}) — "
-                f"ربح/خسارة الساق ≈ {_fmt(pnl)} USDT")
+                f"ربح/خسارة ≈ {_fmt(pnl)} USDT")
         return True
 
-    # (2) الهدف الأول — بيع 50% + تعادل
+    # (2) الهدف الأول — بيع 50% + نقل الوقف لمتوسط الدخول (تعادل)
     if not pos["tp1_done"] and price >= pos["tp1"]:
         half = pos["qty_open"] * 0.5
         sold = _sell(sym, half)
@@ -421,10 +489,12 @@ def _manage_one(sym, positions):
             pnl = _record_exit(pos, sold, price, "هدف1 (50%)")
             pos["qty_open"] -= sold
             pos["tp1_done"] = True
-            pos["stop"] = entry                    # نقل الوقف للتعادل
+            pos["armed"] = True
+            if entry > pos["stop"]:
+                pos["stop"] = entry                # الوقف إلى متوسط الدخول
             changed = True
             _notify(f"🎯 هدف1 [{EX_NAME}] {sym} @ {_fmt(price)} — جني 50% "
-                    f"(≈ {_fmt(pnl)} USDT) + نقل الوقف للتعادل")
+                    f"(≈ {_fmt(pnl)} USDT) + الوقف لمتوسط الدخول {_fmt(entry)}")
         return changed
 
     # (3) الهدف الثاني — إغلاق المتبقّي
@@ -436,8 +506,15 @@ def _manage_one(sym, positions):
                 f"(≈ {_fmt(pnl)} USDT)")
         return True
 
-    # (4) وقف متحرّك بعد الهدف الأول (يقفل الأرباح، لا ينزل أبداً)
-    if pos["tp1_done"]:
+    # (4) وقف الخسارة المتحرّك حسب *متوسط الدخول*:
+    #     يُسلَّح عند تحقّق ربح 1R فوق المتوسط → ينتقل الوقف للمتوسط (تعادل)،
+    #     ثم يتتبّع صعوداً (price − R) ولا ينزل أبداً.
+    if not pos.get("armed") and price >= entry + R:
+        pos["armed"] = True
+        if entry > pos["stop"]:
+            pos["stop"] = entry
+        changed = True
+    if pos.get("armed"):
         trail = price - R
         if trail > pos["stop"]:
             pos["stop"] = trail
@@ -455,8 +532,11 @@ def cmd_status():
         print(f"{SEP}\n📊 [{name}] المراكز المفتوحة: {len(positions)}\n{SEP}")
         for sym, p in positions.items():
             state = "بعد هدف1 (تتبّع)" if p["tp1_done"] else "قبل هدف1"
-            print(f"  {sym:<10} دخول {_fmt(p['entry'])}  وقف {_fmt(p['stop'])}  "
-                  f"كمية {_fmt(p['qty_open'])}  [{state}]")
+            avg = p.get("avg_entry", p.get("entry"))
+            legs = (f"  سيقان {sum(1 for f in p['filled'] if f)}/{p['n_legs']}"
+                    if p.get("filled") else "")
+            print(f"  {sym:<10} متوسط {_fmt(avg)}  وقف {_fmt(p['stop'])}  "
+                  f"كمية {_fmt(p['qty_open'])}{legs}  [{state}]")
         if ledger:
             pnl = sum(x["pnl_usdt"] for x in ledger)
             wins = sum(1 for x in ledger if x["pnl_usdt"] > 0)
