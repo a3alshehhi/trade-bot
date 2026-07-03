@@ -27180,5 +27180,37 @@
     "hi_seen": 0.2671,
     "lo_seen": 0.2656,
     "created": "2026-07-03T14:23:40"
+  },
+  "RSI60 · 15m|BICOUSDT|2026-07-03 15:14:59.999000": {
+    "symbol": "BICOUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": 4269,
+    "entry": 0.01581,
+    "stop": 0.01514393,
+    "init_stop": 0.01514393,
+    "cur_stop": 0.01514393,
+    "last_alert_stop": 0.01514393,
+    "armed": false,
+    "targets": [
+      0.0161228,
+      0.0165207,
+      0.0176707
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 15:14:59.999000",
+    "last_bar": "2026-07-03 15:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01581,
+    "lo_seen": 0.01581,
+    "created": "2026-07-03T15:16:00"
   }
 }

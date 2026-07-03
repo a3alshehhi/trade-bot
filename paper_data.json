@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-03T15:03:19",
+  "updated_at": "2026-07-03T15:18:09",
   "stats": {
-    "open": 31,
+    "open": 32,
     "closed": 816,
     "win_rate": 53.6,
     "profit_factor": 1.41,
@@ -13970,6 +13970,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-03T14:23:40",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI60 · 15m|BICOUSDT|2026-07-03 15:14:59.999000",
+      "symbol": "BICOUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01581,
+      "stop": 0.01514393,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T15:16:00",
       "closed_at": null,
       "realized_pct": 0.0
     }
