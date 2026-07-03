@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-03T01:18:16",
+  "updated_at": "2026-07-03T01:33:40",
   "stats": {
-    "open": 28,
+    "open": 31,
     "closed": 782,
     "win_rate": 53.1,
     "profit_factor": 1.39,
@@ -13359,6 +13359,48 @@
       "opened_at": "2026-07-03T00:46:06",
       "closed_at": null,
       "realized_pct": 0.5
+    },
+    {
+      "id": "العرض/الطلب|ARPAUSDT|2026-07-03 01:15:00",
+      "symbol": "ARPAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00799,
+      "stop": 0.00796754,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T01:18:27",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ANKRUSDT|2026-07-03 01:15:00",
+      "symbol": "ANKRUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00358,
+      "stop": 0.00356866,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T01:18:27",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|BANDUSDT|2026-07-03 01:15:00",
+      "symbol": "BANDUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.152,
+      "stop": 0.1511414,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T01:18:27",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
