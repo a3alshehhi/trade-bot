@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-03 13:59:59.999000"
+    "last_bar": "2026-07-03 14:14:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -25910,7 +25910,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 00:44:59.999000",
-    "last_bar": "2026-07-03 13:59:59.999000",
+    "last_bar": "2026-07-03 14:14:59.999000",
     "hits": [
       1
     ],
@@ -26735,12 +26735,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 10:45:00",
-    "last_bar": "2026-07-03 13:59:59.999000",
+    "last_bar": "2026-07-03 14:14:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.627,
-    "lo_seen": 0.621,
-    "created": "2026-07-03T10:48:56"
+    "lo_seen": 0.619,
+    "created": "2026-07-03T10:48:56",
+    "exit_price": 0.62071,
+    "close_card_sent": true,
+    "closed_at": "2026-07-03T14:18:03"
   },
   "العرض/الطلب|ETHUSDT|2026-07-03 11:00:00": {
     "symbol": "ETHUSDT",
@@ -27115,8 +27118,8 @@
     "entry": 0.00447,
     "stop": 0.00445812,
     "init_stop": 0.00445812,
-    "cur_stop": 0.00445812,
-    "last_alert_stop": 0.00445812,
+    "cur_stop": 0.00447,
+    "last_alert_stop": 0.00447,
     "armed": false,
     "targets": [
       0.00448188,
@@ -27130,11 +27133,13 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 14:00:00",
-    "last_bar": "2026-07-03 14:00:00",
-    "hits": [],
+    "last_bar": "2026-07-03 14:14:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.00447,
-    "lo_seen": 0.00447,
+    "hi_seen": 0.00449,
+    "lo_seen": 0.00446,
     "created": "2026-07-03T14:04:32"
   }
 }
