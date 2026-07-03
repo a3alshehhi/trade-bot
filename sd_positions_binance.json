@@ -101,5 +101,38 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-03T18:03:51"
+  },
+  "BMTUSDT": {
+    "symbol": "BMTUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.01231
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.012392460550925423,
+        "qty": 8069.4225,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.012392460550925423,
+    "entry": 0.012392460550925423,
+    "init_stop": 0.01227632,
+    "stop": 0.01227632,
+    "R": 0.00011614055092542229,
+    "tp1": 0.01234368,
+    "tp2": 0.01237736,
+    "qty": 8069.4225,
+    "qty_open": 8069.4225,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-03T19:19:01"
   }
 }

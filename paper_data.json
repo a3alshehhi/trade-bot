@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-03T19:03:16",
+  "updated_at": "2026-07-03T19:18:32",
   "stats": {
-    "open": 33,
+    "open": 34,
     "closed": 821,
     "win_rate": 53.7,
     "profit_factor": 1.43,
@@ -14082,6 +14082,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-03T18:01:42",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|BMTUSDT|2026-07-03 19:00:00",
+      "symbol": "BMTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01231,
+      "stop": 0.01227632,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T19:04:45",
       "closed_at": null,
       "realized_pct": 0.0
     }
