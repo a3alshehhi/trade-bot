@@ -26618,5 +26618,35 @@
     "hi_seen": 0.0521,
     "lo_seen": 0.0489,
     "created": "2026-07-03T09:01:50"
+  },
+  "العرض/الطلب|AVAXUSDT|2026-07-03 10:15:00": {
+    "symbol": "AVAXUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4188,
+    "entry": 6.858,
+    "stop": 6.830488,
+    "init_stop": 6.830488,
+    "cur_stop": 6.830488,
+    "last_alert_stop": 6.830488,
+    "armed": false,
+    "targets": [
+      6.885512,
+      6.913024
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 10:15:00",
+    "last_bar": "2026-07-03 10:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 6.858,
+    "lo_seen": 6.858,
+    "created": "2026-07-03T10:19:25"
   }
 }
