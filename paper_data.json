@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-03T10:48:11",
+  "updated_at": "2026-07-03T11:03:52",
   "stats": {
-    "open": 33,
+    "open": 35,
     "closed": 799,
     "win_rate": 53.4,
     "profit_factor": 1.4,
@@ -13231,11 +13231,13 @@
       "timeframe": "1h",
       "entry": 0.001189,
       "stop": 0.00112184,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-02T22:01:30",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.33
     },
     {
       "id": "العرض/الطلب|BCHUSDT|2026-07-02 22:15:00",
@@ -13656,11 +13658,13 @@
       "timeframe": "1h",
       "entry": 0.0688,
       "stop": 0.06538923,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-03T07:01:43",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.11
     },
     {
       "id": "العرض/الطلب|ARKMUSDT|2026-07-03 07:30:00",
@@ -13722,6 +13726,34 @@
       "opened_at": "2026-07-03T10:19:25",
       "closed_at": null,
       "realized_pct": 0.2
+    },
+    {
+      "id": "العرض/الطلب|ARBUSDT|2026-07-03 10:45:00",
+      "symbol": "ARBUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0788,
+      "stop": 0.0783622,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T10:48:56",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|APTUSDT|2026-07-03 10:45:00",
+      "symbol": "APTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.624,
+      "stop": 0.62071,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T10:48:56",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
