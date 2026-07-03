@@ -1,6 +1,7 @@
 {
   "regions": ["fra1"],
   "rewrites": [
-    { "source": "/api/:path*", "destination": "/api/[...path]" }
+    { "source": "/api/:path*", "destination": "/api/[...path]" },
+    { "source": "/binance/:path*", "destination": "/api/[...path]" }
   ]
 }
