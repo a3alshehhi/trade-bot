@@ -27027,5 +27027,35 @@
     "hi_seen": 1735.13,
     "lo_seen": 1735.13,
     "created": "2026-07-03T12:23:38"
+  },
+  "العرض/الطلب|BNTUSDT|2026-07-03 12:45:00": {
+    "symbol": "BNTUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4240,
+    "entry": 0.2682,
+    "stop": 0.2675382,
+    "init_stop": 0.2675382,
+    "cur_stop": 0.2675382,
+    "last_alert_stop": 0.2675382,
+    "armed": false,
+    "targets": [
+      0.2688618,
+      0.2695236
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 12:45:00",
+    "last_bar": "2026-07-03 12:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.2682,
+    "lo_seen": 0.2682,
+    "created": "2026-07-03T12:48:27"
   }
 }
