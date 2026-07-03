@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-03T12:47:41",
+  "updated_at": "2026-07-03T13:03:51",
   "stats": {
-    "open": 37,
-    "closed": 806,
-    "win_rate": 53.6,
-    "profit_factor": 1.42,
-    "total_pct": 3018.99,
-    "avg_pct": 0.56,
+    "open": 34,
+    "closed": 810,
+    "win_rate": 53.7,
+    "profit_factor": 1.43,
+    "total_pct": 3146.42,
+    "avg_pct": 0.57,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-03",
-        "trades": 31,
-        "win_rate": 67.7,
-        "return_pct": 40.53,
+        "trades": 35,
+        "win_rate": 68.6,
+        "return_pct": 46.28,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 314,
-        "win_rate": 58.6,
-        "return_pct": 152.5,
+        "trades": 318,
+        "win_rate": 58.8,
+        "return_pct": 162.82,
         "month": "2026-07"
       },
       {
@@ -142,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 147,
-        "win_rate": 70.1,
-        "return_pct": 111.8
+        "trades": 151,
+        "win_rate": 70.2,
+        "return_pct": 120.45
       },
       {
         "key": "2026-06",
@@ -13663,12 +13663,14 @@
       "entry": 0.0688,
       "stop": 0.06538923,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T07:01:43",
-      "closed_at": null,
-      "realized_pct": 1.11
+      "closed_at": "2026-07-03T13:03:39",
+      "realized_pct": 3.62,
+      "result_pct": 3.62
     },
     {
       "id": "العرض/الطلب|ARKMUSDT|2026-07-03 07:30:00",
@@ -13811,10 +13813,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T11:06:53",
-      "closed_at": null,
-      "realized_pct": 0.45
+      "closed_at": "2026-07-03T13:03:44",
+      "realized_pct": 0.45,
+      "result_pct": 0.45
     },
     {
       "id": "العرض/الطلب|DASHUSDT|2026-07-03 11:00:00",
@@ -13870,10 +13873,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T12:19:26",
-      "closed_at": null,
-      "realized_pct": 0.25
+      "closed_at": "2026-07-03T13:03:47",
+      "realized_pct": 0.25,
+      "result_pct": 0.25
     },
     {
       "id": "العرض/الطلب|ASTRUSDT|2026-07-03 12:15:00",
@@ -13903,6 +13907,21 @@
       "opened_at": "2026-07-03T12:23:38",
       "closed_at": null,
       "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|BNTUSDT|2026-07-03 12:45:00",
+      "symbol": "BNTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2682,
+      "stop": 0.2675382,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-03T12:48:27",
+      "closed_at": "2026-07-03T13:03:50",
+      "realized_pct": -0.25,
+      "result_pct": -0.25
     }
   ]
 }
