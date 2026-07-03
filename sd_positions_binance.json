@@ -22,7 +22,7 @@
     "prob": null,
     "entry": 0.00245,
     "init_stop": 0.00243842,
-    "stop": 0.00245,
+    "stop": 0.0024584200000000002,
     "R": 1.157999999999975e-05,
     "tp1": 0.00246158,
     "tp2": 0.00247316,
@@ -179,5 +179,122 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-03T20:19:03"
+  },
+  "SCUSDT": {
+    "symbol": "SCUSDT",
+    "tf": "15m",
+    "label": "RSI60 · 15m",
+    "prob": null,
+    "levels": [
+      0.00063427,
+      0.0006325,
+      0.00063073,
+      0.00062821
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 25.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.0006396172530357834,
+        "qty": 39085.875,
+        "usd": 25.0
+      }
+    ],
+    "avg_entry": 0.0006396172530357834,
+    "entry": 0.0006396172530357834,
+    "init_stop": 0.00062664,
+    "stop": 0.00062664,
+    "R": 1.2977253035783361e-05,
+    "tp1": 0.00064408,
+    "tp2": 0.00064927,
+    "qty": 39085.875,
+    "qty_open": 39085.875,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-03T21:04:32"
+  },
+  "LAZIOUSDT": {
+    "symbol": "LAZIOUSDT",
+    "tf": "1h",
+    "label": "RSI50 · 1h",
+    "prob": null,
+    "levels": [
+      0.399708,
+      0.399,
+      0.398292,
+      0.397284
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 25.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.40246100072410784,
+        "qty": 62.11782,
+        "usd": 25.0
+      }
+    ],
+    "avg_entry": 0.40246100072410784,
+    "entry": 0.40246100072410784,
+    "init_stop": 0.39558335,
+    "stop": 0.39558335,
+    "R": 0.006877650724107842,
+    "tp1": 0.403632,
+    "tp2": 0.405708,
+    "qty": 62.11782,
+    "qty_open": 62.11782,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-03T21:04:53"
+  },
+  "OGUSDT": {
+    "symbol": "OGUSDT",
+    "tf": "1h",
+    "label": "RSI50 · 1h",
+    "prob": null,
+    "levels": [
+      2.481788,
+      2.474,
+      2.466212,
+      2.455124
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 25.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 2.527780305558083,
+        "qty": 9.8901,
+        "usd": 25.0
+      }
+    ],
+    "avg_entry": 2.527780305558083,
+    "entry": 2.527780305558083,
+    "init_stop": 2.44517904,
+    "stop": 2.44517904,
+    "R": 0.082601265558083,
+    "tp1": 2.524952,
+    "tp2": 2.547788,
+    "qty": 9.8901,
+    "qty_open": 9.8901,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-03T21:05:14"
   }
 }
