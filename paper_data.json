@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-03T03:18:35",
+  "updated_at": "2026-07-03T03:33:15",
   "stats": {
-    "open": 31,
+    "open": 32,
     "closed": 792,
     "win_rate": 53.3,
     "profit_factor": 1.4,
@@ -13521,11 +13521,13 @@
       "timeframe": "15m",
       "entry": 220.6,
       "stop": 219.262,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-03T02:49:29",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.3
     },
     {
       "id": "العرض/الطلب|ALTUSDT|2026-07-03 02:45:00",
@@ -13572,6 +13574,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-03T03:06:24",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|AVAXUSDT|2026-07-03 03:00:00",
+      "symbol": "AVAXUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 6.823,
+      "stop": 6.755962,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T03:20:53",
       "closed_at": null,
       "realized_pct": 0.0
     }
