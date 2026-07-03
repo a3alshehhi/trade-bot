@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-03T11:47:46",
+  "updated_at": "2026-07-03T12:04:03",
   "stats": {
     "open": 37,
-    "closed": 802,
+    "closed": 803,
     "win_rate": 53.5,
-    "profit_factor": 1.4,
-    "total_pct": 2470.96,
-    "avg_pct": 0.54,
+    "profit_factor": 1.42,
+    "total_pct": 3002.89,
+    "avg_pct": 0.56,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-03",
-        "trades": 27,
-        "win_rate": 66.7,
-        "return_pct": 15.84,
+        "trades": 28,
+        "win_rate": 67.9,
+        "return_pct": 39.81,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 310,
-        "win_rate": 58.4,
-        "return_pct": 108.14,
+        "trades": 311,
+        "win_rate": 58.5,
+        "return_pct": 151.2,
         "month": "2026-07"
       },
       {
@@ -142,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 143,
-        "win_rate": 69.9,
-        "return_pct": 74.58
+        "trades": 144,
+        "win_rate": 70.1,
+        "return_pct": 110.7
       },
       {
         "key": "2026-06",
@@ -5255,11 +5255,13 @@
       "timeframe": "4h",
       "entry": 1.77761867,
       "stop": 1.71846891,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-27T00:03:44",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 5.57
     },
     {
       "id": "trendwave · 4h|ZECUSDT|2026-06-26 23:59:59.999000",
@@ -9311,12 +9313,14 @@
       "entry": 375.08498667,
       "stop": 361.1993687,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T08:04:42",
-      "closed_at": null,
-      "realized_pct": 8.84
+      "closed_at": "2026-07-03T12:03:42",
+      "realized_pct": 20.69,
+      "result_pct": 20.69
     },
     {
       "id": "trendwave · 15m|COOKIEUSDT|2026-06-29 08:44:59.999000",
@@ -13801,11 +13805,13 @@
       "timeframe": "1h",
       "entry": 1.588,
       "stop": 1.573656,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-03T11:06:53",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.45
     },
     {
       "id": "العرض/الطلب|DASHUSDT|2026-07-03 11:00:00",
@@ -13835,6 +13841,20 @@
       "closed_at": "2026-07-03T11:47:45",
       "realized_pct": -0.54,
       "result_pct": -0.54
+    },
+    {
+      "id": "RSI70 · 1h|OPUSDT|2026-07-03 11:59:59.999000",
+      "symbol": "OPUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1041,
+      "stop": 0.10027341,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T12:01:56",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }

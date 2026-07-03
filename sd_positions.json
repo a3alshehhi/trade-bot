@@ -22,7 +22,7 @@
     "prob": null,
     "entry": 6.823,
     "init_stop": 6.755962,
-    "stop": 6.834962,
+    "stop": 6.850962,
     "R": 0.06703800000000015,
     "tp1": 6.890038,
     "tp2": 6.957076,
@@ -30,22 +30,6 @@
     "qty_open": 7.32050762,
     "tp1_done": true,
     "opened_ts": "2026-07-03T04:47:46"
-  },
-  "MANAUSDT": {
-    "symbol": "MANAUSDT",
-    "tf": "1h",
-    "label": "RSI70 · 1h",
-    "prob": null,
-    "entry": 0.0688,
-    "init_stop": 0.06538923,
-    "stop": 0.0688,
-    "R": 0.0034107699999999935,
-    "tp1": 0.0703232,
-    "tp2": 0.0722608,
-    "qty": 4363.71578334,
-    "qty_open": 2181.86578334,
-    "tp1_done": true,
-    "opened_ts": "2026-07-03T07:03:25"
   },
   "IOUSDT": {
     "symbol": "IOUSDT",
@@ -78,5 +62,21 @@
     "qty_open": 6063.11956301,
     "tp1_done": false,
     "opened_ts": "2026-07-03T10:17:56"
+  },
+  "APTUSDT": {
+    "symbol": "APTUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "entry": 0.624,
+    "init_stop": 0.62071,
+    "stop": 0.62071,
+    "R": 0.003290000000000015,
+    "tp1": 0.62729,
+    "tp2": 0.63058,
+    "qty": 479.21330348,
+    "qty_open": 479.21330348,
+    "tp1_done": false,
+    "opened_ts": "2026-07-03T12:04:11"
   }
 }
