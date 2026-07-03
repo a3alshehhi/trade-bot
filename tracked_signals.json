@@ -27316,5 +27316,35 @@
     "hi_seen": 0.003069,
     "lo_seen": 0.003069,
     "created": "2026-07-03T16:01:36"
+  },
+  "العرض/الطلب|CRVUSDT|2026-07-03 16:00:00": {
+    "symbol": "CRVUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4283,
+    "entry": 0.206,
+    "stop": 0.2048992,
+    "init_stop": 0.2048992,
+    "cur_stop": 0.2048992,
+    "last_alert_stop": 0.2048992,
+    "armed": false,
+    "targets": [
+      0.2071008,
+      0.2082016
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 16:00:00",
+    "last_bar": "2026-07-03 16:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.206,
+    "lo_seen": 0.206,
+    "created": "2026-07-03T16:13:34"
   }
 }
