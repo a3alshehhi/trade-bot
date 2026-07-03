@@ -46,6 +46,13 @@ jobs:
           BYBIT_API_SECRET: ${{ secrets.BYBIT_API_SECRET }}
           # Bybit يحجب IP أمريكا (خوادم GitHub) — عند إنشاء بروكسي خاص ضع رابطه في هذا السر
           BYBIT_BASE_URL: ${{ secrets.BYBIT_BASE_URL }}
+          # ── Binance Spot Demo Mode (التنفيذ المزدوج مع بايبت) ──
+          # مفاتيح من demo.binance.com. البروكسي نفسه لكن بمسار /binance:
+          # BINANCE_BASE_URL = https://<proj>.vercel.app/binance
+          BINANCE_ENV: demo
+          BINANCE_API_KEY: ${{ secrets.BINANCE_API_KEY }}
+          BINANCE_API_SECRET: ${{ secrets.BINANCE_API_SECRET }}
+          BINANCE_BASE_URL: ${{ secrets.BINANCE_BASE_URL }}
           SD_LABELS: "*"
         run: |
           # إشارة شراء بالزخم: فور تجاوز RSI(21) خط الـ70 — على 4 فريمات
@@ -80,7 +87,8 @@ jobs:
         run: |
           for f in reversal_alerts.json trendwave_alerts.json pending_signals.json tracked_signals.json \
                    paper_trades.json tg_offset.json paper_data.json \
-                   sd_positions.json sd_ledger.json sd_executed.json sd_last_entry.json; do
+                   sd_positions.json sd_ledger.json sd_executed.json sd_last_entry.json \
+                   sd_positions_binance.json sd_ledger_binance.json sd_executed_binance.json sd_last_entry_binance.json; do
             [ -f "$f" ] && git add "$f"
           done
           if ! git diff --cached --quiet; then
