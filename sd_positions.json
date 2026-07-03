@@ -15,22 +15,6 @@
     "tp1_done": true,
     "opened_ts": "2026-07-03T00:48:42"
   },
-  "AXLUSDT": {
-    "symbol": "AXLUSDT",
-    "tf": "15m",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "entry": 0.0427,
-    "init_stop": 0.042381,
-    "stop": 0.042981,
-    "R": 0.00031899999999999984,
-    "tp1": 0.043019,
-    "tp2": 0.043338,
-    "qty": 2332.47723558,
-    "qty_open": 1166.24723558,
-    "tp1_done": true,
-    "opened_ts": "2026-07-03T02:47:44"
-  },
   "AVAXUSDT": {
     "symbol": "AVAXUSDT",
     "tf": "1h",
@@ -78,5 +62,21 @@
     "qty_open": 1675.23756288,
     "tp1_done": false,
     "opened_ts": "2026-07-03T08:33:00"
+  },
+  "PARTIUSDT": {
+    "symbol": "PARTIUSDT",
+    "tf": "1h",
+    "label": "RSI70 · 1h",
+    "prob": null,
+    "entry": 0.0505,
+    "init_stop": 0.04700236,
+    "stop": 0.04700236,
+    "R": 0.0034976400000000032,
+    "tp1": 0.0521592,
+    "tp2": 0.0542698,
+    "qty": 6063.11956301,
+    "qty_open": 6063.11956301,
+    "tp1_done": false,
+    "opened_ts": "2026-07-03T10:17:56"
   }
 }
