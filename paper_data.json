@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-03T03:47:38",
+  "updated_at": "2026-07-03T04:03:49",
   "stats": {
-    "open": 32,
-    "closed": 792,
+    "open": 31,
+    "closed": 793,
     "win_rate": 53.3,
     "profit_factor": 1.4,
-    "total_pct": 2267.54,
+    "total_pct": 2280.09,
     "avg_pct": 0.54,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-03",
-        "trades": 17,
-        "win_rate": 64.7,
-        "return_pct": 6.68,
+        "trades": 18,
+        "win_rate": 66.7,
+        "return_pct": 7.24,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 300,
-        "win_rate": 58.0,
-        "return_pct": 91.67,
+        "trades": 301,
+        "win_rate": 58.1,
+        "return_pct": 92.69,
         "month": "2026-07"
       },
       {
@@ -142,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 133,
-        "win_rate": 69.9,
-        "return_pct": 60.77
+        "trades": 134,
+        "win_rate": 70.1,
+        "return_pct": 61.62
       },
       {
         "key": "2026-06",
@@ -13558,10 +13558,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T02:53:41",
-      "closed_at": null,
-      "realized_pct": 0.53
+      "closed_at": "2026-07-03T04:03:47",
+      "realized_pct": 0.53,
+      "result_pct": 0.53
     },
     {
       "id": "العرض/الطلب|0GUSDT|2026-07-03 03:00:00",
