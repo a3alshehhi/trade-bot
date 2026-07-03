@@ -43,12 +43,11 @@ ORDER_USD = float(os.environ.get("SD_ORDER_USD", "300"))     # قيمة ثابت
 MAX_CONCURRENT = int(os.environ.get("SD_MAX_POS", "5"))       # حد المراكز المتزامنة
 
 # ── إعدادات خاصّة ببايننس (2026-07-03، بطلب بو محمد) ──────────────────────────
-# بايننس Demo = *أوامر شراء فقط* بقيمة 100$ لكل أمر (لا بيع/لا إدارة خروج).
-# قيم بايبت تبقى كما هي (300$، إدارة 50/50 كاملة).
+# بايننس Demo = مثل بايبت تماماً في الإدارة والإغلاق (50/50)، لكن بحجم أمر 100$.
+# (سابقاً كان شراء-فقط؛ أُلغي بطلب بو محمد ليغلق الصفقات مثل بايبت.)
 BINANCE_ORDER_USD = float(os.environ.get("BINANCE_ORDER_USD", "100"))
-BINANCE_BUY_ONLY = os.environ.get("BINANCE_BUY_ONLY", "1") == "1"   # 1 = شراء فقط
-# مع الشراء فقط لا تُغلق المراكز، فنرفع حدّ المراكز حتى لا يتجمّد بعد 5.
-BINANCE_MAX_POS = int(os.environ.get("BINANCE_MAX_POS", "1000"))
+BINANCE_BUY_ONLY = os.environ.get("BINANCE_BUY_ONLY", "0") == "1"   # 0 = إدارة كاملة مثل بايبت
+BINANCE_MAX_POS = int(os.environ.get("BINANCE_MAX_POS", "5"))       # نفس حدّ بايبت
 FEE_RATE = 0.001                                              # عمولة تقديرية للطرف الواحد
 POS_PATH = os.environ.get("SD_POS", "sd_positions.json")
 LEDGER_PATH = os.environ.get("SD_LEDGER", "sd_ledger.json")
