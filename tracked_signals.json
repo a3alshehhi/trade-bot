@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-03 21:59:59.999000"
+    "last_bar": "2026-07-03 22:14:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -27245,7 +27245,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 15:14:59.999000",
-    "last_bar": "2026-07-03 21:59:59.999000",
+    "last_bar": "2026-07-03 22:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.016,
@@ -27654,11 +27654,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 20:59:59.999000",
-    "last_bar": "2026-07-03 21:59:59.999000",
+    "last_bar": "2026-07-03 22:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00064,
-    "lo_seen": 0.000635,
+    "lo_seen": 0.000633,
     "created": "2026-07-03T21:01:20"
   },
   "RSI50 · 1h|LAZIOUSDT|2026-07-03 20:59:59.999000": {
@@ -27903,7 +27903,7 @@
     ],
     "stop": 0.00911966,
     "init_stop": 0.00911966,
-    "cur_stop": 0.00911966,
+    "cur_stop": 0.01,
     "last_alert_stop": 0.00911966,
     "armed": false,
     "targets": [
@@ -27916,11 +27916,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 21:59:59.999000",
-    "last_bar": "2026-07-03 21:59:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.01,
+    "last_bar": "2026-07-03 22:14:59.999000",
+    "hits": [
+      1,
+      2
+    ],
+    "stopped": true,
+    "hi_seen": 0.0108,
     "lo_seen": 0.01,
-    "created": "2026-07-03T22:02:13"
+    "created": "2026-07-03T22:02:13",
+    "exit_price": 0.0104944,
+    "close_card_sent": true,
+    "closed_at": "2026-07-03T22:17:54"
   }
 }
