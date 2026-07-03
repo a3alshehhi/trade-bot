@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-03T02:18:09",
+  "updated_at": "2026-07-03T02:32:54",
   "stats": {
-    "open": 31,
-    "closed": 786,
+    "open": 29,
+    "closed": 788,
     "win_rate": 53.2,
     "profit_factor": 1.39,
-    "total_pct": 2170.54,
+    "total_pct": 2160.99,
     "avg_pct": 0.53,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-03",
-        "trades": 11,
-        "win_rate": 63.6,
-        "return_pct": 2.31,
+        "trades": 13,
+        "win_rate": 61.5,
+        "return_pct": 1.87,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 294,
+        "trades": 296,
         "win_rate": 57.8,
-        "return_pct": 83.82,
+        "return_pct": 83.04,
         "month": "2026-07"
       },
       {
@@ -142,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 127,
-        "win_rate": 70.1,
-        "return_pct": 54.18
+        "trades": 129,
+        "win_rate": 69.8,
+        "return_pct": 53.53
       },
       {
         "key": "2026-06",
@@ -13375,10 +13375,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T01:18:27",
-      "closed_at": null,
-      "realized_pct": 0.14
+      "closed_at": "2026-07-03T02:32:50",
+      "realized_pct": 0.14,
+      "result_pct": 0.14
     },
     {
       "id": "العرض/الطلب|ANKRUSDT|2026-07-03 01:15:00",
@@ -13403,10 +13404,11 @@
       "entry": 0.152,
       "stop": 0.1511414,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T01:18:27",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-03T02:32:53",
+      "realized_pct": -0.56,
+      "result_pct": -0.56
     },
     {
       "id": "العرض/الطلب|BNTUSDT|2026-07-03 01:30:00",
