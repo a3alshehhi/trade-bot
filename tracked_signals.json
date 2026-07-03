@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-03 19:59:59.999000"
+    "last_bar": "2026-07-03 20:29:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -27227,7 +27227,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 15:14:59.999000",
-    "last_bar": "2026-07-03 19:59:59.999000",
+    "last_bar": "2026-07-03 20:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.016,
@@ -27531,7 +27531,7 @@
     "entry": 0.0801,
     "stop": 0.0797574,
     "init_stop": 0.0797574,
-    "cur_stop": 0.0797574,
+    "cur_stop": 0.0801,
     "last_alert_stop": 0.0797574,
     "armed": false,
     "targets": [
@@ -27546,12 +27546,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 19:45:00",
-    "last_bar": "2026-07-03 19:59:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.0802,
-    "lo_seen": 0.08,
-    "created": "2026-07-03T19:48:52"
+    "last_bar": "2026-07-03 20:29:59.999000",
+    "hits": [
+      1,
+      2
+    ],
+    "stopped": true,
+    "hi_seen": 0.0808,
+    "lo_seen": 0.0799,
+    "created": "2026-07-03T19:48:52",
+    "exit_price": 0.0807852,
+    "close_card_sent": true,
+    "closed_at": "2026-07-03T20:33:38"
   },
   "RSI60 · 15m|COOKIEUSDT|2026-07-03 20:14:59.999000": {
     "symbol": "COOKIEUSDT",
@@ -27584,11 +27590,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 20:14:59.999000",
-    "last_bar": "2026-07-03 20:14:59.999000",
+    "last_bar": "2026-07-03 20:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0097,
-    "lo_seen": 0.0097,
+    "lo_seen": 0.0096,
     "created": "2026-07-03T20:16:04"
   }
 }
