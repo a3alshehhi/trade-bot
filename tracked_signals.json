@@ -27106,5 +27106,35 @@
     "exit_price": 0.1536538,
     "close_card_sent": true,
     "closed_at": "2026-07-03T13:47:35"
+  },
+  "العرض/الطلب|ACHUSDT|2026-07-03 14:00:00": {
+    "symbol": "ACHUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4257,
+    "entry": 0.00447,
+    "stop": 0.00445812,
+    "init_stop": 0.00445812,
+    "cur_stop": 0.00445812,
+    "last_alert_stop": 0.00445812,
+    "armed": false,
+    "targets": [
+      0.00448188,
+      0.00449376
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 14:00:00",
+    "last_bar": "2026-07-03 14:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00447,
+    "lo_seen": 0.00447,
+    "created": "2026-07-03T14:04:32"
   }
 }
