@@ -25897,5 +25897,95 @@
     "hi_seen": 0.01856,
     "lo_seen": 0.01834,
     "created": "2026-07-03T00:46:06"
+  },
+  "العرض/الطلب|ARPAUSDT|2026-07-03 01:15:00": {
+    "symbol": "ARPAUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4081,
+    "entry": 0.00799,
+    "stop": 0.00796754,
+    "init_stop": 0.00796754,
+    "cur_stop": 0.00796754,
+    "last_alert_stop": 0.00796754,
+    "armed": false,
+    "targets": [
+      0.00801246,
+      0.00803492
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 01:15:00",
+    "last_bar": "2026-07-03 01:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00799,
+    "lo_seen": 0.00799,
+    "created": "2026-07-03T01:18:27"
+  },
+  "العرض/الطلب|ANKRUSDT|2026-07-03 01:15:00": {
+    "symbol": "ANKRUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4081,
+    "entry": 0.00358,
+    "stop": 0.00356866,
+    "init_stop": 0.00356866,
+    "cur_stop": 0.00356866,
+    "last_alert_stop": 0.00356866,
+    "armed": false,
+    "targets": [
+      0.00359134,
+      0.00360268
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 01:15:00",
+    "last_bar": "2026-07-03 01:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00358,
+    "lo_seen": 0.00358,
+    "created": "2026-07-03T01:18:27"
+  },
+  "العرض/الطلب|BANDUSDT|2026-07-03 01:15:00": {
+    "symbol": "BANDUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4081,
+    "entry": 0.152,
+    "stop": 0.1511414,
+    "init_stop": 0.1511414,
+    "cur_stop": 0.1511414,
+    "last_alert_stop": 0.1511414,
+    "armed": false,
+    "targets": [
+      0.1528586,
+      0.1537172
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 01:15:00",
+    "last_bar": "2026-07-03 01:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.152,
+    "lo_seen": 0.152,
+    "created": "2026-07-03T01:18:27"
   }
 }
