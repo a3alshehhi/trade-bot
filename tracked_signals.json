@@ -27552,5 +27552,43 @@
     "hi_seen": 0.0802,
     "lo_seen": 0.08,
     "created": "2026-07-03T19:48:52"
+  },
+  "RSI60 · 15m|COOKIEUSDT|2026-07-03 20:14:59.999000": {
+    "symbol": "COOKIEUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.0097,
+    "dca_levels": [
+      0.009509,
+      0.00945,
+      0.009391,
+      0.009307
+    ],
+    "stop": 0.00924514,
+    "init_stop": 0.00924514,
+    "cur_stop": 0.00924514,
+    "last_alert_stop": 0.00924514,
+    "armed": false,
+    "targets": [
+      0.009836,
+      0.010009,
+      0.010509
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 20:14:59.999000",
+    "last_bar": "2026-07-03 20:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0097,
+    "lo_seen": 0.0097,
+    "created": "2026-07-03T20:16:04"
   }
 }
