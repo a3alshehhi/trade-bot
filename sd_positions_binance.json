@@ -156,5 +156,38 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-03T19:33:28"
+  },
+  "ARBUSDT": {
+    "symbol": "ARBUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.0801
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.08028561124486694,
+        "qty": 1245.5532,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.08028561124486694,
+    "entry": 0.08028561124486694,
+    "init_stop": 0.0797574,
+    "stop": 0.0797574,
+    "R": 0.0005282112448669329,
+    "tp1": 0.0804426,
+    "tp2": 0.0807852,
+    "qty": 1245.5532,
+    "qty_open": 1245.5532,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-03T20:03:29"
   }
 }
