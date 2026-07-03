@@ -40,14 +40,14 @@ bx = bybit_exec          # المنصّة النشطة حالياً (تُبدَ�
 # ── إعدادات ──────────────────────────────────────────────────────────────────
 RISK_PCT = float(os.environ.get("SD_RISK_PCT", "0.005"))     # 0.5% لكل صفقة (غير مستخدم عند تثبيت القيمة)
 ORDER_USD = float(os.environ.get("SD_ORDER_USD", "300"))     # قيمة ثابتة لكل أمر شراء (USDT)
-MAX_CONCURRENT = int(os.environ.get("SD_MAX_POS", "5"))       # حد المراكز المتزامنة
+MAX_CONCURRENT = int(os.environ.get("SD_MAX_POS", "15"))       # حد المراكز المتزامنة
 
 # ── إعدادات خاصّة ببايننس (2026-07-03، بطلب بو محمد) ──────────────────────────
 # بايننس Demo = مثل بايبت تماماً في الإدارة والإغلاق (50/50)، لكن بحجم أمر 100$.
 # (سابقاً كان شراء-فقط؛ أُلغي بطلب بو محمد ليغلق الصفقات مثل بايبت.)
 BINANCE_ORDER_USD = float(os.environ.get("BINANCE_ORDER_USD", "100"))
 BINANCE_BUY_ONLY = os.environ.get("BINANCE_BUY_ONLY", "0") == "1"   # 0 = إدارة كاملة مثل بايبت
-BINANCE_MAX_POS = int(os.environ.get("BINANCE_MAX_POS", "5"))       # نفس حدّ بايبت
+BINANCE_MAX_POS = int(os.environ.get("BINANCE_MAX_POS", "10"))       # نفس حدّ بايبت
 FEE_RATE = 0.001                                              # عمولة تقديرية للطرف الواحد
 POS_PATH = os.environ.get("SD_POS", "sd_positions.json")
 LEDGER_PATH = os.environ.get("SD_LEDGER", "sd_ledger.json")
