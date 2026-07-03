@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-03T08:10:22",
+  "updated_at": "2026-07-03T08:18:10",
   "stats": {
-    "open": 33,
-    "closed": 797,
-    "win_rate": 53.3,
+    "open": 32,
+    "closed": 798,
+    "win_rate": 53.4,
     "profit_factor": 1.39,
-    "total_pct": 2214.5,
+    "total_pct": 2226.76,
     "avg_pct": 0.53,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-03",
-        "trades": 22,
-        "win_rate": 63.6,
-        "return_pct": 4.29,
+        "trades": 23,
+        "win_rate": 65.2,
+        "return_pct": 4.84,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 305,
-        "win_rate": 58.0,
-        "return_pct": 87.38,
+        "trades": 306,
+        "win_rate": 58.2,
+        "return_pct": 88.37,
         "month": "2026-07"
       },
       {
@@ -142,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 138,
-        "win_rate": 69.6,
-        "return_pct": 57.17
+        "trades": 139,
+        "win_rate": 69.8,
+        "return_pct": 58.0
       },
       {
         "key": "2026-06",
@@ -13667,10 +13667,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T07:33:40",
-      "closed_at": null,
-      "realized_pct": 0.53
+      "closed_at": "2026-07-03T08:18:09",
+      "realized_pct": 0.53,
+      "result_pct": 0.53
     },
     {
       "id": "RSI70 · 1h|IOUSDT|2026-07-03 07:59:59.999000",
