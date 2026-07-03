@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-03 03:59:59.999000"
+    "last_bar": "2026-07-03 04:14:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -25897,7 +25897,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 00:44:59.999000",
-    "last_bar": "2026-07-03 03:59:59.999000",
+    "last_bar": "2026-07-03 04:14:59.999000",
     "hits": [
       1
     ],
@@ -26208,7 +26208,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 02:30:00",
-    "last_bar": "2026-07-03 03:59:59.999000",
+    "last_bar": "2026-07-03 04:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.043,
@@ -26238,14 +26238,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 02:45:00",
-    "last_bar": "2026-07-03 03:59:59.999000",
+    "last_bar": "2026-07-03 04:14:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 222.7,
-    "lo_seen": 220.5,
-    "created": "2026-07-03T02:49:29"
+    "lo_seen": 220.0,
+    "created": "2026-07-03T02:49:29",
+    "exit_price": 220.6,
+    "close_card_sent": true,
+    "closed_at": "2026-07-03T04:17:40"
   },
   "العرض/الطلب|ALTUSDT|2026-07-03 02:45:00": {
     "symbol": "ALTUSDT",
