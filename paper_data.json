@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-03T08:47:35",
+  "updated_at": "2026-07-03T09:03:46",
   "stats": {
-    "open": 32,
+    "open": 33,
     "closed": 798,
     "win_rate": 53.4,
     "profit_factor": 1.39,
@@ -13591,11 +13591,13 @@
       "timeframe": "1h",
       "entry": 6.823,
       "stop": 6.755962,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-03T03:20:53",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.49
     },
     {
       "id": "العرض/الطلب|DIAUSDT|2026-07-03 04:00:00",
@@ -13684,6 +13686,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-03T08:01:35",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI70 · 1h|PARTIUSDT|2026-07-03 08:59:59.999000",
+      "symbol": "PARTIUSDT",
+      "label": "RSI70 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0505,
+      "stop": 0.04700236,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T09:01:50",
       "closed_at": null,
       "realized_pct": 0.0
     }
