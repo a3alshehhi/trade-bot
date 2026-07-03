@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-03T01:33:40",
+  "updated_at": "2026-07-03T01:48:15",
   "stats": {
     "open": 31,
-    "closed": 782,
+    "closed": 783,
     "win_rate": 53.1,
     "profit_factor": 1.39,
-    "total_pct": 2163.19,
+    "total_pct": 2176.77,
     "avg_pct": 0.54,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-03",
-        "trades": 7,
-        "win_rate": 57.1,
-        "return_pct": 1.97,
+        "trades": 8,
+        "win_rate": 62.5,
+        "return_pct": 2.59,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 290,
-        "win_rate": 57.6,
-        "return_pct": 83.22,
+        "trades": 291,
+        "win_rate": 57.7,
+        "return_pct": 84.32,
         "month": "2026-07"
       },
       {
@@ -142,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 123,
-        "win_rate": 69.9,
-        "return_pct": 53.68
+        "trades": 124,
+        "win_rate": 70.2,
+        "return_pct": 54.6
       },
       {
         "key": "2026-06",
@@ -13323,11 +13323,15 @@
       "timeframe": "15m",
       "entry": 0.2242,
       "stop": 0.2233052,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-07-03T00:37:44",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-03T01:48:07",
+      "realized_pct": 0.6,
+      "result_pct": 0.6
     },
     {
       "id": "العرض/الطلب|BMTUSDT|2026-07-03 00:30:00",
@@ -13368,11 +13372,13 @@
       "timeframe": "15m",
       "entry": 0.00799,
       "stop": 0.00796754,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-03T01:18:27",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.14
     },
     {
       "id": "العرض/الطلب|ANKRUSDT|2026-07-03 01:15:00",
@@ -13401,6 +13407,22 @@
       "opened_at": "2026-07-03T01:18:27",
       "closed_at": null,
       "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|BNTUSDT|2026-07-03 01:30:00",
+      "symbol": "BNTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.264,
+      "stop": 0.2631702,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "opened_at": "2026-07-03T01:34:36",
+      "closed_at": null,
+      "realized_pct": 0.16
     }
   ]
 }
