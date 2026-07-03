@@ -2544,6 +2544,7 @@ def backtest_symbol_rsi_cross(item, kind, cfg):
     n = len(df)
     close = df["close"].values
     low = df["low"].values
+    high = df["high"].values
     r = rsi(df["close"], 21).values
     a = atr(df, 14).values
     sma200 = pd.Series(close).rolling(200).mean().values   # لبوابة حداثة الاختراق
@@ -2566,6 +2567,26 @@ def backtest_symbol_rsi_cross(item, kind, cfg):
                    for k in range(max(0, i - 10), i)):
             i += 1
             continue
+        # قاعدة الموجة (مطابقة للحيّ): إعادة دخول فقط بعد تصحيح ≥38.2% للموجة السابقة
+        reset_frac = 0.382
+        lb = max(0, i - 500)
+        prev_crosses = [k for k in range(lb + 1, i)
+                        if not np.isnan(r[k]) and not np.isnan(r[k - 1])
+                        and r[k] >= ob and r[k - 1] < ob]
+        if prev_crosses:
+            pc = prev_crosses[-1]
+            lo0 = float(np.min(low[max(0, pc - 20):pc + 1]))
+            peak = -np.inf
+            corrected = False
+            for k in range(pc, i):
+                peak = max(peak, high[k])
+                rng = peak - lo0
+                if rng > 0 and low[k] <= peak - reset_frac * rng:
+                    corrected = True
+                    break
+            if not corrected:
+                i += 1
+                continue
         entry = float(close[i])
         atrv = a[i] if not np.isnan(a[i]) else entry * 0.02
         lo_win = float(np.min(low[max(0, i - 20):i + 1]))
@@ -3022,6 +3043,28 @@ def detect_rsi_cross_signal(df, cfg):
     ob_max = cfg.get("rsi_ob_max", ob + 8)
     if r[i] > ob_max:
         return None
+    # ═══ الشرط #2: إعادة الدخول لنفس العملة فقط بعد تصحيح الموجة السابقة ═══
+    # بعد أي اختراق صعودي سابق لنفس العتبة (موجة سابقة)، لا نعيد الدخول إلا إذا
+    # دخل السعر في تصحيح ≥ 38.2% من مدى تلك الموجة (ارتداد فيبوناتشي) قبل الاختراق الحالي.
+    high = df["high"].values
+    reset_frac = 0.382
+    lb = max(0, i - 500)
+    prev_crosses = [k for k in range(lb + 1, i)
+                    if not np.isnan(r[k]) and not np.isnan(r[k - 1])
+                    and r[k] >= ob and r[k - 1] < ob]
+    if prev_crosses:
+        pc = prev_crosses[-1]
+        lo0 = float(np.min(low[max(0, pc - 20):pc + 1]))
+        peak = -np.inf
+        corrected = False
+        for k in range(pc, i):
+            peak = max(peak, high[k])
+            rng = peak - lo0
+            if rng > 0 and low[k] <= peak - reset_frac * rng:
+                corrected = True
+                break
+        if not corrected:
+            return None                      # الموجة السابقة لم تُصحَّح 38.2% بعد → مرفوضة
     entry = float(close[i])
     atrv = a[i] if not np.isnan(a[i]) else entry * 0.02
     stop = float(entry - 1.5 * atrv)
