@@ -15,23 +15,6 @@
     "tp1_done": false,
     "opened_ts": "2026-07-03T16:47:59"
   },
-  "DGBUSDT": {
-    "symbol": "DGBUSDT",
-    "tf": "15m",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "entry": 0.00245,
-    "init_stop": 0.00243842,
-    "stop": 0.0024584200000000002,
-    "R": 1.157999999999975e-05,
-    "tp1": 0.00246158,
-    "tp2": 0.00247316,
-    "qty": 40653.2061,
-    "qty_open": 20326.606100000005,
-    "tp1_done": true,
-    "opened_ts": "2026-07-03T16:48:11",
-    "armed": true
-  },
   "VANRYUSDT": {
     "symbol": "VANRYUSDT",
     "tf": "1h",
@@ -170,14 +153,14 @@
     "avg_entry": 0.009709783504064342,
     "entry": 0.009709783504064342,
     "init_stop": 0.00924514,
-    "stop": 0.00924514,
+    "stop": 0.009709783504064342,
     "R": 0.0004646435040643413,
     "tp1": 0.009836,
     "tp2": 0.010009,
     "qty": 2574.7227,
-    "qty_open": 2574.7227,
-    "tp1_done": false,
-    "armed": false,
+    "qty_open": 1287.4226999999998,
+    "tp1_done": true,
+    "armed": true,
     "opened_ts": "2026-07-03T20:19:03"
   },
   "SCUSDT": {
