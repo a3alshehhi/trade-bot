@@ -176,11 +176,17 @@ def instrument_filters(symbol):
 
 
 def _round_step(qty, step):
-    """تقريب الكمية لأسفل وفق خطوة الدقّة (مثل 0.00001)."""
+    """تقريب الكمية لأسفل إلى أقرب *مضاعف* لخطوة الكمية (stepSize).
+    مهم: بايننس يرجّع الخطوة بأصفار زائدة مثل "0.01000000" أو "1.00000000".
+    التقريب لعدد الخانات (quantize) خاطئ — يترك كميات ليست من مضاعفات الخطوة
+    فيرفضها بايننس بخطأ -1013 LOT_SIZE. الصحيح: floor(qty/step)*step."""
     if not step:
         return qty
     from decimal import Decimal, ROUND_DOWN
-    q = Decimal(str(qty)).quantize(Decimal(str(step)), rounding=ROUND_DOWN)
+    step = Decimal(str(step))
+    if step == 0:
+        return float(qty)
+    q = (Decimal(str(qty)) / step).to_integral_value(rounding=ROUND_DOWN) * step
     return float(q)
 
 

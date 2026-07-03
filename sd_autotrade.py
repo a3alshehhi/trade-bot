@@ -41,6 +41,14 @@ bx = bybit_exec          # المنصّة النشطة حالياً (تُبدَ�
 RISK_PCT = float(os.environ.get("SD_RISK_PCT", "0.005"))     # 0.5% لكل صفقة (غير مستخدم عند تثبيت القيمة)
 ORDER_USD = float(os.environ.get("SD_ORDER_USD", "300"))     # قيمة ثابتة لكل أمر شراء (USDT)
 MAX_CONCURRENT = int(os.environ.get("SD_MAX_POS", "5"))       # حد المراكز المتزامنة
+
+# ── إعدادات خاصّة ببايننس (2026-07-03، بطلب بو محمد) ──────────────────────────
+# بايننس Demo = *أوامر شراء فقط* بقيمة 100$ لكل أمر (لا بيع/لا إدارة خروج).
+# قيم بايبت تبقى كما هي (300$، إدارة 50/50 كاملة).
+BINANCE_ORDER_USD = float(os.environ.get("BINANCE_ORDER_USD", "100"))
+BINANCE_BUY_ONLY = os.environ.get("BINANCE_BUY_ONLY", "1") == "1"   # 1 = شراء فقط
+# مع الشراء فقط لا تُغلق المراكز، فنرفع حدّ المراكز حتى لا يتجمّد بعد 5.
+BINANCE_MAX_POS = int(os.environ.get("BINANCE_MAX_POS", "1000"))
 FEE_RATE = 0.001                                              # عمولة تقديرية للطرف الواحد
 POS_PATH = os.environ.get("SD_POS", "sd_positions.json")
 LEDGER_PATH = os.environ.get("SD_LEDGER", "sd_ledger.json")
@@ -370,58 +378,73 @@ def manage_open_positions():
         return
     changed = False
     for sym in list(positions.keys()):
-        pos = positions[sym]
         try:
-            price = bx.last_price(sym)
+            changed = _manage_one(sym, positions) or changed
         except Exception as ex:
-            print(f"manage[{EX_NAME}]: تعذّر جلب سعر {sym} —", ex)
+            # فشل رمز واحد (LOT_SIZE، رصيد، شبكة…) يجب ألا يوقف بقية المراكز
+            # ولا خطوة فتح الصفقات الجديدة في نفس الدورة.
+            print(f"manage[{EX_NAME}]: تخطّي {sym} بسبب خطأ —", ex)
             continue
-        if not price:
-            continue
-        R, entry = pos["R"], pos["entry"]
-
-        # (1) الوقف أولاً — حماية رأس المال
-        if price <= pos["stop"]:
-            sold = _sell(sym, pos["qty_open"])
-            reason = "تعادل/تتبّع" if pos["tp1_done"] else "وقف خسارة"
-            pnl = _record_exit(pos, sold or pos["qty_open"], price, reason)
-            del positions[sym]; changed = True
-            _notify(f"🛑 خروج [{EX_NAME}] {sym} @ {_fmt(price)} ({reason}) — "
-                    f"ربح/خسارة الساق ≈ {_fmt(pnl)} USDT")
-            continue
-
-        # (2) الهدف الأول — بيع 50% + تعادل
-        if not pos["tp1_done"] and price >= pos["tp1"]:
-            half = pos["qty_open"] * 0.5
-            sold = _sell(sym, half)
-            if sold > 0:
-                pnl = _record_exit(pos, sold, price, "هدف1 (50%)")
-                pos["qty_open"] -= sold
-                pos["tp1_done"] = True
-                pos["stop"] = entry                    # نقل الوقف للتعادل
-                changed = True
-                _notify(f"🎯 هدف1 [{EX_NAME}] {sym} @ {_fmt(price)} — جني 50% "
-                        f"(≈ {_fmt(pnl)} USDT) + نقل الوقف للتعادل")
-            continue
-
-        # (3) الهدف الثاني — إغلاق المتبقّي
-        if pos["tp1_done"] and price >= pos["tp2"]:
-            sold = _sell(sym, pos["qty_open"])
-            pnl = _record_exit(pos, sold or pos["qty_open"], price, "هدف2")
-            del positions[sym]; changed = True
-            _notify(f"🏁 هدف2 [{EX_NAME}] {sym} @ {_fmt(price)} — إغلاق كامل "
-                    f"(≈ {_fmt(pnl)} USDT)")
-            continue
-
-        # (4) وقف متحرّك بعد الهدف الأول (يقفل الأرباح، لا ينزل أبداً)
-        if pos["tp1_done"]:
-            trail = price - R
-            if trail > pos["stop"]:
-                pos["stop"] = trail
-                changed = True
 
     if changed:
         _save(POS_PATH, positions)
+
+
+def _manage_one(sym, positions):
+    """يدير مركزاً واحداً؛ يرجع True إن تغيّرت الحالة. يرفع الاستثناءات للمنادي
+    الذي يعزلها لكل رمز على حدة."""
+    pos = positions[sym]
+    changed = False
+    try:
+        price = bx.last_price(sym)
+    except Exception as ex:
+        print(f"manage[{EX_NAME}]: تعذّر جلب سعر {sym} —", ex)
+        return False
+    if not price:
+        return False
+    R, entry = pos["R"], pos["entry"]
+
+    # (1) الوقف أولاً — حماية رأس المال
+    if price <= pos["stop"]:
+        sold = _sell(sym, pos["qty_open"])
+        reason = "تعادل/تتبّع" if pos["tp1_done"] else "وقف خسارة"
+        pnl = _record_exit(pos, sold or pos["qty_open"], price, reason)
+        del positions[sym]
+        _notify(f"🛑 خروج [{EX_NAME}] {sym} @ {_fmt(price)} ({reason}) — "
+                f"ربح/خسارة الساق ≈ {_fmt(pnl)} USDT")
+        return True
+
+    # (2) الهدف الأول — بيع 50% + تعادل
+    if not pos["tp1_done"] and price >= pos["tp1"]:
+        half = pos["qty_open"] * 0.5
+        sold = _sell(sym, half)
+        if sold > 0:
+            pnl = _record_exit(pos, sold, price, "هدف1 (50%)")
+            pos["qty_open"] -= sold
+            pos["tp1_done"] = True
+            pos["stop"] = entry                    # نقل الوقف للتعادل
+            changed = True
+            _notify(f"🎯 هدف1 [{EX_NAME}] {sym} @ {_fmt(price)} — جني 50% "
+                    f"(≈ {_fmt(pnl)} USDT) + نقل الوقف للتعادل")
+        return changed
+
+    # (3) الهدف الثاني — إغلاق المتبقّي
+    if pos["tp1_done"] and price >= pos["tp2"]:
+        sold = _sell(sym, pos["qty_open"])
+        pnl = _record_exit(pos, sold or pos["qty_open"], price, "هدف2")
+        del positions[sym]
+        _notify(f"🏁 هدف2 [{EX_NAME}] {sym} @ {_fmt(price)} — إغلاق كامل "
+                f"(≈ {_fmt(pnl)} USDT)")
+        return True
+
+    # (4) وقف متحرّك بعد الهدف الأول (يقفل الأرباح، لا ينزل أبداً)
+    if pos["tp1_done"]:
+        trail = price - R
+        if trail > pos["stop"]:
+            pos["stop"] = trail
+            changed = True
+
+    return changed
 
 
 # ── عرض ──────────────────────────────────────────────────────────────────────
@@ -444,16 +467,32 @@ def cmd_status():
             print("📒 السجلّ فارغ (لا خروج بعد).")
 
 
+_DEFAULT_ORDER_USD = ORDER_USD          # قيمة بايبت الأصلية (300)
+_DEFAULT_MAX_POS = MAX_CONCURRENT       # حدّ بايبت الأصلي (5)
+
+
 def run_cycle():
     """دورة كاملة على كل منصّة مُفعّلة (بايبت + بايننس):
-    أدر المراكز المفتوحة أولاً، ثم افتح الإشارات الطازجة. فشل منصّة لا يوقف الأخرى."""
+    بايبت: إدارة 50/50 كاملة ثم فتح إشارات (300$).
+    بايننس: *شراء فقط* بقيمة 100$ (لا إدارة/بيع) بطلب بو محمد.
+    فشل منصّة لا يوقف الأخرى."""
+    global ORDER_USD, MAX_CONCURRENT
     for module, suffix, name in _enabled_exchanges():
         _use_exchange(module, suffix, name)
         try:
             if not is_enabled():
                 continue
-            manage_open_positions()
-            execute_from_tracker()
+            if name == "binance":
+                ORDER_USD = BINANCE_ORDER_USD          # 100$
+                MAX_CONCURRENT = BINANCE_MAX_POS
+                if not BINANCE_BUY_ONLY:               # الافتراضي: لا إدارة/بيع
+                    manage_open_positions()
+                execute_from_tracker()
+            else:
+                ORDER_USD = _DEFAULT_ORDER_USD          # بايبت 300$
+                MAX_CONCURRENT = _DEFAULT_MAX_POS
+                manage_open_positions()
+                execute_from_tracker()
         except Exception as ex:
             print(f"autotrade[{name}] خطأ:", ex)
 
