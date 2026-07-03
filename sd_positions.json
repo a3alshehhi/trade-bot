@@ -157,5 +157,44 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-03T21:04:03"
+  },
+  "PSGUSDT": {
+    "symbol": "PSGUSDT",
+    "tf": "15m",
+    "label": "RSI60 · 15m",
+    "prob": null,
+    "levels": [
+      0.529944,
+      0.529,
+      0.528056,
+      0.526712
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 75.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.5351351351409204,
+        "qty": 140.15151515,
+        "usd": 75.0
+      }
+    ],
+    "avg_entry": 0.5351351351409204,
+    "entry": 0.5351351351409204,
+    "init_stop": 0.5254066,
+    "stop": 0.5254066,
+    "R": 0.009728535140920425,
+    "tp1": 0.535176,
+    "tp2": 0.537944,
+    "qty": 140.15151515,
+    "qty_open": 140.15151515,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-03T21:48:17"
   }
 }

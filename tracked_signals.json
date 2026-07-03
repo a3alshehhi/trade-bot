@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-03 21:29:59.999000"
+    "last_bar": "2026-07-03 21:44:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -27241,7 +27241,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 15:14:59.999000",
-    "last_bar": "2026-07-03 21:29:59.999000",
+    "last_bar": "2026-07-03 21:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.016,
@@ -27650,11 +27650,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 20:59:59.999000",
-    "last_bar": "2026-07-03 21:29:59.999000",
+    "last_bar": "2026-07-03 21:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00064,
-    "lo_seen": 0.000636,
+    "lo_seen": 0.000635,
     "created": "2026-07-03T21:01:20"
   },
   "RSI50 · 1h|LAZIOUSDT|2026-07-03 20:59:59.999000": {
@@ -27815,8 +27815,8 @@
     ],
     "stop": 0.00913493,
     "init_stop": 0.00913493,
-    "cur_stop": 0.00913493,
-    "last_alert_stop": 0.00913493,
+    "cur_stop": 0.01,
+    "last_alert_stop": 0.01,
     "armed": false,
     "targets": [
       0.0102176,
@@ -27828,11 +27828,51 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 21:29:59.999000",
-    "last_bar": "2026-07-03 21:29:59.999000",
-    "hits": [],
+    "last_bar": "2026-07-03 21:44:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.01,
+    "hi_seen": 0.0103,
     "lo_seen": 0.01,
     "created": "2026-07-03T21:32:04"
+  },
+  "RSI60 · 15m|PSGUSDT|2026-07-03 21:44:59.999000": {
+    "symbol": "PSGUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.533,
+    "dca_levels": [
+      0.529944,
+      0.529,
+      0.528056,
+      0.526712
+    ],
+    "stop": 0.5254066,
+    "init_stop": 0.5254066,
+    "cur_stop": 0.5254066,
+    "last_alert_stop": 0.5254066,
+    "armed": false,
+    "targets": [
+      0.535176,
+      0.537944,
+      0.545944
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 21:44:59.999000",
+    "last_bar": "2026-07-03 21:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.533,
+    "lo_seen": 0.533,
+    "created": "2026-07-03T21:45:59"
   }
 }

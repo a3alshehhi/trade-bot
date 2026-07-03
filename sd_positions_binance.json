@@ -124,45 +124,6 @@
     "armed": false,
     "opened_ts": "2026-07-03T19:33:28"
   },
-  "COOKIEUSDT": {
-    "symbol": "COOKIEUSDT",
-    "tf": "15m",
-    "label": "RSI60 · 15m",
-    "prob": null,
-    "levels": [
-      0.009509,
-      0.00945,
-      0.009391,
-      0.009307
-    ],
-    "filled": [
-      true,
-      false,
-      false,
-      false
-    ],
-    "leg_usd": 25.0,
-    "n_legs": 4,
-    "fills": [
-      {
-        "price": 0.009709783504064342,
-        "qty": 2574.7227,
-        "usd": 25.0
-      }
-    ],
-    "avg_entry": 0.009709783504064342,
-    "entry": 0.009709783504064342,
-    "init_stop": 0.00924514,
-    "stop": 0.009709783504064342,
-    "R": 0.0004646435040643413,
-    "tp1": 0.009836,
-    "tp2": 0.010009,
-    "qty": 2574.7227,
-    "qty_open": 1287.4226999999998,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-03T20:19:03"
-  },
   "SCUSDT": {
     "symbol": "SCUSDT",
     "tf": "15m",
@@ -312,5 +273,44 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-03T21:33:41"
+  },
+  "PSGUSDT": {
+    "symbol": "PSGUSDT",
+    "tf": "15m",
+    "label": "RSI60 · 15m",
+    "prob": null,
+    "levels": [
+      0.529944,
+      0.529,
+      0.528056,
+      0.526712
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 25.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.5375945225569285,
+        "qty": 46.50345,
+        "usd": 25.0
+      }
+    ],
+    "avg_entry": 0.5375945225569285,
+    "entry": 0.5375945225569285,
+    "init_stop": 0.5254066,
+    "stop": 0.5254066,
+    "R": 0.012187922556928577,
+    "tp1": 0.535176,
+    "tp2": 0.537944,
+    "qty": 46.50345,
+    "qty_open": 46.50345,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-03T21:48:59"
   }
 }
