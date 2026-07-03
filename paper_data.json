@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-03T05:18:05",
+  "updated_at": "2026-07-03T05:33:37",
   "stats": {
-    "open": 30,
+    "open": 31,
     "closed": 795,
     "win_rate": 53.5,
     "profit_factor": 1.4,
@@ -13605,6 +13605,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-03T04:23:33",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ALTUSDT|2026-07-03 05:00:00",
+      "symbol": "ALTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.00616,
+      "stop": 0.00606232,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T05:20:50",
       "closed_at": null,
       "realized_pct": 0.0
     }
