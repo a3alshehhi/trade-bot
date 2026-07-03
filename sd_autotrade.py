@@ -29,7 +29,13 @@ import os
 import json
 import datetime as dt
 
-import bybit_exec as bx
+import bybit_exec
+try:
+    import binance_exec
+except Exception:
+    binance_exec = None
+
+bx = bybit_exec          # المنصّة النشطة حالياً (تُبدَّل لكل منصّة داخل الدورة)
 
 # ── إعدادات ──────────────────────────────────────────────────────────────────
 RISK_PCT = float(os.environ.get("SD_RISK_PCT", "0.005"))     # 0.5% لكل صفقة (غير مستخدم عند تثبيت القيمة)
@@ -49,6 +55,37 @@ COOLDOWN_H = float(os.environ.get("SD_COOLDOWN_H", "12"))  # لا تعِد فت�
 _LABELS_ENV = os.environ.get("SD_LABELS", "*").strip()
 
 SEP = "━━━━━━━━━━━━━━━━━━"
+
+# ── دعم منصّات متعدّدة (بايبت + بايننس) ───────────────────────────────────────
+# كل منصّة لها ملفات حالة منفصلة: بايبت يبقي الأسماء الأصلية، وبايننس يأخذ لاحقة
+# "_binance" حتى لا تختلط الصفقات. تُبدَّل الأسماء عبر _use_exchange داخل الدورة.
+_POS_BASE, _LEDGER_BASE = POS_PATH, LEDGER_PATH
+_EXEC_BASE, _LAST_BASE = EXEC_PATH, LAST_PATH
+EX_NAME = "bybit"        # اسم المنصّة النشطة (للرسائل)
+
+
+def _use_exchange(module, suffix, name):
+    """يبدّل المنصّة النشطة وملفات حالتها (بايبت=أسماء أصلية، غيره=لاحقة)."""
+    global bx, EX_NAME, POS_PATH, LEDGER_PATH, EXEC_PATH, LAST_PATH
+    bx = module
+    EX_NAME = name
+
+    def _s(n):
+        if not suffix:
+            return n
+        base, ext = n.rsplit(".", 1)
+        return f"{base}_{suffix}.{ext}"
+
+    POS_PATH, LEDGER_PATH = _s(_POS_BASE), _s(_LEDGER_BASE)
+    EXEC_PATH, LAST_PATH = _s(_EXEC_BASE), _s(_LAST_BASE)
+
+
+def _enabled_exchanges():
+    """قائمة المنصّات المُتاحة للتنفيذ (بايبت دائماً، بايننس إن توفّر الملف)."""
+    xs = [(bybit_exec, "", "bybit")]
+    if binance_exec is not None:
+        xs.append((binance_exec, "binance", "binance"))
+    return xs
 
 
 # ── تخزين الحالة ─────────────────────────────────────────────────────────────
@@ -94,10 +131,10 @@ def is_enabled():
     if os.environ.get("SD_EXECUTE") != "1":
         return False
     if not bx.API_KEY or not bx.API_SECRET:
-        print("autotrade: لا توجد مفاتيح Bybit — التنفيذ متوقّف.")
+        print(f"autotrade[{EX_NAME}]: لا توجد مفاتيح — التنفيذ متوقّف.")
         return False
     if bx.ENV == "mainnet" and os.environ.get("SD_ALLOW_MAINNET") != "1":
-        print("autotrade: mainnet ممنوع بلا SD_ALLOW_MAINNET=1 — التنفيذ متوقّف.")
+        print(f"autotrade[{EX_NAME}]: mainnet ممنوع بلا SD_ALLOW_MAINNET=1 — متوقّف.")
         return False
     return True
 
@@ -126,14 +163,14 @@ def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equit
 
     filt = bx.instrument_filters(sym)
     if not filt:                                    # الزوج غير مُدرَج للتداول (Spot/Demo)
-        print(f"autotrade: {sym} غير متاح للتداول على المنصّة — تخطّي")
+        print(f"autotrade[{EX_NAME}]: {sym} غير متاح للتداول على المنصّة — تخطّي")
         return False
     min_amt = float(filt.get("minOrderAmt") or 5)
     avail = bx.wallet_balance()["coins"].get("USDT", {}).get("amount", 0.0)
     notional = min(notional, avail * 0.98)
 
-    # سقف Bybit لكمية أمر السوق (يمنع خطأ 170381): إن كانت القيمة تُنتج كمية
-    # أساس تتجاوز الحد الأقصى، نخفّض القيمة لتبقى تحت السقف.
+    # سقف كمية أمر السوق (يمنع خطأ التجاوز): إن كانت القيمة تُنتج كمية أساس
+    # تتجاوز الحد الأقصى، نخفّض القيمة لتبقى تحت السقف.
     px = bx.last_price(sym) or entry
     max_mkt_qty = float(filt.get("maxMktOrderQty") or 0)
     max_amt = float(filt.get("maxOrderAmt") or 0)
@@ -143,7 +180,7 @@ def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equit
         notional = min(notional, max_amt * 0.98)
 
     if notional < min_amt:
-        print(f"autotrade: {sym} حجم {notional:.2f} < الحد الأدنى {min_amt} — تخطّي")
+        print(f"autotrade[{EX_NAME}]: {sym} حجم {notional:.2f} < الحد الأدنى {min_amt} — تخطّي")
         return False
 
     base = sym.replace("USDT", "")
@@ -152,11 +189,11 @@ def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equit
         bx.market_buy(sym, round(notional, 2))
         after = bx.coin_qty(base)
     except Exception as ex:
-        print(f"autotrade: فشل شراء {sym} —", ex)
+        print(f"autotrade[{EX_NAME}]: فشل شراء {sym} —", ex)
         return False
     qty = max(after - before, 0.0)
     if qty <= 0:
-        print(f"autotrade: {sym} لم تُرصد كمية بعد الشراء — تخطّي")
+        print(f"autotrade[{EX_NAME}]: {sym} لم تُرصد كمية بعد الشراء — تخطّي")
         return False
 
     positions[sym] = {
@@ -168,7 +205,7 @@ def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equit
     }
     _save(POS_PATH, positions)
     _notify(
-        f"{SEP}\n🟢 دخول تجريبي — {sym} · {tf}  [{label}]\n{SEP}\n"
+        f"{SEP}\n🟢 دخول تجريبي [{EX_NAME}] — {sym} · {tf}  [{label}]\n{SEP}\n"
         f"📍 الدخول ≈ {_fmt(entry)}\n🛑 الوقف {_fmt(stop)}  (−{stop_pct*100:.2f}%)\n"
         f"🎯 هدف1 {_fmt(positions[sym]['tp1'])} · هدف2 {_fmt(positions[sym]['tp2'])}\n"
         f"📦 الكمية {_fmt(qty)} {base} (≈ {_fmt(notional)} USDT)\n"
@@ -182,7 +219,7 @@ def _get_equity():
     try:
         eq = bx.wallet_balance()["total_usd"]
     except Exception as ex:
-        print("autotrade: تعذّر جلب الرصيد —", ex)
+        print(f"autotrade[{EX_NAME}]: تعذّر جلب الرصيد —", ex)
         return 0.0
     return eq
 
@@ -219,7 +256,7 @@ def _load_executed():
 
 
 def execute_from_tracker():
-    """يقرأ tracked_signals.json (حيث تكتب كل البوتات: العرض/الطلب، RSI70/الانعكاس،
+    """يقرأ tracked_signals.json (حيث تكتب كل البوتات: العرض/الطلب، RSI70/الانعكاس,
     trendwave) ويفتح صفقة تجريبية لكل إشارة *طازجة* لم تُنفّذ بعد.
     شراء فقط (long): يتخطّى أي إعداد هدفه تحت الدخول (لا بيع على المكشوف في Spot)."""
     if not is_enabled():
@@ -259,7 +296,7 @@ def execute_from_tracker():
             try:
                 since_h = (now - dt.datetime.fromisoformat(last_ts)).total_seconds() / 3600
                 if since_h < COOLDOWN_H:
-                    print(f"autotrade: {sym} في فترة تهدئة "
+                    print(f"autotrade[{EX_NAME}]: {sym} في فترة تهدئة "
                           f"({since_h:.1f}h < {COOLDOWN_H}h) — تخطّي")
                     continue
             except Exception:
@@ -273,7 +310,7 @@ def execute_from_tracker():
         if age_h > MAX_SIGNAL_AGE_H:
             continue
         if len(positions) >= MAX_CONCURRENT:
-            print(f"autotrade: بلغ حدّ المراكز ({MAX_CONCURRENT})")
+            print(f"autotrade[{EX_NAME}]: بلغ حدّ المراكز ({MAX_CONCURRENT})")
             break
         try:
             entry = float(tr["entry"])
@@ -337,7 +374,7 @@ def manage_open_positions():
         try:
             price = bx.last_price(sym)
         except Exception as ex:
-            print(f"manage: تعذّر جلب سعر {sym} —", ex)
+            print(f"manage[{EX_NAME}]: تعذّر جلب سعر {sym} —", ex)
             continue
         if not price:
             continue
@@ -349,7 +386,7 @@ def manage_open_positions():
             reason = "تعادل/تتبّع" if pos["tp1_done"] else "وقف خسارة"
             pnl = _record_exit(pos, sold or pos["qty_open"], price, reason)
             del positions[sym]; changed = True
-            _notify(f"🛑 خروج {sym} @ {_fmt(price)} ({reason}) — "
+            _notify(f"🛑 خروج [{EX_NAME}] {sym} @ {_fmt(price)} ({reason}) — "
                     f"ربح/خسارة الساق ≈ {_fmt(pnl)} USDT")
             continue
 
@@ -363,7 +400,7 @@ def manage_open_positions():
                 pos["tp1_done"] = True
                 pos["stop"] = entry                    # نقل الوقف للتعادل
                 changed = True
-                _notify(f"🎯 هدف1 {sym} @ {_fmt(price)} — جني 50% "
+                _notify(f"🎯 هدف1 [{EX_NAME}] {sym} @ {_fmt(price)} — جني 50% "
                         f"(≈ {_fmt(pnl)} USDT) + نقل الوقف للتعادل")
             continue
 
@@ -372,7 +409,7 @@ def manage_open_positions():
             sold = _sell(sym, pos["qty_open"])
             pnl = _record_exit(pos, sold or pos["qty_open"], price, "هدف2")
             del positions[sym]; changed = True
-            _notify(f"🏁 هدف2 {sym} @ {_fmt(price)} — إغلاق كامل "
+            _notify(f"🏁 هدف2 [{EX_NAME}] {sym} @ {_fmt(price)} — إغلاق كامل "
                     f"(≈ {_fmt(pnl)} USDT)")
             continue
 
@@ -389,33 +426,45 @@ def manage_open_positions():
 
 # ── عرض ──────────────────────────────────────────────────────────────────────
 def cmd_status():
-    positions = load_positions()
-    ledger = load_ledger()
-    print(f"{SEP}\n📊 المراكز المفتوحة: {len(positions)}\n{SEP}")
-    for sym, p in positions.items():
-        state = "بعد هدف1 (تتبّع)" if p["tp1_done"] else "قبل هدف1"
-        print(f"  {sym:<10} دخول {_fmt(p['entry'])}  وقف {_fmt(p['stop'])}  "
-              f"كمية {_fmt(p['qty_open'])}  [{state}]")
-    if ledger:
-        pnl = sum(x["pnl_usdt"] for x in ledger)
-        wins = sum(1 for x in ledger if x["pnl_usdt"] > 0)
-        print(f"{SEP}\n📒 سيقان مُغلقة: {len(ledger)} · رابحة {wins} · "
-              f"صافي ≈ {_fmt(pnl)} USDT\n{SEP}")
-    else:
-        print("📒 السجلّ فارغ (لا خروج بعد).")
+    for module, suffix, name in _enabled_exchanges():
+        _use_exchange(module, suffix, name)
+        positions = load_positions()
+        ledger = load_ledger()
+        print(f"{SEP}\n📊 [{name}] المراكز المفتوحة: {len(positions)}\n{SEP}")
+        for sym, p in positions.items():
+            state = "بعد هدف1 (تتبّع)" if p["tp1_done"] else "قبل هدف1"
+            print(f"  {sym:<10} دخول {_fmt(p['entry'])}  وقف {_fmt(p['stop'])}  "
+                  f"كمية {_fmt(p['qty_open'])}  [{state}]")
+        if ledger:
+            pnl = sum(x["pnl_usdt"] for x in ledger)
+            wins = sum(1 for x in ledger if x["pnl_usdt"] > 0)
+            print(f"📒 سيقان مُغلقة: {len(ledger)} · رابحة {wins} · "
+                  f"صافي ≈ {_fmt(pnl)} USDT")
+        else:
+            print("📒 السجلّ فارغ (لا خروج بعد).")
 
 
 def run_cycle():
-    """دورة كاملة: أدر المراكز المفتوحة أولاً، ثم افتح الإشارات الطازجة."""
-    manage_open_positions()
-    execute_from_tracker()
+    """دورة كاملة على كل منصّة مُفعّلة (بايبت + بايننس):
+    أدر المراكز المفتوحة أولاً، ثم افتح الإشارات الطازجة. فشل منصّة لا يوقف الأخرى."""
+    for module, suffix, name in _enabled_exchanges():
+        _use_exchange(module, suffix, name)
+        try:
+            if not is_enabled():
+                continue
+            manage_open_positions()
+            execute_from_tracker()
+        except Exception as ex:
+            print(f"autotrade[{name}] خطأ:", ex)
 
 
 if __name__ == "__main__":
     import sys
     mode = sys.argv[1] if len(sys.argv) > 1 else "status"
     if mode == "manage":
-        manage_open_positions()
+        for _m, _s, _n in _enabled_exchanges():
+            _use_exchange(_m, _s, _n)
+            manage_open_positions()
     elif mode == "run":
         run_cycle()
     else:
