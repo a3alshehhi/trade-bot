@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-03T13:33:19",
+  "updated_at": "2026-07-03T13:47:36",
   "stats": {
     "open": 34,
-    "closed": 810,
-    "win_rate": 53.7,
+    "closed": 811,
+    "win_rate": 53.6,
     "profit_factor": 1.43,
-    "total_pct": 3146.42,
-    "avg_pct": 0.57,
+    "total_pct": 3135.06,
+    "avg_pct": 0.56,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-03",
-        "trades": 35,
-        "win_rate": 68.6,
-        "return_pct": 46.28,
+        "trades": 36,
+        "win_rate": 66.7,
+        "return_pct": 45.76,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 318,
-        "win_rate": 58.8,
-        "return_pct": 162.82,
+        "trades": 319,
+        "win_rate": 58.6,
+        "return_pct": 161.9,
         "month": "2026-07"
       },
       {
@@ -142,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 151,
-        "win_rate": 70.2,
-        "return_pct": 120.45
+        "trades": 152,
+        "win_rate": 69.7,
+        "return_pct": 119.68
       },
       {
         "key": "2026-06",
@@ -13922,6 +13922,21 @@
       "closed_at": "2026-07-03T13:03:50",
       "realized_pct": -0.25,
       "result_pct": -0.25
+    },
+    {
+      "id": "العرض/الطلب|BANDUSDT|2026-07-03 13:30:00",
+      "symbol": "BANDUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1542,
+      "stop": 0.1536538,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-03T13:34:04",
+      "closed_at": "2026-07-03T13:47:35",
+      "realized_pct": -0.35,
+      "result_pct": -0.35
     }
   ]
 }
