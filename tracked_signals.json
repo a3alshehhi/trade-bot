@@ -27766,5 +27766,35 @@
     "hi_seen": 0.003061,
     "lo_seen": 0.003061,
     "created": "2026-07-03T21:01:50"
+  },
+  "العرض/الطلب|CHRUSDT|2026-07-03 21:00:00": {
+    "symbol": "CHRUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 4334,
+    "entry": 0.01603,
+    "stop": 0.01559274,
+    "init_stop": 0.01559274,
+    "cur_stop": 0.01559274,
+    "last_alert_stop": 0.01559274,
+    "armed": false,
+    "targets": [
+      0.01646726,
+      0.01690452
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 21:00:00",
+    "last_bar": "2026-07-03 21:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01603,
+    "lo_seen": 0.01603,
+    "created": "2026-07-03T21:23:43"
   }
 }
