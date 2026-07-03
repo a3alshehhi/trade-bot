@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-07-02T23:47:47",
+  "updated_at": "2026-07-03T00:03:46",
   "stats": {
-    "open": 30,
-    "closed": 775,
-    "win_rate": 53.0,
+    "open": 29,
+    "closed": 776,
+    "win_rate": 53.1,
     "profit_factor": 1.39,
-    "total_pct": 2119.38,
+    "total_pct": 2124.26,
     "avg_pct": 0.54,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-07-03",
+        "trades": 1,
+        "win_rate": 100.0,
+        "return_pct": 0.22,
+        "week": "2026-W27",
+        "month": "2026-07"
+      },
       {
         "key": "2026-07-02",
         "trades": 60,
@@ -111,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 283,
-        "win_rate": 57.6,
-        "return_pct": 79.67,
+        "trades": 284,
+        "win_rate": 57.7,
+        "return_pct": 80.07,
         "month": "2026-07"
       },
       {
@@ -134,9 +142,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 116,
-        "win_rate": 70.7,
-        "return_pct": 50.71
+        "trades": 117,
+        "win_rate": 70.9,
+        "return_pct": 51.04
       },
       {
         "key": "2026-06",
@@ -13234,10 +13242,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-02T22:19:28",
-      "closed_at": null,
-      "realized_pct": 0.22
+      "closed_at": "2026-07-03T00:03:44",
+      "realized_pct": 0.22,
+      "result_pct": 0.22
     },
     {
       "id": "العرض/الطلب|ALPINEUSDT|2026-07-02 23:00:00",
