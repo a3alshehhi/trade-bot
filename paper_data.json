@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-03T22:17:54",
+  "updated_at": "2026-07-03T22:33:15",
   "stats": {
-    "open": 32,
+    "open": 33,
     "closed": 834,
     "win_rate": 54.4,
     "profit_factor": 1.45,
@@ -14304,6 +14304,20 @@
       "closed_at": "2026-07-03T22:17:54",
       "realized_pct": 3.56,
       "result_pct": 3.56
+    },
+    {
+      "id": "RSI60 · 15m|WCTUSDT|2026-07-03 22:29:59.999000",
+      "symbol": "WCTUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.04494,
+      "stop": 0.04428491,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-03T22:31:16",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }

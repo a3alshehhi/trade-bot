@@ -312,5 +312,44 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-03T21:48:59"
+  },
+  "WCTUSDT": {
+    "symbol": "WCTUSDT",
+    "tf": "15m",
+    "label": "RSI60 · 15m",
+    "prob": null,
+    "levels": [
+      0.04465732,
+      0.04457,
+      0.04448268,
+      0.04435836
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 25.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.04491210521361275,
+        "qty": 556.6428,
+        "usd": 25.0
+      }
+    ],
+    "avg_entry": 0.04491210521361275,
+    "entry": 0.04491210521361275,
+    "init_stop": 0.04428491,
+    "stop": 0.04428491,
+    "R": 0.0006271952136127565,
+    "tp1": 0.04514128,
+    "tp2": 0.04539732,
+    "qty": 556.6428,
+    "qty_open": 556.6428,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-03T22:34:10"
   }
 }
