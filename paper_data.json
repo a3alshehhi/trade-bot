@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-03T19:32:51",
+  "updated_at": "2026-07-03T19:47:33",
   "stats": {
     "open": 34,
     "closed": 822,
@@ -14000,11 +14000,13 @@
       "timeframe": "15m",
       "entry": 0.00245,
       "stop": 0.00243842,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-03T15:49:27",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.24
     },
     {
       "id": "العرض/الطلب|APTUSDT|2026-07-03 15:00:00",
@@ -14111,11 +14113,13 @@
       "timeframe": "15m",
       "entry": 1.1329,
       "stop": 1.11953831,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-03T19:31:09",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.16
     }
   ]
 }

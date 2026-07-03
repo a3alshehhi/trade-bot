@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-03 19:29:59.999000"
+    "last_bar": "2026-07-03 19:44:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -27215,7 +27215,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 15:14:59.999000",
-    "last_bar": "2026-07-03 19:29:59.999000",
+    "last_bar": "2026-07-03 19:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.016,
@@ -27230,8 +27230,8 @@
     "entry": 0.00245,
     "stop": 0.00243842,
     "init_stop": 0.00243842,
-    "cur_stop": 0.00243842,
-    "last_alert_stop": 0.00243842,
+    "cur_stop": 0.00245,
+    "last_alert_stop": 0.00245,
     "armed": false,
     "targets": [
       0.00246158,
@@ -27245,10 +27245,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 15:45:00",
-    "last_bar": "2026-07-03 19:29:59.999000",
-    "hits": [],
+    "last_bar": "2026-07-03 19:44:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.00246,
+    "hi_seen": 0.00247,
     "lo_seen": 0.00244,
     "created": "2026-07-03T15:49:27"
   },
@@ -27477,8 +27479,8 @@
     ],
     "stop": 1.11953831,
     "init_stop": 1.11953831,
-    "cur_stop": 1.11953831,
-    "last_alert_stop": 1.11953831,
+    "cur_stop": 1.1329,
+    "last_alert_stop": 1.1329,
     "armed": false,
     "targets": [
       1.136572,
@@ -27494,11 +27496,13 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 19:29:59.999000",
-    "last_bar": "2026-07-03 19:29:59.999000",
-    "hits": [],
+    "last_bar": "2026-07-03 19:44:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 1.1329,
-    "lo_seen": 1.1329,
+    "hi_seen": 1.14,
+    "lo_seen": 1.1239,
     "created": "2026-07-03T19:31:09"
   }
 }
