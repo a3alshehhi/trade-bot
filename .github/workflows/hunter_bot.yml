@@ -25,18 +25,19 @@ jobs:
       - name: Install deps
         run: pip install requests
 
-      - name: Run Hunter bot (فريما 15m و 1h)
+      - name: "Run Hunter bot (الوصفة الفائزة: 1س + VWAP أسبوعي + VOL_Z=2)"
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          # كل فريم بحالة مستقلّة لتفادي تضارب منع التكرار
-          HUNTER_TF=15m HUNTER_HTF=1h HUNTER_STATE=hunter_state_15m.json python hunter_bot.py scan
-          HUNTER_TF=1h  HUNTER_HTF=4h HUNTER_STATE=hunter_state_1h.json  python hunter_bot.py scan
+          # فحص فريم الساعة فقط (15د خاسرة في الباك-تست) — الافتراضيات الآن 1h/4h/wvwap/vol_z=2
+          python hunter_bot.py scan
+          # إدارة الخروج الحيّة (نظام ب) مباشرة بعد الفحص
+          python hunter_bot.py monitor
 
-      - name: Persist state + tracked signals
+      - name: Persist state + tracked signals + positions
         run: |
-          for f in hunter_state*.json tracked_signals.json; do
+          for f in hunter_state*.json hunter_positions.json tracked_signals.json; do
             [ -f "$f" ] && git add "$f"
           done
           if ! git diff --cached --quiet; then

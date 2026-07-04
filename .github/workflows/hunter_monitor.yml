@@ -1,0 +1,45 @@
+name: Hunter Monitor (إدارة الخروج الحيّة — نظام ب)
+
+# يتابع المراكز المفتوحة ويطبّق نظام الخروج (ب): جني 50% عند الهدف الأول ثم
+# وقف متحرّك شانديلير للباقي. يرسل تنبيهات تيليجرام. لا يحرّك أموالاً.
+
+on:
+  workflow_dispatch:            # يدوي / عبر cron-job.org (كل 15 دقيقة موصى به)
+  schedule:
+    - cron: "*/15 * * * *"      # كل 15 دقيقة (كرون GitHub قد يتأخّر — يُفضّل cron-job.org)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hunter-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install deps
+        run: pip install requests
+      - name: Monitor open positions (نظام الخروج ب)
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python hunter_bot.py monitor
+      - name: Persist positions
+        run: |
+          [ -f hunter_positions.json ] && git add hunter_positions.json || true
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions"
+            git config user.email "actions@github.com"
+            git commit -m "update hunter positions [skip ci]"
+            for i in 1 2 3 4 5; do
+              git pull --rebase --autostash origin main && git push && break
+              sleep 5
+            done
+          fi
