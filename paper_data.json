@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-04T08:03:01",
+  "updated_at": "2026-07-04T08:17:56",
   "stats": {
-    "open": 36,
+    "open": 37,
     "closed": 856,
     "win_rate": 54.6,
     "profit_factor": 1.52,
@@ -14727,6 +14727,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-04T07:31:08",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|DIAUSDT|2026-07-04 08:00:00",
+      "symbol": "DIAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1109,
+      "stop": 0.1104652,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T08:04:44",
       "closed_at": null,
       "realized_pct": 0.0
     }
