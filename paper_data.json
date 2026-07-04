@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-04T02:48:11",
+  "updated_at": "2026-07-04T03:03:00",
   "stats": {
     "open": 39,
-    "closed": 844,
-    "win_rate": 54.5,
+    "closed": 845,
+    "win_rate": 54.6,
     "profit_factor": 1.44,
-    "total_pct": 3778.65,
+    "total_pct": 3877.55,
     "avg_pct": 0.57,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 10,
-        "win_rate": 60.0,
-        "return_pct": -8.06,
+        "trades": 11,
+        "win_rate": 63.6,
+        "return_pct": -5.72,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 352,
-        "win_rate": 60.2,
-        "return_pct": 214.0,
+        "trades": 353,
+        "win_rate": 60.3,
+        "return_pct": 222.01,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 185,
-        "win_rate": 70.8,
-        "return_pct": 163.38
+        "trades": 186,
+        "win_rate": 71.0,
+        "return_pct": 170.1
       },
       {
         "key": "2026-06",
@@ -14563,11 +14563,31 @@
       "timeframe": "1h",
       "entry": 0.0564,
       "stop": 0.05571348,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-04T02:23:26",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.61
+    },
+    {
+      "id": "العرض/الطلب|ALTUSDT|2026-07-04 02:00:00",
+      "symbol": "ALTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.00638,
+      "stop": 0.00627142,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-04T02:53:28",
+      "closed_at": "2026-07-04T03:03:00",
+      "realized_pct": 2.55,
+      "result_pct": 2.55
     }
   ]
 }
