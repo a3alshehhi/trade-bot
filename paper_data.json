@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-04T00:47:43",
+  "updated_at": "2026-07-04T01:03:31",
   "stats": {
-    "open": 39,
-    "closed": 835,
-    "win_rate": 54.5,
-    "profit_factor": 1.45,
-    "total_pct": 4162.59,
-    "avg_pct": 0.58,
+    "open": 38,
+    "closed": 838,
+    "win_rate": 54.3,
+    "profit_factor": 1.44,
+    "total_pct": 3947.28,
+    "avg_pct": 0.57,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 1,
-        "win_rate": 100.0,
-        "return_pct": 1.04,
+        "trades": 4,
+        "win_rate": 25.0,
+        "return_pct": -4.06,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 343,
-        "win_rate": 60.3,
-        "return_pct": 245.09,
+        "trades": 346,
+        "win_rate": 59.8,
+        "return_pct": 227.66,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 176,
-        "win_rate": 71.6,
-        "return_pct": 189.45
+        "trades": 179,
+        "win_rate": 70.4,
+        "return_pct": 174.83
       },
       {
         "key": "2026-06",
@@ -14258,10 +14258,11 @@
       "entry": 0.01603,
       "stop": 0.01559274,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T21:23:43",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-04T01:03:22",
+      "realized_pct": -2.73,
+      "result_pct": -2.73
     },
     {
       "id": "trendwave · 15m|COOKIEUSDT|2026-07-03 21:29:59.999000",
@@ -14326,10 +14327,11 @@
       "entry": 0.04494,
       "stop": 0.04428491,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T22:31:16",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-04T01:03:23",
+      "realized_pct": -1.46,
+      "result_pct": -1.46
     },
     {
       "id": "RSI50 · 1h|GPSUSDT|2026-07-03 22:59:59.999000",
@@ -14367,11 +14369,13 @@
       "timeframe": "1h",
       "entry": 0.325,
       "stop": 0.321712,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-03T23:38:40",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.51
     },
     {
       "id": "RSI60 · 15m|ACTUSDT|2026-07-03 23:59:59.999000",
@@ -14426,6 +14430,35 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-04T00:16:49",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|BICOUSDT|2026-07-04 00:30:00",
+      "symbol": "BICOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01563,
+      "stop": 0.01548368,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-04T00:40:09",
+      "closed_at": "2026-07-04T01:03:30",
+      "realized_pct": -0.94,
+      "result_pct": -0.94
+    },
+    {
+      "id": "العرض/الطلب|BREVUSDT|2026-07-04 00:00:00",
+      "symbol": "BREVUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0799,
+      "stop": 0.0768812,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T00:48:31",
       "closed_at": null,
       "realized_pct": 0.0
     }
