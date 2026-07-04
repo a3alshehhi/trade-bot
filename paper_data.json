@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-04T16:03:40",
+  "updated_at": "2026-07-04T16:17:39",
   "stats": {
-    "open": 33,
-    "closed": 885,
+    "open": 32,
+    "closed": 886,
     "win_rate": 55.6,
     "profit_factor": 1.53,
-    "total_pct": 10510.43,
-    "avg_pct": 0.67,
+    "total_pct": 10661.09,
+    "avg_pct": 0.68,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 51,
-        "win_rate": 74.5,
-        "return_pct": 151.51,
+        "trades": 52,
+        "win_rate": 75.0,
+        "return_pct": 155.08,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 393,
-        "win_rate": 62.1,
-        "return_pct": 758.99,
+        "trades": 394,
+        "win_rate": 62.2,
+        "return_pct": 771.19,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 226,
-        "win_rate": 72.1,
-        "return_pct": 620.5
+        "trades": 227,
+        "win_rate": 72.2,
+        "return_pct": 630.74
       },
       {
         "key": "2026-06",
@@ -15072,11 +15072,13 @@
       "timeframe": "15m",
       "entry": 0.2095,
       "stop": 0.20445061,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-04T15:16:07",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.38
     },
     {
       "id": "RSI60 · 15m|GALAUSDT|2026-07-04 15:14:59.999000",
@@ -15087,12 +15089,14 @@
       "entry": 0.002444,
       "stop": 0.00237555,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T15:16:08",
-      "closed_at": null,
-      "realized_pct": 0.43
+      "closed_at": "2026-07-04T16:17:35",
+      "realized_pct": 1.42,
+      "result_pct": 1.42
     },
     {
       "id": "RSI60 · 15m|SCRUSDT|2026-07-04 15:14:59.999000",
