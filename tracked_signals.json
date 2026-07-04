@@ -29461,5 +29461,43 @@
     "hi_seen": 0.0203,
     "lo_seen": 0.01997,
     "created": "2026-07-04T13:52:05"
+  },
+  "RSI60 · 15m|NEARUSDT|2026-07-04 14:29:59.999000": {
+    "symbol": "NEARUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 2.014,
+    "dca_levels": [
+      1.992608,
+      1.986,
+      1.979392,
+      1.969984
+    ],
+    "stop": 1.96427183,
+    "init_stop": 1.96427183,
+    "cur_stop": 1.96427183,
+    "last_alert_stop": 1.96427183,
+    "armed": false,
+    "targets": [
+      2.029232,
+      2.048608,
+      2.104608
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 14:29:59.999000",
+    "last_bar": "2026-07-04 14:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 2.014,
+    "lo_seen": 2.014,
+    "created": "2026-07-04T14:31:17"
   }
 }
