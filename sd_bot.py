@@ -19,6 +19,8 @@
   • CHoCH إلزامي: لا يدخل إلا إذا كسرت شمعة الاندفاع الهيكل صعوداً لأول مرة (انعكاس
     بداية موجة/زخم شرائي)، لا مجرد استمرار BOS (require_choch).
   • قريب من فلتر الاتجاه: الدخول فوق EMA200 لكن ضمن max_ema_dist (لا متمدّداً بعيداً).
+  • تشبّع شرائي بعد بيعي (فوق CHoCH، 2026-07-04): تبلغ موجة الاندفاع تشبّعاً شرائياً
+    (RSI≥rsi_ob) مسبوقاً بتشبّع بيعي (RSI≤rsi_os) واحد أو أكثر (require_ob_after_os).
 
 الأوضاع:
   python sd_bot.py train     # يبني العيّنات من التاريخ ويدرّب النموذج (sd_model.joblib)
@@ -49,6 +51,10 @@ CFG = dict(
     # ── تشديد الدخول (2026-07-04) — «CHoCH في بداية الموجة + قرب من الاتجاه» ──
     require_choch=1,       # يدخل فقط إذا كسرت شمعة الاندفاع الهيكل صعوداً لأول مرة (انعكاس CHoCH)
     max_ema_dist=0.06,     # أقصى بُعد للدخول فوق EMA200 (قريب من فلتر الاتجاه لا متمدّد)؛ 0 = تعطيل
+    # ── تشبّع شرائي بعد تشبّع بيعي (فوق CHoCH) — طلب بو محمد 2026-07-04 ──
+    require_ob_after_os=1, # يشترط: تشبّع شرائي (RSI≥rsi_ob) في موجة الاندفاع مسبوق بتشبّع بيعي واحد+
+    rsi_len=14, rsi_ob=70, rsi_os=30,   # طول RSI وعتبتا التشبّع الشرائي/البيعي
+    os_lookback=100,       # نافذة البحث عن تشبّع بيعي قبل بدء موجة الاندفاع (شموع)
     # ── إدارة الخروج نظام ب (الفائزة في بوت الصيد): جني جزئي + وقف متحرّك شانديلير ──
     tp1_frac=0.5,          # نسبة الجني عند الهدف الأول ثم تتبّع الباقي
     trail_atr=2.5,         # مضاعف وقف شانديلير المتحرّك (قمة − trail_atr×ATR) للباقي
@@ -64,13 +70,15 @@ CFG["require_choch"] = int(os.environ.get("SD_REQUIRE_CHOCH", CFG["require_choch
 CFG["max_ema_dist"]  = float(os.environ.get("SD_MAX_EMA_DIST", CFG["max_ema_dist"]))
 CFG["trail_atr"]     = float(os.environ.get("SD_TRAIL_ATR", CFG["trail_atr"]))
 CFG["tp1_frac"]      = float(os.environ.get("SD_TP1_FRAC", CFG["tp1_frac"]))
+CFG["require_ob_after_os"] = int(os.environ.get("SD_REQUIRE_OBOS", CFG["require_ob_after_os"]))
+CFG["os_lookback"]   = int(os.environ.get("SD_OS_LOOKBACK", CFG["os_lookback"]))
 BINANCE_BASES = ["https://data-api.binance.vision", "https://api.binance.com"]
 # ملفات النموذج/الحالة قابلة للتخصيص لكل فريم (لتفادي التضارب بين الفريمات)
 MODEL_PATH = os.environ.get("SD_MODEL", "sd_model.joblib")
 STATE_PATH = os.environ.get("SD_STATE", "sd_state.json")
 WATCHLIST = "watchlist.txt"
 MODEL_MAX_AGE_H = 24                  # يعيد التدريب إذا تجاوز عمر النموذج هذا
-ML_KEYS = ["strength", "heightATR", "baseVolZ", "touchVolZ", "bos", "choch", "fvg", "sweep",
+ML_KEYS = ["strength", "heightATR", "baseVolZ", "touchVolZ", "bos", "choch", "rsiObOs", "fvg", "sweep",
            "htf", "emaRel", "barsToTouch", "hour", "confirm", "closeLoc"]
 # أسماء الأسرار نفسها التي يستخدمها workflow الحالي (sd_bot.yml)
 TG_TOKEN = os.environ.get("TELEGRAM_TOKEN", os.environ.get("TG_TOKEN", ""))
@@ -128,6 +136,24 @@ def ema(arr, n):
     for i, x in enumerate(arr):
         prev = x if i == 0 else x * k + prev * (1 - k)
         out[i] = prev
+    return out
+
+def rsi(c, n=14):
+    """RSI بطريقة Wilder (تنعيم أُسّي). يعيد قائمة بطول c، أول n قيمة NaN."""
+    out = [float("nan")] * len(c)
+    if len(c) <= n:
+        return out
+    gains = losses = 0.0
+    for i in range(1, n + 1):
+        ch = c[i] - c[i - 1]
+        gains += max(ch, 0.0); losses += max(-ch, 0.0)
+    ag = gains / n; al = losses / n
+    out[n] = 100.0 if al == 0 else 100.0 - 100.0 / (1.0 + ag / al)
+    for i in range(n + 1, len(c)):
+        ch = c[i] - c[i - 1]
+        ag = (ag * (n - 1) + max(ch, 0.0)) / n
+        al = (al * (n - 1) + max(-ch, 0.0)) / n
+        out[i] = 100.0 if al == 0 else 100.0 - 100.0 / (1.0 + ag / al)
     return out
 
 def vol_z(v, L):
@@ -216,6 +242,7 @@ def htf_bias_fn(d4):
 def setup_features(sym, d1, d4):
     o, h, l, c, v, t = d1["o"], d1["h"], d1["l"], d1["c"], d1["v"], d1["t"]
     a = atr(h, l, c, CFG["atr_len"]); vz = vol_z(v, CFG["vol_len"]); e200 = ema(c, CFG["ema_len"])
+    rs = rsi(c, CFG["rsi_len"])
     _, ev = structure(h, l, c, CFG["pivL"], CFG["pivR"])
     bos_up = set(i for i, k in ev if k == "up")
     choch_up = choch_ups(ev)
@@ -227,8 +254,10 @@ def setup_features(sym, d1, d4):
         # قمة ساق الاندفاع = أعلى ما بلغه السعر منذ التكوين وقبل شمعة الدخول (تُحدَّث تدريجياً).
         # الدخول = تصحيح فيبو 61.8% لهذه الساق (أعمق من قمة المنطقة → مخاطرة أقل و R:R أفضل).
         run_high = max(z["proximal"], h[j]); tch = -1; entry = leg_high = 0.0
+        peak_idx = j                               # مؤشّر قمة موجة الاندفاع (لفحص تشبّع RSI الشرائي)
         for i in range(j + 1, len(c)):
-            run_high = max(run_high, h[i - 1])
+            if h[i - 1] > run_high:
+                run_high = h[i - 1]; peak_idx = i - 1
             span = run_high - leg_low
             if span <= 0:
                 continue
@@ -252,6 +281,14 @@ def setup_features(sym, d1, d4):
         bos = 1 if (j in bos_up or (j+1) in bos_up or (j+2) in bos_up) else 0
         # CHoCH: هل كسرت شمعة الاندفاع (أو التالية) الهيكل صعوداً لأول مرة (انعكاس بداية موجة)؟
         choch = 1 if (j in choch_up or (j+1) in choch_up or (j+2) in choch_up) else 0
+        # تشبّع شرائي بعد بيعي: هل بلغت موجة الاندفاع (j..قمة) تشبّعاً شرائياً (RSI≥ob)
+        # مسبوقاً بتشبّع بيعي (RSI≤os) واحد أو أكثر في النافذة قبل بدء الموجة؟
+        ob_after = 1 if any(math.isfinite(rs[x]) and rs[x] >= CFG["rsi_ob"]
+                            for x in range(j, min(peak_idx, tch) + 1)) else 0
+        os_lo = max(1, j - CFG["os_lookback"])
+        os_before = 1 if any(math.isfinite(rs[x]) and rs[x] <= CFG["rsi_os"]
+                             for x in range(os_lo, j + 1)) else 0
+        rsi_obos = 1 if (ob_after and os_before) else 0
         lo, hi = max(0, j - 30), max(1, j - 5)
         prior_low = min(l[lo:hi]) if hi > lo else l[j]
         sweep = 1 if z["distal"] < prior_low else 0
@@ -259,7 +296,7 @@ def setup_features(sym, d1, d4):
         f = dict(strength=z["strength"],
                  heightATR=round((z["proximal"] - z["distal"]) / (a[j] or R), 2),
                  baseVolZ=round(vz[j] or 0, 2), touchVolZ=round(vz[tch] or 0, 2),
-                 bos=bos, choch=choch, fvg=fvg, sweep=sweep, htf=hb(t[tch]),
+                 bos=bos, choch=choch, rsiObOs=rsi_obos, fvg=fvg, sweep=sweep, htf=hb(t[tch]),
                  emaRel=round(ema_rel, 4), barsToTouch=tch - j,
                  hour=dt.datetime.fromtimestamp(t[tch] / 1000, dt.timezone.utc).hour,
                  confirm=confirm, closeLoc=round(close_loc, 2))
@@ -401,6 +438,8 @@ def scan(basket=None):
                     continue
                 if CFG["require_choch"] and not f["choch"]:  # CHoCH إلزامي: بداية موجة/انعكاس لا استمرار
                     continue
+                if CFG["require_ob_after_os"] and not f["rsiObOs"]:  # تشبّع شرائي بعد بيعي (فوق CHoCH)
+                    continue
                 if CFG["require_confirm"] and not f["confirm"]:   # شمعة تأكيد إلزامية
                     continue
                 if f["heightATR"] > CFG["max_height_atr"]:        # رفض المناطق الفضفاضة
@@ -441,6 +480,7 @@ def scan(basket=None):
 def _reasons(f):
     r = ["دخول فيبو 61.8%"]
     if f.get("choch"): r.append("تغيّر هيكل CHoCH (بداية موجة)")
+    if f.get("rsiObOs"): r.append("تشبّع شرائي بعد بيعي (RSI)")
     if f.get("confirm"): r.append("شمعة تأكيد/ارتداد")
     if f["sweep"]: r.append("اصطياد سيولة")
     if f["bos"]: r.append("كسر بنية صاعد")
@@ -639,6 +679,8 @@ def backtest(basket=None):
                     continue
                 if CFG["require_choch"] and not f["choch"]:
                     continue
+                if CFG["require_ob_after_os"] and not f["rsiObOs"]:
+                    continue
                 if CFG["require_confirm"] and not f["confirm"]:
                     continue
                 if f["heightATR"] > CFG["max_height_atr"] or f["barsToTouch"] > CFG["max_bars_to_touch"]:
@@ -687,25 +729,28 @@ def _precompute(sym, d1, d4):
     """يحسب المؤشّرات الثقيلة والمناطق مرة واحدة لكل رمز (مستقلّة عن معاملات فيبو/الوقف)."""
     o, h, l, c, v, t = d1["o"], d1["h"], d1["l"], d1["c"], d1["v"], d1["t"]
     a = atr(h, l, c, CFG["atr_len"]); vz = vol_z(v, CFG["vol_len"]); e200 = ema(c, CFG["ema_len"])
+    rsi_arr = rsi(c, CFG["rsi_len"])
     _, ev = structure(h, l, c, CFG["pivL"], CFG["pivR"])
     bos_up = set(i for i, k in ev if k == "up")
     choch_up = choch_ups(ev)
     hb = htf_bias_fn(d4); zones = demand_zones(o, h, l, c, v, a)
-    return dict(o=o, h=h, l=l, c=c, v=v, t=t, a=a, vz=vz, e200=e200,
+    return dict(o=o, h=h, l=l, c=c, v=v, t=t, a=a, vz=vz, e200=e200, rsi=rsi_arr,
                 bos_up=bos_up, choch_up=choch_up, hb=hb, zones=zones)
 
 def _eval_combo(P, fib_entry, stop_buf_atr):
     """يقيّم توليفة (فيبو الدخول × هامش الوقف) على بيانات مُحسَّبة مسبقاً — سريع جداً."""
     h, l, c, t, a, e200, hb = P["h"], P["l"], P["c"], P["t"], P["a"], P["e200"], P["hb"]
-    choch_up = P["choch_up"]
+    choch_up = P["choch_up"]; rsi_arr = P["rsi"]
     hold = CFG["bt_hold"]; rs = []
     for z in P["zones"]:
         j = z["created"]; leg_low = z["distal"]
         if CFG["require_choch"] and not (j in choch_up or (j+1) in choch_up or (j+2) in choch_up):
             continue
-        run_high = max(z["proximal"], h[j]); tch = -1; entry = leg_high = 0.0
+        run_high = max(z["proximal"], h[j]); tch = -1; entry = leg_high = 0.0; peak_idx = j
         for i in range(j + 1, len(c)):
-            run_high = max(run_high, h[i - 1]); span = run_high - leg_low
+            if h[i - 1] > run_high:
+                run_high = h[i - 1]; peak_idx = i - 1
+            span = run_high - leg_low
             if span <= 0:
                 continue
             entry_i = run_high - fib_entry * span
@@ -713,6 +758,14 @@ def _eval_combo(P, fib_entry, stop_buf_atr):
                 tch = i; leg_high = run_high; entry = entry_i; break
         if tch < 0:
             continue
+        if CFG["require_ob_after_os"]:
+            ob_after = any(math.isfinite(rsi_arr[x]) and rsi_arr[x] >= CFG["rsi_ob"]
+                           for x in range(j, min(peak_idx, tch) + 1))
+            os_lo = max(1, j - CFG["os_lookback"])
+            os_before = any(math.isfinite(rsi_arr[x]) and rsi_arr[x] <= CFG["rsi_os"]
+                            for x in range(os_lo, j + 1))
+            if not (ob_after and os_before):
+                continue
         atch = a[tch] or (leg_high - leg_low)
         stop = leg_low - stop_buf_atr * atch
         R = entry - stop
