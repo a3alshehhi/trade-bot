@@ -294,5 +294,44 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-04T07:32:58"
+  },
+  "ENSOUSDT": {
+    "symbol": "ENSOUSDT",
+    "tf": "15m",
+    "label": "RSI60 · 15m",
+    "prob": null,
+    "levels": [
+      0.64727,
+      0.6455,
+      0.64373,
+      0.64121
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 75.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.6539539539835771,
+        "qty": 114.68697382,
+        "usd": 75.0
+      }
+    ],
+    "avg_entry": 0.6539539539835771,
+    "entry": 0.6539539539835771,
+    "init_stop": 0.6395236,
+    "stop": 0.6395236,
+    "R": 0.014430353983577171,
+    "tp1": 0.65708,
+    "tp2": 0.66227,
+    "qty": 114.68697382,
+    "qty_open": 114.68697382,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-04T10:03:15"
   }
 }
