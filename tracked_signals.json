@@ -29286,5 +29286,35 @@
     "hi_seen": 7.35,
     "lo_seen": 7.26,
     "created": "2026-07-04T11:01:20"
+  },
+  "صيد الارتفاعات|BANDUSDT|2026-07-04 11:00:00": {
+    "symbol": "BANDUSDT",
+    "label": "صيد الارتفاعات",
+    "timeframe": "1h",
+    "message_id": 4428,
+    "entry": 0.1633,
+    "stop": 0.15364643,
+    "init_stop": 0.15364643,
+    "cur_stop": 0.15364643,
+    "last_alert_stop": 0.15364643,
+    "armed": false,
+    "targets": [
+      0.1730304,
+      0.1801926
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 11:00:00",
+    "last_bar": "2026-07-04 11:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1633,
+    "lo_seen": 0.1633,
+    "created": "2026-07-04T11:53:21"
   }
 }
