@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-04T08:47:39",
+  "updated_at": "2026-07-04T09:03:27",
   "stats": {
-    "open": 39,
-    "closed": 856,
-    "win_rate": 54.6,
-    "profit_factor": 1.52,
-    "total_pct": 8230.39,
-    "avg_pct": 0.67,
+    "open": 38,
+    "closed": 857,
+    "win_rate": 54.5,
+    "profit_factor": 1.51,
+    "total_pct": 8011.3,
+    "avg_pct": 0.66,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 22,
-        "win_rate": 59.1,
-        "return_pct": 97.46,
+        "trades": 23,
+        "win_rate": 56.5,
+        "return_pct": 92.27,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 364,
-        "win_rate": 60.2,
-        "return_pct": 574.41,
+        "trades": 365,
+        "win_rate": 60.0,
+        "return_pct": 556.67,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 197,
-        "win_rate": 70.1,
-        "return_pct": 465.68
+        "trades": 198,
+        "win_rate": 69.7,
+        "return_pct": 450.8
       },
       {
         "key": "2026-06",
@@ -14753,10 +14753,11 @@
       "entry": 0.1338,
       "stop": 0.130277,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T08:38:53",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-04T09:03:26",
+      "realized_pct": -2.63,
+      "result_pct": -2.63
     },
     {
       "id": "العرض/الطلب|DGBUSDT|2026-07-04 08:00:00",
