@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-04T13:48:07",
+  "updated_at": "2026-07-04T14:02:56",
   "stats": {
-    "open": 33,
+    "open": 34,
     "closed": 873,
     "win_rate": 55.0,
     "profit_factor": 1.52,
@@ -14531,11 +14531,13 @@
       "timeframe": "1h",
       "entry": 1753.0,
       "stop": 1730.86208,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-04T01:08:40",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.63
     },
     {
       "id": "العرض/الطلب|DIAUSDT|2026-07-04 01:00:00",
@@ -14545,11 +14547,13 @@
       "timeframe": "1h",
       "entry": 0.1113,
       "stop": 0.1099018,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-04T01:08:40",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.63
     },
     {
       "id": "العرض/الطلب|DGBUSDT|2026-07-04 01:00:00",
@@ -14740,11 +14744,13 @@
       "timeframe": "1h",
       "entry": 0.00366,
       "stop": 0.00361702,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-04T07:20:52",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.59
     },
     {
       "id": "RSI60 · 15m|WCTUSDT|2026-07-04 07:29:59.999000",
@@ -14983,6 +14989,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-04T13:33:27",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|CGPTUSDT|2026-07-04 13:00:00",
+      "symbol": "CGPTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.01999,
+      "stop": 0.01954904,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T13:52:05",
       "closed_at": null,
       "realized_pct": 0.0
     }
