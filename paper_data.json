@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-04T03:48:36",
+  "updated_at": "2026-07-04T04:02:56",
   "stats": {
-    "open": 39,
-    "closed": 845,
-    "win_rate": 54.6,
+    "open": 37,
+    "closed": 847,
+    "win_rate": 54.5,
     "profit_factor": 1.44,
-    "total_pct": 3877.55,
+    "total_pct": 3885.54,
     "avg_pct": 0.57,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 11,
-        "win_rate": 63.6,
-        "return_pct": -5.72,
+        "trades": 13,
+        "win_rate": 61.5,
+        "return_pct": -5.53,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 353,
+        "trades": 355,
         "win_rate": 60.3,
-        "return_pct": 222.01,
+        "return_pct": 222.66,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 186,
-        "win_rate": 71.0,
-        "return_pct": 170.1
+        "trades": 188,
+        "win_rate": 70.7,
+        "return_pct": 170.64
       },
       {
         "key": "2026-06",
@@ -2467,11 +2467,13 @@
       "timeframe": "4h",
       "entry": 0.414824,
       "stop": 0.3897213,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-25T00:04:14",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 20.35
     },
     {
       "id": "trendwave · 15m|EDUUSDT|2026-06-25 00:44:59.999000",
@@ -4258,11 +4260,13 @@
       "timeframe": "4h",
       "entry": 0.41422867,
       "stop": 0.3843395,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-06-26T12:03:40",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 19.93
     },
     {
       "id": "trendwave · 4h|IOUSDT|2026-06-26 11:59:59.999000",
@@ -14219,10 +14223,11 @@
       "entry": 0.402,
       "stop": 0.39558335,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T21:01:49",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-04T04:02:47",
+      "realized_pct": -1.6,
+      "result_pct": -1.6
     },
     {
       "id": "RSI50 · 1h|OGUSDT|2026-07-03 20:59:59.999000",
@@ -14549,11 +14554,13 @@
       "timeframe": "1h",
       "entry": 0.06794,
       "stop": 0.06622946,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-04T02:01:37",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.33
     },
     {
       "id": "العرض/الطلب|AWEUSDT|2026-07-04 02:00:00",
@@ -14564,12 +14571,14 @@
       "entry": 0.0564,
       "stop": 0.05571348,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T02:23:26",
-      "closed_at": null,
-      "realized_pct": 0.61
+      "closed_at": "2026-07-04T04:02:55",
+      "realized_pct": 1.83,
+      "result_pct": 1.83
     },
     {
       "id": "العرض/الطلب|ALTUSDT|2026-07-04 02:00:00",
