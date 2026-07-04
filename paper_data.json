@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-04T10:48:07",
+  "updated_at": "2026-07-04T11:03:46",
   "stats": {
-    "open": 36,
-    "closed": 864,
-    "win_rate": 54.6,
+    "open": 38,
+    "closed": 865,
+    "win_rate": 54.7,
     "profit_factor": 1.52,
-    "total_pct": 8494.98,
+    "total_pct": 8602.42,
     "avg_pct": 0.67,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 30,
-        "win_rate": 60.0,
-        "return_pct": 103.73,
+        "trades": 31,
+        "win_rate": 61.3,
+        "return_pct": 106.28,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 372,
-        "win_rate": 60.2,
-        "return_pct": 595.83,
+        "trades": 373,
+        "win_rate": 60.3,
+        "return_pct": 604.52,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 205,
-        "win_rate": 69.8,
-        "return_pct": 483.64
+        "trades": 206,
+        "win_rate": 69.9,
+        "return_pct": 490.94
       },
       {
         "key": "2026-06",
@@ -14422,10 +14422,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T00:01:50",
-      "closed_at": null,
-      "realized_pct": 1.25
+      "closed_at": "2026-07-04T11:03:34",
+      "realized_pct": 1.25,
+      "result_pct": 1.25
     },
     {
       "id": "trendwave · 15m|ACTUSDT|2026-07-03 23:59:59.999000",
@@ -14862,6 +14863,48 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-04T10:22:14",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|DIAUSDT|2026-07-04 10:00:00",
+      "symbol": "DIAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1114,
+      "stop": 0.1104154,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T10:51:07",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI60 · 15m|ENSOUSDT|2026-07-04 10:59:59.999000",
+      "symbol": "ENSOUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.657,
+      "stop": 0.64019676,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T11:01:20",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI60 · 15m|ETCUSDT|2026-07-04 10:59:59.999000",
+      "symbol": "ETCUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 7.28,
+      "stop": 7.13744161,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T11:01:20",
       "closed_at": null,
       "realized_pct": 0.0
     }
