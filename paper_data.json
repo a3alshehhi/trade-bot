@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-04T05:48:48",
+  "updated_at": "2026-07-04T06:03:28",
   "stats": {
-    "open": 38,
-    "closed": 849,
+    "open": 37,
+    "closed": 851,
     "win_rate": 54.5,
     "profit_factor": 1.44,
-    "total_pct": 3891.89,
-    "avg_pct": 0.57,
+    "total_pct": 3866.02,
+    "avg_pct": 0.56,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 15,
-        "win_rate": 60.0,
-        "return_pct": -5.38,
+        "trades": 17,
+        "win_rate": 58.8,
+        "return_pct": -5.99,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 357,
+        "trades": 359,
         "win_rate": 60.2,
-        "return_pct": 223.17,
+        "return_pct": 221.08,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 190,
-        "win_rate": 70.5,
-        "return_pct": 171.07
+        "trades": 192,
+        "win_rate": 70.3,
+        "return_pct": 169.31
       },
       {
         "key": "2026-06",
@@ -14364,10 +14364,11 @@
       "entry": 0.1767,
       "stop": 0.1744442,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T23:20:50",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-04T06:03:19",
+      "realized_pct": -1.28,
+      "result_pct": -1.28
     },
     {
       "id": "العرض/الطلب|ALPINEUSDT|2026-07-03 23:00:00",
@@ -14626,10 +14627,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T04:07:29",
-      "closed_at": null,
-      "realized_pct": 0.64
+      "closed_at": "2026-07-04T06:03:27",
+      "realized_pct": 0.64,
+      "result_pct": 0.64
     },
     {
       "id": "العرض/الطلب|BNTUSDT|2026-07-04 05:00:00",
@@ -14645,6 +14647,20 @@
       "closed_at": "2026-07-04T05:33:26",
       "realized_pct": -0.17,
       "result_pct": -0.17
+    },
+    {
+      "id": "العرض/الطلب|1000SATSUSDT|2026-07-04 05:00:00",
+      "symbol": "1000SATSUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 9.78e-06,
+      "stop": 9.66e-06,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T05:51:30",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
