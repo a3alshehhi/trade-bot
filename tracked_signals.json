@@ -28891,5 +28891,65 @@
     "hi_seen": 0.1109,
     "lo_seen": 0.1109,
     "created": "2026-07-04T08:04:44"
+  },
+  "العرض/الطلب|ALICEUSDT|2026-07-04 08:00:00": {
+    "symbol": "ALICEUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 4414,
+    "entry": 0.1338,
+    "stop": 0.130277,
+    "init_stop": 0.130277,
+    "cur_stop": 0.130277,
+    "last_alert_stop": 0.130277,
+    "armed": false,
+    "targets": [
+      0.137323,
+      0.140846
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 08:00:00",
+    "last_bar": "2026-07-04 08:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1338,
+    "lo_seen": 0.1338,
+    "created": "2026-07-04T08:38:53"
+  },
+  "العرض/الطلب|DGBUSDT|2026-07-04 08:00:00": {
+    "symbol": "DGBUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 4414,
+    "entry": 0.00253,
+    "stop": 0.0024772,
+    "init_stop": 0.0024772,
+    "cur_stop": 0.0024772,
+    "last_alert_stop": 0.0024772,
+    "armed": false,
+    "targets": [
+      0.0025828,
+      0.0026356
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 08:00:00",
+    "last_bar": "2026-07-04 08:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00253,
+    "lo_seen": 0.00253,
+    "created": "2026-07-04T08:38:53"
   }
 }
