@@ -158,39 +158,6 @@
     "armed": false,
     "opened_ts": "2026-07-03T23:03:03"
   },
-  "AVAUSDT": {
-    "symbol": "AVAUSDT",
-    "tf": "1h",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "levels": [
-      0.1767
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 300.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.17857857857921733,
-        "qty": 1679.93273542,
-        "usd": 300.0
-      }
-    ],
-    "avg_entry": 0.17857857857921733,
-    "entry": 0.17857857857921733,
-    "init_stop": 0.1744442,
-    "stop": 0.1744442,
-    "R": 0.004134378579217335,
-    "tp1": 0.1789558,
-    "tp2": 0.1812116,
-    "qty": 1679.93273542,
-    "qty_open": 1679.93273542,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-03T23:33:59"
-  },
   "BREVUSDT": {
     "symbol": "BREVUSDT",
     "tf": "1h",
@@ -256,39 +223,6 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-04T01:18:49"
-  },
-  "ACHUSDT": {
-    "symbol": "ACHUSDT",
-    "tf": "15m",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "levels": [
-      0.00452
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 300.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.0045245245245247485,
-        "qty": 66305.30973451,
-        "usd": 300.0
-      }
-    ],
-    "avg_entry": 0.0045245245245247485,
-    "entry": 0.0045245245245247485,
-    "init_stop": 0.00449836,
-    "stop": 0.00449836,
-    "R": 2.6164524524748684e-05,
-    "tp1": 0.00454164,
-    "tp2": 0.00456328,
-    "qty": 66305.30973451,
-    "qty_open": 66305.30973451,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-04T04:18:01"
   },
   "2ZUSDT": {
     "symbol": "2ZUSDT",
