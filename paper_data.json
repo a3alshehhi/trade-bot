@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-04T14:48:28",
+  "updated_at": "2026-07-04T15:03:45",
   "stats": {
-    "open": 36,
-    "closed": 873,
+    "open": 35,
+    "closed": 874,
     "win_rate": 55.0,
     "profit_factor": 1.52,
-    "total_pct": 9178.16,
+    "total_pct": 9213.41,
     "avg_pct": 0.67,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 39,
-        "win_rate": 66.7,
-        "return_pct": 119.93,
+        "trades": 40,
+        "win_rate": 67.5,
+        "return_pct": 120.76,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 381,
-        "win_rate": 60.9,
-        "return_pct": 651.13,
+        "trades": 382,
+        "win_rate": 61.0,
+        "return_pct": 653.99,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 214,
-        "win_rate": 70.6,
-        "return_pct": 530.04
+        "trades": 215,
+        "win_rate": 70.7,
+        "return_pct": 532.43
       },
       {
         "key": "2026-06",
@@ -14252,11 +14252,13 @@
       "timeframe": "1h",
       "entry": 2.507,
       "stop": 2.44517904,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-03T21:01:50",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.36
     },
     {
       "id": "RSI50 · 1h|VANRYUSDT|2026-07-03 20:59:59.999000",
@@ -14763,10 +14765,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T07:31:08",
-      "closed_at": null,
-      "realized_pct": 0.38
+      "closed_at": "2026-07-04T15:03:38",
+      "realized_pct": 0.38,
+      "result_pct": 0.38
     },
     {
       "id": "العرض/الطلب|DIAUSDT|2026-07-04 08:00:00",
@@ -15016,11 +15019,13 @@
       "timeframe": "15m",
       "entry": 2.014,
       "stop": 1.96427183,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-04T14:31:17",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.38
     },
     {
       "id": "RSI60 · 15m|PHAUSDT|2026-07-04 14:44:59.999000",
