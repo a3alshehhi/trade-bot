@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-04T08:33:43",
+  "updated_at": "2026-07-04T08:47:39",
   "stats": {
-    "open": 37,
+    "open": 39,
     "closed": 856,
     "win_rate": 54.6,
     "profit_factor": 1.52,
@@ -14741,6 +14741,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-04T08:04:44",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ALICEUSDT|2026-07-04 08:00:00",
+      "symbol": "ALICEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1338,
+      "stop": 0.130277,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T08:38:53",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|DGBUSDT|2026-07-04 08:00:00",
+      "symbol": "DGBUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.00253,
+      "stop": 0.0024772,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T08:38:53",
       "closed_at": null,
       "realized_pct": 0.0
     }
