@@ -1,0 +1,579 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+بوت «صيد الارتفاعات» (Hunter) — بوت منفصل مستقل — إشارات شراء فقط، فريم 15د
+==============================================================================
+يرمّز استراتيجية Smart Money Concepts (SMC) التي صمّمناها:
+  • منطقة الخصم/التوازن (Premium / Discount / Equilibrium) من مدى آخر سوينق.
+  • تحوّل الطابع CHoCH ثم تأكيد الهيكل BOS (كسر آخر قمة هابطة ثم بناء صاعد).
+  • ريبون EMA: المتوسط السريع يقطع فوق البطيء.
+  • انفجار حجم على شمعة الكسر (Volume Z أعلى من المتوسط).
+  • RSI يخرج من التشبّع البيعي ويعبر فوق 50.
+  • الدخول: ريتست فيبو 61.8% لأقرب كتلة أوامر / فجوة قيمة (OB / FVG) داخل الخصم.
+  • الوقف: تحت آخر قاع قوي (Strong Low) − بافر ATR.
+  • الأهداف (فيبوناتشي): هدف1 = التوازن، هدف2 = القمة/Premium، هدف3 = امتداد 1.618.
+  • فلتر تجنّب المطاردة: يتجاهل إذا ابتعد السعر >X%% فوق OB أو RSI>75.
+  • قاعدة صفقة واحدة باليوم (أنظف Setup) — يمكن رفعها بمتغيّر بيئة.
+
+الأوضاع:
+  python hunter_bot.py scan       # يفحص آخر شمعة مغلقة ويرسل أفضل الإشارات لتيليجرام (الافتراضي)
+  python hunter_bot.py backtest   # باك-تست حقيقي على بيانات فعلية ويطبع حافة R
+  python hunter_bot.py exec       # فحص + تنفيذ تجريبي على بايبت/بايننس (خلف أعلام بيئة)
+
+بوت منفصل تماماً عن sd_bot: ملفات حالة/تتبّع خاصة، وأسرار التيليجرام نفسها.
+تنبيه: أداة تحليل تعليمية. لا تنفّذ صفقات بأموال حقيقية افتراضياً. التداول مخاطرة، وليست نصيحة مالية.
+"""
+import os, sys, time, math, json, datetime as dt
+import requests
+
+# ----------------------- إعدادات الاستراتيجية -----------------------
+CFG = dict(
+    entry_tf="15m",            # فريم الدخول (صيد الارتفاعات = 15د)
+    htf="1h",                  # سياق أعلى للانحياز الاتجاهي
+    pages=3, pages_htf=2,      # صفحات جلب البيانات (كل صفحة ≈ 1000 شمعة)
+    swing_L=5, swing_R=5,      # نصف نافذة تحديد القمم/القيعان (pivots)
+    struct_lookback=60,        # مدى البحث عن CHoCH/BOS بالشموع
+    ema_fast=21, ema_slow=55,  # ريبون EMA (سريع/بطيء)
+    ema_trend=200,             # متوسط الاتجاه العام
+    rsi_len=14,
+    atr_len=14,
+    vol_len=50,                # نافذة Volume Z
+    vol_z_min=1.0,             # حد انفجار الحجم على شمعة الكسر
+    fib_entry=0.618,           # الدخول عند تصحيح فيبو 61.8% لساق الاندفاع
+    fib_ext=1.618,             # امتداد فيبو للهدف الثالث
+    stop_buf_atr=0.5,          # بافر الوقف تحت القاع = ×ATR
+    chase_max_atr=1.5,         # فلتر المطاردة: بُعد السعر عن الدخول > ×ATR = فات القطار
+    rsi_chase_max=75,          # فلتر المطاردة: RSI فوق هذا = متأخر
+    rsi_cross=50,              # عبور RSI المطلوب
+    min_score=4,               # أدنى درجة (من 5 شروط) لقبول الإشارة
+    one_per_day=1,             # 1 = صفقة واحدة باليوم (أعلى درجة)، 0 = كل الإشارات
+    top_n=5,                   # أقصى عدد إشارات للإرسال
+    bt_hold=48,                # (باك-تست) أقصى شموع لإمساك الصفقة
+    risk_pct=0.01,             # مخاطرة مقترحة لكل صفقة (1%)
+    max_symbols=60,            # حد رموز الفحص
+)
+# ── تجاوز الفريمات عبر البيئة (لتشغيل على 15m/1h/... مثل بقية البوتات) ──
+CFG["entry_tf"] = os.environ.get("HUNTER_TF", CFG["entry_tf"])
+CFG["htf"]      = os.environ.get("HUNTER_HTF", CFG["htf"])
+CFG["one_per_day"] = int(os.environ.get("HUNTER_ONE_PER_DAY", CFG["one_per_day"]))
+CFG["min_score"]   = int(os.environ.get("HUNTER_MIN_SCORE", CFG["min_score"]))
+
+BINANCE_BASES = ["https://data-api.binance.vision", "https://api.binance.com"]
+WATCHLIST = "watchlist.txt"
+STATE_PATH = os.environ.get("HUNTER_STATE", "hunter_state.json")
+TRACK_FILE = "tracked_signals.json"        # مشترك مع اللوحة (نضيف فقط إشاراتنا)
+DASH_LABEL = "صيد الارتفاعات"
+TG_TOKEN = os.environ.get("TELEGRAM_TOKEN", os.environ.get("TG_TOKEN", ""))
+TG_CHAT = os.environ.get("TELEGRAM_CHAT_ID", os.environ.get("TG_CHAT", ""))
+_TF_MS = {"1m": 60000, "3m": 180000, "5m": 300000, "15m": 900000, "30m": 1800000,
+          "1h": 3600000, "2h": 7200000, "4h": 14400000, "1d": 86400000}
+
+
+# ----------------------- جلب البيانات -----------------------
+def fetch_klines(symbol, interval, pages=2):
+    all_rows, end_time = [], None
+    for _ in range(pages):
+        params = {"symbol": symbol, "interval": interval, "limit": 1000}
+        if end_time:
+            params["endTime"] = end_time
+        data = None
+        for base in BINANCE_BASES:
+            try:
+                r = requests.get(f"{base}/api/v3/klines", params=params, timeout=12)
+                if r.status_code == 200 and r.json():
+                    data = r.json(); break
+            except Exception:
+                continue
+        if not data:
+            break
+        all_rows = data + all_rows
+        end_time = data[0][0] - 1
+        if len(data) < 1000:
+            break
+    if not all_rows:
+        return None
+    m = {row[0]: row for row in all_rows}
+    rows = sorted(m.values(), key=lambda x: x[0])
+    return dict(
+        t=[r[0] for r in rows], o=[float(r[1]) for r in rows], h=[float(r[2]) for r in rows],
+        l=[float(r[3]) for r in rows], c=[float(r[4]) for r in rows], v=[float(r[5]) for r in rows])
+
+
+# ----------------------- مؤشرات -----------------------
+def atr(h, l, c, n):
+    out = [float("nan")] * len(c); s = 0.0; tr = []
+    for i in range(len(c)):
+        t = (h[i] - l[i]) if i == 0 else max(h[i]-l[i], abs(h[i]-c[i-1]), abs(l[i]-c[i-1]))
+        tr.append(t); s += t
+        if i >= n: s -= tr[i-n]
+        if i >= n-1: out[i] = s / n
+    return out
+
+def ema(arr, n):
+    k = 2/(n+1); out = [float("nan")]*len(arr); prev = None
+    for i, x in enumerate(arr):
+        prev = x if i == 0 else x*k + prev*(1-k)
+        out[i] = prev
+    return out
+
+def rsi(c, n):
+    out = [float("nan")]*len(c)
+    if len(c) <= n:
+        return out
+    gains = losses = 0.0
+    for i in range(1, n+1):
+        d = c[i]-c[i-1]
+        gains += max(d, 0.0); losses += max(-d, 0.0)
+    ag, al = gains/n, losses/n
+    out[n] = 100.0 if al == 0 else 100 - 100/(1 + ag/al)
+    for i in range(n+1, len(c)):
+        d = c[i]-c[i-1]
+        ag = (ag*(n-1) + max(d, 0.0))/n
+        al = (al*(n-1) + max(-d, 0.0))/n
+        out[i] = 100.0 if al == 0 else 100 - 100/(1 + ag/al)
+    return out
+
+def vol_z(v, L):
+    out = [float("nan")]*len(v)
+    for i in range(L-1, len(v)):
+        win = v[i-L+1:i+1]
+        m = sum(win)/L
+        sd = math.sqrt(sum((x-m)**2 for x in win)/L)
+        out[i] = (v[i]-m)/sd if sd > 0 else 0.0
+    return out
+
+def pivots(h, l, L, R):
+    """يعيد قائمتين: قمم سوينق (ph) وقيعان سوينق (pl) كـ (index, price)."""
+    ph, pl = [], []
+    for i in range(L, len(h)-R):
+        if all(h[i] >= h[i-k] for k in range(1, L+1)) and all(h[i] >= h[i+k] for k in range(1, R+1)):
+            ph.append((i, h[i]))
+        if all(l[i] <= l[i-k] for k in range(1, L+1)) and all(l[i] <= l[i+k] for k in range(1, R+1)):
+            pl.append((i, l[i]))
+    return ph, pl
+
+
+# ----------------------- منطق SMC: بنية + خصم + كتل أوامر + FVG -----------------------
+def find_setup(sym, d1, d4):
+    """يبحث عن Setup «صيد ارتفاع» عند آخر شمعة مغلقة.
+       يعيد dict للإشارة أو None. الدرجة score من 0..5 حسب تحقّق الشروط الخمسة."""
+    o, h, l, c, v = d1["o"], d1["h"], d1["l"], d1["c"], d1["v"]
+    n = len(c)
+    if n < max(CFG["ema_trend"], 250):
+        return None
+    last = n - 1
+    A = atr(h, l, c, CFG["atr_len"])
+    ef = ema(c, CFG["ema_fast"]); es = ema(c, CFG["ema_slow"]); et = ema(c, CFG["ema_trend"])
+    R = rsi(c, CFG["rsi_len"])
+    VZ = vol_z(v, CFG["vol_len"])
+    a = A[last]
+    if not (a and math.isfinite(a)) or a <= 0:
+        return None
+
+    ph, pl = pivots(h, l, CFG["swing_L"], CFG["swing_R"])
+    if len(ph) < 2 or len(pl) < 2:
+        return None
+
+    # --- مدى آخر سوينق لحساب التوازن (Equilibrium 0.5) ومنطقة الخصم ---
+    swing_hi = ph[-1][1]
+    swing_lo = pl[-1][1]
+    hi_i, lo_i = ph[-1][0], pl[-1][0]
+    rng = swing_hi - swing_lo
+    if rng <= 0:
+        return None
+    eq = swing_lo + 0.5 * rng                     # خط التوازن
+    price = c[last]
+    in_discount = price <= eq                      # (1) السعر في الخصم
+
+    # --- CHoCH صاعد: كسر آخر قمة هابطة سابقة ثم BOS ---
+    # نأخذ آخر قمّتين: إذا القاع الأخير أعلى من قاع قبله + كسر السعر لقمة سابقة = تحوّل صاعد
+    recent_lows = [p for p in pl if p[0] >= last - CFG["struct_lookback"]]
+    recent_highs = [p for p in ph if p[0] >= last - CFG["struct_lookback"]]
+    choch = bos = False
+    broken_high = None
+    if len(recent_lows) >= 2 and len(recent_highs) >= 1:
+        # قاع أعلى (higher low) = بداية تحوّل
+        higher_low = recent_lows[-1][1] > recent_lows[-2][1]
+        # آخر قمة سابقة تم اختراقها بالإغلاق
+        prev_high = recent_highs[-1][1]
+        broke = max(c[recent_highs[-1][0]+1:]) > prev_high if recent_highs[-1][0]+1 < n else False
+        choch = bool(higher_low)
+        bos = bool(broke)
+        broken_high = prev_high
+
+    # --- ريبون EMA: السريع فوق البطيء (وقاطع حديثاً) ---
+    ema_bull = (ef[last] > es[last]) and math.isfinite(ef[last]) and math.isfinite(es[last])
+    ema_cross_recent = any(
+        (ef[i-1] <= es[i-1]) and (ef[i] > es[i])
+        for i in range(max(1, last-CFG["struct_lookback"]), n)
+        if math.isfinite(ef[i]) and math.isfinite(es[i]) and math.isfinite(ef[i-1]) and math.isfinite(es[i-1])
+    )
+
+    # --- انفجار حجم على أقوى شمعة صاعدة أخيرة (شمعة الكسر) ---
+    vol_break = False
+    for i in range(max(1, last-CFG["struct_lookback"]), n):
+        if c[i] > o[i] and math.isfinite(VZ[i]) and VZ[i] >= CFG["vol_z_min"]:
+            vol_break = True; break
+
+    # --- RSI يعبر 50 صاعداً من التشبّع ---
+    rsi_ok = False
+    for i in range(max(1, last-CFG["struct_lookback"]), n):
+        if math.isfinite(R[i-1]) and math.isfinite(R[i]) and R[i-1] < CFG["rsi_cross"] <= R[i]:
+            rsi_ok = True; break
+    rsi_now = R[last] if math.isfinite(R[last]) else 50.0
+
+    # --- الدرجة: خمسة شروط جوهرية ---
+    score = sum([in_discount, (choch or bos), ema_bull and ema_cross_recent, vol_break, rsi_ok])
+
+    # --- كتلة أوامر صاعدة / FVG: آخر شمعة هابطة قبل الاندفاع الصاعد داخل الخصم ---
+    ob_low = ob_high = None
+    impulse_top = swing_hi
+    for i in range(last-1, max(CFG["ema_slow"], last-CFG["struct_lookback"]), -1):
+        # اندفاع صاعد: إغلاق أعلى بوضوح من فتح + حجم
+        if c[i] > o[i] and (c[i]-o[i]) > 0.6*a:
+            # الشمعة الهابطة قبله = كتلة الأوامر
+            j = i-1
+            while j > 0 and c[j] >= o[j]:
+                j -= 1
+            if j > 0:
+                ob_low, ob_high = l[j], h[j]
+                impulse_top = max(h[i:last+1])
+            break
+    if ob_low is None:
+        # بديل: نستخدم القاع الأخير كأساس
+        ob_low, ob_high = swing_lo, swing_lo + 0.3*rng
+        impulse_top = swing_hi
+
+    # --- الدخول: تصحيح فيبو 61.8% لساق الاندفاع (من قاع OB إلى قمة الاندفاع) ---
+    leg_lo, leg_hi = ob_low, impulse_top
+    leg = leg_hi - leg_lo
+    if leg <= 0:
+        return None
+    entry = leg_hi - CFG["fib_entry"] * leg      # ريتست 61.8%
+    stop = ob_low - CFG["stop_buf_atr"] * a       # تحت القاع القوي − بافر ATR
+    if stop >= entry:
+        return None
+
+    # --- الأهداف بفيبوناتشي ---
+    tp1 = eq if eq > entry else entry + (entry-stop)          # هدف1 = التوازن
+    tp2 = leg_hi if leg_hi > tp1 else tp1 + (entry-stop)      # هدف2 = قمة/Premium
+    tp3 = leg_lo + CFG["fib_ext"] * leg                        # هدف3 = امتداد 1.618
+
+    # --- فلتر المطاردة ---
+    dist_atr = (price - entry) / a
+    if dist_atr > CFG["chase_max_atr"] or rsi_now > CFG["rsi_chase_max"]:
+        return None    # فات القطار — ننتظر تصحيحاً
+
+    # سياق HTF (اختياري): 1h غير هابط = المتوسط السريع فوق البطيء
+    htf_ok = True
+    if d4 and len(d4["c"]) > CFG["ema_slow"]:
+        e1 = ema(d4["c"], CFG["ema_fast"]); e2 = ema(d4["c"], CFG["ema_slow"])
+        if math.isfinite(e1[-1]) and math.isfinite(e2[-1]):
+            htf_ok = e1[-1] >= e2[-1]
+
+    reasons = []
+    if in_discount: reasons.append("منطقة خصم")
+    if choch: reasons.append("CHoCH صاعد (قاع أعلى)")
+    if bos: reasons.append("كسر بنية BOS")
+    if ema_bull and ema_cross_recent: reasons.append("تقاطع EMA صاعد")
+    if vol_break: reasons.append("انفجار حجم")
+    if rsi_ok: reasons.append("RSI عبر 50")
+    if htf_ok: reasons.append("سياق 1h غير هابط")
+
+    return dict(
+        sym=sym, tf=CFG["entry_tf"], score=int(score),
+        entry=round(entry, 8), stop=round(stop, 8),
+        tp1=round(tp1, 8), tp2=round(tp2, 8), tp3=round(tp3, 8),
+        rsi=round(rsi_now, 1), htf_ok=bool(htf_ok),
+        ts=d1["t"][last], reasons=reasons,
+        ob_low=round(ob_low, 8), ob_high=round(ob_high, 8), eq=round(eq, 8),
+    )
+
+
+# ----------------------- watchlist -----------------------
+def parse_watchlist_crypto(path):
+    try:
+        raw = open(path, encoding="utf-8").read()
+    except Exception:
+        return []
+    toks = []
+    for line in raw.splitlines():
+        if "\t" in line:
+            line = line.split("\t", 1)[1]
+        toks += [x.strip() for x in line.split(",") if x.strip()]
+    seen, uniq = set(), []
+    for tok in toks:
+        if tok.startswith("#") or ":" not in tok:
+            continue
+        exch, sym = tok.split(":", 1); sym = sym.strip().upper()
+        if exch.upper() in {"BINANCE", "BYBIT", "MEXC", "BINANCEUS"} and sym.endswith("USDT"):
+            if sym not in seen:
+                seen.add(sym); uniq.append(sym)
+    return uniq
+
+
+# ----------------------- الحالة (منع التكرار) -----------------------
+def load_state():
+    try:
+        return json.load(open(STATE_PATH))
+    except Exception:
+        return {"sent": [], "last_day": ""}
+
+def save_state(state):
+    state["sent"] = state.get("sent", [])[-800:]
+    try:
+        json.dump(state, open(STATE_PATH, "w"))
+    except Exception as ex:
+        print("state save error", ex)
+
+
+# ----------------------- تيليجرام + اللوحة -----------------------
+def _fmt(v):
+    try:
+        v = float(v)
+    except (TypeError, ValueError):
+        return str(v)
+    return f"{v:.8f}".rstrip("0").rstrip(".") if abs(v) < 1 else f"{v:,.2f}"
+
+def format_message(signals):
+    nums = ["1️⃣", "2️⃣", "3️⃣"]
+    now = dt.datetime.now().strftime("%H:%M:%S")
+    tf = CFG["entry_tf"]
+    sep = "\n➖➖➖➖➖➖➖➖➖\n"
+    blocks = []
+    for s in signals:
+        entry, stop = s["entry"], s["stop"]
+        risk_pct = ((entry-stop)/entry*100) if entry else 0.0
+        tps = [s.get("tp1"), s.get("tp2"), s.get("tp3")]
+        lines = [
+            "🟢 صيد ارتفاع — شراء (SMC)",
+            f"💎 {s['sym']} · ⏱️ {tf}",
+            f"⭐ الدرجة: {s['score']}/5 · RSI {s['rsi']}",
+            f"📊 الأسباب: {'، '.join(s['reasons'])}",
+            "",
+            f"📍 الدخول (ريتست فيبو 61.8%): {_fmt(entry)}",
+            f"🛑 الوقف: {_fmt(stop)}  (−{risk_pct:.2f}%)",
+            "",
+            "🎯 الأهداف (فيبوناتشي):",
+        ]
+        for k, t in enumerate(tps):
+            if not t:
+                continue
+            gain = ((t-entry)/entry*100) if entry else 0.0
+            lines.append(f"{nums[k]} {_fmt(t)}  (+{gain:.2f}%)")
+        lines += [
+            "",
+            f"⚖️ المخاطرة المقترحة: {int(CFG['risk_pct']*100)}% من المحفظة · "
+            "جني مجزّأ 40/40/20 + وقف متحرّك",
+            f"⏰ {now}",
+        ]
+        blocks.append("\n".join(lines))
+    header = ("🏹 <b>بوت صيد الارتفاعات (SMC) — شراء فقط</b>\n"
+              "<i>خصم + CHoCH/BOS + EMA + حجم + RSI · دخول ريتست فيبو</i>")
+    footer = "⚠️ تحليل تعليمي — ليس نصيحة مالية"
+    return header + sep + sep.join(blocks) + sep + footer
+
+def send_telegram(text):
+    if not TG_TOKEN or not TG_CHAT:
+        print("TG not configured; message:\n", text); return None
+    try:
+        r = requests.post(f"https://api.telegram.org/bot{TG_TOKEN}/sendMessage",
+                          data={"chat_id": TG_CHAT, "text": text, "parse_mode": "HTML"}, timeout=15)
+        print(f"sent {text.count(chr(0x1F3F9))} signals to telegram")
+        return (r.json().get("result") or {}).get("message_id")
+    except Exception as ex:
+        print("telegram error", ex); return None
+
+def track_for_dashboard(signals, message_id, path=TRACK_FILE):
+    tf = CFG["entry_tf"]
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if not isinstance(data, dict):
+            data = {}
+    except Exception:
+        data = {}
+    cutoff = (dt.datetime.now() - dt.timedelta(days=14)).isoformat()
+    data = {k: v for k, v in data.items()
+            if not (isinstance(v, dict) and v.get("label") == DASH_LABEL
+                    and v.get("created", "") < cutoff)}
+    added = 0
+    for s in signals:
+        entry, stop, tp1 = s["entry"], s["stop"], s["tp1"]
+        if entry - stop <= 0:
+            continue
+        tp2 = s.get("tp2") or round(entry + 2*(entry-stop), 8)
+        bar_ts = dt.datetime.fromtimestamp(s["ts"]/1000, dt.timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+        key = f"{DASH_LABEL}|{s['sym']}|{bar_ts}"
+        if key in data:
+            continue
+        data[key] = {
+            "symbol": s["sym"], "label": DASH_LABEL, "timeframe": tf,
+            "message_id": message_id,
+            "entry": entry, "stop": stop, "init_stop": stop, "cur_stop": stop,
+            "last_alert_stop": stop, "armed": False,
+            "targets": [tp1, tp2], "tp_split": [50, 50],
+            "is_trendwave": False, "mgmt": "5050", "breakeven_done": False,
+            "bar_ts": bar_ts, "last_bar": bar_ts,
+            "hits": [], "stopped": False, "hi_seen": entry, "lo_seen": entry,
+            "created": dt.datetime.now().isoformat(timespec="seconds"),
+        }
+        added += 1
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f"tracked {added} signals to {path}")
+
+
+# ----------------------- الفحص -----------------------
+def scan(basket=None, send=True):
+    basket = basket or parse_watchlist_crypto(WATCHLIST)[:CFG["max_symbols"]]
+    state = load_state(); sent = set(state.get("sent", []))
+    signals = []
+    for s in basket:
+        try:
+            d1 = fetch_klines(s, CFG["entry_tf"], CFG["pages"])
+            d4 = fetch_klines(s, CFG["htf"], CFG["pages_htf"])
+            if not d1 or len(d1["c"]) < 300:
+                continue
+            sig = find_setup(s, d1, d4)
+            if not sig:
+                continue
+            if sig["score"] < CFG["min_score"]:
+                continue
+            key = f"{s}:{sig['ts']}"
+            if key in sent:
+                continue
+            sig["key"] = key
+            signals.append(sig)
+        except Exception as ex:
+            print("scan skip", s, ex)
+        time.sleep(0.03)
+
+    # ترتيب حسب الدرجة ثم قرب الدخول
+    signals.sort(key=lambda x: (x["score"], x["htf_ok"]), reverse=True)
+
+    # قاعدة صفقة واحدة باليوم: أنظف Setup فقط
+    if CFG["one_per_day"] and signals:
+        signals = signals[:1]
+    else:
+        signals = signals[:CFG["top_n"]]
+
+    if signals and send:
+        mid = send_telegram(format_message(signals))
+        track_for_dashboard(signals, mid)
+        for sig in signals:
+            state.setdefault("sent", []).append(sig["key"])
+        state["last_day"] = dt.date.today().isoformat()
+        save_state(state)
+    elif not signals:
+        print("no signals this scan")
+    return signals
+
+
+# ----------------------- باك-تست حقيقي -----------------------
+def _sim(entry, stop, tp1, tp2, tp3, h, l, c, tch, hold):
+    """محاكاة إدارة 40/40/20: جني 40% عند هدف1 (وقف→تعادل)، 40% عند هدف2، 20% عند هدف3.
+       يعيد الناتج بوحدات R (المخاطرة = entry−stop)."""
+    R = entry - stop
+    if R <= 0:
+        return None
+    r1, r2, r3 = (tp1-entry)/R, (tp2-entry)/R, (tp3-entry)/R
+    if r1 <= 0:
+        return None
+    end = min(len(c), tch+hold)
+    took1 = took2 = False; sl = stop; realized = 0.0
+    for i in range(tch, end):
+        if l[i] <= sl:
+            # ما تبقّى يُغلق عند الوقف الحالي
+            frac = 1.0 - (0.4 if took1 else 0.0) - (0.4 if took2 else 0.0)
+            return realized + frac * ((sl-entry)/R)
+        if not took1 and h[i] >= tp1:
+            took1 = True; realized += 0.4*r1; sl = entry
+        if took1 and not took2 and h[i] >= tp2:
+            took2 = True; realized += 0.4*r2
+        if took2 and h[i] >= tp3:
+            realized += 0.2*r3; return realized
+    # إغلاق زمني
+    frac = 1.0 - (0.4 if took1 else 0.0) - (0.4 if took2 else 0.0)
+    return realized + frac * ((c[end-1]-entry)/R)
+
+def _stats(rs):
+    if not rs:
+        return "لا صفقات"
+    n = len(rs); wins = [x for x in rs if x > 0]; losses = [x for x in rs if x <= 0]
+    wr = len(wins)/n*100
+    gp = sum(wins); gl = -sum(losses)
+    pf = (gp/gl) if gl > 0 else float("inf")
+    exp = sum(rs)/n
+    return (f"صفقات={n} · فوز={wr:.1f}% · توقّع={exp:+.3f}R · PF={pf:.2f} · مجموع={sum(rs):+.1f}R")
+
+def backtest(basket=None):
+    basket = basket or parse_watchlist_crypto(WATCHLIST)[:30]
+    hold = CFG["bt_hold"]; rs = []
+    print(f"باك-تست صيد الارتفاعات | tf={CFG['entry_tf']} htf={CFG['htf']} | {len(basket)} رمز | hold={hold} | min_score={CFG['min_score']}")
+    for s in basket:
+        try:
+            d1 = fetch_klines(s, CFG["entry_tf"], CFG["pages"])
+            d4 = fetch_klines(s, CFG["htf"], CFG["pages_htf"])
+            if not d1 or len(d1["c"]) < 400:
+                continue
+            h, l, c = d1["h"], d1["l"], d1["c"]
+            N = len(c)
+            # نمرّ على التاريخ ونبني Setup عند كل شمعة (نافذة متحرّكة) — عيّنة كل 3 شموع للسرعة
+            step = 3
+            for cut in range(300, N-hold, step):
+                sub = {k: d1[k][:cut+1] for k in ("t", "o", "h", "l", "c", "v")}
+                sig = find_setup(s, sub, d4)
+                if not sig or sig["score"] < CFG["min_score"]:
+                    continue
+                r = _sim(sig["entry"], sig["stop"], sig["tp1"], sig["tp2"], sig["tp3"], h, l, c, cut, hold)
+                if r is not None:
+                    rs.append(r)
+        except Exception as ex:
+            print("bt skip", s, ex)
+        time.sleep(0.03)
+    print("النتيجة:", _stats(rs))
+    return rs
+
+
+# ----------------------- تنفيذ تجريبي على بايبت/بايننس -----------------------
+def execute_signals(signals):
+    """تنفيذ شراء تجريبي (Bybit Testnet / Binance Demo) لأعلى الإشارات، خلف أعلام بيئة.
+       HUNTER_EXEC_BYBIT=1 و/أو HUNTER_EXEC_BINANCE=1 لتفعيله. USDT لكل صفقة عبر HUNTER_USDT."""
+    usdt = float(os.environ.get("HUNTER_USDT", "50"))
+    do_bybit = os.environ.get("HUNTER_EXEC_BYBIT", "0") == "1"
+    do_binance = os.environ.get("HUNTER_EXEC_BINANCE", "0") == "1"
+    if not (do_bybit or do_binance):
+        print("التنفيذ معطّل (اضبط HUNTER_EXEC_BYBIT=1 أو HUNTER_EXEC_BINANCE=1)"); return
+    for s in signals:
+        sym = s["sym"]
+        if do_bybit:
+            try:
+                import bybit_exec
+                res = bybit_exec.market_buy(sym, usdt)
+                print(f"[Bybit] شراء {sym} بـ{usdt}$ →", res)
+            except Exception as ex:
+                print(f"[Bybit] فشل {sym}:", ex)
+        if do_binance:
+            try:
+                import binance_exec
+                res = binance_exec.market_buy(sym, usdt)
+                print(f"[Binance] شراء {sym} بـ{usdt}$ →", res)
+            except Exception as ex:
+                print(f"[Binance] فشل {sym}:", ex)
+
+
+# ----------------------- main -----------------------
+def main():
+    mode = sys.argv[1] if len(sys.argv) > 1 else "scan"
+    if mode == "backtest":
+        backtest()
+    elif mode == "exec":
+        sigs = scan(send=True)
+        if sigs:
+            execute_signals(sigs)
+    else:  # scan
+        scan()
+
+if __name__ == "__main__":
+    main()
