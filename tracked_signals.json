@@ -28987,5 +28987,43 @@
     "exit_price": 0.321906,
     "close_card_sent": true,
     "closed_at": "2026-07-04T09:32:57"
+  },
+  "RSI60 · 15m|RIFUSDT|2026-07-04 09:44:59.999000": {
+    "symbol": "RIFUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.1182,
+    "dca_levels": [
+      0.1146474,
+      0.11355,
+      0.1124526,
+      0.1108902
+    ],
+    "stop": 0.10980062,
+    "init_stop": 0.10980062,
+    "cur_stop": 0.10980062,
+    "last_alert_stop": 0.10980062,
+    "armed": false,
+    "targets": [
+      0.1207296,
+      0.1239474,
+      0.1332474
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 09:44:59.999000",
+    "last_bar": "2026-07-04 09:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1182,
+    "lo_seen": 0.1182,
+    "created": "2026-07-04T09:46:02"
   }
 }
