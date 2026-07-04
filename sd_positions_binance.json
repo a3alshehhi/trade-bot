@@ -31,45 +31,6 @@
     "tp1_done": false,
     "opened_ts": "2026-07-03T16:48:26"
   },
-  "CELOUSDT": {
-    "symbol": "CELOUSDT",
-    "tf": "1h",
-    "label": "RSI50 · 1h",
-    "prob": null,
-    "levels": [
-      0.06266578,
-      0.062405,
-      0.06214422,
-      0.06177294
-    ],
-    "filled": [
-      true,
-      false,
-      false,
-      false
-    ],
-    "leg_usd": 25.0,
-    "n_legs": 4,
-    "fills": [
-      {
-        "price": 0.06359599752229994,
-        "qty": 393.1065,
-        "usd": 25.0
-      }
-    ],
-    "avg_entry": 0.06359599752229994,
-    "entry": 0.06359599752229994,
-    "init_stop": 0.06123818,
-    "stop": 0.06359599752229994,
-    "R": 0.0023578175222999376,
-    "tp1": 0.06411112,
-    "tp2": 0.06487578,
-    "qty": 393.1065,
-    "qty_open": 196.60649999999998,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-03T18:03:51"
-  },
   "AEURUSDT": {
     "symbol": "AEURUSDT",
     "tf": "15m",
@@ -153,14 +114,14 @@
     "avg_entry": 0.0006396172530357834,
     "entry": 0.0006396172530357834,
     "init_stop": 0.00062664,
-    "stop": 0.00062664,
+    "stop": 0.0006396172530357834,
     "R": 1.2977253035783361e-05,
     "tp1": 0.00064408,
     "tp2": 0.00064927,
     "qty": 39085.875,
-    "qty_open": 39085.875,
-    "tp1_done": false,
-    "armed": false,
+    "qty_open": 19543.875,
+    "tp1_done": true,
+    "armed": true,
     "opened_ts": "2026-07-03T21:04:32"
   },
   "LAZIOUSDT": {
@@ -356,5 +317,44 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-04T01:05:33"
+  },
+  "ACTUSDT": {
+    "symbol": "ACTUSDT",
+    "tf": "15m",
+    "label": "RSI60 · 15m",
+    "prob": null,
+    "levels": [
+      0.00954766,
+      0.009445,
+      0.00934234,
+      0.00919618
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 25.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.009179453094059506,
+        "qty": 2723.4738,
+        "usd": 25.0
+      }
+    ],
+    "avg_entry": 0.009179453094059506,
+    "entry": 0.009179453094059506,
+    "init_stop": 0.00912384,
+    "stop": 0.00912384,
+    "R": 5.561309405950621e-05,
+    "tp1": 0.01011664,
+    "tp2": 0.01041766,
+    "qty": 2723.4738,
+    "qty_open": 2723.4738,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-04T01:34:28"
   }
 }
