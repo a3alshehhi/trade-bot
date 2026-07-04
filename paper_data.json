@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-04T22:17:38",
+  "updated_at": "2026-07-04T22:32:40",
   "stats": {
-    "open": 26,
-    "closed": 901,
-    "win_rate": 56.2,
-    "profit_factor": 1.54,
-    "total_pct": 11723.41,
-    "avg_pct": 0.68,
+    "open": 27,
+    "closed": 902,
+    "win_rate": 56.1,
+    "profit_factor": 1.53,
+    "total_pct": 11497.58,
+    "avg_pct": 0.67,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 67,
-        "win_rate": 77.6,
-        "return_pct": 180.26,
+        "trades": 68,
+        "win_rate": 76.5,
+        "return_pct": 174.91,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 409,
-        "win_rate": 63.1,
-        "return_pct": 857.19,
+        "trades": 410,
+        "win_rate": 62.9,
+        "return_pct": 838.91,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 242,
-        "win_rate": 73.1,
-        "return_pct": 702.87
+        "trades": 243,
+        "win_rate": 72.8,
+        "return_pct": 687.54
       },
       {
         "key": "2026-06",
@@ -15249,10 +15249,11 @@
       "entry": 0.00468,
       "stop": 0.00459071,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T17:31:23",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-04T22:32:37",
+      "realized_pct": -1.91,
+      "result_pct": -1.91
     },
     {
       "id": "RSI60 · 15m|PIVXUSDT|2026-07-04 17:29:59.999000",
@@ -15360,6 +15361,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-04T22:01:47",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI60 · 15m|BREVUSDT|2026-07-04 22:29:59.999000",
+      "symbol": "BREVUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0847,
+      "stop": 0.08195858,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T22:31:04",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI60 · 15m|PONDUSDT|2026-07-04 22:29:59.999000",
+      "symbol": "PONDUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00127,
+      "stop": 0.00113609,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T22:31:05",
       "closed_at": null,
       "realized_pct": 0.0
     }

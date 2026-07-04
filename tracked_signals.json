@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-04 21:59:59.999000"
+    "last_bar": "2026-07-04 22:29:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -29934,7 +29934,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 15:59:59.999000",
-    "last_bar": "2026-07-04 21:59:59.999000",
+    "last_bar": "2026-07-04 22:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0349,
@@ -30045,12 +30045,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 17:29:59.999000",
-    "last_bar": "2026-07-04 21:59:59.999000",
+    "last_bar": "2026-07-04 22:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.00469,
-    "lo_seen": 0.00461,
-    "created": "2026-07-04T17:31:23"
+    "lo_seen": 0.00459,
+    "created": "2026-07-04T17:31:23",
+    "exit_price": 0.00459071,
+    "close_card_sent": true,
+    "closed_at": "2026-07-04T22:32:37"
   },
   "RSI60 · 15m|PIVXUSDT|2026-07-04 17:29:59.999000": {
     "symbol": "PIVXUSDT",
@@ -30127,7 +30130,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 17:44:59.999000",
-    "last_bar": "2026-07-04 21:59:59.999000",
+    "last_bar": "2026-07-04 22:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0357,
@@ -30328,5 +30331,81 @@
     "hi_seen": 0.00123,
     "lo_seen": 0.00123,
     "created": "2026-07-04T22:01:47"
+  },
+  "RSI60 · 15m|BREVUSDT|2026-07-04 22:29:59.999000": {
+    "symbol": "BREVUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.0847,
+    "dca_levels": [
+      0.083554,
+      0.0832,
+      0.082846,
+      0.082342
+    ],
+    "stop": 0.08195858,
+    "init_stop": 0.08195858,
+    "cur_stop": 0.08195858,
+    "last_alert_stop": 0.08195858,
+    "armed": false,
+    "targets": [
+      0.085516,
+      0.086554,
+      0.089554
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 22:29:59.999000",
+    "last_bar": "2026-07-04 22:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0847,
+    "lo_seen": 0.0847,
+    "created": "2026-07-04T22:31:04"
+  },
+  "RSI60 · 15m|PONDUSDT|2026-07-04 22:29:59.999000": {
+    "symbol": "PONDUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.00127,
+    "dca_levels": [
+      0.00121652,
+      0.0012,
+      0.00118348,
+      0.00115996
+    ],
+    "stop": 0.00113609,
+    "init_stop": 0.00113609,
+    "cur_stop": 0.00113609,
+    "last_alert_stop": 0.00113609,
+    "armed": false,
+    "targets": [
+      0.00130808,
+      0.00135652,
+      0.00149652
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 22:29:59.999000",
+    "last_bar": "2026-07-04 22:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00127,
+    "lo_seen": 0.00127,
+    "created": "2026-07-04T22:31:05"
   }
 }
