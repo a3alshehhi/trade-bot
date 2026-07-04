@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-04T21:33:01",
+  "updated_at": "2026-07-04T21:47:49",
   "stats": {
     "open": 28,
-    "closed": 897,
+    "closed": 898,
     "win_rate": 56.1,
     "profit_factor": 1.54,
-    "total_pct": 11532.79,
+    "total_pct": 11919.0,
     "avg_pct": 0.68,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 63,
-        "win_rate": 77.8,
-        "return_pct": 175.74,
+        "trades": 64,
+        "win_rate": 78.1,
+        "return_pct": 184.9,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 405,
-        "win_rate": 63.0,
-        "return_pct": 841.76,
+        "trades": 406,
+        "win_rate": 63.1,
+        "return_pct": 873.02,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 238,
-        "win_rate": 73.1,
-        "return_pct": 689.93
+        "trades": 239,
+        "win_rate": 73.2,
+        "return_pct": 716.15
       },
       {
         "key": "2026-06",
@@ -15262,11 +15262,15 @@
       "timeframe": "15m",
       "entry": 0.0416,
       "stop": 0.03873162,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-07-04T17:31:23",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-04T21:47:45",
+      "realized_pct": 3.32,
+      "result_pct": 3.32
     },
     {
       "id": "RSI60 · 15m|IDUSDT|2026-07-04 17:44:59.999000",
@@ -15320,9 +15324,25 @@
       "timeframe": "15m",
       "entry": 0.00123,
       "stop": 0.00109144,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-04T21:31:15",
+      "closed_at": null,
+      "realized_pct": 1.66
+    },
+    {
+      "id": "RSI60 · 15m|ARDRUSDT|2026-07-04 21:44:59.999000",
+      "symbol": "ARDRUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.02557,
+      "stop": 0.02436259,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T21:45:59",
       "closed_at": null,
       "realized_pct": 0.0
     }
