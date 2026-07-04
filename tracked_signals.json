@@ -28954,5 +28954,35 @@
     "hi_seen": 0.00256,
     "lo_seen": 0.00253,
     "created": "2026-07-04T08:38:53"
+  },
+  "العرض/الطلب|ALPINEUSDT|2026-07-04 09:15:00": {
+    "symbol": "ALPINEUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4415,
+    "entry": 0.323,
+    "stop": 0.321906,
+    "init_stop": 0.321906,
+    "cur_stop": 0.321906,
+    "last_alert_stop": 0.321906,
+    "armed": false,
+    "targets": [
+      0.324094,
+      0.325188
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 09:15:00",
+    "last_bar": "2026-07-04 09:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.323,
+    "lo_seen": 0.323,
+    "created": "2026-07-04T09:18:50"
   }
 }
