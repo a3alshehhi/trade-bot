@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-04T16:47:42",
+  "updated_at": "2026-07-04T17:03:43",
   "stats": {
-    "open": 31,
-    "closed": 887,
-    "win_rate": 55.7,
-    "profit_factor": 1.53,
-    "total_pct": 10795.61,
-    "avg_pct": 0.68,
+    "open": 30,
+    "closed": 888,
+    "win_rate": 55.6,
+    "profit_factor": 1.52,
+    "total_pct": 9917.42,
+    "avg_pct": 0.67,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 53,
-        "win_rate": 75.5,
-        "return_pct": 158.27,
+        "trades": 54,
+        "win_rate": 74.1,
+        "return_pct": 137.45,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 395,
-        "win_rate": 62.3,
-        "return_pct": 782.08,
+        "trades": 396,
+        "win_rate": 62.1,
+        "return_pct": 710.98,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 228,
-        "win_rate": 72.4,
-        "return_pct": 639.87
+        "trades": 229,
+        "win_rate": 72.1,
+        "return_pct": 580.24
       },
       {
         "key": "2026-06",
@@ -14890,10 +14890,11 @@
       "entry": 0.0012,
       "stop": 0.001103305721802117,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T10:01:33",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-04T17:03:35",
+      "realized_pct": -8.06,
+      "result_pct": -8.06
     },
     {
       "id": "العرض/الطلب|AVAUSDT|2026-07-04 10:00:00",
@@ -15024,11 +15025,13 @@
       "timeframe": "1h",
       "entry": 0.01999,
       "stop": 0.01954904,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-04T13:52:05",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.1
     },
     {
       "id": "RSI60 · 15m|NEARUSDT|2026-07-04 14:29:59.999000",
