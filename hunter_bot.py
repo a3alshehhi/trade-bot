@@ -48,7 +48,8 @@ CFG = dict(
     require_monthly_vwap=0,    # (قديم) فلتر VWAP الشهري — عُطّل لصالح بوابة الزخم
     # ── بوابة الزخم الإلزامية (2026-07-04): CHoCH ← فوق MA365 ← RSI21 تشبّع شرائي ← فوليوم عالٍ ← دخول ──
     momentum_gate=1,           # 1 = تفعيل تسلسل الزخم الإلزامي
-    ma_len=365,                # المتوسط المتحرّك 365 (شرط: السعر فوقه)
+    trend_filter="wvwap",      # فلتر الاتجاه في البوابة: "wvwap"=VWAP الأسبوعي | "ma365"=متوسط 365
+    ma_len=365,                # المتوسط المتحرّك 365 (يُستخدم إذا trend_filter=ma365)
     rsi_mom_len=21,            # طول RSI لشرط التشبّع الشرائي
     rsi_ob=70,                 # عتبة التشبّع الشرائي
     vol_entry_z=2.0,           # فوليوم الدخول العالي (Volume Z ≥ هذا على شمعة الدخول)
@@ -72,6 +73,7 @@ CFG["one_per_day"] = int(os.environ.get("HUNTER_ONE_PER_DAY", CFG["one_per_day"]
 CFG["min_score"]   = int(os.environ.get("HUNTER_MIN_SCORE", CFG["min_score"]))
 CFG["require_monthly_vwap"] = int(os.environ.get("HUNTER_REQUIRE_VWAP", CFG["require_monthly_vwap"]))
 CFG["momentum_gate"] = int(os.environ.get("HUNTER_MOMENTUM", CFG["momentum_gate"]))
+CFG["trend_filter"] = os.environ.get("HUNTER_TREND_FILTER", CFG["trend_filter"]).lower()
 CFG["ma_len"]     = int(os.environ.get("HUNTER_MA_LEN", CFG["ma_len"]))
 CFG["rsi_ob"]     = float(os.environ.get("HUNTER_RSI_OB", CFG["rsi_ob"]))
 CFG["vol_entry_z"] = float(os.environ.get("HUNTER_VOL_Z", CFG["vol_entry_z"]))
@@ -185,6 +187,22 @@ def vwap_monthly(t, h, l, c, v):
         out[i] = (cum_pv/cum_v) if cum_v > 0 else float("nan")
     return out
 
+def vwap_weekly(t, h, l, c, v):
+    """VWAP مرسّى لبداية كل أسبوع ISO (يبدأ الإثنين، UTC): Σ(السعر النموذجي×الحجم)/Σ(الحجم)،
+       يُصفّر عند بداية كل أسبوع. السعر النموذجي = (high+low+close)/3."""
+    out = [float("nan")]*len(c)
+    cum_pv = cum_v = 0.0; cur_week = None
+    for i in range(len(c)):
+        d = dt.datetime.utcfromtimestamp(t[i]/1000)
+        iso = d.isocalendar()
+        wk = (iso[0], iso[1])            # (سنة ISO، رقم الأسبوع)
+        if wk != cur_week:
+            cur_week = wk; cum_pv = cum_v = 0.0
+        tp = (h[i]+l[i]+c[i])/3.0
+        cum_pv += tp*v[i]; cum_v += v[i]
+        out[i] = (cum_pv/cum_v) if cum_v > 0 else float("nan")
+    return out
+
 def pivots(h, l, L, R):
     """يعيد قائمتين: قمم سوينق (ph) وقيعان سوينق (pl) كـ (index, price)."""
     ph, pl = [], []
@@ -236,10 +254,14 @@ def find_setup(sym, d1, d4):
             choch = True
 
     # --- مؤشّرات بوابة الزخم ---
-    MA = sma(c, CFG["ma_len"])                  # متوسط 365
     Rm = rsi(c, CFG["rsi_mom_len"])             # RSI(21)
     ema_bull = math.isfinite(ef[last]) and math.isfinite(es[last]) and ef[last] > es[last]
-    above_ma = math.isfinite(MA[last]) and price > MA[last]                    # (شرط) فوق متوسط 365
+    # فلتر الاتجاه: VWAP الأسبوعي (افتراضي) أو متوسط 365
+    if CFG["trend_filter"] == "ma365":
+        TR = sma(c, CFG["ma_len"]); trend_name = "فوق متوسط 365"
+    else:
+        TR = vwap_weekly(d1["t"], h, l, c, v); trend_name = "فوق VWAP الأسبوعي"
+    above_ma = math.isfinite(TR[last]) and price > TR[last]                    # (شرط) فوق فلتر الاتجاه
     win0 = max(0, last - CFG["seq_lookback"])
     rsi_ob_hit = any(math.isfinite(Rm[i]) and Rm[i] >= CFG["rsi_ob"]           # (شرط) RSI21 بلغ التشبّع الشرائي
                      for i in range(win0, n))
@@ -284,7 +306,7 @@ def find_setup(sym, d1, d4):
 
     reasons = []
     if choch: reasons.append("CHoCH صاعد")
-    if above_ma: reasons.append("فوق متوسط 365")
+    if above_ma: reasons.append(trend_name)
     if rsi_ob_hit: reasons.append(f"RSI21 تشبّع شرائي (≥{int(CFG['rsi_ob'])})")
     if vol_entry: reasons.append("دخول فوليوم عالٍ")
     if ema_bull: reasons.append("EMA صاعد")
