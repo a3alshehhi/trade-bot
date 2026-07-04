@@ -55,6 +55,9 @@ CFG = dict(
     seq_lookback=60,           # نافذة تحقّق التسلسل (بالشموع)
     stop_lookback=10,          # نافذة قاع الوقف (أقرب للاختراق = وقف أضيق)
     fib_ext1=1.272, fib_ext2=1.618, fib_ext3=2.618,  # امتدادات فيبو للأهداف
+    # ── إدارة الخروج (الأهم): وقف متحرّك شانديلير + جني جزئي ──
+    trail_atr=2.5,             # مضاعف الوقف المتحرّك (قمة − trail_atr×ATR)
+    tp1_frac=0.5,              # نسبة الجني عند الهدف الأول قبل تفعيل التتبّع
     min_score=4,               # أدنى درجة (من 5 شروط) لقبول الإشارة
     one_per_day=1,             # 1 = صفقة واحدة باليوم (أعلى درجة)، 0 = كل الإشارات
     top_n=5,                   # أقصى عدد إشارات للإرسال
@@ -72,6 +75,8 @@ CFG["momentum_gate"] = int(os.environ.get("HUNTER_MOMENTUM", CFG["momentum_gate"
 CFG["ma_len"]     = int(os.environ.get("HUNTER_MA_LEN", CFG["ma_len"]))
 CFG["rsi_ob"]     = float(os.environ.get("HUNTER_RSI_OB", CFG["rsi_ob"]))
 CFG["vol_entry_z"] = float(os.environ.get("HUNTER_VOL_Z", CFG["vol_entry_z"]))
+CFG["trail_atr"]  = float(os.environ.get("HUNTER_TRAIL_ATR", CFG["trail_atr"]))
+CFG["tp1_frac"]   = float(os.environ.get("HUNTER_TP1_FRAC", CFG["tp1_frac"]))
 
 BINANCE_BASES = ["https://data-api.binance.vision", "https://api.binance.com"]
 WATCHLIST = "watchlist.txt"
@@ -476,9 +481,8 @@ def scan(basket=None, send=True):
 
 
 # ----------------------- باك-تست حقيقي -----------------------
-def _sim(entry, stop, tp1, tp2, tp3, h, l, c, tch, hold):
-    """محاكاة إدارة 40/40/20: جني 40% عند هدف1 (وقف→تعادل)، 40% عند هدف2، 20% عند هدف3.
-       يعيد الناتج بوحدات R (المخاطرة = entry−stop)."""
+def _sim_static(entry, stop, tp1, tp2, tp3, h, l, c, tch, hold):
+    """(أ) الخروج الحالي: 40/40/20 عند الأهداف + الوقف→تعادل بعد الهدف الأول. الناتج بوحدات R."""
     R = entry - stop
     if R <= 0:
         return None
@@ -489,7 +493,6 @@ def _sim(entry, stop, tp1, tp2, tp3, h, l, c, tch, hold):
     took1 = took2 = False; sl = stop; realized = 0.0
     for i in range(tch, end):
         if l[i] <= sl:
-            # ما تبقّى يُغلق عند الوقف الحالي
             frac = 1.0 - (0.4 if took1 else 0.0) - (0.4 if took2 else 0.0)
             return realized + frac * ((sl-entry)/R)
         if not took1 and h[i] >= tp1:
@@ -498,9 +501,47 @@ def _sim(entry, stop, tp1, tp2, tp3, h, l, c, tch, hold):
             took2 = True; realized += 0.4*r2
         if took2 and h[i] >= tp3:
             realized += 0.2*r3; return realized
-    # إغلاق زمني
     frac = 1.0 - (0.4 if took1 else 0.0) - (0.4 if took2 else 0.0)
     return realized + frac * ((c[end-1]-entry)/R)
+
+def _sim_trail_partial(entry, stop, tp1, av, h, l, c, tch, hold):
+    """(ب) جني جزئي عند الهدف1 (tp1_frac) ثم وقف متحرّك شانديلير (قمة−k×ATR) للباقي،
+       بحدّ أدنى عند التعادل بعد الجني. يركب امتداد الترند بدل الخروج المبكر عند الأهداف."""
+    R = entry - stop
+    if R <= 0 or av <= 0:
+        return None
+    r1 = (tp1-entry)/R
+    if r1 <= 0:
+        return None
+    k = CFG["trail_atr"]; f1 = CFG["tp1_frac"]
+    end = min(len(c), tch+hold)
+    sl = stop; peak = entry; took1 = False; realized = 0.0
+    for i in range(tch, end):
+        peak = max(peak, h[i])
+        if took1:
+            sl = max(sl, peak - k*av, entry)      # التتبّع مفعّل بعد الجني، لا ينزل عن التعادل
+        if l[i] <= sl:
+            frac = 1.0 - (f1 if took1 else 0.0)
+            return realized + frac * ((sl-entry)/R)
+        if not took1 and h[i] >= tp1:
+            took1 = True; realized += f1*r1; sl = max(sl, entry)
+    frac = 1.0 - (f1 if took1 else 0.0)
+    return realized + frac * ((c[end-1]-entry)/R)
+
+def _sim_trail_full(entry, stop, av, h, l, c, tch, hold):
+    """(ج) وقف متحرّك شانديلير كامل من البداية (بلا جني جزئي) — أقصى ركوب للترند."""
+    R = entry - stop
+    if R <= 0 or av <= 0:
+        return None
+    k = CFG["trail_atr"]
+    end = min(len(c), tch+hold)
+    sl = stop; peak = entry
+    for i in range(tch, end):
+        peak = max(peak, h[i])
+        sl = max(sl, peak - k*av)
+        if l[i] <= sl:
+            return (sl-entry)/R
+    return (c[end-1]-entry)/R
 
 def _stats(rs):
     if not rs:
@@ -513,9 +554,13 @@ def _stats(rs):
     return (f"صفقات={n} · فوز={wr:.1f}% · توقّع={exp:+.3f}R · PF={pf:.2f} · مجموع={sum(rs):+.1f}R")
 
 def backtest(basket=None):
+    """يقارن ٣ أنظمة خروج على نفس الإشارات (إدارة الخروج = أهم رافعة):
+       (أ) 40/40/20 + تعادل  (ب) جني جزئي + وقف متحرّك شانديلير  (ج) وقف متحرّك كامل."""
     basket = basket or parse_watchlist_crypto(WATCHLIST)[:30]
-    hold = CFG["bt_hold"]; rs = []
-    print(f"باك-تست صيد الارتفاعات | tf={CFG['entry_tf']} htf={CFG['htf']} | {len(basket)} رمز | hold={hold} | min_score={CFG['min_score']}")
+    hold = CFG["bt_hold"]
+    rs_a, rs_b, rs_c = [], [], []
+    print(f"باك-تست صيد الارتفاعات | tf={CFG['entry_tf']} htf={CFG['htf']} | {len(basket)} رمز | hold={hold} "
+          f"| min_score={CFG['min_score']} | vol_z={CFG['vol_entry_z']} | trail={CFG['trail_atr']}×ATR")
     for s in basket:
         try:
             d1 = fetch_klines(s, CFG["entry_tf"], CFG["pages"])
@@ -523,22 +568,29 @@ def backtest(basket=None):
             if not d1 or len(d1["c"]) < 400:
                 continue
             h, l, c = d1["h"], d1["l"], d1["c"]
+            A = atr(h, l, c, CFG["atr_len"])          # ATR للوقف المتحرّك
             N = len(c)
-            # نمرّ على التاريخ ونبني Setup عند كل شمعة (نافذة متحرّكة) — عيّنة كل 3 شموع للسرعة
             step = 3
             for cut in range(300, N-hold, step):
                 sub = {k: d1[k][:cut+1] for k in ("t", "o", "h", "l", "c", "v")}
                 sig = find_setup(s, sub, d4)
                 if not sig or sig["score"] < CFG["min_score"]:
                     continue
-                r = _sim(sig["entry"], sig["stop"], sig["tp1"], sig["tp2"], sig["tp3"], h, l, c, cut, hold)
-                if r is not None:
-                    rs.append(r)
+                e, st = sig["entry"], sig["stop"]
+                av = A[cut] if (A[cut] and math.isfinite(A[cut])) else (e - st)
+                ra = _sim_static(e, st, sig["tp1"], sig["tp2"], sig["tp3"], h, l, c, cut, hold)
+                rb = _sim_trail_partial(e, st, sig["tp1"], av, h, l, c, cut, hold)
+                rc = _sim_trail_full(e, st, av, h, l, c, cut, hold)
+                if ra is not None: rs_a.append(ra)
+                if rb is not None: rs_b.append(rb)
+                if rc is not None: rs_c.append(rc)
         except Exception as ex:
             print("bt skip", s, ex)
         time.sleep(0.03)
-    print("النتيجة:", _stats(rs))
-    return rs
+    print("(أ) 40/40/20 + تعادل     :", _stats(rs_a))
+    print("(ب) جني جزئي + تريل شانديلير:", _stats(rs_b))
+    print("(ج) تريل شانديلير كامل    :", _stats(rs_c))
+    return {"static": rs_a, "trail_partial": rs_b, "trail_full": rs_c}
 
 
 # ----------------------- تنفيذ تجريبي على بايبت/بايننس -----------------------
