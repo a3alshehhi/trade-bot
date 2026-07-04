@@ -28064,5 +28064,115 @@
     "hi_seen": 0.325,
     "lo_seen": 0.325,
     "created": "2026-07-03T23:38:40"
+  },
+  "RSI60 · 15m|ACTUSDT|2026-07-03 23:59:59.999000": {
+    "symbol": "ACTUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.00988,
+    "dca_levels": [
+      0.00954766,
+      0.009445,
+      0.00934234,
+      0.00919618
+    ],
+    "stop": 0.00912384,
+    "init_stop": 0.00912384,
+    "cur_stop": 0.00912384,
+    "last_alert_stop": 0.00912384,
+    "armed": false,
+    "targets": [
+      0.01011664,
+      0.01041766,
+      0.01128766
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 23:59:59.999000",
+    "last_bar": "2026-07-03 23:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00988,
+    "lo_seen": 0.00988,
+    "created": "2026-07-04T00:01:20"
+  },
+  "RSI50 · 1h|ACTUSDT|2026-07-03 23:59:59.999000": {
+    "symbol": "ACTUSDT",
+    "label": "RSI50 · 1h",
+    "timeframe": "1h",
+    "message_id": -1,
+    "entry": 0.00988,
+    "dca_levels": [
+      0.00953238,
+      0.009425,
+      0.00931762,
+      0.00916474
+    ],
+    "stop": 0.00905516,
+    "init_stop": 0.00905516,
+    "cur_stop": 0.00905516,
+    "last_alert_stop": 0.00905516,
+    "armed": false,
+    "targets": [
+      0.01012752,
+      0.01044238,
+      0.01135238
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 23:59:59.999000",
+    "last_bar": "2026-07-03 23:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00988,
+    "lo_seen": 0.00988,
+    "created": "2026-07-04T00:01:50"
+  },
+  "trendwave · 15m|ACTUSDT|2026-07-03 23:59:59.999000": {
+    "symbol": "ACTUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.00988,
+    "dca_levels": [
+      0.00941778,
+      0.009275,
+      0.00913222,
+      0.00892894
+    ],
+    "stop": 0.00859766,
+    "init_stop": 0.00859766,
+    "cur_stop": 0.00859766,
+    "last_alert_stop": 0.00859766,
+    "armed": false,
+    "targets": [
+      0.01020912,
+      0.01062778,
+      0.01183778
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-03 23:59:59.999000",
+    "last_bar": "2026-07-03 23:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00988,
+    "lo_seen": 0.00988,
+    "created": "2026-07-04T00:02:38"
   }
 }

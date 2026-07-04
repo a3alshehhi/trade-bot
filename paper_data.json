@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-03T23:48:34",
+  "updated_at": "2026-07-04T00:03:54",
   "stats": {
-    "open": 36,
+    "open": 39,
     "closed": 834,
     "win_rate": 54.4,
     "profit_factor": 1.45,
@@ -14358,6 +14358,48 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-03T23:38:40",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI60 · 15m|ACTUSDT|2026-07-03 23:59:59.999000",
+      "symbol": "ACTUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00988,
+      "stop": 0.00912384,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T00:01:20",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI50 · 1h|ACTUSDT|2026-07-03 23:59:59.999000",
+      "symbol": "ACTUSDT",
+      "label": "RSI50 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.00988,
+      "stop": 0.00905516,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T00:01:50",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|ACTUSDT|2026-07-03 23:59:59.999000",
+      "symbol": "ACTUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00988,
+      "stop": 0.00859766,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T00:02:38",
       "closed_at": null,
       "realized_pct": 0.0
     }
