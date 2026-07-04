@@ -29945,5 +29945,35 @@
     "hi_seen": 0.0246,
     "lo_seen": 0.02436,
     "created": "2026-07-04T16:01:42"
+  },
+  "صيد الارتفاعات|AVAUSDT|2026-07-04 17:00:00": {
+    "symbol": "AVAUSDT",
+    "label": "صيد الارتفاعات",
+    "timeframe": "1h",
+    "message_id": 4488,
+    "entry": 0.189,
+    "stop": 0.17022857,
+    "init_stop": 0.17022857,
+    "cur_stop": 0.17022857,
+    "last_alert_stop": 0.17022857,
+    "armed": false,
+    "targets": [
+      0.1950312,
+      0.2018128
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 17:00:00",
+    "last_bar": "2026-07-04 17:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.189,
+    "lo_seen": 0.189,
+    "created": "2026-07-04T17:13:27"
   }
 }
