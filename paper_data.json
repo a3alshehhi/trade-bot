@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-04T12:47:37",
+  "updated_at": "2026-07-04T13:03:46",
   "stats": {
-    "open": 35,
-    "closed": 870,
-    "win_rate": 54.8,
-    "profit_factor": 1.51,
-    "total_pct": 8143.21,
-    "avg_pct": 0.66,
+    "open": 32,
+    "closed": 873,
+    "win_rate": 55.0,
+    "profit_factor": 1.52,
+    "total_pct": 9178.16,
+    "avg_pct": 0.67,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 36,
-        "win_rate": 63.9,
-        "return_pct": 95.4,
+        "trades": 39,
+        "win_rate": 66.7,
+        "return_pct": 119.93,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 378,
-        "win_rate": 60.6,
-        "return_pct": 567.35,
+        "trades": 381,
+        "win_rate": 60.9,
+        "return_pct": 651.13,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 211,
-        "win_rate": 70.1,
-        "return_pct": 459.76
+        "trades": 214,
+        "win_rate": 70.6,
+        "return_pct": 530.04
       },
       {
         "key": "2026-06",
@@ -14080,11 +14080,15 @@
       "timeframe": "1h",
       "entry": 0.003069,
       "stop": 0.00284338,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-07-03T16:01:36",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-04T13:03:30",
+      "realized_pct": 5.35,
+      "result_pct": 5.35
     },
     {
       "id": "العرض/الطلب|CRVUSDT|2026-07-03 16:00:00",
@@ -14262,11 +14266,15 @@
       "timeframe": "1h",
       "entry": 0.003061,
       "stop": 0.00273892,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-07-03T21:01:50",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-04T13:03:33",
+      "realized_pct": 5.25,
+      "result_pct": 5.25
     },
     {
       "id": "العرض/الطلب|CHRUSDT|2026-07-03 21:00:00",
@@ -14567,11 +14575,13 @@
       "timeframe": "1h",
       "entry": 0.0098,
       "stop": 0.009268,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-04T01:23:34",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 2.71
     },
     {
       "id": "RSI50 · 1h|ESPUSDT|2026-07-04 01:59:59.999000",
@@ -14681,11 +14691,13 @@
       "timeframe": "1h",
       "entry": 9.78e-06,
       "stop": 9.66e-06,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-04T05:51:30",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.61
     },
     {
       "id": "العرض/الطلب|DIAUSDT|2026-07-04 06:30:00",
@@ -14868,12 +14880,14 @@
       "entry": 0.173,
       "stop": 0.1712566,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T10:22:14",
-      "closed_at": null,
-      "realized_pct": 0.5
+      "closed_at": "2026-07-04T13:03:43",
+      "realized_pct": 1.51,
+      "result_pct": 1.51
     },
     {
       "id": "العرض/الطلب|DIAUSDT|2026-07-04 10:00:00",
@@ -14883,11 +14897,13 @@
       "timeframe": "1h",
       "entry": 0.1114,
       "stop": 0.1104154,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-04T10:51:07",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.44
     },
     {
       "id": "RSI60 · 15m|ENSOUSDT|2026-07-04 10:59:59.999000",
