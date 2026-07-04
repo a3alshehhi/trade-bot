@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-04T04:48:33",
+  "updated_at": "2026-07-04T05:03:55",
   "stats": {
-    "open": 39,
-    "closed": 847,
-    "win_rate": 54.5,
+    "open": 38,
+    "closed": 848,
+    "win_rate": 54.6,
     "profit_factor": 1.44,
-    "total_pct": 3885.54,
+    "total_pct": 3898.69,
     "avg_pct": 0.57,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 13,
-        "win_rate": 61.5,
-        "return_pct": -5.53,
+        "trades": 14,
+        "win_rate": 64.3,
+        "return_pct": -5.22,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 355,
-        "win_rate": 60.3,
-        "return_pct": 222.66,
+        "trades": 356,
+        "win_rate": 60.4,
+        "return_pct": 223.72,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 188,
-        "win_rate": 70.7,
-        "return_pct": 170.64
+        "trades": 189,
+        "win_rate": 70.9,
+        "return_pct": 171.53
       },
       {
         "key": "2026-06",
@@ -14526,11 +14526,13 @@
       "timeframe": "1h",
       "entry": 0.0025,
       "stop": 0.00245722,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-04T01:08:40",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.86
     },
     {
       "id": "العرض/الطلب|COOKIEUSDT|2026-07-04 01:00:00",
@@ -14557,10 +14559,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T02:01:37",
-      "closed_at": null,
-      "realized_pct": 0.33
+      "closed_at": "2026-07-04T05:03:52",
+      "realized_pct": 0.33,
+      "result_pct": 0.33
     },
     {
       "id": "العرض/الطلب|AWEUSDT|2026-07-04 02:00:00",
@@ -14620,11 +14623,13 @@
       "timeframe": "1h",
       "entry": 0.06671,
       "stop": 0.06585118,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-04T04:07:29",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.64
     }
   ]
 }
