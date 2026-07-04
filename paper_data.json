@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-04T10:18:11",
+  "updated_at": "2026-07-04T10:33:48",
   "stats": {
     "open": 36,
-    "closed": 863,
+    "closed": 864,
     "win_rate": 54.6,
     "profit_factor": 1.52,
-    "total_pct": 8410.72,
+    "total_pct": 8494.98,
     "avg_pct": 0.67,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 29,
-        "win_rate": 58.6,
-        "return_pct": 101.74,
+        "trades": 30,
+        "win_rate": 60.0,
+        "return_pct": 103.73,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 371,
-        "win_rate": 60.1,
-        "return_pct": 589.0,
+        "trades": 372,
+        "win_rate": 60.2,
+        "return_pct": 595.83,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 204,
-        "win_rate": 69.6,
-        "return_pct": 477.92
+        "trades": 205,
+        "win_rate": 69.8,
+        "return_pct": 483.64
       },
       {
         "key": "2026-06",
@@ -14029,10 +14029,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T15:16:00",
-      "closed_at": null,
-      "realized_pct": 0.99
+      "closed_at": "2026-07-04T10:33:34",
+      "realized_pct": 0.99,
+      "result_pct": 0.99
     },
     {
       "id": "العرض/الطلب|DGBUSDT|2026-07-03 15:45:00",
@@ -14845,6 +14846,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-04T10:01:33",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|AVAUSDT|2026-07-04 10:00:00",
+      "symbol": "AVAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.173,
+      "stop": 0.1712566,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T10:22:14",
       "closed_at": null,
       "realized_pct": 0.0
     }
