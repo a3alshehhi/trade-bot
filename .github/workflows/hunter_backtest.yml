@@ -12,6 +12,9 @@ on:
       min_score:
         description: "أدنى درجة (0..5)"
         default: "4"
+      vol_z:
+        description: "فوليوم الدخول (Volume Z على شمعة الدخول)"
+        default: "3"
 
 jobs:
   backtest:
@@ -28,6 +31,7 @@ jobs:
           HUNTER_TF: ${{ github.event.inputs.tf }}
           HUNTER_HTF: ${{ github.event.inputs.htf }}
           HUNTER_MIN_SCORE: ${{ github.event.inputs.min_score }}
+          HUNTER_VOL_Z: ${{ github.event.inputs.vol_z }}
         run: |
           python hunter_bot.py backtest | tee hunter_backtest_result.txt
       - name: Upload result
