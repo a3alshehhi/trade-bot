@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-07-04T00:20:56",
+  "updated_at": "2026-07-04T00:33:47",
   "stats": {
-    "open": 40,
-    "closed": 834,
-    "win_rate": 54.4,
+    "open": 39,
+    "closed": 835,
+    "win_rate": 54.5,
     "profit_factor": 1.45,
-    "total_pct": 4118.71,
+    "total_pct": 4162.59,
     "avg_pct": 0.58,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-07-04",
+        "trades": 1,
+        "win_rate": 100.0,
+        "return_pct": 1.04,
+        "week": "2026-W27",
+        "month": "2026-07"
+      },
       {
         "key": "2026-07-03",
         "trades": 59,
@@ -119,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 342,
-        "win_rate": 60.2,
-        "return_pct": 241.54,
+        "trades": 343,
+        "win_rate": 60.3,
+        "return_pct": 245.09,
         "month": "2026-07"
       },
       {
@@ -142,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 175,
-        "win_rate": 71.4,
-        "return_pct": 186.47
+        "trades": 176,
+        "win_rate": 71.6,
+        "return_pct": 189.45
       },
       {
         "key": "2026-06",
@@ -14189,11 +14197,15 @@
       "timeframe": "15m",
       "entry": 0.00064,
       "stop": 0.00062664,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-07-03T21:01:20",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-04T00:33:38",
+      "realized_pct": 1.04,
+      "result_pct": 1.04
     },
     {
       "id": "RSI50 · 1h|LAZIOUSDT|2026-07-03 20:59:59.999000",
