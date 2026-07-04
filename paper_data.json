@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-04T15:03:45",
+  "updated_at": "2026-07-04T15:18:40",
   "stats": {
-    "open": 35,
-    "closed": 874,
-    "win_rate": 55.0,
+    "open": 38,
+    "closed": 876,
+    "win_rate": 55.1,
     "profit_factor": 1.52,
-    "total_pct": 9213.41,
+    "total_pct": 9289.94,
     "avg_pct": 0.67,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 40,
-        "win_rate": 67.5,
-        "return_pct": 120.76,
+        "trades": 42,
+        "win_rate": 69.0,
+        "return_pct": 122.58,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 382,
-        "win_rate": 61.0,
-        "return_pct": 653.99,
+        "trades": 384,
+        "win_rate": 61.2,
+        "return_pct": 660.18,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 215,
-        "win_rate": 70.7,
-        "return_pct": 532.43
+        "trades": 217,
+        "win_rate": 71.0,
+        "return_pct": 537.63
       },
       {
         "key": "2026-06",
@@ -14990,12 +14990,14 @@
       "entry": 1766.45,
       "stop": 1761.2177,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T13:33:27",
-      "closed_at": null,
-      "realized_pct": 0.15
+      "closed_at": "2026-07-04T15:18:31",
+      "realized_pct": 0.44,
+      "result_pct": 0.44
     },
     {
       "id": "العرض/الطلب|CGPTUSDT|2026-07-04 13:00:00",
@@ -15022,10 +15024,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T14:31:17",
-      "closed_at": null,
-      "realized_pct": 0.38
+      "closed_at": "2026-07-04T15:18:34",
+      "realized_pct": 0.38,
+      "result_pct": 0.38
     },
     {
       "id": "RSI60 · 15m|PHAUSDT|2026-07-04 14:44:59.999000",
@@ -15038,6 +15041,76 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-04T14:46:05",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI60 · 15m|CRVUSDT|2026-07-04 15:14:59.999000",
+      "symbol": "CRVUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2095,
+      "stop": 0.20445061,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T15:16:07",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI60 · 15m|GALAUSDT|2026-07-04 15:14:59.999000",
+      "symbol": "GALAUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.002444,
+      "stop": 0.00237555,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T15:16:08",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI60 · 15m|SCRUSDT|2026-07-04 15:14:59.999000",
+      "symbol": "SCRUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0298,
+      "stop": 0.02922961,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T15:16:08",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI60 · 15m|TAOUSDT|2026-07-04 15:14:59.999000",
+      "symbol": "TAOUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 215.2,
+      "stop": 211.90002825,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T15:16:09",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI60 · 15m|ZKUSDT|2026-07-04 15:14:59.999000",
+      "symbol": "ZKUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01074,
+      "stop": 0.01051071,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T15:16:09",
       "closed_at": null,
       "realized_pct": 0.0
     }
