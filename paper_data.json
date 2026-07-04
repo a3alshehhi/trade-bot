@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-04T21:47:49",
+  "updated_at": "2026-07-04T22:03:31",
   "stats": {
-    "open": 28,
-    "closed": 898,
-    "win_rate": 56.1,
+    "open": 26,
+    "closed": 901,
+    "win_rate": 56.2,
     "profit_factor": 1.54,
-    "total_pct": 11919.0,
+    "total_pct": 11723.41,
     "avg_pct": 0.68,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 64,
-        "win_rate": 78.1,
-        "return_pct": 184.9,
+        "trades": 67,
+        "win_rate": 77.6,
+        "return_pct": 180.26,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 406,
+        "trades": 409,
         "win_rate": 63.1,
-        "return_pct": 873.02,
+        "return_pct": 857.19,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 239,
-        "win_rate": 73.2,
-        "return_pct": 716.15
+        "trades": 242,
+        "win_rate": 73.1,
+        "return_pct": 702.87
       },
       {
         "key": "2026-06",
@@ -15311,10 +15311,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T20:01:30",
-      "closed_at": null,
-      "realized_pct": 1.56
+      "closed_at": "2026-07-04T22:03:27",
+      "realized_pct": 1.56,
+      "result_pct": 1.56
     },
     {
       "id": "RSI60 · 15m|PONDUSDT|2026-07-04 21:29:59.999000",
@@ -15327,10 +15328,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T21:31:15",
-      "closed_at": null,
-      "realized_pct": 1.66
+      "closed_at": "2026-07-04T22:03:28",
+      "realized_pct": 1.66,
+      "result_pct": 1.66
     },
     {
       "id": "RSI60 · 15m|ARDRUSDT|2026-07-04 21:44:59.999000",
@@ -15341,8 +15343,23 @@
       "entry": 0.02557,
       "stop": 0.02436259,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T21:45:59",
+      "closed_at": "2026-07-04T22:03:30",
+      "realized_pct": -4.72,
+      "result_pct": -4.72
+    },
+    {
+      "id": "RSI50 · 1h|PONDUSDT|2026-07-04 21:59:59.999000",
+      "symbol": "PONDUSDT",
+      "label": "RSI50 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.00123,
+      "stop": 0.00107696,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T22:01:47",
       "closed_at": null,
       "realized_pct": 0.0
     }
