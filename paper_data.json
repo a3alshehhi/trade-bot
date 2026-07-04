@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-04T07:48:36",
+  "updated_at": "2026-07-04T08:03:01",
   "stats": {
-    "open": 39,
-    "closed": 853,
-    "win_rate": 54.5,
-    "profit_factor": 1.44,
-    "total_pct": 3854.08,
-    "avg_pct": 0.56,
+    "open": 36,
+    "closed": 856,
+    "win_rate": 54.6,
+    "profit_factor": 1.52,
+    "total_pct": 8230.39,
+    "avg_pct": 0.67,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 19,
-        "win_rate": 57.9,
-        "return_pct": -6.27,
+        "trades": 22,
+        "win_rate": 59.1,
+        "return_pct": 97.46,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 361,
-        "win_rate": 60.1,
-        "return_pct": 220.11,
+        "trades": 364,
+        "win_rate": 60.2,
+        "return_pct": 574.41,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 194,
+        "trades": 197,
         "win_rate": 70.1,
-        "return_pct": 168.5
+        "return_pct": 465.68
       },
       {
         "key": "2026-06",
@@ -2468,12 +2468,14 @@
       "entry": 0.414824,
       "stop": 0.3897213,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-25T00:04:14",
-      "closed_at": null,
-      "realized_pct": 20.35
+      "closed_at": "2026-07-04T08:02:43",
+      "realized_pct": 47.43,
+      "result_pct": 47.43
     },
     {
       "id": "trendwave · 15m|EDUUSDT|2026-06-25 00:44:59.999000",
@@ -4261,12 +4263,14 @@
       "entry": 0.41422867,
       "stop": 0.3843395,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-26T12:03:40",
-      "closed_at": null,
-      "realized_pct": 19.93
+      "closed_at": "2026-07-04T08:02:45",
+      "realized_pct": 46.7,
+      "result_pct": 46.7
     },
     {
       "id": "trendwave · 4h|IOUSDT|2026-06-26 11:59:59.999000",
@@ -13861,10 +13865,11 @@
       "entry": 36.04,
       "stop": 35.10728,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-03T11:06:53",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-04T08:02:51",
+      "realized_pct": -2.59,
+      "result_pct": -2.59
     },
     {
       "id": "العرض/الطلب|ATOMUSDT|2026-07-03 11:15:00",
