@@ -1,0 +1,55 @@
+name: SD Backtest (compare old vs new entry)
+
+# باك-تست حقيقي لاستراتيجية العرض/الطلب: يقارن التوقّع بين المنطق القديم (دخول عند قمة
+# المنطقة) والجديد (دخول فيبو 61.8% + تأكيد + وقف خارج المنطقة). يُشغَّل يدوياً من تبويب
+# Actions، يطبع التقرير في السجل ويرسله إلى تيليجرام. حافة خام بلا ML لعزل أثر تغيير المنطق.
+
+on:
+  workflow_dispatch:
+    inputs:
+      entry_tf:
+        description: "فريم الدخول"
+        type: choice
+        options: ["15m", "1h", "4h"]
+        default: "1h"
+      htf:
+        description: "الفريم الأعلى (السياق)"
+        type: choice
+        options: ["1h", "4h", "1d"]
+        default: "4h"
+      bt_hold:
+        description: "أقصى شموع لإمساك الصفقة"
+        default: "48"
+
+permissions:
+  contents: read
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install requests scikit-learn joblib
+
+      - name: Run SD backtest (old vs new)
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SD_ENTRY_TF: ${{ inputs.entry_tf }}
+          SD_HTF: ${{ inputs.htf }}
+          SD_BT_HOLD: ${{ inputs.bt_hold }}
+        run: python sd_bot.py backtest 2>&1 | tee sd_backtest_log.txt
+
+      - name: Upload log artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sd-backtest-log
+          path: sd_backtest_log.txt
+          if-no-files-found: ignore
