@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-04 09:59:59.999000"
+    "last_bar": "2026-07-04 10:14:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -27252,8 +27252,8 @@
     "entry": 0.01581,
     "stop": 0.01514393,
     "init_stop": 0.01514393,
-    "cur_stop": 0.01514393,
-    "last_alert_stop": 0.01514393,
+    "cur_stop": 0.01581,
+    "last_alert_stop": 0.01581,
     "armed": false,
     "targets": [
       0.0161228,
@@ -27269,10 +27269,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 15:14:59.999000",
-    "last_bar": "2026-07-04 09:59:59.999000",
-    "hits": [],
+    "last_bar": "2026-07-04 10:14:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.01606,
+    "hi_seen": 0.0162,
     "lo_seen": 0.01524,
     "created": "2026-07-03T15:16:00"
   },
@@ -28223,14 +28225,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 23:59:59.999000",
-    "last_bar": "2026-07-04 09:59:59.999000",
+    "last_bar": "2026-07-04 10:14:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.01023,
+    "stopped": true,
+    "hi_seen": 0.0109,
     "lo_seen": 0.00907,
-    "created": "2026-07-04T00:02:38"
+    "created": "2026-07-04T00:02:38",
+    "exit_price": 0.01062778,
+    "close_card_sent": true,
+    "closed_at": "2026-07-04T10:18:00"
   },
   "trendwave · 15m|ACTUSDT|2026-07-04 00:14:59.999000": {
     "symbol": "ACTUSDT",
@@ -28259,14 +28265,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 00:14:59.999000",
-    "last_bar": "2026-07-04 09:59:59.999000",
+    "last_bar": "2026-07-04 10:14:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.01023,
+    "stopped": true,
+    "hi_seen": 0.0109,
     "lo_seen": 0.00907,
-    "created": "2026-07-04T00:16:49"
+    "created": "2026-07-04T00:16:49",
+    "exit_price": 0.01062778,
+    "close_card_sent": true,
+    "closed_at": "2026-07-04T10:18:01"
   },
   "العرض/الطلب|BICOUSDT|2026-07-04 00:30:00": {
     "symbol": "BICOUSDT",
@@ -28864,7 +28874,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 07:29:59.999000",
-    "last_bar": "2026-07-04 09:59:59.999000",
+    "last_bar": "2026-07-04 10:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0456,
@@ -29034,12 +29044,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 09:44:59.999000",
-    "last_bar": "2026-07-04 09:59:59.999000",
+    "last_bar": "2026-07-04 10:14:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.1186,
-    "lo_seen": 0.1131,
-    "created": "2026-07-04T09:46:02"
+    "lo_seen": 0.109,
+    "created": "2026-07-04T09:46:02",
+    "exit_price": 0.10980062,
+    "close_card_sent": true,
+    "closed_at": "2026-07-04T10:18:09"
   },
   "RSI60 · 15m|ENSOUSDT|2026-07-04 09:59:59.999000": {
     "symbol": "ENSOUSDT",
@@ -29072,11 +29085,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 09:59:59.999000",
-    "last_bar": "2026-07-04 09:59:59.999000",
+    "last_bar": "2026-07-04 10:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.653,
-    "lo_seen": 0.653,
+    "hi_seen": 0.655,
+    "lo_seen": 0.65,
     "created": "2026-07-04T10:01:13"
   },
   "RSI50 · 1h|PONDUSDT|2026-07-04 09:59:59.999000": {

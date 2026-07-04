@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-04T10:03:03",
+  "updated_at": "2026-07-04T10:18:11",
   "stats": {
-    "open": 39,
-    "closed": 860,
-    "win_rate": 54.5,
+    "open": 36,
+    "closed": 863,
+    "win_rate": 54.6,
     "profit_factor": 1.52,
-    "total_pct": 8139.57,
-    "avg_pct": 0.66,
+    "total_pct": 8410.72,
+    "avg_pct": 0.67,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 26,
-        "win_rate": 57.7,
-        "return_pct": 95.31,
+        "trades": 29,
+        "win_rate": 58.6,
+        "return_pct": 101.74,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 368,
+        "trades": 371,
         "win_rate": 60.1,
-        "return_pct": 567.05,
+        "return_pct": 589.0,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 201,
-        "win_rate": 69.7,
-        "return_pct": 459.51
+        "trades": 204,
+        "win_rate": 69.6,
+        "return_pct": 477.92
       },
       {
         "key": "2026-06",
@@ -14026,11 +14026,13 @@
       "timeframe": "15m",
       "entry": 0.01581,
       "stop": 0.01514393,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-03T15:16:00",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.99
     },
     {
       "id": "العرض/الطلب|DGBUSDT|2026-07-03 15:45:00",
@@ -14433,12 +14435,14 @@
       "entry": 0.00988,
       "stop": 0.00859766,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T00:02:38",
-      "closed_at": null,
-      "realized_pct": 1.67
+      "closed_at": "2026-07-04T10:18:00",
+      "realized_pct": 5.45,
+      "result_pct": 5.45
     },
     {
       "id": "trendwave · 15m|ACTUSDT|2026-07-04 00:14:59.999000",
@@ -14449,12 +14453,14 @@
       "entry": 0.00988,
       "stop": 0.0085889,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T00:16:49",
-      "closed_at": null,
-      "realized_pct": 1.67
+      "closed_at": "2026-07-04T10:18:01",
+      "realized_pct": 5.45,
+      "result_pct": 5.45
     },
     {
       "id": "العرض/الطلب|BICOUSDT|2026-07-04 00:30:00",
@@ -14808,10 +14814,11 @@
       "entry": 0.1182,
       "stop": 0.10980062,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T09:46:02",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-04T10:18:09",
+      "realized_pct": -7.11,
+      "result_pct": -7.11
     },
     {
       "id": "RSI60 · 15m|ENSOUSDT|2026-07-04 09:59:59.999000",
