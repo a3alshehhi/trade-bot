@@ -28752,5 +28752,65 @@
     "exit_price": 0.1110712,
     "close_card_sent": true,
     "closed_at": "2026-07-04T06:48:35"
+  },
+  "العرض/الطلب|ARPAUSDT|2026-07-04 07:00:00": {
+    "symbol": "ARPAUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 4409,
+    "entry": 0.01102,
+    "stop": 0.01006118,
+    "init_stop": 0.01006118,
+    "cur_stop": 0.01006118,
+    "last_alert_stop": 0.01006118,
+    "armed": false,
+    "targets": [
+      0.01197882,
+      0.01293764
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 07:00:00",
+    "last_bar": "2026-07-04 07:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01102,
+    "lo_seen": 0.01102,
+    "created": "2026-07-04T07:20:52"
+  },
+  "العرض/الطلب|ANKRUSDT|2026-07-04 07:00:00": {
+    "symbol": "ANKRUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 4409,
+    "entry": 0.00366,
+    "stop": 0.00361702,
+    "init_stop": 0.00361702,
+    "cur_stop": 0.00361702,
+    "last_alert_stop": 0.00361702,
+    "armed": false,
+    "targets": [
+      0.00370298,
+      0.00374596
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 07:00:00",
+    "last_bar": "2026-07-04 07:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00366,
+    "lo_seen": 0.00366,
+    "created": "2026-07-04T07:20:52"
   }
 }
