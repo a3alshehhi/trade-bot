@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-04T18:47:36",
+  "updated_at": "2026-07-04T19:03:40",
   "stats": {
-    "open": 30,
-    "closed": 892,
-    "win_rate": 55.8,
-    "profit_factor": 1.53,
-    "total_pct": 10704.94,
-    "avg_pct": 0.67,
+    "open": 27,
+    "closed": 895,
+    "win_rate": 56.0,
+    "profit_factor": 1.54,
+    "total_pct": 11362.66,
+    "avg_pct": 0.68,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 58,
-        "win_rate": 75.9,
-        "return_pct": 156.12,
+        "trades": 61,
+        "win_rate": 77.0,
+        "return_pct": 171.71,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 400,
-        "win_rate": 62.5,
-        "return_pct": 774.74,
+        "trades": 403,
+        "win_rate": 62.8,
+        "return_pct": 827.98,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 233,
-        "win_rate": 72.5,
-        "return_pct": 633.71
+        "trades": 236,
+        "win_rate": 72.9,
+        "return_pct": 678.38
       },
       {
         "key": "2026-06",
@@ -14579,12 +14579,14 @@
       "entry": 0.0025,
       "stop": 0.00245722,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T01:08:40",
-      "closed_at": null,
-      "realized_pct": 0.86
+      "closed_at": "2026-07-04T19:03:28",
+      "realized_pct": 2.57,
+      "result_pct": 2.57
     },
     {
       "id": "العرض/الطلب|COOKIEUSDT|2026-07-04 01:00:00",
@@ -14830,11 +14832,15 @@
       "timeframe": "1h",
       "entry": 0.00253,
       "stop": 0.0024772,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-07-04T08:38:53",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-04T19:03:30",
+      "realized_pct": 3.13,
+      "result_pct": 3.13
     },
     {
       "id": "العرض/الطلب|ALPINEUSDT|2026-07-04 09:15:00",
@@ -15117,10 +15123,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T15:16:08",
-      "closed_at": null,
-      "realized_pct": 0.29
+      "closed_at": "2026-07-04T19:03:33",
+      "realized_pct": 0.29,
+      "result_pct": 0.29
     },
     {
       "id": "RSI60 · 15m|TAOUSDT|2026-07-04 15:14:59.999000",
@@ -15209,11 +15216,13 @@
       "timeframe": "1h",
       "entry": 0.02459,
       "stop": 0.023552930301224618,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-04T16:01:42",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.38
     },
     {
       "id": "صيد الارتفاعات|AVAUSDT|2026-07-04 17:00:00",
