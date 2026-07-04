@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-04T15:18:40",
+  "updated_at": "2026-07-04T15:33:42",
   "stats": {
-    "open": 38,
+    "open": 40,
     "closed": 876,
     "win_rate": 55.1,
     "profit_factor": 1.52,
@@ -15038,11 +15038,13 @@
       "timeframe": "15m",
       "entry": 0.0269,
       "stop": 0.02611375,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-04T14:46:05",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.46
     },
     {
       "id": "RSI60 · 15m|CRVUSDT|2026-07-04 15:14:59.999000",
@@ -15111,6 +15113,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-04T15:16:09",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "صيد الارتفاعات|BMTUSDT|2026-07-04 15:00:00",
+      "symbol": "BMTUSDT",
+      "label": "صيد الارتفاعات",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0133,
+      "stop": 0.01236107,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T15:24:42",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI60 · 15m|PIVXUSDT|2026-07-04 15:29:59.999000",
+      "symbol": "PIVXUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0408,
+      "stop": 0.03853693,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T15:31:14",
       "closed_at": null,
       "realized_pct": 0.0
     }
