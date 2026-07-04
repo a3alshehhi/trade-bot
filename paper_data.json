@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-04T01:03:31",
+  "updated_at": "2026-07-04T01:18:39",
   "stats": {
-    "open": 38,
+    "open": 42,
     "closed": 838,
     "win_rate": 54.3,
     "profit_factor": 1.44,
@@ -14459,6 +14459,64 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-04T00:48:31",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|BANDUSDT|2026-07-04 01:00:00",
+      "symbol": "BANDUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.155,
+      "stop": 0.1546468,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "opened_at": "2026-07-04T01:04:35",
+      "closed_at": null,
+      "realized_pct": 0.11
+    },
+    {
+      "id": "العرض/الطلب|ETHUSDT|2026-07-04 01:00:00",
+      "symbol": "ETHUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 1753.0,
+      "stop": 1730.86208,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T01:08:40",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|DIAUSDT|2026-07-04 01:00:00",
+      "symbol": "DIAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1113,
+      "stop": 0.1099018,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T01:08:40",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|DGBUSDT|2026-07-04 01:00:00",
+      "symbol": "DGBUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0025,
+      "stop": 0.00245722,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T01:08:40",
       "closed_at": null,
       "realized_pct": 0.0
     }
