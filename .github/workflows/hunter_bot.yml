@@ -1,0 +1,51 @@
+name: Hunter Bot (صيد الارتفاعات SMC)
+
+on:
+  workflow_dispatch:            # تشغيل يدوي / عبر cron-job.org
+  schedule:
+    - cron: "9 * * * *"         # كل ساعة (الدقيقة 9 لتفادي ازدحام رأس الساعة)
+
+permissions:
+  contents: write               # لحفظ حالة منع التكرار والتتبّع
+
+concurrency:
+  group: hunter-bot
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Run Hunter bot (فريما 15m و 1h)
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          # كل فريم بحالة مستقلّة لتفادي تضارب منع التكرار
+          HUNTER_TF=15m HUNTER_HTF=1h HUNTER_STATE=hunter_state_15m.json python hunter_bot.py scan
+          HUNTER_TF=1h  HUNTER_HTF=4h HUNTER_STATE=hunter_state_1h.json  python hunter_bot.py scan
+
+      - name: Persist state + tracked signals
+        run: |
+          for f in hunter_state*.json tracked_signals.json; do
+            [ -f "$f" ] && git add "$f"
+          done
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions"
+            git config user.email "actions@github.com"
+            git commit -m "update hunter state + tracked signals [skip ci]"
+            for i in 1 2 3 4 5; do
+              git pull --rebase --autostash origin main && git push && break
+              echo "push attempt $i failed, retrying in 5s..."
+              sleep 5
+            done
+          fi

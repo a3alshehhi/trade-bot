@@ -1,0 +1,64 @@
+name: "Hunter Exec (تنفيذ تجريبي: Bybit Testnet + Binance Demo)"
+
+# ينفّذ شراء تجريبياً لأعلى إشارة من بوت صيد الارتفاعات على المنصّتين معاً.
+# ⚠️ تجريبي فقط: Bybit Testnet و Binance Demo — لا أموال حقيقية.
+# يتطلّب أسراراً: مفاتيح المنصّتين + بروكسي (لأن IP خوادم أمريكا محجوب).
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "12 * * * *"        # كل ساعة بعد الفحص
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hunter-exec
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install deps
+        run: pip install requests
+
+      - name: Scan + execute (Bybit Testnet + Binance Demo)
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          # تفعيل التنفيذ على المنصّتين
+          HUNTER_EXEC_BYBIT: "1"
+          HUNTER_EXEC_BINANCE: "1"
+          HUNTER_USDT: "50"                 # حجم الصفقة التجريبية (USDT)
+          HUNTER_ONE_PER_DAY: "1"           # أعلى إشارة فقط
+          HUNTER_STATE: hunter_state_exec.json
+          # مفاتيح Bybit Testnet
+          BYBIT_API_KEY: ${{ secrets.BYBIT_API_KEY }}
+          BYBIT_API_SECRET: ${{ secrets.BYBIT_API_SECRET }}
+          BYBIT_ENV: testnet
+          BYBIT_BASE_URL: ${{ secrets.BYBIT_BASE_URL }}
+          # مفاتيح Binance Demo
+          BINANCE_API_KEY: ${{ secrets.BINANCE_API_KEY }}
+          BINANCE_API_SECRET: ${{ secrets.BINANCE_API_SECRET }}
+          BINANCE_ENV: demo
+          BINANCE_BASE_URL: ${{ secrets.BINANCE_BASE_URL }}
+        run: |
+          HUNTER_TF=15m HUNTER_HTF=1h python hunter_bot.py exec
+
+      - name: Persist exec state
+        run: |
+          [ -f hunter_state_exec.json ] && git add hunter_state_exec.json || true
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions"
+            git config user.email "actions@github.com"
+            git commit -m "update hunter exec state [skip ci]"
+            for i in 1 2 3 4 5; do
+              git pull --rebase --autostash origin main && git push && break
+              sleep 5
+            done
+          fi
