@@ -28285,5 +28285,125 @@
     "hi_seen": 0.0826,
     "lo_seen": 0.079,
     "created": "2026-07-04T00:48:31"
+  },
+  "العرض/الطلب|BANDUSDT|2026-07-04 01:00:00": {
+    "symbol": "BANDUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4368,
+    "entry": 0.155,
+    "stop": 0.1546468,
+    "init_stop": 0.1546468,
+    "cur_stop": 0.1546468,
+    "last_alert_stop": 0.1546468,
+    "armed": false,
+    "targets": [
+      0.1553532,
+      0.1557064
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 01:00:00",
+    "last_bar": "2026-07-04 01:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.155,
+    "lo_seen": 0.155,
+    "created": "2026-07-04T01:04:35"
+  },
+  "العرض/الطلب|ETHUSDT|2026-07-04 01:00:00": {
+    "symbol": "ETHUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 4371,
+    "entry": 1753.0,
+    "stop": 1730.86208,
+    "init_stop": 1730.86208,
+    "cur_stop": 1730.86208,
+    "last_alert_stop": 1730.86208,
+    "armed": false,
+    "targets": [
+      1775.13792,
+      1797.27584
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 01:00:00",
+    "last_bar": "2026-07-04 01:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1753.0,
+    "lo_seen": 1753.0,
+    "created": "2026-07-04T01:08:40"
+  },
+  "العرض/الطلب|DIAUSDT|2026-07-04 01:00:00": {
+    "symbol": "DIAUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 4371,
+    "entry": 0.1113,
+    "stop": 0.1099018,
+    "init_stop": 0.1099018,
+    "cur_stop": 0.1099018,
+    "last_alert_stop": 0.1099018,
+    "armed": false,
+    "targets": [
+      0.1126982,
+      0.1140964
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 01:00:00",
+    "last_bar": "2026-07-04 01:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1113,
+    "lo_seen": 0.1113,
+    "created": "2026-07-04T01:08:40"
+  },
+  "العرض/الطلب|DGBUSDT|2026-07-04 01:00:00": {
+    "symbol": "DGBUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 4371,
+    "entry": 0.0025,
+    "stop": 0.00245722,
+    "init_stop": 0.00245722,
+    "cur_stop": 0.00245722,
+    "last_alert_stop": 0.00245722,
+    "armed": false,
+    "targets": [
+      0.00254278,
+      0.00258556
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 01:00:00",
+    "last_bar": "2026-07-04 01:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0025,
+    "lo_seen": 0.0025,
+    "created": "2026-07-04T01:08:40"
   }
 }
