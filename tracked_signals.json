@@ -28407,5 +28407,35 @@
     "hi_seen": 0.0025,
     "lo_seen": 0.0025,
     "created": "2026-07-04T01:08:40"
+  },
+  "العرض/الطلب|COOKIEUSDT|2026-07-04 01:00:00": {
+    "symbol": "COOKIEUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 4373,
+    "entry": 0.0098,
+    "stop": 0.009268,
+    "init_stop": 0.009268,
+    "cur_stop": 0.009268,
+    "last_alert_stop": 0.009268,
+    "armed": false,
+    "targets": [
+      0.010332,
+      0.010864
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 01:00:00",
+    "last_bar": "2026-07-04 01:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0098,
+    "lo_seen": 0.0098,
+    "created": "2026-07-04T01:23:34"
   }
 }
