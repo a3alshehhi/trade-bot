@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-04 08:59:59.999000"
+    "last_bar": "2026-07-04 09:29:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -27266,7 +27266,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 15:14:59.999000",
-    "last_bar": "2026-07-04 08:59:59.999000",
+    "last_bar": "2026-07-04 09:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.016,
@@ -28218,7 +28218,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 23:59:59.999000",
-    "last_bar": "2026-07-04 08:59:59.999000",
+    "last_bar": "2026-07-04 09:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01006,
@@ -28252,7 +28252,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 00:14:59.999000",
-    "last_bar": "2026-07-04 08:59:59.999000",
+    "last_bar": "2026-07-04 09:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01006,
@@ -28855,7 +28855,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 07:29:59.999000",
-    "last_bar": "2026-07-04 08:59:59.999000",
+    "last_bar": "2026-07-04 09:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.04557,
@@ -28885,7 +28885,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 08:00:00",
-    "last_bar": "2026-07-04 08:59:59.999000",
+    "last_bar": "2026-07-04 09:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1109,
@@ -28978,11 +28978,14 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 09:15:00",
-    "last_bar": "2026-07-04 09:15:00",
+    "last_bar": "2026-07-04 09:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.323,
-    "lo_seen": 0.323,
-    "created": "2026-07-04T09:18:50"
+    "lo_seen": 0.321,
+    "created": "2026-07-04T09:18:50",
+    "exit_price": 0.321906,
+    "close_card_sent": true,
+    "closed_at": "2026-07-04T09:32:57"
   }
 }
