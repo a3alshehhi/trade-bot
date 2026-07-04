@@ -45,6 +45,7 @@ CFG = dict(
     chase_max_atr=1.5,         # فلتر المطاردة: بُعد السعر عن الدخول > ×ATR = فات القطار
     rsi_chase_max=75,          # فلتر المطاردة: RSI فوق هذا = متأخر
     rsi_cross=50,              # عبور RSI المطلوب
+    require_monthly_vwap=1,    # فلتر إلزامي: ممنوع الدخول إلا فوق VWAP الشهري
     min_score=4,               # أدنى درجة (من 5 شروط) لقبول الإشارة
     one_per_day=1,             # 1 = صفقة واحدة باليوم (أعلى درجة)، 0 = كل الإشارات
     top_n=5,                   # أقصى عدد إشارات للإرسال
@@ -57,6 +58,7 @@ CFG["entry_tf"] = os.environ.get("HUNTER_TF", CFG["entry_tf"])
 CFG["htf"]      = os.environ.get("HUNTER_HTF", CFG["htf"])
 CFG["one_per_day"] = int(os.environ.get("HUNTER_ONE_PER_DAY", CFG["one_per_day"]))
 CFG["min_score"]   = int(os.environ.get("HUNTER_MIN_SCORE", CFG["min_score"]))
+CFG["require_monthly_vwap"] = int(os.environ.get("HUNTER_REQUIRE_VWAP", CFG["require_monthly_vwap"]))
 
 BINANCE_BASES = ["https://data-api.binance.vision", "https://api.binance.com"]
 WATCHLIST = "watchlist.txt"
@@ -142,6 +144,21 @@ def vol_z(v, L):
         out[i] = (v[i]-m)/sd if sd > 0 else 0.0
     return out
 
+def vwap_monthly(t, h, l, c, v):
+    """VWAP مرسّى لبداية كل شهر تقويمي (UTC): Σ(السعر النموذجي×الحجم)/Σ(الحجم)،
+       يُصفّر عند بداية كل شهر. السعر النموذجي = (high+low+close)/3."""
+    out = [float("nan")]*len(c)
+    cum_pv = cum_v = 0.0; cur_month = None
+    for i in range(len(c)):
+        d = dt.datetime.utcfromtimestamp(t[i]/1000)
+        mk = (d.year, d.month)
+        if mk != cur_month:
+            cur_month = mk; cum_pv = cum_v = 0.0
+        tp = (h[i]+l[i]+c[i])/3.0
+        cum_pv += tp*v[i]; cum_v += v[i]
+        out[i] = (cum_pv/cum_v) if cum_v > 0 else float("nan")
+    return out
+
 def pivots(h, l, L, R):
     """يعيد قائمتين: قمم سوينق (ph) وقيعان سوينق (pl) كـ (index, price)."""
     ph, pl = [], []
@@ -166,6 +183,7 @@ def find_setup(sym, d1, d4):
     ef = ema(c, CFG["ema_fast"]); es = ema(c, CFG["ema_slow"]); et = ema(c, CFG["ema_trend"])
     R = rsi(c, CFG["rsi_len"])
     VZ = vol_z(v, CFG["vol_len"])
+    VW = vwap_monthly(d1["t"], h, l, c, v)         # VWAP الشهري المرسّى
     a = A[last]
     if not (a and math.isfinite(a)) or a <= 0:
         return None
@@ -184,6 +202,12 @@ def find_setup(sym, d1, d4):
     eq = swing_lo + 0.5 * rng                     # خط التوازن
     price = c[last]
     in_discount = price <= eq                      # (1) السعر في الخصم
+
+    # ── فلتر إلزامي: ممنوع الدخول إلا فوق VWAP الشهري ──
+    vwap = VW[last]
+    above_vwap = math.isfinite(vwap) and price > vwap
+    if CFG["require_monthly_vwap"] and not above_vwap:
+        return None
 
     # --- CHoCH صاعد: كسر آخر قمة هابطة سابقة ثم BOS ---
     # نأخذ آخر قمّتين: إذا القاع الأخير أعلى من قاع قبله + كسر السعر لقمة سابقة = تحوّل صاعد
@@ -272,6 +296,7 @@ def find_setup(sym, d1, d4):
             htf_ok = e1[-1] >= e2[-1]
 
     reasons = []
+    if above_vwap: reasons.append("فوق VWAP الشهري")
     if in_discount: reasons.append("منطقة خصم")
     if choch: reasons.append("CHoCH صاعد (قاع أعلى)")
     if bos: reasons.append("كسر بنية BOS")
