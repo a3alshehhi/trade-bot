@@ -45,7 +45,16 @@ CFG = dict(
     chase_max_atr=1.5,         # فلتر المطاردة: بُعد السعر عن الدخول > ×ATR = فات القطار
     rsi_chase_max=75,          # فلتر المطاردة: RSI فوق هذا = متأخر
     rsi_cross=50,              # عبور RSI المطلوب
-    require_monthly_vwap=1,    # فلتر إلزامي: ممنوع الدخول إلا فوق VWAP الشهري
+    require_monthly_vwap=0,    # (قديم) فلتر VWAP الشهري — عُطّل لصالح بوابة الزخم
+    # ── بوابة الزخم الإلزامية (2026-07-04): CHoCH ← فوق MA365 ← RSI21 تشبّع شرائي ← فوليوم عالٍ ← دخول ──
+    momentum_gate=1,           # 1 = تفعيل تسلسل الزخم الإلزامي
+    ma_len=365,                # المتوسط المتحرّك 365 (شرط: السعر فوقه)
+    rsi_mom_len=21,            # طول RSI لشرط التشبّع الشرائي
+    rsi_ob=70,                 # عتبة التشبّع الشرائي
+    vol_entry_z=2.0,           # فوليوم الدخول العالي (Volume Z ≥ هذا على شمعة الدخول)
+    seq_lookback=60,           # نافذة تحقّق التسلسل (بالشموع)
+    stop_lookback=10,          # نافذة قاع الوقف (أقرب للاختراق = وقف أضيق)
+    fib_ext1=1.272, fib_ext2=1.618, fib_ext3=2.618,  # امتدادات فيبو للأهداف
     min_score=4,               # أدنى درجة (من 5 شروط) لقبول الإشارة
     one_per_day=1,             # 1 = صفقة واحدة باليوم (أعلى درجة)، 0 = كل الإشارات
     top_n=5,                   # أقصى عدد إشارات للإرسال
@@ -59,6 +68,10 @@ CFG["htf"]      = os.environ.get("HUNTER_HTF", CFG["htf"])
 CFG["one_per_day"] = int(os.environ.get("HUNTER_ONE_PER_DAY", CFG["one_per_day"]))
 CFG["min_score"]   = int(os.environ.get("HUNTER_MIN_SCORE", CFG["min_score"]))
 CFG["require_monthly_vwap"] = int(os.environ.get("HUNTER_REQUIRE_VWAP", CFG["require_monthly_vwap"]))
+CFG["momentum_gate"] = int(os.environ.get("HUNTER_MOMENTUM", CFG["momentum_gate"]))
+CFG["ma_len"]     = int(os.environ.get("HUNTER_MA_LEN", CFG["ma_len"]))
+CFG["rsi_ob"]     = float(os.environ.get("HUNTER_RSI_OB", CFG["rsi_ob"]))
+CFG["vol_entry_z"] = float(os.environ.get("HUNTER_VOL_Z", CFG["vol_entry_z"]))
 
 BINANCE_BASES = ["https://data-api.binance.vision", "https://api.binance.com"]
 WATCHLIST = "watchlist.txt"
@@ -116,6 +129,14 @@ def ema(arr, n):
     for i, x in enumerate(arr):
         prev = x if i == 0 else x*k + prev*(1-k)
         out[i] = prev
+    return out
+
+def sma(arr, n):
+    out = [float("nan")]*len(arr); s = 0.0
+    for i, x in enumerate(arr):
+        s += x
+        if i >= n: s -= arr[i-n]
+        if i >= n-1: out[i] = s/n
     return out
 
 def rsi(c, n):
@@ -176,14 +197,14 @@ def find_setup(sym, d1, d4):
        يعيد dict للإشارة أو None. الدرجة score من 0..5 حسب تحقّق الشروط الخمسة."""
     o, h, l, c, v = d1["o"], d1["h"], d1["l"], d1["c"], d1["v"]
     n = len(c)
-    if n < max(CFG["ema_trend"], 250):
+    if n < max(CFG["ema_trend"], CFG["ma_len"] + 30, 250):   # نحتاج بيانات تكفي لـ MA365
         return None
     last = n - 1
     A = atr(h, l, c, CFG["atr_len"])
     ef = ema(c, CFG["ema_fast"]); es = ema(c, CFG["ema_slow"]); et = ema(c, CFG["ema_trend"])
     R = rsi(c, CFG["rsi_len"])
     VZ = vol_z(v, CFG["vol_len"])
-    VW = vwap_monthly(d1["t"], h, l, c, v)         # VWAP الشهري المرسّى
+    VW = vwap_monthly(d1["t"], h, l, c, v) if CFG["require_monthly_vwap"] else None  # يُحسب فقط عند تفعيل فلتر VWAP
     a = A[last]
     if not (a and math.isfinite(a)) or a <= 0:
         return None
@@ -192,101 +213,62 @@ def find_setup(sym, d1, d4):
     if len(ph) < 2 or len(pl) < 2:
         return None
 
-    # --- مدى آخر سوينق لحساب التوازن (Equilibrium 0.5) ومنطقة الخصم ---
-    swing_hi = ph[-1][1]
-    swing_lo = pl[-1][1]
-    hi_i, lo_i = ph[-1][0], pl[-1][0]
+    # --- بنية: قمم/قيعان + تحوّل طابع صاعد CHoCH ---
+    swing_hi = ph[-1][1]; swing_lo = pl[-1][1]
     rng = swing_hi - swing_lo
     if rng <= 0:
         return None
-    eq = swing_lo + 0.5 * rng                     # خط التوازن
+    eq = swing_lo + 0.5 * rng
     price = c[last]
-    in_discount = price <= eq                      # (1) السعر في الخصم
 
-    # ── فلتر إلزامي: ممنوع الدخول إلا فوق VWAP الشهري ──
-    vwap = VW[last]
-    above_vwap = math.isfinite(vwap) and price > vwap
-    if CFG["require_monthly_vwap"] and not above_vwap:
+    # CHoCH صاعد = قاع أعلى (higher-low) أو كسر آخر قمة سوينق للأعلى.
+    # نستخدم البيفوتات العامة (لا نافذة ضيّقة) لأن التحوّل يحصل مبكراً قبل امتداد الرالي.
+    choch = False
+    if len(pl) >= 2 and pl[-1][1] > pl[-2][1]:
+        choch = True                            # قاع أعلى = بداية تحوّل صاعد
+    if not choch and len(ph) >= 1 and ph[-1][0] + 1 < n:
+        if max(c[ph[-1][0] + 1:]) > ph[-1][1]:  # إغلاق كسر آخر قمة سوينق
+            choch = True
+
+    # --- مؤشّرات بوابة الزخم ---
+    MA = sma(c, CFG["ma_len"])                  # متوسط 365
+    Rm = rsi(c, CFG["rsi_mom_len"])             # RSI(21)
+    ema_bull = math.isfinite(ef[last]) and math.isfinite(es[last]) and ef[last] > es[last]
+    above_ma = math.isfinite(MA[last]) and price > MA[last]                    # (شرط) فوق متوسط 365
+    win0 = max(0, last - CFG["seq_lookback"])
+    rsi_ob_hit = any(math.isfinite(Rm[i]) and Rm[i] >= CFG["rsi_ob"]           # (شرط) RSI21 بلغ التشبّع الشرائي
+                     for i in range(win0, n))
+    rsi_now = Rm[last] if math.isfinite(Rm[last]) else 50.0
+    vol_entry = (c[last] > o[last]) and math.isfinite(VZ[last]) and VZ[last] >= CFG["vol_entry_z"]  # (شرط) شمعة فوليوم عالٍ
+
+    # ── البوابة الإلزامية: التسلسل الكامل (CHoCH ← فوق MA365 ← RSI21 تشبّع ← فوليوم عالٍ) ──
+    if CFG["momentum_gate"] and not (choch and above_ma and rsi_ob_hit and vol_entry):
         return None
 
-    # --- CHoCH صاعد: كسر آخر قمة هابطة سابقة ثم BOS ---
-    # نأخذ آخر قمّتين: إذا القاع الأخير أعلى من قاع قبله + كسر السعر لقمة سابقة = تحوّل صاعد
-    recent_lows = [p for p in pl if p[0] >= last - CFG["struct_lookback"]]
-    recent_highs = [p for p in ph if p[0] >= last - CFG["struct_lookback"]]
-    choch = bos = False
-    broken_high = None
-    if len(recent_lows) >= 2 and len(recent_highs) >= 1:
-        # قاع أعلى (higher low) = بداية تحوّل
-        higher_low = recent_lows[-1][1] > recent_lows[-2][1]
-        # آخر قمة سابقة تم اختراقها بالإغلاق
-        prev_high = recent_highs[-1][1]
-        broke = max(c[recent_highs[-1][0]+1:]) > prev_high if recent_highs[-1][0]+1 < n else False
-        choch = bool(higher_low)
-        bos = bool(broke)
-        broken_high = prev_high
-
-    # --- ريبون EMA: السريع فوق البطيء (وقاطع حديثاً) ---
-    ema_bull = (ef[last] > es[last]) and math.isfinite(ef[last]) and math.isfinite(es[last])
-    ema_cross_recent = any(
-        (ef[i-1] <= es[i-1]) and (ef[i] > es[i])
-        for i in range(max(1, last-CFG["struct_lookback"]), n)
-        if math.isfinite(ef[i]) and math.isfinite(es[i]) and math.isfinite(ef[i-1]) and math.isfinite(es[i-1])
-    )
-
-    # --- انفجار حجم على أقوى شمعة صاعدة أخيرة (شمعة الكسر) ---
-    vol_break = False
-    for i in range(max(1, last-CFG["struct_lookback"]), n):
-        if c[i] > o[i] and math.isfinite(VZ[i]) and VZ[i] >= CFG["vol_z_min"]:
-            vol_break = True; break
-
-    # --- RSI يعبر 50 صاعداً من التشبّع ---
-    rsi_ok = False
-    for i in range(max(1, last-CFG["struct_lookback"]), n):
-        if math.isfinite(R[i-1]) and math.isfinite(R[i]) and R[i-1] < CFG["rsi_cross"] <= R[i]:
-            rsi_ok = True; break
-    rsi_now = R[last] if math.isfinite(R[last]) else 50.0
-
-    # --- الدرجة: خمسة شروط جوهرية ---
-    score = sum([in_discount, (choch or bos), ema_bull and ema_cross_recent, vol_break, rsi_ok])
-
-    # --- كتلة أوامر صاعدة / FVG: آخر شمعة هابطة قبل الاندفاع الصاعد داخل الخصم ---
-    ob_low = ob_high = None
-    impulse_top = swing_hi
-    for i in range(last-1, max(CFG["ema_slow"], last-CFG["struct_lookback"]), -1):
-        # اندفاع صاعد: إغلاق أعلى بوضوح من فتح + حجم
-        if c[i] > o[i] and (c[i]-o[i]) > 0.6*a:
-            # الشمعة الهابطة قبله = كتلة الأوامر
-            j = i-1
-            while j > 0 and c[j] >= o[j]:
-                j -= 1
-            if j > 0:
-                ob_low, ob_high = l[j], h[j]
-                impulse_top = max(h[i:last+1])
-            break
-    if ob_low is None:
-        # بديل: نستخدم القاع الأخير كأساس
-        ob_low, ob_high = swing_lo, swing_lo + 0.3*rng
-        impulse_top = swing_hi
-
-    # --- الدخول: تصحيح فيبو 61.8% لساق الاندفاع (من قاع OB إلى قمة الاندفاع) ---
-    leg_lo, leg_hi = ob_low, impulse_top
-    leg = leg_hi - leg_lo
-    if leg <= 0:
-        return None
-    entry = leg_hi - CFG["fib_entry"] * leg      # ريتست 61.8%
-    stop = ob_low - CFG["stop_buf_atr"] * a       # تحت القاع القوي − بافر ATR
+    # --- الدخول = إغلاق شمعة الفوليوم العالي (دخول استمرار الزخم) ---
+    entry = price
+    swing_base = min(l[win0:last+1])                    # أدنى قاع في نافذة التسلسل (أساس الساق)
+    recent_hi = max(h[win0:last+1])                     # قمة النافذة الحديثة (قمة الرالي)
+    stop_lo = min(l[max(0, last-CFG["stop_lookback"]):last+1])   # قاع قريب للاختراق = وقف أضيق
+    stop = stop_lo - CFG["stop_buf_atr"] * a            # الوقف تحته − بافر ATR
     if stop >= entry:
         return None
+    ob_low, ob_high = stop_lo, recent_hi
 
-    # --- الأهداف بفيبوناتشي ---
-    tp1 = eq if eq > entry else entry + (entry-stop)          # هدف1 = التوازن
-    tp2 = leg_hi if leg_hi > tp1 else tp1 + (entry-stop)      # هدف2 = قمة/Premium
-    tp3 = leg_lo + CFG["fib_ext"] * leg                        # هدف3 = امتداد 1.618
+    # --- الأهداف: امتدادات فيبو للساق البنيوية (قاع النافذة → قمة النافذة) ---
+    leg = recent_hi - swing_base
+    if leg <= 0:
+        return None
+    tp1 = swing_base + CFG["fib_ext1"] * leg
+    tp2 = swing_base + CFG["fib_ext2"] * leg
+    tp3 = swing_base + CFG["fib_ext3"] * leg
+    R0 = entry - stop
+    if tp1 <= entry: tp1 = entry + R0
+    if tp2 <= tp1:   tp2 = tp1 + R0
+    if tp3 <= tp2:   tp3 = tp2 + R0
 
-    # --- فلتر المطاردة ---
-    dist_atr = (price - entry) / a
-    if dist_atr > CFG["chase_max_atr"] or rsi_now > CFG["rsi_chase_max"]:
-        return None    # فات القطار — ننتظر تصحيحاً
+    # --- الدرجة: الشروط الخمسة (أربعة منها إلزامية عبر البوابة + EMA صاعد) ---
+    score = sum([choch, above_ma, rsi_ob_hit, vol_entry, ema_bull])
 
     # سياق HTF (اختياري): 1h غير هابط = المتوسط السريع فوق البطيء
     htf_ok = True
@@ -296,13 +278,11 @@ def find_setup(sym, d1, d4):
             htf_ok = e1[-1] >= e2[-1]
 
     reasons = []
-    if above_vwap: reasons.append("فوق VWAP الشهري")
-    if in_discount: reasons.append("منطقة خصم")
-    if choch: reasons.append("CHoCH صاعد (قاع أعلى)")
-    if bos: reasons.append("كسر بنية BOS")
-    if ema_bull and ema_cross_recent: reasons.append("تقاطع EMA صاعد")
-    if vol_break: reasons.append("انفجار حجم")
-    if rsi_ok: reasons.append("RSI عبر 50")
+    if choch: reasons.append("CHoCH صاعد")
+    if above_ma: reasons.append("فوق متوسط 365")
+    if rsi_ob_hit: reasons.append(f"RSI21 تشبّع شرائي (≥{int(CFG['rsi_ob'])})")
+    if vol_entry: reasons.append("دخول فوليوم عالٍ")
+    if ema_bull: reasons.append("EMA صاعد")
     if htf_ok: reasons.append("سياق 1h غير هابط")
 
     return dict(
