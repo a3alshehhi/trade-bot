@@ -29499,5 +29499,43 @@
     "hi_seen": 2.014,
     "lo_seen": 2.014,
     "created": "2026-07-04T14:31:17"
+  },
+  "RSI60 · 15m|PHAUSDT|2026-07-04 14:44:59.999000": {
+    "symbol": "PHAUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.0269,
+    "dca_levels": [
+      0.0265562,
+      0.02645,
+      0.0263438,
+      0.0261926
+    ],
+    "stop": 0.02611375,
+    "init_stop": 0.02611375,
+    "cur_stop": 0.02611375,
+    "last_alert_stop": 0.02611375,
+    "armed": false,
+    "targets": [
+      0.0271448,
+      0.0274562,
+      0.0283562
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 14:44:59.999000",
+    "last_bar": "2026-07-04 14:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0269,
+    "lo_seen": 0.0269,
+    "created": "2026-07-04T14:46:05"
   }
 }
