@@ -15,23 +15,6 @@
     "tp1_done": false,
     "opened_ts": "2026-07-03T16:47:59"
   },
-  "VANRYUSDT": {
-    "symbol": "VANRYUSDT",
-    "tf": "1h",
-    "label": "RSI50 · 1h",
-    "prob": null,
-    "entry": 0.003069,
-    "init_stop": 0.00284338,
-    "stop": 0.003069,
-    "R": 0.00022562000000000016,
-    "tp1": 0.00316937,
-    "tp2": 0.00329704,
-    "qty": 32308.659,
-    "qty_open": 16154.659,
-    "tp1_done": true,
-    "opened_ts": "2026-07-03T16:48:26",
-    "armed": true
-  },
   "OGUSDT": {
     "symbol": "OGUSDT",
     "tf": "1h",
@@ -318,5 +301,44 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-04T07:33:52"
+  },
+  "PONDUSDT": {
+    "symbol": "PONDUSDT",
+    "tf": "1h",
+    "label": "RSI50 · 1h",
+    "prob": null,
+    "levels": [
+      0.00116944,
+      0.00116,
+      0.00115056,
+      0.00113712
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 25.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.0011511580580994998,
+        "qty": 21717.261,
+        "usd": 25.0
+      }
+    ],
+    "avg_entry": 0.0011511580580994998,
+    "entry": 0.0011511580580994998,
+    "init_stop": 0.001103305721802117,
+    "stop": 0.001103305721802117,
+    "R": 4.7852336297382874e-05,
+    "tp1": 0.00122176,
+    "tp2": 0.00124944,
+    "qty": 21717.261,
+    "qty_open": 21717.261,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-04T12:48:47"
   }
 }

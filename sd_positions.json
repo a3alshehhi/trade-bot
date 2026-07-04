@@ -47,39 +47,6 @@
     "tp1_done": false,
     "opened_ts": "2026-07-03T15:48:12"
   },
-  "VANRYUSDT": {
-    "symbol": "VANRYUSDT",
-    "tf": "1h",
-    "label": "RSI50 · 1h",
-    "prob": null,
-    "levels": [
-      0.003069
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 300.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.0030710710710711874,
-        "qty": 97685.78878748,
-        "usd": 300.0
-      }
-    ],
-    "avg_entry": 0.0030710710710711874,
-    "entry": 0.0030710710710711874,
-    "init_stop": 0.00284338,
-    "stop": 0.0030710710710711874,
-    "R": 0.00022769107107118748,
-    "tp1": 0.00316937,
-    "tp2": 0.00329704,
-    "qty": 97685.78878748,
-    "qty_open": 48842.988787480004,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-03T17:32:51"
-  },
   "PSGUSDT": {
     "symbol": "PSGUSDT",
     "tf": "15m",
