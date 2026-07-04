@@ -48,7 +48,10 @@ CFG = dict(
     require_confirm=1,     # اشتراط شمعة تأكيد (إغلاق فوق أصل المنطقة وفي نصفها العلوي)
     # ── تشديد الدخول (2026-07-04) — «CHoCH في بداية الموجة + قرب من الاتجاه» ──
     require_choch=1,       # يدخل فقط إذا كسرت شمعة الاندفاع الهيكل صعوداً لأول مرة (انعكاس CHoCH)
-    max_ema_dist=0.04,     # أقصى بُعد للدخول فوق EMA200 (قريب من فلتر الاتجاه لا متمدّد)؛ 0 = تعطيل
+    max_ema_dist=0.06,     # أقصى بُعد للدخول فوق EMA200 (قريب من فلتر الاتجاه لا متمدّد)؛ 0 = تعطيل
+    # ── إدارة الخروج نظام ب (الفائزة في بوت الصيد): جني جزئي + وقف متحرّك شانديلير ──
+    tp1_frac=0.5,          # نسبة الجني عند الهدف الأول ثم تتبّع الباقي
+    trail_atr=2.5,         # مضاعف وقف شانديلير المتحرّك (قمة − trail_atr×ATR) للباقي
     bt_hold=48,            # (backtest) أقصى شموع لإمساك الصفقة
 )
 # ── تجاوز فريم الدخول/السياق عبر البيئة (لتشغيل البوت على كل الفريمات: 15m/1h/4h) ──
@@ -59,6 +62,8 @@ CFG["bt_hold"]  = int(os.environ.get("SD_BT_HOLD", CFG["bt_hold"]))
 CFG["pages_1h"] = int(os.environ.get("SD_PAGES", CFG["pages_1h"]))   # تقليل الصفحات = تسريع الجلب
 CFG["require_choch"] = int(os.environ.get("SD_REQUIRE_CHOCH", CFG["require_choch"]))
 CFG["max_ema_dist"]  = float(os.environ.get("SD_MAX_EMA_DIST", CFG["max_ema_dist"]))
+CFG["trail_atr"]     = float(os.environ.get("SD_TRAIL_ATR", CFG["trail_atr"]))
+CFG["tp1_frac"]      = float(os.environ.get("SD_TP1_FRAC", CFG["tp1_frac"]))
 BINANCE_BASES = ["https://data-api.binance.vision", "https://api.binance.com"]
 # ملفات النموذج/الحالة قابلة للتخصيص لكل فريم (لتفادي التضارب بين الفريمات)
 MODEL_PATH = os.environ.get("SD_MODEL", "sd_model.joblib")
@@ -572,6 +577,31 @@ def _sim_5050(entry, stop, tp1, tp2, h, l, c, tch, hold):
     r_last = (c[end - 1] - entry) / R             # إغلاق زمني على آخر شمعة
     return (0.5 * r1 + 0.5 * r_last) if half else r_last
 
+def _sim_trailb(entry, stop, tp1, av, h, l, c, tch, hold):
+    """نظام ب (الفائز في بوت الصيد): جني tp1_frac عند الهدف الأول، ثم وقف متحرّك
+    شانديلير (قمة − trail_atr×ATR) للباقي لا ينزل عن التعادل — يركب امتداد الترند
+    بدل خروج ثابت عند هدف2. av = ATR عند الدخول. الناتج بوحدات R."""
+    R = entry - stop
+    if R <= 0 or av <= 0:
+        return None
+    r1 = (tp1 - entry) / R
+    if r1 <= 0:
+        return None
+    k = CFG["trail_atr"]; f1 = CFG["tp1_frac"]
+    end = min(len(c), tch + hold)
+    sl = stop; peak = entry; took1 = False; realized = 0.0
+    for i in range(tch, end):
+        peak = max(peak, h[i])
+        if took1:
+            sl = max(sl, peak - k * av, entry)    # التتبّع مفعّل بعد الجني، لا ينزل عن التعادل
+        if l[i] <= sl:                            # ضرب الوقف (تحفّظاً نرجّحه قبل الهدف بنفس الشمعة)
+            frac = 1.0 - (f1 if took1 else 0.0)
+            return realized + frac * ((sl - entry) / R)
+        if not took1 and h[i] >= tp1:
+            took1 = True; realized += f1 * r1; sl = max(sl, entry)
+    frac = 1.0 - (f1 if took1 else 0.0)
+    return realized + frac * ((c[end - 1] - entry) / R)
+
 def _stats(rs):
     if not rs:
         return "لا صفقات"
@@ -588,7 +618,7 @@ def backtest(basket=None):
        القديم: دخول=قمة المنطقة، وقف=distal−0.1ATR، أهداف +1R/+2R، بلا تأكيد.
        الجديد: دخول فيبو 61.8%، وقف خارج المنطقة، أهداف فيبو، مع تأكيد+فلاتر."""
     basket = basket or parse_watchlist_crypto(WATCHLIST)[:40]
-    hold = CFG["bt_hold"]; old_rs, new_rs = [], []
+    hold = CFG["bt_hold"]; old_rs, new_rs, new_b_rs = [], [], []
     print(f"backtest SD | tf={CFG['entry_tf']} htf={CFG['htf']} | {len(basket)} رمز | hold={hold}")
     for s in basket:
         try:
@@ -613,9 +643,14 @@ def backtest(basket=None):
                     continue
                 if f["heightATR"] > CFG["max_height_atr"] or f["barsToTouch"] > CFG["max_bars_to_touch"]:
                     continue
-                r = _sim_5050(st["entry"], st["stop"], st["tp1"], st["tp2"], h, l, c, st["touch"], hold)
+                tch = st["touch"]
+                r = _sim_5050(st["entry"], st["stop"], st["tp1"], st["tp2"], h, l, c, tch, hold)
                 if r is not None:
                     new_rs.append(r)
+                av = a[tch] or (st["tp1"] - st["entry"])   # ATR عند الدخول لوقف شانديلير
+                rb = _sim_trailb(st["entry"], st["stop"], st["tp1"], av, h, l, c, tch, hold)
+                if rb is not None:
+                    new_b_rs.append(rb)
             # ── المنطق القديم (دخول عند proximal، وقف داخل المنطقة، بلا تأكيد) ──
             zones = demand_zones(o, h, l, c, v, a)
             for z in zones:
@@ -639,12 +674,14 @@ def backtest(basket=None):
             print("bt skip", s, ex)
         time.sleep(0.03)
     report = ("📊 مقارنة باك-تست العرض/الطلب (حافة خام بلا ML)\n"
-              f"الفريم: دخول {CFG['entry_tf']} / سياق {CFG['htf']}\n"
-              f"— القديم: {_stats(old_rs)}\n"
-              f"— الجديد: {_stats(new_rs)}")
+              f"الفريم: دخول {CFG['entry_tf']} / سياق {CFG['htf']} · "
+              f"CHoCH · قرب≤{CFG['max_ema_dist']:.0%}\n"
+              f"— القديم (5050): {_stats(old_rs)}\n"
+              f"— الجديد (5050): {_stats(new_rs)}\n"
+              f"— الجديد (نظام ب شانديلير {CFG['trail_atr']}×ATR): {_stats(new_b_rs)}")
     print("\n" + report)
     send_telegram(report)
-    return old_rs, new_rs
+    return old_rs, new_rs, new_b_rs
 
 def _precompute(sym, d1, d4):
     """يحسب المؤشّرات الثقيلة والمناطق مرة واحدة لكل رمز (مستقلّة عن معاملات فيبو/الوقف)."""
