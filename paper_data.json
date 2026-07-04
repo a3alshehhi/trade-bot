@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-04T17:03:43",
+  "updated_at": "2026-07-04T17:18:11",
   "stats": {
     "open": 30,
-    "closed": 888,
-    "win_rate": 55.6,
+    "closed": 889,
+    "win_rate": 55.7,
     "profit_factor": 1.52,
-    "total_pct": 9917.42,
+    "total_pct": 9940.46,
     "avg_pct": 0.67,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 54,
-        "win_rate": 74.1,
-        "return_pct": 137.45,
+        "trades": 55,
+        "win_rate": 74.5,
+        "return_pct": 138.0,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 396,
-        "win_rate": 62.1,
-        "return_pct": 710.98,
+        "trades": 397,
+        "win_rate": 62.2,
+        "return_pct": 712.85,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 229,
-        "win_rate": 72.1,
-        "return_pct": 580.24
+        "trades": 230,
+        "win_rate": 72.2,
+        "return_pct": 581.8
       },
       {
         "key": "2026-06",
@@ -15128,10 +15128,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T15:16:09",
-      "closed_at": null,
-      "realized_pct": 0.23
+      "closed_at": "2026-07-04T17:18:07",
+      "realized_pct": 0.23,
+      "result_pct": 0.23
     },
     {
       "id": "RSI60 · 15m|ZKUSDT|2026-07-04 15:14:59.999000",
@@ -15203,6 +15204,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-04T16:01:42",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "صيد الارتفاعات|AVAUSDT|2026-07-04 17:00:00",
+      "symbol": "AVAUSDT",
+      "label": "صيد الارتفاعات",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.189,
+      "stop": 0.17022857,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T17:13:27",
       "closed_at": null,
       "realized_pct": 0.0
     }
