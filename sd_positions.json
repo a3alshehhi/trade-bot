@@ -296,45 +296,6 @@
     "armed": true,
     "opened_ts": "2026-07-04T14:33:54"
   },
-  "GALAUSDT": {
-    "symbol": "GALAUSDT",
-    "tf": "15m",
-    "label": "RSI60 · 15m",
-    "prob": null,
-    "levels": [
-      0.0024142,
-      0.002405,
-      0.0023958,
-      0.00238269
-    ],
-    "filled": [
-      true,
-      false,
-      false,
-      false
-    ],
-    "leg_usd": 75.0,
-    "n_legs": 4,
-    "fills": [
-      {
-        "price": 0.002450450450451157,
-        "qty": 30606.61764705,
-        "usd": 75.0
-      }
-    ],
-    "avg_entry": 0.002450450450451157,
-    "entry": 0.002450450450451157,
-    "init_stop": 0.00237555,
-    "stop": 0.002450450450451157,
-    "R": 7.490045045115698e-05,
-    "tp1": 0.00246522,
-    "tp2": 0.0024922,
-    "qty": 30606.61764705,
-    "qty_open": 15303.31764705,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-04T15:18:57"
-  },
   "SCRUSDT": {
     "symbol": "SCRUSDT",
     "tf": "15m",
