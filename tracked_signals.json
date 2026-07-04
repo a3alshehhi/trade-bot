@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-04 11:59:59.999000"
+    "last_bar": "2026-07-04 12:14:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -28885,7 +28885,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 07:29:59.999000",
-    "last_bar": "2026-07-04 11:59:59.999000",
+    "last_bar": "2026-07-04 12:14:59.999000",
     "hits": [
       1
     ],
@@ -29285,14 +29285,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 10:59:59.999000",
-    "last_bar": "2026-07-04 11:59:59.999000",
+    "last_bar": "2026-07-04 12:14:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 7.36,
+    "stopped": true,
+    "hi_seen": 7.38,
     "lo_seen": 7.26,
-    "created": "2026-07-04T11:01:20"
+    "created": "2026-07-04T11:01:20",
+    "exit_price": 7.37888,
+    "close_card_sent": true,
+    "closed_at": "2026-07-04T12:16:13"
   },
   "صيد الارتفاعات|BANDUSDT|2026-07-04 11:00:00": {
     "symbol": "BANDUSDT",
@@ -29338,8 +29342,8 @@
     ],
     "stop": 0.15590915,
     "init_stop": 0.15590915,
-    "cur_stop": 0.15590915,
-    "last_alert_stop": 0.15590915,
+    "cur_stop": 0.1601,
+    "last_alert_stop": 0.1601,
     "armed": false,
     "targets": [
       0.1613784,
@@ -29355,10 +29359,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 11:59:59.999000",
-    "last_bar": "2026-07-04 11:59:59.999000",
-    "hits": [],
+    "last_bar": "2026-07-04 12:14:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.1601,
+    "hi_seen": 0.163,
     "lo_seen": 0.1601,
     "created": "2026-07-04T12:01:14"
   }
