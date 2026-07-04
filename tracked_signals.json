@@ -29741,5 +29741,35 @@
     "hi_seen": 0.01074,
     "lo_seen": 0.01074,
     "created": "2026-07-04T15:16:09"
+  },
+  "صيد الارتفاعات|BMTUSDT|2026-07-04 15:00:00": {
+    "symbol": "BMTUSDT",
+    "label": "صيد الارتفاعات",
+    "timeframe": "1h",
+    "message_id": 4471,
+    "entry": 0.0133,
+    "stop": 0.01236107,
+    "init_stop": 0.01236107,
+    "cur_stop": 0.01236107,
+    "last_alert_stop": 0.01236107,
+    "armed": false,
+    "targets": [
+      0.01370264,
+      0.01417666
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 15:00:00",
+    "last_bar": "2026-07-04 15:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0133,
+    "lo_seen": 0.0133,
+    "created": "2026-07-04T15:24:42"
   }
 }
