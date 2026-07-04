@@ -28812,5 +28812,43 @@
     "hi_seen": 0.00366,
     "lo_seen": 0.00366,
     "created": "2026-07-04T07:20:52"
+  },
+  "RSI60 · 15m|WCTUSDT|2026-07-04 07:29:59.999000": {
+    "symbol": "WCTUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.04537,
+    "dca_levels": [
+      0.04488486,
+      0.044735,
+      0.04458514,
+      0.04437178
+    ],
+    "stop": 0.04425097,
+    "init_stop": 0.04425097,
+    "cur_stop": 0.04425097,
+    "last_alert_stop": 0.04425097,
+    "armed": false,
+    "targets": [
+      0.04571544,
+      0.04615486,
+      0.04742486
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 07:29:59.999000",
+    "last_bar": "2026-07-04 07:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.04537,
+    "lo_seen": 0.04537,
+    "created": "2026-07-04T07:31:08"
   }
 }

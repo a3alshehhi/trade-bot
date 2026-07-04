@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-04T07:18:07",
+  "updated_at": "2026-07-04T07:32:48",
   "stats": {
-    "open": 36,
+    "open": 39,
     "closed": 853,
     "win_rate": 54.5,
     "profit_factor": 1.44,
@@ -14682,6 +14682,48 @@
       "closed_at": "2026-07-04T06:48:35",
       "realized_pct": 0.18,
       "result_pct": 0.18
+    },
+    {
+      "id": "العرض/الطلب|ARPAUSDT|2026-07-04 07:00:00",
+      "symbol": "ARPAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.01102,
+      "stop": 0.01006118,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T07:20:52",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ANKRUSDT|2026-07-04 07:00:00",
+      "symbol": "ANKRUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.00366,
+      "stop": 0.00361702,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T07:20:52",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI60 · 15m|WCTUSDT|2026-07-04 07:29:59.999000",
+      "symbol": "WCTUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.04537,
+      "stop": 0.04425097,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T07:31:08",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
