@@ -29978,5 +29978,81 @@
     "hi_seen": 0.189,
     "lo_seen": 0.189,
     "created": "2026-07-04T17:13:27"
+  },
+  "RSI60 · 15m|JASMYUSDT|2026-07-04 17:29:59.999000": {
+    "symbol": "JASMYUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.00468,
+    "dca_levels": [
+      0.0046418,
+      0.00463,
+      0.0046182,
+      0.0046014
+    ],
+    "stop": 0.00459071,
+    "init_stop": 0.00459071,
+    "cur_stop": 0.00459071,
+    "last_alert_stop": 0.00459071,
+    "armed": false,
+    "targets": [
+      0.0047072,
+      0.0047418,
+      0.0048418
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 17:29:59.999000",
+    "last_bar": "2026-07-04 17:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00468,
+    "lo_seen": 0.00468,
+    "created": "2026-07-04T17:31:23"
+  },
+  "RSI60 · 15m|PIVXUSDT|2026-07-04 17:29:59.999000": {
+    "symbol": "PIVXUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.0416,
+    "dca_levels": [
+      0.0404158,
+      0.04005,
+      0.0396842,
+      0.0391634
+    ],
+    "stop": 0.03873162,
+    "init_stop": 0.03873162,
+    "cur_stop": 0.03873162,
+    "last_alert_stop": 0.03873162,
+    "armed": false,
+    "targets": [
+      0.0424432,
+      0.0435158,
+      0.0466158
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-04 17:29:59.999000",
+    "last_bar": "2026-07-04 17:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0416,
+    "lo_seen": 0.0416,
+    "created": "2026-07-04T17:31:23"
   }
 }

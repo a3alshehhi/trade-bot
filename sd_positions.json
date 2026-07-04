@@ -445,5 +445,44 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-04T16:03:57"
+  },
+  "JASMYUSDT": {
+    "symbol": "JASMYUSDT",
+    "tf": "15m",
+    "label": "RSI60 · 15m",
+    "prob": null,
+    "levels": [
+      0.0046418,
+      0.00463,
+      0.0046182,
+      0.0046014
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 75.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.0046886886886905385,
+        "qty": 15995.94363791,
+        "usd": 75.0
+      }
+    ],
+    "avg_entry": 0.0046886886886905385,
+    "entry": 0.0046886886886905385,
+    "init_stop": 0.00459071,
+    "stop": 0.00459071,
+    "R": 9.797868869053893e-05,
+    "tp1": 0.0047072,
+    "tp2": 0.0047418,
+    "qty": 15995.94363791,
+    "qty_open": 15995.94363791,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-04T17:33:56"
   }
 }

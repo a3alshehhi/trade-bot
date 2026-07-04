@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-04T17:18:11",
+  "updated_at": "2026-07-04T17:33:44",
   "stats": {
-    "open": 30,
+    "open": 32,
     "closed": 889,
     "win_rate": 55.7,
     "profit_factor": 1.52,
@@ -15218,6 +15218,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-04T17:13:27",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI60 · 15m|JASMYUSDT|2026-07-04 17:29:59.999000",
+      "symbol": "JASMYUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00468,
+      "stop": 0.00459071,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T17:31:23",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI60 · 15m|PIVXUSDT|2026-07-04 17:29:59.999000",
+      "symbol": "PIVXUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0416,
+      "stop": 0.03873162,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T17:31:23",
       "closed_at": null,
       "realized_pct": 0.0
     }
