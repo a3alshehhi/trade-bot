@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-04T06:34:54",
+  "updated_at": "2026-07-04T06:48:35",
   "stats": {
     "open": 36,
-    "closed": 852,
+    "closed": 853,
     "win_rate": 54.5,
     "profit_factor": 1.44,
-    "total_pct": 3846.98,
+    "total_pct": 3854.08,
     "avg_pct": 0.56,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 18,
-        "win_rate": 55.6,
-        "return_pct": -6.44,
+        "trades": 19,
+        "win_rate": 57.9,
+        "return_pct": -6.27,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 360,
-        "win_rate": 60.0,
-        "return_pct": 219.54,
+        "trades": 361,
+        "win_rate": 60.1,
+        "return_pct": 220.11,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 193,
-        "win_rate": 69.9,
-        "return_pct": 168.02
+        "trades": 194,
+        "win_rate": 70.1,
+        "return_pct": 168.5
       },
       {
         "key": "2026-06",
@@ -14662,6 +14662,24 @@
       "opened_at": "2026-07-04T05:51:30",
       "closed_at": null,
       "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|DIAUSDT|2026-07-04 06:30:00",
+      "symbol": "DIAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1108,
+      "stop": 0.1106644,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-04T06:34:21",
+      "closed_at": "2026-07-04T06:48:35",
+      "realized_pct": 0.18,
+      "result_pct": 0.18
     }
   ]
 }

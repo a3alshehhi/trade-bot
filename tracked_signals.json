@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-04 06:14:59.999000"
+    "last_bar": "2026-07-04 06:44:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -27255,7 +27255,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 15:14:59.999000",
-    "last_bar": "2026-07-04 06:14:59.999000",
+    "last_bar": "2026-07-04 06:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.016,
@@ -28207,10 +28207,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-03 23:59:59.999000",
-    "last_bar": "2026-07-04 06:14:59.999000",
+    "last_bar": "2026-07-04 06:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.00993,
+    "hi_seen": 0.01005,
     "lo_seen": 0.00907,
     "created": "2026-07-04T00:02:38"
   },
@@ -28241,10 +28241,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 00:14:59.999000",
-    "last_bar": "2026-07-04 06:14:59.999000",
+    "last_bar": "2026-07-04 06:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.00988,
+    "hi_seen": 0.01005,
     "lo_seen": 0.00907,
     "created": "2026-07-04T00:16:49"
   },
@@ -28723,7 +28723,7 @@
     "entry": 0.1108,
     "stop": 0.1106644,
     "init_stop": 0.1106644,
-    "cur_stop": 0.1106644,
+    "cur_stop": 0.1108,
     "last_alert_stop": 0.1106644,
     "armed": false,
     "targets": [
@@ -28738,11 +28738,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 06:30:00",
-    "last_bar": "2026-07-04 06:30:00",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.1108,
-    "lo_seen": 0.1108,
-    "created": "2026-07-04T06:34:21"
+    "last_bar": "2026-07-04 06:44:59.999000",
+    "hits": [
+      1,
+      2
+    ],
+    "stopped": true,
+    "hi_seen": 0.1112,
+    "lo_seen": 0.1107,
+    "created": "2026-07-04T06:34:21",
+    "exit_price": 0.1110712,
+    "close_card_sent": true,
+    "closed_at": "2026-07-04T06:48:35"
   }
 }
