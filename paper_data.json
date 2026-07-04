@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-04T16:17:39",
+  "updated_at": "2026-07-04T16:31:29",
   "stats": {
-    "open": 32,
-    "closed": 886,
-    "win_rate": 55.6,
+    "open": 31,
+    "closed": 887,
+    "win_rate": 55.7,
     "profit_factor": 1.53,
-    "total_pct": 10661.09,
+    "total_pct": 10795.61,
     "avg_pct": 0.68,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-04",
-        "trades": 52,
-        "win_rate": 75.0,
-        "return_pct": 155.08,
+        "trades": 53,
+        "win_rate": 75.5,
+        "return_pct": 158.27,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 394,
-        "win_rate": 62.2,
-        "return_pct": 771.19,
+        "trades": 395,
+        "win_rate": 62.3,
+        "return_pct": 782.08,
         "month": "2026-07"
       },
       {
@@ -150,9 +150,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 227,
-        "win_rate": 72.2,
-        "return_pct": 630.74
+        "trades": 228,
+        "win_rate": 72.4,
+        "return_pct": 639.87
       },
       {
         "key": "2026-06",
@@ -15073,12 +15073,14 @@
       "entry": 0.2095,
       "stop": 0.20445061,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T15:16:07",
-      "closed_at": null,
-      "realized_pct": 0.38
+      "closed_at": "2026-07-04T16:31:25",
+      "realized_pct": 1.25,
+      "result_pct": 1.25
     },
     {
       "id": "RSI60 · 15m|GALAUSDT|2026-07-04 15:14:59.999000",
