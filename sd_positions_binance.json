@@ -1,21 +1,4 @@
 {
-  "BICOUSDT": {
-    "symbol": "BICOUSDT",
-    "tf": "15m",
-    "label": "RSI60 · 15m",
-    "prob": null,
-    "entry": 0.01581,
-    "init_stop": 0.01514393,
-    "stop": 0.01581,
-    "R": 0.0006660700000000012,
-    "tp1": 0.0161228,
-    "tp2": 0.0165207,
-    "qty": 6363.05058,
-    "qty_open": 3181.53058,
-    "tp1_done": true,
-    "opened_ts": "2026-07-03T16:47:59",
-    "armed": true
-  },
   "OGUSDT": {
     "symbol": "OGUSDT",
     "tf": "1h",
@@ -351,5 +334,38 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-04T12:48:47"
+  },
+  "BANDUSDT": {
+    "symbol": "BANDUSDT",
+    "tf": "1h",
+    "label": "صيد الارتفاعات",
+    "prob": null,
+    "levels": [
+      0.1633
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.1632155553564326,
+        "qty": 612.6867,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.1632155553564326,
+    "entry": 0.1632155553564326,
+    "init_stop": 0.15364643,
+    "stop": 0.15364643,
+    "R": 0.00956912535643259,
+    "tp1": 0.1730304,
+    "tp2": 0.1801926,
+    "qty": 612.6867,
+    "qty_open": 612.6867,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-04T14:08:28"
   }
 }
