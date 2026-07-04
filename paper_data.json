@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-04T02:17:54",
+  "updated_at": "2026-07-04T02:33:49",
   "stats": {
-    "open": 38,
+    "open": 39,
     "closed": 844,
     "win_rate": 54.5,
     "profit_factor": 1.44,
@@ -14552,6 +14552,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-04T02:01:37",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|AWEUSDT|2026-07-04 02:00:00",
+      "symbol": "AWEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0564,
+      "stop": 0.05571348,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-04T02:23:26",
       "closed_at": null,
       "realized_pct": 0.0
     }
