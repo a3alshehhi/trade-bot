@@ -38,50 +38,6 @@
     "armed": false,
     "opened_ts": "2026-07-03T21:05:14"
   },
-  "PSGUSDT": {
-    "symbol": "PSGUSDT",
-    "tf": "15m",
-    "label": "RSI60 · 15m",
-    "prob": null,
-    "levels": [
-      0.529944,
-      0.529,
-      0.528056,
-      0.526712
-    ],
-    "filled": [
-      true,
-      true,
-      false,
-      false
-    ],
-    "leg_usd": 25.0,
-    "n_legs": 4,
-    "fills": [
-      {
-        "price": 0.5375945225569285,
-        "qty": 46.50345,
-        "usd": 25.0
-      },
-      {
-        "price": 0.5306409038385289,
-        "qty": 47.112840000000006,
-        "usd": 25.0
-      }
-    ],
-    "avg_entry": 0.5340950811018039,
-    "entry": 0.5375945225569285,
-    "init_stop": 0.5254066,
-    "stop": 0.5340950811018039,
-    "R": 0.00868848110180398,
-    "tp1": 0.535176,
-    "tp2": 0.537944,
-    "qty": 93.61629,
-    "qty_open": 46.81629000000001,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-03T21:48:59"
-  },
   "GPSUSDT": {
     "symbol": "GPSUSDT",
     "tf": "1h",
@@ -377,5 +333,38 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-04T15:34:54"
+  },
+  "AVAUSDT": {
+    "symbol": "AVAUSDT",
+    "tf": "1h",
+    "label": "صيد الارتفاعات",
+    "prob": null,
+    "levels": [
+      0.189
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.18752360453372066,
+        "qty": 533.2662,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.18752360453372066,
+    "entry": 0.18752360453372066,
+    "init_stop": 0.17022857,
+    "stop": 0.17022857,
+    "R": 0.017295034533720666,
+    "tp1": 0.1950312,
+    "tp2": 0.2018128,
+    "qty": 533.2662,
+    "qty_open": 533.2662,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-04T19:19:19"
   }
 }
