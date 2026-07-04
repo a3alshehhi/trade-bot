@@ -300,44 +300,5 @@
     "tp1_done": true,
     "armed": true,
     "opened_ts": "2026-07-04T10:03:15"
-  },
-  "ETCUSDT": {
-    "symbol": "ETCUSDT",
-    "tf": "15m",
-    "label": "RSI60 · 15m",
-    "prob": null,
-    "levels": [
-      7.21888,
-      7.2,
-      7.18112,
-      7.15424
-    ],
-    "filled": [
-      true,
-      false,
-      false,
-      false
-    ],
-    "leg_usd": 75.0,
-    "n_legs": 4,
-    "fills": [
-      {
-        "price": 7.277277284056776,
-        "qty": 10.30605226,
-        "usd": 75.0
-      }
-    ],
-    "avg_entry": 7.277277284056776,
-    "entry": 7.277277284056776,
-    "init_stop": 7.13744161,
-    "stop": 7.277277284056776,
-    "R": 0.13983567405677633,
-    "tp1": 7.32352,
-    "tp2": 7.37888,
-    "qty": 10.30605226,
-    "qty_open": 5.15305226,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-04T11:03:58"
   }
 }
