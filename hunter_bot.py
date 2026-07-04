@@ -28,8 +28,8 @@ import requests
 
 # ----------------------- إعدادات الاستراتيجية -----------------------
 CFG = dict(
-    entry_tf="15m",            # فريم الدخول (صيد الارتفاعات = 15د)
-    htf="1h",                  # سياق أعلى للانحياز الاتجاهي
+    entry_tf="1h",             # فريم الدخول (الوصفة الفائزة: 1س — 15د خاسرة في الباك-تست)
+    htf="4h",                  # سياق أعلى للانحياز الاتجاهي
     pages=3, pages_htf=2,      # صفحات جلب البيانات (كل صفحة ≈ 1000 شمعة)
     swing_L=5, swing_R=5,      # نصف نافذة تحديد القمم/القيعان (pivots)
     struct_lookback=60,        # مدى البحث عن CHoCH/BOS بالشموع
@@ -83,6 +83,7 @@ CFG["tp1_frac"]   = float(os.environ.get("HUNTER_TP1_FRAC", CFG["tp1_frac"]))
 BINANCE_BASES = ["https://data-api.binance.vision", "https://api.binance.com"]
 WATCHLIST = "watchlist.txt"
 STATE_PATH = os.environ.get("HUNTER_STATE", "hunter_state.json")
+POSITIONS_PATH = os.environ.get("HUNTER_POSITIONS", "hunter_positions.json")
 TRACK_FILE = "tracked_signals.json"        # مشترك مع اللوحة (نضيف فقط إشاراتنا)
 DASH_LABEL = "صيد الارتفاعات"
 TG_TOKEN = os.environ.get("TELEGRAM_TOKEN", os.environ.get("TG_TOKEN", ""))
@@ -319,6 +320,7 @@ def find_setup(sym, d1, d4):
         rsi=round(rsi_now, 1), htf_ok=bool(htf_ok),
         ts=d1["t"][last], reasons=reasons,
         ob_low=round(ob_low, 8), ob_high=round(ob_high, 8), eq=round(eq, 8),
+        atr=round(a, 8),                         # ATR عند الدخول (لوقف شانديلير المتحرّك)
     )
 
 
@@ -396,7 +398,7 @@ def format_message(signals):
         lines += [
             "",
             f"⚖️ المخاطرة المقترحة: {int(CFG['risk_pct']*100)}% من المحفظة · "
-            "جني مجزّأ 40/40/20 + وقف متحرّك",
+            f"إدارة الخروج: جني {int(CFG['tp1_frac']*100)}% عند الهدف الأول ثم وقف متحرّك شانديلير للباقي",
             f"⏰ {now}",
         ]
         blocks.append("\n".join(lines))
@@ -456,6 +458,87 @@ def track_for_dashboard(signals, message_id, path=TRACK_FILE):
     print(f"tracked {added} signals to {path}")
 
 
+# ----------------------- إدارة الخروج الحيّة (نظام ب: جني جزئي + وقف متحرّك شانديلير) -----------------------
+def load_positions():
+    try:
+        d = json.load(open(POSITIONS_PATH))
+        return d if isinstance(d, dict) else {"open": []}
+    except Exception:
+        return {"open": []}
+
+def save_positions(pos):
+    try:
+        json.dump(pos, open(POSITIONS_PATH, "w"), ensure_ascii=False, indent=2)
+    except Exception as ex:
+        print("positions save error", ex)
+
+def open_position(sig):
+    """يسجّل صفقة جديدة لإدارتها حيّاً بنظام (ب). لا يُنفّذ أموالاً — تتبّع خروج فقط."""
+    pos = load_positions()
+    key = f"{sig['sym']}:{sig['ts']}"
+    if any(p.get("key") == key for p in pos["open"]):
+        return
+    pos["open"].append({
+        "key": key, "sym": sig["sym"], "tf": sig.get("tf"),
+        "entry": sig["entry"], "init_stop": sig["stop"], "stop": sig["stop"],
+        "tp1": sig["tp1"], "atr": sig.get("atr") or (sig["entry"] - sig["stop"]),
+        "peak": sig["entry"], "took1": False,
+        "opened": dt.datetime.now().isoformat(timespec="seconds"),
+        "bar_ts": sig["ts"],
+    })
+    save_positions(pos)
+
+def _alert(text):
+    send_telegram(text)
+
+def monitor_positions():
+    """يتابع المراكز المفتوحة على آخر شمعة مغلقة ويطبّق نظام الخروج (ب):
+       • جني tp1_frac عند بلوغ الهدف الأول ثم نقل الوقف للتعادل.
+       • بعد الجني: وقف متحرّك شانديلير (قمة − trail_atr×ATR)، لا ينزل عن التعادل.
+       • إغلاق ما تبقّى عند لمس الوقف. يرسل تنبيهات تيليجرام ويحدّث الحالة."""
+    pos = load_positions()
+    if not pos["open"]:
+        print("لا مراكز مفتوحة"); return
+    k = CFG["trail_atr"]; f1 = CFG["tp1_frac"]
+    still_open = []
+    for p in pos["open"]:
+        try:
+            d1 = fetch_klines(p["sym"], p.get("tf") or CFG["entry_tf"], 1)
+            if not d1 or len(d1["c"]) < 2:
+                still_open.append(p); continue
+            last = len(d1["c"]) - 1
+            hi, lo, cl = d1["h"][last], d1["l"][last], d1["c"][last]
+            entry, av = p["entry"], p["atr"]
+            R = entry - p["init_stop"]
+            p["peak"] = max(p.get("peak", entry), hi)
+            # تحديث وقف شانديلير بعد الجني الجزئي
+            if p["took1"]:
+                p["stop"] = max(p["stop"], p["peak"] - k*av, entry)
+            # لمس الوقف = إغلاق ما تبقّى
+            if lo <= p["stop"]:
+                r = ((p["stop"] - entry) / R) if R > 0 else 0.0
+                remain = (1.0 - f1) if p["took1"] else 1.0
+                _alert(f"🔔 {p['sym']} · ⏱️ {p.get('tf')}\n"
+                       f"إغلاق {'الباقي' if p['took1'] else 'الصفقة'} عند الوقف {_fmt(p['stop'])}\n"
+                       f"النتيجة على هذا الجزء: {r:+.2f}R" +
+                       ("  (بعد جني 50% عند الهدف الأول)" if p["took1"] else ""))
+                continue    # تُزال من المفتوحة
+            # بلوغ الهدف الأول = جني جزئي + نقل الوقف للتعادل
+            if (not p["took1"]) and hi >= p["tp1"]:
+                p["took1"] = True
+                p["stop"] = max(p["stop"], entry)
+                _alert(f"🎯 {p['sym']} · ⏱️ {p.get('tf')}\n"
+                       f"بلغ الهدف الأول {_fmt(p['tp1'])} — جني {int(f1*100)}% ونقل الوقف للتعادل.\n"
+                       f"الباقي {int((1-f1)*100)}% بوقف متحرّك (شانديلير {k}×ATR).")
+            still_open.append(p)
+        except Exception as ex:
+            print("monitor skip", p.get("sym"), ex); still_open.append(p)
+        time.sleep(0.03)
+    pos["open"] = still_open
+    save_positions(pos)
+    print(f"مراكز مفتوحة الآن: {len(still_open)}")
+
+
 # ----------------------- الفحص -----------------------
 def scan(basket=None, send=True):
     basket = basket or parse_watchlist_crypto(WATCHLIST)[:CFG["max_symbols"]]
@@ -494,6 +577,7 @@ def scan(basket=None, send=True):
         mid = send_telegram(format_message(signals))
         track_for_dashboard(signals, mid)
         for sig in signals:
+            open_position(sig)          # فتح صفقة لإدارة الخروج الحيّة (نظام ب)
             state.setdefault("sent", []).append(sig["key"])
         state["last_day"] = dt.date.today().isoformat()
         save_state(state)
@@ -647,6 +731,8 @@ def main():
     mode = sys.argv[1] if len(sys.argv) > 1 else "scan"
     if mode == "backtest":
         backtest()
+    elif mode == "monitor":
+        monitor_positions()          # إدارة الخروج الحيّة (نظام ب) للمراكز المفتوحة
     elif mode == "exec":
         sigs = scan(send=True)
         if sigs:
