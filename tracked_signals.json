@@ -30663,5 +30663,43 @@
     "hi_seen": 0.1738,
     "lo_seen": 0.1738,
     "created": "2026-07-05T08:01:46"
+  },
+  "RSI60 · 15m|PORTALUSDT|2026-07-05 08:44:59.999000": {
+    "symbol": "PORTALUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.01301,
+    "dca_levels": [
+      0.012819,
+      0.01276,
+      0.012701,
+      0.012617
+    ],
+    "stop": 0.01256061,
+    "init_stop": 0.01256061,
+    "cur_stop": 0.01256061,
+    "last_alert_stop": 0.01256061,
+    "armed": false,
+    "targets": [
+      0.013146,
+      0.013319,
+      0.013819
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-05 08:44:59.999000",
+    "last_bar": "2026-07-05 08:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01301,
+    "lo_seen": 0.01301,
+    "created": "2026-07-05T08:45:59"
   }
 }

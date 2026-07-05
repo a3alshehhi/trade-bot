@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-05T08:33:16",
+  "updated_at": "2026-07-05T08:47:33",
   "stats": {
-    "open": 24,
+    "open": 25,
     "closed": 911,
     "win_rate": 56.3,
     "profit_factor": 1.54,
@@ -15499,6 +15499,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-05T08:01:46",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI60 · 15m|PORTALUSDT|2026-07-05 08:44:59.999000",
+      "symbol": "PORTALUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01301,
+      "stop": 0.01256061,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-05T08:45:59",
       "closed_at": null,
       "realized_pct": 0.0
     }
