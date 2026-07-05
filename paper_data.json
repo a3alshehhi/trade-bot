@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-05T01:32:41",
+  "updated_at": "2026-07-05T01:47:25",
   "stats": {
-    "open": 24,
+    "open": 25,
     "closed": 906,
     "win_rate": 56.1,
     "profit_factor": 1.53,
@@ -15419,6 +15419,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-04T23:01:26",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|AVAUSDT|2026-07-05 01:00:00",
+      "symbol": "AVAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1824524,
+      "stop": 0.174583,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-05T01:38:32",
       "closed_at": null,
       "realized_pct": 0.0
     }
