@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-05T13:33:24",
+  "updated_at": "2026-07-05T13:47:28",
   "stats": {
-    "open": 22,
+    "open": 23,
     "closed": 921,
     "win_rate": 56.5,
     "profit_factor": 1.51,
@@ -15635,6 +15635,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-05T13:01:52",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|CRVUSDT|2026-07-05 13:00:00",
+      "symbol": "CRVUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.2106,
+      "stop": 0.206373,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-05T13:34:52",
       "closed_at": null,
       "realized_pct": 0.0
     }

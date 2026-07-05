@@ -295,43 +295,37 @@
     "armed": false,
     "opened_ts": "2026-07-04T19:19:19"
   },
-  "SCRTUSDT": {
-    "symbol": "SCRTUSDT",
+  "CRVUSDT": {
+    "symbol": "CRVUSDT",
     "tf": "1h",
-    "label": "RSI50 · 1h",
+    "label": "العرض/الطلب",
     "prob": null,
     "levels": [
-      0.0513934,
-      0.05065,
-      0.0499066,
-      0.0488482
+      0.2106
     ],
     "filled": [
-      true,
-      false,
-      false,
-      false
+      true
     ],
-    "leg_usd": 25.0,
-    "n_legs": 4,
+    "leg_usd": 100.0,
+    "n_legs": 1,
     "fills": [
       {
-        "price": 0.05446142551692062,
-        "qty": 459.0405,
-        "usd": 25.0
+        "price": 0.2120315613219659,
+        "qty": 471.6279,
+        "usd": 100.0
       }
     ],
-    "avg_entry": 0.05446142551692062,
-    "entry": 0.05446142551692062,
-    "init_stop": 0.04794166,
-    "stop": 0.05446142551692062,
-    "R": 0.006519765516920621,
-    "tp1": 0.0555136,
-    "tp2": 0.0576934,
-    "qty": 459.0405,
-    "qty_open": 229.5405,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-05T13:04:57"
+    "avg_entry": 0.2120315613219659,
+    "entry": 0.2120315613219659,
+    "init_stop": 0.206373,
+    "stop": 0.206373,
+    "R": 0.005658561321965905,
+    "tp1": 0.2140872,
+    "tp2": 0.2158518,
+    "qty": 471.6279,
+    "qty_open": 471.6279,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-05T13:48:54"
   }
 }
