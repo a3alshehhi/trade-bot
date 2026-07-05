@@ -30461,5 +30461,35 @@
     "hi_seen": 0.00127,
     "lo_seen": 0.00122,
     "created": "2026-07-04T23:01:26"
+  },
+  "العرض/الطلب|AVAUSDT|2026-07-05 01:00:00": {
+    "symbol": "AVAUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 4525,
+    "entry": 0.1824524,
+    "stop": 0.174583,
+    "init_stop": 0.174583,
+    "cur_stop": 0.174583,
+    "last_alert_stop": 0.174583,
+    "armed": false,
+    "targets": [
+      0.1937,
+      0.2049476
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-05 01:00:00",
+    "last_bar": "2026-07-05 01:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1824524,
+    "lo_seen": 0.1824524,
+    "created": "2026-07-05T01:38:32"
   }
 }
