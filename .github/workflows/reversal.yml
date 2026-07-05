@@ -61,19 +61,19 @@ jobs:
           # --rsi-ob-max 78: يرفض الاختراقات التي قفز فيها RSI بعيداً (مثلاً 64→86)
           # الشرط #2: لا يُعاد الدخول لنفس العملة إلا بعد تصحيح ≥38.2% للموجة السابقة (داخلياً)
           # بوابة حداثة اختراق MA200 مفعّلة داخلياً لكل فريم
-          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 60 --rsi-ob-max 78 --ml-filter --watchlist watchlist.txt \
-            --timeframe 15m --state reversal_alerts.json
-          python trading_bot.py --mode reversal --rsi-cross --rsi-ob 50 --rsi-ob-max 78 --ml-filter --watchlist watchlist.txt \
-            --timeframe 1h --state reversal_alerts.json
+          # python trading_bot.py --mode reversal --rsi-cross --rsi-ob 60 --rsi-ob-max 78 --ml-filter --watchlist watchlist.txt \
+            # --timeframe 15m --state reversal_alerts.json
+          # python trading_bot.py --mode reversal --rsi-cross --rsi-ob 50 --rsi-ob-max 78 --ml-filter --watchlist watchlist.txt \
+            # --timeframe 1h --state reversal_alerts.json
           # ⛔ 4h معطّل (2026-07-02):
           # python trading_bot.py --mode reversal --rsi-cross --rsi-ob 50 --rsi-ob-max 78 --ml-filter --watchlist watchlist.txt \
           #   --timeframe 4h --state reversal_alerts.json
           # === استراتيجية trendwave المستقلة (الإعداد الرابح) — على نفس الجدول ===
           # دخول مباشر بعد موجة RSI(20→80) + فلتر اتجاه من فريم أعلى. رسائل مُعنونة "trendwave".
-          python trading_bot.py --mode reversal --trendwave --ml-filter --watchlist watchlist.txt \
-            --timeframe 15m --state trendwave_alerts.json
-          python trading_bot.py --mode reversal --trendwave --ml-filter --watchlist watchlist.txt \
-            --timeframe 1h --state trendwave_alerts.json
+          # python trading_bot.py --mode reversal --trendwave --ml-filter --watchlist watchlist.txt \
+            # --timeframe 15m --state trendwave_alerts.json
+          # python trading_bot.py --mode reversal --trendwave --ml-filter --watchlist watchlist.txt \
+            # --timeframe 1h --state trendwave_alerts.json
           # ⛔ 4h معطّل (2026-07-02):
           # python trading_bot.py --mode reversal --trendwave --ml-filter --watchlist watchlist.txt \
           #   --timeframe 4h --state trendwave_alerts.json
