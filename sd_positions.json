@@ -415,5 +415,38 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-05T16:03:54"
+  },
+  "BLURUSDT": {
+    "symbol": "BLURUSDT",
+    "tf": "1h",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.0151
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 300.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.015155155155157573,
+        "qty": 19795.24438573,
+        "usd": 300.0
+      }
+    ],
+    "avg_entry": 0.015155155155157573,
+    "entry": 0.015155155155157573,
+    "init_stop": 0.0147778,
+    "stop": 0.0147778,
+    "R": 0.0003773551551575719,
+    "tp1": 0.01524704,
+    "tp2": 0.01535776,
+    "qty": 19795.24438573,
+    "qty_open": 19795.24438573,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-05T22:15:53"
   }
 }

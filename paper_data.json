@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-05T22:00:58",
+  "updated_at": "2026-07-05T22:15:42",
   "stats": {
-    "open": 3,
+    "open": 4,
     "closed": 123,
     "win_rate": 68.3,
     "profit_factor": 2.34,
@@ -2173,6 +2173,20 @@
       "opened_at": "2026-07-05T18:19:08",
       "closed_at": null,
       "realized_pct": 1.26
+    },
+    {
+      "id": "العرض/الطلب|BLURUSDT|2026-07-05 22:00:00",
+      "symbol": "BLURUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0151,
+      "stop": 0.0147778,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-05T22:05:03",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
