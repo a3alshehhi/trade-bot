@@ -1,15 +1,15 @@
-name: SD Bot 1h (AI Supply/Demand signals)
+name: SD Bot 15m (AI Supply/Demand signals)
 
 on:
-  workflow_dispatch:          # تشغيل يدوي / cron-job.org
+  workflow_dispatch:          # تشغيل يدوي / cron-job.org (كرون GitHub قد يتأخّر)
   schedule:
-    - cron: "7 * * * *"       # كل ساعة (الدقيقة 7 لتفادي ازدحام رأس الساعة) — يناسب شموع 1h
+    - cron: "*/15 * * * *"    # كل 15 دقيقة — يطابق إغلاق شموع 15m (لا يفوّت الإشارات)
 
 permissions:
   contents: write             # للسماح بحفظ حالة منع التكرار
 
 concurrency:
-  group: sd-bot-1h
+  group: sd-bot-15m           # مجموعة مستقلّة عن 1h (ملف حالة منفصل — لا تزاحم)
   cancel-in-progress: false
 
 jobs:
@@ -25,25 +25,24 @@ jobs:
       - name: Install deps
         run: pip install requests scikit-learn joblib
 
-      - name: Run SD bot — فريم 1h فقط (اختراق قمة CHoCH · سياق 4h)
+      - name: Run SD bot — فريم 15m فقط (اختراق قمة CHoCH + توسيط DCA · EMA365 · سياق 1h)
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          # فريم 15m انتقل لوركفلو مستقل (sd_bot_15m.yml) كل 15 دقيقة لتفادي تفويت الإشارات.
-          # ⛔ فريم 4h معطّل (2026-07-02) — يبقى سياقاً أعلى لـ1h فقط.
-          SD_ENTRY_TF=1h SD_HTF=4h SD_MODEL=sd_model_1h.joblib SD_STATE=sd_state_1h.json python sd_bot.py
+          # النمط والفلاتر (اختراق + DCA + EMA365) تُشتق تلقائياً من SD_ENTRY_TF=15m داخل sd_bot.py
+          SD_ENTRY_TF=15m SD_HTF=1h SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_15m.json python sd_bot.py
 
       - name: Persist model + dedup state + tracked signals
         run: |
           # tracked_signals.json مشترك: نضيف إشاراتنا فقط، ونعيد المزامنة بـ rebase.
-          for f in sd_state_1h.json sd_model_1h.joblib tracked_signals.json; do
+          for f in sd_state_15m.json sd_model_15m.joblib tracked_signals.json; do
             [ -f "$f" ] && git add "$f"
           done
           if ! git diff --cached --quiet; then
             git config user.name "github-actions"
             git config user.email "actions@github.com"
-            git commit -m "update sd 1h state + tracked signals [skip ci]"
+            git commit -m "update sd 15m state + tracked signals [skip ci]"
             for i in 1 2 3 4 5; do
               git pull --rebase --autostash origin main && git push && break
               echo "push attempt $i failed, retrying in 5s..."
