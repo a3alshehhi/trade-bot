@@ -197,45 +197,6 @@
     "armed": false,
     "opened_ts": "2026-07-05T01:47:36"
   },
-  "MASKUSDT": {
-    "symbol": "MASKUSDT",
-    "tf": "15m",
-    "label": "RSI60 · 15m",
-    "prob": null,
-    "levels": [
-      0.42036,
-      0.418,
-      0.41564,
-      0.41228
-    ],
-    "filled": [
-      true,
-      false,
-      false,
-      false
-    ],
-    "leg_usd": 75.0,
-    "n_legs": 4,
-    "fills": [
-      {
-        "price": 0.4297297297464544,
-        "qty": 174.52830188,
-        "usd": 75.0
-      }
-    ],
-    "avg_entry": 0.4297297297464544,
-    "entry": 0.4297297297464544,
-    "init_stop": 0.41075561,
-    "stop": 0.4297297297464544,
-    "R": 0.01897411974645441,
-    "tp1": 0.43344,
-    "tp2": 0.44036,
-    "qty": 174.52830188,
-    "qty_open": 87.26830187999998,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-05T06:17:40"
-  },
   "MANAUSDT": {
     "symbol": "MANAUSDT",
     "tf": "15m",
@@ -290,45 +251,6 @@
     "armed": false,
     "opened_ts": "2026-07-05T09:18:07"
   },
-  "PYTHUSDT": {
-    "symbol": "PYTHUSDT",
-    "tf": "15m",
-    "label": "RSI60 · 15m",
-    "prob": null,
-    "levels": [
-      0.03902554,
-      0.038845,
-      0.03866446,
-      0.03840742
-    ],
-    "filled": [
-      true,
-      false,
-      false,
-      false
-    ],
-    "leg_usd": 75.0,
-    "n_legs": 4,
-    "fills": [
-      {
-        "price": 0.03969969969982146,
-        "qty": 1889.18305597,
-        "usd": 75.0
-      }
-    ],
-    "avg_entry": 0.03969969969982146,
-    "entry": 0.03969969969982146,
-    "init_stop": 0.03822063,
-    "stop": 0.03969969969982146,
-    "R": 0.0014790696998214642,
-    "tp1": 0.04002616,
-    "tp2": 0.04055554,
-    "qty": 1889.18305597,
-    "qty_open": 944.6830559699999,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-05T10:32:59"
-  },
   "SCRTUSDT": {
     "symbol": "SCRTUSDT",
     "tf": "1h",
@@ -358,14 +280,14 @@
     "avg_entry": 0.05404404404426065,
     "entry": 0.05404404404426065,
     "init_stop": 0.04794166,
-    "stop": 0.04794166,
+    "stop": 0.05404404404426065,
     "R": 0.006102384044260653,
     "tp1": 0.0555136,
     "tp2": 0.0576934,
     "qty": 1387.75699203,
-    "qty_open": 1387.75699203,
-    "tp1_done": false,
-    "armed": false,
+    "qty_open": 693.88699203,
+    "tp1_done": true,
+    "armed": true,
     "opened_ts": "2026-07-05T13:03:49"
   }
 }

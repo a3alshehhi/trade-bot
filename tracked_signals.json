@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-05 12:59:59.999000"
+    "last_bar": "2026-07-05 13:14:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -30837,7 +30837,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 09:14:59.999000",
-    "last_bar": "2026-07-05 12:59:59.999000",
+    "last_bar": "2026-07-05 13:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0722,
@@ -30961,14 +30961,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 11:14:59.999000",
-    "last_bar": "2026-07-05 12:59:59.999000",
+    "last_bar": "2026-07-05 13:14:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.04032,
+    "stopped": true,
+    "hi_seen": 0.04103,
     "lo_seen": 0.03928,
-    "created": "2026-07-05T11:16:10"
+    "created": "2026-07-05T11:16:10",
+    "exit_price": 0.04071734,
+    "close_card_sent": true,
+    "closed_at": "2026-07-05T13:18:18"
   },
   "RSI50 · 1h|SCRTUSDT|2026-07-05 12:59:59.999000": {
     "symbol": "SCRTUSDT",

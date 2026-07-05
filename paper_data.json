@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-05T13:03:39",
+  "updated_at": "2026-07-05T13:18:19",
   "stats": {
-    "open": 23,
-    "closed": 920,
-    "win_rate": 56.4,
+    "open": 22,
+    "closed": 921,
+    "win_rate": 56.5,
     "profit_factor": 1.51,
-    "total_pct": 9873.63,
-    "avg_pct": 0.64,
+    "total_pct": 10056.15,
+    "avg_pct": 0.65,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-05",
-        "trades": 16,
-        "win_rate": 81.2,
-        "return_pct": -8.61,
+        "trades": 17,
+        "win_rate": 82.4,
+        "return_pct": -6.94,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -135,9 +135,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 428,
-        "win_rate": 63.3,
-        "return_pct": 707.44,
+        "trades": 429,
+        "win_rate": 63.4,
+        "return_pct": 722.21,
         "month": "2026-07"
       },
       {
@@ -158,9 +158,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 261,
-        "win_rate": 72.8,
-        "return_pct": 577.26
+        "trades": 262,
+        "win_rate": 72.9,
+        "return_pct": 589.66
       },
       {
         "key": "2026-06",
@@ -15615,12 +15615,14 @@
       "entry": 0.03971,
       "stop": 0.038207,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-05T11:16:10",
-      "closed_at": null,
-      "realized_pct": 0.56
+      "closed_at": "2026-07-05T13:18:18",
+      "realized_pct": 1.83,
+      "result_pct": 1.83
     },
     {
       "id": "RSI50 · 1h|SCRTUSDT|2026-07-05 12:59:59.999000",
