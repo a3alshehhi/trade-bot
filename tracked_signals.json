@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-05 11:59:59.999000"
+    "last_bar": "2026-07-05 12:14:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -30430,12 +30430,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 22:29:59.999000",
-    "last_bar": "2026-07-05 11:59:59.999000",
+    "last_bar": "2026-07-05 12:14:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0013,
-    "lo_seen": 0.00115,
-    "created": "2026-07-04T22:31:05"
+    "lo_seen": 0.00112,
+    "created": "2026-07-04T22:31:05",
+    "exit_price": 0.00113609,
+    "close_card_sent": true,
+    "closed_at": "2026-07-05T12:18:01"
   },
   "RSI60 · 15m|PONDUSDT|2026-07-04 22:59:59.999000": {
     "symbol": "PONDUSDT",
@@ -30468,12 +30471,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 22:59:59.999000",
-    "last_bar": "2026-07-05 11:59:59.999000",
+    "last_bar": "2026-07-05 12:14:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.00127,
-    "lo_seen": 0.00115,
-    "created": "2026-07-04T23:01:26"
+    "lo_seen": 0.00112,
+    "created": "2026-07-04T23:01:26",
+    "exit_price": 0.00113563,
+    "close_card_sent": true,
+    "closed_at": "2026-07-05T12:18:03"
   },
   "العرض/الطلب|AVAUSDT|2026-07-05 01:00:00": {
     "symbol": "AVAUSDT",
@@ -30831,7 +30837,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 09:14:59.999000",
-    "last_bar": "2026-07-05 11:59:59.999000",
+    "last_bar": "2026-07-05 12:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0722,
@@ -30955,11 +30961,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 11:14:59.999000",
-    "last_bar": "2026-07-05 11:59:59.999000",
+    "last_bar": "2026-07-05 12:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.04011,
-    "lo_seen": 0.0393,
+    "lo_seen": 0.03928,
     "created": "2026-07-05T11:16:10"
   }
 }

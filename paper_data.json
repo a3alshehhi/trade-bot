@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-05T12:03:43",
+  "updated_at": "2026-07-05T12:18:06",
   "stats": {
-    "open": 24,
-    "closed": 918,
-    "win_rate": 56.5,
-    "profit_factor": 1.54,
-    "total_pct": 12367.8,
-    "avg_pct": 0.67,
+    "open": 22,
+    "closed": 920,
+    "win_rate": 56.4,
+    "profit_factor": 1.51,
+    "total_pct": 9873.63,
+    "avg_pct": 0.64,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-05",
-        "trades": 14,
-        "win_rate": 92.9,
-        "return_pct": 14.24,
+        "trades": 16,
+        "win_rate": 81.2,
+        "return_pct": -8.61,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -135,9 +135,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 426,
-        "win_rate": 63.6,
-        "return_pct": 909.36,
+        "trades": 428,
+        "win_rate": 63.3,
+        "return_pct": 707.44,
         "month": "2026-07"
       },
       {
@@ -158,9 +158,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 259,
-        "win_rate": 73.4,
-        "return_pct": 746.63
+        "trades": 261,
+        "win_rate": 72.8,
+        "return_pct": 577.26
       },
       {
         "key": "2026-06",
@@ -15408,10 +15408,11 @@
       "entry": 0.00127,
       "stop": 0.00113609,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T22:31:05",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-05T12:18:01",
+      "realized_pct": -10.54,
+      "result_pct": -10.54
     },
     {
       "id": "RSI60 · 15m|PONDUSDT|2026-07-04 22:59:59.999000",
@@ -15422,10 +15423,11 @@
       "entry": 0.00127,
       "stop": 0.00113563,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T23:01:26",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-05T12:18:03",
+      "realized_pct": -10.58,
+      "result_pct": -10.58
     },
     {
       "id": "العرض/الطلب|AVAUSDT|2026-07-05 01:00:00",
