@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-05T20:45:40",
+  "updated_at": "2026-07-05T21:00:59",
   "stats": {
     "open": 3,
     "closed": 123,
@@ -2166,11 +2166,13 @@
       "timeframe": "1h",
       "entry": 0.0676,
       "stop": 0.063856,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-05T18:19:08",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.26
     }
   ]
 }
