@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-05T07:48:21",
+  "updated_at": "2026-07-05T08:03:26",
   "stats": {
     "open": 24,
-    "closed": 910,
+    "closed": 911,
     "win_rate": 56.3,
     "profit_factor": 1.54,
-    "total_pct": 12086.95,
+    "total_pct": 12277.06,
     "avg_pct": 0.67,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-05",
-        "trades": 6,
+        "trades": 7,
         "win_rate": 100.0,
-        "return_pct": 11.67,
+        "return_pct": 13.41,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -135,9 +135,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 418,
+        "trades": 419,
         "win_rate": 63.2,
-        "return_pct": 886.62,
+        "return_pct": 902.01,
         "month": "2026-07"
       },
       {
@@ -158,9 +158,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 251,
-        "win_rate": 72.9,
-        "return_pct": 727.56
+        "trades": 252,
+        "win_rate": 73.0,
+        "return_pct": 740.47
       },
       {
         "key": "2026-06",
@@ -15451,10 +15451,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-05T02:01:42",
-      "closed_at": null,
-      "realized_pct": 1.56
+      "closed_at": "2026-07-05T08:03:24",
+      "realized_pct": 1.56,
+      "result_pct": 1.56
     },
     {
       "id": "RSI60 · 15m|MASKUSDT|2026-07-05 06:14:59.999000",
@@ -15484,6 +15485,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-05T07:16:05",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI50 · 1h|IOUSDT|2026-07-05 07:59:59.999000",
+      "symbol": "IOUSDT",
+      "label": "RSI50 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1738,
+      "stop": 0.16850636,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-05T08:01:46",
       "closed_at": null,
       "realized_pct": 0.0
     }

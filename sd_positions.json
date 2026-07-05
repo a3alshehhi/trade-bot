@@ -268,5 +268,44 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-05T06:17:40"
+  },
+  "IOUSDT": {
+    "symbol": "IOUSDT",
+    "tf": "1h",
+    "label": "RSI50 · 1h",
+    "prob": null,
+    "levels": [
+      0.1717754,
+      0.17115,
+      0.1705246,
+      0.1696342
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 75.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.17427427427590944,
+        "qty": 430.35611717,
+        "usd": 75.0
+      }
+    ],
+    "avg_entry": 0.17427427427590944,
+    "entry": 0.17427427427590944,
+    "init_stop": 0.16850636,
+    "stop": 0.16850636,
+    "R": 0.005767914275909447,
+    "tp1": 0.1752416,
+    "tp2": 0.1770754,
+    "qty": 430.35611717,
+    "qty_open": 430.35611717,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-05T08:03:36"
   }
 }
