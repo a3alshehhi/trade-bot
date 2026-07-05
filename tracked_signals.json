@@ -31122,5 +31122,43 @@
     "hi_seen": 0.2294,
     "lo_seen": 0.2294,
     "created": "2026-07-05T14:15:59"
+  },
+  "RSI60 · 15m|CITYUSDT|2026-07-05 14:29:59.999000": {
+    "symbol": "CITYUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.394,
+    "dca_levels": [
+      0.389416,
+      0.388,
+      0.386584,
+      0.384568
+    ],
+    "stop": 0.38302635,
+    "init_stop": 0.38302635,
+    "cur_stop": 0.38302635,
+    "last_alert_stop": 0.38302635,
+    "armed": false,
+    "targets": [
+      0.397264,
+      0.401416,
+      0.413416
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-05 14:29:59.999000",
+    "last_bar": "2026-07-05 14:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.394,
+    "lo_seen": 0.394,
+    "created": "2026-07-05T14:31:17"
   }
 }
