@@ -4257,7 +4257,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 01:00:00",
-    "last_bar": "2026-07-05 20:59:59.999000",
+    "last_bar": "2026-07-05 22:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1854,
@@ -4290,12 +4290,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 13:00:00",
-    "last_bar": "2026-07-05 20:59:59.999000",
+    "last_bar": "2026-07-05 22:59:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.215,
+    "hi_seen": 0.2152,
     "lo_seen": 0.2105,
     "created": "2026-07-05T13:34:52"
   },
@@ -4364,12 +4364,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 18:00:00",
-    "last_bar": "2026-07-05 20:59:59.999000",
+    "last_bar": "2026-07-05 22:59:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.06993,
+    "hi_seen": 0.07018,
     "lo_seen": 0.06728,
     "created": "2026-07-05T18:19:08"
   },
@@ -4399,10 +4399,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 22:00:00",
-    "last_bar": "2026-07-05 22:00:00",
+    "last_bar": "2026-07-05 22:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.0151,
+    "hi_seen": 0.01524,
     "lo_seen": 0.0151,
     "created": "2026-07-05T22:05:03"
   },
@@ -4432,11 +4432,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 22:00:00",
-    "last_bar": "2026-07-05 22:00:00",
+    "last_bar": "2026-07-05 22:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.2732,
-    "lo_seen": 0.2732,
+    "hi_seen": 0.275,
+    "lo_seen": 0.2719,
     "created": "2026-07-05T22:19:31"
   },
   "العرض/الطلب|API3USDT|2026-07-05 22:00:00": {
@@ -4447,7 +4447,7 @@
     "entry": 0.2307,
     "stop": 0.224772,
     "init_stop": 0.224772,
-    "cur_stop": 0.224772,
+    "cur_stop": 0.2307,
     "legs": [
       0.2307
     ],
@@ -4465,11 +4465,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 22:00:00",
-    "last_bar": "2026-07-05 22:00:00",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.2307,
-    "lo_seen": 0.2307,
-    "created": "2026-07-05T22:19:31"
+    "last_bar": "2026-07-05 22:59:59.999000",
+    "hits": [
+      1,
+      2
+    ],
+    "stopped": true,
+    "hi_seen": 0.237,
+    "lo_seen": 0.2298,
+    "created": "2026-07-05T22:19:31",
+    "exit_price": 0.2353462,
+    "close_card_sent": true,
+    "closed_at": "2026-07-05T23:01:01"
   }
 }
