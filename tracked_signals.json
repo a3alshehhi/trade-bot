@@ -30918,5 +30918,43 @@
     "hi_seen": 0.03979,
     "lo_seen": 0.03892,
     "created": "2026-07-05T10:31:14"
+  },
+  "RSI60 · 15m|PYTHUSDT|2026-07-05 11:14:59.999000": {
+    "symbol": "PYTHUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.03971,
+    "dca_levels": [
+      0.03908734,
+      0.038895,
+      0.03870266,
+      0.03842882
+    ],
+    "stop": 0.038207,
+    "init_stop": 0.038207,
+    "cur_stop": 0.038207,
+    "last_alert_stop": 0.038207,
+    "armed": false,
+    "targets": [
+      0.04015336,
+      0.04071734,
+      0.04234734
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-05 11:14:59.999000",
+    "last_bar": "2026-07-05 11:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.03971,
+    "lo_seen": 0.03971,
+    "created": "2026-07-05T11:16:10"
   }
 }
