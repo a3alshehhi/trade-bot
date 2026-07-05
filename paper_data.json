@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-05T06:48:23",
+  "updated_at": "2026-07-05T07:02:56",
   "stats": {
     "open": 24,
     "closed": 909,
@@ -15448,11 +15448,13 @@
       "timeframe": "1h",
       "entry": 0.00122,
       "stop": 0.00107429,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-05T02:01:42",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.56
     },
     {
       "id": "RSI60 · 15m|MASKUSDT|2026-07-05 06:14:59.999000",
@@ -15462,11 +15464,13 @@
       "timeframe": "15m",
       "entry": 0.428,
       "stop": 0.41075561,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-05T06:15:56",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.64
     }
   ]
 }
