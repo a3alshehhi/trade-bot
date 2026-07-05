@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-05T09:03:42",
+  "updated_at": "2026-07-05T09:17:48",
   "stats": {
-    "open": 26,
+    "open": 27,
     "closed": 912,
     "win_rate": 56.4,
     "profit_factor": 1.54,
@@ -15482,11 +15482,13 @@
       "timeframe": "15m",
       "entry": 0.0786,
       "stop": 0.07644659,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-05T07:16:05",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.42
     },
     {
       "id": "RSI50 · 1h|IOUSDT|2026-07-05 07:59:59.999000",
@@ -15545,6 +15547,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-05T09:01:51",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI60 · 15m|MANAUSDT|2026-07-05 09:14:59.999000",
+      "symbol": "MANAUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.072,
+      "stop": 0.06991709,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-05T09:16:00",
       "closed_at": null,
       "realized_pct": 0.0
     }
