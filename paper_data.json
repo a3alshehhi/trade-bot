@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-05T12:47:23",
+  "updated_at": "2026-07-05T13:03:39",
   "stats": {
-    "open": 22,
+    "open": 23,
     "closed": 920,
     "win_rate": 56.4,
     "profit_factor": 1.51,
@@ -15614,9 +15614,25 @@
       "timeframe": "15m",
       "entry": 0.03971,
       "stop": 0.038207,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-05T11:16:10",
+      "closed_at": null,
+      "realized_pct": 0.56
+    },
+    {
+      "id": "RSI50 · 1h|SCRTUSDT|2026-07-05 12:59:59.999000",
+      "symbol": "SCRTUSDT",
+      "label": "RSI50 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0538,
+      "stop": 0.04794166,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-05T13:01:52",
       "closed_at": null,
       "realized_pct": 0.0
     }

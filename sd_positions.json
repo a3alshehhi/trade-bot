@@ -328,5 +328,44 @@
     "tp1_done": true,
     "armed": true,
     "opened_ts": "2026-07-05T10:32:59"
+  },
+  "SCRTUSDT": {
+    "symbol": "SCRTUSDT",
+    "tf": "1h",
+    "label": "RSI50 · 1h",
+    "prob": null,
+    "levels": [
+      0.0513934,
+      0.05065,
+      0.0499066,
+      0.0488482
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 75.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.05404404404426065,
+        "qty": 1387.75699203,
+        "usd": 75.0
+      }
+    ],
+    "avg_entry": 0.05404404404426065,
+    "entry": 0.05404404404426065,
+    "init_stop": 0.04794166,
+    "stop": 0.04794166,
+    "R": 0.006102384044260653,
+    "tp1": 0.0555136,
+    "tp2": 0.0576934,
+    "qty": 1387.75699203,
+    "qty_open": 1387.75699203,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-05T13:03:49"
   }
 }
