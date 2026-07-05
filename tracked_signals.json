@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-05 00:14:59.999000"
+    "last_bar": "2026-07-05 00:29:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -29934,14 +29934,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 15:59:59.999000",
-    "last_bar": "2026-07-05 00:14:59.999000",
+    "last_bar": "2026-07-05 00:29:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0352,
     "lo_seen": 0.0342,
-    "created": "2026-07-04T16:01:16"
+    "created": "2026-07-04T16:01:16",
+    "exit_price": 0.0348,
+    "close_card_sent": true,
+    "closed_at": "2026-07-05T00:33:30"
   },
   "RSI50 · 1h|ARDRUSDT|2026-07-04 15:59:59.999000": {
     "symbol": "ARDRUSDT",
@@ -30414,7 +30417,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 22:29:59.999000",
-    "last_bar": "2026-07-05 00:14:59.999000",
+    "last_bar": "2026-07-05 00:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0013,
@@ -30452,7 +30455,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 22:59:59.999000",
-    "last_bar": "2026-07-05 00:14:59.999000",
+    "last_bar": "2026-07-05 00:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00127,
