@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-05 06:59:59.999000"
+    "last_bar": "2026-07-05 07:14:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -30427,7 +30427,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 22:29:59.999000",
-    "last_bar": "2026-07-05 06:59:59.999000",
+    "last_bar": "2026-07-05 07:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0013,
@@ -30465,7 +30465,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 22:59:59.999000",
-    "last_bar": "2026-07-05 06:59:59.999000",
+    "last_bar": "2026-07-05 07:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00127,
@@ -30573,13 +30573,54 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 06:14:59.999000",
-    "last_bar": "2026-07-05 06:59:59.999000",
+    "last_bar": "2026-07-05 07:14:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.434,
-    "lo_seen": 0.427,
-    "created": "2026-07-05T06:15:56"
+    "lo_seen": 0.423,
+    "created": "2026-07-05T06:15:56",
+    "exit_price": 0.428,
+    "close_card_sent": true,
+    "closed_at": "2026-07-05T07:18:26"
+  },
+  "RSI60 · 15m|SAPIENUSDT|2026-07-05 07:14:59.999000": {
+    "symbol": "SAPIENUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.0786,
+    "dca_levels": [
+      0.0776832,
+      0.0774,
+      0.0771168,
+      0.0767136
+    ],
+    "stop": 0.07644659,
+    "init_stop": 0.07644659,
+    "cur_stop": 0.07644659,
+    "last_alert_stop": 0.07644659,
+    "armed": false,
+    "targets": [
+      0.0792528,
+      0.0800832,
+      0.0824832
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-05 07:14:59.999000",
+    "last_bar": "2026-07-05 07:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0786,
+    "lo_seen": 0.0786,
+    "created": "2026-07-05T07:16:05"
   }
 }

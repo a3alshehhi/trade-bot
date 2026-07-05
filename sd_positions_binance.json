@@ -333,5 +333,44 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-05T06:18:46"
+  },
+  "SAPIENUSDT": {
+    "symbol": "SAPIENUSDT",
+    "tf": "15m",
+    "label": "RSI60 · 15m",
+    "prob": null,
+    "levels": [
+      0.0776832,
+      0.0774,
+      0.0771168,
+      0.0767136
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 25.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.07869504724850636,
+        "qty": 317.682,
+        "usd": 25.0
+      }
+    ],
+    "avg_entry": 0.07869504724850636,
+    "entry": 0.07869504724850636,
+    "init_stop": 0.07644659,
+    "stop": 0.07644659,
+    "R": 0.0022484572485063636,
+    "tp1": 0.0792528,
+    "tp2": 0.0800832,
+    "qty": 317.682,
+    "qty_open": 317.682,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-05T07:19:38"
   }
 }
