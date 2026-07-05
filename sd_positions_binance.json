@@ -181,39 +181,6 @@
     "armed": true,
     "opened_ts": "2026-07-04T06:19:31"
   },
-  "ARPAUSDT": {
-    "symbol": "ARPAUSDT",
-    "tf": "1h",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "levels": [
-      0.01102
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.010900944177649287,
-        "qty": 9173.5173,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.010900944177649287,
-    "entry": 0.010900944177649287,
-    "init_stop": 0.01006118,
-    "stop": 0.01006118,
-    "R": 0.0008397641776492874,
-    "tp1": 0.01197882,
-    "tp2": 0.01293764,
-    "qty": 9173.5173,
-    "qty_open": 9173.5173,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-04T07:33:52"
-  },
   "PONDUSDT": {
     "symbol": "PONDUSDT",
     "tf": "1h",
