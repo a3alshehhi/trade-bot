@@ -19,8 +19,14 @@
   • CHoCH إلزامي: لا يدخل إلا إذا كسرت شمعة الاندفاع الهيكل صعوداً لأول مرة (انعكاس
     بداية موجة/زخم شرائي)، لا مجرد استمرار BOS (require_choch).
   • قريب من فلتر الاتجاه: الدخول فوق EMA200 لكن ضمن max_ema_dist (لا متمدّداً بعيداً).
-  • تشبّع شرائي بعد بيعي (فوق CHoCH، 2026-07-04): تبلغ موجة الاندفاع تشبّعاً شرائياً
-    (RSI≥rsi_ob) مسبوقاً بتشبّع بيعي (RSI≤rsi_os) واحد أو أكثر (require_ob_after_os).
+
+الدخول الجديد (2026-07-05، طلب بو محمد) — «زخم مباشر + توسيط DCA بفيبو»:
+  • حُذف دخول فيبو 61.8%. الدخول المباشر = أول شمعة (بعد CHoCH) يبلغ فيها RSI(rsi_entry_len=21)
+    التشبّع الشرائي (≥ rsi_entry_ob=80) → تأكيد زخم، ندخل بإغلاقها.
+  • توسيط DCA: سلالم فيبو (dca_fibs) أسفل الدخول المباشر لعمل متوسط أفضل (بين الوقف والدخول).
+  • الوقف عند قاع الموجة الكاملة التي صنعت CHoCH (أدنى قاع من آخر قاع محوري قبل الاندفاع)
+    − 0.5×ATR — أبعد من قاع شمعة الدخول → احتمال ضرب الوقف أقل.
+  • الأهداف تبقى فيبو (امتدادات الساق 1.272/1.618).
 
 الأوضاع:
   python sd_bot.py train     # يبني العيّنات من التاريخ ويدرّب النموذج (sd_model.joblib)
@@ -54,8 +60,13 @@ CFG = dict(
     # ── تشبّع شرائي بعد تشبّع بيعي (فوق CHoCH) — طلب بو محمد 2026-07-04 ──
     # مُعطّل افتراضياً: الباك-تست أظهر أنه يقصّ العدد ويخفض الحافة (وRSI≥70 يؤخّر الدخول لا يقدّمه).
     require_ob_after_os=0, # يشترط: تشبّع شرائي (RSI≥rsi_ob) في موجة الاندفاع مسبوق بتشبّع بيعي واحد+
-    rsi_len=14, rsi_ob=70, rsi_os=30,   # طول RSI وعتبتا التشبّع الشرائي/البيعي
+    rsi_len=14, rsi_ob=70, rsi_os=30,   # طول RSI وعتبتا التشبّع الشرائي/البيعي (لميزة obos)
     os_lookback=100,       # نافذة البحث عن تشبّع بيعي قبل بدء موجة الاندفاع (شموع)
+    # ── الدخول الجديد (2026-07-05، طلب بو محمد): زخم مباشر بعد CHoCH + توسيط DCA بفيبو ──
+    rsi_entry_len=21,      # طول RSI لإشارة الدخول (بديل دخول فيبو 61.8%)
+    rsi_entry_ob=80,       # عتبة التشبّع الشرائي للدخول المباشر (RSI21 ≥ 80 = تأكيد زخم)
+    # سلالم فيبو للتوسيط تحت الدخول المباشر (نِسَب تصحيح لساق الاندفاع leg_low→leg_high)
+    dca_fibs=(0.382, 0.5, 0.618, 0.786),
     # ── إدارة الخروج نظام ب (الفائزة في بوت الصيد): جني جزئي + وقف متحرّك شانديلير ──
     tp1_frac=0.5,          # نسبة الجني عند الهدف الأول ثم تتبّع الباقي
     trail_atr=2.5,         # مضاعف وقف شانديلير المتحرّك (قمة − trail_atr×ATR) للباقي
@@ -73,6 +84,12 @@ CFG["trail_atr"]     = float(os.environ.get("SD_TRAIL_ATR", CFG["trail_atr"]))
 CFG["tp1_frac"]      = float(os.environ.get("SD_TP1_FRAC", CFG["tp1_frac"]))
 CFG["require_ob_after_os"] = int(os.environ.get("SD_REQUIRE_OBOS", CFG["require_ob_after_os"]))
 CFG["os_lookback"]   = int(os.environ.get("SD_OS_LOOKBACK", CFG["os_lookback"]))
+CFG["rsi_entry_len"] = int(os.environ.get("SD_RSI_ENTRY_LEN", CFG["rsi_entry_len"]))
+CFG["rsi_entry_ob"]  = float(os.environ.get("SD_RSI_ENTRY_OB", CFG["rsi_entry_ob"]))
+# نمط الدخول حسب الفريم (طلب بو محمد 2026-07-05): 15m = زخم RSI + توسيط DCA؛
+# الساعة (وأعلى) = اختراق قمة الـCHoCH. قابل للتجاوز عبر SD_ENTRY_MODE (momentum/breakout).
+CFG["entry_mode"] = os.environ.get(
+    "SD_ENTRY_MODE", "momentum" if CFG["entry_tf"] == "15m" else "breakout")
 # نافذة الحداثة: أقصى شموع بين تكوين المنطقة والدخول (تضييقها = دخول أبكر = أقل تأخّراً)
 CFG["max_bars_to_touch"] = int(os.environ.get("SD_MAX_BARS", CFG["max_bars_to_touch"]))
 BINANCE_BASES = ["https://data-api.binance.vision", "https://api.binance.com"]
@@ -208,6 +225,24 @@ def choch_ups(events):
         prev = k
     return s
 
+def choch_high_levels(c, piv, R):
+    """يعيد dict: {مؤشّر شمعة CHoCH-up → سعر القمة المحورية المكسورة} = «قمة الـCHoCH».
+    نكرّر منطق structure ونسجّل مستوى القمة (ref_h) عند كل كسر صاعد يسبقه كسر هابط.
+    يُستخدم لدخول الاختراق على فريم الساعة: الدخول عند كسر السعر قمة الـCHoCH."""
+    ref_h = ref_l = None; pidx = 0; prev = None; out = {}
+    for i in range(len(c)):
+        while pidx < len(piv) and piv[pidx][0] + R <= i:
+            p = piv[pidx]; pidx += 1
+            if p[2] == "H": ref_h = p
+            else: ref_l = p
+        if ref_h and c[i] > ref_h[1]:
+            if prev == "dn":
+                out[i] = ref_h[1]           # مستوى قمة الـCHoCH المكسورة
+            prev = "up"; ref_h = None
+        elif ref_l and c[i] < ref_l[1]:
+            prev = "dn"; ref_l = None
+    return out
+
 def demand_zones(o, h, l, c, v, a):
     zones = []
     for j in range(2, len(c)):
@@ -241,41 +276,87 @@ def htf_bias_fn(d4):
         return b
     return f
 
+# ----------------------- خطة الدخول (زخم مباشر + توسيط DCA بفيبو) -----------------------
+def _wave_low(z, l, low_idx):
+    """قاع الموجة الكاملة التي صنعت CHoCH: أدنى قاع من آخر قاع محوري (swing-low) قبل شمعة
+    الاندفاع حتى الاندفاع نفسه — لا مجرد قاعدة المنطقة (طلب بو محمد 2026-07-05)."""
+    j = z["created"]; origin = 0
+    for idx in low_idx:                 # low_idx مرتّبة تصاعدياً
+        if idx <= j: origin = idx
+        else: break
+    wl = min(l[origin:j + 1]) if j + 1 > origin else l[j]
+    return min(wl, z["distal"])         # لا يعلو عن قاعدة المنطقة
+
+def _entry_plan(z, h, l, c, a, rs_en, low_idx, stop_buf, choch_hi=None, mode=None):
+    """الدخول حسب الفريم (طلب بو محمد 2026-07-05):
+      • momentum (15m): أول شمعة بعد CHoCH يبلغ فيها RSI(entry) التشبّع الشرائي ≥ العتبة =
+        دخول زخم مباشر بإغلاقها + سلالم توسيط DCA بفيبو أسفله.
+      • breakout (1h+): الدخول عند كسر السعر «قمة الـCHoCH» (القمة المحورية المكسورة) =
+        دخول اختراق مباشر واحد بلا توسيط.
+    في الحالتين: الوقف عند قاع الموجة الكاملة − هامش ATR، والأهداف امتدادات فيبو للساق.
+    يعيد None إذا لم يتحقّق دخول صالح."""
+    mode = mode or CFG["entry_mode"]
+    j = z["created"]
+    leg_low = _wave_low(z, l, low_idx)
+    run_high = max(z["proximal"], h[j]); tch = -1; entry = leg_high = 0.0; peak_idx = j
+    if mode == "breakout":
+        lvl = None                                       # قمة الـCHoCH قرب التكوين
+        for cb in (j, j + 1, j + 2):
+            if choch_hi and cb in choch_hi:
+                lvl = choch_hi[cb]; break
+        if lvl is None:
+            return None
+        for i in range(j + 1, len(c)):
+            if h[i - 1] > run_high:
+                run_high = h[i - 1]; peak_idx = i - 1
+            if h[i] >= lvl:                              # كسر السعر قمة الـCHoCH → دخول اختراق
+                tch = i; leg_high = max(run_high, h[i]); entry = lvl; break
+    else:                                                # momentum (15m)
+        for i in range(j + 1, len(c)):
+            if h[i - 1] > run_high:
+                run_high = h[i - 1]; peak_idx = i - 1
+            if math.isfinite(rs_en[i]) and rs_en[i] >= CFG["rsi_entry_ob"]:
+                tch = i; leg_high = max(run_high, h[i]); entry = c[i]; break
+    if tch < 0:
+        return None
+    atch = a[tch] or (leg_high - leg_low)
+    stop = leg_low - stop_buf * atch                    # قاع الموجة الكاملة − ATR
+    if not (entry - stop > 0):
+        return None
+    span = leg_high - leg_low
+    if mode == "breakout":
+        legs = [entry]                                  # الساعة: دخول اختراق واحد بلا توسيط
+    else:
+        ladder = [leg_high - lv * span for lv in CFG["dca_fibs"]]   # سلالم توسيط DCA بفيبو
+        legs = [entry] + [p for p in ladder if stop < p < entry]    # بين الوقف والدخول فقط
+    _exts = [leg_low + m * span for m in (1.272, CFG["tp2_ext"], 2.0, 2.618)]  # أهداف امتداد فيبو
+    _above = [x for x in _exts if x > entry]
+    tp1, tp2 = (_above[0], _above[1]) if len(_above) >= 2 else (entry + 0.618 * span, entry + span)
+    return dict(tch=tch, entry=entry, stop=stop, tp1=tp1, tp2=tp2, legs=legs,
+                leg_low=leg_low, leg_high=leg_high, peak_idx=peak_idx, atch=atch)
+
 # ----------------------- ميزات الإعداد -----------------------
 def setup_features(sym, d1, d4):
     o, h, l, c, v, t = d1["o"], d1["h"], d1["l"], d1["c"], d1["v"], d1["t"]
     a = atr(h, l, c, CFG["atr_len"]); vz = vol_z(v, CFG["vol_len"]); e200 = ema(c, CFG["ema_len"])
     rs = rsi(c, CFG["rsi_len"])
-    _, ev = structure(h, l, c, CFG["pivL"], CFG["pivR"])
+    rs_en = rsi(c, CFG["rsi_entry_len"])          # RSI(21) لإشارة الدخول الزخمي
+    piv, ev = structure(h, l, c, CFG["pivL"], CFG["pivR"])
+    low_idx = [p[0] for p in piv if p[2] == "L"]  # مؤشّرات القيعان المحورية (لقاع الموجة)
+    choch_hi = choch_high_levels(c, piv, CFG["pivR"])   # مستويات قمم الـCHoCH (لدخول الاختراق)
     bos_up = set(i for i, k in ev if k == "up")
     choch_up = choch_ups(ev)
     hb = htf_bias_fn(d4); zones = demand_zones(o, h, l, c, v, a)
     out = []
     for z in zones:
         j = z["created"]
-        leg_low = z["distal"]
-        # قمة ساق الاندفاع = أعلى ما بلغه السعر منذ التكوين وقبل شمعة الدخول (تُحدَّث تدريجياً).
-        # الدخول = تصحيح فيبو 61.8% لهذه الساق (أعمق من قمة المنطقة → مخاطرة أقل و R:R أفضل).
-        run_high = max(z["proximal"], h[j]); tch = -1; entry = leg_high = 0.0
-        peak_idx = j                               # مؤشّر قمة موجة الاندفاع (لفحص تشبّع RSI الشرائي)
-        for i in range(j + 1, len(c)):
-            if h[i - 1] > run_high:
-                run_high = h[i - 1]; peak_idx = i - 1
-            span = run_high - leg_low
-            if span <= 0:
-                continue
-            entry_i = run_high - CFG["fib_entry"] * span
-            if l[i] <= entry_i:                    # أول شمعة تلمس مستوى فيبو الدخول
-                tch = i; leg_high = run_high; entry = entry_i; break
-        if tch < 0:
+        plan = _entry_plan(z, h, l, c, a, rs_en, low_idx, CFG["stop_buf_atr"], choch_hi)
+        if plan is None:
             continue
-        atch = a[tch] or (leg_high - leg_low)
-        stop = leg_low - CFG["stop_buf_atr"] * atch       # الوقف خارج المنطقة (تحت الأصل)
+        tch = plan["tch"]; entry = plan["entry"]; stop = plan["stop"]
+        tp1 = plan["tp1"]; tp2 = plan["tp2"]; legs = plan["legs"]
+        leg_low = plan["leg_low"]; leg_high = plan["leg_high"]; peak_idx = plan["peak_idx"]
         R = entry - stop
-        if not (R > 0):
-            continue
-        tp1 = leg_high                                     # هدف1: العودة لقمة الاندفاع (فيبو 0%)
-        tp2 = leg_low + CFG["tp2_ext"] * (leg_high - leg_low)   # هدف2: امتداد فيبو 1.618
         # شمعة التأكيد: أغلقت فوق أصل المنطقة (لم تكسرها) وفي نصفها العلوي (رفض/ارتداد لا اختراق).
         rng = h[tch] - l[tch]
         close_loc = ((c[tch] - l[tch]) / rng) if rng > 0 else 0.0
@@ -304,7 +385,7 @@ def setup_features(sym, d1, d4):
                  hour=dt.datetime.fromtimestamp(t[tch] / 1000, dt.timezone.utc).hour,
                  confirm=confirm, closeLoc=round(close_loc, 2))
         out.append(dict(sym=sym, created=j, touch=tch, ts=t[tch], f=f,
-                        entry=entry, stop=stop, tp1=tp1, tp2=tp2,
+                        entry=entry, stop=stop, tp1=tp1, tp2=tp2, legs=legs,
                         height=leg_high - leg_low))
     return out, h, l, c
 
@@ -463,6 +544,7 @@ def scan(basket=None):
                 signals.append(dict(key=key, sym=s, prob=round(float(prob), 3),
                     tf=CFG["entry_tf"],
                     entry=round(entry, 8), stop=round(stop, 8),
+                    legs=[round(p, 8) for p in st.get("legs", [entry])],
                     tp1=round(st["tp1"], 8), tp2=round(st["tp2"], 8), ts=st["ts"],
                     reasons=_reasons(f)))
         except Exception as ex:
@@ -481,7 +563,8 @@ def scan(basket=None):
     return signals
 
 def _reasons(f):
-    r = ["دخول فيبو 61.8%"]
+    r = [f"دخول زخم RSI{CFG['rsi_entry_len']}≥{CFG['rsi_entry_ob']:.0f} + توسيط DCA بفيبو"
+         if CFG["entry_mode"] == "momentum" else "دخول اختراق قمة الـCHoCH"]
     if f.get("choch"): r.append("تغيّر هيكل CHoCH (بداية موجة)")
     if f.get("rsiObOs"): r.append("تشبّع شرائي بعد بيعي (RSI)")
     if f.get("confirm"): r.append("شمعة تأكيد/ارتداد")
@@ -512,6 +595,8 @@ def format_message(signals):
     blocks = []
     for s in signals:
         entry, stop = s["entry"], s["stop"]
+        legs = s.get("legs") or [entry]
+        avg = sum(legs) / len(legs)                      # متوسط لو امتلأت كل السلالم
         risk_pct = ((entry - stop) / entry * 100) if entry else 0.0
         tps = [t for t in (s.get("tp1"), s.get("tp2")) if t]
         lines = [
@@ -520,8 +605,14 @@ def format_message(signals):
             f"🤖 ثقة الفلتر التعلّمي (عرض/طلب + ML): {int(s['prob']*100)}%",
             f"📊 الأسباب: {'، '.join(s['reasons'])}",
             "",
-            f"📍 الدخول: {_fmt(entry)}",
-            f"🛑 الوقف: {_fmt(stop)}  (−{risk_pct:.2f}%)",
+            (f"📍 الدخول المباشر (زخم): {_fmt(entry)}" if CFG["entry_mode"] == "momentum"
+             else f"📍 الدخول (اختراق قمة CHoCH): {_fmt(entry)}"),
+        ]
+        if len(legs) > 1:
+            lines.append("➕ سلالم التوسيط DCA بفيبو: " + " · ".join(_fmt(p) for p in legs[1:]))
+            lines.append(f"⚖️ المتوسط لو امتلأت السلالم: {_fmt(avg)}")
+        lines += [
+            f"🛑 الوقف (قاع الموجة): {_fmt(stop)}  (−{risk_pct:.2f}%)",
             "",
             "🎯 الأهداف:",
         ]
@@ -586,6 +677,7 @@ def track_for_dashboard(signals, message_id, tf=None, path=TRACK_FILE):
             "symbol": s["sym"], "label": DASH_LABEL, "timeframe": tf,
             "message_id": message_id,
             "entry": entry, "stop": stop, "init_stop": stop, "cur_stop": stop,
+            "legs": s.get("legs", [entry]),          # سلالم DCA للتوسيط (للتنفيذ الحيّ)
             "last_alert_stop": stop, "armed": False,
             "targets": [tp1, tp2], "tp_split": [50, 50],
             "is_trendwave": False, "mgmt": "5050", "breakeven_done": False,
@@ -599,6 +691,22 @@ def track_for_dashboard(signals, message_id, tf=None, path=TRACK_FILE):
     print(f"tracked {added} signals to {path}")
 
 # ----------------------- باك-تست حقيقي (مقارنة القديم/الجديد) -----------------------
+def _dca_average(legs, stop, tp1, h, l, c, tch, hold):
+    """متوسط دخول DCA بمحاكاة مسار: الساق الأولى تُملأ عند الدخول المباشر، وتُملأ سلالم فيبو
+    التي يهبط إليها السعر (حتى أدنى قاع) قبل بلوغ الهدف الأول أو الوقف. أوزان متساوية.
+    إن لم يرتدّ السعر لأي سلّم = المتوسط هو الدخول المباشر نفسه (لا أفضلية توسيط)."""
+    if not legs:
+        return None
+    end = min(len(c), tch + hold)
+    lo_seen = l[tch]
+    for i in range(tch, end):
+        if l[i] < lo_seen:
+            lo_seen = l[i]
+        if l[i] <= stop or h[i] >= tp1:      # يتوقّف الامتلاء عند الوقف أو أول هدف
+            break
+    filled = [legs[0]] + [p for p in legs[1:] if p >= lo_seen]   # سلّم يُملأ إذا وصله السعر
+    return sum(filled) / len(filled)
+
 def _sim_5050(entry, stop, tp1, tp2, h, l, c, tch, hold):
     """يحاكي صفقة بإدارة 50/50: نصف عند الهدف1 ثم نقل الوقف للتعادل، والباقي للهدف2.
     يعيد الناتج بوحدات المخاطرة R. (عند تعارض الوقف والهدف بنفس الشمعة نُرجّح الوقف تحفّظاً.)"""
@@ -689,11 +797,13 @@ def backtest(basket=None):
                 if f["heightATR"] > CFG["max_height_atr"] or f["barsToTouch"] > CFG["max_bars_to_touch"]:
                     continue
                 tch = st["touch"]
-                r = _sim_5050(st["entry"], st["stop"], st["tp1"], st["tp2"], h, l, c, tch, hold)
+                # متوسط دخول DCA (الساق المباشرة + سلالم الفيبو المُمتلئة) بدل دخول مفرد
+                avg = _dca_average(st.get("legs", [st["entry"]]), st["stop"], st["tp1"], h, l, c, tch, hold)
+                r = _sim_5050(avg, st["stop"], st["tp1"], st["tp2"], h, l, c, tch, hold)
                 if r is not None:
                     new_rs.append(r)
-                av = a[tch] or (st["tp1"] - st["entry"])   # ATR عند الدخول لوقف شانديلير
-                rb = _sim_trailb(st["entry"], st["stop"], st["tp1"], av, h, l, c, tch, hold)
+                av = a[tch] or (st["tp1"] - avg)           # ATR عند الدخول لوقف شانديلير
+                rb = _sim_trailb(avg, st["stop"], st["tp1"], av, h, l, c, tch, hold)
                 if rb is not None:
                     new_b_rs.append(rb)
             # ── المنطق القديم (دخول عند proximal، وقف داخل المنطقة، بلا تأكيد) ──
@@ -718,10 +828,12 @@ def backtest(basket=None):
         except Exception as ex:
             print("bt skip", s, ex)
         time.sleep(0.03)
+    entry_desc = (f"زخم RSI{CFG['rsi_entry_len']}≥{CFG['rsi_entry_ob']:.0f}+DCA فيبو"
+                  if CFG["entry_mode"] == "momentum" else "اختراق قمة CHoCH")
     report = ("📊 مقارنة باك-تست العرض/الطلب (حافة خام بلا ML)\n"
               f"الفريم: دخول {CFG['entry_tf']} / سياق {CFG['htf']} · "
-              f"CHoCH · قرب≤{CFG['max_ema_dist']:.0%} · حداثة≤{CFG['max_bars_to_touch']} شمعة"
-              f"{' · RSI' if CFG['require_ob_after_os'] else ''}\n"
+              f"{entry_desc} · وقف قاع الموجة · "
+              f"CHoCH · قرب≤{CFG['max_ema_dist']:.0%} · حداثة≤{CFG['max_bars_to_touch']} شمعة\n"
               f"— القديم (5050): {_stats(old_rs)}\n"
               f"— الجديد (5050): {_stats(new_rs)}\n"
               f"— الجديد (نظام ب شانديلير {CFG['trail_atr']}×ATR): {_stats(new_b_rs)}")
@@ -733,61 +845,45 @@ def _precompute(sym, d1, d4):
     """يحسب المؤشّرات الثقيلة والمناطق مرة واحدة لكل رمز (مستقلّة عن معاملات فيبو/الوقف)."""
     o, h, l, c, v, t = d1["o"], d1["h"], d1["l"], d1["c"], d1["v"], d1["t"]
     a = atr(h, l, c, CFG["atr_len"]); vz = vol_z(v, CFG["vol_len"]); e200 = ema(c, CFG["ema_len"])
-    rsi_arr = rsi(c, CFG["rsi_len"])
-    _, ev = structure(h, l, c, CFG["pivL"], CFG["pivR"])
+    rsi_arr = rsi(c, CFG["rsi_len"]); rsi_en = rsi(c, CFG["rsi_entry_len"])
+    piv, ev = structure(h, l, c, CFG["pivL"], CFG["pivR"])
+    low_idx = [p[0] for p in piv if p[2] == "L"]
+    choch_hi = choch_high_levels(c, piv, CFG["pivR"])
     bos_up = set(i for i, k in ev if k == "up")
     choch_up = choch_ups(ev)
     hb = htf_bias_fn(d4); zones = demand_zones(o, h, l, c, v, a)
     return dict(o=o, h=h, l=l, c=c, v=v, t=t, a=a, vz=vz, e200=e200, rsi=rsi_arr,
+                rsi_entry=rsi_en, low_idx=low_idx, choch_hi=choch_hi,
                 bos_up=bos_up, choch_up=choch_up, hb=hb, zones=zones)
 
 def _eval_combo(P, fib_entry, stop_buf_atr):
-    """يقيّم توليفة (فيبو الدخول × هامش الوقف) على بيانات مُحسَّبة مسبقاً — سريع جداً."""
+    """يقيّم هامش الوقف على بيانات مُحسَّبة مسبقاً (fib_entry متروك للتوافق —
+    الدخول الآن زخم RSI + توسيط DCA بفيبو، والوقف عند قاع الموجة الكاملة)."""
     h, l, c, t, a, e200, hb = P["h"], P["l"], P["c"], P["t"], P["a"], P["e200"], P["hb"]
-    choch_up = P["choch_up"]; rsi_arr = P["rsi"]
+    choch_up = P["choch_up"]; rs_en = P["rsi_entry"]; low_idx = P["low_idx"]; choch_hi = P["choch_hi"]
     hold = CFG["bt_hold"]; rs = []
     for z in P["zones"]:
-        j = z["created"]; leg_low = z["distal"]
+        j = z["created"]
         if CFG["require_choch"] and not (j in choch_up or (j+1) in choch_up or (j+2) in choch_up):
             continue
-        run_high = max(z["proximal"], h[j]); tch = -1; entry = leg_high = 0.0; peak_idx = j
-        for i in range(j + 1, len(c)):
-            if h[i - 1] > run_high:
-                run_high = h[i - 1]; peak_idx = i - 1
-            span = run_high - leg_low
-            if span <= 0:
-                continue
-            entry_i = run_high - fib_entry * span
-            if l[i] <= entry_i:
-                tch = i; leg_high = run_high; entry = entry_i; break
-        if tch < 0:
+        plan = _entry_plan(z, h, l, c, a, rs_en, low_idx, stop_buf_atr, choch_hi)
+        if plan is None:
             continue
-        if CFG["require_ob_after_os"]:
-            ob_after = any(math.isfinite(rsi_arr[x]) and rsi_arr[x] >= CFG["rsi_ob"]
-                           for x in range(j, min(peak_idx, tch) + 1))
-            os_lo = max(1, j - CFG["os_lookback"])
-            os_before = any(math.isfinite(rsi_arr[x]) and rsi_arr[x] <= CFG["rsi_os"]
-                            for x in range(os_lo, j + 1))
-            if not (ob_after and os_before):
-                continue
-        atch = a[tch] or (leg_high - leg_low)
-        stop = leg_low - stop_buf_atr * atch
-        R = entry - stop
-        if R <= 0:
-            continue
+        tch = plan["tch"]; entry = plan["entry"]; stop = plan["stop"]
         ema_rel = (c[tch] - e200[tch]) / e200[tch] if e200[tch] else 0.0
         if ema_rel <= 0 or hb(t[tch]) < 0:
             continue
         if CFG["max_ema_dist"] and ema_rel > CFG["max_ema_dist"]:
             continue
         rng = h[tch] - l[tch]; close_loc = ((c[tch] - l[tch]) / rng) if rng > 0 else 0.0
-        if CFG["require_confirm"] and not (c[tch] > leg_low and close_loc >= 0.5):
+        if CFG["require_confirm"] and not (c[tch] > plan["leg_low"] and close_loc >= 0.5):
             continue
+        R = entry - stop
         height_atr = (z["proximal"] - z["distal"]) / (a[j] or R)
         if height_atr > CFG["max_height_atr"] or (tch - j) > CFG["max_bars_to_touch"]:
             continue
-        tp1 = leg_high; tp2 = leg_low + CFG["tp2_ext"] * (leg_high - leg_low)
-        r = _sim_5050(entry, stop, tp1, tp2, h, l, c, tch, hold)
+        avg = _dca_average(plan["legs"], stop, plan["tp1"], h, l, c, tch, hold)
+        r = _sim_5050(avg, stop, plan["tp1"], plan["tp2"], h, l, c, tch, hold)
         if r is not None:
             rs.append(r)
     return rs
