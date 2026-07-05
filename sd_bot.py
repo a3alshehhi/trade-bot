@@ -88,8 +88,15 @@ CFG["rsi_entry_len"] = int(os.environ.get("SD_RSI_ENTRY_LEN", CFG["rsi_entry_len
 CFG["rsi_entry_ob"]  = float(os.environ.get("SD_RSI_ENTRY_OB", CFG["rsi_entry_ob"]))
 # نمط الدخول حسب الفريم (طلب بو محمد 2026-07-05): 15m = زخم RSI + توسيط DCA؛
 # الساعة (وأعلى) = اختراق قمة الـCHoCH. قابل للتجاوز عبر SD_ENTRY_MODE (momentum/breakout).
-CFG["entry_mode"] = os.environ.get(
-    "SD_ENTRY_MODE", "momentum" if CFG["entry_tf"] == "15m" else "breakout")
+# نمط الدخول (طلب بو محمد 2026-07-05): كلا الفريمين = اختراق قمة الـCHoCH (الأقوى على 1h)؛
+# 15m يضيف توسيط DCA بفيبو فوق الاختراق. زخم RSI يبقى متاحاً عبر SD_ENTRY_MODE=momentum.
+CFG["entry_mode"] = os.environ.get("SD_ENTRY_MODE", "breakout")
+# توسيط DCA بفيبو: مفعّل على 15m فقط افتراضياً (دخول مباشر + سلالم فيبو للمعدّل). SD_USE_DCA للتجاوز.
+CFG["use_dca"] = int(os.environ.get("SD_USE_DCA", 1 if CFG["entry_tf"] == "15m" else 0))
+# فلتر الاتجاه: EMA365 افتراضياً على 15m (تجربة بو محمد 2026-07-05) بدل EMA200، وإلا 200.
+# قابل للتجاوز عبر SD_EMA_LEN.
+CFG["ema_len"] = int(os.environ.get(
+    "SD_EMA_LEN", 365 if CFG["entry_tf"] == "15m" else CFG["ema_len"]))
 # نافذة الحداثة: أقصى شموع بين تكوين المنطقة والدخول (تضييقها = دخول أبكر = أقل تأخّراً)
 CFG["max_bars_to_touch"] = int(os.environ.get("SD_MAX_BARS", CFG["max_bars_to_touch"]))
 BINANCE_BASES = ["https://data-api.binance.vision", "https://api.binance.com"]
@@ -324,11 +331,11 @@ def _entry_plan(z, h, l, c, a, rs_en, low_idx, stop_buf, choch_hi=None, mode=Non
     if not (entry - stop > 0):
         return None
     span = leg_high - leg_low
-    if mode == "breakout":
-        legs = [entry]                                  # الساعة: دخول اختراق واحد بلا توسيط
-    else:
-        ladder = [leg_high - lv * span for lv in CFG["dca_fibs"]]   # سلالم توسيط DCA بفيبو
+    if CFG["use_dca"]:                                   # 15m: دخول مباشر + سلالم توسيط DCA بفيبو
+        ladder = [leg_high - lv * span for lv in CFG["dca_fibs"]]
         legs = [entry] + [p for p in ladder if stop < p < entry]    # بين الوقف والدخول فقط
+    else:                                               # 1h: دخول اختراق واحد بلا توسيط
+        legs = [entry]
     _exts = [leg_low + m * span for m in (1.272, CFG["tp2_ext"], 2.0, 2.618)]  # أهداف امتداد فيبو
     _above = [x for x in _exts if x > entry]
     tp1, tp2 = (_above[0], _above[1]) if len(_above) >= 2 else (entry + 0.618 * span, entry + span)
@@ -563,8 +570,9 @@ def scan(basket=None):
     return signals
 
 def _reasons(f):
-    r = [f"دخول زخم RSI{CFG['rsi_entry_len']}≥{CFG['rsi_entry_ob']:.0f} + توسيط DCA بفيبو"
-         if CFG["entry_mode"] == "momentum" else "دخول اختراق قمة الـCHoCH"]
+    r = [(f"دخول زخم RSI{CFG['rsi_entry_len']}≥{CFG['rsi_entry_ob']:.0f}"
+          if CFG["entry_mode"] == "momentum" else "دخول اختراق قمة الـCHoCH")
+         + (" + توسيط DCA بفيبو" if CFG["use_dca"] else "")]
     if f.get("choch"): r.append("تغيّر هيكل CHoCH (بداية موجة)")
     if f.get("rsiObOs"): r.append("تشبّع شرائي بعد بيعي (RSI)")
     if f.get("confirm"): r.append("شمعة تأكيد/ارتداد")
@@ -828,11 +836,12 @@ def backtest(basket=None):
         except Exception as ex:
             print("bt skip", s, ex)
         time.sleep(0.03)
-    entry_desc = (f"زخم RSI{CFG['rsi_entry_len']}≥{CFG['rsi_entry_ob']:.0f}+DCA فيبو"
-                  if CFG["entry_mode"] == "momentum" else "اختراق قمة CHoCH")
+    entry_desc = ((f"زخم RSI{CFG['rsi_entry_len']}≥{CFG['rsi_entry_ob']:.0f}"
+                   if CFG["entry_mode"] == "momentum" else "اختراق قمة CHoCH")
+                  + (" + توسيط DCA فيبو" if CFG["use_dca"] else ""))
     report = ("📊 مقارنة باك-تست العرض/الطلب (حافة خام بلا ML)\n"
               f"الفريم: دخول {CFG['entry_tf']} / سياق {CFG['htf']} · "
-              f"{entry_desc} · وقف قاع الموجة · "
+              f"{entry_desc} · وقف قاع الموجة · فلتر اتجاه EMA{CFG['ema_len']} · "
               f"CHoCH · قرب≤{CFG['max_ema_dist']:.0%} · حداثة≤{CFG['max_bars_to_touch']} شمعة\n"
               f"— القديم (5050): {_stats(old_rs)}\n"
               f"— الجديد (5050): {_stats(new_rs)}\n"
