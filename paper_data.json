@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-05T11:32:49",
+  "updated_at": "2026-07-05T11:47:33",
   "stats": {
     "open": 25,
     "closed": 917,
@@ -15595,11 +15595,13 @@
       "timeframe": "15m",
       "entry": 0.03961,
       "stop": 0.03822063,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-05T10:31:14",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.53
     },
     {
       "id": "RSI60 · 15m|PYTHUSDT|2026-07-05 11:14:59.999000",
