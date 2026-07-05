@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-05T02:47:49",
+  "updated_at": "2026-07-05T03:02:53",
   "stats": {
-    "open": 26,
-    "closed": 906,
-    "win_rate": 56.1,
+    "open": 24,
+    "closed": 908,
+    "win_rate": 56.2,
     "profit_factor": 1.53,
-    "total_pct": 11046.53,
+    "total_pct": 11839.9,
     "avg_pct": 0.67,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-05",
-        "trades": 2,
+        "trades": 4,
         "win_rate": 100.0,
-        "return_pct": 2.14,
+        "return_pct": 9.41,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -135,9 +135,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 414,
-        "win_rate": 62.8,
-        "return_pct": 802.39,
+        "trades": 416,
+        "win_rate": 63.0,
+        "return_pct": 866.62,
         "month": "2026-07"
       },
       {
@@ -158,9 +158,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 247,
-        "win_rate": 72.5,
-        "return_pct": 656.91
+        "trades": 249,
+        "win_rate": 72.7,
+        "return_pct": 710.78
       },
       {
         "key": "2026-06",
@@ -12439,10 +12439,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-01T23:01:37",
-      "closed_at": null,
-      "realized_pct": 1.37
+      "closed_at": "2026-07-05T03:02:46",
+      "realized_pct": 1.37,
+      "result_pct": 1.37
     },
     {
       "id": "RSI70 · 1h|OGUSDT|2026-07-01 22:59:59.999000",
@@ -14517,12 +14518,14 @@
       "entry": 0.0799,
       "stop": 0.0768812,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-04T00:48:31",
-      "closed_at": null,
-      "realized_pct": 1.89
+      "closed_at": "2026-07-05T03:02:49",
+      "realized_pct": 5.67,
+      "result_pct": 5.67
     },
     {
       "id": "العرض/الطلب|BANDUSDT|2026-07-04 01:00:00",
