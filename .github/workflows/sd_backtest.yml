@@ -20,6 +20,9 @@ on:
       bt_hold:
         description: "أقصى شموع لإمساك الصفقة"
         default: "48"
+      max_bars:
+        description: "نافذة الحداثة (أقصى شموع بين تكوين المنطقة والدخول)"
+        default: "60"
 
 permissions:
   contents: read
@@ -44,6 +47,7 @@ jobs:
           SD_ENTRY_TF: ${{ inputs.entry_tf }}
           SD_HTF: ${{ inputs.htf }}
           SD_BT_HOLD: ${{ inputs.bt_hold }}
+          SD_MAX_BARS: ${{ inputs.max_bars }}
         run: python sd_bot.py backtest 2>&1 | tee sd_backtest_log.txt
 
       - name: Upload log artifact
