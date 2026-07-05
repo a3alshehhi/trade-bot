@@ -52,7 +52,8 @@ CFG = dict(
     require_choch=1,       # يدخل فقط إذا كسرت شمعة الاندفاع الهيكل صعوداً لأول مرة (انعكاس CHoCH)
     max_ema_dist=0.06,     # أقصى بُعد للدخول فوق EMA200 (قريب من فلتر الاتجاه لا متمدّد)؛ 0 = تعطيل
     # ── تشبّع شرائي بعد تشبّع بيعي (فوق CHoCH) — طلب بو محمد 2026-07-04 ──
-    require_ob_after_os=1, # يشترط: تشبّع شرائي (RSI≥rsi_ob) في موجة الاندفاع مسبوق بتشبّع بيعي واحد+
+    # مُعطّل افتراضياً: الباك-تست أظهر أنه يقصّ العدد ويخفض الحافة (وRSI≥70 يؤخّر الدخول لا يقدّمه).
+    require_ob_after_os=0, # يشترط: تشبّع شرائي (RSI≥rsi_ob) في موجة الاندفاع مسبوق بتشبّع بيعي واحد+
     rsi_len=14, rsi_ob=70, rsi_os=30,   # طول RSI وعتبتا التشبّع الشرائي/البيعي
     os_lookback=100,       # نافذة البحث عن تشبّع بيعي قبل بدء موجة الاندفاع (شموع)
     # ── إدارة الخروج نظام ب (الفائزة في بوت الصيد): جني جزئي + وقف متحرّك شانديلير ──
@@ -72,6 +73,8 @@ CFG["trail_atr"]     = float(os.environ.get("SD_TRAIL_ATR", CFG["trail_atr"]))
 CFG["tp1_frac"]      = float(os.environ.get("SD_TP1_FRAC", CFG["tp1_frac"]))
 CFG["require_ob_after_os"] = int(os.environ.get("SD_REQUIRE_OBOS", CFG["require_ob_after_os"]))
 CFG["os_lookback"]   = int(os.environ.get("SD_OS_LOOKBACK", CFG["os_lookback"]))
+# نافذة الحداثة: أقصى شموع بين تكوين المنطقة والدخول (تضييقها = دخول أبكر = أقل تأخّراً)
+CFG["max_bars_to_touch"] = int(os.environ.get("SD_MAX_BARS", CFG["max_bars_to_touch"]))
 BINANCE_BASES = ["https://data-api.binance.vision", "https://api.binance.com"]
 # ملفات النموذج/الحالة قابلة للتخصيص لكل فريم (لتفادي التضارب بين الفريمات)
 MODEL_PATH = os.environ.get("SD_MODEL", "sd_model.joblib")
@@ -717,7 +720,8 @@ def backtest(basket=None):
         time.sleep(0.03)
     report = ("📊 مقارنة باك-تست العرض/الطلب (حافة خام بلا ML)\n"
               f"الفريم: دخول {CFG['entry_tf']} / سياق {CFG['htf']} · "
-              f"CHoCH · قرب≤{CFG['max_ema_dist']:.0%}\n"
+              f"CHoCH · قرب≤{CFG['max_ema_dist']:.0%} · حداثة≤{CFG['max_bars_to_touch']} شمعة"
+              f"{' · RSI' if CFG['require_ob_after_os'] else ''}\n"
               f"— القديم (5050): {_stats(old_rs)}\n"
               f"— الجديد (5050): {_stats(new_rs)}\n"
               f"— الجديد (نظام ب شانديلير {CFG['trail_atr']}×ATR): {_stats(new_b_rs)}")
