@@ -49,6 +49,7 @@ BINANCE_ORDER_USD = float(os.environ.get("BINANCE_ORDER_USD", "100"))
 BINANCE_BUY_ONLY = os.environ.get("BINANCE_BUY_ONLY", "0") == "1"   # 0 = إدارة كاملة مثل بايبت
 BINANCE_MAX_POS = int(os.environ.get("BINANCE_MAX_POS", "10"))       # نفس حدّ بايبت
 FEE_RATE = 0.001                                              # عمولة تقديرية للطرف الواحد
+LOCK_R   = float(os.environ.get("SD_LOCK_R", "0.3"))          # قفل ربح: الوقف = الدخول + LOCK_R×R بعد الهدف1 (بدل التعادل)
 POS_PATH = os.environ.get("SD_POS", "sd_positions.json")
 LEDGER_PATH = os.environ.get("SD_LEDGER", "sd_ledger.json")
 EXEC_PATH = os.environ.get("SD_EXECUTED", "sd_executed.json")
@@ -490,11 +491,14 @@ def _manage_one(sym, positions):
             pos["qty_open"] -= sold
             pos["tp1_done"] = True
             pos["armed"] = True
-            if entry > pos["stop"]:
-                pos["stop"] = entry                # الوقف إلى متوسط الدخول
+            lock = entry + LOCK_R * R              # قفل ربح صغير بدل التعادل الصفري
+            if pos["tp1"] <= lock:                 # هدف قريب جداً؟ ارجع للتعادل تفادياً لوقف فوري
+                lock = entry
+            if lock > pos["stop"]:
+                pos["stop"] = lock
             changed = True
             _notify(f"🎯 هدف1 [{EX_NAME}] {sym} @ {_fmt(price)} — جني 50% "
-                    f"(≈ {_fmt(pnl)} USDT) + الوقف لمتوسط الدخول {_fmt(entry)}")
+                    f"(≈ {_fmt(pnl)} USDT) + قفل الوقف عند {_fmt(pos['stop'])}")
         return changed
 
     # (3) الهدف الثاني — إغلاق المتبقّي
@@ -511,8 +515,9 @@ def _manage_one(sym, positions):
     #     ثم يتتبّع صعوداً (price − R) ولا ينزل أبداً.
     if not pos.get("armed") and price >= entry + R:
         pos["armed"] = True
-        if entry > pos["stop"]:
-            pos["stop"] = entry
+        lock = entry + LOCK_R * R              # السعر عند +1R، فقفل +0.3R آمن تحته
+        if lock > pos["stop"]:
+            pos["stop"] = lock
         changed = True
     if pos.get("armed"):
         trail = price - R
