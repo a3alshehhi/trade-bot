@@ -4372,5 +4372,38 @@
     "hi_seen": 0.06993,
     "lo_seen": 0.06728,
     "created": "2026-07-05T18:19:08"
+  },
+  "العرض/الطلب|BLURUSDT|2026-07-05 22:00:00": {
+    "symbol": "BLURUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 4592,
+    "entry": 0.0151,
+    "stop": 0.0147778,
+    "init_stop": 0.0147778,
+    "cur_stop": 0.0147778,
+    "legs": [
+      0.0151
+    ],
+    "last_alert_stop": 0.0147778,
+    "armed": false,
+    "targets": [
+      0.01524704,
+      0.01535776
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-05 22:00:00",
+    "last_bar": "2026-07-05 22:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0151,
+    "lo_seen": 0.0151,
+    "created": "2026-07-05T22:05:03"
   }
 }
