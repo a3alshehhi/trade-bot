@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-05T05:47:29",
+  "updated_at": "2026-07-05T06:02:48",
   "stats": {
-    "open": 24,
-    "closed": 908,
+    "open": 23,
+    "closed": 909,
     "win_rate": 56.2,
-    "profit_factor": 1.53,
-    "total_pct": 11839.9,
+    "profit_factor": 1.54,
+    "total_pct": 12009.45,
     "avg_pct": 0.67,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-05",
-        "trades": 4,
+        "trades": 5,
         "win_rate": 100.0,
-        "return_pct": 9.41,
+        "return_pct": 10.96,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -135,9 +135,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 416,
-        "win_rate": 63.0,
-        "return_pct": 866.62,
+        "trades": 417,
+        "win_rate": 63.1,
+        "return_pct": 880.35,
         "month": "2026-07"
       },
       {
@@ -158,9 +158,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 249,
-        "win_rate": 72.7,
-        "return_pct": 710.78
+        "trades": 250,
+        "win_rate": 72.8,
+        "return_pct": 722.3
       },
       {
         "key": "2026-06",
@@ -9905,10 +9905,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-06-29T17:01:10",
-      "closed_at": null,
-      "realized_pct": 1.42
+      "closed_at": "2026-07-05T06:02:41",
+      "realized_pct": 1.42,
+      "result_pct": 1.42
     },
     {
       "id": "trendwave · 1h|XPLUSDT|2026-06-29 16:59:59.999000",
