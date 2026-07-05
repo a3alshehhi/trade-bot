@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-05T15:47:47",
+  "updated_at": "2026-07-05T16:03:43",
   "stats": {
-    "open": 26,
-    "closed": 922,
-    "win_rate": 56.6,
-    "profit_factor": 1.51,
-    "total_pct": 10357.95,
-    "avg_pct": 0.65,
+    "open": 27,
+    "closed": 923,
+    "win_rate": 56.7,
+    "profit_factor": 1.52,
+    "total_pct": 11073.28,
+    "avg_pct": 0.66,
     "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-05",
-        "trades": 19,
-        "win_rate": 84.2,
-        "return_pct": -4.17,
+        "trades": 20,
+        "win_rate": 85.0,
+        "return_pct": 2.38,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -135,9 +135,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 431,
-        "win_rate": 63.6,
-        "return_pct": 746.65,
+        "trades": 432,
+        "win_rate": 63.7,
+        "return_pct": 804.56,
         "month": "2026-07"
       },
       {
@@ -158,9 +158,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 264,
-        "win_rate": 73.1,
-        "return_pct": 610.15
+        "trades": 265,
+        "win_rate": 73.2,
+        "return_pct": 658.72
       },
       {
         "key": "2026-06",
@@ -15634,11 +15634,13 @@
       "timeframe": "1h",
       "entry": 0.2106,
       "stop": 0.206373,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-05T13:34:52",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.83
     },
     {
       "id": "RSI60 · 15m|SCRTUSDT|2026-07-05 14:14:59.999000",
@@ -15711,6 +15713,38 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-05T15:32:05",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|CITYUSDT|2026-07-05 15:00:00",
+      "symbol": "CITYUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.39,
+      "stop": 0.38028,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-05T15:48:21",
+      "closed_at": "2026-07-05T16:03:42",
+      "realized_pct": 6.84,
+      "result_pct": 6.84
+    },
+    {
+      "id": "RSI60 · 15m|ENJUSDT|2026-07-05 15:59:59.999000",
+      "symbol": "ENJUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03029,
+      "stop": 0.02952836,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-05T16:01:22",
       "closed_at": null,
       "realized_pct": 0.0
     }
