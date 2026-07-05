@@ -44,6 +44,7 @@ from trading_bot import (
 TRAIL_W = 10        # نافذة القاع للوقف المتحرّك
 TRAIL_BUF = 1.0     # حاجز ATR تحت القاع
 DIV_LOOKBACK = 60   # نافذة كشف الدايفرجنس السلبي
+LOCK_R = 0.3        # قفل ربح: الوقف = الدخول + LOCK_R×R بعد الهدف1 (بدل التعادل الصفري)
 
 _DASH_BTN = {"inline_keyboard": [[{"text": "📊 افتح المتتبّع", "url": DASHBOARD_URL}]]}
 
@@ -293,7 +294,10 @@ def _update_trade(tr, token, chat_id):
         # 2) تعادل عند الهدف الأول (نقل الوقف لسعر الدخول)
         if not tr["breakeven"] and tp1 is not None and hi >= tp1:
             tr["breakeven"] = True
-            cur = max(cur, entry)
+            lock = entry + LOCK_R * risk           # قفل ربح صغير بدل التعادل الصفري
+            if tp1 <= lock:                        # هدف قريب جداً؟ ارجع للتعادل تفادياً لوقف فوري
+                lock = entry
+            cur = max(cur, lock)
             if 1 not in tr["hits"]:
                 tr["hits"].append(1)
             tr["events"].append({"ts": bts, "type": "tp1_be",
