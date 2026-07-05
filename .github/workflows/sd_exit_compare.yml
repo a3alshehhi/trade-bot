@@ -1,0 +1,132 @@
+name: SD Exit Compare (breakeven vs alternatives)
+
+# يقارن أربعة أنظمة نقل الوقف بعد بلوغ الهدف الأول على نفس صفقات استراتيجية العرض/الطلب،
+# صافياً بعد الرسوم — للإجابة: لماذا صفقة "التعادل" تطلع سالبة، وأي نظام يعطي أعلى توقّع.
+# مستقلّ تماماً: يستورد جالب البيانات وبناء الإعدادات من sd_bot ثم يطبّق محاكاة خروج داخلية.
+# يُشغَّل يدوياً من تبويب Actions، يطبع التقرير ويرسله إلى تيليجرام. بلا ML — حافة خام.
+
+on:
+  workflow_dispatch:
+    inputs:
+      entry_tf:
+        description: "فريم الدخول"
+        type: choice
+        options: ["15m", "1h", "4h"]
+        default: "1h"
+      htf:
+        description: "الفريم الأعلى (السياق)"
+        type: choice
+        options: ["1h", "4h", "1d"]
+        default: "4h"
+      fee_rate:
+        description: "رسوم جهة واحدة (كسر من السعر)، 0.00075 = 0.075%"
+        default: "0.00075"
+      bt_hold:
+        description: "أقصى شموع لإمساك الصفقة"
+        default: "48"
+
+permissions:
+  contents: read
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install deps
+        run: pip install requests scikit-learn joblib
+      - name: Run exit-scheme comparison
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SD_ENTRY_TF: ${{ inputs.entry_tf }}
+          SD_HTF: ${{ inputs.htf }}
+          SD_FEE_RATE: ${{ inputs.fee_rate }}
+          SD_BT_HOLD: ${{ inputs.bt_hold }}
+        run: |
+          python - <<'PY' 2>&1 | tee sd_exit_compare_log.txt
+          import os, time
+          from sd_bot import (CFG, fetch_klines, setup_features, _dca_average,
+                              parse_watchlist_crypto, WATCHLIST, _stats, send_telegram, ema)
+
+          FEE  = float(os.environ.get("SD_FEE_RATE", "0.00075"))
+          HOLD = CFG["bt_hold"]
+
+          def sim_exits(entry, stop, tp1, tp2, h, l, c, tch, hold):
+              R = entry - stop
+              if R <= 0: return None
+              r1, r2 = (tp1 - entry) / R, (tp2 - entry) / R
+              if r1 <= 0: return None
+              end = min(len(c), tch + hold)
+              def cst(px): return FEE * px / R
+              out = {}
+              for name, be in (("be", entry), ("be_cost", entry + 2*FEE*entry),
+                               ("lock", entry + 0.3*R), ("nobe", None)):
+                  sl = stop; half = False; realized = 0.0; res = None
+                  for i in range(tch, end):
+                      if l[i] <= sl:
+                          fr = 0.5 if half else 1.0
+                          res = realized + fr*((sl-entry)/R) - fr*cst(sl)
+                          if not half: res -= cst(entry)
+                          break
+                      if not half and h[i] >= tp1:
+                          half = True; realized = 0.5*r1 - cst(entry) - 0.5*cst(tp1)
+                          if be is not None: sl = be
+                      if half and h[i] >= tp2:
+                          res = realized + 0.5*r2 - 0.5*cst(tp2); break
+                  if res is None:
+                      X = c[end-1]; fr = 0.5 if half else 1.0
+                      res = realized + fr*((X-entry)/R) - fr*cst(X)
+                      if not half: res -= cst(entry)
+                  out[name] = res
+              return out
+
+          basket = parse_watchlist_crypto(WATCHLIST)[:40]
+          exit_rs = {"be": [], "be_cost": [], "lock": [], "nobe": []}
+          n = 0
+          print(f"compare exits | tf={CFG['entry_tf']} htf={CFG['htf']} | {len(basket)} رمز | fee={FEE}")
+          for s in basket:
+              try:
+                  d1 = fetch_klines(s, CFG["entry_tf"], CFG["pages_1h"])
+                  d4 = fetch_klines(s, CFG["htf"], CFG["pages_4h"])
+                  if not d1 or not d4 or len(d1["c"]) < 800: continue
+                  h, l, c = d1["h"], d1["l"], d1["c"]
+                  setups, _, _, _ = setup_features(s, d1, d4)
+                  for st in setups:
+                      f = st["f"]
+                      if f["emaRel"] <= 0 or f["htf"] < 0: continue
+                      if CFG["max_ema_dist"] and f["emaRel"] > CFG["max_ema_dist"]: continue
+                      if CFG["require_choch"] and not f["choch"]: continue
+                      if CFG["require_ob_after_os"] and not f["rsiObOs"]: continue
+                      if CFG["require_confirm"] and not f["confirm"]: continue
+                      if f["heightATR"] > CFG["max_height_atr"] or f["barsToTouch"] > CFG["max_bars_to_touch"]: continue
+                      tch = st["touch"]
+                      avg = _dca_average(st.get("legs", [st["entry"]]), st["stop"], st["tp1"], h, l, c, tch, HOLD)
+                      ex = sim_exits(avg, st["stop"], st["tp1"], st["tp2"], h, l, c, tch, HOLD)
+                      if ex is not None:
+                          for k in exit_rs: exit_rs[k].append(ex[k])
+                          n += 1
+              except Exception as e:
+                  print("skip", s, e)
+              time.sleep(0.03)
+
+          rep = ("🔁 مقارنة أنظمة نقل الوقف بعد الهدف1 (صافي بعد رسوم "
+                 f"{FEE*100:.3f}%/جهة)\n"
+                 f"الفريم: دخول {CFG['entry_tf']} / سياق {CFG['htf']} · صفقات={n}\n"
+                 f"— تعادل (الحالي): {_stats(exit_rs['be'])}\n"
+                 f"— تعادل+رسوم: {_stats(exit_rs['be_cost'])}\n"
+                 f"— قفل ربح +0.3R: {_stats(exit_rs['lock'])}\n"
+                 f"— بلا نقل وقف: {_stats(exit_rs['nobe'])}")
+          print("\n" + rep)
+          send_telegram(rep)
+          PY
+      - name: Upload log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sd-exit-compare-log
+          path: sd_exit_compare_log.txt
+          if-no-files-found: ignore
