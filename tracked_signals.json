@@ -30837,5 +30837,43 @@
     "hi_seen": 0.0722,
     "lo_seen": 0.0702,
     "created": "2026-07-05T09:16:00"
+  },
+  "RSI60 · 15m|IOUSDT|2026-07-05 10:14:59.999000": {
+    "symbol": "IOUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.1771,
+    "dca_levels": [
+      0.1744642,
+      0.17365,
+      0.1728358,
+      0.1716766
+    ],
+    "stop": 0.17083067,
+    "init_stop": 0.17083067,
+    "cur_stop": 0.17083067,
+    "last_alert_stop": 0.17083067,
+    "armed": false,
+    "targets": [
+      0.1789768,
+      0.1813642,
+      0.1882642
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-05 10:14:59.999000",
+    "last_bar": "2026-07-05 10:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1771,
+    "lo_seen": 0.1771,
+    "created": "2026-07-05T10:15:57"
   }
 }
