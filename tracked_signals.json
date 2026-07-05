@@ -1337,7 +1337,7 @@
     "created": "2026-06-23T00:15:54",
     "cur_stop": 19.71291387,
     "armed": false,
-    "last_bar": "2026-07-05 09:59:59.999000"
+    "last_bar": "2026-07-05 10:29:59.999000"
   },
   "RSI70 · 15m|HIVEUSDT|2026-06-23 00:29:59.999000": {
     "symbol": "HIVEUSDT",
@@ -30430,7 +30430,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 22:29:59.999000",
-    "last_bar": "2026-07-05 09:59:59.999000",
+    "last_bar": "2026-07-05 10:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0013,
@@ -30468,7 +30468,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-04 22:59:59.999000",
-    "last_bar": "2026-07-05 09:59:59.999000",
+    "last_bar": "2026-07-05 10:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00127,
@@ -30831,11 +30831,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 09:14:59.999000",
-    "last_bar": "2026-07-05 09:59:59.999000",
+    "last_bar": "2026-07-05 10:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0722,
-    "lo_seen": 0.0702,
+    "lo_seen": 0.0701,
     "created": "2026-07-05T09:16:00"
   },
   "RSI60 · 15m|IOUSDT|2026-07-05 10:14:59.999000": {
@@ -30852,8 +30852,8 @@
     ],
     "stop": 0.17083067,
     "init_stop": 0.17083067,
-    "cur_stop": 0.17083067,
-    "last_alert_stop": 0.17083067,
+    "cur_stop": 0.1771,
+    "last_alert_stop": 0.1771,
     "armed": false,
     "targets": [
       0.1789768,
@@ -30869,11 +30869,51 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 10:14:59.999000",
-    "last_bar": "2026-07-05 10:14:59.999000",
+    "last_bar": "2026-07-05 10:29:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": false,
+    "hi_seen": 0.18,
+    "lo_seen": 0.1766,
+    "created": "2026-07-05T10:15:57"
+  },
+  "RSI60 · 15m|PYTHUSDT|2026-07-05 10:29:59.999000": {
+    "symbol": "PYTHUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.03961,
+    "dca_levels": [
+      0.03902554,
+      0.038845,
+      0.03866446,
+      0.03840742
+    ],
+    "stop": 0.03822063,
+    "init_stop": 0.03822063,
+    "cur_stop": 0.03822063,
+    "last_alert_stop": 0.03822063,
+    "armed": false,
+    "targets": [
+      0.04002616,
+      0.04055554,
+      0.04208554
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-05 10:29:59.999000",
+    "last_bar": "2026-07-05 10:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.1771,
-    "lo_seen": 0.1771,
-    "created": "2026-07-05T10:15:57"
+    "hi_seen": 0.03961,
+    "lo_seen": 0.03961,
+    "created": "2026-07-05T10:31:14"
   }
 }

@@ -284,5 +284,44 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-05T09:18:07"
+  },
+  "PYTHUSDT": {
+    "symbol": "PYTHUSDT",
+    "tf": "15m",
+    "label": "RSI60 · 15m",
+    "prob": null,
+    "levels": [
+      0.03902554,
+      0.038845,
+      0.03866446,
+      0.03840742
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 75.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.03969969969982146,
+        "qty": 1889.18305597,
+        "usd": 75.0
+      }
+    ],
+    "avg_entry": 0.03969969969982146,
+    "entry": 0.03969969969982146,
+    "init_stop": 0.03822063,
+    "stop": 0.03822063,
+    "R": 0.0014790696998214642,
+    "tp1": 0.04002616,
+    "tp2": 0.04055554,
+    "qty": 1889.18305597,
+    "qty_open": 1889.18305597,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-05T10:32:59"
   }
 }

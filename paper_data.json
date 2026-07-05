@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-05T10:17:29",
+  "updated_at": "2026-07-05T10:32:48",
   "stats": {
-    "open": 24,
+    "open": 25,
     "closed": 916,
     "win_rate": 56.4,
     "profit_factor": 1.54,
@@ -15578,9 +15578,25 @@
       "timeframe": "15m",
       "entry": 0.1771,
       "stop": 0.17083067,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-05T10:15:57",
+      "closed_at": null,
+      "realized_pct": 0.53
+    },
+    {
+      "id": "RSI60 · 15m|PYTHUSDT|2026-07-05 10:29:59.999000",
+      "symbol": "PYTHUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03961,
+      "stop": 0.03822063,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-05T10:31:14",
       "closed_at": null,
       "realized_pct": 0.0
     }
