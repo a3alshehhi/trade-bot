@@ -30491,5 +30491,43 @@
     "hi_seen": 0.1824524,
     "lo_seen": 0.1824524,
     "created": "2026-07-05T01:38:32"
+  },
+  "RSI50 · 1h|PONDUSDT|2026-07-05 01:59:59.999000": {
+    "symbol": "PONDUSDT",
+    "label": "RSI50 · 1h",
+    "timeframe": "1h",
+    "message_id": -1,
+    "entry": 0.00122,
+    "dca_levels": [
+      0.00116652,
+      0.00115,
+      0.00113348,
+      0.00110996
+    ],
+    "stop": 0.00107429,
+    "init_stop": 0.00107429,
+    "cur_stop": 0.00107429,
+    "last_alert_stop": 0.00107429,
+    "armed": false,
+    "targets": [
+      0.00125808,
+      0.00130652,
+      0.00144652
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-05 01:59:59.999000",
+    "last_bar": "2026-07-05 01:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00122,
+    "lo_seen": 0.00122,
+    "created": "2026-07-05T02:01:42"
   }
 }

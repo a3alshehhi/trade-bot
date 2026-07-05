@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-05T01:47:25",
+  "updated_at": "2026-07-05T02:03:21",
   "stats": {
-    "open": 25,
+    "open": 26,
     "closed": 906,
     "win_rate": 56.1,
     "profit_factor": 1.53,
@@ -15433,6 +15433,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-05T01:38:32",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI50 · 1h|PONDUSDT|2026-07-05 01:59:59.999000",
+      "symbol": "PONDUSDT",
+      "label": "RSI50 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.00122,
+      "stop": 0.00107429,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-05T02:01:42",
       "closed_at": null,
       "realized_pct": 0.0
     }
