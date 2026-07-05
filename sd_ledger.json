@@ -746,5 +746,38 @@
     "pnl_pct": 3.993,
     "reason": "هدف1 (50%)",
     "closed_ts": "2026-07-05T00:47:39"
+  },
+  {
+    "symbol": "IOUSDT",
+    "tf": "1h",
+    "entry": 0.1824,
+    "exit": 0.1709,
+    "qty": 1675.23,
+    "pnl_usdt": -19.857,
+    "pnl_pct": -6.305,
+    "reason": "وقف خسارة",
+    "closed_ts": "2026-07-05T01:22:37"
+  },
+  {
+    "symbol": "NEARUSDT",
+    "tf": "15m",
+    "entry": 1.98788769,
+    "exit": 1.976,
+    "qty": 94.51,
+    "pnl_usdt": -1.4981,
+    "pnl_pct": -0.598,
+    "reason": "تعادل/تتبّع",
+    "closed_ts": "2026-07-05T01:22:47"
+  },
+  {
+    "symbol": "IDUSDT",
+    "tf": "15m",
+    "entry": 0.03512739,
+    "exit": 0.03563,
+    "qty": 4270.17,
+    "pnl_usdt": 1.8441,
+    "pnl_pct": 1.431,
+    "reason": "تعادل/تتبّع",
+    "closed_ts": "2026-07-05T01:22:50"
   }
 ]
