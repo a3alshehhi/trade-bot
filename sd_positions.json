@@ -405,5 +405,38 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-05T16:03:54"
+  },
+  "CELOUSDT": {
+    "symbol": "CELOUSDT",
+    "tf": "1h",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.0676
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 300.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.06793793793791587,
+        "qty": 4415.794902019999,
+        "usd": 300.0
+      }
+    ],
+    "avg_entry": 0.06793793793791587,
+    "entry": 0.06793793793791587,
+    "init_stop": 0.063856,
+    "stop": 0.063856,
+    "R": 0.004081937937915878,
+    "tp1": 0.0693044,
+    "tp2": 0.0706711,
+    "qty": 4415.794902019999,
+    "qty_open": 4415.794902019999,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-05T18:31:11"
   }
 }
