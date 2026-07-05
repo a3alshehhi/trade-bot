@@ -1,23 +1,4 @@
 {
-  "RSI80 · 1d|BICOUSDT|2026-06-20 23:59:59.999000": {
-    "symbol": "BICOUSDT",
-    "label": "RSI80 · 1d",
-    "timeframe": "1d",
-    "message_id": 742,
-    "entry": 0.0627,
-    "stop": 0.05498868972339402,
-    "targets": [
-      0.0750488,
-      0.0907572,
-      0.1361572
-    ],
-    "bar_ts": "2026-06-20 23:59:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.0654,
-    "lo_seen": 0.0455,
-    "created": "2026-06-21T15:03:14"
-  },
   "RSI70 · 15m|2ZUSDT|2026-06-21 16:44:59.999000": {
     "symbol": "2ZUSDT",
     "label": "RSI70 · 15m",
@@ -31207,5 +31188,39 @@
     "hi_seen": 0.01997,
     "lo_seen": 0.01991,
     "created": "2026-07-05T14:45:57"
+  },
+  "trendwave · 15m|INITUSDT|2026-07-05 15:29:59.999000": {
+    "symbol": "INITUSDT",
+    "label": "trendwave · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.0594,
+    "dca_levels": [
+      0.058254,
+      0.0579,
+      0.057546,
+      0.057042
+    ],
+    "stop": 0.05618489,
+    "init_stop": 0.05618489,
+    "cur_stop": 0.05618489,
+    "last_alert_stop": 0.05618489,
+    "armed": false,
+    "targets": [
+      0.060216,
+      0.061254,
+      0.064254
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-05 15:29:59.999000",
+    "last_bar": "2026-07-05 15:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0594,
+    "lo_seen": 0.0594,
+    "created": "2026-07-05T15:32:05"
   }
 }

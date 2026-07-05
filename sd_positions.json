@@ -322,5 +322,44 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-05T14:47:43"
+  },
+  "INITUSDT": {
+    "symbol": "INITUSDT",
+    "tf": "15m",
+    "label": "trendwave · 15m",
+    "prob": null,
+    "levels": [
+      0.058254,
+      0.0579,
+      0.057546,
+      0.057042
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 75.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.05906906906948037,
+        "qty": 1269.70005083,
+        "usd": 75.0
+      }
+    ],
+    "avg_entry": 0.05906906906948037,
+    "entry": 0.05906906906948037,
+    "init_stop": 0.05618489,
+    "stop": 0.05618489,
+    "R": 0.0028841790694803665,
+    "tp1": 0.060216,
+    "tp2": 0.061254,
+    "qty": 1269.70005083,
+    "qty_open": 1269.70005083,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-05T15:33:00"
   }
 }

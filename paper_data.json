@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-05T15:26:36",
+  "updated_at": "2026-07-05T15:32:50",
   "stats": {
-    "open": 25,
-    "closed": 923,
+    "open": 26,
+    "closed": 922,
     "win_rate": 56.6,
     "profit_factor": 1.51,
     "total_pct": 10357.95,
@@ -125,8 +125,8 @@
       },
       {
         "key": "2026-06-21",
-        "trades": 6,
-        "win_rate": 50.0,
+        "trades": 5,
+        "win_rate": 60.0,
         "return_pct": 12.83,
         "week": "2026-W25",
         "month": "2026-06"
@@ -149,8 +149,8 @@
       },
       {
         "key": "2026-W25",
-        "trades": 6,
-        "win_rate": 50.0,
+        "trades": 5,
+        "win_rate": 60.0,
         "return_pct": 12.83,
         "month": "2026-06"
       }
@@ -164,28 +164,13 @@
       },
       {
         "key": "2026-06",
-        "trades": 659,
-        "win_rate": 49.9,
+        "trades": 658,
+        "win_rate": 50.0,
         "return_pct": 1372.64
       }
     ]
   },
   "trades": [
-    {
-      "id": "RSI80 · 1d|BICOUSDT|2026-06-20 23:59:59.999000",
-      "symbol": "BICOUSDT",
-      "label": "RSI80 · 1d",
-      "side": "buy",
-      "timeframe": "1d",
-      "entry": 0.0627,
-      "stop": 0.05498868972339402,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-06-21T15:03:14",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": 0.0
-    },
     {
       "id": "RSI70 · 15m|2ZUSDT|2026-06-21 16:44:59.999000",
       "symbol": "2ZUSDT",
@@ -15712,6 +15697,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-05T14:45:57",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "trendwave · 15m|INITUSDT|2026-07-05 15:29:59.999000",
+      "symbol": "INITUSDT",
+      "label": "trendwave · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0594,
+      "stop": 0.05618489,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-05T15:32:05",
       "closed_at": null,
       "realized_pct": 0.0
     }
