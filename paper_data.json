@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-05T08:47:33",
+  "updated_at": "2026-07-05T09:03:42",
   "stats": {
-    "open": 25,
-    "closed": 911,
-    "win_rate": 56.3,
+    "open": 26,
+    "closed": 912,
+    "win_rate": 56.4,
     "profit_factor": 1.54,
-    "total_pct": 12277.06,
+    "total_pct": 12445.39,
     "avg_pct": 0.67,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-05",
-        "trades": 7,
+        "trades": 8,
         "win_rate": 100.0,
-        "return_pct": 13.41,
+        "return_pct": 14.96,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -135,9 +135,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 419,
-        "win_rate": 63.2,
-        "return_pct": 902.01,
+        "trades": 420,
+        "win_rate": 63.3,
+        "return_pct": 915.64,
         "month": "2026-07"
       },
       {
@@ -158,9 +158,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 252,
-        "win_rate": 73.0,
-        "return_pct": 740.47
+        "trades": 253,
+        "win_rate": 73.1,
+        "return_pct": 751.9
       },
       {
         "key": "2026-06",
@@ -15496,11 +15496,15 @@
       "timeframe": "1h",
       "entry": 0.1738,
       "stop": 0.16850636,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-07-05T08:01:46",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-05T09:03:39",
+      "realized_pct": 1.36,
+      "result_pct": 1.36
     },
     {
       "id": "RSI60 · 15m|PORTALUSDT|2026-07-05 08:44:59.999000",
@@ -15513,6 +15517,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-05T08:45:59",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI60 · 15m|ZKUSDT|2026-07-05 08:59:59.999000",
+      "symbol": "ZKUSDT",
+      "label": "RSI60 · 15m",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01087,
+      "stop": 0.01056003,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-05T09:01:23",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "RSI50 · 1h|AEURUSDT|2026-07-05 08:59:59.999000",
+      "symbol": "AEURUSDT",
+      "label": "RSI50 · 1h",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 1.1295,
+      "stop": 1.1165311464536263,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-05T09:01:51",
       "closed_at": null,
       "realized_pct": 0.0
     }
