@@ -327,5 +327,44 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-05T13:48:54"
+  },
+  "SFPUSDT": {
+    "symbol": "SFPUSDT",
+    "tf": "15m",
+    "label": "RSI60 · 15m",
+    "prob": null,
+    "levels": [
+      0.2272608,
+      0.2266,
+      0.2259392,
+      0.2249984
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 25.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.2295873855506883,
+        "qty": 108.891,
+        "usd": 25.0
+      }
+    ],
+    "avg_entry": 0.2295873855506883,
+    "entry": 0.2295873855506883,
+    "init_stop": 0.2244764,
+    "stop": 0.2244764,
+    "R": 0.005110985550688313,
+    "tp1": 0.2309232,
+    "tp2": 0.2328608,
+    "qty": 108.891,
+    "qty_open": 108.891,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-05T14:18:57"
   }
 }

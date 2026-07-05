@@ -31046,5 +31046,81 @@
     "hi_seen": 0.2126,
     "lo_seen": 0.2105,
     "created": "2026-07-05T13:34:52"
+  },
+  "RSI60 · 15m|SCRTUSDT|2026-07-05 14:14:59.999000": {
+    "symbol": "SCRTUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.0554,
+    "dca_levels": [
+      0.0523822,
+      0.05145,
+      0.0505178,
+      0.0491906
+    ],
+    "stop": 0.04841777,
+    "init_stop": 0.04841777,
+    "cur_stop": 0.04841777,
+    "last_alert_stop": 0.04841777,
+    "armed": false,
+    "targets": [
+      0.0575488,
+      0.0602822,
+      0.0681822
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-05 14:14:59.999000",
+    "last_bar": "2026-07-05 14:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0554,
+    "lo_seen": 0.0554,
+    "created": "2026-07-05T14:15:59"
+  },
+  "RSI60 · 15m|SFPUSDT|2026-07-05 14:14:59.999000": {
+    "symbol": "SFPUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.2294,
+    "dca_levels": [
+      0.2272608,
+      0.2266,
+      0.2259392,
+      0.2249984
+    ],
+    "stop": 0.2244764,
+    "init_stop": 0.2244764,
+    "cur_stop": 0.2244764,
+    "last_alert_stop": 0.2244764,
+    "armed": false,
+    "targets": [
+      0.2309232,
+      0.2328608,
+      0.2384608
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-05 14:14:59.999000",
+    "last_bar": "2026-07-05 14:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.2294,
+    "lo_seen": 0.2294,
+    "created": "2026-07-05T14:15:59"
   }
 }
