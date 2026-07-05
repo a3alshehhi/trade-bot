@@ -229,5 +229,44 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-05T01:47:36"
+  },
+  "MASKUSDT": {
+    "symbol": "MASKUSDT",
+    "tf": "15m",
+    "label": "RSI60 · 15m",
+    "prob": null,
+    "levels": [
+      0.42036,
+      0.418,
+      0.41564,
+      0.41228
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 75.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.4297297297464544,
+        "qty": 174.52830188,
+        "usd": 75.0
+      }
+    ],
+    "avg_entry": 0.4297297297464544,
+    "entry": 0.4297297297464544,
+    "init_stop": 0.41075561,
+    "stop": 0.41075561,
+    "R": 0.01897411974645441,
+    "tp1": 0.43344,
+    "tp2": 0.44036,
+    "qty": 174.52830188,
+    "qty_open": 174.52830188,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-05T06:17:40"
   }
 }

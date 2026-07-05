@@ -30539,5 +30539,43 @@
     "hi_seen": 0.00125,
     "lo_seen": 0.00115,
     "created": "2026-07-05T02:01:42"
+  },
+  "RSI60 · 15m|MASKUSDT|2026-07-05 06:14:59.999000": {
+    "symbol": "MASKUSDT",
+    "label": "RSI60 · 15m",
+    "timeframe": "15m",
+    "message_id": -1,
+    "entry": 0.428,
+    "dca_levels": [
+      0.42036,
+      0.418,
+      0.41564,
+      0.41228
+    ],
+    "stop": 0.41075561,
+    "init_stop": 0.41075561,
+    "cur_stop": 0.41075561,
+    "last_alert_stop": 0.41075561,
+    "armed": false,
+    "targets": [
+      0.43344,
+      0.44036,
+      0.46036
+    ],
+    "tp_split": [
+      50,
+      25,
+      25
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-05 06:14:59.999000",
+    "last_bar": "2026-07-05 06:14:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.428,
+    "lo_seen": 0.428,
+    "created": "2026-07-05T06:15:56"
   }
 }
