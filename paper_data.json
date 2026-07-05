@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-05T09:33:39",
+  "updated_at": "2026-07-05T09:47:37",
   "stats": {
-    "open": 26,
-    "closed": 913,
+    "open": 24,
+    "closed": 915,
     "win_rate": 56.4,
-    "profit_factor": 1.54,
-    "total_pct": 12498.08,
+    "profit_factor": 1.53,
+    "total_pct": 12115.75,
     "avg_pct": 0.67,
     "max_drawdown_pct": -77.62
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-05",
-        "trades": 9,
-        "win_rate": 100.0,
-        "return_pct": 15.44,
+        "trades": 11,
+        "win_rate": 90.9,
+        "return_pct": 11.94,
         "week": "2026-W27",
         "month": "2026-07"
       },
@@ -135,9 +135,9 @@
     "weekly": [
       {
         "key": "2026-W27",
-        "trades": 421,
+        "trades": 423,
         "win_rate": 63.4,
-        "return_pct": 919.91,
+        "return_pct": 888.95,
         "month": "2026-07"
       },
       {
@@ -158,9 +158,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 254,
-        "win_rate": 73.2,
-        "return_pct": 755.48
+        "trades": 256,
+        "win_rate": 73.0,
+        "return_pct": 729.51
       },
       {
         "key": "2026-06",
@@ -15518,10 +15518,11 @@
       "entry": 0.01301,
       "stop": 0.01256061,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-05T08:45:59",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-05T09:47:34",
+      "realized_pct": -3.45,
+      "result_pct": -3.45
     },
     {
       "id": "RSI60 · 15m|ZKUSDT|2026-07-05 08:59:59.999000",
@@ -15534,10 +15535,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-05T09:01:23",
-      "closed_at": null,
-      "realized_pct": 0.43
+      "closed_at": "2026-07-05T09:47:36",
+      "realized_pct": 0.43,
+      "result_pct": 0.43
     },
     {
       "id": "RSI50 · 1h|AEURUSDT|2026-07-05 08:59:59.999000",
