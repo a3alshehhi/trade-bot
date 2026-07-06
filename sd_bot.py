@@ -834,6 +834,7 @@ def backtest(basket=None):
     basket = basket or parse_watchlist_crypto(WATCHLIST)[:40]
     hold = CFG["bt_hold"]; old_rs, new_rs, new_b_rs = [], [], []
     newf_rs = []                   # الجديد + فلاتر بنية الاتجاه (قمة أعلى + MACD4C + تشبّع RSI21)
+    bk = {"hh": [], "macd": [], "os21": [], "hh_macd": [], "hh_os21": []}  # عزل أثر كل فلتر منفرداً وأزواجه
     new_r1s, new_r2s = [], []      # تشخيص: بُعد الهدف1/الهدف2 عن الدخول بوحدات R (سلامة نسبة الفوز)
     print(f"backtest SD | tf={CFG['entry_tf']} htf={CFG['htf']} | {len(basket)} رمز | hold={hold}")
     for s in basket:
@@ -865,11 +866,16 @@ def backtest(basket=None):
                 # متوسط دخول DCA (الساق المباشرة + سلالم الفيبو المُمتلئة) بدل دخول مفرد
                 avg = _dca_average(st.get("legs", [st["entry"]]), st["stop"], st["tp1"], h, l, c, tch, hold)
                 r = _sim_5050(avg, st["stop"], st["tp1"], st["tp2"], h, l, c, tch, hold)
-                passed_new = (f["hh"] and f["macd4c"] >= CFG["macd4c_min"] and f["os21"])
+                _hh = bool(f["hh"]); _md = f["macd4c"] >= CFG["macd4c_min"]; _os = bool(f["os21"])
                 if r is not None:
                     new_rs.append(r)
-                    if passed_new:                          # يمرّ فلاتر بنية الاتجاه الثلاثة
+                    if _hh and _md and _os:                 # يمرّ فلاتر بنية الاتجاه الثلاثة
                         newf_rs.append(r)
+                    if _hh: bk["hh"].append(r)              # عزل كل فلتر منفرداً
+                    if _md: bk["macd"].append(r)
+                    if _os: bk["os21"].append(r)
+                    if _hh and _md: bk["hh_macd"].append(r)
+                    if _hh and _os: bk["hh_os21"].append(r)
                     _Rr = avg - st["stop"]                  # تشخيص بُعد الأهداف بوحدات R
                     if _Rr > 0:
                         new_r1s.append((st["tp1"] - avg) / _Rr); new_r2s.append((st["tp2"] - avg) / _Rr)
@@ -909,6 +915,11 @@ def backtest(basket=None):
               f"— القديم (5050): {_stats(old_rs)}\n"
               f"— الجديد (5050): {_stats(new_rs)}\n"
               f"— الجديد + بنية الاتجاه (قمة أعلى+MACD4C≥{CFG['macd4c_min']}+تشبّع RSI21≤{CFG['rsi21_os']:.0f}): {_stats(newf_rs)}\n"
+              f"   • قمة أعلى وحده: {_stats(bk['hh'])}\n"
+              f"   • MACD4C≥{CFG['macd4c_min']} وحده: {_stats(bk['macd'])}\n"
+              f"   • تشبّع RSI21≤{CFG['rsi21_os']:.0f} وحده: {_stats(bk['os21'])}\n"
+              f"   • قمة أعلى + MACD4C: {_stats(bk['hh_macd'])}\n"
+              f"   • قمة أعلى + تشبّع RSI21: {_stats(bk['hh_os21'])}\n"
               f"— الجديد (نظام ب شانديلير {CFG['trail_atr']}×ATR): {_stats(new_b_rs)}\n"
               f"— تشخيص الأهداف: هدف1 متوسط {(sum(new_r1s)/len(new_r1s) if new_r1s else 0):.2f}R · "
               f"هدف2 {(sum(new_r2s)/len(new_r2s) if new_r2s else 0):.2f}R · "
