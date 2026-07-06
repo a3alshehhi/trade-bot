@@ -419,6 +419,8 @@ def _record_exit(pos, qty, price, reason):
     gross = qty * (price - entry)
     fees = qty * (entry + price) * FEE_RATE          # عمولة الدخول والخروج تقديراً
     pnl = gross - fees
+    r_price = entry - pos.get("init_stop", 0)        # مسافة المخاطرة (سعرياً) من الوقف الأولي
+    r_mult = round((price - entry) / r_price, 3) if r_price > 0 else None  # عائد الساق بالـR
     ledger = load_ledger()
     ledger.append({
         "symbol": pos["symbol"], "tf": pos.get("tf", ""),
@@ -426,6 +428,7 @@ def _record_exit(pos, qty, price, reason):
         "entry": round(entry, 8), "exit": round(price, 8),
         "qty": round(qty, 8), "pnl_usdt": round(pnl, 4),
         "pnl_pct": round((price - entry) / entry * 100, 3),
+        "r": r_mult,                             # عائد بالـR للمقارنة المباشرة بالباك-تست
         "reason": reason, "closed_ts": _now(),
     })
     _save(LEDGER_PATH, ledger)
