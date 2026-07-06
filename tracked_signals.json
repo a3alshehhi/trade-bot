@@ -4527,5 +4527,42 @@
     "hi_seen": 0.0572,
     "lo_seen": 0.0545,
     "created": "2026-07-06T02:18:20"
+  },
+  "العرض/الطلب|CFXUSDT|2026-07-06 15:45:00": {
+    "symbol": "CFXUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4616,
+    "entry": 0.04494,
+    "stop": 0.0436733,
+    "init_stop": 0.0436733,
+    "cur_stop": 0.0436733,
+    "legs": [
+      0.04494,
+      0.04463756,
+      0.04447,
+      0.04430244,
+      0.04406388
+    ],
+    "last_alert_stop": 0.0436733,
+    "armed": false,
+    "targets": [
+      0.04556624,
+      0.04605756
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-06 15:45:00",
+    "last_bar": "2026-07-06 15:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.04494,
+    "lo_seen": 0.04494,
+    "created": "2026-07-06T15:49:07"
   }
 }

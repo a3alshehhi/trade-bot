@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-06T15:31:07",
+  "updated_at": "2026-07-06T15:49:09",
   "stats": {
-    "open": 1,
+    "open": 2,
     "closed": 129,
     "win_rate": 67.4,
     "profit_factor": 2.06,
@@ -2255,6 +2255,20 @@
       "opened_at": "2026-07-06T02:18:20",
       "closed_at": null,
       "realized_pct": 1.8
+    },
+    {
+      "id": "العرض/الطلب|CFXUSDT|2026-07-06 15:45:00",
+      "symbol": "CFXUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.04494,
+      "stop": 0.0436733,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-06T15:49:07",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
