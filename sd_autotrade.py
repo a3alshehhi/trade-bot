@@ -595,6 +595,45 @@ def run_cycle():
             print(f"autotrade[{name}] خطأ:", ex)
 
 
+def reconcile(apply=False):
+    """يطابق أرصدة المنصّة الفعلية بملف المراكز لكشف عدم التزامن:
+      • وهمية (phantom): مركز متتبَّع لكن الرصيد الفعلي ≈ صفر (أُغلق على المنصّة، بقي في الملف).
+      • يتيمة (orphan): رصيد فعلي لعملة بلا مركز متتبَّع (فُتح لكن ضاع من التتبّع).
+    الوضع الافتراضي *تقرير فقط*. apply يزيل الوهمية من الملف فقط (لا يمسّ اليتيمة، ولا ينفّذ صفقات)."""
+    lines = []
+    for module, suffix, name in _enabled_exchanges():
+        _use_exchange(module, suffix, name)
+        if not is_enabled():
+            continue
+        try:
+            coins = bx.wallet_balance().get("coins", {})
+        except Exception as ex:
+            print(f"reconcile[{name}]: تعذّر جلب الرصيد —", ex)
+            continue
+        positions = load_positions()
+        phantoms = []
+        for sym, pos in list(positions.items()):
+            base = sym[:-4] if sym.endswith("USDT") else sym.replace("USDT", "")
+            amt = coins.get(base, {}).get("amount", 0.0)
+            tracked = pos.get("qty_open", pos.get("qty", 0)) or 0
+            if tracked > 0 and amt < 0.02 * tracked:
+                phantoms.append(sym)
+        tracked_bases = {(s[:-4] if s.endswith("USDT") else s.replace("USDT", "")) for s in positions}
+        orphans = [f"{c}(≈{v.get('usd_value', 0):.0f}$)" for c, v in coins.items()
+                   if c not in ("USDT", "USDC", "FDUSD", "BUSD")
+                   and (v.get("usd_value") or 0) >= 1 and c not in tracked_bases]
+        if apply and phantoms:
+            for s in phantoms:
+                positions.pop(s, None)
+            _save(POS_PATH, positions)
+        lines.append(f"— {name}: وهمية={len(phantoms)} {phantoms or ''} · يتيمة={len(orphans)} {orphans or ''}"
+                     + (" ✅أُزيلت الوهمية" if apply and phantoms else ""))
+    report = ("🧹 مطابقة الحساب بالمتتبّع " + ("(تطبيق)" if apply else "(تقرير)") + "\n"
+              + ("\n".join(lines) if lines else "لا منصّات مُفعّلة")
+              + "\nاليتيمة = أرصدة بلا تتبّع: أغلقها يدوياً أو اطلب تبنّيها.")
+    _notify(report)
+
+
 if __name__ == "__main__":
     import sys
     mode = sys.argv[1] if len(sys.argv) > 1 else "status"
@@ -604,5 +643,7 @@ if __name__ == "__main__":
             manage_open_positions()
     elif mode == "run":
         run_cycle()
+    elif mode == "reconcile":
+        reconcile(apply=(len(sys.argv) > 2 and sys.argv[2] == "apply"))
     else:
         cmd_status()
