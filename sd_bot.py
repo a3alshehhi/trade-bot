@@ -65,6 +65,12 @@ CFG = dict(
     # ── الدخول الجديد (2026-07-05، طلب بو محمد): زخم مباشر بعد CHoCH + توسيط DCA بفيبو ──
     rsi_entry_len=21,      # طول RSI لإشارة الدخول (بديل دخول فيبو 61.8%)
     rsi_entry_ob=80,       # عتبة التشبّع الشرائي للدخول المباشر (RSI21 ≥ 80 = تأكيد زخم)
+    # ── تشديد بنية الاتجاه (2026-07-06، طلب بو محمد) — قابلة للإطفاء للمقارنة ──
+    require_hh=0,          # يدخل فقط إذا كانت قمة الـCHoCH ≥ القمة المحورية السابقة (قمة أعلى لا أدنى)
+    require_macd4c=0,      # يشترط زخم MACD 4C صعودياً عند الدخول (لا قمة أدنى في الزخم)
+    macd4c_min=1,          # أدنى حالة MACD4C مقبولة: 1=أخضر (hist>0)، 2=أخضر متنامٍ فقط، -1=يشمل بداية التحوّل
+    require_os21=0,        # يشترط تشبّعاً بيعياً واحداً+ على RSI21 (≤ rsi21_os) قبل الـCHoCH
+    rsi21_os=30,           # عتبة التشبّع البيعي على RSI21 قبل CHoCH
     # سلالم فيبو للتوسيط تحت الدخول المباشر (نِسَب تصحيح لساق الاندفاع leg_low→leg_high)
     dca_fibs=(0.382, 0.5, 0.618, 0.786),
     # ── إدارة الخروج نظام ب (الفائزة في بوت الصيد): جني جزئي + وقف متحرّك شانديلير ──
@@ -86,6 +92,11 @@ CFG["require_ob_after_os"] = int(os.environ.get("SD_REQUIRE_OBOS", CFG["require_
 CFG["os_lookback"]   = int(os.environ.get("SD_OS_LOOKBACK", CFG["os_lookback"]))
 CFG["rsi_entry_len"] = int(os.environ.get("SD_RSI_ENTRY_LEN", CFG["rsi_entry_len"]))
 CFG["rsi_entry_ob"]  = float(os.environ.get("SD_RSI_ENTRY_OB", CFG["rsi_entry_ob"]))
+CFG["require_hh"]     = int(os.environ.get("SD_REQUIRE_HH", CFG["require_hh"]))
+CFG["require_macd4c"] = int(os.environ.get("SD_REQUIRE_MACD4C", CFG["require_macd4c"]))
+CFG["macd4c_min"]     = int(os.environ.get("SD_MACD4C_MIN", CFG["macd4c_min"]))
+CFG["require_os21"]   = int(os.environ.get("SD_REQUIRE_OS21", CFG["require_os21"]))
+CFG["rsi21_os"]       = float(os.environ.get("SD_RSI21_OS", CFG["rsi21_os"]))
 # نمط الدخول حسب الفريم (طلب بو محمد 2026-07-05): 15m = زخم RSI + توسيط DCA؛
 # الساعة (وأعلى) = اختراق قمة الـCHoCH. قابل للتجاوز عبر SD_ENTRY_MODE (momentum/breakout).
 # نمط الدخول (طلب بو محمد 2026-07-05): كلا الفريمين = اختراق قمة الـCHoCH (الأقوى على 1h)؛
@@ -191,6 +202,28 @@ def vol_z(v, L):
         sd = math.sqrt(sum((x - m) ** 2 for x in win) / L)
         out[i] = (v[i] - m) / sd if sd > 0 else 0.0
     return out
+
+def macd(c, fast=12, slow=26, sig=9):
+    """MACD كلاسيكي (12,26,9). يعيد (خط، إشارة، هيستوجرام)."""
+    ef = ema(c, fast); es = ema(c, slow)
+    line = [ef[i] - es[i] for i in range(len(c))]
+    signal = ema(line, sig)
+    hist = [line[i] - signal[i] for i in range(len(c))]
+    return line, signal, hist
+
+def macd4c_state(hist, i):
+    """حالة MACD «4 ألوان» عند شمعة i — تكشف قمة أعلى/أدنى في الزخم:
+       2 = أخضر متنامٍ (hist>0 وصاعد)   = زخم صعودي قوي / قمة أعلى
+       1 = أخضر خافت (hist>0 وهابط)     = زخم صعودي يخفت
+      -1 = أحمر خافت (hist<0 وصاعد)     = زخم هبوطي يخفت (بداية تحوّل صعودي)
+      -2 = أحمر متنامٍ (hist<0 وهابط)   = زخم هبوطي قوي / قمة أدنى
+       0 = غير محدّد (بيانات ناقصة)."""
+    if i < 1 or not (math.isfinite(hist[i]) and math.isfinite(hist[i - 1])):
+        return 0
+    up = hist[i] > hist[i - 1]
+    if hist[i] >= 0:
+        return 2 if up else 1
+    return -1 if up else -2
 
 def pivots(h, l, L, R):
     piv = []
@@ -351,6 +384,8 @@ def setup_features(sym, d1, d4):
     piv, ev = structure(h, l, c, CFG["pivL"], CFG["pivR"])
     low_idx = [p[0] for p in piv if p[2] == "L"]  # مؤشّرات القيعان المحورية (لقاع الموجة)
     choch_hi = choch_high_levels(c, piv, CFG["pivR"])   # مستويات قمم الـCHoCH (لدخول الاختراق)
+    hi_pivs = [(p[0], p[1]) for p in piv if p[2] == "H"]  # القمم المحورية (idx, سعر) لفحص قمة-أعلى
+    _, _, mhist = macd(c)                               # هيستوجرام MACD 4C لتأكيد زخم القمة
     bos_up = set(i for i, k in ev if k == "up")
     choch_up = choch_ups(ev)
     hb = htf_bias_fn(d4); zones = demand_zones(o, h, l, c, v, a)
@@ -384,13 +419,27 @@ def setup_features(sym, d1, d4):
         prior_low = min(l[lo:hi]) if hi > lo else l[j]
         sweep = 1 if z["distal"] < prior_low else 0
         ema_rel = (c[tch] - e200[tch]) / e200[tch] if e200[tch] else 0.0
+        # ── تشديد بنية الاتجاه (2026-07-06) ──
+        # (1) قمة أعلى: مستوى قمة الـCHoCH المكسور يجب أن يكون ≥ القمة المحورية السابقة له.
+        cb = next((b for b in (j, j + 1, j + 2) if b in choch_hi), None)
+        hh = 1
+        if cb is not None:
+            lvl = choch_hi[cb]
+            hs = [pp for (pi, pp) in hi_pivs if pi < cb]   # أسعار القمم قبل الكسر بترتيب الزمن
+            hh = 1 if (len(hs) < 2 or hs[-1] >= hs[-2]) else 0  # القمة المكسورة ≥ التي قبلها
+        # (2) MACD 4C: حالة الزخم اللونية عند شمعة الدخول (2=أخضر متنامٍ … -2=أحمر متنامٍ)
+        m4 = macd4c_state(mhist, tch)
+        # (3) تشبّع بيعي على RSI21 (≤ عتبة) مرة+ قبل بدء موجة الـCHoCH
+        os21 = 1 if any(math.isfinite(rs_en[x]) and rs_en[x] <= CFG["rsi21_os"]
+                        for x in range(os_lo, j + 1)) else 0
         f = dict(strength=z["strength"],
                  heightATR=round((z["proximal"] - z["distal"]) / (a[j] or R), 2),
                  baseVolZ=round(vz[j] or 0, 2), touchVolZ=round(vz[tch] or 0, 2),
                  bos=bos, choch=choch, rsiObOs=rsi_obos, fvg=fvg, sweep=sweep, htf=hb(t[tch]),
                  emaRel=round(ema_rel, 4), barsToTouch=tch - j,
                  hour=dt.datetime.fromtimestamp(t[tch] / 1000, dt.timezone.utc).hour,
-                 confirm=confirm, closeLoc=round(close_loc, 2))
+                 confirm=confirm, closeLoc=round(close_loc, 2),
+                 hh=hh, macd4c=m4, os21=os21)
         out.append(dict(sym=sym, created=j, touch=tch, ts=t[tch], f=f,
                         entry=entry, stop=stop, tp1=tp1, tp2=tp2, legs=legs,
                         height=leg_high - leg_low))
@@ -528,6 +577,12 @@ def scan(basket=None):
                 if f["htf"] < 0:               # فلتر E: 4h غير هابط
                     continue
                 if CFG["require_choch"] and not f["choch"]:  # CHoCH إلزامي: بداية موجة/انعكاس لا استمرار
+                    continue
+                if CFG["require_hh"] and not f["hh"]:         # قمة الـCHoCH ≥ القمة السابقة (قمة أعلى)
+                    continue
+                if CFG["require_macd4c"] and f["macd4c"] < CFG["macd4c_min"]:  # زخم MACD 4C صعودي
+                    continue
+                if CFG["require_os21"] and not f["os21"]:     # تشبّع بيعي RSI21 قبل CHoCH
                     continue
                 if CFG["require_ob_after_os"] and not f["rsiObOs"]:  # تشبّع شرائي بعد بيعي (فوق CHoCH)
                     continue
@@ -778,6 +833,7 @@ def backtest(basket=None):
        الجديد: دخول فيبو 61.8%، وقف خارج المنطقة، أهداف فيبو، مع تأكيد+فلاتر."""
     basket = basket or parse_watchlist_crypto(WATCHLIST)[:40]
     hold = CFG["bt_hold"]; old_rs, new_rs, new_b_rs = [], [], []
+    newf_rs = []                   # الجديد + فلاتر بنية الاتجاه (قمة أعلى + MACD4C + تشبّع RSI21)
     new_r1s, new_r2s = [], []      # تشخيص: بُعد الهدف1/الهدف2 عن الدخول بوحدات R (سلامة نسبة الفوز)
     print(f"backtest SD | tf={CFG['entry_tf']} htf={CFG['htf']} | {len(basket)} رمز | hold={hold}")
     for s in basket:
@@ -809,8 +865,11 @@ def backtest(basket=None):
                 # متوسط دخول DCA (الساق المباشرة + سلالم الفيبو المُمتلئة) بدل دخول مفرد
                 avg = _dca_average(st.get("legs", [st["entry"]]), st["stop"], st["tp1"], h, l, c, tch, hold)
                 r = _sim_5050(avg, st["stop"], st["tp1"], st["tp2"], h, l, c, tch, hold)
+                passed_new = (f["hh"] and f["macd4c"] >= CFG["macd4c_min"] and f["os21"])
                 if r is not None:
                     new_rs.append(r)
+                    if passed_new:                          # يمرّ فلاتر بنية الاتجاه الثلاثة
+                        newf_rs.append(r)
                     _Rr = avg - st["stop"]                  # تشخيص بُعد الأهداف بوحدات R
                     if _Rr > 0:
                         new_r1s.append((st["tp1"] - avg) / _Rr); new_r2s.append((st["tp2"] - avg) / _Rr)
@@ -849,6 +908,7 @@ def backtest(basket=None):
               f"CHoCH · قرب≤{CFG['max_ema_dist']:.0%} · حداثة≤{CFG['max_bars_to_touch']} شمعة\n"
               f"— القديم (5050): {_stats(old_rs)}\n"
               f"— الجديد (5050): {_stats(new_rs)}\n"
+              f"— الجديد + بنية الاتجاه (قمة أعلى+MACD4C≥{CFG['macd4c_min']}+تشبّع RSI21≤{CFG['rsi21_os']:.0f}): {_stats(newf_rs)}\n"
               f"— الجديد (نظام ب شانديلير {CFG['trail_atr']}×ATR): {_stats(new_b_rs)}\n"
               f"— تشخيص الأهداف: هدف1 متوسط {(sum(new_r1s)/len(new_r1s) if new_r1s else 0):.2f}R · "
               f"هدف2 {(sum(new_r2s)/len(new_r2s) if new_r2s else 0):.2f}R · "
