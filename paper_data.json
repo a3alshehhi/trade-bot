@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-06T16:19:44",
+  "updated_at": "2026-07-06T16:34:49",
   "stats": {
-    "open": 2,
+    "open": 4,
     "closed": 129,
     "win_rate": 67.4,
     "profit_factor": 2.06,
@@ -2271,6 +2271,34 @@
       "opened_at": "2026-07-06T15:49:07",
       "closed_at": null,
       "realized_pct": 0.7
+    },
+    {
+      "id": "العرض/الطلب|BNTUSDT|2026-07-06 16:00:00",
+      "symbol": "BNTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.2708,
+      "stop": 0.263391,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-06T16:19:32",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ARUSDT|2026-07-06 16:00:00",
+      "symbol": "ARUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 2.013,
+      "stop": 1.9175,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-06T16:19:32",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
