@@ -9,7 +9,7 @@ permissions:
   contents: write               # لحفظ حالة منع التكرار والتتبّع
 
 concurrency:
-  group: hunter-bot
+  group: repo-state            # موحّدة مع reversal/sd_bot — تسلسل دفعات git لتفادي ضياع الحالة
   cancel-in-progress: false
 
 jobs:
