@@ -32,7 +32,8 @@ jobs:
         run: |
           # فريم 15m انتقل لوركفلو مستقل (sd_bot_15m.yml) كل 15 دقيقة لتفادي تفويت الإشارات.
           # ⛔ فريم 4h معطّل (2026-07-02) — يبقى سياقاً أعلى لـ1h فقط.
-          SD_ENTRY_TF=1h SD_HTF=4h SD_MODEL=sd_model_1h.joblib SD_STATE=sd_state_1h.json python sd_bot.py
+          # SD_REQUIRE_MACD4C=1: فلتر زخم MACD 4C≥1 (أخضر) — الأفضل في الباك-تست المعزول 2026-07-06
+          SD_ENTRY_TF=1h SD_HTF=4h SD_REQUIRE_MACD4C=1 SD_MODEL=sd_model_1h.joblib SD_STATE=sd_state_1h.json python sd_bot.py
 
       - name: Persist model + dedup state + tracked signals
         run: |
