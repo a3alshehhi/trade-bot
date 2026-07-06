@@ -31,7 +31,8 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           # النمط والفلاتر (اختراق + DCA + EMA365) تُشتق تلقائياً من SD_ENTRY_TF=15m داخل sd_bot.py
-          SD_ENTRY_TF=15m SD_HTF=1h SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_15m.json python sd_bot.py
+          # SD_REQUIRE_MACD4C=1: فلتر زخم MACD 4C≥1 (أخضر) — الأفضل في الباك-تست المعزول 2026-07-06
+          SD_ENTRY_TF=15m SD_HTF=1h SD_REQUIRE_MACD4C=1 SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_15m.json python sd_bot.py
 
       - name: Persist model + dedup state + tracked signals
         run: |
