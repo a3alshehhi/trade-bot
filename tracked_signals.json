@@ -4257,11 +4257,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 01:00:00",
-    "last_bar": "2026-07-06 06:59:59.999000",
+    "last_bar": "2026-07-06 08:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1854,
-    "lo_seen": 0.175,
+    "lo_seen": 0.1747,
     "created": "2026-07-05T01:38:32"
   },
   "العرض/الطلب|CRVUSDT|2026-07-05 13:00:00": {
@@ -4498,11 +4498,11 @@
     "entry": 0.0549,
     "stop": 0.05201,
     "init_stop": 0.05201,
-    "cur_stop": 0.05201,
+    "cur_stop": 0.0549,
     "legs": [
       0.0549
     ],
-    "last_alert_stop": 0.05201,
+    "last_alert_stop": 0.0549,
     "armed": false,
     "targets": [
       0.0568792,
@@ -4516,10 +4516,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 02:00:00",
-    "last_bar": "2026-07-06 06:59:59.999000",
-    "hits": [],
+    "last_bar": "2026-07-06 08:59:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.0561,
+    "hi_seen": 0.057,
     "lo_seen": 0.0545,
     "created": "2026-07-06T02:18:20"
   }
