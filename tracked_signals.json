@@ -4632,5 +4632,38 @@
     "hi_seen": 2.013,
     "lo_seen": 2.013,
     "created": "2026-07-06T16:19:32"
+  },
+  "العرض/الطلب|ACHUSDT|2026-07-06 16:00:00": {
+    "symbol": "ACHUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 4623,
+    "entry": 0.00444,
+    "stop": 0.0042669,
+    "init_stop": 0.0042669,
+    "cur_stop": 0.0042669,
+    "legs": [
+      0.00444
+    ],
+    "last_alert_stop": 0.0042669,
+    "armed": false,
+    "targets": [
+      0.00477336,
+      0.00490484
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-06 16:00:00",
+    "last_bar": "2026-07-06 16:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00444,
+    "lo_seen": 0.00444,
+    "created": "2026-07-06T16:34:49"
   }
 }
