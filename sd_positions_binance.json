@@ -142,39 +142,6 @@
     "armed": false,
     "opened_ts": "2026-07-04T14:08:28"
   },
-  "CGPTUSDT": {
-    "symbol": "CGPTUSDT",
-    "tf": "1h",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "levels": [
-      0.01999
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.020250470372863205,
-        "qty": 4938.1569,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.020250470372863205,
-    "entry": 0.020250470372863205,
-    "init_stop": 0.01954904,
-    "stop": 0.01954904,
-    "R": 0.000701430372863205,
-    "tp1": 0.02043096,
-    "tp2": 0.02087192,
-    "qty": 4938.1569,
-    "qty_open": 4938.1569,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-04T15:34:54"
-  },
   "AVAUSDT": {
     "symbol": "AVAUSDT",
     "tf": "1h",
@@ -360,5 +327,38 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-06T16:37:54"
+  },
+  "ACHUSDT": {
+    "symbol": "ACHUSDT",
+    "tf": "1h",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.00444
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.004614821820114337,
+        "qty": 21669.309,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.004614821820114337,
+    "entry": 0.004614821820114337,
+    "init_stop": 0.0042669,
+    "stop": 0.0042669,
+    "R": 0.0003479218201143377,
+    "tp1": 0.00477336,
+    "tp2": 0.00490484,
+    "qty": 21669.309,
+    "qty_open": 21669.309,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-06T17:07:00"
   }
 }
