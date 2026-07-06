@@ -15,7 +15,7 @@ permissions:
 
 # يمنع تصادم تشغيلين عند حفظ حالة منع التكرار
 concurrency:
-  group: reversal-state
+  group: repo-state           # موحّدة مع sd_bot/hunter — تسلسل دفعات git لتفادي ضياع الحالة
   cancel-in-progress: false
 
 jobs:
@@ -100,9 +100,12 @@ jobs:
             git config user.name "trade-bot"
             git config user.email "bot@users.noreply.github.com"
             git commit -m "update reversal + paper trades [skip ci]"
-            for i in 1 2 3 4 5; do
-              git pull --rebase --autostash origin main && git push && break
+            ok=0
+            for i in 1 2 3 4 5 6 7 8; do
+              if git pull --rebase --autostash origin main && git push; then ok=1; break; fi
+              git rebase --abort 2>/dev/null || true
               echo "push attempt $i failed, retrying in 5s..."
               sleep 5
             done
+            [ "$ok" = 1 ] || { echo "::error::persist push failed after retries — STATE NOT SAVED"; exit 1; }
           fi
