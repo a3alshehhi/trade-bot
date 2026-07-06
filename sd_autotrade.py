@@ -422,6 +422,7 @@ def _record_exit(pos, qty, price, reason):
     ledger = load_ledger()
     ledger.append({
         "symbol": pos["symbol"], "tf": pos.get("tf", ""),
+        "label": pos.get("label", ""),          # وسم الاستراتيجية (عرض/طلب، RSI70، ...) للتمييز الحيّ
         "entry": round(entry, 8), "exit": round(price, 8),
         "qty": round(qty, 8), "pnl_usdt": round(pnl, 4),
         "pnl_pct": round((price - entry) / entry * 100, 3),
