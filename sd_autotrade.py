@@ -403,8 +403,18 @@ def execute_from_tracker():
 
 # ── إدارة المراكز المفتوحة ───────────────────────────────────────────────────
 def _sell(sym, qty):
-    """بيع سوق لكمية، مع تقريبها لخطوة الزوج. يرجع الكمية المُقرّبة أو 0."""
+    """بيع سوق لكمية، مقيّدة بالرصيد الفعلي ومقرّبة لخطوة الزوج. يرجع الكمية المُقرّبة أو 0.
+    مهم: الرسوم (تُقتطع من العملة الأساس) والتقريب والملء الجزئي تجعل المُستلَم فعلياً
+    أقل من الكمية المتتبَّعة qty_open — فبيعها كاملةً يرفضه بايبت (170131)/بايننس (-2010:
+    insufficient balance) فلا يُغلق المركز أبداً. الحل: لا نبيع أكثر من الرصيد الحرّ الفعلي."""
     filt = bx.instrument_filters(sym)
+    base = sym[:-4] if sym.endswith("USDT") else sym.replace("USDT", "")
+    try:
+        free = bx.coin_qty(base)                 # الرصيد الفعلي (نفس منطق cmd_sell --all)
+        if free and free > 0:
+            qty = min(qty, free)
+    except Exception as ex:
+        print(f"_sell[{EX_NAME}]: تعذّر جلب رصيد {base} —", ex)
     q = bx._round_step(qty, filt.get("basePrecision"))
     if q <= 0:
         return 0.0
