@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-06T05:45:42",
+  "updated_at": "2026-07-06T06:01:07",
   "stats": {
-    "open": 5,
-    "closed": 125,
-    "win_rate": 68.8,
-    "profit_factor": 2.4,
-    "total_pct": 86.55,
-    "avg_pct": 0.52,
+    "open": 3,
+    "closed": 127,
+    "win_rate": 67.7,
+    "profit_factor": 2.22,
+    "total_pct": 79.89,
+    "avg_pct": 0.48,
     "max_drawdown_pct": -14.16
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-06",
-        "trades": 1,
-        "win_rate": 100.0,
-        "return_pct": 1.26,
+        "trades": 3,
+        "win_rate": 33.3,
+        "return_pct": -2.35,
         "week": "2026-W28",
         "month": "2026-07"
       },
@@ -63,9 +63,9 @@
     "weekly": [
       {
         "key": "2026-W28",
-        "trades": 1,
-        "win_rate": 100.0,
-        "return_pct": 1.26,
+        "trades": 3,
+        "win_rate": 33.3,
+        "return_pct": -2.35,
         "month": "2026-07"
       },
       {
@@ -79,9 +79,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 125,
-        "win_rate": 68.8,
-        "return_pct": 86.55
+        "trades": 127,
+        "win_rate": 67.7,
+        "return_pct": 79.89
       }
     ]
   },
@@ -2199,10 +2199,11 @@
       "entry": 0.0151,
       "stop": 0.0147778,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-05T22:05:03",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-06T06:01:05",
+      "realized_pct": -2.13,
+      "result_pct": -2.13
     },
     {
       "id": "العرض/الطلب|BNTUSDT|2026-07-05 22:00:00",
@@ -2213,10 +2214,11 @@
       "entry": 0.2732,
       "stop": 0.269174,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-05T22:19:31",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-06T06:01:06",
+      "realized_pct": -1.47,
+      "result_pct": -1.47
     },
     {
       "id": "العرض/الطلب|API3USDT|2026-07-05 22:00:00",

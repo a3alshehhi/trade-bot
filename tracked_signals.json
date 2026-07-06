@@ -4257,11 +4257,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 01:00:00",
-    "last_bar": "2026-07-06 00:59:59.999000",
+    "last_bar": "2026-07-06 05:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1854,
-    "lo_seen": 0.1768,
+    "lo_seen": 0.1757,
     "created": "2026-07-05T01:38:32"
   },
   "العرض/الطلب|CRVUSDT|2026-07-05 13:00:00": {
@@ -4290,7 +4290,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 13:00:00",
-    "last_bar": "2026-07-06 00:59:59.999000",
+    "last_bar": "2026-07-06 05:59:59.999000",
     "hits": [
       1
     ],
@@ -4402,12 +4402,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 22:00:00",
-    "last_bar": "2026-07-06 00:59:59.999000",
+    "last_bar": "2026-07-06 05:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.01524,
-    "lo_seen": 0.01506,
-    "created": "2026-07-05T22:05:03"
+    "lo_seen": 0.01472,
+    "created": "2026-07-05T22:05:03",
+    "exit_price": 0.0147778,
+    "close_card_sent": true,
+    "closed_at": "2026-07-06T06:01:05"
   },
   "العرض/الطلب|BNTUSDT|2026-07-05 22:00:00": {
     "symbol": "BNTUSDT",
@@ -4435,12 +4438,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 22:00:00",
-    "last_bar": "2026-07-06 00:59:59.999000",
+    "last_bar": "2026-07-06 05:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.275,
-    "lo_seen": 0.2704,
-    "created": "2026-07-05T22:19:31"
+    "lo_seen": 0.268,
+    "created": "2026-07-05T22:19:31",
+    "exit_price": 0.269174,
+    "close_card_sent": true,
+    "closed_at": "2026-07-06T06:01:06"
   },
   "العرض/الطلب|API3USDT|2026-07-05 22:00:00": {
     "symbol": "API3USDT",
@@ -4507,11 +4513,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 02:00:00",
-    "last_bar": "2026-07-06 02:00:00",
+    "last_bar": "2026-07-06 05:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.0549,
-    "lo_seen": 0.0549,
+    "hi_seen": 0.0561,
+    "lo_seen": 0.0545,
     "created": "2026-07-06T02:18:20"
   }
 }
