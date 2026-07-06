@@ -229,39 +229,6 @@
     "armed": false,
     "opened_ts": "2026-07-05T14:18:57"
   },
-  "CFXUSDT": {
-    "symbol": "CFXUSDT",
-    "tf": "15m",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "levels": [
-      0.04494
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.04517152531592965,
-        "qty": 2213.784,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.04517152531592965,
-    "entry": 0.04517152531592965,
-    "init_stop": 0.0436733,
-    "stop": 0.04517152531592965,
-    "R": 0.0014982253159296494,
-    "tp1": 0.04556624,
-    "tp2": 0.04605756,
-    "qty": 2213.784,
-    "qty_open": 1107.784,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-06T15:50:48"
-  },
   "BNTUSDT": {
     "symbol": "BNTUSDT",
     "tf": "1h",
