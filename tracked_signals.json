@@ -4519,14 +4519,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 02:00:00",
-    "last_bar": "2026-07-06 19:59:59.999000",
+    "last_bar": "2026-07-06 22:59:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.0572,
+    "stopped": true,
+    "hi_seen": 0.0584,
     "lo_seen": 0.0545,
-    "created": "2026-07-06T02:18:20"
+    "created": "2026-07-06T02:18:20",
+    "exit_price": 0.0581248,
+    "close_card_sent": true,
+    "closed_at": "2026-07-06T23:03:46"
   },
   "العرض/الطلب|CFXUSDT|2026-07-06 15:45:00": {
     "symbol": "CFXUSDT",
@@ -4596,7 +4600,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-06 19:59:59.999000",
+    "last_bar": "2026-07-06 22:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2776,
@@ -4629,10 +4633,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-06 19:59:59.999000",
+    "last_bar": "2026-07-06 22:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 2.061,
+    "hi_seen": 2.066,
     "lo_seen": 2.013,
     "created": "2026-07-06T16:19:32"
   },
@@ -4662,7 +4666,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-06 19:59:59.999000",
+    "last_bar": "2026-07-06 22:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00471,

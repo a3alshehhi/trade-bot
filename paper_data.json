@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-06T22:48:43",
+  "updated_at": "2026-07-06T23:03:48",
   "stats": {
-    "open": 4,
-    "closed": 130,
-    "win_rate": 67.7,
-    "profit_factor": 2.07,
-    "total_pct": 74.78,
-    "avg_pct": 0.45,
+    "open": 3,
+    "closed": 131,
+    "win_rate": 67.9,
+    "profit_factor": 2.16,
+    "total_pct": 83.07,
+    "avg_pct": 0.48,
     "max_drawdown_pct": -14.16
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-06",
-        "trades": 6,
-        "win_rate": 50.0,
-        "return_pct": -5.13,
+        "trades": 7,
+        "win_rate": 57.1,
+        "return_pct": -0.63,
         "week": "2026-W28",
         "month": "2026-07"
       },
@@ -63,9 +63,9 @@
     "weekly": [
       {
         "key": "2026-W28",
-        "trades": 6,
-        "win_rate": 50.0,
-        "return_pct": -5.13,
+        "trades": 7,
+        "win_rate": 57.1,
+        "return_pct": -0.63,
         "month": "2026-07"
       },
       {
@@ -79,9 +79,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 130,
-        "win_rate": 67.7,
-        "return_pct": 74.78
+        "trades": 131,
+        "win_rate": 67.9,
+        "return_pct": 83.07
       }
     ]
   },
@@ -2249,12 +2249,14 @@
       "entry": 0.0549,
       "stop": 0.05201,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-06T02:18:20",
-      "closed_at": null,
-      "realized_pct": 1.8
+      "closed_at": "2026-07-06T23:03:46",
+      "realized_pct": 4.74,
+      "result_pct": 4.74
     },
     {
       "id": "العرض/الطلب|CFXUSDT|2026-07-06 15:45:00",
