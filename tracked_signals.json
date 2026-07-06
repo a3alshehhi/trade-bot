@@ -4519,7 +4519,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 02:00:00",
-    "last_bar": "2026-07-06 15:59:59.999000",
+    "last_bar": "2026-07-06 19:59:59.999000",
     "hits": [
       1
     ],
@@ -4558,14 +4558,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 15:45:00",
-    "last_bar": "2026-07-06 16:14:59.999000",
+    "last_bar": "2026-07-06 20:14:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.04572,
-    "lo_seen": 0.04494,
-    "created": "2026-07-06T15:49:07"
+    "lo_seen": 0.04488,
+    "created": "2026-07-06T15:49:07",
+    "exit_price": 0.04494,
+    "close_card_sent": true,
+    "closed_at": "2026-07-06T20:22:39"
   },
   "العرض/الطلب|BNTUSDT|2026-07-06 16:00:00": {
     "symbol": "BNTUSDT",
@@ -4593,10 +4596,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-06 16:00:00",
+    "last_bar": "2026-07-06 19:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.2708,
+    "hi_seen": 0.2776,
     "lo_seen": 0.2708,
     "created": "2026-07-06T16:19:32"
   },
@@ -4626,10 +4629,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-06 16:00:00",
+    "last_bar": "2026-07-06 19:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 2.013,
+    "hi_seen": 2.061,
     "lo_seen": 2.013,
     "created": "2026-07-06T16:19:32"
   },
@@ -4659,10 +4662,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-06 16:00:00",
+    "last_bar": "2026-07-06 19:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.00444,
+    "hi_seen": 0.00471,
     "lo_seen": 0.00444,
     "created": "2026-07-06T16:34:49"
   }
