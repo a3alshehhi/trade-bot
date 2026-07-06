@@ -1,9 +1,11 @@
 name: SD Bot 15m (AI Supply/Demand signals)
 
 on:
-  workflow_dispatch:          # تشغيل يدوي / cron-job.org (كرون GitHub قد يتأخّر)
-  schedule:
-    - cron: "*/15 * * * *"    # كل 15 دقيقة — يطابق إغلاق شموع 15m (لا يفوّت الإشارات)
+  workflow_dispatch:          # يدوي/احتياطي فقط — المسح كل 15د انتقل إلى reversal.yml (يضربه cron-job.org بدقّة)
+  # ⛔ جدولة GitHub لـ*/15 معطّلة (2026-07-06): كانت تُشغّل كل 1–4 ساعات فقط بسبب throttling.
+  #    مسح الـ15m صار مُدمجاً في reversal.yml. لإعادة التفعيل أزِل التعليق أدناه.
+  # schedule:
+  #   - cron: "*/15 * * * *"
 
 permissions:
   contents: write             # للسماح بحفظ حالة منع التكرار
