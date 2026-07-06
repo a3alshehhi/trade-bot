@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-06T02:15:41",
+  "updated_at": "2026-07-06T02:30:53",
   "stats": {
-    "open": 4,
+    "open": 5,
     "closed": 125,
     "win_rate": 68.8,
     "profit_factor": 2.4,
@@ -2235,6 +2235,20 @@
       "closed_at": "2026-07-05T23:01:01",
       "realized_pct": 1.57,
       "result_pct": 1.57
+    },
+    {
+      "id": "العرض/الطلب|ADXUSDT|2026-07-06 02:00:00",
+      "symbol": "ADXUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0549,
+      "stop": 0.05201,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-06T02:18:20",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
