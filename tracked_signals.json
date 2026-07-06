@@ -4257,12 +4257,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-05 01:00:00",
-    "last_bar": "2026-07-06 08:59:59.999000",
+    "last_bar": "2026-07-06 11:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.1854,
-    "lo_seen": 0.1747,
-    "created": "2026-07-05T01:38:32"
+    "lo_seen": 0.1741,
+    "created": "2026-07-05T01:38:32",
+    "exit_price": 0.174583,
+    "close_card_sent": true,
+    "closed_at": "2026-07-06T12:01:05"
   },
   "العرض/الطلب|CRVUSDT|2026-07-05 13:00:00": {
     "symbol": "CRVUSDT",
@@ -4516,12 +4519,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 02:00:00",
-    "last_bar": "2026-07-06 08:59:59.999000",
+    "last_bar": "2026-07-06 11:59:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.057,
+    "hi_seen": 0.0572,
     "lo_seen": 0.0545,
     "created": "2026-07-06T02:18:20"
   }

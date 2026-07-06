@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-06T11:45:42",
+  "updated_at": "2026-07-06T12:01:07",
   "stats": {
-    "open": 2,
-    "closed": 128,
-    "win_rate": 68.0,
-    "profit_factor": 2.24,
-    "total_pct": 81.39,
-    "avg_pct": 0.48,
+    "open": 1,
+    "closed": 129,
+    "win_rate": 67.4,
+    "profit_factor": 2.06,
+    "total_pct": 73.57,
+    "avg_pct": 0.45,
     "max_drawdown_pct": -14.16
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-06",
-        "trades": 4,
-        "win_rate": 50.0,
-        "return_pct": -1.54,
+        "trades": 5,
+        "win_rate": 40.0,
+        "return_pct": -5.79,
         "week": "2026-W28",
         "month": "2026-07"
       },
@@ -63,9 +63,9 @@
     "weekly": [
       {
         "key": "2026-W28",
-        "trades": 4,
-        "win_rate": 50.0,
-        "return_pct": -1.54,
+        "trades": 5,
+        "win_rate": 40.0,
+        "return_pct": -5.79,
         "month": "2026-07"
       },
       {
@@ -79,9 +79,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 128,
-        "win_rate": 68.0,
-        "return_pct": 81.39
+        "trades": 129,
+        "win_rate": 67.4,
+        "return_pct": 73.57
       }
     ]
   },
@@ -2134,10 +2134,11 @@
       "entry": 0.1824524,
       "stop": 0.174583,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-05T01:38:32",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-06T12:01:05",
+      "realized_pct": -4.31,
+      "result_pct": -4.31
     },
     {
       "id": "العرض/الطلب|CRVUSDT|2026-07-05 13:00:00",
