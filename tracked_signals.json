@@ -367,5 +367,40 @@
     "hi_seen": 0.417,
     "lo_seen": 0.391,
     "created": "2026-07-07T16:27:19"
+  },
+  "العرض/الطلب|AWEUSDT|2026-07-07 23:15:00": {
+    "symbol": "AWEUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4659,
+    "entry": 0.0584,
+    "stop": 0.0577774,
+    "init_stop": 0.0577774,
+    "cur_stop": 0.0577774,
+    "legs": [
+      0.0584,
+      0.05830874,
+      0.05812898
+    ],
+    "last_alert_stop": 0.0577774,
+    "armed": false,
+    "targets": [
+      0.05926104,
+      0.05963126
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-07 23:15:00",
+    "last_bar": "2026-07-07 23:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0584,
+    "lo_seen": 0.0584,
+    "created": "2026-07-07T23:25:11"
   }
 }
