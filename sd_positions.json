@@ -1,20 +1,4 @@
 {
-  "PARTIUSDT": {
-    "symbol": "PARTIUSDT",
-    "tf": "1h",
-    "label": "RSI70 · 1h",
-    "prob": null,
-    "entry": 0.0505,
-    "init_stop": 0.04700236,
-    "stop": 0.04700236,
-    "R": 0.0034976400000000032,
-    "tp1": 0.0521592,
-    "tp2": 0.0542698,
-    "qty": 6063.11956301,
-    "qty_open": 6063.11956301,
-    "tp1_done": false,
-    "opened_ts": "2026-07-03T10:17:56"
-  },
   "GPSUSDT": {
     "symbol": "GPSUSDT",
     "tf": "1h",
@@ -91,60 +75,6 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-04T15:33:57"
-  },
-  "INITUSDT": {
-    "symbol": "INITUSDT",
-    "tf": "15m",
-    "label": "trendwave · 15m",
-    "prob": null,
-    "levels": [
-      0.058254,
-      0.0579,
-      0.057546,
-      0.057042
-    ],
-    "filled": [
-      true,
-      true,
-      true,
-      true
-    ],
-    "leg_usd": 75.0,
-    "n_legs": 4,
-    "fills": [
-      {
-        "price": 0.05906906906948037,
-        "qty": 1269.70005083,
-        "usd": 75.0
-      },
-      {
-        "price": 0.0578778778778272,
-        "qty": 1295.83189208,
-        "usd": 75.0
-      },
-      {
-        "price": 0.0575475475473858,
-        "qty": 1303.2701339399998,
-        "usd": 75.0
-      },
-      {
-        "price": 0.0570570570570799,
-        "qty": 1314.47368421,
-        "usd": 75.0
-      }
-    ],
-    "avg_entry": 0.05787845637189267,
-    "entry": 0.05906906906948037,
-    "init_stop": 0.05618489,
-    "stop": 0.05618489,
-    "R": 0.00169356637189267,
-    "tp1": 0.060216,
-    "tp2": 0.061254,
-    "qty": 5183.27576106,
-    "qty_open": 5183.27576106,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-05T15:33:00"
   },
   "ARUSDT": {
     "symbol": "ARUSDT",
