@@ -1,0 +1,97 @@
+name: SD Bot — العرض/الطلب (15m + 1h كل ربع ساعة)
+
+# ══════════════════════════════════════════════════════════════════════════
+# وركفلو واحد موحّد لبوت العرض/الطلب (بدل sd_bot.yml + sd_bot_15m.yml + المسح
+# المدمج سابقاً هنا). يضربه cron-job.org كل 15 دقيقة بدقّة (نفس الرابط، لا تغيير).
+#   • كل تشغيلة (كل 15د): مسح فريم 15m + مسح فريم 1h معاً بالتسلسل + trackmon.
+# لماذا التوحيد؟ حتى يكون هناك كاتب واحد فقط على الحالة المشتركة على git،
+# فينتهي تزاحم مجموعة repo-state الذي كان يُلغي تشغيلات ويُفشل حفظ الحالة.
+# منع التكرار داخل sd_bot.py (sd_state_*.json) يضمن عدم تكرار نفس الإشارة.
+# ⛔ بوتات reversal/trendwave/hunter تبقى موقوفة (بطلب بو محمد 2026-07-05).
+on:
+  schedule:
+    - cron: '8,23,38,53 * * * *'   # احتياطي فقط (جدولة GitHub متقلّبة) — المصدر الأساسي cron-job.org
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repo-state
+  cancel-in-progress: false
+
+jobs:
+  sd:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Run SD scans (15m + 1h every run) + trackmon
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SD_REQUIRE_MACD4C: "1"          # فلتر زخم MACD 4C≥1 (الأفضل بالباك-تست 2026-07-06)
+          # ── تنفيذ آلي تجريبي (Bybit Testnet + Binance Demo) عبر trackmon ──
+          SD_EXECUTE: "1"
+          BYBIT_ENV: testnet
+          BYBIT_API_KEY: ${{ secrets.BYBIT_API_KEY }}
+          BYBIT_API_SECRET: ${{ secrets.BYBIT_API_SECRET }}
+          BYBIT_BASE_URL: ${{ secrets.BYBIT_BASE_URL }}
+          BINANCE_ENV: demo
+          BINANCE_API_KEY: ${{ secrets.BINANCE_API_KEY }}
+          BINANCE_API_SECRET: ${{ secrets.BINANCE_API_SECRET }}
+          BINANCE_BASE_URL: ${{ secrets.BINANCE_BASE_URL }}
+          SD_LABELS: "*"
+        run: |
+          set -e
+          # ── مسح فريم 15m: اختراق قمة CHoCH + توسيط DCA · EMA365 · سياق 1h ──
+          SD_ENTRY_TF=15m SD_HTF=1h SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_15m.json python sd_bot.py
+
+          # ── مسح فريم 1h: سياق 4h معاً في كلب شكل فية منع التكرار ──
+          SD_ENTRY_TF=1h SD_HTF=4h SD_MODEL=sd_model_1h.joblib SD_STATE=sd_state_1h.json python sd_bot.py
+
+          # ── متابعة/تنفيذ الصفقات المفتوحة (Bybit/Binance) وتحديث اللوحة ──
+          python trading_bot.py --mode trackmon
+
+      - name: Persist state (conflict-proof)
+        run: |
+          FILES="sd_state_15m.json sd_state_1h.json sd_model_15m.joblib sd_model_1h.joblib \
+                 tracked_signals.json pending_signals.json tg_offset.json paper_data.json \
+                 sd_positions.json sd_ledger.json sd_executed.json sd_last_entry.json \
+                 sd_positions_binance.json sd_ledger_binance.json sd_executed_binance.json sd_last_entry_binance.json"
+          for f in $FILES; do
+            [ -f "$f" ] && git add "$f"
+          done
+          if git diff --cached --quiet; then
+            echo "no state changes to persist"; exit 0
+          fi
+          git config user.name "trade-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git commit -m "update SD state [skip ci]"
+          ok=0
+          for i in 1 2 3 4 5 6 7 8; do
+            git fetch origin main
+            if git rebase origin/main; then
+              :
+            else
+              conflicts=$(git diff --name-only --diff-filter=U)
+              if [ -n "$conflicts" ]; then
+                for c in $conflicts; do git checkout --theirs -- "$c" && git add "$c"; done
+                GIT_EDITOR=true git rebase --continue || { git rebase --abort 2>/dev/null || true; sleep 3; continue; }
+              else
+                git rebase --abort 2>/dev/null || true; sleep 3; continue
+              fi
+            fi
+            if git push; then ok=1; break; fi
+            echo "push attempt $i failed, retrying..."; sleep 3
+          done
+          [ "$ok" = 1 ] || { echo "::error::persist push failed after retries — STATE NOT SAVED"; exit 1; }
