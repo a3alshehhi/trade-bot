@@ -163,5 +163,38 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-07T10:36:40"
+  },
+  "BIOUSDT": {
+    "symbol": "BIOUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.03038
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.030940931039843005,
+        "qty": 3231.9648,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.030940931039843005,
+    "entry": 0.030940931039843005,
+    "init_stop": 0.0297597,
+    "stop": 0.0297597,
+    "R": 0.0011812310398430052,
+    "tp1": 0.03112656,
+    "tp2": 0.03146564,
+    "qty": 3231.9648,
+    "qty_open": 3231.9648,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-07T11:06:56"
   }
 }
