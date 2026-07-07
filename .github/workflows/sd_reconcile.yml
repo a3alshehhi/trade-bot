@@ -1,0 +1,71 @@
+name: SD Reconcile (account vs tracker)
+
+# مطابقة أرصدة بايبت/بايننس الفعلية بملف المراكز يدوياً.
+#  report = تقرير فقط (يكشف اليتيمة/الوهمية ويرسلها لتيليجرام، لا يغيّر شيئاً).
+#  apply  = يزيل المراكز الوهمية (متتبَّعة بلا رصيد) من الملف. لا ينفّذ أي صفقة.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "الوضع (report=تقرير فقط · apply=إزالة الوهمية)"
+        type: choice
+        options: ["report", "apply"]
+        default: "report"
+
+# نفس مجموعة تزامن الحالة — لا يعمل أثناء دورة تكتب المراكز (تفادي تعارض git)
+concurrency:
+  group: repo-state
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Run reconcile
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SD_EXECUTE: "1"
+          BYBIT_ENV: testnet
+          BYBIT_API_KEY: ${{ secrets.BYBIT_API_KEY }}
+          BYBIT_API_SECRET: ${{ secrets.BYBIT_API_SECRET }}
+          BYBIT_BASE_URL: ${{ secrets.BYBIT_BASE_URL }}
+          BINANCE_ENV: demo
+          BINANCE_API_KEY: ${{ secrets.BINANCE_API_KEY }}
+          BINANCE_API_SECRET: ${{ secrets.BINANCE_API_SECRET }}
+          BINANCE_BASE_URL: ${{ secrets.BINANCE_BASE_URL }}
+        run: |
+          if [ "${{ inputs.mode }}" = "apply" ]; then
+            python sd_autotrade.py reconcile apply
+          else
+            python sd_autotrade.py reconcile
+          fi
+
+      - name: Persist positions (apply only)
+        if: ${{ inputs.mode == 'apply' }}
+        run: |
+          for f in sd_positions.json sd_positions_binance.json; do
+            [ -f "$f" ] && git add "$f"
+          done
+          if ! git diff --cached --quiet; then
+            git config user.name "trade-bot"
+            git config user.email "bot@users.noreply.github.com"
+            git commit -m "reconcile: drop phantom positions [skip ci]"
+            for i in 1 2 3 4 5; do
+              git pull --rebase --autostash origin main && git push && break
+              git rebase --abort 2>/dev/null || true
+              sleep 5
+            done
+          fi
