@@ -106,11 +106,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-07 12:59:59.999000",
+    "last_bar": "2026-07-07 22:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2776,
-    "lo_seen": 0.27,
+    "lo_seen": 0.2676,
     "created": "2026-07-06T16:19:32"
   },
   "العرض/الطلب|ARUSDT|2026-07-06 16:00:00": {
@@ -139,11 +139,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-07 12:59:59.999000",
+    "last_bar": "2026-07-07 22:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.066,
-    "lo_seen": 1.984,
+    "lo_seen": 1.95,
     "created": "2026-07-06T16:19:32"
   },
   "العرض/الطلب|ACHUSDT|2026-07-06 16:00:00": {
@@ -172,12 +172,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-07 12:59:59.999000",
+    "last_bar": "2026-07-07 22:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.00471,
-    "lo_seen": 0.0044,
-    "created": "2026-07-06T16:34:49"
+    "lo_seen": 0.00424,
+    "created": "2026-07-06T16:34:49",
+    "exit_price": 0.0042669,
+    "close_card_sent": true,
+    "closed_at": "2026-07-07T23:09:15"
   },
   "العرض/الطلب|ALICEUSDT|2026-07-07 07:00:00": {
     "symbol": "ALICEUSDT",
@@ -325,11 +328,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-07 16:00:00",
-    "last_bar": "2026-07-07 16:00:00",
+    "last_bar": "2026-07-07 22:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.00636,
-    "lo_seen": 0.00636,
+    "hi_seen": 0.0065,
+    "lo_seen": 0.00627,
     "created": "2026-07-07T16:04:59"
   },
   "العرض/الطلب|CITYUSDT|2026-07-07 16:00:00": {
@@ -358,11 +361,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-07 16:00:00",
-    "last_bar": "2026-07-07 16:00:00",
+    "last_bar": "2026-07-07 22:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.395,
-    "lo_seen": 0.395,
+    "hi_seen": 0.417,
+    "lo_seen": 0.391,
     "created": "2026-07-07T16:27:19"
   }
 }
