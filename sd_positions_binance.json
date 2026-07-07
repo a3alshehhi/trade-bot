@@ -109,39 +109,6 @@
     "armed": true,
     "opened_ts": "2026-07-04T01:52:05"
   },
-  "BANDUSDT": {
-    "symbol": "BANDUSDT",
-    "tf": "1h",
-    "label": "صيد الارتفاعات",
-    "prob": null,
-    "levels": [
-      0.1633
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.1632155553564326,
-        "qty": 612.6867,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.1632155553564326,
-    "entry": 0.1632155553564326,
-    "init_stop": 0.15364643,
-    "stop": 0.16608629296336236,
-    "R": 0.00956912535643259,
-    "tp1": 0.1730304,
-    "tp2": 0.1801926,
-    "qty": 612.6867,
-    "qty_open": 612.6867,
-    "tp1_done": false,
-    "armed": true,
-    "opened_ts": "2026-07-04T14:08:28"
-  },
   "AVAUSDT": {
     "symbol": "AVAUSDT",
     "tf": "1h",
