@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-07T10:19:42",
+  "updated_at": "2026-07-07T10:34:10",
   "stats": {
-    "open": 4,
+    "open": 6,
     "closed": 131,
     "win_rate": 67.9,
     "profit_factor": 2.16,
@@ -2328,6 +2328,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-07T07:08:04",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|2ZUSDT|2026-07-07 10:30:00",
+      "symbol": "2ZUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0735,
+      "stop": 0.0718992,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-07T10:34:06",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|BIOUSDT|2026-07-07 10:30:00",
+      "symbol": "BIOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03038,
+      "stop": 0.0297597,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-07T10:34:06",
       "closed_at": null,
       "realized_pct": 0.0
     }
