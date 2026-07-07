@@ -1,0 +1,45 @@
+name: SD Cleanup (مرة واحدة — إبقاء عرض/طلب ≥ 2026-07-06 فقط)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repo-state
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run cleanup
+        run: python sd_cleanup.py
+
+      - name: Commit cleaned state
+        run: |
+          git add sd_ledger.json sd_ledger_binance.json sd_positions.json \
+                  sd_positions_binance.json tracked_signals.json
+          if git diff --cached --quiet; then
+            echo "nothing to clean"; exit 0
+          fi
+          git config user.name "trade-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git commit -m "one-time cleanup: keep only العرض/الطلب >= 2026-07-06 [skip ci]"
+          for i in 1 2 3 4 5 6 7 8; do
+            git fetch origin main
+            if git rebase origin/main; then :; else
+              for c in $(git diff --name-only --diff-filter=U); do git checkout --theirs -- "$c" && git add "$c"; done
+              GIT_EDITOR=true git rebase --continue || { git rebase --abort 2>/dev/null || true; sleep 3; continue; }
+            fi
+            git push && { echo "pushed"; exit 0; }
+            echo "retry $i"; sleep 3
+          done
+          echo "::error::cleanup push failed"; exit 1
