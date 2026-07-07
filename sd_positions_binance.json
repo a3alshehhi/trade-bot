@@ -327,5 +327,38 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-06T17:07:00"
+  },
+  "ALICEUSDT": {
+    "symbol": "ALICEUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.1355
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.1376343688213781,
+        "qty": 726.56271,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.1376343688213781,
+    "entry": 0.1376343688213781,
+    "init_stop": 0.130799,
+    "stop": 0.130799,
+    "R": 0.006835368821378113,
+    "tp1": 0.1405584,
+    "tp2": 0.1430496,
+    "qty": 726.56271,
+    "qty_open": 726.56271,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-07T07:09:39"
   }
 }
