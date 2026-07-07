@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-07T12:51:11",
+  "updated_at": "2026-07-07T13:08:24",
   "stats": {
-    "open": 5,
-    "closed": 3,
-    "win_rate": 66.7,
-    "profit_factor": 1.57,
-    "total_pct": 1.81,
-    "avg_pct": 0.66,
-    "max_drawdown_pct": -3.47
+    "open": 4,
+    "closed": 4,
+    "win_rate": 50.0,
+    "profit_factor": 0.96,
+    "total_pct": -0.41,
+    "avg_pct": -0.05,
+    "max_drawdown_pct": -5.57
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-07",
-        "trades": 1,
+        "trades": 2,
         "win_rate": 0.0,
-        "return_pct": -3.47,
+        "return_pct": -5.57,
         "week": "2026-W28",
         "month": "2026-07"
       },
@@ -31,18 +31,18 @@
     "weekly": [
       {
         "key": "2026-W28",
-        "trades": 3,
-        "win_rate": 66.7,
-        "return_pct": 1.81,
+        "trades": 4,
+        "win_rate": 50.0,
+        "return_pct": -0.41,
         "month": "2026-07"
       }
     ],
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 3,
-        "win_rate": 66.7,
-        "return_pct": 1.81
+        "trades": 4,
+        "win_rate": 50.0,
+        "return_pct": -0.41
       }
     ]
   },
@@ -148,10 +148,11 @@
       "entry": 0.0735,
       "stop": 0.0718992,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-07T10:34:06",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-07T13:08:23",
+      "realized_pct": -2.18,
+      "result_pct": -2.18
     },
     {
       "id": "العرض/الطلب|BIOUSDT|2026-07-07 10:30:00",
