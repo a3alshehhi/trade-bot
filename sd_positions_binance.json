@@ -97,5 +97,38 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-06T17:07:00"
+  },
+  "ALTUSDT": {
+    "symbol": "ALTUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.00636
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.006406406406406407,
+        "qty": 15609.375,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.006406406406406407,
+    "entry": 0.006406406406406407,
+    "init_stop": 0.0061914,
+    "stop": 0.0061914,
+    "R": 0.00021500640640640702,
+    "tp1": 0.0065916,
+    "tp2": 0.0066954,
+    "qty": 15609.375,
+    "qty_open": 15609.375,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-07T16:10:26"
   }
 }

@@ -296,5 +296,40 @@
     "exit_price": 0.0297597,
     "close_card_sent": true,
     "closed_at": "2026-07-07T13:42:44"
+  },
+  "العرض/الطلب|ALTUSDT|2026-07-07 16:00:00": {
+    "symbol": "ALTUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4653,
+    "entry": 0.00636,
+    "stop": 0.0061914,
+    "init_stop": 0.0061914,
+    "cur_stop": 0.0061914,
+    "legs": [
+      0.00636,
+      0.0063246,
+      0.0062742
+    ],
+    "last_alert_stop": 0.0061914,
+    "armed": false,
+    "targets": [
+      0.0065916,
+      0.0066954
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-07 16:00:00",
+    "last_bar": "2026-07-07 16:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00636,
+    "lo_seen": 0.00636,
+    "created": "2026-07-07T16:04:59"
   }
 }
