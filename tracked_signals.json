@@ -331,5 +331,38 @@
     "hi_seen": 0.00636,
     "lo_seen": 0.00636,
     "created": "2026-07-07T16:04:59"
+  },
+  "العرض/الطلب|CITYUSDT|2026-07-07 16:00:00": {
+    "symbol": "CITYUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 4656,
+    "entry": 0.395,
+    "stop": 0.38132,
+    "init_stop": 0.38132,
+    "cur_stop": 0.38132,
+    "legs": [
+      0.395
+    ],
+    "last_alert_stop": 0.38132,
+    "armed": false,
+    "targets": [
+      0.4178,
+      0.42645
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-07 16:00:00",
+    "last_bar": "2026-07-07 16:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.395,
+    "lo_seen": 0.395,
+    "created": "2026-07-07T16:27:19"
   }
 }
