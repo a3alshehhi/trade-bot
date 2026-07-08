@@ -106,12 +106,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-08 02:59:59.999000",
+    "last_bar": "2026-07-08 15:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.2776,
-    "lo_seen": 0.2638,
-    "created": "2026-07-06T16:19:32"
+    "lo_seen": 0.2632,
+    "created": "2026-07-06T16:19:32",
+    "exit_price": 0.263391,
+    "close_card_sent": true,
+    "closed_at": "2026-07-08T16:09:06"
   },
   "العرض/الطلب|ARUSDT|2026-07-06 16:00:00": {
     "symbol": "ARUSDT",
@@ -139,11 +142,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-08 02:59:59.999000",
+    "last_bar": "2026-07-08 15:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.066,
-    "lo_seen": 1.94,
+    "lo_seen": 1.923,
     "created": "2026-07-06T16:19:32"
   },
   "العرض/الطلب|ACHUSDT|2026-07-06 16:00:00": {
@@ -364,11 +367,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-07 16:00:00",
-    "last_bar": "2026-07-08 02:59:59.999000",
+    "last_bar": "2026-07-08 15:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.417,
-    "lo_seen": 0.39,
+    "lo_seen": 0.386,
     "created": "2026-07-07T16:27:19"
   },
   "العرض/الطلب|AWEUSDT|2026-07-07 23:15:00": {
