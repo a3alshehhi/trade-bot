@@ -402,5 +402,39 @@
     "hi_seen": 0.0584,
     "lo_seen": 0.0584,
     "created": "2026-07-07T23:25:11"
+  },
+  "العرض/الطلب|ALTUSDT|2026-07-08 00:00:00": {
+    "symbol": "ALTUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4661,
+    "entry": 0.00635,
+    "stop": 0.0062442,
+    "init_stop": 0.0062442,
+    "cur_stop": 0.0062442,
+    "legs": [
+      0.00635,
+      0.00631494
+    ],
+    "last_alert_stop": 0.0062442,
+    "armed": false,
+    "targets": [
+      0.00653712,
+      0.00660978
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-08 00:00:00",
+    "last_bar": "2026-07-08 00:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00635,
+    "lo_seen": 0.00635,
+    "created": "2026-07-08T00:06:33"
   }
 }
