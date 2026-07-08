@@ -8,13 +8,25 @@ on:
         default: '40'
       rsi21_os:
         description: "عتبة RSI21"
-        default: '30'
+        default: '20'
       os_lookback:
         description: "نافذة البحث"
         default: '100'
       max_ema_dist:
         description: "أقصى بُعد فوق المتوسط"
         default: '0.06'
+      trend_ma:
+        description: "فلتر الاتجاه"
+        type: choice
+        default: 'live'
+        options:
+          - live
+          - sma50
+          - sma100
+          - sma200
+          - ema50
+          - ema100
+          - ema200
 
 permissions:
   contents: read
@@ -37,6 +49,7 @@ jobs:
           SD_RSI21_OS: ${{ inputs.rsi21_os }}
           SD_OS_LOOKBACK: ${{ inputs.os_lookback }}
           SD_MAX_EMA_DIST: ${{ inputs.max_ema_dist }}
+          SD_TREND_MA: ${{ inputs.trend_ma }}
         run: python sd_bt_os21.py 2>&1 | tee -a sd_bt_os21_log.txt
       - name: Backtest 1h (context 4h)
         env:
@@ -46,6 +59,7 @@ jobs:
           SD_RSI21_OS: ${{ inputs.rsi21_os }}
           SD_OS_LOOKBACK: ${{ inputs.os_lookback }}
           SD_MAX_EMA_DIST: ${{ inputs.max_ema_dist }}
+          SD_TREND_MA: ${{ inputs.trend_ma }}
         run: python sd_bt_os21.py 2>&1 | tee -a sd_bt_os21_log.txt
       - name: Upload log artifact
         if: always()
