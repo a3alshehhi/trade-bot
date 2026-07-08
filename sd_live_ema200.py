@@ -68,10 +68,67 @@ for key in CFG:
     if key in S.CFG:
         S.CFG[key] = CFG[key]
 
+# ── متغيرات التلجرام ──
+TG_TOKEN = os.environ.get("TELEGRAM_TOKEN", os.environ.get("TG_TOKEN", ""))
+TG_CHAT = os.environ.get("TELEGRAM_CHAT_ID", os.environ.get("TG_CHAT", ""))
+
+def send_telegram(text):
+    """إرسال رسالة لتلجرام."""
+    if not TG_TOKEN or not TG_CHAT:
+        print("📝 تلجرام غير مُعدّ. الرسالة:\n", text)
+        return None
+    try:
+        r = requests.post(f"https://api.telegram.org/bot{TG_TOKEN}/sendMessage",
+                         data={"chat_id": TG_CHAT, "text": text, "parse_mode": "HTML"}, 
+                         timeout=15)
+        print(f"✅ تم الإرسال لتلجرام ({text.count('🟢')} إشارة)")
+        return (r.json().get("result") or {}).get("message_id")
+    except Exception as ex:
+        print(f"❌ خطأ في التلجرام: {ex}")
+        return None
+
+def format_signal(symbol, setup, tf="1h"):
+    """صيغة الإشارة للإرسال."""
+    st = setup
+    f = st["f"]
+    entry = st["entry"]
+    stop = st["stop"]
+    tp1 = st["tp1"]
+    tp2 = st.get("tp2", entry + 2 * (entry - stop))
+    
+    R = entry - stop
+    profit_1r = (tp1 - entry) / R if R > 0 else 0
+    profit_2r = (tp2 - entry) / R if R > 0 else 0
+    
+    msg = f"""🟢 <b>إشارة عرض/طلب جديدة</b> — EMA200 محسّن
+<b>العملة:</b> {symbol}
+<b>الفريم:</b> {tf} (سياق 4h)
+
+📊 <b>نقاط الدخول:</b>
+  <b>الدخول:</b> {entry:.8f}
+  <b>الوقف:</b> {stop:.8f}
+  <b>الهدف ١:</b> {tp1:.8f} (+{profit_1r:.2f}R)
+  <b>الهدف ٢:</b> {tp2:.8f} (+{profit_2r:.2f}R)
+
+💰 <b>الإحصائيات:</b>
+  <b>المسافة R:</b> {R:.8f}
+  <b>النسبة:</b> 1:{R/(entry-tp1):.2f} (متوقّع)
+  <b>ارتفاع المنطقة:</b> {f.get('heightATR', 0):.2f}x ATR
+  <b>EMA Rel:</b> {f.get('emaRel', 0)*100:.1f}%
+
+✅ <b>الفلاتر:</b>
+  • CHoCH: {'✓' if f.get('choch') else '✗'}
+  • تأكيد: {'✓' if f.get('confirm') else '✗'}
+  • الاتجاه العام: {'↑ صعود' if f.get('htf') > 0 else '↓ هبوط'}
+
+⚠️ تحليل تعليمي فقط — لا ننفّذ صفقات فعلية
+"""
+    return msg
+
 # ── العمل الأساسي ──
 def run_live_scan():
     """فحص حيّ للعملات وإرسال الإشارات المؤهلة."""
-    print(f"🚀 بوت العرض/الطلب الحيّ (EMA{CFG['ema_len']} بدون تشبّع) | "
+    print(f"🚀 بوت العرض/الطلب الحيّ (EMA{CFG['ema_len']} محسّن) | "
           f"tf={CFG['entry_tf']} · htf={CFG['htf']}", flush=True)
     
     try:
@@ -127,13 +184,25 @@ def run_live_scan():
         print(f"\n✅ وجدنا {len(signals)} إشارة", flush=True)
         print(f"أفضل {min(CFG['top_n'], len(signals))}:", flush=True)
         
+        # ── إرسال الإشارات ──
+        all_messages = []
         for i, sig in enumerate(signals[:CFG['top_n']], 1):
             st = sig["setup"]
             f = st["f"]
-            print(f"  {i}. {sig['symbol']:<8} | دخول={st['entry']:.8f} · وقف={st['stop']:.8f} · "
-                  f"هدف={st['tp1']:.8f} · R={f.get('score', 0):.1f}", flush=True)
+            symbol = sig['symbol']
+            
+            msg = format_signal(symbol, st, CFG["entry_tf"])
+            all_messages.append(msg)
+            
+            print(f"  {i}. {symbol:<8} | دخول={st['entry']:.8f} · وقف={st['stop']:.8f} · "
+                  f"هدف={st['tp1']:.8f}", flush=True)
         
-        # ← هنا يمكنك إضافة إرسال لتيليجرام أو تنفيذ صفقات بحساب حقيقي
+        # ── إرسال كل إشارة لتلجرام ──
+        if all_messages and TG_TOKEN and TG_CHAT:
+            print(f"\n📤 إرسال {len(all_messages)} إشارة لتلجرام...", flush=True)
+            for i, msg in enumerate(all_messages, 1):
+                send_telegram(msg)
+                time.sleep(0.5)  # تأخير بين الرسائل
         
         return signals
     
