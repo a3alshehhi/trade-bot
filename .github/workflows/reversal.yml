@@ -1,11 +1,13 @@
 name: SD Bot — العرض/الطلب (15m + 1h كل ربع ساعة)
 
 # ══════════════════════════════════════════════════════════════════════════
-# وركفلو واحد موحّد لبوت العرض/الطلب (بدل sd_bot.yml + sd_bot_15m.yml + المسح
-# المدمج سابقاً هنا). يضربه cron-job.org كل 15 دقيقة بدقّة (نفس الرابط، لا تغيير).
-#   • كل تشغيلة (كل 15د): مسح فريم 15m + مسح فريم 1h معاً بالتسلسل + trackmon.
-# لماذا التوحيد؟ حتى يكون هناك كاتب واحد فقط على الحالة المشتركة على git،
-# فينتهي تزاحم مجموعة repo-state الذي كان يُلغي تشغيلات ويُفشل حفظ الحالة.
+# وركفلو واحد موحّد لبوت العرض/الطلب + بوتين تجريبيين (كاتب واحد على الحالة).
+#   • البوت الرئيسي: عرض/طلب (EMA حيّ + ML) — مسح 15m + 1h + trackmon.
+#   • بوت تجريبي 1: «عرض/طلب+تشبّع»   = SMA50 + تشبّع RSI21≤20 (بلا ML).
+#   • بوت تجريبي 2: «عرض/طلب+دايفرجنس» = SMA50 + دايفرجنس صعودي MACD (بلا ML).
+# كل بوت باسم/وسم مختلف، وحالة منفصلة، ودفتر تنفيذ منفصل (Bybit Testnet + Binance Demo).
+# التنفيذ testnet/demo فقط — لا mainnet (محميّ داخل sd_autotrade). البوتان التجريبيان
+# غير حاسمَين: فشلهما لا يوقف الرئيسي ولا يمنع حفظ الحالة.
 # منع التكرار داخل sd_bot.py (sd_state_*.json) يضمن عدم تكرار نفس الإشارة.
 # ⛔ بوتات reversal/trendwave/hunter تبقى موقوفة (بطلب بو محمد 2026-07-05).
 on:
@@ -35,12 +37,12 @@ jobs:
       - name: Install deps
         run: pip install -r requirements.txt
 
-      - name: Run SD scans (15m + 1h every run) + trackmon
+      - name: Run SD scans (main + 2 experimental) + trackmon
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          SD_REQUIRE_MACD4C: "1"          # فلتر زخم MACD 4C≥1 (الأفضل بالباك-تست 2026-07-06)
-          # ── تنفيذ آلي تجريبي (Bybit Testnet + Binance Demo) عبر trackmon ──
+          SD_REQUIRE_MACD4C: "1"          # فلتر زخم MACD 4C≥1 (الأفضل بالباك-تست 2026-07-06) — للرئيسي
+          # ── تنفيذ آلي تجريبي (Bybit Testnet + Binance Demo) ──
           SD_EXECUTE: "1"
           BYBIT_ENV: testnet
           BYBIT_API_KEY: ${{ secrets.BYBIT_API_KEY }}
@@ -50,24 +52,48 @@ jobs:
           BINANCE_API_KEY: ${{ secrets.BINANCE_API_KEY }}
           BINANCE_API_SECRET: ${{ secrets.BINANCE_API_SECRET }}
           BINANCE_BASE_URL: ${{ secrets.BINANCE_BASE_URL }}
-          SD_LABELS: "*"
         run: |
           set -e
-          # ── مسح فريم 15m: اختراق قمة CHoCH + توسيط DCA · EMA365 · سياق 1h ──
+          # ══ البوت الرئيسي: عرض/طلب (EMA حيّ + ML) ══
           SD_ENTRY_TF=15m SD_HTF=1h SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_15m.json python sd_bot.py
+          SD_ENTRY_TF=1h  SD_HTF=4h  SD_MODEL=sd_model_1h.joblib  SD_STATE=sd_state_1h.json  python sd_bot.py
+          # تنفيذ + متابعة الرئيسي (وسمه فقط) + لوحة المتتبّع
+          SD_LABELS="العرض/الطلب" python trading_bot.py --mode trackmon
 
-          # ── مسح فريم 1h: سياق 4h معاً في كلب شكل فية منع التكرار ──
-          SD_ENTRY_TF=1h SD_HTF=4h SD_MODEL=sd_model_1h.joblib SD_STATE=sd_state_1h.json python sd_bot.py
+          # ══ البوتان التجريبيان (غير حاسمَين: فشلهما لا يوقف الرئيسي) ══
+          set +e
 
-          # ── متابعة/تنفيذ الصفقات المفتوحة (Bybit/Binance) وتحديث اللوحة ──
-          python trading_bot.py --mode trackmon
+          # ── بوت 1: «عرض/طلب+تشبّع» — SMA50 + تشبّع RSI21≤20 · بلا ML · بلا MACD4C ──
+          export SD_LABEL="عرض/طلب+تشبّع" SD_TREND_MA=sma50 SD_REQUIRE_OS21=1 SD_RSI21_OS=20 \
+                 SD_REQUIRE_MACD4C=0 SD_ML_THRESHOLD=0
+          SD_ENTRY_TF=15m SD_HTF=1h SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_os21_15m.json python sd_bot.py
+          SD_ENTRY_TF=1h  SD_HTF=4h  SD_MODEL=sd_model_1h.joblib  SD_STATE=sd_state_os21_1h.json  python sd_bot.py
+          SD_LABELS="عرض/طلب+تشبّع" SD_POS=sd_pos_os21.json SD_LEDGER=sd_ledger_os21.json \
+                 SD_EXECUTED=sd_exec_os21.json SD_LAST_ENTRY=sd_last_os21.json python sd_autotrade.py run
+          unset SD_LABEL SD_TREND_MA SD_REQUIRE_OS21 SD_RSI21_OS SD_REQUIRE_MACD4C SD_ML_THRESHOLD
+
+          # ── بوت 2: «عرض/طلب+دايفرجنس» — SMA50 + دايفرجنس صعودي MACD · بلا ML · بلا MACD4C ──
+          export SD_LABEL="عرض/طلب+دايفرجنس" SD_TREND_MA=sma50 SD_REQUIRE_DIV=1 \
+                 SD_REQUIRE_MACD4C=0 SD_ML_THRESHOLD=0
+          SD_ENTRY_TF=15m SD_HTF=1h SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_div_15m.json python sd_bot.py
+          SD_ENTRY_TF=1h  SD_HTF=4h  SD_MODEL=sd_model_1h.joblib  SD_STATE=sd_state_div_1h.json  python sd_bot.py
+          SD_LABELS="عرض/طلب+دايفرجنس" SD_POS=sd_pos_div.json SD_LEDGER=sd_ledger_div.json \
+                 SD_EXECUTED=sd_exec_div.json SD_LAST_ENTRY=sd_last_div.json python sd_autotrade.py run
+          unset SD_LABEL SD_TREND_MA SD_REQUIRE_DIV SD_REQUIRE_MACD4C SD_ML_THRESHOLD
+          true
 
       - name: Persist state (conflict-proof)
         run: |
           FILES="sd_state_15m.json sd_state_1h.json sd_model_15m.joblib sd_model_1h.joblib \
                  tracked_signals.json pending_signals.json tg_offset.json paper_data.json \
                  sd_positions.json sd_ledger.json sd_executed.json sd_last_entry.json \
-                 sd_positions_binance.json sd_ledger_binance.json sd_executed_binance.json sd_last_entry_binance.json"
+                 sd_positions_binance.json sd_ledger_binance.json sd_executed_binance.json sd_last_entry_binance.json \
+                 sd_state_os21_15m.json sd_state_os21_1h.json \
+                 sd_pos_os21.json sd_ledger_os21.json sd_exec_os21.json sd_last_os21.json \
+                 sd_pos_os21_binance.json sd_ledger_os21_binance.json sd_exec_os21_binance.json sd_last_os21_binance.json \
+                 sd_state_div_15m.json sd_state_div_1h.json \
+                 sd_pos_div.json sd_ledger_div.json sd_exec_div.json sd_last_div.json \
+                 sd_pos_div_binance.json sd_ledger_div_binance.json sd_exec_div_binance.json sd_last_div_binance.json"
           for f in $FILES; do
             [ -f "$f" ] && git add "$f"
           done
