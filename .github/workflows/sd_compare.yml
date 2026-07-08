@@ -1,0 +1,25 @@
+name: SD Compare — مقارنة أداء البوتات الثلاثة
+
+on:
+  schedule:
+    - cron: '5 18 * * *'    # يومياً ~مرة (احتياطي؛ جدولة GitHub متقلّبة) — أو يدوياً/cron-job.org
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compare ledgers + Telegram
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python sd_compare.py
