@@ -106,11 +106,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-08 00:59:59.999000",
+    "last_bar": "2026-07-08 01:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2776,
-    "lo_seen": 0.2676,
+    "lo_seen": 0.2663,
     "created": "2026-07-06T16:19:32"
   },
   "العرض/الطلب|ARUSDT|2026-07-06 16:00:00": {
@@ -139,11 +139,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-08 00:59:59.999000",
+    "last_bar": "2026-07-08 01:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.066,
-    "lo_seen": 1.95,
+    "lo_seen": 1.945,
     "created": "2026-07-06T16:19:32"
   },
   "العرض/الطلب|ACHUSDT|2026-07-06 16:00:00": {
@@ -328,12 +328,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-07 16:00:00",
-    "last_bar": "2026-07-08 01:44:59.999000",
+    "last_bar": "2026-07-08 02:14:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0065,
-    "lo_seen": 0.00621,
-    "created": "2026-07-07T16:04:59"
+    "lo_seen": 0.00617,
+    "created": "2026-07-07T16:04:59",
+    "exit_price": 0.0061914,
+    "close_card_sent": true,
+    "closed_at": "2026-07-08T02:23:29"
   },
   "العرض/الطلب|CITYUSDT|2026-07-07 16:00:00": {
     "symbol": "CITYUSDT",
@@ -361,11 +364,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-07 16:00:00",
-    "last_bar": "2026-07-08 00:59:59.999000",
+    "last_bar": "2026-07-08 01:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.417,
-    "lo_seen": 0.391,
+    "lo_seen": 0.39,
     "created": "2026-07-07T16:27:19"
   },
   "العرض/الطلب|AWEUSDT|2026-07-07 23:15:00": {
@@ -396,7 +399,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-07 23:15:00",
-    "last_bar": "2026-07-08 01:44:59.999000",
+    "last_bar": "2026-07-08 02:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.05921,
