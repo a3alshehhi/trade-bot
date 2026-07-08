@@ -1,0 +1,60 @@
+name: SD Bot - العرض/الطلب (15m + 1h)
+
+on:
+  schedule:
+    # كل 15 دقيقة
+    - cron: '*/15 * * * *'
+  
+  # تشغيل يدوي
+  workflow_dispatch:
+
+jobs:
+  sd-scan-15m:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy requests scikit-learn joblib yfinance
+      
+      - name: Train ML Model (if needed)
+        env:
+          SD_ENTRY_TF: 15m
+          SD_HTF: 1h
+        run: |
+          echo "🤖 التحقق من نموذج ML..."
+          python3 sd_bot.py train 2>&1 || true
+      
+      - name: Scan for Signals - 15m (context 1h)
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SD_ENTRY_TF: 15m
+          SD_HTF: 1h
+          SD_EMA_LEN: 200
+          SD_REQUIRE_OS21: 0
+          SD_USE_DCA: 1
+        run: |
+          echo "📊 فحص إشارات 15m (سياق 1h)..."
+          python3 sd_bot.py scan
+      
+      - name: Track signals for dashboard
+        if: always()
+        run: |
+          echo "📍 تم تسجيل الإشارات في لوحة المتتبّع"
+      
+      - name: Error handling
+        if: failure()
+        run: |
+          echo "⚠️ خطأ في الفحص، سيحاول مرة أخرى في 15 دقيقة"
+          exit 0
