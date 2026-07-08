@@ -399,14 +399,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-07 23:15:00",
-    "last_bar": "2026-07-08 02:59:59.999000",
+    "last_bar": "2026-07-08 03:44:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.05931,
+    "stopped": true,
+    "hi_seen": 0.05972,
     "lo_seen": 0.05826,
-    "created": "2026-07-07T23:25:11"
+    "created": "2026-07-07T23:25:11",
+    "exit_price": 0.05963126,
+    "close_card_sent": true,
+    "closed_at": "2026-07-08T03:51:05"
   },
   "العرض/الطلب|ALTUSDT|2026-07-08 00:00:00": {
     "symbol": "ALTUSDT",
