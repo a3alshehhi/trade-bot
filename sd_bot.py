@@ -77,12 +77,14 @@ CFG = dict(
     tp1_frac=0.5,          # نسبة الجني عند الهدف الأول ثم تتبّع الباقي
     trail_atr=2.5,         # مضاعف وقف شانديلير المتحرّك (قمة − trail_atr×ATR) للباقي
     bt_hold=48,            # (backtest) أقصى شموع لإمساك الصفقة
+    fee_rate=0.00075,      # (backtest) رسوم جهة واحدة (كسر من السعر) — 0.075% تقريب رسوم تيكر
 )
 # ── تجاوز فريم الدخول/السياق عبر البيئة (لتشغيل البوت على كل الفريمات: 15m/1h/4h) ──
 # مثال: SD_ENTRY_TF=15m SD_HTF=1h  |  SD_ENTRY_TF=4h SD_HTF=1d
 CFG["entry_tf"] = os.environ.get("SD_ENTRY_TF", CFG["entry_tf"])
 CFG["htf"]      = os.environ.get("SD_HTF", CFG["htf"])
 CFG["bt_hold"]  = int(os.environ.get("SD_BT_HOLD", CFG["bt_hold"]))
+CFG["fee_rate"] = float(os.environ.get("SD_FEE_RATE", CFG["fee_rate"]))
 CFG["pages_1h"] = int(os.environ.get("SD_PAGES", CFG["pages_1h"]))   # تقليل الصفحات = تسريع الجلب
 CFG["require_choch"] = int(os.environ.get("SD_REQUIRE_CHOCH", CFG["require_choch"]))
 CFG["max_ema_dist"]  = float(os.environ.get("SD_MAX_EMA_DIST", CFG["max_ema_dist"]))
@@ -97,6 +99,12 @@ CFG["require_macd4c"] = int(os.environ.get("SD_REQUIRE_MACD4C", CFG["require_mac
 CFG["macd4c_min"]     = int(os.environ.get("SD_MACD4C_MIN", CFG["macd4c_min"]))
 CFG["require_os21"]   = int(os.environ.get("SD_REQUIRE_OS21", CFG["require_os21"]))
 CFG["rsi21_os"]       = float(os.environ.get("SD_RSI21_OS", CFG["rsi21_os"]))
+# دايفرجنس صعودي على هيستوجرام MACD كبوابة دخول اختيارية (0 = معطّل، الافتراضي)
+CFG["require_div"]    = int(os.environ.get("SD_REQUIRE_DIV", 0))
+# فلتر الاتجاه القابل للاختيار: live = EMA الحيّ (الافتراضي)، أو smaN / emaN
+CFG["trend_ma"]       = os.environ.get("SD_TREND_MA", "live").strip().lower()
+# عتبة فلتر التعلّم الآلي (0 = تعطيل الترشيح ML، مطابق للباك-تست)
+CFG["ml_threshold"]   = float(os.environ.get("SD_ML_THRESHOLD", CFG["ml_threshold"]))
 # نمط الدخول حسب الفريم (طلب بو محمد 2026-07-05): 15m = زخم RSI + توسيط DCA؛
 # الساعة (وأعلى) = اختراق قمة الـCHoCH. قابل للتجاوز عبر SD_ENTRY_MODE (momentum/breakout).
 # نمط الدخول (طلب بو محمد 2026-07-05): كلا الفريمين = اختراق قمة الـCHoCH (الأقوى على 1h)؛
@@ -125,7 +133,7 @@ TG_CHAT = os.environ.get("TELEGRAM_CHAT_ID", os.environ.get("TG_CHAT", ""))
 # سجل المتتبّع المشترك: نكتب فيه إشاراتنا لتظهر وتُتابَع في اللوحة مثل بقية البوتات.
 # (يتابعها trackmon في reversal.yml كل 15 دقيقة ويُصدّر paper_data.json للوحة)
 TRACK_FILE = "tracked_signals.json"
-DASH_LABEL = "العرض/الطلب"
+DASH_LABEL = os.environ.get("SD_LABEL", "العرض/الطلب")   # اسم/وسم البوت (لتمييز الإشارات والتنفيذ)
 _TF_MS = {"1m": 60000, "3m": 180000, "5m": 300000, "15m": 900000, "30m": 1800000,
           "1h": 3600000, "2h": 7200000, "4h": 14400000, "1d": 86400000}
 
@@ -175,6 +183,34 @@ def ema(arr, n):
         prev = x if i == 0 else x * k + prev * (1 - k)
         out[i] = prev
     return out
+
+def sma(arr, n):
+    """متوسط متحرك بسيط بطول n؛ NaN للشمعات الأولى قبل اكتمال النافذة."""
+    out = [float("nan")] * len(arr); s = 0.0
+    for i, x in enumerate(arr):
+        s += x
+        if i >= n:
+            s -= arr[i - n]
+        if i >= n - 1:
+            out[i] = s / n
+    return out
+
+def trend_ma_series(c):
+    """سلسلة فلتر الاتجاه المختار عبر CFG['trend_ma']:
+       'live' ⇒ None (استخدم فلتر EMA الحيّ f['emaRel'])؛ 'smaN'/'emaN' ⇒ المتوسط المطلوب."""
+    raw = CFG.get("trend_ma", "live")
+    if raw in ("", "live"):
+        return None
+    kind = "sma" if raw.startswith("sma") else ("ema" if raw.startswith("ema") else None)
+    try:
+        n = int(raw[3:])
+    except ValueError:
+        n = 0
+    if kind == "sma" and n > 0:
+        return sma(c, n)
+    if kind == "ema" and n > 0:
+        return ema(c, n)
+    return None
 
 def rsi(c, n=14):
     """RSI بطريقة Wilder (تنعيم أُسّي). يعيد قائمة بطول c، أول n قيمة NaN."""
@@ -432,6 +468,11 @@ def setup_features(sym, d1, d4):
         # (3) تشبّع بيعي على RSI21 (≤ عتبة) مرة+ قبل بدء موجة الـCHoCH
         os21 = 1 if any(math.isfinite(rs_en[x]) and rs_en[x] <= CFG["rsi21_os"]
                         for x in range(os_lo, j + 1)) else 0
+        # (4) دايفرجنس صعودي «عادي» على هيستوجرام MACD: آخر قاعين محوريين للسعر في النافذة
+        #     قبل الموجة — قاع سعر أدنى + قاع هيستوجرام أعلى (بوادر انعكاس صعودي).
+        _dpts = [x for x in low_idx if os_lo <= x <= j and math.isfinite(mhist[x])]
+        bulldiv = 1 if (len(_dpts) >= 2 and l[_dpts[-1]] < l[_dpts[-2]]
+                        and mhist[_dpts[-1]] > mhist[_dpts[-2]]) else 0
         f = dict(strength=z["strength"],
                  heightATR=round((z["proximal"] - z["distal"]) / (a[j] or R), 2),
                  baseVolZ=round(vz[j] or 0, 2), touchVolZ=round(vz[tch] or 0, 2),
@@ -439,7 +480,7 @@ def setup_features(sym, d1, d4):
                  emaRel=round(ema_rel, 4), barsToTouch=tch - j,
                  hour=dt.datetime.fromtimestamp(t[tch] / 1000, dt.timezone.utc).hour,
                  confirm=confirm, closeLoc=round(close_loc, 2),
-                 hh=hh, macd4c=m4, os21=os21)
+                 hh=hh, macd4c=m4, os21=os21, bulldiv=bulldiv)
         out.append(dict(sym=sym, created=j, touch=tch, ts=t[tch], f=f,
                         entry=entry, stop=stop, tp1=tp1, tp2=tp2, legs=legs,
                         height=leg_high - leg_low))
@@ -566,13 +607,23 @@ def scan(basket=None):
                 continue
             setups, h, l, c = setup_features(s, d1, d4)
             last = len(c) - 1
+            ma = trend_ma_series(c)            # فلتر الاتجاه المختار (None = EMA الحيّ)
             for st in setups:
                 if st["touch"] != last:        # الدخول تحقّق على الشمعة المغلقة الأخيرة فقط
                     continue
                 f = st["f"]
-                if f["emaRel"] <= 0:           # فلتر E: فوق EMA200
+                tchk = st["touch"]
+                # فلتر الاتجاه: rel = بُعد السعر فوق المتوسط عند شمعة اللمس
+                if ma is None:
+                    rel = f["emaRel"]          # الفلتر الحيّ (EMA200/365)
+                else:
+                    m = ma[tchk] if tchk < len(ma) else float("nan")
+                    if not math.isfinite(m) or m <= 0:
+                        continue
+                    rel = (c[tchk] - m) / m
+                if rel <= 0:                   # فلتر E: فوق المتوسط
                     continue
-                if CFG["max_ema_dist"] and f["emaRel"] > CFG["max_ema_dist"]:  # قريب من الاتجاه لا متمدّد
+                if CFG["max_ema_dist"] and rel > CFG["max_ema_dist"]:  # قريب من الاتجاه لا متمدّد
                     continue
                 if f["htf"] < 0:               # فلتر E: 4h غير هابط
                     continue
@@ -583,6 +634,8 @@ def scan(basket=None):
                 if CFG["require_macd4c"] and f["macd4c"] < CFG["macd4c_min"]:  # زخم MACD 4C صعودي
                     continue
                 if CFG["require_os21"] and not f["os21"]:     # تشبّع بيعي RSI21 قبل CHoCH
+                    continue
+                if CFG["require_div"] and not f.get("bulldiv"):  # دايفرجنس صعودي على هيستوجرام MACD
                     continue
                 if CFG["require_ob_after_os"] and not f["rsiObOs"]:  # تشبّع شرائي بعد بيعي (فوق CHoCH)
                     continue
@@ -663,7 +716,7 @@ def format_message(signals):
         risk_pct = ((entry - stop) / entry * 100) if entry else 0.0
         tps = [t for t in (s.get("tp1"), s.get("tp2")) if t]
         lines = [
-            "🟢 إشارة العرض/الطلب — شراء",
+            f"🟢 إشارة {DASH_LABEL} — شراء",
             f"💎 {s['sym']} · ⏱️ {tf}",
             f"🤖 ثقة الفلتر التعلّمي (عرض/طلب + ML): {int(s['prob']*100)}%",
             f"📊 الأسباب: {'، '.join(s['reasons'])}",
@@ -791,6 +844,53 @@ def _sim_5050(entry, stop, tp1, tp2, h, l, c, tch, hold):
     r_last = (c[end - 1] - entry) / R             # إغلاق زمني على آخر شمعة
     return (0.5 * r1 + 0.5 * r_last) if half else r_last
 
+def _sim_exits(entry, stop, tp1, tp2, h, l, c, tch, hold):
+    """يحاكي مسار السعر مرّة واحدة ويعيد ناتج R لأربعة أنظمة نقل وقف بعد جني النصف الأول،
+    مع خصم الرسوم على كل تعبئة (fee_rate لكل جهة). كلها إدارة 50/50 والفرق فقط في مستوى الوقف:
+      be      = الوقف إلى الدخول تماماً (تعادل — الوضع الحالي)
+      be_cost = الوقف إلى الدخول + تغطية رسوم الذهاب/الإياب (تعادل حقيقي بعد الرسوم)
+      lock    = الوقف إلى الدخول + 0.3R (قفل ربح صغير)
+      nobe    = لا يُنقل الوقف إطلاقاً (يبقى الوقف الأصلي، يُترك الباقي للهدف2)
+    الناتج بوحدات R صافية بعد الرسوم. (عند تعارض الوقف والهدف بنفس الشمعة نُرجّح الوقف تحفّظاً.)"""
+    R = entry - stop
+    if R <= 0:
+        return None
+    r1, r2 = (tp1 - entry) / R, (tp2 - entry) / R
+    if r1 <= 0:
+        return None
+    fee = CFG["fee_rate"]
+    end = min(len(c), tch + hold)
+    def cst(px):
+        return fee * px / R                        # رسوم جهة واحدة لوحدة كاملة بوحدات R
+    out = {}
+    for name, be_lvl in (("be", entry),
+                         ("be_cost", entry + 2 * fee * entry),
+                         ("lock", entry + 0.3 * R),
+                         ("nobe", None)):
+        sl = stop; half = False; realized = 0.0; res = None
+        for i in range(tch, end):
+            if l[i] <= sl:                          # ضُرب الوقف
+                fr = 0.5 if half else 1.0           # الباقي بعد الجني نصف، وإلا كامل
+                res = realized + fr * ((sl - entry) / R) - fr * cst(sl)
+                if not half:
+                    res -= cst(entry)               # رسوم دخول الكامل إن لم يُجنَ شيء بعد
+                break
+            if not half and h[i] >= tp1:            # جني النصف الأول
+                half = True
+                realized = 0.5 * r1 - cst(entry) - 0.5 * cst(tp1)   # رسوم دخول الكامل + خروج النصف
+                if be_lvl is not None:
+                    sl = be_lvl
+            if half and h[i] >= tp2:                # الهدف2 للنصف الثاني
+                res = realized + 0.5 * r2 - 0.5 * cst(tp2)
+                break
+        if res is None:                             # إغلاق زمني على آخر شمعة
+            X = c[end - 1]; fr = 0.5 if half else 1.0
+            res = realized + fr * ((X - entry) / R) - fr * cst(X)
+            if not half:
+                res -= cst(entry)
+        out[name] = res
+    return out
+
 def _sim_trailb(entry, stop, tp1, av, h, l, c, tch, hold):
     """نظام ب (الفائز في بوت الصيد): جني tp1_frac عند الهدف الأول، ثم وقف متحرّك
     شانديلير (قمة − trail_atr×ATR) للباقي لا ينزل عن التعادل — يركب امتداد الترند
@@ -836,6 +936,7 @@ def backtest(basket=None):
     newf_rs = []                   # الجديد + فلاتر بنية الاتجاه (قمة أعلى + MACD4C + تشبّع RSI21)
     bk = {"hh": [], "macd": [], "os21": [], "hh_macd": [], "hh_os21": []}  # عزل أثر كل فلتر منفرداً وأزواجه
     new_r1s, new_r2s = [], []      # تشخيص: بُعد الهدف1/الهدف2 عن الدخول بوحدات R (سلامة نسبة الفوز)
+    exit_rs = {"be": [], "be_cost": [], "lock": [], "nobe": []}   # مقارنة أنظمة نقل الوقف (صافي بعد الرسوم)
     print(f"backtest SD | tf={CFG['entry_tf']} htf={CFG['htf']} | {len(basket)} رمز | hold={hold}")
     for s in basket:
         try:
@@ -879,6 +980,10 @@ def backtest(basket=None):
                     _Rr = avg - st["stop"]                  # تشخيص بُعد الأهداف بوحدات R
                     if _Rr > 0:
                         new_r1s.append((st["tp1"] - avg) / _Rr); new_r2s.append((st["tp2"] - avg) / _Rr)
+                ex = _sim_exits(avg, st["stop"], st["tp1"], st["tp2"], h, l, c, tch, hold)
+                if ex is not None:                          # مقارنة أنظمة نقل الوقف على نفس الصفقات
+                    for k in exit_rs:
+                        exit_rs[k].append(ex[k])
                 av = a[tch] or (st["tp1"] - avg)           # ATR عند الدخول لوقف شانديلير
                 rb = _sim_trailb(avg, st["stop"], st["tp1"], av, h, l, c, tch, hold)
                 if rb is not None:
@@ -923,7 +1028,12 @@ def backtest(basket=None):
               f"— الجديد (نظام ب شانديلير {CFG['trail_atr']}×ATR): {_stats(new_b_rs)}\n"
               f"— تشخيص الأهداف: هدف1 متوسط {(sum(new_r1s)/len(new_r1s) if new_r1s else 0):.2f}R · "
               f"هدف2 {(sum(new_r2s)/len(new_r2s) if new_r2s else 0):.2f}R · "
-              f"هدف1<1R = {(100*sum(1 for x in new_r1s if x < 1)/len(new_r1s) if new_r1s else 0):.0f}%")
+              f"هدف1<1R = {(100*sum(1 for x in new_r1s if x < 1)/len(new_r1s) if new_r1s else 0):.0f}%\n"
+              f"\n🔁 مقارنة أنظمة نقل الوقف بعد الهدف1 (صافي بعد رسوم {CFG['fee_rate']*100:.3f}%/جهة):\n"
+              f"— تعادل (الحالي): {_stats(exit_rs['be'])}\n"
+              f"— تعادل+رسوم: {_stats(exit_rs['be_cost'])}\n"
+              f"— قفل ربح +0.3R: {_stats(exit_rs['lock'])}\n"
+              f"— بلا نقل وقف: {_stats(exit_rs['nobe'])}")
     print("\n" + report)
     send_telegram(report)
     return old_rs, new_rs, new_b_rs
