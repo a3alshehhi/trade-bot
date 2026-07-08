@@ -4,20 +4,16 @@ on:
   workflow_dispatch:
       inputs:
             basket:
-                    description: عدد رموز الكريبتو
-                            default: '40'
+description: "عدد رموز الكريبتو"                            default: '40'
                                   rsi21_os:
                                           description: عتبة RSI21
-                                                  default: '30'
-                                                        os_lookback:
+description: "عتبة RSI21"                                                        os_lookback:
                                                                 description: نافذة البحث
                                                                         default: '100'
-                                                                              max_ema_dist:
-                                                                                      description: أقصى بُعد فوق المتوسط
+description: "نافذة البحث"                                                                                      description: أقصى بُعد فوق المتوسط
                                                                                               default: '0.06'
 
-                                                                                              permissions:
-                                                                                                contents: read
+description: "أقصى بُعد فوق المتوسط"                                                                                                contents: read
 
                                                                                                 jobs:
                                                                                                   backtest:
