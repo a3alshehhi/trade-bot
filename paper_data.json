@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-08T00:51:11",
+  "updated_at": "2026-07-08T01:02:44",
   "stats": {
-    "open": 6,
+    "open": 7,
     "closed": 6,
     "win_rate": 33.3,
     "profit_factor": 0.47,
@@ -223,6 +223,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-08T00:06:33",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|BCHUSDT|2026-07-08 00:45:00",
+      "symbol": "BCHUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 241.2,
+      "stop": 237.379,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-08T00:59:53",
       "closed_at": null,
       "realized_pct": 0.0
     }

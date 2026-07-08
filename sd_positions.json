@@ -130,5 +130,38 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-07T16:27:29"
+  },
+  "BCHUSDT": {
+    "symbol": "BCHUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      241.2
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 300.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 241.24124021896438,
+        "qty": 1.24356847,
+        "usd": 300.0
+      }
+    ],
+    "avg_entry": 241.24124021896438,
+    "entry": 241.24124021896438,
+    "init_stop": 237.379,
+    "stop": 237.379,
+    "R": 3.862240218964388,
+    "tp1": 242.8064,
+    "tp2": 244.0866,
+    "qty": 1.24356847,
+    "qty_open": 1.24356847,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-08T01:02:51"
   }
 }
