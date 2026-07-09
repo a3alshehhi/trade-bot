@@ -40,16 +40,20 @@ bx = bybit_exec          # المنصّة النشطة حالياً (تُبدَ�
 # ── إعدادات ──────────────────────────────────────────────────────────────────
 RISK_PCT = float(os.environ.get("SD_RISK_PCT", "0.005"))     # 0.5% لكل صفقة (غير مستخدم عند تثبيت القيمة)
 ORDER_USD = float(os.environ.get("SD_ORDER_USD", "300"))     # قيمة ثابتة لكل أمر شراء (USDT)
-MAX_CONCURRENT = int(os.environ.get("SD_MAX_POS", "15"))       # حد المراكز المتزامنة
+MAX_CONCURRENT = int(os.environ.get("SD_MAX_POS", "15"))      # حد المراكز المتزامنة (بايبت)
 
 # ── إعدادات خاصّة ببايننس (2026-07-03، بطلب بو محمد) ──────────────────────────
 # بايننس Demo = مثل بايبت تماماً في الإدارة والإغلاق (50/50)، لكن بحجم أمر 100$.
 # (سابقاً كان شراء-فقط؛ أُلغي بطلب بو محمد ليغلق الصفقات مثل بايبت.)
 BINANCE_ORDER_USD = float(os.environ.get("BINANCE_ORDER_USD", "100"))
 BINANCE_BUY_ONLY = os.environ.get("BINANCE_BUY_ONLY", "0") == "1"   # 0 = إدارة كاملة مثل بايبت
-BINANCE_MAX_POS = int(os.environ.get("BINANCE_MAX_POS", "10"))       # نفس حدّ بايبت
+BINANCE_MAX_POS = int(os.environ.get("BINANCE_MAX_POS", "10"))      # حد مراكز بايننس
 FEE_RATE = 0.001                                              # عمولة تقديرية للطرف الواحد
 LOCK_R   = float(os.environ.get("SD_LOCK_R", "0.3"))          # قفل ربح: الوقف = الدخول + LOCK_R×R بعد الهدف1 (بدل التعادل)
+# كشف تسليح +1R عبر قمة آخر شمعة بدل last_price فقط (المسار أ — فجوة اللقطة 2026-07-09).
+# البيع يبقى سوقياً؛ فقط اكتشاف بلوغ +1R يقرأ القمة ليُسلّح الوقف مبكراً. باك-تست: +10.4R(15m)/+9.7R(1h).
+# للتعطيل: SD_ARM_ON_HIGH=0.
+ARM_ON_HIGH = os.environ.get("SD_ARM_ON_HIGH", "1") == "1"
 POS_PATH = os.environ.get("SD_POS", "sd_positions.json")
 LEDGER_PATH = os.environ.get("SD_LEDGER", "sd_ledger.json")
 EXEC_PATH = os.environ.get("SD_EXECUTED", "sd_executed.json")
@@ -445,8 +449,31 @@ def _record_exit(pos, qty, price, reason):
     return pnl
 
 
+_HIGH_CACHE = {}   # (sym, tf) -> أعلى قمة لآخر شمعتين، ضمن دورة الإدارة الواحدة
+
+def _recent_high(sym, tf):
+    """أعلى قمة لآخر شمعتين (المكتملة + المتشكّلة) على فريم المركز — لكشف لمسة +1R اللحظية.
+       يعيد None عند الفشل (تتراجع الإدارة إلى last_price وحده). للقراءة فقط، لا يؤثّر على البيع."""
+    if not ARM_ON_HIGH or not tf:
+        return None
+    key = (sym, tf)
+    if key in _HIGH_CACHE:
+        return _HIGH_CACHE[key]
+    hi = None
+    try:
+        import sd_bot
+        d = sd_bot.fetch_klines(sym, tf, 1)
+        if d and d.get("h"):
+            hi = max(d["h"][-2:])            # آخر شمعتين
+    except Exception:
+        hi = None
+    _HIGH_CACHE[key] = hi
+    return hi
+
+
 def manage_open_positions():
     """يفحص كل مركز مفتوح ويطبّق آلة الحالة 50/50 (وقف/هدف1/تتبّع/هدف2)."""
+    _HIGH_CACHE.clear()
     if not is_enabled():
         return
     positions = load_positions()
@@ -527,9 +554,15 @@ def _manage_one(sym, positions):
     # (4) وقف الخسارة المتحرّك حسب *متوسط الدخول*:
     #     يُسلَّح عند تحقّق ربح 1R فوق المتوسط → ينتقل الوقف للمتوسط (تعادل)،
     #     ثم يتتبّع صعوداً (price − R) ولا ينزل أبداً.
-    if not pos.get("armed") and price >= entry + R:
+    # كشف بلوغ +1R عبر قمة آخر شمعة (لا last_price فقط) — يلتقط الذيل اللحظي فيُسلّح مبكراً.
+    arm_px = price
+    if not pos.get("armed"):
+        rh = _recent_high(sym, pos.get("tf", ""))
+        if rh is not None and rh > arm_px:
+            arm_px = rh
+    if not pos.get("armed") and arm_px >= entry + R:
         pos["armed"] = True
-        lock = entry + LOCK_R * R              # السعر عند +1R، فقفل +0.3R آمن تحته
+        lock = entry + LOCK_R * R              # بلوغ +1R، فقفل +0.3R آمن تحته
         if lock > pos["stop"]:
             pos["stop"] = lock
         changed = True
@@ -616,7 +649,7 @@ def reconcile(apply=False):
             base = sym[:-4] if sym.endswith("USDT") else sym.replace("USDT", "")
             amt = coins.get(base, {}).get("amount", 0.0)
             tracked = pos.get("qty_open", pos.get("qty", 0)) or 0
-            if tracked > 0 and amt < 0.02 * tracked:
+            if tracked > 0 and amt < 0.02 * tracked:      # يحمل <2% من الكمية = مغلق فعلاً
                 phantoms.append(sym)
         tracked_bases = {(s[:-4] if s.endswith("USDT") else s.replace("USDT", "")) for s in positions}
         orphans = [f"{c}(≈{v.get('usd_value', 0):.0f}$)" for c, v in coins.items()
