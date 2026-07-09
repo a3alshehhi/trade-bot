@@ -142,7 +142,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-09 15:59:59.999000",
+    "last_bar": "2026-07-09 22:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.066,
@@ -367,7 +367,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-07 16:00:00",
-    "last_bar": "2026-07-09 15:59:59.999000",
+    "last_bar": "2026-07-09 22:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.417,
@@ -615,5 +615,43 @@
     "exit_price": 0.0589596,
     "close_card_sent": true,
     "closed_at": "2026-07-09T16:29:35"
+  },
+  "العرض/الطلب|1000SATSUSDT|2026-07-09 23:15:00": {
+    "symbol": "1000SATSUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4696,
+    "entry": 9.43e-06,
+    "stop": 9.35e-06,
+    "init_stop": 9.35e-06,
+    "cur_stop": 9.43e-06,
+    "legs": [
+      9.43e-06,
+      9.42e-06,
+      9.41e-06,
+      9.39e-06
+    ],
+    "last_alert_stop": 9.43e-06,
+    "armed": false,
+    "targets": [
+      9.5e-06,
+      9.53e-06
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-09 23:15:00",
+    "last_bar": "2026-07-09 23:29:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": false,
+    "hi_seen": 9.51e-06,
+    "lo_seen": 9.4e-06,
+    "created": "2026-07-09T23:27:15"
   }
 }
