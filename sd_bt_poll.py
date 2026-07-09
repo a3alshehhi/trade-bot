@@ -8,12 +8,15 @@
 موجود حيّاً (السطر 530) لكنه لا يُطلَق لأن اللقطة لا ترى الذيل.
 
 هذا السكربت يشغّل *نفس آلة حالة الخروج الحيّة بالضبط* (وقف → هدف1 50% + قفل LOCK_R →
-هدف2 → تسليح +1R قبل الهدف1 + تتبّع price−R) تحت وضعين لكل صفقة:
+هدف2 → تسليح +1R قبل الهدف1 + تتبّع price−R) تحت ثلاثة أوضاع لكل صفقة:
 
-  close = المشغّلات كلها على إغلاق الشمعة c[i]  (محاكاة last_price لحظة الفحص)
-  hl    = المشغّلات الصاعدة على القمة h[i] والوقف على القاع l[i]  (رؤية الذيول = الباك-تست)
+  close   = كل المشغّلات والملء على إغلاق الشمعة c[i]  (محاكاة last_price لحظة الفحص — الواقع الحالي)
+  armhigh = كشف تسليح +1R عبر قمة الشمعة h[i]، لكن كل الملء (وقف/هدف/بيع) سوقيّ على c[i]
+            (المسار (أ): يقرأ القمة ليُسلّح الوقف مبكراً ثم يبيع سوقياً على النزول — قابل للتحقيق بلا أوامر راكدة)
+  hl      = المشغّلات الصاعدة والملء على القمة h[i] والوقف على القاع l[i]  (سقف نظري يتطلّب أوامر راكدة)
 
-الفرق بين الوضعين = تكلفة عمى الذيول. الدخول مثبّت (نفس setup_features + الفلاتر + DCA).
+الفروق: armhigh−close = المكسب القابل للتحقيق فعلاً؛ hl−armhigh = الجزء الذي يتطلّب أوامر راكدة.
+الدخول مثبّت (نفس setup_features + الفلاتر + DCA).
 الناتج بوحدات R (خام). فريم عبر SD_ENTRY_TF/SD_HTF، فلتر عبر SD_TREND_MA.
 يُشغَّل على GitHub Actions (الساندبوكس محجوب عن Binance).
 """
@@ -86,53 +89,57 @@ def base_filter_ok(f, c, ma, tch, max_dist, CFG):
 
 
 def sim_live(avg, stop, tp1, tp2, h, l, c, tch, hold, mode):
-    """يحاكي آلة حالة الخروج الحيّة (sd_autotrade._manage_one) شمعةً شمعة.
-       mode='close' → كل المشغّلات على c[i]؛ mode='hl' → الصاعدة على h[i] والوقف على l[i].
-       الترتيب داخل كل فحص مطابق للحيّ: وقف → هدف1 → هدف2 → تسليح/تتبّع. الناتج بوحدات R."""
+    """يحاكي آلة حالة الخروج الحيّة (sd_autotrade._manage_one) شمعةً شمعة تحت ثلاثة أوضاع.
+       الترتيب داخل كل فحص مطابق للحيّ: وقف → هدف1 → هدف2 → تسليح/تتبّع. الناتج بوحدات R.
+       الملء واقعيّ (سوقيّ على c[i]) في close/armhigh؛ وعند مستوى الأمر في hl فقط."""
     R = avg - stop
     if R <= 0:
         return None
-    r1 = (tp1 - avg) / R
-    r2 = (tp2 - avg) / R
-    if r1 <= 0:
+    if (tp1 - avg) / R <= 0:
         return None
+    hl = (mode == "hl")
     end = min(len(c), tch + hold)
     sl = stop
     tp1_done = False
     armed = False
     realized = 0.0
     for i in range(tch, end):
-        up = h[i] if mode == "hl" else c[i]      # سعر المشغّلات الصاعدة
-        dn = l[i] if mode == "hl" else c[i]      # سعر فحص الوقف
-        # (1) الوقف أولاً
-        if dn <= sl:
+        cpx = c[i]
+        stop_px = l[i] if hl else cpx            # كشف الوقف
+        up = h[i] if hl else cpx                 # كشف الهدف
+        arm_px = h[i] if mode in ("armhigh", "hl") else cpx   # كشف تسليح +1R
+        # (1) الوقف أولاً — الملء عند مستوى الوقف في hl، وسوقيّ (c[i]) خلاف ذلك
+        if stop_px <= sl:
+            fill = sl if hl else cpx
             frac = 0.5 if tp1_done else 1.0
-            return realized + frac * ((sl - avg) / R)
+            return realized + frac * ((fill - avg) / R)
         # (2) الهدف الأول: بيع 50% + قفل
         if not tp1_done and up >= tp1:
+            fill = tp1 if hl else cpx
+            realized += 0.5 * ((fill - avg) / R)
             tp1_done = True
-            realized += 0.5 * r1
+            armed = True
             lock = avg + LOCK_R * R
-            if r1 <= LOCK_R:
+            if (tp1 - avg) / R <= LOCK_R:
                 lock = avg
             sl = max(sl, lock)
-            armed = True
         # (3) الهدف الثاني للنصف الباقي
         if tp1_done and up >= tp2:
-            return realized + 0.5 * r2
-        # (4) تسليح +1R قبل الهدف1 + تتبّع price−R
-        if not armed and up >= avg + R:
+            fill = tp2 if hl else cpx
+            return realized + 0.5 * ((fill - avg) / R)
+        # (4) تسليح +1R قبل الهدف1 (يُكتشف بالقمة في armhigh/hl) + تتبّع
+        if not armed and arm_px >= avg + R:
             armed = True
             lock = avg + LOCK_R * R
             if lock > sl:
                 sl = lock
         if armed:
-            trail = up - R
+            trail = (h[i] if hl else cpx) - R    # التتبّع سوقيّ (c[i]) خارج hl
             if trail > sl:
                 sl = trail
-    X = c[end - 1]                                # إغلاق زمني
+    fill = c[end - 1]                            # إغلاق زمني (سوقيّ)
     frac = 0.5 if tp1_done else 1.0
-    return realized + frac * ((X - avg) / R)
+    return realized + frac * ((fill - avg) / R)
 
 
 def run_frame():
@@ -173,16 +180,21 @@ def run_frame():
     print(f"════ فجوة اللقطة — الفريم {tf} (سياق {htf}) — فلتر {ma_label} — صفقات={len(trades)} ════",
           flush=True)
     res = {}
-    for mode, name in (("close", "close (last_price)"), ("hl", "hl (يرى الذيول)")):
+    for mode, name in (("close", "close (last_price الحالي)"),
+                       ("armhigh", "armhigh (كشف+1R بالقمة)"),
+                       ("hl", "hl (سقف نظري)")):
         rs = []
         for (avg, stop, tp1, tp2, h, l, c, tch) in trades:
             r = sim_live(avg, stop, tp1, tp2, h, l, c, tch, hold, mode)
             if r is not None:
                 rs.append(r)
         res[mode] = rs
-        print(f"  {name:22s}: {S._stats(rs)}", flush=True)
-    gap = sum(res["hl"]) - sum(res["close"])
-    print(f"\n  فجوة الذيول (hl − close): {gap:+.1f}R  → كم يخسره الحيّ لأنه لا يرى الذيول",
+        print(f"  {name:26s}: {S._stats(rs)}", flush=True)
+    achievable = sum(res["armhigh"]) - sum(res["close"])
+    ceiling = sum(res["hl"]) - sum(res["armhigh"])
+    print(f"\n  المكسب القابل للتحقيق (armhigh − close): {achievable:+.1f}R  ← المسار (أ)",
+          flush=True)
+    print(f"  الجزء الذي يتطلّب أوامر راكدة (hl − armhigh): {ceiling:+.1f}R",
           flush=True)
 
 
