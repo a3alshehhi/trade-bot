@@ -576,5 +576,38 @@
     "exit_price": 63250.27566,
     "close_card_sent": true,
     "closed_at": "2026-07-09T08:45:06"
+  },
+  "العرض/الطلب|ADXUSDT|2026-07-09 09:00:00": {
+    "symbol": "ADXUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "1h",
+    "message_id": 4682,
+    "entry": 0.0561,
+    "stop": 0.055113,
+    "init_stop": 0.055113,
+    "cur_stop": 0.055113,
+    "legs": [
+      0.0561
+    ],
+    "last_alert_stop": 0.055113,
+    "armed": false,
+    "targets": [
+      0.0581984,
+      0.0589596
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-09 09:00:00",
+    "last_bar": "2026-07-09 09:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0561,
+    "lo_seen": 0.0561,
+    "created": "2026-07-09T09:44:21"
   }
 }
