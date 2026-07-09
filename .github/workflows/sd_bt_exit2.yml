@@ -1,0 +1,60 @@
+name: SD Exit Variants (R-capped first target)
+
+on:
+  workflow_dispatch:
+    inputs:
+      basket:
+        description: "عدد رموز الكريبتو"
+        default: '40'
+      max_ema_dist:
+        description: "أقصى بُعد فوق المتوسط"
+        default: '0.06'
+      trend_ma:
+        description: "فلتر الاتجاه"
+        type: choice
+        default: 'sma50'
+        options:
+          - live
+          - sma50
+          - sma100
+          - sma200
+          - ema50
+          - ema100
+          - ema200
+
+permissions:
+  contents: read
+
+jobs:
+  exit2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: pip install requests scikit-learn joblib
+      - name: Exit variants 15m (context 1h)
+        env:
+          SD_ENTRY_TF: 15m
+          SD_HTF: 1h
+          SD_BASKET: ${{ inputs.basket }}
+          SD_MAX_EMA_DIST: ${{ inputs.max_ema_dist }}
+          SD_TREND_MA: ${{ inputs.trend_ma }}
+        run: python sd_bt_exit2.py 2>&1 | tee -a sd_bt_exit2_log.txt
+      - name: Exit variants 1h (context 4h)
+        env:
+          SD_ENTRY_TF: 1h
+          SD_HTF: 4h
+          SD_BASKET: ${{ inputs.basket }}
+          SD_MAX_EMA_DIST: ${{ inputs.max_ema_dist }}
+          SD_TREND_MA: ${{ inputs.trend_ma }}
+        run: python sd_bt_exit2.py 2>&1 | tee -a sd_bt_exit2_log.txt
+      - name: Upload log artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sd-bt-exit2-log
+          path: sd_bt_exit2_log.txt
+          if-no-files-found: ignore
