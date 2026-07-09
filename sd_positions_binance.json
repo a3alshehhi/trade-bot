@@ -130,5 +130,38 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-09T00:00:07"
+  },
+  "BTCUSDT": {
+    "symbol": "BTCUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      62624.61
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 62956.0377988051,
+        "qty": 0.00158841,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 62956.0377988051,
+    "entry": 62956.0377988051,
+    "init_stop": 62147.5769,
+    "stop": 62147.5769,
+    "R": 808.4608988050968,
+    "tp1": 63033.37864,
+    "tp2": 63250.27566,
+    "qty": 0.00158841,
+    "qty_open": 0.00158841,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-09T06:50:38"
   }
 }

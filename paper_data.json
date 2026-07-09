@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-09T06:25:26",
+  "updated_at": "2026-07-09T06:49:15",
   "stats": {
-    "open": 2,
+    "open": 3,
     "closed": 12,
     "win_rate": 33.3,
     "profit_factor": 0.37,
@@ -280,6 +280,20 @@
       "closed_at": "2026-07-09T01:30:30",
       "realized_pct": 0.32,
       "result_pct": 0.32
+    },
+    {
+      "id": "العرض/الطلب|BTCUSDT|2026-07-09 06:30:00",
+      "symbol": "BTCUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 62624.61,
+      "stop": 62147.5769,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-09T06:45:10",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
