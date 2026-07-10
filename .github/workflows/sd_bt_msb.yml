@@ -12,6 +12,13 @@ on:
       msb_pivr:
         description: "بنية داخلية — pivR"
         default: '1'
+      msb_mode:
+        description: "وضع MSB"
+        type: choice
+        default: 'choch'
+        options:
+          - choch
+          - bos
       max_ema_dist:
         description: "أقصى بُعد فوق المتوسط"
         default: '0.06'
@@ -48,6 +55,7 @@ jobs:
           SD_BASKET: ${{ inputs.basket }}
           SD_MSB_PIVL: ${{ inputs.msb_pivl }}
           SD_MSB_PIVR: ${{ inputs.msb_pivr }}
+          SD_MSB_MODE: ${{ inputs.msb_mode }}
           SD_MAX_EMA_DIST: ${{ inputs.max_ema_dist }}
           SD_TREND_MA: ${{ inputs.trend_ma }}
         run: python sd_bt_msb.py 2>&1 | tee -a sd_bt_msb_log.txt
@@ -58,6 +66,7 @@ jobs:
           SD_BASKET: ${{ inputs.basket }}
           SD_MSB_PIVL: ${{ inputs.msb_pivl }}
           SD_MSB_PIVR: ${{ inputs.msb_pivr }}
+          SD_MSB_MODE: ${{ inputs.msb_mode }}
           SD_MAX_EMA_DIST: ${{ inputs.max_ema_dist }}
           SD_TREND_MA: ${{ inputs.trend_ma }}
         run: python sd_bt_msb.py 2>&1 | tee -a sd_bt_msb_log.txt
