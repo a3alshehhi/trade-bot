@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-10T09:36:50",
+  "updated_at": "2026-07-10T10:00:27",
   "stats": {
-    "open": 5,
+    "open": 6,
     "closed": 16,
     "win_rate": 50.0,
     "profit_factor": 0.77,
@@ -379,11 +379,13 @@
       "timeframe": "1h",
       "entry": 1759.82,
       "stop": 1725.6325,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-10T02:41:23",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.85
     },
     {
       "id": "العرض/الطلب|CGPTUSDT|2026-07-10 03:15:00",
@@ -399,9 +401,23 @@
       ],
       "status": "closed",
       "opened_at": "2026-07-10T03:29:47",
-      "closed_at": "2026-07-10T09:36:50",
+      "closed_at": "2026-07-10T09:13:10",
       "realized_pct": 1.96,
       "result_pct": 1.96
+    },
+    {
+      "id": "العرض/الطلب|ATOMUSDT|2026-07-10 09:00:00",
+      "symbol": "ATOMUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 1.574,
+      "stop": 1.53818,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-10T10:00:22",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
