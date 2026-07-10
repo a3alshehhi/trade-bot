@@ -687,7 +687,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-10 01:45:00",
-    "last_bar": "2026-07-10 09:59:59.999000",
+    "last_bar": "2026-07-10 10:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.013,
@@ -722,7 +722,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-10 02:00:00",
-    "last_bar": "2026-07-10 09:59:59.999000",
+    "last_bar": "2026-07-10 10:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 6.834,
@@ -805,39 +805,6 @@
     "created": "2026-07-10T03:29:47",
     "exit_price": 0.019479,
     "close_card_sent": true,
-    "closed_at": "2026-07-10T09:13:10"
-  },
-  "العرض/الطلب|ATOMUSDT|2026-07-10 09:00:00": {
-    "symbol": "ATOMUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "1h",
-    "message_id": 4717,
-    "entry": 1.574,
-    "stop": 1.53818,
-    "init_stop": 1.53818,
-    "cur_stop": 1.53818,
-    "legs": [
-      1.574
-    ],
-    "last_alert_stop": 1.53818,
-    "armed": false,
-    "targets": [
-      1.599968,
-      1.615192
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-10 09:00:00",
-    "last_bar": "2026-07-10 09:59:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 1.588,
-    "lo_seen": 1.571,
-    "created": "2026-07-10T10:00:22"
+    "closed_at": "2026-07-10T09:36:50"
   }
 }

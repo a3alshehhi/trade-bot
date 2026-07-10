@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-10T10:00:27",
+  "updated_at": "2026-07-10T10:24:06",
   "stats": {
-    "open": 6,
+    "open": 5,
     "closed": 16,
     "win_rate": 50.0,
     "profit_factor": 0.77,
@@ -401,23 +401,9 @@
       ],
       "status": "closed",
       "opened_at": "2026-07-10T03:29:47",
-      "closed_at": "2026-07-10T09:13:10",
+      "closed_at": "2026-07-10T09:36:50",
       "realized_pct": 1.96,
       "result_pct": 1.96
-    },
-    {
-      "id": "العرض/الطلب|ATOMUSDT|2026-07-10 09:00:00",
-      "symbol": "ATOMUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 1.574,
-      "stop": 1.53818,
-      "hits": [],
-      "status": "open",
-      "opened_at": "2026-07-10T10:00:22",
-      "closed_at": null,
-      "realized_pct": 0.0
     }
   ]
 }
