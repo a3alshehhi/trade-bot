@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-10T02:19:26",
+  "updated_at": "2026-07-10T02:41:28",
   "stats": {
-    "open": 3,
+    "open": 5,
     "closed": 15,
     "win_rate": 46.7,
     "profit_factor": 0.68,
@@ -344,16 +344,44 @@
       "result_pct": 0.9
     },
     {
-      "id": "العرض/الطلب|BTCUSDT|2026-07-10 02:00:00",
-      "symbol": "BTCUSDT",
+      "id": "العرض/الطلب|ARUSDT|2026-07-10 01:45:00",
+      "symbol": "ARUSDT",
       "label": "العرض/الطلب",
       "side": "buy",
       "timeframe": "15m",
-      "entry": 63418.0,
-      "stop": 62832.4331,
+      "entry": 1.987,
+      "stop": 1.95643,
       "hits": [],
       "status": "open",
-      "opened_at": "2026-07-10T02:16:39",
+      "opened_at": "2026-07-10T01:57:12",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "عرض/طلب+دايفرجنس|AVAXUSDT|2026-07-10 02:00:00",
+      "symbol": "AVAXUSDT",
+      "label": "عرض/طلب+دايفرجنس",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 6.735,
+      "stop": 6.65588,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-10T02:08:58",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ETHUSDT|2026-07-10 02:00:00",
+      "symbol": "ETHUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 1759.82,
+      "stop": 1725.6325,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-10T02:41:23",
       "closed_at": null,
       "realized_pct": 0.0
     }
