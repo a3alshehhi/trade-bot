@@ -20,6 +20,10 @@
 
 الفريم عبر SD_ENTRY_TF/SD_HTF، فلتر الاتجاه عبر SD_TREND_MA، حجم عيّنة الفحص عبر SD_LEAK_SAMPLE.
 يُشغَّل على GitHub Actions (الساندبوكس محجوب عن Binance).
+
+إضافة (2026-07-10، طلب بو محمد): SD_REQUIRE_DIV=1 يقصر التشخيص على عيّنة صفقات الدايفرجنس
+الصعودي فقط (bulldiv، بشرط تحت SMA(n) عبر SD_DIV_BELOW_MA) بدل خط الأساس — لفحص تسريب
+مستقبل خاص بعيّنة الـ5m الصغيرة (31 صفقة) التي أظهرت تحسّناً في التوقّع.
 """
 import os
 import math
@@ -98,6 +102,8 @@ def base_filter_ok(f, c, ma, tch, max_dist, CFG):
         return False
     if f["heightATR"] > CFG["max_height_atr"] or f["barsToTouch"] > CFG["max_bars_to_touch"]:
         return False
+    if CFG["require_div"] and not f.get("bulldiv"):   # دايفرجنس صعودي (+ شرط تحت SMA عبر SD_DIV_BELOW_MA)
+        return False
     return True
 
 
@@ -167,7 +173,9 @@ def run_frame():
     leak_sample = int(os.environ.get("SD_LEAK_SAMPLE", "40"))
     basket = S.parse_watchlist_crypto(S.WATCHLIST)[:limit]
 
-    print(f"diag SD | tf={tf} htf={htf} | {len(basket)} رمز | hold={hold} | فلتر اتجاه={ma_label}",
+    div_tag = (f" | دايفرجنس مفعّل (تحت SMA{CFG['div_below_ma']})" if CFG["require_div"] and CFG["div_below_ma"]
+                else " | دايفرجنس مفعّل (بلا شرط تحت متوسط)" if CFG["require_div"] else "")
+    print(f"diag SD | tf={tf} htf={htf} | {len(basket)} رمز | hold={hold} | فلتر اتجاه={ma_label}{div_tag}",
           flush=True)
 
     trades = []          # (sym, j, tch, entry_orig, avg, stop, tp1, tp2)
@@ -223,7 +231,7 @@ def run_frame():
         return (sum(1 for x in vals if x >= thr) / len(vals) * 100) if vals else float("nan")
 
     print("", flush=True)
-    print(f"════ تشخيص الفريم {tf} (سياق {htf}) — فلتر {ma_label} ════", flush=True)
+    print(f"════ تشخيص الفريم {tf} (سياق {htf}) — فلتر {ma_label}{div_tag} ════", flush=True)
     print(f"صفقات={len(trades)} · رابحة={n_win} · خاسرة={n_los} · متعادلة={n_scr}", flush=True)
     print("  MAE (غوص ضدّك قبل الحسم):", flush=True)
     dist("الرابحة", win_mae)
