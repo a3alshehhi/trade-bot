@@ -658,61 +658,25 @@
     "close_card_sent": true,
     "closed_at": "2026-07-10T00:52:43"
   },
-  "العرض/الطلب|ARUSDT|2026-07-10 01:45:00": {
-    "symbol": "ARUSDT",
+  "العرض/الطلب|BTCUSDT|2026-07-10 02:00:00": {
+    "symbol": "BTCUSDT",
     "label": "العرض/الطلب",
     "timeframe": "15m",
-    "message_id": 4697,
-    "entry": 1.987,
-    "stop": 1.95643,
-    "init_stop": 1.95643,
-    "cur_stop": 1.95643,
+    "message_id": 4701,
+    "entry": 63418.0,
+    "stop": 62832.4331,
+    "init_stop": 62832.4331,
+    "cur_stop": 62832.4331,
     "legs": [
-      1.987,
-      1.983,
-      1.977808,
-      1.970416
+      63418.0,
+      63336.27036,
+      63155.84172
     ],
-    "last_alert_stop": 1.95643,
+    "last_alert_stop": 62832.4331,
     "armed": false,
     "targets": [
-      2.016968,
-      2.032192
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-10 01:45:00",
-    "last_bar": "2026-07-10 01:45:00",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 1.987,
-    "lo_seen": 1.987,
-    "created": "2026-07-10T01:57:12"
-  },
-  "عرض/طلب+دايفرجنس|AVAXUSDT|2026-07-10 02:00:00": {
-    "symbol": "AVAXUSDT",
-    "label": "عرض/طلب+دايفرجنس",
-    "timeframe": "15m",
-    "message_id": 4698,
-    "entry": 6.735,
-    "stop": 6.65588,
-    "init_stop": 6.65588,
-    "cur_stop": 6.65588,
-    "legs": [
-      6.735,
-      6.724154,
-      6.699458
-    ],
-    "last_alert_stop": 6.65588,
-    "armed": false,
-    "targets": [
-      6.854984,
-      6.905846
+      64292.11256,
+      64663.70964
     ],
     "tp_split": [
       50,
@@ -725,8 +689,8 @@
     "last_bar": "2026-07-10 02:00:00",
     "hits": [],
     "stopped": false,
-    "hi_seen": 6.735,
-    "lo_seen": 6.735,
-    "created": "2026-07-10T02:08:58"
+    "hi_seen": 63418.0,
+    "lo_seen": 63418.0,
+    "created": "2026-07-10T02:16:39"
   }
 }
