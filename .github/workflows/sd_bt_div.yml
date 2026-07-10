@@ -38,6 +38,15 @@ jobs:
           python-version: '3.11'
       - name: Install deps
         run: pip install requests scikit-learn joblib
+      - name: Backtest 5m (context 1h)
+        env:
+          SD_ENTRY_TF: 5m
+          SD_HTF: 1h
+          SD_BASKET: ${{ inputs.basket }}
+          SD_OS_LOOKBACK: ${{ inputs.os_lookback }}
+          SD_MAX_EMA_DIST: ${{ inputs.max_ema_dist }}
+          SD_TREND_MA: ${{ inputs.trend_ma }}
+        run: python sd_bt_div.py 2>&1 | tee -a sd_bt_div_log.txt
       - name: Backtest 15m (context 1h)
         env:
           SD_ENTRY_TF: 15m
