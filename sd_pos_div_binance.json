@@ -31,5 +31,38 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-10T02:13:18"
+  },
+  "API3USDT": {
+    "symbol": "API3USDT",
+    "tf": "15m",
+    "label": "عرض/طلب+دايفرجنس",
+    "prob": null,
+    "levels": [
+      0.2258
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.2267272935449606,
+        "qty": 441.0585,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.2267272935449606,
+    "entry": 0.2267272935449606,
+    "init_stop": 0.223575,
+    "stop": 0.223575,
+    "R": 0.003152293544960605,
+    "tp1": 0.22718,
+    "tp2": 0.228045,
+    "qty": 441.0585,
+    "qty_open": 441.0585,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-10T21:56:52"
   }
 }

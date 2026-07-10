@@ -816,5 +816,79 @@
     "exit_price": 0.019479,
     "close_card_sent": true,
     "closed_at": "2026-07-10T09:36:50"
+  },
+  "العرض/الطلب|DIAUSDT|2026-07-10 21:30:00": {
+    "symbol": "DIAUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4724,
+    "entry": 0.1091,
+    "stop": 0.107523,
+    "init_stop": 0.107523,
+    "cur_stop": 0.107523,
+    "legs": [
+      0.1091,
+      0.1087652,
+      0.1086,
+      0.1084348,
+      0.1081996
+    ],
+    "last_alert_stop": 0.107523,
+    "armed": false,
+    "targets": [
+      0.1096808,
+      0.1101652
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-10 21:30:00",
+    "last_bar": "2026-07-10 21:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1091,
+    "lo_seen": 0.1091,
+    "created": "2026-07-10T21:34:57"
+  },
+  "عرض/طلب+دايفرجنس|API3USDT|2026-07-10 21:45:00": {
+    "symbol": "API3USDT",
+    "label": "عرض/طلب+دايفرجنس",
+    "timeframe": "15m",
+    "message_id": 4726,
+    "entry": 0.2258,
+    "stop": 0.223575,
+    "init_stop": 0.223575,
+    "cur_stop": 0.223575,
+    "legs": [
+      0.2258,
+      0.225545,
+      0.22525,
+      0.224955,
+      0.224535
+    ],
+    "last_alert_stop": 0.223575,
+    "armed": false,
+    "targets": [
+      0.22718,
+      0.228045
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-10 21:45:00",
+    "last_bar": "2026-07-10 21:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.2258,
+    "lo_seen": 0.2258,
+    "created": "2026-07-10T21:51:33"
   }
 }
