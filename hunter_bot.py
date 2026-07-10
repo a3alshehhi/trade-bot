@@ -24,6 +24,7 @@
 تنبيه: أداة تحليل تعليمية. لا تنفّذ صفقات بأموال حقيقية افتراضياً. التداول مخاطرة، وليست نصيحة مالية.
 """
 import os, sys, time, math, json, datetime as dt
+from collections import deque
 import requests
 
 # ----------------------- إعدادات الاستراتيجية -----------------------
@@ -79,6 +80,18 @@ CFG["rsi_ob"]     = float(os.environ.get("HUNTER_RSI_OB", CFG["rsi_ob"]))
 CFG["vol_entry_z"] = float(os.environ.get("HUNTER_VOL_Z", CFG["vol_entry_z"]))
 CFG["trail_atr"]  = float(os.environ.get("HUNTER_TRAIL_ATR", CFG["trail_atr"]))
 CFG["tp1_frac"]   = float(os.environ.get("HUNTER_TP1_FRAC", CFG["tp1_frac"]))
+CFG["bt_symbols"] = int(os.environ.get("HUNTER_BT_SYMBOLS", 40))   # عدد رموز الباك-تست (قاعدة الإحياء: 40+)
+
+# ── تجريبي (باك-تست فقط، معطّل افتراضياً): فلتر Extra High + دائرة دعم ──
+# مقتبس من مؤشري TradingView: Heatmap Volume [xdecow] (Z-score حجم) و
+# Volumatic Support/Resistance [BigBeluga] (مستويات دعم/مقاومة موزونة بالحجم).
+CFG["xh_len"]          = int(os.environ.get("HUNTER_XH_LEN", 610))     # طول قاعدة Z-score (كالمؤشر الأصلي)
+CFG["xh_thresh"]       = float(os.environ.get("HUNTER_XH_THRESH", 4.0))  # عتبة "Extra High"
+CFG["circle_len"]      = int(os.environ.get("HUNTER_CIRCLE_LEN", 25))    # نافذة تحديد سوينق الدعم
+CFG["circle_vol_window"] = int(os.environ.get("HUNTER_CIRCLE_VOLWIN", 500))  # نافذة أقصى حجم (للنسبة المئوية)
+CFG["circle_thresh"]   = float(os.environ.get("HUNTER_CIRCLE_THRESH", 80))   # عتبة الدائرة (% من الأقصى)
+CFG["require_xh"]      = int(os.environ.get("HUNTER_REQUIRE_XH", 0))     # 1 = إلزامي Extra High على شمعة الدخول
+CFG["require_circle"]  = int(os.environ.get("HUNTER_REQUIRE_CIRCLE", 0))  # 1 = إلزامي دائرة دعم ضمن نافذة التسلسل
 
 BINANCE_BASES = ["https://data-api.binance.vision", "https://api.binance.com"]
 WATCHLIST = "watchlist.txt"
@@ -204,6 +217,65 @@ def vwap_weekly(t, h, l, c, v):
         out[i] = (cum_pv/cum_v) if cum_v > 0 else float("nan")
     return out
 
+def vol_z_fast(v, L):
+    """نفس معادلة vol_z لكن O(n) بمجموع متحرّك — لازمة للنوافذ الطويلة (مثل 610)
+       تفادياً لبطء O(n×L) في الباك-تست. تُستخدم فقط لفلتر Extra High التجريبي."""
+    n = len(v)
+    out = [float("nan")] * n
+    s = s2 = 0.0
+    for i in range(n):
+        s += v[i]; s2 += v[i] * v[i]
+        if i >= L:
+            s -= v[i - L]; s2 -= v[i - L] * v[i - L]
+        if i >= L - 1:
+            m = s / L
+            var = s2 / L - m * m
+            sd = math.sqrt(var) if var > 0 else 0.0
+            out[i] = (v[i] - m) / sd if sd > 0 else 0.0
+    return out
+
+def _rolling_min(a, L):
+    out = [float("nan")] * len(a); dq = deque()
+    for i, x in enumerate(a):
+        while dq and a[dq[-1]] >= x:
+            dq.pop()
+        dq.append(i)
+        if dq[0] <= i - L:
+            dq.popleft()
+        out[i] = a[dq[0]]
+    return out
+
+def _rolling_max(a, L):
+    out = [float("nan")] * len(a); dq = deque()
+    for i, x in enumerate(a):
+        while dq and a[dq[-1]] <= x:
+            dq.pop()
+        dq.append(i)
+        if dq[0] <= i - L:
+            dq.popleft()
+        out[i] = a[dq[0]]
+    return out
+
+def pct_of_recent_max(v, window):
+    """يحاكي n_vol بمؤشر Volumatic S/R: نسبة حجم الشمعة من أقصى حجم بآخر window شمعة (≤100)."""
+    mx = _rolling_max(v, window)
+    out = [0.0] * len(v)
+    for i in range(len(v)):
+        out[i] = (v[i] / mx[i] * 100.0) if mx[i] and mx[i] > 0 else 0.0
+    return out
+
+def support_circle_hit(l, v, cfg, lo, hi):
+    """يحاكي «دائرة دعم» بمؤشر Volumatic S/R: يبحث ضمن [lo, hi] عن سوينق قاع مؤكّد
+       بتأخير شمعة واحدة (كالمؤشر الأصلي) بحجم n_vol أعلى من عتبة الدائرة."""
+    L = cfg["circle_len"]; TH = cfg["circle_thresh"]
+    lo_win = _rolling_min(l, L)
+    nvol = pct_of_recent_max(v, cfg["circle_vol_window"])
+    start = max(1, lo)
+    for i in range(start, hi + 1):
+        if lo_win[i - 1] == l[i - 1] and l[i] > lo_win[i - 1] and nvol[i - 1] > TH:
+            return True
+    return False
+
 def pivots(h, l, L, R):
     """يعيد قائمتين: قمم سوينق (ph) وقيعان سوينق (pl) كـ (index, price)."""
     ph, pl = [], []
@@ -273,6 +345,18 @@ def find_setup(sym, d1, d4):
     if CFG["momentum_gate"] and not (choch and above_ma and rsi_ob_hit and vol_entry):
         return None
 
+    # ── فلتر تجريبي (معطّل افتراضياً، للباك-تست فقط): Extra High + دائرة دعم ──
+    xh_ok = circle_ok = None
+    if CFG["require_xh"]:
+        VZX = vol_z_fast(v, CFG["xh_len"])
+        xh_ok = math.isfinite(VZX[last]) and VZX[last] > CFG["xh_thresh"]
+        if not xh_ok:
+            return None
+    if CFG["require_circle"]:
+        circle_ok = support_circle_hit(l, v, CFG, win0, last)
+        if not circle_ok:
+            return None
+
     # --- الدخول = إغلاق شمعة الفوليوم العالي (دخول استمرار الزخم) ---
     entry = price
     swing_base = min(l[win0:last+1])                    # أدنى قاع في نافذة التسلسل (أساس الساق)
@@ -312,6 +396,8 @@ def find_setup(sym, d1, d4):
     if vol_entry: reasons.append("دخول فوليوم عالٍ")
     if ema_bull: reasons.append("EMA صاعد")
     if htf_ok: reasons.append("سياق 1h غير هابط")
+    if xh_ok: reasons.append(f"Extra High (Z>{CFG['xh_thresh']})")
+    if circle_ok: reasons.append("دائرة دعم (حجم عالٍ عند القاع)")
 
     return dict(
         sym=sym, tf=CFG["entry_tf"], score=int(score),
@@ -662,7 +748,7 @@ def _stats(rs):
 def backtest(basket=None):
     """يقارن ٣ أنظمة خروج على نفس الإشارات (إدارة الخروج = أهم رافعة):
        (أ) 40/40/20 + تعادل  (ب) جني جزئي + وقف متحرّك شانديلير  (ج) وقف متحرّك كامل."""
-    basket = basket or parse_watchlist_crypto(WATCHLIST)[:30]
+    basket = basket or parse_watchlist_crypto(WATCHLIST)[:CFG["bt_symbols"]]
     hold = CFG["bt_hold"]
     rs_a, rs_b, rs_c = [], [], []
     print(f"باك-تست صيد الارتفاعات | tf={CFG['entry_tf']} htf={CFG['htf']} | {len(basket)} رمز | hold={hold} "
@@ -699,6 +785,58 @@ def backtest(basket=None):
     return {"static": rs_a, "trail_partial": rs_b, "trail_full": rs_c}
 
 
+# ----------------------- باك-تست فلتر Extra High + دائرة دعم (تجريبي) -----------------------
+def backtest_entry_filters(basket=None):
+    """يقارن 4 نسخ من الدخول (باستخدام نفس بوابة الزخم الحالية كأساس) — الأساس بدون
+       إضافة، Extra High فقط، دائرة دعم فقط، والتقاطع الكامل — كلها بنفس خطة الخروج
+       الحيّة المطبّقة حالياً (نظام ب: جني جزئي + وقف متحرّك شانديلير). لا تُطبَّق حياً."""
+    basket = basket or parse_watchlist_crypto(WATCHLIST)[:CFG["bt_symbols"]]
+    hold = CFG["bt_hold"]
+    min_hist = max(CFG["xh_len"] + 60, 700)   # يحتاج تاريخ يكفي لقاعدة Z-score الطويلة (610)
+    variants = [
+        ("baseline (بدون فلتر إضافي)", 0, 0),
+        ("Extra High فقط",              1, 0),
+        ("دائرة دعم فقط",                0, 1),
+        ("Extra High + دائرة دعم",       1, 1),
+    ]
+    print(f"باك-تست فلتر Extra High/دائرة دعم | tf={CFG['entry_tf']} htf={CFG['htf']} | {len(basket)} رمز | "
+          f"xh_len={CFG['xh_len']} xh_thresh={CFG['xh_thresh']} | circle_len={CFG['circle_len']} "
+          f"circle_thresh={CFG['circle_thresh']}")
+    results = {}
+    for name, rxh, rcirc in variants:
+        CFG["require_xh"] = rxh
+        CFG["require_circle"] = rcirc
+        rs = []; n_signals = 0
+        for s in basket:
+            try:
+                d1 = fetch_klines(s, CFG["entry_tf"], CFG["pages"])
+                d4 = fetch_klines(s, CFG["htf"], CFG["pages_htf"])
+                if not d1 or len(d1["c"]) < min_hist:
+                    continue
+                h, l, c = d1["h"], d1["l"], d1["c"]
+                A = atr(h, l, c, CFG["atr_len"])
+                N = len(c)
+                step = 3
+                for cut in range(min_hist - 50, N - hold, step):
+                    sub = {k: d1[k][:cut + 1] for k in ("t", "o", "h", "l", "c", "v")}
+                    sig = find_setup(s, sub, d4)
+                    if not sig or sig["score"] < CFG["min_score"]:
+                        continue
+                    n_signals += 1
+                    e, st = sig["entry"], sig["stop"]
+                    av = A[cut] if (A[cut] and math.isfinite(A[cut])) else (e - st)
+                    rb = _sim_trail_partial(e, st, sig["tp1"], av, h, l, c, cut, hold)
+                    if rb is not None:
+                        rs.append(rb)
+            except Exception as ex:
+                print("bt_filters skip", s, ex)
+            time.sleep(0.03)
+        print(f"[{name}] إشارات مؤهلة={n_signals} · {_stats(rs)}")
+        results[name] = {"n_signals": n_signals, "trades": rs}
+    CFG["require_xh"] = 0; CFG["require_circle"] = 0   # إعادة الافتراضي (بلا أثر حيّ أصلاً)
+    return results
+
+
 # ----------------------- تنفيذ تجريبي على بايبت/بايننس -----------------------
 def execute_signals(signals):
     """تنفيذ شراء تجريبي (Bybit Testnet / Binance Demo) لأعلى الإشارات، خلف أعلام بيئة.
@@ -731,6 +869,8 @@ def main():
     mode = sys.argv[1] if len(sys.argv) > 1 else "scan"
     if mode == "backtest":
         backtest()
+    elif mode == "backtest_filters":
+        backtest_entry_filters()
     elif mode == "monitor":
         monitor_positions()          # إدارة الخروج الحيّة (نظام ب) للمراكز المفتوحة
     elif mode == "exec":
