@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-10T14:31:17",
+  "updated_at": "2026-07-10T14:49:39",
   "stats": {
-    "open": 4,
-    "closed": 17,
-    "win_rate": 52.9,
-    "profit_factor": 0.88,
-    "total_pct": -2.93,
-    "avg_pct": -0.14,
+    "open": 2,
+    "closed": 19,
+    "win_rate": 47.4,
+    "profit_factor": 0.78,
+    "total_pct": -5.55,
+    "avg_pct": -0.27,
     "max_drawdown_pct": -17.09
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-10",
-        "trades": 3,
-        "win_rate": 100.0,
-        "return_pct": 5.09,
+        "trades": 5,
+        "win_rate": 60.0,
+        "return_pct": 2.26,
         "week": "2026-W28",
         "month": "2026-07"
       },
@@ -55,18 +55,18 @@
     "weekly": [
       {
         "key": "2026-W28",
-        "trades": 17,
-        "win_rate": 52.9,
-        "return_pct": -2.93,
+        "trades": 19,
+        "win_rate": 47.4,
+        "return_pct": -5.55,
         "month": "2026-07"
       }
     ],
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 17,
-        "win_rate": 52.9,
-        "return_pct": -2.93
+        "trades": 19,
+        "win_rate": 47.4,
+        "return_pct": -5.55
       }
     ]
   },
@@ -352,10 +352,11 @@
       "entry": 1.987,
       "stop": 1.95643,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-10T01:57:12",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-10T14:49:37",
+      "realized_pct": -1.54,
+      "result_pct": -1.54
     },
     {
       "id": "عرض/طلب+دايفرجنس|AVAXUSDT|2026-07-10 02:00:00",
@@ -366,10 +367,11 @@
       "entry": 6.735,
       "stop": 6.65588,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-10T02:08:58",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-10T14:49:38",
+      "realized_pct": -1.17,
+      "result_pct": -1.17
     },
     {
       "id": "العرض/الطلب|ETHUSDT|2026-07-10 02:00:00",
