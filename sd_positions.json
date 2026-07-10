@@ -97,5 +97,38 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-10T02:41:35"
+  },
+  "CGPTUSDT": {
+    "symbol": "CGPTUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.01902
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 300.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.019129129129130833,
+        "qty": 15682.88854003,
+        "usd": 300.0
+      }
+    ],
+    "avg_entry": 0.019129129129130833,
+    "entry": 0.019129129129130833,
+    "init_stop": 0.0186254,
+    "stop": 0.0186254,
+    "R": 0.0005037291291308324,
+    "tp1": 0.019306,
+    "tp2": 0.019479,
+    "qty": 15682.88854003,
+    "qty_open": 15682.88854003,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-10T03:34:03"
   }
 }
