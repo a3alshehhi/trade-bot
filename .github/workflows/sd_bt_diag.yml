@@ -38,6 +38,19 @@ jobs:
           python-version: '3.11'
       - name: Install deps
         run: pip install requests scikit-learn joblib
+      - name: Diagnostic 5m divergence sample (context 1h)
+        env:
+          SD_ENTRY_TF: 5m
+          SD_HTF: 1h
+          SD_BASKET: ${{ inputs.basket }}
+          SD_LEAK_SAMPLE: ${{ inputs.leak_sample }}
+          SD_MAX_EMA_DIST: ${{ inputs.max_ema_dist }}
+          SD_TREND_MA: ${{ inputs.trend_ma }}
+          SD_PAGES: '10'        # 10000 شمعة ≈ 35 يوم على 5m (يطابق باك-تست الدايفرجنس)
+          SD_BT_HOLD: '96'      # 96 شمعة = 8 ساعات (يطابق باك-تست الدايفرجنس)
+          SD_REQUIRE_DIV: '1'   # يشخّص فقط عيّنة الدايفرجنس (لا الأساس) — هذا هدف الفحص
+          SD_DIV_BELOW_MA: '50'
+        run: python sd_bt_diag.py 2>&1 | tee -a sd_bt_diag_log.txt
       - name: Diagnostic 15m (context 1h)
         env:
           SD_ENTRY_TF: 15m

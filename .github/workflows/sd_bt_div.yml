@@ -1,4 +1,4 @@
-name: SD Divergence Backtest (bullish MACD4C divergence gate)
+name: SD Divergence Backtest — below-MA filter (3 frames)
 
 on:
   workflow_dispatch:
@@ -38,14 +38,17 @@ jobs:
           python-version: '3.11'
       - name: Install deps
         run: pip install requests scikit-learn joblib
-      - name: Backtest 5m (context 1h)
+      - name: Backtest 5m (context 15m)
         env:
           SD_ENTRY_TF: 5m
-          SD_HTF: 1h
+          SD_HTF: 15m
           SD_BASKET: ${{ inputs.basket }}
           SD_OS_LOOKBACK: ${{ inputs.os_lookback }}
           SD_MAX_EMA_DIST: ${{ inputs.max_ema_dist }}
           SD_TREND_MA: ${{ inputs.trend_ma }}
+          SD_PAGES: '10'        # 10000 شمعة ≈ 35 يوم على 5m (بدل 14 يوم الافتراضية)
+          SD_BT_HOLD: '96'     # 96 شمعة = 8 ساعات (مناسب لفريم 5m)
+          SD_DIV_BELOW_MA: '50'
         run: python sd_bt_div.py 2>&1 | tee -a sd_bt_div_log.txt
       - name: Backtest 15m (context 1h)
         env:
@@ -55,6 +58,7 @@ jobs:
           SD_OS_LOOKBACK: ${{ inputs.os_lookback }}
           SD_MAX_EMA_DIST: ${{ inputs.max_ema_dist }}
           SD_TREND_MA: ${{ inputs.trend_ma }}
+          SD_DIV_BELOW_MA: '50'
         run: python sd_bt_div.py 2>&1 | tee -a sd_bt_div_log.txt
       - name: Backtest 1h (context 4h)
         env:
@@ -64,6 +68,7 @@ jobs:
           SD_OS_LOOKBACK: ${{ inputs.os_lookback }}
           SD_MAX_EMA_DIST: ${{ inputs.max_ema_dist }}
           SD_TREND_MA: ${{ inputs.trend_ma }}
+          SD_DIV_BELOW_MA: '50'
         run: python sd_bt_div.py 2>&1 | tee -a sd_bt_div_log.txt
       - name: Upload log artifact
         if: always()
