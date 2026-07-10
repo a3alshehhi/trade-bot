@@ -53,14 +53,22 @@ def parse_trend_ma():
     return ("live", 0)
 
 
-def bullish_divergence(lows_idx, l, hist, lo, hi):
+def bullish_divergence(lows_idx, l, hist, lo, hi, c=None, ma=None):
     """دايفرجنس صعودي عادي بين آخر قاعين محوريين في [lo, hi]:
-       قاع سعر أدنى + قاع هيستوجرام أعلى."""
+       قاع سعر أدنى + قاع هيستوجرام أعلى.
+       شرط إضافي اختياري (طلب بو محمد): إن مُرِّر (c, ma) وجب أن يكون القاعان
+       مغلقين تحت المتوسط (السعر تحت SMA50) لاعتماد الدايفرجنس."""
     pts = [x for x in lows_idx if lo <= x <= hi and math.isfinite(hist[x])]
     if len(pts) < 2:
         return False
     a, b = pts[-2], pts[-1]          # الأقدم، ثم الأحدث
-    return (l[b] < l[a]) and (hist[b] > hist[a])
+    if not ((l[b] < l[a]) and (hist[b] > hist[a])):
+        return False
+    if c is not None and ma is not None:
+        if not (math.isfinite(ma[a]) and math.isfinite(ma[b])
+                and c[a] < ma[a] and c[b] < ma[b]):
+            return False
+    return True
 
 
 def run_frame():
@@ -72,6 +80,7 @@ def run_frame():
     max_dist = CFG["max_ema_dist"]
     ma_kind, ma_len = parse_trend_ma()
     ma_label = "live-EMA" if ma_kind == "live" else f"{ma_kind.upper()}{ma_len}"
+    div_below_ma = int(os.environ.get("SD_DIV_BELOW_MA", 50))  # شرط: قاعا الدايفرجنس تحت SMA(n)؛ 0=تعطيل
     limit = int(os.environ.get("SD_BASKET", "40"))
     basket = S.parse_watchlist_crypto(S.WATCHLIST)[:limit]
 
@@ -98,6 +107,8 @@ def run_frame():
                 ma = sma(c, ma_len)
             elif ma_kind == "ema":
                 ma = S.ema(c, ma_len)
+            # سلسلة SMA لشرط «الدايفرجنس تحت المتوسط» (SD_DIV_BELOW_MA؛ 0 = تعطيل)
+            div_ma = sma(c, div_below_ma) if div_below_ma else None
             n_symbols += 1
 
             for st in setups:
@@ -137,7 +148,7 @@ def run_frame():
                 # ── الدايفرجنس الصعودي + حالة 4C عند الدخول ──
                 j = st["created"]
                 lo = max(1, j - lookback)
-                div = bullish_divergence(lows_idx, l, hist, lo, j)
+                div = bullish_divergence(lows_idx, l, hist, lo, j, c, div_ma)
                 st4 = S.macd4c_state(hist, tch)
                 c4 = st4 in (-1, 2)          # الهيستوجرام يرتفع (زخم صاعد)
                 if div:

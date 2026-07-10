@@ -101,6 +101,9 @@ CFG["require_os21"]   = int(os.environ.get("SD_REQUIRE_OS21", CFG["require_os21"
 CFG["rsi21_os"]       = float(os.environ.get("SD_RSI21_OS", CFG["rsi21_os"]))
 # دايفرجنس صعودي على هيستوجرام MACD كبوابة دخول اختيارية (0 = معطّل، الافتراضي)
 CFG["require_div"]    = int(os.environ.get("SD_REQUIRE_DIV", 0))
+# شرط إضافي على الدايفرجنس (طلب بو محمد): أن يتكوّن قاعاه والسعر مغلق تحت SMA(n).
+# n = طول المتوسط (الافتراضي 50 = SMA50)؛ 0 = تعطيل الشرط.
+CFG["div_below_ma"]   = int(os.environ.get("SD_DIV_BELOW_MA", 50))
 # فلتر الاتجاه القابل للاختيار: live = EMA الحيّ (الافتراضي)، أو smaN / emaN
 CFG["trend_ma"]       = os.environ.get("SD_TREND_MA", "live").strip().lower()
 # عتبة فلتر التعلّم الآلي (0 = تعطيل الترشيح ML، مطابق للباك-تست)
@@ -415,6 +418,7 @@ def _entry_plan(z, h, l, c, a, rs_en, low_idx, stop_buf, choch_hi=None, mode=Non
 def setup_features(sym, d1, d4):
     o, h, l, c, v, t = d1["o"], d1["h"], d1["l"], d1["c"], d1["v"], d1["t"]
     a = atr(h, l, c, CFG["atr_len"]); vz = vol_z(v, CFG["vol_len"]); e200 = ema(c, CFG["ema_len"])
+    ma_div = sma(c, CFG["div_below_ma"]) if CFG["div_below_ma"] else None  # SMA50 لشرط «دايفرجنس تحت المتوسط»
     rs = rsi(c, CFG["rsi_len"])
     rs_en = rsi(c, CFG["rsi_entry_len"])          # RSI(21) لإشارة الدخول الزخمي
     piv, ev = structure(h, l, c, CFG["pivL"], CFG["pivR"])
@@ -473,6 +477,13 @@ def setup_features(sym, d1, d4):
         _dpts = [x for x in low_idx if os_lo <= x <= j and math.isfinite(mhist[x])]
         bulldiv = 1 if (len(_dpts) >= 2 and l[_dpts[-1]] < l[_dpts[-2]]
                         and mhist[_dpts[-1]] > mhist[_dpts[-2]]) else 0
+        # شرط إضافي (طلب بو محمد): الدايفرجنس يتكوّن والسعر تحت SMA50 —
+        # قاعا الدايفرجنس (الأقدم والأحدث) مغلقان تحت المتوسط.
+        if bulldiv and ma_div is not None:
+            a_, b_ = _dpts[-2], _dpts[-1]
+            if not (math.isfinite(ma_div[a_]) and math.isfinite(ma_div[b_])
+                    and c[a_] < ma_div[a_] and c[b_] < ma_div[b_]):
+                bulldiv = 0
         f = dict(strength=z["strength"],
                  heightATR=round((z["proximal"] - z["distal"]) / (a[j] or R), 2),
                  baseVolZ=round(vz[j] or 0, 2), touchVolZ=round(vz[tch] or 0, 2),
