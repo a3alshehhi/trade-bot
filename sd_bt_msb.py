@@ -54,8 +54,9 @@ def parse_trend_ma():
 
 def any_break_high_levels(c, piv, R):
     """يعيد dict: {مؤشّر شمعة → سعر القمة المحورية المكسورة صعوداً} — أي كسر بنية صعودي
-    (بلا شرط الانعكاس CHoCH: BOS أو CHoCH كلاهما يُحتسب). هذا هو "MSB" حين يُطبَّق على
-    بنية داخلية بفراكتال ضيق (pivL_in/pivR_in صغيرة)."""
+    (بلا شرط الانعكاس CHoCH: BOS أو CHoCH كلاهما يُحتسب). وضع "bos" — جُرِّب أولاً وفشل:
+    القمم الصغيرة تتكوّن باستمرار فترفع الهدف باستمرار، فيصير الدخول أبطأ لا أسرع
+    (نتيجة 2026-07-10: متوسط التوقيت -9.9/-11.2 شمعة، أي متأخر لا مبكر)."""
     ref_h = None
     pidx = 0
     out = {}
@@ -116,6 +117,7 @@ def run_frame():
     ma_label = "live-EMA" if ma_kind == "live" else f"{ma_kind.upper()}{ma_len}"
     pivL_in = int(os.environ.get("SD_MSB_PIVL", "1"))
     pivR_in = int(os.environ.get("SD_MSB_PIVR", "1"))
+    msb_mode = os.environ.get("SD_MSB_MODE", "choch").strip().lower()  # choch (افتراضي) أو bos
     limit = int(os.environ.get("SD_BASKET", "40"))
     basket = S.parse_watchlist_crypto(S.WATCHLIST)[:limit]
 
@@ -125,7 +127,7 @@ def run_frame():
     n_base_only = n_msb_only = n_both = 0
 
     print(f"msb backtest SD | tf={tf} htf={htf} | {len(basket)} رمز | hold={hold} | "
-          f"فلتر اتجاه={ma_label} | بنية داخلية pivL={pivL_in} pivR={pivR_in}", flush=True)
+          f"فلتر اتجاه={ma_label} | بنية داخلية pivL={pivL_in} pivR={pivR_in} | وضع={msb_mode}", flush=True)
 
     for s in basket:
         try:
@@ -139,7 +141,11 @@ def run_frame():
             piv_ext, _ = S.structure(h, l, c, CFG["pivL"], CFG["pivR"])
             low_idx = [p[0] for p in piv_ext if p[2] == "L"]     # قيعان محورية خارجية (لقاع الموجة)
             piv_in, _ = S.structure(h, l, c, pivL_in, pivR_in)
-            internal_hi = any_break_high_levels(c, piv_in, pivR_in)
+            # choch (افتراضي، طلب بو محمد 2026-07-10): أول انعكاس داخلي فقط (دن ثم أب) —
+            # يمنع مشكلة "الهدف المتحرّك" اللي صارت بوضع bos (أي كسر، فترتفع القمم باستمرار
+            # وتتأخر الإشارة). bos: أي كسر بنية داخلي صعودي بلا شرط انعكاس (النسخة الأولى الفاشلة).
+            internal_hi = (S.choch_high_levels(c, piv_in, pivR_in) if msb_mode == "choch"
+                           else any_break_high_levels(c, piv_in, pivR_in))
             zones = S.demand_zones(o, h, l, c, v, a)
             ma = None
             if ma_kind == "sma":
@@ -207,7 +213,7 @@ def run_frame():
 
     print("", flush=True)
     print(f"════ نتائج الفريم {tf} (سياق {htf}) — فلتر اتجاه {ma_label} — "
-          f"بنية داخلية pivL={pivL_in}/pivR={pivR_in} ════", flush=True)
+          f"بنية داخلية pivL={pivL_in}/pivR={pivR_in} — وضع {msb_mode} ════", flush=True)
     print(f"رموز مُحلَّلة={n_symbols}", flush=True)
     print(f"  • أساس (خارجي CHoCH)      : {S._stats(base_rs)}", flush=True)
     print(f"  • MSB (بنية داخلية)       : {S._stats(msb_rs)}", flush=True)
