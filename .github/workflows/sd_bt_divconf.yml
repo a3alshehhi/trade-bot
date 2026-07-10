@@ -1,0 +1,46 @@
+name: SD Divergence-Confirmation Entry Backtest
+
+on:
+  workflow_dispatch:
+    inputs:
+      basket:
+        description: "عدد رموز الكريبتو"
+        default: '40'
+      div_below_ma:
+        description: "الدايفرجنس تحت SMA(n) — 0 لتعطيل"
+        default: '50'
+
+permissions:
+  contents: read
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: pip install requests scikit-learn joblib
+      - name: Divergence-confirmation entry 15m (context 1h)
+        env:
+          SD_ENTRY_TF: 15m
+          SD_HTF: 1h
+          SD_BASKET: ${{ inputs.basket }}
+          SD_DIV_BELOW_MA: ${{ inputs.div_below_ma }}
+        run: python sd_bt_divconf.py 2>&1 | tee -a sd_bt_divconf_log.txt
+      - name: Divergence-confirmation entry 1h (context 4h)
+        env:
+          SD_ENTRY_TF: 1h
+          SD_HTF: 4h
+          SD_BASKET: ${{ inputs.basket }}
+          SD_DIV_BELOW_MA: ${{ inputs.div_below_ma }}
+        run: python sd_bt_divconf.py 2>&1 | tee -a sd_bt_divconf_log.txt
+      - name: Upload log artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sd-bt-divconf-log
+          path: sd_bt_divconf_log.txt
+          if-no-files-found: ignore
