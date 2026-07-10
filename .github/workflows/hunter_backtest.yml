@@ -3,12 +3,9 @@ name: Hunter Backtest (باك-تست حقيقي على بيانات فعلية)
 on:
   workflow_dispatch:
     inputs:
-      tf:
-        description: "فريم الدخول (15m / 1h / 4h)"
-        default: "1h"
-      htf:
-        description: "السياق الأعلى (1h / 4h / 1d)"
-        default: "4h"
+      frames:
+        description: "فريمات الباك-تست (tf:htf مفصولة بفاصلة)"
+        default: "1h:4h,15m:1h,5m:15m"
       min_score:
         description: "أدنى درجة (0..5)"
         default: "4"
@@ -29,10 +26,9 @@ jobs:
           python-version: "3.11"
       - name: Install deps
         run: pip install requests
-      - name: "Run backtest (السيناريوهات الثلاثة: Extra High، Circle، الاثنين معاً)"
+      - name: "Run backtest (baseline، Extra High، دائرة دعم، الاثنين معاً — لكل فريم)"
         env:
-          HUNTER_TF: ${{ github.event.inputs.tf }}
-          HUNTER_HTF: ${{ github.event.inputs.htf }}
+          HUNTER_BT_FRAMES: ${{ github.event.inputs.frames }}
           HUNTER_MIN_SCORE: ${{ github.event.inputs.min_score }}
           HUNTER_VOL_Z: ${{ github.event.inputs.vol_z }}
           HUNTER_BT_SYMBOLS: ${{ github.event.inputs.symbols }}
