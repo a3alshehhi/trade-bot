@@ -142,7 +142,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-10 09:59:59.999000",
+    "last_bar": "2026-07-10 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.066,
@@ -367,7 +367,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-07 16:00:00",
-    "last_bar": "2026-07-10 09:59:59.999000",
+    "last_bar": "2026-07-10 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.417,
@@ -687,7 +687,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-10 01:45:00",
-    "last_bar": "2026-07-10 10:14:59.999000",
+    "last_bar": "2026-07-10 13:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.013,
@@ -722,11 +722,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-10 02:00:00",
-    "last_bar": "2026-07-10 10:14:59.999000",
+    "last_bar": "2026-07-10 13:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 6.834,
-    "lo_seen": 6.734,
+    "lo_seen": 6.722,
     "created": "2026-07-10T02:08:58"
   },
   "العرض/الطلب|ETHUSDT|2026-07-10 02:00:00": {
@@ -755,14 +755,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-10 02:00:00",
-    "last_bar": "2026-07-10 09:59:59.999000",
+    "last_bar": "2026-07-10 12:59:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 1794.94,
+    "stopped": true,
+    "hi_seen": 1807.18,
     "lo_seen": 1759.82,
-    "created": "2026-07-10T02:41:23"
+    "created": "2026-07-10T02:41:23",
+    "exit_price": 1805.57664,
+    "close_card_sent": true,
+    "closed_at": "2026-07-10T13:19:52"
   },
   "العرض/الطلب|CGPTUSDT|2026-07-10 03:15:00": {
     "symbol": "CGPTUSDT",

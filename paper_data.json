@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-10T12:57:18",
+  "updated_at": "2026-07-10T13:19:53",
   "stats": {
-    "open": 5,
-    "closed": 16,
-    "win_rate": 50.0,
-    "profit_factor": 0.77,
-    "total_pct": -4.98,
-    "avg_pct": -0.29,
+    "open": 4,
+    "closed": 17,
+    "win_rate": 52.9,
+    "profit_factor": 0.88,
+    "total_pct": -2.93,
+    "avg_pct": -0.14,
     "max_drawdown_pct": -17.09
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-10",
-        "trades": 2,
+        "trades": 3,
         "win_rate": 100.0,
-        "return_pct": 2.88,
+        "return_pct": 5.09,
         "week": "2026-W28",
         "month": "2026-07"
       },
@@ -55,18 +55,18 @@
     "weekly": [
       {
         "key": "2026-W28",
-        "trades": 16,
-        "win_rate": 50.0,
-        "return_pct": -4.98,
+        "trades": 17,
+        "win_rate": 52.9,
+        "return_pct": -2.93,
         "month": "2026-07"
       }
     ],
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 16,
-        "win_rate": 50.0,
-        "return_pct": -4.98
+        "trades": 17,
+        "win_rate": 52.9,
+        "return_pct": -2.93
       }
     ]
   },
@@ -380,12 +380,14 @@
       "entry": 1759.82,
       "stop": 1725.6325,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-10T02:41:23",
-      "closed_at": null,
-      "realized_pct": 0.85
+      "closed_at": "2026-07-10T13:19:52",
+      "realized_pct": 2.15,
+      "result_pct": 2.15
     },
     {
       "id": "العرض/الطلب|CGPTUSDT|2026-07-10 03:15:00",
