@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-10T07:05:46",
+  "updated_at": "2026-07-10T07:31:38",
   "stats": {
-    "open": 6,
+    "open": 7,
     "closed": 15,
     "win_rate": 46.7,
     "profit_factor": 0.68,
@@ -393,9 +393,25 @@
       "timeframe": "15m",
       "entry": 0.01902,
       "stop": 0.0186254,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-10T03:29:47",
+      "closed_at": null,
+      "realized_pct": 0.75
+    },
+    {
+      "id": "العرض/الطلب|CTSIUSDT|2026-07-10 07:15:00",
+      "symbol": "CTSIUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.02368,
+      "stop": 0.0232915,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-10T07:27:28",
       "closed_at": null,
       "realized_pct": 0.0
     }

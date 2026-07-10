@@ -142,7 +142,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-09 23:59:59.999000",
+    "last_bar": "2026-07-10 06:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.066,
@@ -367,7 +367,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-07 16:00:00",
-    "last_bar": "2026-07-09 23:59:59.999000",
+    "last_bar": "2026-07-10 06:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.417,
@@ -687,11 +687,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-10 01:45:00",
-    "last_bar": "2026-07-10 01:45:00",
+    "last_bar": "2026-07-10 07:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 1.987,
-    "lo_seen": 1.987,
+    "hi_seen": 2.005,
+    "lo_seen": 1.979,
     "created": "2026-07-10T01:57:12"
   },
   "عرض/طلب+دايفرجنس|AVAXUSDT|2026-07-10 02:00:00": {
@@ -722,11 +722,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-10 02:00:00",
-    "last_bar": "2026-07-10 02:00:00",
+    "last_bar": "2026-07-10 07:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 6.735,
-    "lo_seen": 6.735,
+    "hi_seen": 6.834,
+    "lo_seen": 6.734,
     "created": "2026-07-10T02:08:58"
   },
   "العرض/الطلب|ETHUSDT|2026-07-10 02:00:00": {
@@ -755,10 +755,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-10 02:00:00",
-    "last_bar": "2026-07-10 02:00:00",
+    "last_bar": "2026-07-10 06:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 1759.82,
+    "hi_seen": 1780.33,
     "lo_seen": 1759.82,
     "created": "2026-07-10T02:41:23"
   },
@@ -770,7 +770,7 @@
     "entry": 0.01902,
     "stop": 0.0186254,
     "init_stop": 0.0186254,
-    "cur_stop": 0.0186254,
+    "cur_stop": 0.01902,
     "legs": [
       0.01902,
       0.018979,
@@ -778,7 +778,7 @@
       0.018861,
       0.018777
     ],
-    "last_alert_stop": 0.0186254,
+    "last_alert_stop": 0.01902,
     "armed": false,
     "targets": [
       0.019306,
@@ -792,11 +792,50 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-10 03:15:00",
-    "last_bar": "2026-07-10 03:15:00",
+    "last_bar": "2026-07-10 07:29:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": false,
+    "hi_seen": 0.01933,
+    "lo_seen": 0.01895,
+    "created": "2026-07-10T03:29:47"
+  },
+  "العرض/الطلب|CTSIUSDT|2026-07-10 07:15:00": {
+    "symbol": "CTSIUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4710,
+    "entry": 0.02368,
+    "stop": 0.0232915,
+    "init_stop": 0.0232915,
+    "cur_stop": 0.0232915,
+    "legs": [
+      0.02368,
+      0.02367608,
+      0.02361,
+      0.02354392,
+      0.02344984
+    ],
+    "last_alert_stop": 0.0232915,
+    "armed": false,
+    "targets": [
+      0.02404232,
+      0.02423608
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-10 07:15:00",
+    "last_bar": "2026-07-10 07:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.01902,
-    "lo_seen": 0.01902,
-    "created": "2026-07-10T03:29:47"
+    "hi_seen": 0.02391,
+    "lo_seen": 0.02368,
+    "created": "2026-07-10T07:27:28"
   }
 }
