@@ -29,7 +29,7 @@ jobs:
           python-version: "3.11"
       - name: Install deps
         run: pip install requests
-      - name: Run backtest (السيناريوهات الثلاثة: Extra High، Circle، الاثنين معاً)
+      - name: "Run backtest (السيناريوهات الثلاثة: Extra High، Circle، الاثنين معاً)"
         env:
           HUNTER_TF: ${{ github.event.inputs.tf }}
           HUNTER_HTF: ${{ github.event.inputs.htf }}
