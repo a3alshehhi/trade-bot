@@ -92,6 +92,9 @@ CFG["circle_vol_window"] = int(os.environ.get("HUNTER_CIRCLE_VOLWIN", 500))  # �
 CFG["circle_thresh"]   = float(os.environ.get("HUNTER_CIRCLE_THRESH", 80))   # عتبة الدائرة (% من الأقصى)
 CFG["require_xh"]      = int(os.environ.get("HUNTER_REQUIRE_XH", 0))     # 1 = إلزامي Extra High على شمعة الدخول
 CFG["require_circle"]  = int(os.environ.get("HUNTER_REQUIRE_CIRCLE", 0))  # 1 = إلزامي دائرة دعم ضمن نافذة التسلسل
+# فريمات باك-تست فلتر Extra High/دائرة دعم — الافتراضي: 1h/15m/5m معاً (كل واحد بسياقه الأعلى المعتاد بالمشروع)
+# تخصيص عبر HUNTER_BT_FRAMES="1h:4h,15m:1h,5m:15m"
+CFG["bt_frames"] = os.environ.get("HUNTER_BT_FRAMES", "1h:4h,15m:1h,5m:15m")
 
 BINANCE_BASES = ["https://data-api.binance.vision", "https://api.binance.com"]
 WATCHLIST = "watchlist.txt"
@@ -786,55 +789,82 @@ def backtest(basket=None):
 
 
 # ----------------------- باك-تست فلتر Extra High + دائرة دعم (تجريبي) -----------------------
-def backtest_entry_filters(basket=None):
+def backtest_entry_filters(basket=None, frames=None):
     """يقارن 4 نسخ من الدخول (باستخدام نفس بوابة الزخم الحالية كأساس) — الأساس بدون
-       إضافة، Extra High فقط، دائرة دعم فقط، والتقاطع الكامل — كلها بنفس خطة الخروج
-       الحيّة المطبّقة حالياً (نظام ب: جني جزئي + وقف متحرّك شانديلير). لا تُطبَّق حياً."""
+       إضافة، Extra High فقط، دائرة دعم فقط، والتقاطع الكامل — على عدّة فريمات (افتراضياً
+       1h/15m/5m، كل واحد بسياقه الأعلى المعتاد بالمشروع)، كلها بنفس خطة الخروج الحيّة
+       المطبّقة حالياً (نظام ب: جني جزئي + وقف متحرّك شانديلير). لا تُطبَّق حياً.
+       يجلب بيانات كل رمز مرّة واحدة لكل فريم ويعيد استخدامها عبر الأربع نسخ (بدل إعادة
+       الجلب لكل نسخة) لتقليل عدد طلبات الشبكة والوقت."""
     basket = basket or parse_watchlist_crypto(WATCHLIST)[:CFG["bt_symbols"]]
     hold = CFG["bt_hold"]
-    min_hist = max(CFG["xh_len"] + 60, 700)   # يحتاج تاريخ يكفي لقاعدة Z-score الطويلة (610)
     variants = [
         ("baseline (بدون فلتر إضافي)", 0, 0),
         ("Extra High فقط",              1, 0),
         ("دائرة دعم فقط",                0, 1),
         ("Extra High + دائرة دعم",       1, 1),
     ]
-    print(f"باك-تست فلتر Extra High/دائرة دعم | tf={CFG['entry_tf']} htf={CFG['htf']} | {len(basket)} رمز | "
-          f"xh_len={CFG['xh_len']} xh_thresh={CFG['xh_thresh']} | circle_len={CFG['circle_len']} "
-          f"circle_thresh={CFG['circle_thresh']}")
-    results = {}
-    for name, rxh, rcirc in variants:
-        CFG["require_xh"] = rxh
-        CFG["require_circle"] = rcirc
-        rs = []; n_signals = 0
+    if frames is None:
+        frames = []
+        for pair in CFG["bt_frames"].split(","):
+            pair = pair.strip()
+            if not pair:
+                continue
+            tf, htf = pair.split(":")
+            frames.append((tf.strip(), htf.strip()))
+
+    all_results = {}
+    for tf, htf in frames:
+        CFG["entry_tf"] = tf
+        CFG["htf"] = htf
+        min_hist = max(CFG["xh_len"] + 60, 700)   # يحتاج تاريخ يكفي لقاعدة Z-score الطويلة (610)
+        print(f"\n=== فريم {tf} (سياق {htf}) ===")
+        print(f"باك-تست فلتر Extra High/دائرة دعم | tf={tf} htf={htf} | {len(basket)} رمز | "
+              f"xh_len={CFG['xh_len']} xh_thresh={CFG['xh_thresh']} | circle_len={CFG['circle_len']} "
+              f"circle_thresh={CFG['circle_thresh']}")
+
+        # جلب بيانات كل رمز مرّة واحدة لهذا الفريم (تُستخدم عبر الأربع نسخ)
+        cache = {}
         for s in basket:
             try:
-                d1 = fetch_klines(s, CFG["entry_tf"], CFG["pages"])
-                d4 = fetch_klines(s, CFG["htf"], CFG["pages_htf"])
-                if not d1 or len(d1["c"]) < min_hist:
-                    continue
-                h, l, c = d1["h"], d1["l"], d1["c"]
-                A = atr(h, l, c, CFG["atr_len"])
-                N = len(c)
-                step = 3
-                for cut in range(min_hist - 50, N - hold, step):
-                    sub = {k: d1[k][:cut + 1] for k in ("t", "o", "h", "l", "c", "v")}
-                    sig = find_setup(s, sub, d4)
-                    if not sig or sig["score"] < CFG["min_score"]:
-                        continue
-                    n_signals += 1
-                    e, st = sig["entry"], sig["stop"]
-                    av = A[cut] if (A[cut] and math.isfinite(A[cut])) else (e - st)
-                    rb = _sim_trail_partial(e, st, sig["tp1"], av, h, l, c, cut, hold)
-                    if rb is not None:
-                        rs.append(rb)
+                d1 = fetch_klines(s, tf, CFG["pages"])
+                d4 = fetch_klines(s, htf, CFG["pages_htf"])
+                if d1 and len(d1["c"]) >= min_hist:
+                    cache[s] = (d1, d4)
             except Exception as ex:
-                print("bt_filters skip", s, ex)
+                print("bt_filters fetch skip", s, ex)
             time.sleep(0.03)
-        print(f"[{name}] إشارات مؤهلة={n_signals} · {_stats(rs)}")
-        results[name] = {"n_signals": n_signals, "trades": rs}
+
+        results = {}
+        for name, rxh, rcirc in variants:
+            CFG["require_xh"] = rxh
+            CFG["require_circle"] = rcirc
+            rs = []; n_signals = 0
+            for s, (d1, d4) in cache.items():
+                try:
+                    h, l, c = d1["h"], d1["l"], d1["c"]
+                    A = atr(h, l, c, CFG["atr_len"])
+                    N = len(c)
+                    step = 3
+                    for cut in range(min_hist - 50, N - hold, step):
+                        sub = {k: d1[k][:cut + 1] for k in ("t", "o", "h", "l", "c", "v")}
+                        sig = find_setup(s, sub, d4)
+                        if not sig or sig["score"] < CFG["min_score"]:
+                            continue
+                        n_signals += 1
+                        e, st = sig["entry"], sig["stop"]
+                        av = A[cut] if (A[cut] and math.isfinite(A[cut])) else (e - st)
+                        rb = _sim_trail_partial(e, st, sig["tp1"], av, h, l, c, cut, hold)
+                        if rb is not None:
+                            rs.append(rb)
+                except Exception as ex:
+                    print("bt_filters skip", s, ex)
+            print(f"[{name}] إشارات مؤهلة={n_signals} · {_stats(rs)}")
+            results[name] = {"n_signals": n_signals, "trades": rs}
+        all_results[f"{tf}/{htf}"] = results
+
     CFG["require_xh"] = 0; CFG["require_circle"] = 0   # إعادة الافتراضي (بلا أثر حيّ أصلاً)
-    return results
+    return all_results
 
 
 # ----------------------- تنفيذ تجريبي على بايبت/بايننس -----------------------
