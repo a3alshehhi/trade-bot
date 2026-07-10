@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-07-09T23:55:30",
+  "updated_at": "2026-07-10T00:32:27",
   "stats": {
     "open": 2,
-    "closed": 14,
-    "win_rate": 42.9,
-    "profit_factor": 0.63,
-    "total_pct": -7.63,
-    "avg_pct": -0.53,
+    "closed": 15,
+    "win_rate": 46.7,
+    "profit_factor": 0.68,
+    "total_pct": -6.8,
+    "avg_pct": -0.44,
     "max_drawdown_pct": -17.09
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-07-10",
+        "trades": 1,
+        "win_rate": 100.0,
+        "return_pct": 0.9,
+        "week": "2026-W28",
+        "month": "2026-07"
+      },
       {
         "key": "2026-07-09",
         "trades": 3,
@@ -47,18 +55,18 @@
     "weekly": [
       {
         "key": "2026-W28",
-        "trades": 14,
-        "win_rate": 42.9,
-        "return_pct": -7.63,
+        "trades": 15,
+        "win_rate": 46.7,
+        "return_pct": -6.8,
         "month": "2026-07"
       }
     ],
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 14,
-        "win_rate": 42.9,
-        "return_pct": -7.63
+        "trades": 15,
+        "win_rate": 46.7,
+        "return_pct": -6.8
       }
     ]
   },
@@ -316,6 +324,24 @@
       "closed_at": "2026-07-09T16:29:35",
       "realized_pct": 4.42,
       "result_pct": 4.42
+    },
+    {
+      "id": "العرض/الطلب|1000SATSUSDT|2026-07-09 23:15:00",
+      "symbol": "1000SATSUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 9.43e-06,
+      "stop": 9.35e-06,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-09T23:27:15",
+      "closed_at": "2026-07-10T00:32:27",
+      "realized_pct": 0.9,
+      "result_pct": 0.9
     }
   ]
 }
