@@ -800,6 +800,7 @@ def backtest_entry_filters(basket=None, frames=None):
     hold = CFG["bt_hold"]
     variants = [
         ("baseline (بدون فلتر إضافي)", {"xh": 0, "circle": 0, "sma200": 0}),
+        ("SMA200 وحده (على الأساس)",     {"xh": 0, "circle": 0, "sma200": 1}),  # يكشف أثر SMA200 الحقيقي
         ("Extra High فقط",              {"xh": 1, "circle": 0, "sma200": 0}),
         ("Extra High + SMA200",          {"xh": 1, "circle": 0, "sma200": 1}),  # نسخة جديدة
         ("دائرة دعم فقط",                {"xh": 0, "circle": 1, "sma200": 0}),
