@@ -1015,23 +1015,27 @@
     "lo_seen": 0.005394,
     "created": "2026-07-11T11:31:21"
   },
-  "العرض/الطلب|CKBUSDT|2026-07-11 12:00:00": {
-    "symbol": "CKBUSDT",
+  "العرض/الطلب|ARUSDT|2026-07-11 12:15:00": {
+    "symbol": "ARUSDT",
     "label": "العرض/الطلب",
-    "timeframe": "1h",
-    "message_id": 4754,
-    "entry": 0.000923,
-    "stop": 0.00090662,
-    "init_stop": 0.00090662,
-    "cur_stop": 0.00090662,
+    "timeframe": "15m",
+    "message_id": 4756,
+    "entry": 2.005,
+    "stop": 1.99279,
+    "init_stop": 1.99279,
+    "cur_stop": 1.99279,
     "legs": [
-      0.000923
+      2.005,
+      2.003034,
+      2.0015,
+      1.999966,
+      1.997782
     ],
-    "last_alert_stop": 0.00090662,
+    "last_alert_stop": 1.99279,
     "armed": false,
     "targets": [
-      0.00093162,
-      0.00093751
+      2.011536,
+      2.016034
     ],
     "tp_split": [
       50,
@@ -1040,12 +1044,12 @@
     "is_trendwave": false,
     "mgmt": "5050",
     "breakeven_done": false,
-    "bar_ts": "2026-07-11 12:00:00",
-    "last_bar": "2026-07-11 12:00:00",
+    "bar_ts": "2026-07-11 12:15:00",
+    "last_bar": "2026-07-11 12:15:00",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.000923,
-    "lo_seen": 0.000923,
-    "created": "2026-07-11T12:03:39"
+    "hi_seen": 2.005,
+    "lo_seen": 2.005,
+    "created": "2026-07-11T12:22:00"
   }
 }
