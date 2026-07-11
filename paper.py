@@ -53,6 +53,12 @@ OFFSET_FILE = "tg_offset.json"
 # ملف بيانات اللوحة (تقرأه index.html في جذر المستودع عبر GitHub Pages)
 DATA_FILE = "paper_data.json"
 
+# منع تكرار الدخول لنفس العملة (مطابقة لبوتات التنفيذ sd_autotrade): صفقة واحدة
+# لكل رمز في أي وقت + فترة تهدئة قبل إعادة فتح نفس العملة بعد إغلاقها.
+# الافتراضي 12 ساعة (نفس SD_COOLDOWN_H) لتظهر نتائج ورقية واقعية مطابقة للتنفيذ.
+COOLDOWN_H = float(os.environ.get("PAPER_COOLDOWN_H",
+                                  os.environ.get("SD_COOLDOWN_H", "12")))
+
 # إدارة الصفقة: نِسب الجني عند الأهداف الثلاثة، ونقل الوقف للتعادل بعد الأول
 TP_FRACTIONS = [0.5, 0.25, 0.25]
 SEP = "━━━━━━━━━━━━━━━━━━"
@@ -90,6 +96,35 @@ def _answer_callback(token, cq_id, text):
                             "show_alert": False}, timeout=10)
     except Exception as e:
         print(f"⚠️ answerCallbackQuery: {e}")
+
+
+def _symbol_blocked(sym, trades, now=None):
+    """يمنع تكرار الدخول لنفس العملة، مطابقةً لبوتات التنفيذ:
+       (1) يوجد مركز مفتوح على نفس الرمز، أو
+       (2) آخر دخول لنفس الرمز ما زال ضمن فترة التهدئة COOLDOWN_H ساعة.
+       يرجع (blocked: bool, reason: str)."""
+    if not sym:
+        return True, "بلا رمز"
+    now = now or datetime.now()
+    latest = None
+    for t in trades:
+        if t.get("symbol") != sym:
+            continue
+        if t.get("status") == "open":
+            return True, "مركز مفتوح على الرمز"
+        oa = t.get("opened_at")
+        if oa:
+            try:
+                ts = datetime.fromisoformat(oa)
+                if latest is None or ts > latest:
+                    latest = ts
+            except Exception:
+                pass
+    if latest is not None:
+        since_h = (now - latest).total_seconds() / 3600
+        if since_h < COOLDOWN_H:
+            return True, f"تهدئة ({since_h:.1f}h < {COOLDOWN_H:.0f}h)"
+    return False, ""
 
 
 def _open_trade_from_signal(pid, sig):
@@ -161,6 +196,11 @@ def poll():
             elif pid in existing_ids:
                 _answer_callback(token, cq["id"], "✓ الصفقة مفتوحة مسبقاً")
             else:
+                _blocked, _why = _symbol_blocked(sig.get("symbol"), trades)
+                if _blocked:
+                    _answer_callback(token, cq["id"],
+                                     f"⏸ {sig.get('symbol')}: {_why} — لم تُفتح")
+                    continue
                 tr = _open_trade_from_signal(pid, sig)
                 trades.append(tr)
                 existing_ids.add(pid)
@@ -200,6 +240,12 @@ def auto_open():
         if pid in existing_ids:
             continue
         if not isinstance(sig, dict) or sig.get("entry") is None or not sig.get("targets"):
+            continue
+        # صفقة واحدة لكل رمز + تهدئة (مطابقة لبوتات التنفيذ). trades تنمو أثناء الحلقة
+        # فتُحجب تلقائياً أي إشارة أخرى لنفس الرمز في نفس الدفعة.
+        _blocked, _why = _symbol_blocked(sig.get("symbol"), trades)
+        if _blocked:
+            print(f"[auto] تخطّي {sig.get('symbol')}: {_why}")
             continue
         try:
             tr = _open_trade_from_signal(pid, sig)
@@ -294,9 +340,11 @@ def _update_trade(tr, token, chat_id):
         # 2) تعادل عند الهدف الأول (نقل الوقف لسعر الدخول)
         if not tr["breakeven"] and tp1 is not None and hi >= tp1:
             tr["breakeven"] = True
-            lock = entry + LOCK_R * risk           # قفل ربح صغير بدل التعادل الصفري
+            lock = entry + LOCK_R * risk           # قفل ربح صغير (0.3R) بدل التعادل الصفري
             if tp1 <= lock:                        # هدف قريب جداً؟ ارجع للتعادل تفادياً لوقف فوري
                 lock = entry
+            # الحدّ الأدنى الصارم: الوقف لا ينزل تحت سعر الدخول أبداً (بلا خسارة USDT)
+            lock = max(lock, entry)
             cur = max(cur, lock)
             if 1 not in tr["hits"]:
                 tr["hits"].append(1)
@@ -310,6 +358,8 @@ def _update_trade(tr, token, chat_id):
             swing = float(np.min(low[w0:p + 1]))
             av = float(atrs[p]) if not np.isnan(atrs[p]) else entry * 0.02
             cand = float(swing - TRAIL_BUF * av)
+            # الحدّ الأدنى الصارم: الوقف لا ينزل تحت سعر الدخول أبداً (النص الثاني محميّ من الخسارة)
+            cand = max(cand, entry)
             if cand > cur:
                 cur = cand
                 tr["events"].append({"ts": bts, "type": "trail", "price": round(cur, 8)})
