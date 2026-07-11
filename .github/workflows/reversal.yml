@@ -1,10 +1,10 @@
-name: SD Bot — العرض/الطلب (15m + 1h كل ربع ساعة)
+name: SD Bot — العرض/الطلب (15m + 1h + 5m كل ربع ساعة)
 
 # ══════════════════════════════════════════════════════════════════════════
 # وركفلو واحد موحّد لبوت العرض/الطلب + بوتين تجريبيين (كاتب واحد على الحالة).
 #   • البوت الرئيسي: عرض/طلب (EMA حيّ + ML) — مسح 15m + 1h + trackmon.
 #   • بوت تجريبي 1: «عرض/طلب+تشبّع»   = SMA50 + تشبّع RSI21≤20 (بلا ML).
-#   • بوت تجريبي 2: «عرض/طلب+دايفرجنس» = SMA50 + دايفرجنس صعودي MACD (بلا ML).
+#   • بوت تجريبي 2: «عرض/طلب+دايفرجنس» = SMA50 + دايفرجنس صعودي MACD (بلا ML) — 15m + 1h + 5m.
 # كل بوت باسم/وسم مختلف، وحالة منفصلة، ودفتر تنفيذ منفصل (Bybit Testnet + Binance Demo).
 # التنفيذ testnet/demo فقط — لا mainnet (محميّ داخل sd_autotrade). البوتان التجريبيان
 # غير حاسمَين: فشلهما لا يوقف الرئيسي ولا يمنع حفظ الحالة.
@@ -54,9 +54,9 @@ jobs:
           BINANCE_BASE_URL: ${{ secrets.BINANCE_BASE_URL }}
         run: |
           set -e
-          # ══ البوت الرئيسي: عرض/طلب (EMA حيّ + ML) ══
-          SD_ENTRY_TF=15m SD_HTF=1h SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_15m.json python sd_bot.py
-          SD_ENTRY_TF=1h  SD_HTF=4h  SD_MODEL=sd_model_1h.joblib  SD_STATE=sd_state_1h.json  python sd_bot.py
+          # ══ البوت الرئيسي: عرض/طلب (EMA حيّ + ML) — بوابة الحجم touchVolZ≥1.5 (فحص متانة 2026-07-12) ══
+          SD_MIN_TOUCHVOLZ=1.5 SD_ENTRY_TF=15m SD_HTF=1h SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_15m.json python sd_bot.py
+          SD_MIN_TOUCHVOLZ=1.5 SD_ENTRY_TF=1h  SD_HTF=4h  SD_MODEL=sd_model_1h.joblib  SD_STATE=sd_state_1h.json  python sd_bot.py
           # تنفيذ + متابعة الرئيسي (وسمه فقط) + لوحة المتتبّع
           SD_LABELS="العرض/الطلب" python trading_bot.py --mode trackmon
 
@@ -72,11 +72,12 @@ jobs:
                  SD_EXECUTED=sd_exec_os21.json SD_LAST_ENTRY=sd_last_os21.json python sd_autotrade.py run
           unset SD_LABEL SD_TREND_MA SD_REQUIRE_OS21 SD_RSI21_OS SD_REQUIRE_MACD4C SD_ML_THRESHOLD
 
-          # ── بوت 2: «عرض/طلب+دايفرجنس» — SMA50 + دايفرجنس صعودي MACD · بلا ML · بلا MACD4C ──
+          # ── بوت 2: «عرض/طلب+دايفرجنس» — SMA50 + دايفرجنس صعودي MACD يتكوّن تحت SMA50 · بلا ML · بلا MACD4C ──
           export SD_LABEL="عرض/طلب+دايفرجنس" SD_TREND_MA=sma50 SD_REQUIRE_DIV=1 \
                  SD_REQUIRE_MACD4C=0 SD_ML_THRESHOLD=0
           SD_ENTRY_TF=15m SD_HTF=1h SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_div_15m.json python sd_bot.py
           SD_ENTRY_TF=1h  SD_HTF=4h  SD_MODEL=sd_model_1h.joblib  SD_STATE=sd_state_div_1h.json  python sd_bot.py
+          SD_ENTRY_TF=5m   SD_HTF=15m SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_div_5m.json  python sd_bot.py
           SD_LABELS="عرض/طلب+دايفرجنس" SD_POS=sd_pos_div.json SD_LEDGER=sd_ledger_div.json \
                  SD_EXECUTED=sd_exec_div.json SD_LAST_ENTRY=sd_last_div.json python sd_autotrade.py run
           unset SD_LABEL SD_TREND_MA SD_REQUIRE_DIV SD_REQUIRE_MACD4C SD_ML_THRESHOLD
@@ -91,7 +92,7 @@ jobs:
                  sd_state_os21_15m.json sd_state_os21_1h.json \
                  sd_pos_os21.json sd_ledger_os21.json sd_exec_os21.json sd_last_os21.json \
                  sd_pos_os21_binance.json sd_ledger_os21_binance.json sd_exec_os21_binance.json sd_last_os21_binance.json \
-                 sd_state_div_15m.json sd_state_div_1h.json \
+                 sd_state_div_15m.json sd_state_div_1h.json sd_state_div_5m.json \
                  sd_pos_div.json sd_ledger_div.json sd_exec_div.json sd_last_div.json \
                  sd_pos_div_binance.json sd_ledger_div_binance.json sd_exec_div_binance.json sd_last_div_binance.json"
           for f in $FILES; do
