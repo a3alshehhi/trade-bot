@@ -938,5 +938,39 @@
     "hi_seen": 0.01915,
     "lo_seen": 0.019,
     "created": "2026-07-11T02:09:41"
+  },
+  "العرض/الطلب|CGPTUSDT|2026-07-11 09:00:00": {
+    "symbol": "CGPTUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4751,
+    "entry": 0.01903,
+    "stop": 0.0189294,
+    "init_stop": 0.0189294,
+    "cur_stop": 0.0189294,
+    "legs": [
+      0.01903,
+      0.01901136
+    ],
+    "last_alert_stop": 0.0189294,
+    "armed": false,
+    "targets": [
+      0.01926528,
+      0.01934832
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-11 09:00:00",
+    "last_bar": "2026-07-11 09:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01903,
+    "lo_seen": 0.01903,
+    "created": "2026-07-11T09:04:59"
   }
 }
