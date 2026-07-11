@@ -1,37 +1,4 @@
 {
-  "AVAXUSDT": {
-    "symbol": "AVAXUSDT",
-    "tf": "15m",
-    "label": "عرض/طلب+دايفرجنس",
-    "prob": null,
-    "levels": [
-      6.735
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 300.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 6.802802803826061,
-        "qty": 44.09947027,
-        "usd": 300.0
-      }
-    ],
-    "avg_entry": 6.802802803826061,
-    "entry": 6.802802803826061,
-    "init_stop": 6.65588,
-    "stop": 6.65588,
-    "R": 0.14692280382606082,
-    "tp1": 6.854984,
-    "tp2": 6.905846,
-    "qty": 44.09947027,
-    "qty_open": 44.09947027,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-10T02:11:49"
-  },
   "ANKRUSDT": {
     "symbol": "ANKRUSDT",
     "tf": "15m",
