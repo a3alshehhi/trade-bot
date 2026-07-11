@@ -918,7 +918,7 @@
       0.01901258,
       0.01898066
     ],
-    "last_alert_stop": 0.0191,
+    "last_alert_stop": 0.0189066,
     "armed": false,
     "targets": [
       0.01918168,
@@ -932,14 +932,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-11 02:00:00",
-    "last_bar": "2026-07-11 09:14:59.999000",
+    "last_bar": "2026-07-11 09:44:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.01921,
+    "stopped": true,
+    "hi_seen": 0.01925,
     "lo_seen": 0.01891,
-    "created": "2026-07-11T02:09:41"
+    "created": "2026-07-11T02:09:41",
+    "exit_price": 0.01924742,
+    "close_card_sent": true,
+    "closed_at": "2026-07-11T09:49:24"
   },
   "العرض/الطلب|CGPTUSDT|2026-07-11 09:00:00": {
     "symbol": "CGPTUSDT",
@@ -968,10 +972,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-11 09:00:00",
-    "last_bar": "2026-07-11 09:00:00",
+    "last_bar": "2026-07-11 09:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.01903,
+    "hi_seen": 0.01925,
     "lo_seen": 0.01903,
     "created": "2026-07-11T09:04:59"
   }
