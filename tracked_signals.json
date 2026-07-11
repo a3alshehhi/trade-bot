@@ -1128,5 +1128,39 @@
     "hi_seen": 0.1761,
     "lo_seen": 0.1661,
     "created": "2026-07-11T13:38:37"
+  },
+  "عرض/طلب+دايفرجنس|ANKRUSDT|2026-07-11 21:45:00": {
+    "symbol": "ANKRUSDT",
+    "label": "عرض/طلب+دايفرجنس",
+    "timeframe": "15m",
+    "message_id": 4765,
+    "entry": 0.00383,
+    "stop": 0.0037035,
+    "init_stop": 0.0037035,
+    "cur_stop": 0.0037035,
+    "legs": [
+      0.00383,
+      0.0038142
+    ],
+    "last_alert_stop": 0.0037035,
+    "armed": false,
+    "targets": [
+      0.0041316,
+      0.0042354
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-11 21:45:00",
+    "last_bar": "2026-07-11 21:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00383,
+    "lo_seen": 0.00383,
+    "created": "2026-07-11T21:57:47"
   }
 }
