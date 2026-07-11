@@ -142,7 +142,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-10 22:59:59.999000",
+    "last_bar": "2026-07-10 23:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.066,
@@ -367,7 +367,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-07 16:00:00",
-    "last_bar": "2026-07-10 22:59:59.999000",
+    "last_bar": "2026-07-10 23:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.417,
@@ -847,14 +847,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-10 21:45:00",
-    "last_bar": "2026-07-10 23:29:59.999000",
+    "last_bar": "2026-07-11 00:29:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.2274,
+    "stopped": true,
+    "hi_seen": 0.2281,
     "lo_seen": 0.2258,
-    "created": "2026-07-10T22:01:13"
+    "created": "2026-07-10T22:01:13",
+    "exit_price": 0.228045,
+    "close_card_sent": true,
+    "closed_at": "2026-07-11T00:38:54"
   },
   "العرض/الطلب|AIXBTUSDT|2026-07-10 21:45:00": {
     "symbol": "AIXBTUSDT",
@@ -885,11 +889,46 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-10 21:45:00",
-    "last_bar": "2026-07-10 23:29:59.999000",
+    "last_bar": "2026-07-11 00:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.01995,
+    "hi_seen": 0.02013,
     "lo_seen": 0.01965,
     "created": "2026-07-10T22:01:13"
+  },
+  "العرض/الطلب|ATOMUSDT|2026-07-11 00:15:00": {
+    "symbol": "ATOMUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 4732,
+    "entry": 1.594,
+    "stop": 1.57935,
+    "init_stop": 1.57935,
+    "cur_stop": 1.57935,
+    "legs": [
+      1.594,
+      1.593078,
+      1.588206
+    ],
+    "last_alert_stop": 1.57935,
+    "armed": false,
+    "targets": [
+      1.618888,
+      1.628922
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-11 00:15:00",
+    "last_bar": "2026-07-11 00:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1.611,
+    "lo_seen": 1.594,
+    "created": "2026-07-11T00:31:35"
   }
 }

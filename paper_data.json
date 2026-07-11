@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-07-11T00:01:11",
+  "updated_at": "2026-07-11T00:38:56",
   "stats": {
     "open": 4,
-    "closed": 19,
-    "win_rate": 47.4,
-    "profit_factor": 0.78,
-    "total_pct": -5.55,
-    "avg_pct": -0.27,
+    "closed": 20,
+    "win_rate": 50.0,
+    "profit_factor": 0.81,
+    "total_pct": -4.79,
+    "avg_pct": -0.22,
     "max_drawdown_pct": -17.09
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-07-11",
+        "trades": 1,
+        "win_rate": 100.0,
+        "return_pct": 0.8,
+        "week": "2026-W28",
+        "month": "2026-07"
+      },
       {
         "key": "2026-07-10",
         "trades": 5,
@@ -55,18 +63,18 @@
     "weekly": [
       {
         "key": "2026-W28",
-        "trades": 19,
-        "win_rate": 47.4,
-        "return_pct": -5.55,
+        "trades": 20,
+        "win_rate": 50.0,
+        "return_pct": -4.79,
         "month": "2026-07"
       }
     ],
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 19,
-        "win_rate": 47.4,
-        "return_pct": -5.55
+        "trades": 20,
+        "win_rate": 50.0,
+        "return_pct": -4.79
       }
     ]
   },
@@ -418,12 +426,14 @@
       "entry": 0.2258,
       "stop": 0.223574,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-10T22:01:13",
-      "closed_at": null,
-      "realized_pct": 0.31
+      "closed_at": "2026-07-11T00:38:54",
+      "realized_pct": 0.8,
+      "result_pct": 0.8
     },
     {
       "id": "العرض/الطلب|AIXBTUSDT|2026-07-10 21:45:00",
@@ -436,6 +446,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-10T22:01:13",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ATOMUSDT|2026-07-11 00:15:00",
+      "symbol": "ATOMUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.594,
+      "stop": 1.57935,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-11T00:31:35",
       "closed_at": null,
       "realized_pct": 0.0
     }
