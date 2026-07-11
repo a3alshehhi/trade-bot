@@ -78,6 +78,11 @@ CFG = dict(
     trail_atr=2.5,         # مضاعف وقف شانديلير المتحرّك (قمة − trail_atr×ATR) للباقي
     bt_hold=48,            # (backtest) أقصى شموع لإمساك الصفقة
     fee_rate=0.00075,      # (backtest) رسوم جهة واحدة (كسر من السعر) — 0.075% تقريب رسوم تيكر
+    # ── بوابة الحجم (2026-07-12، بعد فحص المتانة على 80 رمز) ──
+    # touchVolZ≥1.5 = الفائز الموثوق على الفريمين (صمد في نصفي holdout، منحنى مونوتوني):
+    # يرفع التوقّع من ~+0.7R إلى ~+1.0-1.5R مقابل احتفاظ ~25% من الصفقات.
+    # الافتراضي 0 (معطّل) كي لا يمسّ البوتين التجريبيين؛ يُفعَّل للرئيسي عبر SD_MIN_TOUCHVOLZ=1.5.
+    min_touchvolz=0.0,
 )
 # ── تجاوز فريم الدخول/السياق عبر البيئة (لتشغيل البوت على كل الفريمات: 15m/1h/4h) ──
 # مثال: SD_ENTRY_TF=15m SD_HTF=1h  |  SD_ENTRY_TF=4h SD_HTF=1d
@@ -91,6 +96,7 @@ CFG["max_ema_dist"]  = float(os.environ.get("SD_MAX_EMA_DIST", CFG["max_ema_dist
 CFG["trail_atr"]     = float(os.environ.get("SD_TRAIL_ATR", CFG["trail_atr"]))
 CFG["tp1_frac"]      = float(os.environ.get("SD_TP1_FRAC", CFG["tp1_frac"]))
 CFG["require_ob_after_os"] = int(os.environ.get("SD_REQUIRE_OBOS", CFG["require_ob_after_os"]))
+CFG["min_touchvolz"] = float(os.environ.get("SD_MIN_TOUCHVOLZ", CFG["min_touchvolz"]))  # بوابة الحجم
 CFG["os_lookback"]   = int(os.environ.get("SD_OS_LOOKBACK", CFG["os_lookback"]))
 CFG["rsi_entry_len"] = int(os.environ.get("SD_RSI_ENTRY_LEN", CFG["rsi_entry_len"]))
 CFG["rsi_entry_ob"]  = float(os.environ.get("SD_RSI_ENTRY_OB", CFG["rsi_entry_ob"]))
@@ -656,6 +662,8 @@ def scan(basket=None):
                     continue
                 if f["barsToTouch"] > CFG["max_bars_to_touch"]:   # رفض المناطق المسنّة
                     continue
+                if CFG["min_touchvolz"] and (f.get("touchVolZ", 0.0) or 0.0) < CFG["min_touchvolz"]:
+                    continue                     # بوابة الحجم: قفزة حجم عند شمعة الدخول (فحص متانة 2026-07-12)
                 key = f"{s}:{st['ts']}"          # منع التكرار: نفس اللمسة لا تُرسل مرتين
                 if key in sent:
                     continue
