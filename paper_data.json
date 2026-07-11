@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-11T09:07:49",
+  "updated_at": "2026-07-11T09:28:36",
   "stats": {
-    "open": 4,
+    "open": 3,
     "closed": 21,
     "win_rate": 52.4,
     "profit_factor": 0.93,
@@ -461,25 +461,13 @@
       "timeframe": "15m",
       "entry": 0.0191,
       "stop": 0.0189066,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-11T02:09:41",
       "closed_at": null,
-      "realized_pct": 0.0
-    },
-    {
-      "id": "العرض/الطلب|CGPTUSDT|2026-07-11 09:00:00",
-      "symbol": "CGPTUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.01903,
-      "stop": 0.0189294,
-      "hits": [],
-      "status": "open",
-      "opened_at": "2026-07-11T09:04:59",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.21
     }
   ]
 }
