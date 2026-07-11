@@ -50,6 +50,10 @@ BINANCE_BUY_ONLY = os.environ.get("BINANCE_BUY_ONLY", "0") == "1"   # 0 = إدا
 BINANCE_MAX_POS = int(os.environ.get("BINANCE_MAX_POS", "10"))      # حد مراكز بايننس
 FEE_RATE = 0.001                                              # عمولة تقديرية للطرف الواحد
 LOCK_R   = float(os.environ.get("SD_LOCK_R", "0.3"))          # قفل ربح: الوقف = الدخول + LOCK_R×R بعد الهدف1 (بدل التعادل)
+# هامش أمان إضافي فوق نقطة التعادل الحقيقية (بعد العمولتين) ضدّ انزلاق تنفيذ أمر السوق
+# عند ضرب الوقف. بدونه، وقف "التعادل" يُنفَّذ أحياناً بخسارة USDT صافية رغم أن السعر
+# لم ينزل فعلياً تحت الدخول — لأن العمولة تُقتطع مرتين (دخول+خروج) ولا تُحسب في السعر وحده.
+LOCK_SAFETY_PCT = float(os.environ.get("SD_LOCK_SAFETY_PCT", "0.0015"))
 # كشف تسليح +1R عبر قمة آخر شمعة بدل last_price فقط (المسار أ — فجوة اللقطة 2026-07-09).
 # البيع يبقى سوقياً؛ فقط اكتشاف بلوغ +1R يقرأ القمة ليُسلّح الوقف مبكراً. باك-تست: +10.4R(15m)/+9.7R(1h).
 # للتعطيل: SD_ARM_ON_HIGH=0.
@@ -406,11 +410,15 @@ def execute_from_tracker():
 
 
 # ── إدارة المراكز المفتوحة ───────────────────────────────────────────────────
-def _sell(sym, qty):
+def _sell(sym, qty, price=None):
     """بيع سوق لكمية، مقيّدة بالرصيد الفعلي ومقرّبة لخطوة الزوج. يرجع الكمية المُقرّبة أو 0.
     مهم: الرسوم (تُقتطع من العملة الأساس) والتقريب والملء الجزئي تجعل المُستلَم فعلياً
     أقل من الكمية المتتبَّعة qty_open — فبيعها كاملةً يرفضه بايبت (170131)/بايننس (-2010:
-    insufficient balance) فلا يُغلق المركز أبداً. الحل: لا نبيع أكثر من الرصيد الحرّ الفعلي."""
+    insufficient balance) فلا يُغلق المركز أبداً. الحل: لا نبيع أكثر من الرصيد الحرّ الفعلي.
+    حارس الحد الأدنى: أمر أصغر من minOrderAmt (minNotional) ترفضه المنصّة بخطأ
+    بايننس -1013 NOTIONAL / بايبت 170140 "Order value exceeded lower limit". على المنصّة
+    التجريبية نعدّه غباراً: نتخطّى أمر المنصّة لكن نعيد الكمية ليُغلق المركز دفترياً بدل أن
+    يفشل كل دورة إدارة إلى الأبد. (يتطلّب تمرير السعر price لحساب القيمة.)"""
     filt = bx.instrument_filters(sym)
     base = sym[:-4] if sym.endswith("USDT") else sym.replace("USDT", "")
     try:
@@ -422,6 +430,11 @@ def _sell(sym, qty):
     q = bx._round_step(qty, filt.get("basePrecision"))
     if q <= 0:
         return 0.0
+    min_amt = float(filt.get("minOrderAmt") or 5)
+    if price and q * price < min_amt:
+        print(f"_sell[{EX_NAME}]: {sym} كمية {q} ≈ {q*price:.2f} < الحد الأدنى {min_amt} "
+              f"— غبار، تخطّي أمر المنصّة وإغلاق دفتري")
+        return q
     bx.market_sell(sym, q)
     return q
 
@@ -447,6 +460,16 @@ def _record_exit(pos, qty, price, reason):
     })
     _save(LEDGER_PATH, ledger)
     return pnl
+
+
+def _breakeven_price(entry):
+    """أدنى سعر خروج يضمن ربح/خسارة USDT ≥ صفر تقريباً بعد عمولتَي الدخول والخروج
+    (صيغة _record_exit: pnl = qty*(price-entry) - qty*(entry+price)*FEE_RATE)، زائداً
+    هامش أمان LOCK_SAFETY_PCT ضدّ انزلاق تنفيذ أمر السوق عند ضرب الوقف. أي "قفل" أو
+    وقف متحرّك يجب ألا ينزل عن هذا السعر أبداً — وإلا فالوقف يأكل من الربح المحقّق فعلياً
+    على النص الأول (هدف1) بدل أن يحميه."""
+    fee_be = entry * (1 + FEE_RATE) / (1 - FEE_RATE)
+    return fee_be * (1 + LOCK_SAFETY_PCT)
 
 
 _HIGH_CACHE = {}   # (sym, tf) -> أعلى قمة لآخر شمعتين، ضمن دورة الإدارة الواحدة
@@ -515,7 +538,7 @@ def _manage_one(sym, positions):
 
     # (1) الوقف أولاً — حماية رأس المال
     if price <= pos["stop"]:
-        sold = _sell(sym, pos["qty_open"])
+        sold = _sell(sym, pos["qty_open"], price)
         reason = "تعادل/تتبّع" if pos["tp1_done"] else "وقف خسارة"
         pnl = _record_exit(pos, sold or pos["qty_open"], price, reason)
         del positions[sym]
@@ -526,15 +549,29 @@ def _manage_one(sym, positions):
     # (2) الهدف الأول — بيع 50% + نقل الوقف لمتوسط الدخول (تعادل)
     if not pos["tp1_done"] and price >= pos["tp1"]:
         half = pos["qty_open"] * 0.5
-        sold = _sell(sym, half)
+        # حارس الحد الأدنى: إن كان النصف أصغر من minOrderAmt للمنصّة (يرفضه بايننس -1013 /
+        # بايبت 170140)، أغلق المركز كاملاً عند الهدف1 بدل الجني الجزئي المتعذّر.
+        _filt = bx.instrument_filters(sym)
+        _min_amt = float(_filt.get("minOrderAmt") or 5)
+        if half * price < _min_amt:
+            sold = _sell(sym, pos["qty_open"], price)
+            pnl = _record_exit(pos, sold or pos["qty_open"], price,
+                               "هدف1 (إغلاق كامل — النصف أصغر من حد المنصّة)")
+            del positions[sym]
+            _notify(f"🏁 هدف1 [{EX_NAME}] {sym} @ {_fmt(price)} — إغلاق كامل "
+                    f"(النصف أصغر من حد المنصّة) ≈ {_fmt(pnl)} USDT")
+            return True
+        sold = _sell(sym, half, price)
         if sold > 0:
             pnl = _record_exit(pos, sold, price, "هدف1 (50%)")
             pos["qty_open"] -= sold
             pos["tp1_done"] = True
             pos["armed"] = True
-            lock = entry + LOCK_R * R              # قفل ربح صغير بدل التعادل الصفري
-            if pos["tp1"] <= lock:                 # هدف قريب جداً؟ ارجع للتعادل تفادياً لوقف فوري
+            lock = entry + LOCK_R * R              # قفل ربح صغير (0.3R) بدل التعادل الصفري
+            if pos["tp1"] <= lock:                 # هدف قريب جداً؟ ارجع لتعادل حقيقي بدل تعادل صفري خاسر
                 lock = entry
+            # الحدّ الأدنى الصارم: الوقف لا ينزل تحت سعر الدخول أبداً (بلا خسارة USDT)
+            lock = max(lock, entry)
             if lock > pos["stop"]:
                 pos["stop"] = lock
             changed = True
@@ -544,7 +581,7 @@ def _manage_one(sym, positions):
 
     # (3) الهدف الثاني — إغلاق المتبقّي
     if pos["tp1_done"] and price >= pos["tp2"]:
-        sold = _sell(sym, pos["qty_open"])
+        sold = _sell(sym, pos["qty_open"], price)
         pnl = _record_exit(pos, sold or pos["qty_open"], price, "هدف2")
         del positions[sym]
         _notify(f"🏁 هدف2 [{EX_NAME}] {sym} @ {_fmt(price)} — إغلاق كامل "
@@ -563,11 +600,15 @@ def _manage_one(sym, positions):
     if not pos.get("armed") and arm_px >= entry + R:
         pos["armed"] = True
         lock = entry + LOCK_R * R              # بلوغ +1R، فقفل +0.3R آمن تحته
+        lock = max(lock, _breakeven_price(entry))   # لا ينزل الوقف أبداً عن تعادل حقيقي بعد العمولتين
         if lock > pos["stop"]:
             pos["stop"] = lock
         changed = True
     if pos.get("armed"):
-        trail = price - R
+        # الوقف المتحرّك يتابع (price - R) لكن أرضيته الدنيا = سعر الدخول (بلا خسارة USDT)
+        # لا نستخدم _breakeven_price هنا لأن الهدف1 جنّى الربح فعلاً، والنص الثاني يجب محميّاً من الخسارة
+        floor_price = entry  # الحدّ الأدنى الصارم: لا نزول تحت الدخول
+        trail = max(price - R, floor_price)
         if trail > pos["stop"]:
             pos["stop"] = trail
             changed = True
