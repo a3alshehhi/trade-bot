@@ -164,39 +164,6 @@
     "armed": false,
     "opened_ts": "2026-07-10T07:33:35"
   },
-  "ATOMUSDT": {
-    "symbol": "ATOMUSDT",
-    "tf": "1h",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "levels": [
-      1.574
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 1.5886383129677846,
-        "qty": 62.94699,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 1.5886383129677846,
-    "entry": 1.5886383129677846,
-    "init_stop": 1.53818,
-    "stop": 1.5886383129677846,
-    "R": 0.05045831296778447,
-    "tp1": 1.599968,
-    "tp2": 1.615192,
-    "qty": 62.94699,
-    "qty_open": 31.47699,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-10T10:02:34"
-  },
   "API3USDT": {
     "symbol": "API3USDT",
     "tf": "15m",
