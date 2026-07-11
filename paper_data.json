@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-11T16:55:41",
+  "updated_at": "2026-07-11T17:18:05",
   "stats": {
-    "open": 5,
-    "closed": 24,
-    "win_rate": 58.3,
-    "profit_factor": 1.04,
-    "total_pct": 0.22,
-    "avg_pct": 0.04,
+    "open": 4,
+    "closed": 25,
+    "win_rate": 60.0,
+    "profit_factor": 1.09,
+    "total_pct": 1.47,
+    "avg_pct": 0.08,
     "max_drawdown_pct": -17.09
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-11",
-        "trades": 5,
+        "trades": 6,
         "win_rate": 100.0,
-        "return_pct": 6.1,
+        "return_pct": 7.43,
         "week": "2026-W28",
         "month": "2026-07"
       },
@@ -63,18 +63,18 @@
     "weekly": [
       {
         "key": "2026-W28",
-        "trades": 24,
-        "win_rate": 58.3,
-        "return_pct": 0.22,
+        "trades": 25,
+        "win_rate": 60.0,
+        "return_pct": 1.47,
         "month": "2026-07"
       }
     ],
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 24,
-        "win_rate": 58.3,
-        "return_pct": 0.22
+        "trades": 25,
+        "win_rate": 60.0,
+        "return_pct": 1.47
       }
     ]
   },
@@ -511,11 +511,15 @@
       "timeframe": "1h",
       "entry": 0.000923,
       "stop": 0.00090662,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
       "opened_at": "2026-07-11T12:03:39",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-11T17:18:04",
+      "realized_pct": 1.25,
+      "result_pct": 1.25
     },
     {
       "id": "عرض/طلب+دايفرجنس|API3USDT|2026-07-11 12:45:00",
@@ -530,7 +534,7 @@
       ],
       "status": "closed",
       "opened_at": "2026-07-11T12:59:44",
-      "closed_at": "2026-07-11T16:10:47",
+      "closed_at": "2026-07-11T16:35:14",
       "realized_pct": 0.34,
       "result_pct": 0.34
     },

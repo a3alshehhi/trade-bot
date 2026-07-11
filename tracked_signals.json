@@ -142,7 +142,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-11 15:59:59.999000",
+    "last_bar": "2026-07-11 16:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.066,
@@ -367,7 +367,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-07 16:00:00",
-    "last_bar": "2026-07-11 15:59:59.999000",
+    "last_bar": "2026-07-11 16:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.417,
@@ -1008,7 +1008,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-11 11:00:00",
-    "last_bar": "2026-07-11 15:59:59.999000",
+    "last_bar": "2026-07-11 16:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00547,
@@ -1023,7 +1023,7 @@
     "entry": 0.000923,
     "stop": 0.00090662,
     "init_stop": 0.00090662,
-    "cur_stop": 0.00090662,
+    "cur_stop": 0.000923,
     "legs": [
       0.000923
     ],
@@ -1041,12 +1041,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-11 12:00:00",
-    "last_bar": "2026-07-11 15:59:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.00093,
+    "last_bar": "2026-07-11 16:59:59.999000",
+    "hits": [
+      1,
+      2
+    ],
+    "stopped": true,
+    "hi_seen": 0.00095,
     "lo_seen": 0.000921,
-    "created": "2026-07-11T12:03:39"
+    "created": "2026-07-11T12:03:39",
+    "exit_price": 0.00093751,
+    "close_card_sent": true,
+    "closed_at": "2026-07-11T17:18:04"
   },
   "عرض/طلب+دايفرجنس|API3USDT|2026-07-11 12:45:00": {
     "symbol": "API3USDT",
@@ -1116,7 +1122,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-11 13:00:00",
-    "last_bar": "2026-07-11 15:59:59.999000",
+    "last_bar": "2026-07-11 16:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1761,
