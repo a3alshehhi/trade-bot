@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-11T14:06:11",
+  "updated_at": "2026-07-11T14:32:32",
   "stats": {
-    "open": 3,
-    "closed": 24,
-    "win_rate": 54.2,
-    "profit_factor": 1.0,
-    "total_pct": -0.73,
-    "avg_pct": -0.0,
+    "open": 6,
+    "closed": 23,
+    "win_rate": 56.5,
+    "profit_factor": 1.02,
+    "total_pct": -0.12,
+    "avg_pct": 0.02,
     "max_drawdown_pct": -17.09
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-11",
-        "trades": 5,
-        "win_rate": 80.0,
-        "return_pct": 5.1,
+        "trades": 4,
+        "win_rate": 100.0,
+        "return_pct": 5.75,
         "week": "2026-W28",
         "month": "2026-07"
       },
@@ -63,18 +63,18 @@
     "weekly": [
       {
         "key": "2026-W28",
-        "trades": 24,
-        "win_rate": 54.2,
-        "return_pct": -0.73,
+        "trades": 23,
+        "win_rate": 56.5,
+        "return_pct": -0.12,
         "month": "2026-07"
       }
     ],
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 24,
-        "win_rate": 54.2,
-        "return_pct": -0.73
+        "trades": 23,
+        "win_rate": 56.5,
+        "return_pct": -0.12
       }
     ]
   },
@@ -504,19 +504,48 @@
       "realized_pct": 0.0
     },
     {
-      "id": "العرض/الطلب|ARUSDT|2026-07-11 12:15:00",
-      "symbol": "ARUSDT",
+      "id": "العرض/الطلب|CKBUSDT|2026-07-11 12:00:00",
+      "symbol": "CKBUSDT",
       "label": "العرض/الطلب",
       "side": "buy",
-      "timeframe": "15m",
-      "entry": 2.005,
-      "stop": 1.99279,
+      "timeframe": "1h",
+      "entry": 0.000923,
+      "stop": 0.00090662,
       "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-11T12:22:00",
-      "closed_at": "2026-07-11T13:11:53",
-      "realized_pct": -0.61,
-      "result_pct": -0.61
+      "status": "open",
+      "opened_at": "2026-07-11T12:03:39",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "عرض/طلب+دايفرجنس|API3USDT|2026-07-11 12:45:00",
+      "symbol": "API3USDT",
+      "label": "عرض/طلب+دايفرجنس",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2284,
+      "stop": 0.226458,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "opened_at": "2026-07-11T12:59:44",
+      "closed_at": null,
+      "realized_pct": 0.34
+    },
+    {
+      "id": "العرض/الطلب|BANDUSDT|2026-07-11 13:00:00",
+      "symbol": "BANDUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1661,
+      "stop": 0.163436,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-11T13:38:37",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
