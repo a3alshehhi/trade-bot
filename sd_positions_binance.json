@@ -98,72 +98,6 @@
     "armed": false,
     "opened_ts": "2026-07-07T16:28:46"
   },
-  "ETHUSDT": {
-    "symbol": "ETHUSDT",
-    "tf": "1h",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "levels": [
-      1759.82
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 1771.683187612391,
-        "qty": 0.0564435,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 1771.683187612391,
-    "entry": 1771.683187612391,
-    "init_stop": 1725.6325,
-    "stop": 1785.4983938961084,
-    "R": 46.05068761239113,
-    "tp1": 1789.84056,
-    "tp2": 1805.57664,
-    "qty": 0.0564435,
-    "qty_open": 0.0282435,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-10T02:42:59"
-  },
-  "CTSIUSDT": {
-    "symbol": "CTSIUSDT",
-    "tf": "15m",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "levels": [
-      0.02368
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.0239359397656863,
-        "qty": 4177.818,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.0239359397656863,
-    "entry": 0.0239359397656863,
-    "init_stop": 0.0232915,
-    "stop": 0.0239359397656863,
-    "R": 0.0006444397656862992,
-    "tp1": 0.02404232,
-    "tp2": 0.02423608,
-    "qty": 4177.818,
-    "qty_open": 2089.818,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-10T07:33:35"
-  },
   "API3USDT": {
     "symbol": "API3USDT",
     "tf": "15m",
@@ -196,39 +130,6 @@
     "tp1_done": true,
     "armed": true,
     "opened_ts": "2026-07-10T22:07:00"
-  },
-  "CKBUSDT": {
-    "symbol": "CKBUSDT",
-    "tf": "1h",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "levels": [
-      0.000923
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.0009312243597266809,
-        "qty": 107385.507,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.0009312243597266809,
-    "entry": 0.0009312243597266809,
-    "init_stop": 0.00090662,
-    "stop": 0.0009312243597266809,
-    "R": 2.4604359726680854e-05,
-    "tp1": 0.00093162,
-    "tp2": 0.00093751,
-    "qty": 107385.507,
-    "qty_open": 53693.507,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-11T12:05:29"
   },
   "BANDUSDT": {
     "symbol": "BANDUSDT",

@@ -64,38 +64,5 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-07T16:27:29"
-  },
-  "ETHUSDT": {
-    "symbol": "ETHUSDT",
-    "tf": "1h",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "levels": [
-      1759.82
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 300.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 1770.8308738460084,
-        "qty": 0.169412,
-        "usd": 300.0
-      }
-    ],
-    "avg_entry": 1770.8308738460084,
-    "entry": 1770.8308738460084,
-    "init_stop": 1725.6325,
-    "stop": 1784.390385999811,
-    "R": 45.19837384600851,
-    "tp1": 1789.84056,
-    "tp2": 1805.57664,
-    "qty": 0.169412,
-    "qty_open": 0.08471200000000001,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-10T02:41:35"
   }
 }
