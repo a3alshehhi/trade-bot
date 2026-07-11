@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-11T11:39:50",
+  "updated_at": "2026-07-11T12:03:42",
   "stats": {
-    "open": 2,
+    "open": 4,
     "closed": 23,
     "win_rate": 56.5,
     "profit_factor": 1.02,
@@ -488,6 +488,34 @@
       "closed_at": "2026-07-11T10:33:20",
       "realized_pct": 1.45,
       "result_pct": 1.45
+    },
+    {
+      "id": "صيد الارتفاعات|ASTRUSDT|2026-07-11 11:00:00",
+      "symbol": "ASTRUSDT",
+      "label": "صيد الارتفاعات",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.005394,
+      "stop": 0.00520032,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-11T11:31:21",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|CKBUSDT|2026-07-11 12:00:00",
+      "symbol": "CKBUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.000923,
+      "stop": 0.00090662,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-11T12:03:39",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
