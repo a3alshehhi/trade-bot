@@ -1,0 +1,67 @@
+name: SD DivNow Backtest — direct-at-divergence vs breakout (3 frames)
+
+on:
+  workflow_dispatch:
+    inputs:
+      basket:
+        description: "عدد رموز الكريبتو"
+        default: '80'
+      os_lookback:
+        description: "نافذة الدايفرجنس"
+        default: '100'
+      div_below_ma:
+        description: "شرط تحت SMA(n)؛ 0=تعطيل"
+        default: '50'
+      brk_window:
+        description: "أقصى شموع لانتظار الاختراق"
+        default: '48'
+
+permissions:
+  contents: read
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: pip install requests scikit-learn joblib
+      - name: Backtest 5m (context 15m)
+        env:
+          SD_ENTRY_TF: 5m
+          SD_HTF: 15m
+          SD_BASKET: ${{ inputs.basket }}
+          SD_OS_LOOKBACK: ${{ inputs.os_lookback }}
+          SD_DIV_BELOW_MA: ${{ inputs.div_below_ma }}
+          SD_BRK_WINDOW: ${{ inputs.brk_window }}
+          SD_PAGES: '10'        # ≈ 35 يوم على 5m
+          SD_BT_HOLD: '96'      # 8 ساعات على 5m
+        run: python sd_bt_divnow.py 2>&1 | tee -a sd_bt_divnow_log.txt
+      - name: Backtest 15m (context 1h)
+        env:
+          SD_ENTRY_TF: 15m
+          SD_HTF: 1h
+          SD_BASKET: ${{ inputs.basket }}
+          SD_OS_LOOKBACK: ${{ inputs.os_lookback }}
+          SD_DIV_BELOW_MA: ${{ inputs.div_below_ma }}
+          SD_BRK_WINDOW: ${{ inputs.brk_window }}
+        run: python sd_bt_divnow.py 2>&1 | tee -a sd_bt_divnow_log.txt
+      - name: Backtest 1h (context 4h)
+        env:
+          SD_ENTRY_TF: 1h
+          SD_HTF: 4h
+          SD_BASKET: ${{ inputs.basket }}
+          SD_OS_LOOKBACK: ${{ inputs.os_lookback }}
+          SD_DIV_BELOW_MA: ${{ inputs.div_below_ma }}
+          SD_BRK_WINDOW: ${{ inputs.brk_window }}
+        run: python sd_bt_divnow.py 2>&1 | tee -a sd_bt_divnow_log.txt
+      - name: Upload log artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sd-bt-divnow-log
+          path: sd_bt_divnow_log.txt
+          if-no-files-found: ignore
