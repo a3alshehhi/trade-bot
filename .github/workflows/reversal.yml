@@ -73,14 +73,16 @@ jobs:
           unset SD_LABEL SD_TREND_MA SD_REQUIRE_OS21 SD_RSI21_OS SD_REQUIRE_MACD4C SD_ML_THRESHOLD
 
           # ── بوت 2: «عرض/طلب+دايفرجنس» — SMA50 + دايفرجنس صعودي MACD يتكوّن تحت SMA50 · بلا ML · بلا MACD4C ──
+          # SD_MAX_CHASE_R=0.3: حارس الملاحقة — تخطّي الدخول إن تجاوز السعر الدخول بأكثر من 0.3R
+          # (يمنع دخولات مطاردة الاختراق السيّئة مثل ANKR). مفعّل لهذا البوت فقط.
           export SD_LABEL="عرض/طلب+دايفرجنس" SD_TREND_MA=sma50 SD_REQUIRE_DIV=1 \
-                 SD_REQUIRE_MACD4C=0 SD_ML_THRESHOLD=0
+                 SD_REQUIRE_MACD4C=0 SD_ML_THRESHOLD=0 SD_MAX_CHASE_R=0.3
           SD_ENTRY_TF=15m SD_HTF=1h SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_div_15m.json python sd_bot.py
           SD_ENTRY_TF=1h  SD_HTF=4h  SD_MODEL=sd_model_1h.joblib  SD_STATE=sd_state_div_1h.json  python sd_bot.py
           SD_ENTRY_TF=5m   SD_HTF=15m SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_div_5m.json  python sd_bot.py
           SD_LABELS="عرض/طلب+دايفرجنس" SD_POS=sd_pos_div.json SD_LEDGER=sd_ledger_div.json \
                  SD_EXECUTED=sd_exec_div.json SD_LAST_ENTRY=sd_last_div.json python sd_autotrade.py run
-          unset SD_LABEL SD_TREND_MA SD_REQUIRE_DIV SD_REQUIRE_MACD4C SD_ML_THRESHOLD
+          unset SD_LABEL SD_TREND_MA SD_REQUIRE_DIV SD_REQUIRE_MACD4C SD_ML_THRESHOLD SD_MAX_CHASE_R
           true
 
       - name: Persist state (conflict-proof)
