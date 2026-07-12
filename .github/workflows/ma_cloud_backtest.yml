@@ -12,6 +12,9 @@ on:
       hold:
         description: "أقصى شموع لإمساك الصفقة"
         default: "200"
+      pages:
+        description: "عدد صفحات البيانات (كل صفحة ≈1000 شمعة) — لتمديد فترة الباك-تست"
+        default: "5"
 
 jobs:
   backtest:
@@ -28,6 +31,7 @@ jobs:
           MC_BT_FRAMES: ${{ github.event.inputs.frames }}
           MC_BT_SYMBOLS: ${{ github.event.inputs.symbols }}
           MC_BT_HOLD: ${{ github.event.inputs.hold }}
+          MC_BT_PAGES: ${{ github.event.inputs.pages }}
         run: |
           python ma_cloud_bot.py backtest | tee ma_cloud_backtest_result.txt
       - name: Upload result
