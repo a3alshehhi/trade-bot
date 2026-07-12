@@ -1,0 +1,37 @@
+name: MA Cloud Backtest (باك-تست بوت سحابة المتوسطات)
+
+on:
+  workflow_dispatch:
+    inputs:
+      frames:
+        description: "فريمات الباك-تست (مفصولة بفاصلة)"
+        default: "15m,1h,4h"
+      symbols:
+        description: "عدد رموز الباك-تست"
+        default: "40"
+      hold:
+        description: "أقصى شموع لإمساك الصفقة"
+        default: "200"
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install deps
+        run: pip install requests
+      - name: "Run MA Cloud backtest (15m/1h/4h)"
+        env:
+          MC_BT_FRAMES: ${{ github.event.inputs.frames }}
+          MC_BT_SYMBOLS: ${{ github.event.inputs.symbols }}
+          MC_BT_HOLD: ${{ github.event.inputs.hold }}
+        run: |
+          python ma_cloud_bot.py backtest | tee ma_cloud_backtest_result.txt
+      - name: Upload result
+        uses: actions/upload-artifact@v4
+        with:
+          name: ma-cloud-backtest-result
+          path: ma_cloud_backtest_result.txt
