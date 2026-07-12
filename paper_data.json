@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-12T22:39:54",
+  "updated_at": "2026-07-12T23:03:46",
   "stats": {
-    "open": 4,
-    "closed": 27,
-    "win_rate": 59.3,
-    "profit_factor": 1.09,
-    "total_pct": 1.68,
-    "avg_pct": 0.09,
+    "open": 3,
+    "closed": 28,
+    "win_rate": 57.1,
+    "profit_factor": 0.97,
+    "total_pct": -1.83,
+    "avg_pct": -0.04,
     "max_drawdown_pct": -17.09
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-12",
-        "trades": 2,
-        "win_rate": 50.0,
-        "return_pct": 0.21,
+        "trades": 3,
+        "win_rate": 33.3,
+        "return_pct": -3.26,
         "week": "2026-W28",
         "month": "2026-07"
       },
@@ -71,18 +71,18 @@
     "weekly": [
       {
         "key": "2026-W28",
-        "trades": 27,
-        "win_rate": 59.3,
-        "return_pct": 1.68,
+        "trades": 28,
+        "win_rate": 57.1,
+        "return_pct": -1.83,
         "month": "2026-07"
       }
     ],
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 27,
-        "win_rate": 59.3,
-        "return_pct": 1.68
+        "trades": 28,
+        "win_rate": 57.1,
+        "return_pct": -1.83
       }
     ]
   },
@@ -235,10 +235,11 @@
       "entry": 0.395,
       "stop": 0.38132,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-07T16:27:19",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-12T23:03:45",
+      "realized_pct": -3.46,
+      "result_pct": -3.46
     },
     {
       "id": "العرض/الطلب|AWEUSDT|2026-07-07 23:15:00",

@@ -142,7 +142,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-12 00:59:59.999000",
+    "last_bar": "2026-07-12 22:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.066,
@@ -367,12 +367,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-07 16:00:00",
-    "last_bar": "2026-07-12 00:59:59.999000",
+    "last_bar": "2026-07-12 22:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.417,
-    "lo_seen": 0.386,
-    "created": "2026-07-07T16:27:19"
+    "lo_seen": 0.381,
+    "created": "2026-07-07T16:27:19",
+    "exit_price": 0.38132,
+    "close_card_sent": true,
+    "closed_at": "2026-07-12T23:03:45"
   },
   "العرض/الطلب|AWEUSDT|2026-07-07 23:15:00": {
     "symbol": "AWEUSDT",
@@ -1125,10 +1128,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-11 13:00:00",
-    "last_bar": "2026-07-12 00:59:59.999000",
+    "last_bar": "2026-07-12 22:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.1761,
+    "hi_seen": 0.1775,
     "lo_seen": 0.1661,
     "created": "2026-07-11T13:38:37"
   },
@@ -1197,11 +1200,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-12 10:00:00",
-    "last_bar": "2026-07-12 10:00:00",
+    "last_bar": "2026-07-12 22:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.0093,
-    "lo_seen": 0.0093,
+    "hi_seen": 0.0095,
+    "lo_seen": 0.0091,
     "created": "2026-07-12T10:49:49"
   }
 }
