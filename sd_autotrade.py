@@ -54,6 +54,10 @@ LOCK_R   = float(os.environ.get("SD_LOCK_R", "0.3"))          # قفل ربح: �
 # عند ضرب الوقف. بدونه، وقف "التعادل" يُنفَّذ أحياناً بخسارة USDT صافية رغم أن السعر
 # لم ينزل فعلياً تحت الدخول — لأن العمولة تُقتطع مرتين (دخول+خروج) ولا تُحسب في السعر وحده.
 LOCK_SAFETY_PCT = float(os.environ.get("SD_LOCK_SAFETY_PCT", "0.0015"))
+# حارس الملاحقة (chase guard): إن تجاوز السعر الحيّ وقت التنفيذ مستوى الدخول (اختراق قمة
+# الـCHoCH) بأكثر من MAX_CHASE_R×R، نتخطّى الصفقة بدل الدخول متأخّراً بعائد/مخاطرة مشوّه.
+# 0 = معطّل (الافتراضي لكل البوتات). يُفعَّل لبوت الدايفرجنس فقط عبر SD_MAX_CHASE_R في reversal.yml.
+MAX_CHASE_R = float(os.environ.get("SD_MAX_CHASE_R", "0"))
 # كشف تسليح +1R عبر قمة آخر شمعة بدل last_price فقط (المسار أ — فجوة اللقطة 2026-07-09).
 # البيع يبقى سوقياً؛ فقط اكتشاف بلوغ +1R يقرأ القمة ليُسلّح الوقف مبكراً. باك-تست: +10.4R(15m)/+9.7R(1h).
 # للتعطيل: SD_ARM_ON_HIGH=0.
@@ -221,6 +225,17 @@ def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equit
     if not filt:                                    # الزوج غير مُدرَج للتداول (Spot/Demo)
         print(f"autotrade[{EX_NAME}]: {sym} غير متاح للتداول على المنصّة — تخطّي")
         return False
+
+    # حارس الملاحقة: إن كان السعر الحيّ قد تجاوز مستوى الدخول بأكثر من MAX_CHASE_R×R،
+    # فالعائد/المخاطرة انهار (دخول متأخّر يطارد الاختراق) — نتخطّى بدل الدخول السيّئ.
+    if MAX_CHASE_R > 0:
+        risk = entry - stop
+        live = bx.last_price(sym) or 0.0
+        if live > 0 and risk > 0 and live > entry + MAX_CHASE_R * risk:
+            over = (live - entry) / risk
+            print(f"autotrade[{EX_NAME}]: {sym} السعر الحيّ {live} تجاوز الدخول {entry} "
+                  f"بـ{over:.2f}R (>{MAX_CHASE_R}R) — تجنّب الملاحقة، تخطّي")
+            return False
 
     # سلّم الفيبو تنازلياً (الأعلى أولاً). إن غاب → دخول مفرد بمستوى واحد.
     levels = sorted([float(x) for x in (levels or []) if x], reverse=True) or [entry]
