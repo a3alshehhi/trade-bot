@@ -81,10 +81,11 @@ def run_frame():
     ma_kind, ma_len = parse_trend_ma()
     ma_label = "live-EMA" if ma_kind == "live" else f"{ma_kind.upper()}{ma_len}"
     div_below_ma = int(os.environ.get("SD_DIV_BELOW_MA", 50))  # شرط: قاعا الدايفرجنس تحت SMA(n)؛ 0=تعطيل
+    min_tvz = float(os.environ.get("SD_MIN_TOUCHVOLZ", "1.5"))  # عتبة بوابة الحجم على اللمسة (2026-07-12)
     limit = int(os.environ.get("SD_BASKET", "40"))
     basket = S.parse_watchlist_crypto(S.WATCHLIST)[:limit]
 
-    groups = {"base": [], "div": [], "m4c": [], "div4c": []}
+    groups = {"base": [], "div": [], "m4c": [], "div4c": [], "divvol": []}
     n_symbols = 0
 
     print(f"div backtest SD | tf={tf} htf={htf} | {len(basket)} رمز | hold={hold} | "
@@ -157,6 +158,9 @@ def run_frame():
                     groups["m4c"].append(r)
                 if div and c4:
                     groups["div4c"].append(r)
+                # دايفرجنس + بوابة الحجم على اللمسة (touchVolZ ≥ عتبة) — طلب بو محمد 2026-07-12
+                if div and (f.get("touchVolZ") or 0) >= min_tvz:
+                    groups["divvol"].append(r)
         except Exception as ex:
             print("skip", s, ex, flush=True)
         time.sleep(0.03)
@@ -168,7 +172,8 @@ def run_frame():
     order = [("بدون الشرط (أساس)", "base"),
              ("دايفرجنس صعودي", "div"),
              ("MACD 4C صاعد", "m4c"),
-             ("دايفرجنس + 4C", "div4c")]
+             ("دايفرجنس + 4C", "div4c"),
+             (f"دايفرجنس + حجم≥{min_tvz}", "divvol")]
     for label, key in order:
         print(f"  • {label:<20} : {S._stats(groups[key])}", flush=True)
     return {tf: {k: S._stats(v) for k, v in groups.items()}}
