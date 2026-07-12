@@ -25,6 +25,11 @@
   python ma_cloud_bot.py backtest_split  # نفس الباك-تست لكن مقسّم لنصفين زمنيين (فحص متانة الحافة)
   python ma_cloud_bot.py scan            # فحص آخر شمعة مغلقة وإرسال أفضل الإشارات لتيليجرام
 
+متغيرات بيئة إضافية للباك-تست:
+  MC_MARKET=stock       # التبديل من كريبتو (افتراضي) إلى أسهم أمريكية (عبر yfinance)
+  MC_BT_FRAMES=1d       # مع الأسهم استخدم 1d — لا يوجد فريم 4h حقيقي بالأسهم (yfinance ما يدعمه)
+  MC_STOCK_PERIOD=max   # مدى تاريخ yfinance (افتراضي: أقصى مدى متاح لكل سهم)
+
 تنبيه: أداة تحليل تعليمية. لا تنفّذ صفقات بأموال حقيقية. التداول مخاطرة، وليست نصيحة مالية.
 """
 import os, sys, time, math, json, datetime as dt
@@ -52,8 +57,11 @@ CFG["bt_symbols"] = int(os.environ.get("MC_BT_SYMBOLS", CFG["bt_symbols"]))
 CFG["bt_hold"]    = int(os.environ.get("MC_BT_HOLD", CFG["bt_hold"]))
 CFG["pages"]      = int(os.environ.get("MC_BT_PAGES", CFG["pages"]))  # لتمديد فترة الباك-تست (كل صفحة ≈1000 شمعة)
 CFG["entry_tf"]   = os.environ.get("MC_TF", "1h")   # فريم وضع scan الحي
+CFG["market"]        = os.environ.get("MC_MARKET", "crypto")      # crypto أو stock
+CFG["stock_period"]  = os.environ.get("MC_STOCK_PERIOD", "max")   # مدى تاريخ yfinance (فريم 1d فقط عادةً)
 
 BINANCE_BASES = ["https://data-api.binance.vision", "https://api.binance.com"]
+US_STOCK_EXCHANGES = {"NASDAQ", "NYSE", "AMEX", "OTC", "BATS", "CBOE"}
 WATCHLIST = "watchlist.txt"
 STATE_PATH = os.environ.get("MC_STATE", "ma_cloud_state.json")
 DASH_LABEL = "سحابة المتوسطات"
@@ -89,6 +97,43 @@ def fetch_klines(symbol, interval, pages=2):
     return dict(
         t=[r[0] for r in rows], o=[float(r[1]) for r in rows], h=[float(r[2]) for r in rows],
         l=[float(r[3]) for r in rows], c=[float(r[4]) for r in rows], v=[float(r[5]) for r in rows])
+
+
+def fetch_stock_klines(symbol, interval="1d", period=None):
+    """يجلب بيانات سهم عبر yfinance ويرجعها بنفس صيغة fetch_klines (t/o/h/l/c/v)."""
+    try:
+        import yfinance as yf
+    except ImportError:
+        return None
+    period = period or CFG["stock_period"]
+    try:
+        df = yf.download(symbol, period=period, interval=interval,
+                          progress=False, auto_adjust=True, threads=False)
+        if df is None or df.empty:
+            return None
+        df = df.reset_index()
+        df.columns = [c[0] if isinstance(c, tuple) else c for c in df.columns]
+        date_col = "Date" if "Date" in df.columns else ("Datetime" if "Datetime" in df.columns else None)
+        need_cols = [date_col, "Open", "High", "Low", "Close", "Volume"]
+        if date_col is None or any(c not in df.columns for c in need_cols):
+            return None
+        df = df.dropna(subset=need_cols)
+        if df.empty:
+            return None
+        t = [int(x.timestamp() * 1000) for x in df[date_col]]
+        return dict(
+            t=t, o=[float(x) for x in df["Open"]], h=[float(x) for x in df["High"]],
+            l=[float(x) for x in df["Low"]], c=[float(x) for x in df["Close"]],
+            v=[float(x) for x in df["Volume"]])
+    except Exception:
+        return None
+
+
+def fetch_ohlc(symbol, tf):
+    """موزّع جلب البيانات حسب السوق (CFG['market']) — كريبتو من Binance، أسهم عبر yfinance."""
+    if CFG["market"] == "stock":
+        return fetch_stock_klines(symbol, tf)
+    return fetch_klines(symbol, tf, CFG["pages"])
 
 
 # ----------------------- مؤشرات -----------------------
@@ -250,6 +295,36 @@ def parse_watchlist_crypto(path):
     return uniq
 
 
+def parse_watchlist_stocks(path):
+    """يستخرج رموز الأسهم الأمريكية (NASDAQ/NYSE/AMEX/...) من نفس ملف الـ watchlist —
+       يستبعد بورصات الخليج (ADX/DFM) لأن yfinance لا يدعمها."""
+    try:
+        raw = open(path, encoding="utf-8").read()
+    except Exception:
+        return []
+    toks = []
+    for line in raw.splitlines():
+        if "\t" in line:
+            line = line.split("\t", 1)[1]
+        toks += [x.strip() for x in line.split(",") if x.strip()]
+    seen, uniq = set(), []
+    for tok in toks:
+        if tok.startswith("#") or ":" not in tok:
+            continue
+        exch, sym = tok.split(":", 1); sym = sym.strip().upper()
+        if exch.upper() in US_STOCK_EXCHANGES:
+            if sym not in seen:
+                seen.add(sym); uniq.append(sym)
+    return uniq
+
+
+def get_basket():
+    """موزّع سلة الرموز حسب السوق (CFG['market'])."""
+    if CFG["market"] == "stock":
+        return parse_watchlist_stocks(WATCHLIST)[:CFG["bt_symbols"]]
+    return parse_watchlist_crypto(WATCHLIST)[:CFG["bt_symbols"]]
+
+
 # ----------------------- باك-تست حقيقي (متعدد الفريمات) -----------------------
 def backtest_frame(tf, basket):
     hold = CFG["bt_hold"]
@@ -259,7 +334,7 @@ def backtest_frame(tf, basket):
     n_symbols = 0
     for s in basket:
         try:
-            d = fetch_klines(s, tf, CFG["pages"])
+            d = fetch_ohlc(s, tf)
             if not d or len(d["c"]) < need + hold + 10:
                 continue
             n_symbols += 1
@@ -295,7 +370,7 @@ def backtest_frame(tf, basket):
     return {"long": rs_long, "short": rs_short}
 
 def backtest(basket=None):
-    basket = basket or parse_watchlist_crypto(WATCHLIST)[:CFG["bt_symbols"]]
+    basket = basket or get_basket()
     frames = [x.strip() for x in CFG["bt_frames"].split(",") if x.strip()]
     print(f"باك-تست بوت سحابة المتوسطات (EMA20H/L + EMA100H/L + SMA300) | "
           f"فريمات={frames} | {len(basket)} رمز | hold={CFG['bt_hold']}", flush=True)
@@ -316,7 +391,7 @@ def backtest_frame_split(tf, basket):
     n_symbols = 0
     for s in basket:
         try:
-            d = fetch_klines(s, tf, CFG["pages"])
+            d = fetch_ohlc(s, tf)
             if not d or len(d["c"]) < need + hold + 10:
                 continue
             n_symbols += 1
@@ -378,7 +453,7 @@ def backtest_frame_split(tf, basket):
 
 
 def backtest_split(basket=None):
-    basket = basket or parse_watchlist_crypto(WATCHLIST)[:CFG["bt_symbols"]]
+    basket = basket or get_basket()
     frames = [x.strip() for x in CFG["bt_frames"].split(",") if x.strip()]
     print(f"فحص متانة (نصفين زمنيين) لبوت سحابة المتوسطات | فريمات={frames} | "
           f"{len(basket)} رمز | hold={CFG['bt_hold']} | pages={CFG['pages']}", flush=True)
