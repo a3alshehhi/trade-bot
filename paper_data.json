@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-12T10:35:24",
+  "updated_at": "2026-07-12T11:02:31",
   "stats": {
-    "open": 3,
+    "open": 4,
     "closed": 27,
     "win_rate": 59.3,
     "profit_factor": 1.09,
@@ -577,6 +577,20 @@
       "closed_at": "2026-07-12T01:36:27",
       "realized_pct": 3.94,
       "result_pct": 3.94
+    },
+    {
+      "id": "عرض/طلب+دايفرجنس|COOKIEUSDT|2026-07-12 10:00:00",
+      "symbol": "COOKIEUSDT",
+      "label": "عرض/طلب+دايفرجنس",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0093,
+      "stop": 0.00892,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-12T10:23:05",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
