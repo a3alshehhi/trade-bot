@@ -18,6 +18,9 @@ on:
       mode:
         description: "الوضع: backtest (عادي) أو backtest_split (فحص متانة بنصفين زمنيين)"
         default: "backtest"
+      market:
+        description: "السوق: crypto (Binance) أو stock (أسهم عبر yfinance، استخدم frames=1d)"
+        default: "crypto"
 
 jobs:
   backtest:
@@ -28,13 +31,14 @@ jobs:
         with:
           python-version: "3.11"
       - name: Install deps
-        run: pip install requests
-      - name: "Run MA Cloud backtest (15m/1h/4h)"
+        run: pip install requests yfinance pandas
+      - name: "Run MA Cloud backtest"
         env:
           MC_BT_FRAMES: ${{ github.event.inputs.frames }}
           MC_BT_SYMBOLS: ${{ github.event.inputs.symbols }}
           MC_BT_HOLD: ${{ github.event.inputs.hold }}
           MC_BT_PAGES: ${{ github.event.inputs.pages }}
+          MC_MARKET: ${{ github.event.inputs.market }}
         run: |
           python ma_cloud_bot.py ${{ github.event.inputs.mode }} | tee ma_cloud_backtest_result.txt
       - name: Upload result
