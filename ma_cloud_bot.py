@@ -49,6 +49,7 @@ CFG = dict(
 CFG["bt_frames"]  = os.environ.get("MC_BT_FRAMES", CFG["bt_frames"])
 CFG["bt_symbols"] = int(os.environ.get("MC_BT_SYMBOLS", CFG["bt_symbols"]))
 CFG["bt_hold"]    = int(os.environ.get("MC_BT_HOLD", CFG["bt_hold"]))
+CFG["pages"]      = int(os.environ.get("MC_BT_PAGES", CFG["pages"]))  # لتمديد فترة الباك-تست (كل صفحة ≈1000 شمعة)
 CFG["entry_tf"]   = os.environ.get("MC_TF", "1h")   # فريم وضع scan الحي
 
 BINANCE_BASES = ["https://data-api.binance.vision", "https://api.binance.com"]
