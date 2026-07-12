@@ -21,8 +21,9 @@
     الثاني) + خروج إجباري إذا انكسرت سحابة EMA100 هيكلياً (انكسار الاتجاه المتوسط نفسه).
 
 الأوضاع:
-  python ma_cloud_bot.py backtest   # باك-تست حقيقي على بيانات فعلية (15m/1h/4h افتراضياً)
-  python ma_cloud_bot.py scan       # فحص آخر شمعة مغلقة وإرسال أفضل الإشارات لتيليجرام
+  python ma_cloud_bot.py backtest        # باك-تست حقيقي على بيانات فعلية (15m/1h/4h افتراضياً)
+  python ma_cloud_bot.py backtest_split  # نفس الباك-تست لكن مقسّم لنصفين زمنيين (فحص متانة الحافة)
+  python ma_cloud_bot.py scan            # فحص آخر شمعة مغلقة وإرسال أفضل الإشارات لتيليجرام
 
 تنبيه: أداة تحليل تعليمية. لا تنفّذ صفقات بأموال حقيقية. التداول مخاطرة، وليست نصيحة مالية.
 """
@@ -304,6 +305,87 @@ def backtest(basket=None):
     return all_res
 
 
+# ----------------------- فحص متانة: تقسيم الباك-تست لنصفين زمنيين -----------------------
+def backtest_frame_split(tf, basket):
+    """نفس منطق backtest_frame لكن يحتفظ بتوقيت كل صفقة ويقسّم النتائج لنصف أول/نصف
+       ثاني زمنياً (حسب توقيت شمعة الإشارة) — للتأكد إن الحافة تصمد بفترتين لا تظهر
+       فقط بالمجموع الكلي (نفس درس انقلاب 4h عند تمديد الفترة)."""
+    hold = CFG["bt_hold"]
+    need = CFG["sma300_len"] + CFG["swing_lookback"] + 5
+    rs_long, rs_short = [], []   # كل عنصر: (ts_ms, R)
+    n_symbols = 0
+    for s in basket:
+        try:
+            d = fetch_klines(s, tf, CFG["pages"])
+            if not d or len(d["c"]) < need + hold + 10:
+                continue
+            n_symbols += 1
+            h, l, c, t = d["h"], d["l"], d["c"], d["t"]
+            e100l_full = ema(l, CFG["ema100_len"])
+            e100h_full = ema(h, CFG["ema100_len"])
+            N = len(c)
+            step = 3
+            for cut in range(need, N - hold, step):
+                sub = {k: d[k][:cut + 1] for k in ("t", "o", "h", "l", "c", "v")}
+                sig = find_setup(s, sub)
+                if not sig:
+                    continue
+                ts = t[cut]
+                if sig["dir"] == "long":
+                    r = _sim_5050_long(sig["entry"], sig["stop"], sig["tp1"], sig["tp2"],
+                                        h, l, c, e100l_full, cut, hold)
+                    if r is not None:
+                        rs_long.append((ts, r))
+                else:
+                    r = _sim_5050_short(sig["entry"], sig["stop"], sig["tp1"], sig["tp2"],
+                                         h, l, c, e100h_full, cut, hold)
+                    if r is not None:
+                        rs_short.append((ts, r))
+        except Exception as ex:
+            print("bt skip", s, tf, ex, flush=True)
+        time.sleep(0.03)
+
+    all_pairs = rs_long + rs_short
+    print(f"\n════ فريم {tf} — فحص نصفين زمنيين ════", flush=True)
+    print(f"رموز مُحلَّلة={n_symbols}", flush=True)
+    if not all_pairs:
+        print("لا صفقات", flush=True)
+        return
+
+    mid_ts = sorted(p[0] for p in all_pairs)[len(all_pairs) // 2]
+    mid_date = dt.datetime.utcfromtimestamp(mid_ts / 1000).date()
+    print(f"نقطة المنتصف (تاريخياً) ≈ {mid_date}", flush=True)
+
+    def split(pairs):
+        return ([r for ts, r in pairs if ts < mid_ts],
+                [r for ts, r in pairs if ts >= mid_ts])
+
+    long_f, long_s = split(rs_long)
+    short_f, short_s = split(rs_short)
+
+    print("— النصف الأول (أقدم) —", flush=True)
+    print(f"  LONG  : {_stats(long_f)}", flush=True)
+    print(f"  SHORT : {_stats(short_f)}", flush=True)
+    print(f"  الكل  : {_stats(long_f + short_f)}", flush=True)
+    print("— النصف الثاني (أحدث) —", flush=True)
+    print(f"  LONG  : {_stats(long_s)}", flush=True)
+    print(f"  SHORT : {_stats(short_s)}", flush=True)
+    print(f"  الكل  : {_stats(long_s + short_s)}", flush=True)
+    print("— المجموع الكلي (كلا النصفين) —", flush=True)
+    print(f"  LONG  : {_stats([r for _, r in rs_long])}", flush=True)
+    print(f"  SHORT : {_stats([r for _, r in rs_short])}", flush=True)
+    print(f"  الكل  : {_stats([r for _, r in all_pairs])}", flush=True)
+
+
+def backtest_split(basket=None):
+    basket = basket or parse_watchlist_crypto(WATCHLIST)[:CFG["bt_symbols"]]
+    frames = [x.strip() for x in CFG["bt_frames"].split(",") if x.strip()]
+    print(f"فحص متانة (نصفين زمنيين) لبوت سحابة المتوسطات | فريمات={frames} | "
+          f"{len(basket)} رمز | hold={CFG['bt_hold']} | pages={CFG['pages']}", flush=True)
+    for tf in frames:
+        backtest_frame_split(tf, basket)
+
+
 # ----------------------- الحالة (منع تكرار الإشارات في scan) -----------------------
 def load_state():
     try:
@@ -389,6 +471,8 @@ def main():
     mode = sys.argv[1] if len(sys.argv) > 1 else "scan"
     if mode == "backtest":
         backtest()
+    elif mode == "backtest_split":
+        backtest_split()
     else:
         scan()
 
