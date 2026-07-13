@@ -1214,5 +1214,38 @@
     "exit_price": 0.0093,
     "close_card_sent": true,
     "closed_at": "2026-07-13T13:43:28"
+  },
+  "عرض/طلب+دايفرجنس|BTCUSDT|2026-07-13 23:50:00": {
+    "symbol": "BTCUSDT",
+    "label": "عرض/طلب+دايفرجنس",
+    "timeframe": "5m",
+    "message_id": 4803,
+    "entry": 62240.0,
+    "stop": 61846.172,
+    "init_stop": 61846.172,
+    "cur_stop": 61846.172,
+    "legs": [
+      62240.0
+    ],
+    "last_alert_stop": 61846.172,
+    "armed": false,
+    "targets": [
+      62458.57448,
+      62615.17062
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-13 23:50:00",
+    "last_bar": "2026-07-13 23:50:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 62240.0,
+    "lo_seen": 62240.0,
+    "created": "2026-07-13T23:57:27"
   }
 }
