@@ -1,37 +1,4 @@
 {
-  "ARUSDT": {
-    "symbol": "ARUSDT",
-    "tf": "1h",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "levels": [
-      2.013
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 300.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 2.0570570570344064,
-        "qty": 145.83941606000002,
-        "usd": 300.0
-      }
-    ],
-    "avg_entry": 2.0570570570344064,
-    "entry": 2.0570570570344064,
-    "init_stop": 1.9175,
-    "stop": 1.9175,
-    "R": 0.13955705703440646,
-    "tp1": 2.094088,
-    "tp2": 2.138722,
-    "qty": 145.83941606000002,
-    "qty_open": 145.83941606000002,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-06T16:35:03"
-  },
   "CITYUSDT": {
     "symbol": "CITYUSDT",
     "tf": "1h",
