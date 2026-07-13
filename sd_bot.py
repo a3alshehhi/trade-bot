@@ -141,7 +141,7 @@ TG_CHAT = os.environ.get("TELEGRAM_CHAT_ID", os.environ.get("TG_CHAT", ""))
 
 # سجل المتتبّع المشترك: نكتب فيه إشاراتنا لتظهر وتُتابَع في اللوحة مثل بقية البوتات.
 # (يتابعها trackmon في reversal.yml كل 15 دقيقة ويُصدّر paper_data.json للوحة)
-TRACK_FILE = "tracked_signals.json"
+TRACK_FILE = os.environ.get("SD_TRACK", "tracked_signals.json")  # ملف التتبّع (قابل للعزل لكل بوت عبر SD_TRACK)
 DASH_LABEL = os.environ.get("SD_LABEL", "العرض/الطلب")   # اسم/وسم البوت (لتمييز الإشارات والتنفيذ)
 _TF_MS = {"1m": 60000, "3m": 180000, "5m": 300000, "15m": 900000, "30m": 1800000,
           "1h": 3600000, "2h": 7200000, "4h": 14400000, "1d": 86400000}
