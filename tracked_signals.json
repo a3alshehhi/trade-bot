@@ -1131,7 +1131,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-11 13:00:00",
-    "last_bar": "2026-07-13 10:59:59.999000",
+    "last_bar": "2026-07-13 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1775,
@@ -1203,13 +1203,16 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-12 10:00:00",
-    "last_bar": "2026-07-13 10:59:59.999000",
+    "last_bar": "2026-07-13 12:59:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0097,
     "lo_seen": 0.0091,
-    "created": "2026-07-12T10:49:49"
+    "created": "2026-07-12T10:49:49",
+    "exit_price": 0.0093,
+    "close_card_sent": true,
+    "closed_at": "2026-07-13T13:15:55"
   }
 }
