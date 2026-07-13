@@ -567,7 +567,10 @@ def _manage_one(sym, positions):
             pos["stop"] = lock
         changed = True
     if pos.get("armed"):
-        trail = price - R
+        # الوقف المتحرّك يتابع (price - R) لكن أرضيته الدنيا = سعر الدخول (بلا خسارة USDT)
+        # لا نستخدم _breakeven_price هنا لأن الهدف1 جنّى الربح فعلاً، والنص الثاني يجب محميّاً من الخسارة
+        floor_price = entry  # الحدّ الأدنى الصارم: لا نزول تحت الدخول
+        trail = max(price - R, floor_price)
         if trail > pos["stop"]:
             pos["stop"] = trail
             changed = True
