@@ -1,8 +1,8 @@
 name: SD Stable - عرض/طلب مستقر (كل 15د)
 
 on:
-  schedule:
-    - cron: '*/15 * * * *'
+  # schedule:
+    # - cron: '*/15 * * * *'
   workflow_dispatch:
 
 jobs:
