@@ -142,12 +142,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-06 16:00:00",
-    "last_bar": "2026-07-12 22:59:59.999000",
+    "last_bar": "2026-07-13 03:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 2.066,
-    "lo_seen": 1.923,
-    "created": "2026-07-06T16:19:32"
+    "lo_seen": 1.905,
+    "created": "2026-07-06T16:19:32",
+    "exit_price": 1.9175,
+    "close_card_sent": true,
+    "closed_at": "2026-07-13T04:19:39"
   },
   "العرض/الطلب|ACHUSDT|2026-07-06 16:00:00": {
     "symbol": "ACHUSDT",
@@ -1128,11 +1131,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-11 13:00:00",
-    "last_bar": "2026-07-12 22:59:59.999000",
+    "last_bar": "2026-07-13 03:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1775,
-    "lo_seen": 0.1661,
+    "lo_seen": 0.1643,
     "created": "2026-07-11T13:38:37"
   },
   "عرض/طلب+دايفرجنس|ANKRUSDT|2026-07-11 21:45:00": {
@@ -1200,7 +1203,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-12 10:00:00",
-    "last_bar": "2026-07-12 22:59:59.999000",
+    "last_bar": "2026-07-13 03:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0095,
