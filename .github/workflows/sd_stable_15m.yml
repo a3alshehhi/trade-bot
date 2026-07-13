@@ -22,7 +22,7 @@ jobs:
           python-version: 3.11
 
       - name: Install deps
-        run: pip install ccxt binance-connector pybit requests
+        run: pip install ccxt binance-connector pybit requests scikit-learn joblib numpy pandas
 
       - name: Run SD Stable
         env:
