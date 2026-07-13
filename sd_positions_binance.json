@@ -1,37 +1,4 @@
 {
-  "BNTUSDT": {
-    "symbol": "BNTUSDT",
-    "tf": "1h",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "levels": [
-      0.2708
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.2761382071726899,
-        "qty": 362.13750000000005,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.2761382071726899,
-    "entry": 0.2761382071726899,
-    "init_stop": 0.263391,
-    "stop": 0.263391,
-    "R": 0.0127472071726899,
-    "tp1": 0.2811904,
-    "tp2": 0.2857576,
-    "qty": 362.13750000000005,
-    "qty_open": 362.13750000000005,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-06T16:37:05"
-  },
   "BANDUSDT": {
     "symbol": "BANDUSDT",
     "tf": "1h",
