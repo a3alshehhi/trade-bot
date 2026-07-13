@@ -1,9 +1,9 @@
-—عرضطلبمستقركلدكلدقيقةتشغيليدوينسخةمستقلةكاملةفتحإدارةإغلاق──إعدادات────إعدادات────ملفاتالحالةالمنفصلةتجنبتضاربمعالبوتالرئيسي──عرضطلبمستقر──البوتالمستقرالكاملفتحإدارةإغلاقصفقات──بحثعنالإشاراتتنفيذالصفقاتالجديدةإدارةالموجودةإغلاقعرضطلبمستقرمتابعةالصفقاتعلىلوحةالمتابعةعرضطلبمستقرname: SD Stable — عرض/طلب مستقر (كل 15د)
+name: SD Stable - عرض/طلب مستقر (كل 15د)
 
 on:
   schedule:
-    - cron: '*/15 * * * *'  # كل 15 دقيقة
-  workflow_dispatch:  # تشغيل يدوي
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
 
 jobs:
   run:
@@ -24,36 +24,40 @@ jobs:
       - name: Install deps
         run: pip install ccxt binance-connector pybit requests
 
-      - name: Run SD Stable (إدارة المراكز فقط)
+      - name: Run SD Stable
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          # ── إعدادات Bybit Testnet ──
           SD_EXECUTE: "1"
           BYBIT_ENV: testnet
           BYBIT_API_KEY: ${{ secrets.BYBIT_API_KEY }}
           BYBIT_API_SECRET: ${{ secrets.BYBIT_API_SECRET }}
           BYBIT_BASE_URL: ${{ secrets.BYBIT_BASE_URL }}
-          # ── إعدادات Binance Demo ──
           BINANCE_ENV: demo
           BINANCE_API_KEY: ${{ secrets.BINANCE_API_KEY }}
           BINANCE_API_SECRET: ${{ secrets.BINANCE_API_SECRET }}
           BINANCE_BASE_URL: ${{ secrets.BINANCE_BASE_URL }}
-          # ── ملفات الحالة المنفصلة (تجنب تضارب مع البوت الرئيسي) ──
           SD_POS: sd_positions_stable.json
           SD_LEDGER: sd_ledger_stable.json
           SD_EXECUTED: sd_executed_stable.json
           SD_LAST_ENTRY: sd_last_entry_stable.json
           SD_TRACK: tracked_signals_stable.json
+          SD_LABEL: "SD Stable"
         run: |
-          # تشغيل الإدارة فقط (تنفيذ الصفقات المفتوحة)
-          python sd_autotrade_stable.py manage
+          SD_ENTRY_TF=15m SD_HTF=1h SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_stable_15m.json python sd_bot.py
+          SD_ENTRY_TF=1h SD_HTF=4h SD_MODEL=sd_model_1h.joblib SD_STATE=sd_state_stable_1h.json python sd_bot.py
+          SD_LABELS="SD Stable" python sd_autotrade_stable.py run
+          SD_LABELS="SD Stable" python trading_bot.py --mode trackmon
 
       - name: Persist stable state
         if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config user.email "action@github.com"
           git config user.name "GitHub Action"
           git add -A
-          git diff --cached --quiet || git commit -m "update SD Stable state [skip ci]" || true
-          git push || true
+          if ! git diff --cached --quiet; then
+            git commit -m "update SD Stable state [skip ci]"
+            git push https://${GH_TOKEN}@github.com/a3alshehhi/trade-bot.git main || true
+          fi
