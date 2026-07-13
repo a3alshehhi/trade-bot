@@ -3361,7 +3361,7 @@ def detect_trendwave_signal(df, cfg):
     }
 
 
-TRACK_FILE = "tracked_signals.json"
+TRACK_FILE = os.environ.get("SD_TRACK", "tracked_signals.json")  # قابل للعزل لكل بوت عبر SD_TRACK
 
 # إعدادات إدارة الصفقة الحيّة (مطابقة لإعداد trendwave الرابح في الباك-تست)
 TRAIL_BUF = 0.5     # مسافة الوقف المتحرك تحت القاع المحوري = 0.5×ATR
