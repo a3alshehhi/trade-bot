@@ -32,39 +32,6 @@
     "armed": false,
     "opened_ts": "2026-07-06T16:37:05"
   },
-  "ARUSDT": {
-    "symbol": "ARUSDT",
-    "tf": "1h",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "levels": [
-      2.013
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 2.061369441929574,
-        "qty": 48.51144,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 2.061369441929574,
-    "entry": 2.061369441929574,
-    "init_stop": 1.9175,
-    "stop": 1.9175,
-    "R": 0.14386944192957385,
-    "tp1": 2.094088,
-    "tp2": 2.138722,
-    "qty": 48.51144,
-    "qty_open": 48.51144,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-06T16:37:54"
-  },
   "BANDUSDT": {
     "symbol": "BANDUSDT",
     "tf": "1h",
