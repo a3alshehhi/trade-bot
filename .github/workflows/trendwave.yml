@@ -11,8 +11,8 @@ on:
       timeframe:
         description: "الإطار الزمني"
         type: choice
-        options: ["1d", "15m"]
-        default: "1d"
+        options: ["1d", "4h", "1h", "15m"]
+        default: "4h"
       assets:
         description: "الأصول"
         type: choice
@@ -27,6 +27,16 @@ on:
       cost:
         description: "تكلفة الصفقة ذهاب/إياب (0.002 = 0.2%)"
         default: "0.002"
+      hl_gate:
+        description: "بوابة موجة 2: قاع أعلى + عمق فيبو 0.382–0.786 (TW_HL_GATE)"
+        type: choice
+        options: ["0", "1"]
+        default: "0"
+      w1_targets:
+        description: "أهداف من إسقاط الموجة 1 (TW_W1_TARGETS)"
+        type: choice
+        options: ["0", "1"]
+        default: "0"
 
 permissions:
   contents: read
@@ -47,6 +57,9 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run trendwave backtest
+        env:
+          TW_HL_GATE: ${{ inputs.hl_gate }}
+          TW_W1_TARGETS: ${{ inputs.w1_targets }}
         run: |
           set -o pipefail
           python trading_bot.py --mode backtest \
@@ -67,7 +80,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           if [ -n "$TELEGRAM_TOKEN" ] && [ -f trendwave_log.txt ]; then
-            PREFIX=$'🌟 نتائج استراتيجية trendwave\n\n'
+            PREFIX=$'🌟 نتائج trendwave (${{ inputs.timeframe }} · hl_gate=${{ inputs.hl_gate }} · w1_targets=${{ inputs.w1_targets }})\n\n'
             BODY=$(tail -c 3500 trendwave_log.txt)
             curl -s "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
               --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
