@@ -37,6 +37,9 @@ on:
         type: choice
         options: ["0", "1"]
         default: "0"
+      extra_gates:
+        description: "بوابات إضافية مثل: TW_SWEEP=1 TW_VOLZ=1.5 TW_GOLDEN=1 TW_RSI_MIN=60"
+        default: ""
 
 permissions:
   contents: read
@@ -62,6 +65,8 @@ jobs:
           TW_W1_TARGETS: ${{ inputs.w1_targets }}
         run: |
           set -o pipefail
+          EXTRA="${{ inputs.extra_gates }}"
+          if [ -n "$EXTRA" ]; then export $EXTRA; fi
           python trading_bot.py --mode backtest \
             --watchlist watchlist.txt \
             --assets "${{ inputs.assets }}" \
@@ -80,7 +85,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           if [ -n "$TELEGRAM_TOKEN" ] && [ -f trendwave_log.txt ]; then
-            PREFIX=$'🌟 نتائج trendwave (${{ inputs.timeframe }} · hl_gate=${{ inputs.hl_gate }} · w1_targets=${{ inputs.w1_targets }})\n\n'
+            PREFIX=$'🌟 نتائج trendwave (${{ inputs.timeframe }} · hl_gate=${{ inputs.hl_gate }} · w1_targets=${{ inputs.w1_targets }} · ${{ inputs.extra_gates }})\n\n'
             BODY=$(tail -c 3500 trendwave_log.txt)
             curl -s "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
               --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
