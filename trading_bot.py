@@ -3140,7 +3140,9 @@ def reversal_label(cfg):
     """اسم الاستراتيجية لعرضه في رسالة تيليجرام للتمييز."""
     tf = cfg.get("timeframe", "?")
     if cfg.get("trendwave"):
-        return f"trendwave · {tf}"
+        # TW_TAG يميّز بوتات trendwave المتوازية (vwap_w/vwap_m/std) في الوسم والدفاتر
+        tag = os.environ.get("TW_TAG", "").strip()
+        return f"trendwave · {tf} · {tag}" if tag else f"trendwave · {tf}"
     if cfg.get("rsi_cross"):
         return f"RSI{int(cfg.get('rsi_ob', 80.0))} · {tf}"
     return f"انعكاس {tf} " + ("DCA" if cfg.get("dca_fib") else "كلاسيكي")
