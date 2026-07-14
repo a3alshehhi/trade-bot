@@ -2043,6 +2043,9 @@ def backtest_symbol_trendwave(item, kind, cfg):
     tw_volz    = float(os.environ.get("TW_VOLZ", "0") or 0)
     tw_golden  = os.environ.get("TW_GOLDEN", "0") == "1"
     tw_rsi_min = float(os.environ.get("TW_RSI_MIN", "70") or 70)
+    # TW_NO_CHOCH=1: بلا انتظار كسر الهيكل — دخول عند شمعة تأكيد القاع (HL+2)
+    #                مع بقاء فلتر الاتجاه (MA200 + حداثة الاختراق) وبوابة الحجم إن فُعِّلت.
+    tw_no_choch = os.environ.get("TW_NO_CHOCH", "0") == "1"
     tw_lo_b, tw_hi_b = (0.5, 0.618) if tw_golden else (0.382, 0.786)
     tw_gate_on = tw_hl_gate or tw_golden
 
@@ -2138,6 +2141,61 @@ def backtest_symbol_trendwave(item, kind, cfg):
                     # h1 = أعلى قمة في منطقة التصحيح (من خفوت الموجة حتى HL)
                     # CHoCH = كسر h1 (لا يشترط كسر قمة الموجة الأصلية)
                     h1 = float(np.max(high[fade_idx:hl_idx + 1]))
+
+                    if tw_no_choch:
+                        # ─── بلا CHoCH: دخول عند شمعة تأكيد القاع (i+2) مباشرة ───
+                        j0 = i + 2
+                        entered = False
+                        if j0 < n:
+                            m0  = sma200[j0]
+                            rec = any((not np.isnan(sma200[k]) and close[k] < sma200[k])
+                                      for k in range(max(0, j0 - 10), j0))
+                            t_ok = (not np.isnan(m0)) and close[j0] > m0
+                            v_ok = True
+                            if tw_volz > 0 and vols is not None and j0 >= 21:
+                                vw  = vols[j0 - 20:j0]
+                                vmu = float(np.mean(vw)); vsd = float(np.std(vw))
+                                v_ok = vsd > 0 and (float(vols[j0]) - vmu) / vsd >= tw_volz
+                            if rec and t_ok and v_ok:
+                                hh0 = float(close[j0])
+                                mv  = hh0 - cand
+                                if mv > 0:
+                                    atrv0 = atrs[j0] if not np.isnan(atrs[j0]) else close[j0] * 0.02
+                                    fib_entries = sorted([
+                                        round(hh0 - 0.382 * mv, 8),
+                                        round(hh0 - 0.500 * mv, 8),
+                                        round(hh0 - 0.618 * mv, 8),
+                                    ], reverse=True)
+                                    stp = round(cand - 0.5 * atrv0, 8)
+                                    tp1 = round(hh0 + 0.382 * mv, 8)
+                                    tp2 = round(hh0 + 0.618 * mv, 8)
+                                    if fib_entries[0] > stp and tp1 > fib_entries[0]:
+                                        res = _simulate_choch_entry(
+                                            df, j0, fib_entries, stp,
+                                            [tp1, tp2], hold, cost, wait=hold)
+                                        if res:
+                                            r_val, outcome, jf = res
+                                            trades.append({
+                                                "symbol": sym, "kind": kind, "side": "buy",
+                                                "mode": "nochoch",
+                                                "lock_bar": j0, "fill_bar": jf,
+                                                "date": str(df["date"].iloc[jf])[:10],
+                                                "score": 0,
+                                                "entry_ref": round(sum(fib_entries) / 3, 8),
+                                                "stop": stp,
+                                                "hl": round(cand, 8), "hh": round(hh0, 8),
+                                                "R_plain":   round(r_val, 3), "out_plain":   outcome,
+                                                "R_managed": round(r_val, 3), "out_managed": outcome,
+                                            })
+                                            i = jf + hold
+                                            entered = True
+                        state   = 0
+                        ref_low = peak = hl = hl_idx = h1 = None
+                        if entered:
+                            continue
+                        i += 1
+                        continue
+
                     state  = 4
 
         elif state == 4:
@@ -3308,6 +3366,7 @@ def detect_trendwave_signal(df, cfg):
     tw_volz    = float(os.environ.get("TW_VOLZ", "0") or 0)
     tw_golden  = os.environ.get("TW_GOLDEN", "0") == "1"
     tw_rsi_min = float(os.environ.get("TW_RSI_MIN", "70") or 70)
+    tw_no_choch = os.environ.get("TW_NO_CHOCH", "0") == "1"
     tw_lo_b, tw_hi_b = (0.5, 0.618) if tw_golden else (0.382, 0.786)
     tw_gate_on = tw_hl_gate or tw_golden
     vols = df["volume"].values if "volume" in df.columns else None
@@ -3370,6 +3429,49 @@ def detect_trendwave_signal(df, cfg):
 
     # h1 = أعلى قمة في منطقة التصحيح (من خفوت الموجة حتى HL) — مرجع كسر CHoCH
     h1 = float(np.max(high[fade_idx:hl_idx + 1]))
+
+    # ─── بلا CHoCH: الإشارة عند شمعة تأكيد القاع (HL+2) مباشرة ───
+    if tw_no_choch:
+        j = hl_idx + 2
+        if j >= n:
+            return None
+        m0 = sma[j]
+        recently_crossed = any(
+            (not np.isnan(sma[k]) and close[k] < sma[k])
+            for k in range(max(0, j - 10), j)
+        )
+        if not (recently_crossed and (not np.isnan(m0)) and close[j] > m0):
+            return None
+        if tw_volz > 0 and vols is not None and j >= 21:
+            vw  = vols[j - 20:j]
+            vmu = float(np.mean(vw)); vsd = float(np.std(vw))
+            if not (vsd > 0 and (float(vols[j]) - vmu) / vsd >= tw_volz):
+                return None
+        choch_idx = j
+        if choch_idx < n - 5:
+            return None
+        hh   = float(close[choch_idx])
+        hl   = hl_val
+        imp  = hh - hl
+        if imp <= 0:
+            return None
+        atrv = a_arr[n - 1] if not np.isnan(a_arr[n - 1]) else hl * 0.02
+        entry = hh
+        fib_e = sorted([
+            round(entry - 0.382 * imp, 8),
+            round(entry - 0.500 * imp, 8),
+            round(entry - 0.618 * imp, 8),
+        ], reverse=True)
+        stop = round(hl - 0.5 * atrv, 8)
+        targets = [round(entry + 0.382 * imp, 8), round(entry + 0.618 * imp, 8)]
+        if entry <= stop or targets[0] <= entry:
+            return None
+        return {
+            "entry": entry, "stop": stop, "dca": None,
+            "fib_entries": fib_e, "targets": targets,
+            "rsi": round(float(r[n - 1]), 1),
+            "peak": round(pk, 8), "trough": round(hl, 8), "choch": round(hh, 8),
+        }
 
     # ─── مرحلة 2: CHoCH = أول إغلاق فوق قمة الموجة + فوق MA200 بعد HL ───
     choch_idx = None
