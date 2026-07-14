@@ -2007,6 +2007,22 @@ def _simulate_choch_entry(df, i_lock, fib_levels, stop, targets, hold, cost, wai
     return (close_arr[end - 1] - avg) / risk - cost_r, "time", j0
 
 
+def _tw_anchored_vwap(df, freq):
+    """VWAP مرسّى لكل فترة (W=أسبوعي، M=شهري): سعر نموذجي×حجم تراكمي،
+    يُعاد ضبطه مع بداية كل أسبوع/شهر. يُستخدم بديلاً عن MA200 في فلتر الاتجاه."""
+    try:
+        d   = pd.to_datetime(df["date"])
+        tp  = (df["high"].astype(float) + df["low"].astype(float) + df["close"].astype(float)) / 3.0
+        vol = df["volume"].astype(float) if "volume" in df.columns else pd.Series(1.0, index=df.index)
+        pv  = tp * vol
+        key    = d.dt.to_period(freq)
+        cum_pv = pv.groupby(key).cumsum()
+        cum_v  = vol.groupby(key).cumsum().replace(0, np.nan)
+        return (cum_pv / cum_v).values
+    except Exception:
+        return df["close"].rolling(200).mean().values
+
+
 def backtest_symbol_trendwave(item, kind, cfg):
     """استراتيجية trendwave مع شرط CHoCH (تغيير هيكل السوق):
 
@@ -2046,6 +2062,8 @@ def backtest_symbol_trendwave(item, kind, cfg):
     # TW_NO_CHOCH=1: بلا انتظار كسر الهيكل — دخول عند شمعة تأكيد القاع (HL+2)
     #                مع بقاء فلتر الاتجاه (MA200 + حداثة الاختراق) وبوابة الحجم إن فُعِّلت.
     tw_no_choch = os.environ.get("TW_NO_CHOCH", "0") == "1"
+    # TW_TREND=vwap_w | vwap_m: فلتر الاتجاه = VWAP مرسّى أسبوعي/شهري بدل MA200
+    tw_trend = os.environ.get("TW_TREND", "").strip().lower()
     tw_lo_b, tw_hi_b = (0.5, 0.618) if tw_golden else (0.382, 0.786)
     tw_gate_on = tw_hl_gate or tw_golden
 
@@ -2064,6 +2082,9 @@ def backtest_symbol_trendwave(item, kind, cfg):
 
     # ─── MA200 على نفس الفريم (لكل الفريمات) ───
     sma200 = df["close"].rolling(200).mean().values
+    if tw_trend in ("vwap_w", "vwap_m"):
+        # فلتر الاتجاه = VWAP مرسّى (أسبوعي/شهري) بدل MA200 — نفس منطق الفحص
+        sma200 = _tw_anchored_vwap(df, "W" if tw_trend == "vwap_w" else "M")
     sma200_same = np.full(n, np.nan)            # لم يعد مستخدماً (الفلتر صار على نفس الفريم)
 
     warmup = 60
@@ -3367,12 +3388,16 @@ def detect_trendwave_signal(df, cfg):
     tw_golden  = os.environ.get("TW_GOLDEN", "0") == "1"
     tw_rsi_min = float(os.environ.get("TW_RSI_MIN", "70") or 70)
     tw_no_choch = os.environ.get("TW_NO_CHOCH", "0") == "1"
+    tw_trend = os.environ.get("TW_TREND", "").strip().lower()
     tw_lo_b, tw_hi_b = (0.5, 0.618) if tw_golden else (0.382, 0.786)
     tw_gate_on = tw_hl_gate or tw_golden
     vols = df["volume"].values if "volume" in df.columns else None
 
     # ─── MA200 على نفس الفريم (لكل الفريمات) ───
     sma = df["close"].rolling(200).mean().values
+    if tw_trend in ("vwap_w", "vwap_m"):
+        # فلتر الاتجاه = VWAP مرسّى (أسبوعي/شهري) بدل MA200 — نفس منطق الفحص
+        sma = _tw_anchored_vwap(df, "W" if tw_trend == "vwap_w" else "M")
 
     # ─── آلة الحالات: نلتقط آخر موجة دفع «خَفَتت» ───
     state    = 0
