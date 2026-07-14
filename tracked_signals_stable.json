@@ -1,1 +1,35 @@
-{}
+{
+  "SD Stable|2ZUSDT|2026-07-14 15:00:00": {
+    "symbol": "2ZUSDT",
+    "label": "SD Stable",
+    "timeframe": "1h",
+    "message_id": 4855,
+    "entry": 0.07108,
+    "stop": 0.0686744,
+    "init_stop": 0.0686744,
+    "cur_stop": 0.0686744,
+    "legs": [
+      0.07108
+    ],
+    "last_alert_stop": 0.0686744,
+    "armed": false,
+    "targets": [
+      0.07212192,
+      0.07293848
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-14 15:00:00",
+    "last_bar": "2026-07-14 15:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.07108,
+    "lo_seen": 0.07108,
+    "created": "2026-07-14T15:51:22"
+  }
+}
