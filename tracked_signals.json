@@ -1253,5 +1253,40 @@
     "exit_price": 62615.17062,
     "close_card_sent": true,
     "closed_at": "2026-07-14T04:45:58"
+  },
+  "عرض/طلب+دايفرجنس|BREVUSDT|2026-07-14 22:30:00": {
+    "symbol": "BREVUSDT",
+    "label": "عرض/طلب+دايفرجنس",
+    "timeframe": "15m",
+    "message_id": 4861,
+    "entry": 0.0745,
+    "stop": 0.074054,
+    "init_stop": 0.074054,
+    "cur_stop": 0.074054,
+    "legs": [
+      0.0745,
+      0.0744292,
+      0.0743284
+    ],
+    "last_alert_stop": 0.074054,
+    "armed": false,
+    "targets": [
+      0.0749632,
+      0.0751708
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-14 22:30:00",
+    "last_bar": "2026-07-14 22:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0745,
+    "lo_seen": 0.0745,
+    "created": "2026-07-14T22:36:37"
   }
 }
