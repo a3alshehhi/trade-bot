@@ -1,0 +1,34 @@
+{
+  "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000": {
+    "symbol": "GUSDT",
+    "label": "trendwave · 1h · std",
+    "timeframe": "1h",
+    "message_id": -1,
+    "entry": 0.00361,
+    "dca_levels": [
+      0.00329294,
+      0.003195,
+      0.00309706
+    ],
+    "stop": 0.00275595,
+    "init_stop": 0.00275595,
+    "cur_stop": 0.00275595,
+    "last_alert_stop": 0.00275595,
+    "armed": false,
+    "targets": [
+      0.00392706,
+      0.00412294
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-14 17:59:59.999000",
+    "last_bar": "2026-07-14 17:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00361,
+    "lo_seen": 0.00361,
+    "created": "2026-07-14T18:07:49"
+  }
+}
