@@ -9,7 +9,11 @@ name: SD Bot — العرض/الطلب (15m + 1h + 5m كل ربع ساعة)
 # التنفيذ testnet/demo فقط — لا mainnet (محميّ داخل sd_autotrade). البوتان التجريبيان
 # غير حاسمَين: فشلهما لا يوقف الرئيسي ولا يمنع حفظ الحالة.
 # منع التكرار داخل sd_bot.py (sd_state_*.json) يضمن عدم تكرار نفس الإشارة.
-# ⛔ بوتات reversal/trendwave/hunter تبقى موقوفة (بطلب بو محمد 2026-07-05).
+# ⛔ بوتا reversal/hunter يبقيان موقوفَين (بطلب بو محمد 2026-07-05).
+# ✅ 2026-07-14: تفعيل 3 بوتات trendwave ورقية (بطلب بو محمد):
+#   TW-A: 4h vwap_w · TW-B: 4h vwap_m · TW-C: 1h volz+MA200 — كلها hl_gate+rsi60.
+#   المسح عند إغلاق الشمعة (4h/1h)، والإدارة والتنفيذ (testnet/demo) كل 15 دقيقة
+#   بإدارة 5050 + قفل 0.3R + تعادل بعد العمولتين + أرضية الوقف=الدخول.
 on:
   schedule:
     - cron: '8,23,38,53 * * * *'   # احتياطي فقط (جدولة GitHub متقلّبة) — المصدر الأساسي cron-job.org
@@ -83,6 +87,41 @@ jobs:
           SD_LABELS="عرض/طلب+دايفرجنس" SD_POS=sd_pos_div.json SD_LEDGER=sd_ledger_div.json \
                  SD_EXECUTED=sd_exec_div.json SD_LAST_ENTRY=sd_last_div.json python sd_autotrade.py run
           unset SD_LABEL SD_TREND_MA SD_REQUIRE_DIV SD_REQUIRE_MACD4C SD_ML_THRESHOLD SD_MAX_CHASE_R
+
+          # ══ بوتات trendwave الورقية الثلاثة (2026-07-14) — غير حاسمة ══
+          # الإعدادات الفائزة بالباك-تست: hl_gate + rsi60 (+vwap على 4h، +volz على 1h)
+          export TW_HL_GATE=1 TW_RSI_MIN=60
+          MIN=$(date -u +%M); HOUR=$(date -u +%H)
+          if [ "$MIN" -lt 15 ]; then
+            # أول تشغيلة كل ساعة → مسح 1h (TW-C: volz + MA200)
+            TW_TAG=std TW_VOLZ=1.5 SD_TRACK=tw_track_1h.json \
+              python trading_bot.py --mode reversal --trendwave --watchlist watchlist.txt \
+              --assets crypto --timeframe 1h --state tw_state_1h.json || true
+            if [ $((10#$HOUR % 4)) -eq 0 ]; then
+              # أول تشغيلة بعد إغلاق شمعة 4h → مسح TW-A وTW-B
+              TW_TAG=vwap_w TW_TREND=vwap_w SD_TRACK=tw_track_vwapw.json \
+                python trading_bot.py --mode reversal --trendwave --watchlist watchlist.txt \
+                --assets crypto --timeframe 4h --state tw_state_vwapw.json || true
+              TW_TAG=vwap_m TW_TREND=vwap_m SD_TRACK=tw_track_vwapm.json \
+                python trading_bot.py --mode reversal --trendwave --watchlist watchlist.txt \
+                --assets crypto --timeframe 4h --state tw_state_vwapm.json || true
+            fi
+          fi
+          # إدارة + تنفيذ (testnet/demo) للبوتات الثلاثة كل 15 دقيقة — دفاتر معزولة
+          # (5050 + قفل 0.3R + تعادل حقيقي بعد العمولتين + أرضية الوقف=الدخول داخل sd_autotrade)
+          SD_TRACK=tw_track_1h.json SD_LABELS="trendwave · 1h · std" \
+            SD_POS=tw_pos_1h.json SD_LEDGER=tw_ledger_1h.json \
+            SD_EXECUTED=tw_exec_1h.json SD_LAST_ENTRY=tw_last_1h.json \
+            python trading_bot.py --mode trackmon || true
+          SD_TRACK=tw_track_vwapw.json SD_LABELS="trendwave · 4h · vwap_w" \
+            SD_POS=tw_pos_vwapw.json SD_LEDGER=tw_ledger_vwapw.json \
+            SD_EXECUTED=tw_exec_vwapw.json SD_LAST_ENTRY=tw_last_vwapw.json \
+            python trading_bot.py --mode trackmon || true
+          SD_TRACK=tw_track_vwapm.json SD_LABELS="trendwave · 4h · vwap_m" \
+            SD_POS=tw_pos_vwapm.json SD_LEDGER=tw_ledger_vwapm.json \
+            SD_EXECUTED=tw_exec_vwapm.json SD_LAST_ENTRY=tw_last_vwapm.json \
+            python trading_bot.py --mode trackmon || true
+          unset TW_HL_GATE TW_RSI_MIN
           true
 
       - name: Persist state (conflict-proof)
@@ -96,7 +135,15 @@ jobs:
                  sd_pos_os21_binance.json sd_ledger_os21_binance.json sd_exec_os21_binance.json sd_last_os21_binance.json \
                  sd_state_div_15m.json sd_state_div_1h.json sd_state_div_5m.json \
                  sd_pos_div.json sd_ledger_div.json sd_exec_div.json sd_last_div.json \
-                 sd_pos_div_binance.json sd_ledger_div_binance.json sd_exec_div_binance.json sd_last_div_binance.json"
+                 sd_pos_div_binance.json sd_ledger_div_binance.json sd_exec_div_binance.json sd_last_div_binance.json \
+                 tw_state_1h.json tw_state_vwapw.json tw_state_vwapm.json \
+                 tw_track_1h.json tw_track_vwapw.json tw_track_vwapm.json \
+                 tw_pos_1h.json tw_ledger_1h.json tw_exec_1h.json tw_last_1h.json \
+                 tw_pos_1h_binance.json tw_ledger_1h_binance.json tw_exec_1h_binance.json tw_last_1h_binance.json \
+                 tw_pos_vwapw.json tw_ledger_vwapw.json tw_exec_vwapw.json tw_last_vwapw.json \
+                 tw_pos_vwapw_binance.json tw_ledger_vwapw_binance.json tw_exec_vwapw_binance.json tw_last_vwapw_binance.json \
+                 tw_pos_vwapm.json tw_ledger_vwapm.json tw_exec_vwapm.json tw_last_vwapm.json \
+                 tw_pos_vwapm_binance.json tw_ledger_vwapm_binance.json tw_exec_vwapm_binance.json tw_last_vwapm_binance.json"
           for f in $FILES; do
             [ -f "$f" ] && git add "$f"
           done
