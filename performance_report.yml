@@ -1,0 +1,60 @@
+name: Performance Report — تقرير الأداء اليومي/الأسبوعي/الشهري
+
+on:
+  schedule:
+    # يومي في 10 صباحاً UTC
+    - cron: '0 10 * * *'
+    # أسبوعي يوم الجمعة في 5 مساءً UTC
+    - cron: '0 17 * * 5'
+    # شهري في أول يوم من الشهر في 8 صباحاً UTC
+    - cron: '0 8 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Determine period
+        id: period
+        run: |
+          HOUR=$(date -u +%H)
+          DAY=$(date -u +%u)
+          DOM=$(date -u +%d)
+
+          if [ "$DOM" = "01" ]; then
+            echo "period=monthly" >> $GITHUB_OUTPUT
+          elif [ "$DAY" = "5" ]; then
+            echo "period=weekly" >> $GITHUB_OUTPUT
+          else
+            echo "period=daily" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Generate and send report
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python performance_tracker.py ${{ steps.period.outputs.period }}
+
+      - name: Deploy to GitHub Pages
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: performance-dashboard
+          path: docs/
