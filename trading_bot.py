@@ -2034,6 +2034,18 @@ def backtest_symbol_trendwave(item, kind, cfg):
     tw_hl_gate    = os.environ.get("TW_HL_GATE", "0") == "1"
     tw_w1_targets = os.environ.get("TW_W1_TARGETS", "0") == "1"
 
+    # ─── بوابات المدارس الأخرى (2026-07-14ب) — مطفأة افتراضياً ───
+    # TW_SWEEP=1   : SMC — شمعة HL تكسر أدنى 5 شموع سابقة وتغلق فوقه (اصطياد سيولة).
+    # TW_VOLZ=1.5  : وايكوف — حجم شمعة CHoCH بانحراف z ≥ العتبة مقابل 20 شمعة.
+    # TW_GOLDEN=1  : الجيب الذهبي — عمق HL ضمن 0.5–0.618 (يفعّل بوابة HL تلقائياً).
+    # TW_RSI_MIN=60: عتبة RSI عند CHoCH (الافتراضي 70).
+    tw_sweep   = os.environ.get("TW_SWEEP", "0") == "1"
+    tw_volz    = float(os.environ.get("TW_VOLZ", "0") or 0)
+    tw_golden  = os.environ.get("TW_GOLDEN", "0") == "1"
+    tw_rsi_min = float(os.environ.get("TW_RSI_MIN", "70") or 70)
+    tw_lo_b, tw_hi_b = (0.5, 0.618) if tw_golden else (0.382, 0.786)
+    tw_gate_on = tw_hl_gate or tw_golden
+
     df = _bt_fetch_df(sym, kind, cfg)
     if df is None or len(df) < 120:
         return []
@@ -2043,6 +2055,7 @@ def backtest_symbol_trendwave(item, kind, cfg):
     high  = df["high"].values
     low   = df["low"].values
     open_ = df["open"].values if "open" in df.columns else close
+    vols  = df["volume"].values if "volume" in df.columns else None
     rsi21 = rsi(df["close"], 21).values
     atrs  = atr(df, 14).values
 
@@ -2100,17 +2113,24 @@ def backtest_symbol_trendwave(item, kind, cfg):
                 if (low[i] <= low[i - 1] and low[i] <= low[i - 2] and
                         low[i] <= low[i + 1] and low[i] <= low[i + 2]):
                     cand = float(low[i])
-                    if tw_hl_gate:
+                    if tw_gate_on:
                         wave = peak - ref_low          # طول الموجة الدافعة (موجة 1)
                         retr = (peak - cand) / wave if wave > 0 else 9.9
-                        if cand <= ref_low or retr > 0.786:
-                            # كسر قاع الموجة أو تصحيح أعمق من 0.786 → العدّ الموجي لاغٍ
+                        if cand <= ref_low or retr > tw_hi_b:
+                            # كسر قاع الموجة أو تصحيح أعمق من الحد → العدّ الموجي لاغٍ
                             state   = 0
                             ref_low = peak = hl = hl_idx = h1 = None
                             i += 1
                             continue
-                        if retr < 0.382:
+                        if retr < tw_lo_b:
                             # قاع ضحل (ضوضاء) — تجاوزه وانتظر قاعاً أعمق
+                            i += 1
+                            continue
+                    if tw_sweep:
+                        # SMC: القاع يصطاد سيولة أدنى 5 شموع سابقة ويغلق فوقها
+                        k0 = max(0, i - 5)
+                        prior_low = float(np.min(low[k0:i])) if i > k0 else float(low[i])
+                        if not (low[i] < prior_low and close[i] > prior_low):
                             i += 1
                             continue
                     hl     = cand
@@ -2142,9 +2162,16 @@ def backtest_symbol_trendwave(item, kind, cfg):
             atrv_i    = atrs[i] if not np.isnan(atrs[i]) else close[i] * 0.02
             body_i    = abs(close[i] - open_[i])
             strong_candle = body_i >= 0.5 * atrv_i
-            rsi_ok    = r >= 70
+            rsi_ok    = r >= tw_rsi_min
 
-            if recently_below and close[i] > h1 * 1.005 and strong_candle and rsi_ok and trend_ok:
+            # وايكوف: حجم شمعة CHoCH متوسّع (انحراف z مقابل آخر 20 شمعة)
+            vol_ok = True
+            if tw_volz > 0 and vols is not None and i >= 21:
+                vw  = vols[i - 20:i]
+                vmu = float(np.mean(vw)); vsd = float(np.std(vw))
+                vol_ok = vsd > 0 and (float(vols[i]) - vmu) / vsd >= tw_volz
+
+            if recently_below and close[i] > h1 * 1.005 and strong_candle and rsi_ok and vol_ok and trend_ok:
                 # ─── CHoCH مؤكَّد ───
                 hh   = float(close[i])
                 move = hh - hl
@@ -3277,6 +3304,13 @@ def detect_trendwave_signal(df, cfg):
     # ─── بوابات موجية (موحَّدة مع backtest_symbol_trendwave، 2026-07-14) ───
     tw_hl_gate    = os.environ.get("TW_HL_GATE", "0") == "1"
     tw_w1_targets = os.environ.get("TW_W1_TARGETS", "0") == "1"
+    tw_sweep   = os.environ.get("TW_SWEEP", "0") == "1"
+    tw_volz    = float(os.environ.get("TW_VOLZ", "0") or 0)
+    tw_golden  = os.environ.get("TW_GOLDEN", "0") == "1"
+    tw_rsi_min = float(os.environ.get("TW_RSI_MIN", "70") or 70)
+    tw_lo_b, tw_hi_b = (0.5, 0.618) if tw_golden else (0.382, 0.786)
+    tw_gate_on = tw_hl_gate or tw_golden
+    vols = df["volume"].values if "volume" in df.columns else None
 
     # ─── MA200 على نفس الفريم (لكل الفريمات) ───
     sma = df["close"].rolling(200).mean().values
@@ -3314,13 +3348,19 @@ def detect_trendwave_signal(df, cfg):
         if (low[j] <= low[j - 1] and low[j] <= low[j - 2] and
                 low[j] <= low[j + 1] and low[j] <= low[j + 2]):
             cand = float(low[j])
-            if tw_hl_gate:
+            if tw_gate_on:
                 wave = pk - rl                  # طول الموجة الدافعة (موجة 1)
                 retr = (pk - cand) / wave if wave > 0 else 9.9
-                if cand <= rl or retr > 0.786:
-                    return None                 # كسر قاع الموجة أو تصحيح >0.786 → عدّ لاغٍ
-                if retr < 0.382:
+                if cand <= rl or retr > tw_hi_b:
+                    return None                 # كسر قاع الموجة أو تصحيح أعمق من الحد → عدّ لاغٍ
+                if retr < tw_lo_b:
                     continue                    # قاع ضحل — انتظر قاعاً أعمق
+            if tw_sweep:
+                # SMC: القاع يصطاد سيولة أدنى 5 شموع سابقة ويغلق فوقها
+                k0 = max(0, j - 5)
+                prior_low = float(np.min(low[k0:j])) if j > k0 else float(low[j])
+                if not (low[j] < prior_low and close[j] > prior_low):
+                    continue
             hl_idx = j
             hl_val = cand
             break                               # أول قاع محوري صالح بعد الموجة
@@ -3350,9 +3390,15 @@ def detect_trendwave_signal(df, cfg):
         body_j = abs(close[j] - open_[j])
         if not (close[j] > h1 * 1.005 and close[j] > m and body_j >= 0.5 * atr_j):
             continue
-        # شرط الزخم: RSI(21) ≥ 70 (زخم صاعد قوي)
-        if np.isnan(r[j]) or r[j] < 70:
+        # شرط الزخم: RSI(21) ≥ العتبة (الافتراضي 70)
+        if np.isnan(r[j]) or r[j] < tw_rsi_min:
             continue
+        # وايكوف: حجم شمعة CHoCH متوسّع (انحراف z مقابل آخر 20 شمعة)
+        if tw_volz > 0 and vols is not None and j >= 21:
+            vw  = vols[j - 20:j]
+            vmu = float(np.mean(vw)); vsd = float(np.std(vw))
+            if not (vsd > 0 and (float(vols[j]) - vmu) / vsd >= tw_volz):
+                continue
         choch_idx = j
         break
 
