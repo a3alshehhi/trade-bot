@@ -2024,6 +2024,16 @@ def backtest_symbol_trendwave(item, kind, cfg):
     os_th     = cfg.get("rsi_os", 20.0)
     ob_th     = cfg.get("rsi_ob", 80.0)
 
+    # ─── بوابات موجية تجريبية (2026-07-14) — مطفأة افتراضياً للحفاظ على الأساس ───
+    # TW_HL_GATE=1  : تحقق موجة 2 — القاع HL يجب أن يبقى فوق قاع الموجة (ref_low)
+    #                 وعمق التصحيح ضمن فيبو 0.382–0.786 من الموجة الدافعة.
+    #                 كسر ref_low أو تصحيح >0.786 = إبطال العدّ الموجي بالكامل.
+    #                 تصحيح <0.382 = قاع ضحل، نتجاوزه وننتظر قاعاً أعمق.
+    # TW_W1_TARGETS=1: الأهداف من إسقاط طول الموجة 1 (peak−ref_low) بدءاً من HL
+    #                 (1.0 و 1.618) بدل امتداد حركة HL→HH الصغيرة.
+    tw_hl_gate    = os.environ.get("TW_HL_GATE", "0") == "1"
+    tw_w1_targets = os.environ.get("TW_W1_TARGETS", "0") == "1"
+
     df = _bt_fetch_df(sym, kind, cfg)
     if df is None or len(df) < 120:
         return []
@@ -2089,7 +2099,21 @@ def backtest_symbol_trendwave(item, kind, cfg):
             if (i >= fade_idx + 2) and (i <= n - 3):
                 if (low[i] <= low[i - 1] and low[i] <= low[i - 2] and
                         low[i] <= low[i + 1] and low[i] <= low[i + 2]):
-                    hl     = float(low[i])
+                    cand = float(low[i])
+                    if tw_hl_gate:
+                        wave = peak - ref_low          # طول الموجة الدافعة (موجة 1)
+                        retr = (peak - cand) / wave if wave > 0 else 9.9
+                        if cand <= ref_low or retr > 0.786:
+                            # كسر قاع الموجة أو تصحيح أعمق من 0.786 → العدّ الموجي لاغٍ
+                            state   = 0
+                            ref_low = peak = hl = hl_idx = h1 = None
+                            i += 1
+                            continue
+                        if retr < 0.382:
+                            # قاع ضحل (ضوضاء) — تجاوزه وانتظر قاعاً أعمق
+                            i += 1
+                            continue
+                    hl     = cand
                     hl_idx = i
                     # h1 = أعلى قمة في منطقة التصحيح (من خفوت الموجة حتى HL)
                     # CHoCH = كسر h1 (لا يشترط كسر قمة الموجة الأصلية)
@@ -2135,8 +2159,14 @@ def backtest_symbol_trendwave(item, kind, cfg):
                     ], reverse=True)
 
                     stp = round(hl - 0.5 * atrv, 8)
-                    tp1 = round(hh + 0.382 * move, 8)
-                    tp2 = round(hh + 0.618 * move, 8)
+                    if tw_w1_targets and ref_low is not None and peak is not None:
+                        # إسقاط موجي: الأهداف من طول الموجة 1 مضافاً إلى قاع الموجة 2
+                        w1  = peak - ref_low
+                        tp1 = round(hl + 1.000 * w1, 8)
+                        tp2 = round(hl + 1.618 * w1, 8)
+                    else:
+                        tp1 = round(hh + 0.382 * move, 8)
+                        tp2 = round(hh + 0.618 * move, 8)
 
                     if fib_entries[0] > stp and tp1 > fib_entries[0]:
                         res = _simulate_choch_entry(
@@ -3225,7 +3255,8 @@ def detect_trendwave_signal(df, cfg):
 
     1. RSI(21)<20 ثم >80 (موجة دفع) → تخفت الموجة.
     2. ينتظر قاع محوري مؤكَّد (HL) بعد الموجة (2 شموع يسار + يمين).
-    3. CHoCH: أول إغلاق فوق قمة الموجة (peak) + فوق MA200 (نفس الفريم) + RSI21≥70 = HH.
+    3. CHoCH (موحَّد مع الباك-تست): أول إغلاق فوق h1 بـ+0.5% + فوق MA200 + شمعة
+       قوية (جسم ≥0.5×ATR) + RSI21≥70 = HH. بوابات TW_HL_GATE/TW_W1_TARGETS اختيارية.
     4. الدخول: 3 مستويات فيبو (0.382 / 0.5 / 0.618) تراجع من HH نحو HL.
     5. الوقف: تحت HL − 0.5×ATR.
     6. الأهداف: امتداد فيبو فوق HH (0.382 و 0.618 من الحركة HL→HH).
@@ -3239,8 +3270,13 @@ def detect_trendwave_signal(df, cfg):
     close = df["close"].values
     high  = df["high"].values
     low   = df["low"].values
+    open_ = df["open"].values if "open" in df.columns else close
     r     = rsi(df["close"], 21).values
     a_arr = atr(df, 14).values
+
+    # ─── بوابات موجية (موحَّدة مع backtest_symbol_trendwave، 2026-07-14) ───
+    tw_hl_gate    = os.environ.get("TW_HL_GATE", "0") == "1"
+    tw_w1_targets = os.environ.get("TW_W1_TARGETS", "0") == "1"
 
     # ─── MA200 على نفس الفريم (لكل الفريمات) ───
     sma = df["close"].rolling(200).mean().values
@@ -3277,12 +3313,23 @@ def detect_trendwave_signal(df, cfg):
     for j in range(fade_idx + 2, n - 2):
         if (low[j] <= low[j - 1] and low[j] <= low[j - 2] and
                 low[j] <= low[j + 1] and low[j] <= low[j + 2]):
+            cand = float(low[j])
+            if tw_hl_gate:
+                wave = pk - rl                  # طول الموجة الدافعة (موجة 1)
+                retr = (pk - cand) / wave if wave > 0 else 9.9
+                if cand <= rl or retr > 0.786:
+                    return None                 # كسر قاع الموجة أو تصحيح >0.786 → عدّ لاغٍ
+                if retr < 0.382:
+                    continue                    # قاع ضحل — انتظر قاعاً أعمق
             hl_idx = j
-            hl_val = float(low[j])
-            break                               # أول قاع محوري بعد الموجة
+            hl_val = cand
+            break                               # أول قاع محوري صالح بعد الموجة
 
     if hl_idx is None:
         return None
+
+    # h1 = أعلى قمة في منطقة التصحيح (من خفوت الموجة حتى HL) — مرجع كسر CHoCH
+    h1 = float(np.max(high[fade_idx:hl_idx + 1]))
 
     # ─── مرحلة 2: CHoCH = أول إغلاق فوق قمة الموجة + فوق MA200 بعد HL ───
     choch_idx = None
@@ -3298,8 +3345,10 @@ def detect_trendwave_signal(df, cfg):
         )
         if not recently_crossed:
             continue
-        # CHoCH: إغلاق فوق قمة الموجة + فوق MA200
-        if not (close[j] > pk and close[j] > m):
+        # CHoCH (موحَّد مع الباك-تست): إغلاق فوق h1 بـ+0.5% + فوق MA200 + شمعة قوية
+        atr_j  = a_arr[j] if not np.isnan(a_arr[j]) else close[j] * 0.02
+        body_j = abs(close[j] - open_[j])
+        if not (close[j] > h1 * 1.005 and close[j] > m and body_j >= 0.5 * atr_j):
             continue
         # شرط الزخم: RSI(21) ≥ 70 (زخم صاعد قوي)
         if np.isnan(r[j]) or r[j] < 70:
@@ -3325,25 +3374,29 @@ def detect_trendwave_signal(df, cfg):
     # ─── الدخول: فوري عند إغلاق CHoCH (مثل RSI70) ───
     entry = hh
 
-    # ─── سلّم DCA رباعي: ارتدادات فيبو من الدخول نحو HL (0.382/0.5/0.618/0.786) ───
+    # ─── سلّم DCA ثلاثي (موحَّد مع الباك-تست): ارتدادات فيبو من HH نحو HL ───
     fib_e = sorted([
         round(entry - 0.382 * imp, 8),
         round(entry - 0.500 * imp, 8),
         round(entry - 0.618 * imp, 8),
-        round(entry - 0.786 * imp, 8),
     ], reverse=True)                            # تنازلي: الأعلى يُملأ أولاً
 
+    # ─── الوقف (موحَّد مع الباك-تست): تحت HL − 0.5×ATR ───
     stop = round(hl - 0.5 * atrv, 8)
-    # خفّض الوقف ليكون تحت أعمق مستوى دخول في السلّم
-    if fib_e:
-        stop = min(stop, round(min(fib_e) - 0.5 * atrv, 8))
 
-    # ─── الأهداف: امتداد فيبو فوق HL (مطابق لـ RSI70) ───
-    targets = [
-        round(hl + 1.272 * imp, 8),
-        round(hl + 1.618 * imp, 8),
-        round(hl + 2.618 * imp, 8),
-    ]
+    # ─── الأهداف (موحَّدة مع الباك-تست) ───
+    if tw_w1_targets:
+        # إسقاط موجي: من طول الموجة 1 (pk−rl) بدءاً من قاع الموجة 2
+        w1 = pk - rl
+        targets = [
+            round(hl + 1.000 * w1, 8),
+            round(hl + 1.618 * w1, 8),
+        ]
+    else:
+        targets = [
+            round(entry + 0.382 * imp, 8),
+            round(entry + 0.618 * imp, 8),
+        ]
 
     if entry <= stop or targets[0] <= entry:
         return None
