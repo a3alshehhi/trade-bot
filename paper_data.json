@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-14T16:52:08",
+  "updated_at": "2026-07-14T17:08:51",
   "stats": {
-    "open": 0,
+    "open": 1,
     "closed": 0,
     "win_rate": 0.0,
     "profit_factor": 0.0,
@@ -14,5 +14,20 @@
     "weekly": [],
     "monthly": []
   },
-  "trades": []
+  "trades": [
+    {
+      "id": "SD Stable|2ZUSDT|2026-07-14 15:00:00",
+      "symbol": "2ZUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.07108,
+      "stop": 0.0686744,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-14T15:51:22",
+      "closed_at": null,
+      "realized_pct": 0.0
+    }
+  ]
 }
