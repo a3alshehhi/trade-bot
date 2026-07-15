@@ -28,6 +28,7 @@ jobs:
 
       - name: Install deps
         run: pip install -r requirements.txt
+
       - name: Run SD Stable
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
@@ -60,6 +61,7 @@ jobs:
         run: |
           FILES="sd_state_stable_15m.json sd_state_stable_1h.json sd_model_15m.joblib sd_model_1h.joblib \
                  sd_positions_stable.json sd_ledger_stable.json sd_executed_stable.json sd_last_entry_stable.json \
+                 sd_positions_stable_binance.json sd_ledger_stable_binance.json sd_executed_stable_binance.json sd_last_entry_stable_binance.json \
                  tracked_signals_stable.json pending_signals.json tg_offset.json paper_data.json"
           for f in $FILES; do
             [ -f "$f" ] && git add "$f"
@@ -70,7 +72,7 @@ jobs:
           git config user.email "action@github.com"
           git config user.name "GitHub Action"
           git commit -m "update SD Stable state [skip ci]"
-          # discard unstaged changes to other bots' tracked files so rebase has a clean tree
+          # discard any unstaged changes to OTHER bots' tracked files so rebase has a clean tree
           git checkout -- . 2>/dev/null || true
           REMOTE="https://${GH_TOKEN}@github.com/a3alshehhi/trade-bot.git"
           ok=0
