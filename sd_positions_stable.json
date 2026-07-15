@@ -31,5 +31,38 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-15T13:38:40"
+  },
+  "CITYUSDT": {
+    "symbol": "CITYUSDT",
+    "tf": "15m",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.401
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 300.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.4042042042039533,
+        "qty": 742.19910847,
+        "usd": 300.0
+      }
+    ],
+    "avg_entry": 0.4042042042039533,
+    "entry": 0.4042042042039533,
+    "init_stop": 0.39648,
+    "stop": 0.39648,
+    "R": 0.007724204203953311,
+    "tp1": 0.408176,
+    "tp2": 0.410944,
+    "qty": 742.19910847,
+    "qty_open": 742.19910847,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-15T14:52:27"
   }
 }

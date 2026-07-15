@@ -173,5 +173,39 @@
     "hi_seen": 6.734,
     "lo_seen": 6.734,
     "created": "2026-07-15T13:38:34"
+  },
+  "SD Stable|CITYUSDT|2026-07-15 14:45:00": {
+    "symbol": "CITYUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 4910,
+    "entry": 0.401,
+    "stop": 0.39648,
+    "init_stop": 0.39648,
+    "cur_stop": 0.39648,
+    "legs": [
+      0.401,
+      0.399712
+    ],
+    "last_alert_stop": 0.39648,
+    "armed": false,
+    "targets": [
+      0.408176,
+      0.410944
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-15 14:45:00",
+    "last_bar": "2026-07-15 14:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.401,
+    "lo_seen": 0.401,
+    "created": "2026-07-15T14:51:46"
   }
 }
