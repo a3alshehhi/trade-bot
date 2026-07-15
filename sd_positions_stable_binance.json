@@ -31,5 +31,141 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-14T15:53:21"
+  },
+  "BNTUSDT": {
+    "symbol": "BNTUSDT",
+    "tf": "1h",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.2778
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.28213106003410393,
+        "qty": 354.4452000000001,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.28213106003410393,
+    "entry": 0.28213106003410393,
+    "init_stop": 0.272748,
+    "stop": 0.272748,
+    "R": 0.00938306003410394,
+    "tp1": 0.2875104,
+    "tp2": 0.2912126,
+    "qty": 354.4452000000001,
+    "qty_open": 354.4452000000001,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-15T16:07:03",
+    "msg_id": 4936
+  },
+  "API3USDT": {
+    "symbol": "API3USDT",
+    "tf": "1h",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.224
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.22182356091853922,
+        "qty": 450.8087400000004,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.22182356091853922,
+    "entry": 0.22182356091853922,
+    "init_stop": 0.219338,
+    "stop": 0.219338,
+    "R": 0.0024855609185392147,
+    "tp1": 0.2263056,
+    "tp2": 0.2279664,
+    "qty": 450.8087400000004,
+    "qty_open": 450.8087400000004,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-15T16:08:13",
+    "msg_id": 4937
+  },
+  "AVAXUSDT": {
+    "symbol": "AVAXUSDT",
+    "tf": "1h",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      6.734
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 6.722639361994631,
+        "qty": 14.875110000000006,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 6.722639361994631,
+    "entry": 6.722639361994631,
+    "init_stop": 6.57737,
+    "stop": 6.57737,
+    "R": 0.14526936199463059,
+    "tp1": 6.817608,
+    "tp2": 6.874352,
+    "qty": 14.875110000000006,
+    "qty_open": 14.875110000000006,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-15T16:09:22",
+    "msg_id": 4938
+  },
+  "CITYUSDT": {
+    "symbol": "CITYUSDT",
+    "tf": "15m",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.401
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.4024124627139706,
+        "qty": 248.5012499999998,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.4024124627139706,
+    "entry": 0.4024124627139706,
+    "init_stop": 0.39648,
+    "stop": 0.39648,
+    "R": 0.0059324627139705766,
+    "tp1": 0.408176,
+    "tp2": 0.410944,
+    "qty": 248.5012499999998,
+    "qty_open": 248.5012499999998,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-15T16:10:32",
+    "msg_id": 4939
   }
 }
