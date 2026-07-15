@@ -1,1 +1,35 @@
-{}
+{
+  "BREVUSDT": {
+    "symbol": "BREVUSDT",
+    "tf": "15m",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.0739
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 300.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.07433433433433727,
+        "qty": 4035.82009157,
+        "usd": 300.0
+      }
+    ],
+    "avg_entry": 0.07433433433433727,
+    "entry": 0.07433433433433727,
+    "init_stop": 0.073431,
+    "stop": 0.073431,
+    "R": 0.0009033343343372718,
+    "tp1": 0.0749992,
+    "tp2": 0.0753798,
+    "qty": 4035.82009157,
+    "qty_open": 4035.82009157,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-15T12:48:00"
+  }
+}

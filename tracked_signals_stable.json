@@ -34,5 +34,39 @@
     "exit_price": 0.0686744,
     "close_card_sent": true,
     "closed_at": "2026-07-15T11:39:59"
+  },
+  "SD Stable|BREVUSDT|2026-07-15 12:45:00": {
+    "symbol": "BREVUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 4878,
+    "entry": 0.0739,
+    "stop": 0.073431,
+    "init_stop": 0.073431,
+    "cur_stop": 0.073431,
+    "legs": [
+      0.0739,
+      0.0738354
+    ],
+    "last_alert_stop": 0.073431,
+    "armed": false,
+    "targets": [
+      0.0749992,
+      0.0753798
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-15 12:45:00",
+    "last_bar": "2026-07-15 12:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0739,
+    "lo_seen": 0.0739,
+    "created": "2026-07-15T12:47:21"
   }
 }
