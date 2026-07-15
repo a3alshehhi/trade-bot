@@ -24,6 +24,7 @@ import sys
 import time
 import os
 import json
+import glob
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -3964,15 +3965,38 @@ def _dash_periods(closed):
 
 def export_dashboard(track_path=TRACK_FILE, out_path="paper_data.json"):
     """يكتب بيانات لوحة المتتبّع (paper_data.json) من صفقات trackmon المُتابَعة.
-    يحلّ محلّ مُصدِّر paper.py المحذوف حتى تبقى اللوحة محدّثة."""
+    يحلّ محلّ مُصدِّر paper.py المحذوف حتى تبقى اللوحة محدّثة.
+
+    يدمج **كل** ملفات تتبّع البوتات (لا ملفاً واحداً) حتى تعرض اللوحة صفقات الجميع
+    بدل أن يكتب كل بوت فوق الآخر، ويحتفظ بالصفقات المغلقة السابقة (تاريخ تراكمي)."""
+    # (1) اجمع كل ملفات التتبّع: الملف المُمرَّر + كل tracked_signals*.json و tw_track_*.json
+    files = []
+    if track_path:
+        files.append(track_path)
+    for pat in ("tracked_signals*.json", "tw_track_*.json"):
+        files.extend(glob.glob(pat))
+    merged = {}
+    for fp in dict.fromkeys(files):                 # إزالة التكرار مع حفظ الترتيب
+        try:
+            with open(fp, "r", encoding="utf-8") as f:
+                d = json.load(f)
+        except Exception:
+            continue
+        if isinstance(d, dict):
+            for k, v in d.items():                  # المفتاح (label|symbol|ts) فريد لكل بوت
+                if isinstance(v, dict):
+                    merged[k] = v
+    trades = [_dash_trade(k, v) for k, v in merged.items()]
+    # (2) احتفظ بالصفقات المغلقة السابقة من paper_data.json (تراكم التاريخ حتى لو نُظّفت من ملفات التتبّع)
+    have = {t.get("id") for t in trades}
     try:
-        with open(track_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
+        with open(out_path, "r", encoding="utf-8") as f:
+            prev = json.load(f)
+        for t in (prev.get("trades") or []):
+            if t.get("id") not in have and t.get("status") == "closed":
+                trades.append(t); have.add(t.get("id"))
     except Exception:
-        data = {}
-    if not isinstance(data, dict):
-        data = {}
-    trades = [_dash_trade(k, v) for k, v in data.items() if isinstance(v, dict)]
+        pass
     closed = [t for t in trades if t["status"] == "closed" and t.get("result_pct") is not None]
     payload = {"updated_at": datetime.now().isoformat(timespec="seconds"),
                "stats": _dash_stats(trades, closed),
@@ -3980,7 +4004,7 @@ def export_dashboard(track_path=TRACK_FILE, out_path="paper_data.json"):
                "trades": trades}
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
-    print(f"[لوحة] حُدّثت {out_path} ({len(trades)} صفقة)")
+    print(f"[لوحة] حُدّثت {out_path} ({len(trades)} صفقة من {len(merged)} متابَعة حيّة)")
 
 
 def monitor_tracked_signals(cfg, path=TRACK_FILE):

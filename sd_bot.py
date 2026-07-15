@@ -777,12 +777,18 @@ def format_message(signals):
     footer = "⚠️ تحليل تعليمي — ليس نصيحة مالية"
     return header + sep + sep.join(blocks) + sep + footer
 
-def send_telegram(text):
+def send_telegram(text, reply_to=None):
+    """يرسل رسالة تيليجرام (HTML). reply_to = message_id لجعلها رداً على رسالة الصفقة الأصلية.
+    يُرجع message_id للرسالة المُرسَلة (أو None)."""
     if not TG_TOKEN or not TG_CHAT:
         print("TG not configured; message:\n", text); return None
     try:
+        payload = {"chat_id": TG_CHAT, "text": text, "parse_mode": "HTML",
+                   "disable_web_page_preview": True}
+        if reply_to:
+            payload["reply_to_message_id"] = reply_to
         r = requests.post(f"https://api.telegram.org/bot{TG_TOKEN}/sendMessage",
-                      data={"chat_id": TG_CHAT, "text": text, "parse_mode": "HTML"}, timeout=15)
+                      data=payload, timeout=15)
         print(f"sent {text.count(chr(0x1F7E2))} signals to telegram")
         return (r.json().get("result") or {}).get("message_id")
     except Exception as ex:

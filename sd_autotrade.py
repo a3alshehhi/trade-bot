@@ -76,6 +76,10 @@ _LABELS_ENV = os.environ.get("SD_LABELS", "*").strip()
 
 SEP = "━━━━━━━━━━━━━━━━━━"
 
+# روابط لوحة الحساب التجريبي ومتتبّع الصفقات (تُضاف لرسالة فتح الصفقة)
+DASH_URL  = os.environ.get("SD_DASH_URL", "https://a3alshehhi.github.io/trade-bot/")
+TRACK_URL = os.environ.get("SD_TRACK_URL", DASH_URL + "#log")
+
 # ── دعم منصّات متعدّدة (بايبت + بايننس) ───────────────────────────────────────
 # كل منصّة لها ملفات حالة منفصلة: بايبت يبقي الأسماء الأصلية، وبايننس يأخذ لاحقة
 # "_binance" حتى لا تختلط الصفقات. تُبدَّل الأسماء عبر _use_exchange داخل الدورة.
@@ -136,13 +140,16 @@ def load_ledger():
 
 
 # ── تيليجرام (يعيد استخدام مُرسِل sd_bot) ────────────────────────────────────
-def _notify(text):
+def _notify(text, reply_to=None):
+    """يطبع ويُرسل الرسالة. reply_to = message_id لجعلها رداً على رسالة فتح الصفقة.
+    يُرجع message_id للرسالة المُرسَلة (أو None)."""
     print(text)
     try:
         from sd_bot import send_telegram
-        send_telegram(text)
+        return send_telegram(text, reply_to=reply_to)
     except Exception as ex:
         print("notify skip", ex)
+        return None
 
 
 # ── حواجز التفعيل ────────────────────────────────────────────────────────────
@@ -264,15 +271,31 @@ def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equit
     }
     _save(POS_PATH, positions)
     lvl_txt = " / ".join(_fmt(x) for x in levels)
-    _notify(
-        f"{SEP}\n🟢 دخول DCA [{EX_NAME}] — {sym} · {tf}  [{label}]\n{SEP}\n"
-        f"🪜 سلّم الفيبو ({n}): {lvl_txt}\n"
-        f"📍 ساق 1/{n} الآن ≈ {_fmt(fill)}  (≈ {_fmt(notional)} USDT)\n"
-        f"🛑 الوقف {_fmt(stop)}\n"
-        f"🎯 هدف1 {_fmt(positions[sym]['tp1'])} · هدف2 {_fmt(positions[sym]['tp2'])}\n"
-        + (f"🤖 ثقة الفلتر {int((prob or 0)*100)}%\n" if prob else "")
-        + "⚠️ حساب تجريبي — ليست نصيحة مالية."
+    tp1v, tp2v = positions[sym]["tp1"], positions[sym]["tp2"]
+    risk_pct = ((fill - stop) / fill * 100) if fill else 0.0
+    g1 = ((tp1v - fill) / fill * 100) if fill else 0.0
+    g2 = ((tp2v - fill) / fill * 100) if fill else 0.0
+    msg = (
+        f"{SEP}\n🟢 <b>صفقة جديدة [{EX_NAME}] — شراء</b>\n{SEP}\n"
+        f"💎 <b>{sym}</b> · ⏱️ {tf}  [{label}]\n"
+        + (f"🤖 ثقة الفلتر (عرض/طلب + ML): {int((prob or 0)*100)}%\n" if prob else "")
+        + "\n"
+        f"📍 الدخول (ساق 1/{n}): {_fmt(fill)}  (≈ {_fmt(notional)} USDT)\n"
+        + (f"🪜 سلّم الفيبو ({n}): {lvl_txt}\n" if n > 1 else "")
+        + f"🛑 الوقف: {_fmt(stop)}  (−{risk_pct:.2f}%)\n"
+        "\n🎯 الأهداف:\n"
+        f"1️⃣ {_fmt(tp1v)}  (+{g1:.2f}%)\n"
+        f"2️⃣ {_fmt(tp2v)}  (+{g2:.2f}%)\n"
+        f"⚖️ إدارة 50/50: جني 50% عند الهدف1 + قفل الوقف\n"
+        "\n"
+        f"📊 <a href=\"{DASH_URL}\">لوحة الحساب التجريبي</a>  ·  "
+        f"📜 <a href=\"{TRACK_URL}\">متتبّع الصفقات</a>\n"
+        "⚠️ حساب تجريبي — ليست نصيحة مالية."
     )
+    mid = _notify(msg)
+    if mid:                                    # نخزّن معرّف الرسالة ليُردّ عليه عند الأهداف/الوقف
+        positions[sym]["msg_id"] = mid
+        _save(POS_PATH, positions)
     return True
 
 
@@ -302,7 +325,7 @@ def _fill_dca_legs(sym, pos, price):
             k = sum(1 for f in pos["filled"] if f)
             _notify(f"➕ ساق DCA {k}/{pos['n_legs']} [{EX_NAME}] {sym} @ {_fmt(fill)} "
                     f"(≈ {_fmt(notional)} USDT) — متوسط الدخول {_fmt(pos['avg_entry'])} · "
-                    f"وقف {_fmt(pos['stop'])}")
+                    f"وقف {_fmt(pos['stop'])}", reply_to=pos.get("msg_id"))
     return changed
 
 
@@ -558,7 +581,7 @@ def _manage_one(sym, positions):
         pnl = _record_exit(pos, sold or pos["qty_open"], price, reason)
         del positions[sym]
         _notify(f"🛑 خروج [{EX_NAME}] {sym} @ {_fmt(price)} ({reason}) — "
-                f"ربح/خسارة ≈ {_fmt(pnl)} USDT")
+                f"ربح/خسارة ≈ {_fmt(pnl)} USDT", reply_to=pos.get("msg_id"))
         return True
 
     # (2) الهدف الأول — بيع 50% + نقل الوقف لمتوسط الدخول (تعادل)
@@ -574,7 +597,7 @@ def _manage_one(sym, positions):
                                "هدف1 (إغلاق كامل — النصف أصغر من حد المنصّة)")
             del positions[sym]
             _notify(f"🏁 هدف1 [{EX_NAME}] {sym} @ {_fmt(price)} — إغلاق كامل "
-                    f"(النصف أصغر من حد المنصّة) ≈ {_fmt(pnl)} USDT")
+                    f"(النصف أصغر من حد المنصّة) ≈ {_fmt(pnl)} USDT", reply_to=pos.get("msg_id"))
             return True
         sold = _sell(sym, half, price)
         if sold > 0:
@@ -591,7 +614,8 @@ def _manage_one(sym, positions):
                 pos["stop"] = lock
             changed = True
             _notify(f"🎯 هدف1 [{EX_NAME}] {sym} @ {_fmt(price)} — جني 50% "
-                    f"(≈ {_fmt(pnl)} USDT) + قفل الوقف عند {_fmt(pos['stop'])}")
+                    f"(≈ {_fmt(pnl)} USDT) + قفل الوقف عند {_fmt(pos['stop'])}",
+                    reply_to=pos.get("msg_id"))
         return changed
 
     # (3) الهدف الثاني — إغلاق المتبقّي
@@ -600,7 +624,7 @@ def _manage_one(sym, positions):
         pnl = _record_exit(pos, sold or pos["qty_open"], price, "هدف2")
         del positions[sym]
         _notify(f"🏁 هدف2 [{EX_NAME}] {sym} @ {_fmt(price)} — إغلاق كامل "
-                f"(≈ {_fmt(pnl)} USDT)")
+                f"(≈ {_fmt(pnl)} USDT)", reply_to=pos.get("msg_id"))
         return True
 
     # (4) وقف الخسارة المتحرّك حسب *متوسط الدخول*:
