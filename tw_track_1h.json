@@ -126,5 +126,69 @@
     "hi_seen": 78.28,
     "lo_seen": 78.28,
     "created": "2026-07-15T14:07:19"
+  },
+  "trendwave · 1h · std|RIFUSDT|2026-07-15 14:59:59.999000": {
+    "symbol": "RIFUSDT",
+    "label": "trendwave · 1h · std",
+    "timeframe": "1h",
+    "message_id": -1,
+    "entry": 0.1381,
+    "dca_levels": [
+      0.111169,
+      0.10285,
+      0.094531
+    ],
+    "stop": 0.06591534,
+    "init_stop": 0.06591534,
+    "cur_stop": 0.06591534,
+    "last_alert_stop": 0.06591534,
+    "armed": false,
+    "targets": [
+      0.165031,
+      0.181669
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-15 14:59:59.999000",
+    "last_bar": "2026-07-15 14:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1381,
+    "lo_seen": 0.1381,
+    "created": "2026-07-15T15:07:18"
+  },
+  "trendwave · 1h · std|SOLUSDT|2026-07-15 14:59:59.999000": {
+    "symbol": "SOLUSDT",
+    "label": "trendwave · 1h · std",
+    "timeframe": "1h",
+    "message_id": -1,
+    "entry": 78.28,
+    "dca_levels": [
+      76.49988,
+      75.95,
+      75.40012
+    ],
+    "stop": 73.30620535,
+    "init_stop": 73.30620535,
+    "cur_stop": 73.30620535,
+    "last_alert_stop": 73.30620535,
+    "armed": false,
+    "targets": [
+      80.06012,
+      81.15988
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-15 14:59:59.999000",
+    "last_bar": "2026-07-15 14:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 78.28,
+    "lo_seen": 78.28,
+    "created": "2026-07-15T15:07:19"
   }
 }
