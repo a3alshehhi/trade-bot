@@ -201,12 +201,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-15 14:45:00",
-    "last_bar": "2026-07-15 18:59:59.999000",
+    "last_bar": "2026-07-15 19:44:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.407,
-    "lo_seen": 0.397,
-    "created": "2026-07-15T14:51:46"
+    "lo_seen": 0.396,
+    "created": "2026-07-15T14:51:46",
+    "exit_price": 0.39648,
+    "close_card_sent": true,
+    "closed_at": "2026-07-15T19:47:37"
   },
   "SD Stable|BREVUSDT|2026-07-15 18:00:00": {
     "symbol": "BREVUSDT",

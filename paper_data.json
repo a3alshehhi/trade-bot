@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-15T19:39:45",
+  "updated_at": "2026-07-15T19:47:37",
   "stats": {
-    "open": 11,
-    "closed": 35,
-    "win_rate": 60.0,
-    "profit_factor": 0.93,
-    "total_pct": -3.53,
-    "avg_pct": -0.07,
+    "open": 10,
+    "closed": 36,
+    "win_rate": 58.3,
+    "profit_factor": 0.91,
+    "total_pct": -4.62,
+    "avg_pct": -0.1,
     "max_drawdown_pct": -17.09
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-15",
-        "trades": 4,
-        "win_rate": 75.0,
-        "return_pct": 0.84,
+        "trades": 5,
+        "win_rate": 60.0,
+        "return_pct": -0.3,
         "week": "2026-W29",
         "month": "2026-07"
       },
@@ -95,9 +95,9 @@
     "weekly": [
       {
         "key": "2026-W29",
-        "trades": 7,
-        "win_rate": 71.4,
-        "return_pct": -1.73,
+        "trades": 8,
+        "win_rate": 62.5,
+        "return_pct": -2.84,
         "month": "2026-07"
       },
       {
@@ -111,9 +111,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 35,
-        "win_rate": 60.0,
-        "return_pct": -3.53
+        "trades": 36,
+        "win_rate": 58.3,
+        "return_pct": -4.62
       }
     ]
   },
@@ -202,10 +202,11 @@
       "entry": 0.401,
       "stop": 0.39648,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-15T14:51:46",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-15T19:47:37",
+      "realized_pct": -1.13,
+      "result_pct": -1.13
     },
     {
       "id": "SD Stable|BREVUSDT|2026-07-15 18:00:00",
