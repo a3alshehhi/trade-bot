@@ -38,6 +38,7 @@
 """
 import os, sys, time, math, json, datetime as dt
 import requests
+from concurrent.futures import ThreadPoolExecutor
 
 # ----------------------- إعدادات -----------------------
 CFG = dict(
@@ -616,10 +617,20 @@ def scan(basket=None):
     basket = basket or parse_watchlist_crypto(WATCHLIST)[:60]
     state = load_state(); sent = set(state.get("sent", []))
     signals = []
-    for s in basket:
+    # جلب بيانات كل الرموز بالتوازي (شبكة I/O) ثم معالجة تسلسلية بنفس المنطق تماماً.
+    # يختصر زمن المسح من دقائق لثوانٍ بلا تغيير في منطق الإشارة/الترتيب. SD_SCAN_WORKERS يضبط عدد الخيوط.
+    def _fetch_pair(s):
         try:
             d1 = fetch_klines(s, CFG["entry_tf"], 2)
             d4 = fetch_klines(s, CFG["htf"], CFG["pages_4h"])
+            return s, d1, d4
+        except Exception:
+            return s, None, None
+    _workers = max(1, int(os.environ.get("SD_SCAN_WORKERS", "8")))
+    with ThreadPoolExecutor(max_workers=_workers) as _pool:
+        fetched = list(_pool.map(_fetch_pair, basket))
+    for s, d1, d4 in fetched:
+        try:
             if not d1 or not d4 or len(d1["c"]) < 300:
                 continue
             setups, h, l, c = setup_features(s, d1, d4)
@@ -683,7 +694,6 @@ def scan(basket=None):
                     reasons=_reasons(f)))
         except Exception as ex:
             print("scan skip", s, ex)
-        time.sleep(0.05)
     signals.sort(key=lambda x: x["prob"], reverse=True)
     signals = signals[:CFG["top_n"]]
     if signals:
