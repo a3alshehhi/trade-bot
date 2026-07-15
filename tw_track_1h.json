@@ -94,5 +94,37 @@
     "hi_seen": 78.28,
     "lo_seen": 78.28,
     "created": "2026-07-15T13:06:45"
+  },
+  "trendwave · 1h · std|SOLUSDT|2026-07-15 13:59:59.999000": {
+    "symbol": "SOLUSDT",
+    "label": "trendwave · 1h · std",
+    "timeframe": "1h",
+    "message_id": -1,
+    "entry": 78.28,
+    "dca_levels": [
+      76.49988,
+      75.95,
+      75.40012
+    ],
+    "stop": 73.30552884,
+    "init_stop": 73.30552884,
+    "cur_stop": 73.30552884,
+    "last_alert_stop": 73.30552884,
+    "armed": false,
+    "targets": [
+      80.06012,
+      81.15988
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-15 13:59:59.999000",
+    "last_bar": "2026-07-15 13:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 78.28,
+    "lo_seen": 78.28,
+    "created": "2026-07-15T14:07:19"
   }
 }
