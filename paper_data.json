@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-15T13:14:39",
+  "updated_at": "2026-07-15T13:22:34",
   "stats": {
-    "open": 0,
+    "open": 2,
     "closed": 2,
     "win_rate": 50.0,
     "profit_factor": 0.51,
@@ -68,9 +68,37 @@
       ],
       "status": "closed",
       "opened_at": "2026-07-15T12:47:21",
-      "closed_at": "2026-07-15T13:14:39",
+      "closed_at": "2026-07-15T13:22:32",
       "realized_pct": 1.74,
       "result_pct": 1.74
+    },
+    {
+      "id": "SD Stable|BNTUSDT|2026-07-15 13:00:00",
+      "symbol": "BNTUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.2778,
+      "stop": 0.272748,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-15T13:18:00",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "SD Stable|API3USDT|2026-07-15 13:00:00",
+      "symbol": "API3USDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.224,
+      "stop": 0.219338,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-15T13:18:00",
+      "closed_at": null,
+      "realized_pct": 0.0
     }
   ]
 }
