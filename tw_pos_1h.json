@@ -35,5 +35,42 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-14T18:07:55"
+  },
+  "SOLUSDT": {
+    "symbol": "SOLUSDT",
+    "tf": "1h",
+    "label": "trendwave · 1h · std",
+    "prob": null,
+    "levels": [
+      76.49988,
+      75.95,
+      75.40012
+    ],
+    "filled": [
+      true,
+      false,
+      false
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 3,
+    "fills": [
+      {
+        "price": 78.8188192825796,
+        "qty": 1.26873253,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 78.8188192825796,
+    "entry": 78.8188192825796,
+    "init_stop": 73.3324926,
+    "stop": 73.3324926,
+    "R": 5.486326682579602,
+    "tp1": 80.06012,
+    "tp2": 81.15988,
+    "qty": 1.26873253,
+    "qty_open": 1.26873253,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-15T13:06:54"
   }
 }
