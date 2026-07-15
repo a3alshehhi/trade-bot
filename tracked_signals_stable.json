@@ -101,11 +101,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-15 13:00:00",
-    "last_bar": "2026-07-15 13:00:00",
+    "last_bar": "2026-07-15 18:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.2778,
-    "lo_seen": 0.2778,
+    "hi_seen": 0.2846,
+    "lo_seen": 0.2777,
     "created": "2026-07-15T13:18:00"
   },
   "SD Stable|API3USDT|2026-07-15 13:00:00": {
@@ -134,11 +134,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-15 13:00:00",
-    "last_bar": "2026-07-15 13:00:00",
+    "last_bar": "2026-07-15 18:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.224,
-    "lo_seen": 0.224,
+    "hi_seen": 0.225,
+    "lo_seen": 0.2198,
     "created": "2026-07-15T13:18:00"
   },
   "SD Stable|AVAXUSDT|2026-07-15 13:00:00": {
@@ -167,11 +167,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-15 13:00:00",
-    "last_bar": "2026-07-15 13:00:00",
+    "last_bar": "2026-07-15 18:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 6.734,
-    "lo_seen": 6.734,
+    "hi_seen": 6.773,
+    "lo_seen": 6.647,
     "created": "2026-07-15T13:38:34"
   },
   "SD Stable|CITYUSDT|2026-07-15 14:45:00": {
@@ -201,11 +201,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-15 14:45:00",
-    "last_bar": "2026-07-15 14:45:00",
+    "last_bar": "2026-07-15 18:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.401,
-    "lo_seen": 0.401,
+    "hi_seen": 0.407,
+    "lo_seen": 0.397,
     "created": "2026-07-15T14:51:46"
   },
   "SD Stable|BREVUSDT|2026-07-15 18:00:00": {
@@ -216,7 +216,7 @@
     "entry": 0.0755,
     "stop": 0.074518,
     "init_stop": 0.074518,
-    "cur_stop": 0.074518,
+    "cur_stop": 0.0755,
     "legs": [
       0.0755,
       0.07545,
@@ -237,11 +237,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-15 18:00:00",
-    "last_bar": "2026-07-15 18:00:00",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.0755,
+    "last_bar": "2026-07-15 18:44:59.999000",
+    "hits": [
+      1,
+      2
+    ],
+    "stopped": true,
+    "hi_seen": 0.0772,
     "lo_seen": 0.0755,
-    "created": "2026-07-15T18:08:45"
+    "created": "2026-07-15T18:08:45",
+    "exit_price": 0.077127,
+    "close_card_sent": true,
+    "closed_at": "2026-07-15T19:09:03"
   }
 }
