@@ -207,5 +207,41 @@
     "hi_seen": 0.401,
     "lo_seen": 0.401,
     "created": "2026-07-15T14:51:46"
+  },
+  "SD Stable|BREVUSDT|2026-07-15 18:00:00": {
+    "symbol": "BREVUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 4942,
+    "entry": 0.0755,
+    "stop": 0.074518,
+    "init_stop": 0.074518,
+    "cur_stop": 0.074518,
+    "legs": [
+      0.0755,
+      0.07545,
+      0.075273,
+      0.075021
+    ],
+    "last_alert_stop": 0.074518,
+    "armed": false,
+    "targets": [
+      0.076608,
+      0.077127
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-15 18:00:00",
+    "last_bar": "2026-07-15 18:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0755,
+    "lo_seen": 0.0755,
+    "created": "2026-07-15T18:08:45"
   }
 }
