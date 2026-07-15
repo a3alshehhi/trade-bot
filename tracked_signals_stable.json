@@ -25,11 +25,14 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-14 15:00:00",
-    "last_bar": "2026-07-14 15:00:00",
+    "last_bar": "2026-07-15 07:59:59.999000",
     "hits": [],
-    "stopped": false,
-    "hi_seen": 0.07108,
-    "lo_seen": 0.07108,
-    "created": "2026-07-14T15:51:22"
+    "stopped": true,
+    "hi_seen": 0.07429,
+    "lo_seen": 0.06844,
+    "created": "2026-07-14T15:51:22",
+    "exit_price": 0.0686744,
+    "close_card_sent": true,
+    "closed_at": "2026-07-15T11:39:59"
   }
 }
