@@ -101,11 +101,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-15 13:00:00",
-    "last_bar": "2026-07-16 11:59:59.999000",
+    "last_bar": "2026-07-16 13:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2867,
-    "lo_seen": 0.2775,
+    "lo_seen": 0.2771,
     "created": "2026-07-15T13:18:00"
   },
   "SD Stable|API3USDT|2026-07-15 13:00:00": {
@@ -287,10 +287,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-16 01:00:00",
-    "last_bar": "2026-07-16 11:59:59.999000",
+    "last_bar": "2026-07-16 13:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.2272,
+    "hi_seen": 0.2276,
     "lo_seen": 0.221,
     "created": "2026-07-16T01:52:29"
   },
@@ -320,12 +320,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-16 05:00:00",
-    "last_bar": "2026-07-16 11:59:59.999000",
+    "last_bar": "2026-07-16 13:59:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.1735,
+    "hi_seen": 0.1738,
     "lo_seen": 0.1639,
     "created": "2026-07-16T05:22:06"
   },
@@ -376,7 +376,7 @@
     "entry": 0.01499,
     "stop": 0.0148408,
     "init_stop": 0.0148408,
-    "cur_stop": 0.0148408,
+    "cur_stop": 0.01499,
     "legs": [
       0.01499,
       0.01495034,
@@ -384,7 +384,7 @@
       0.01491966,
       0.01489782
     ],
-    "last_alert_stop": 0.0148408,
+    "last_alert_stop": 0.01499,
     "armed": false,
     "targets": [
       0.01503536,
@@ -398,11 +398,13 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-16 10:15:00",
-    "last_bar": "2026-07-16 11:59:59.999000",
-    "hits": [],
+    "last_bar": "2026-07-16 14:29:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.01502,
-    "lo_seen": 0.0149,
+    "hi_seen": 0.01506,
+    "lo_seen": 0.01488,
     "created": "2026-07-16T10:22:58"
   },
   "SD Stable|CKBUSDT|2026-07-16 14:00:00": {
