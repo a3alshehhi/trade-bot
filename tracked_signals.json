@@ -1327,5 +1327,38 @@
     "hi_seen": 0.396,
     "lo_seen": 0.396,
     "created": "2026-07-16T09:46:44"
+  },
+  "عرض/طلب+دايفرجنس|CRVUSDT|2026-07-16 20:00:00": {
+    "symbol": "CRVUSDT",
+    "label": "عرض/طلب+دايفرجنس",
+    "timeframe": "1h",
+    "message_id": 4984,
+    "entry": 0.2199,
+    "stop": 0.210161,
+    "init_stop": 0.210161,
+    "cur_stop": 0.210161,
+    "legs": [
+      0.2199
+    ],
+    "last_alert_stop": 0.210161,
+    "armed": false,
+    "targets": [
+      0.22412,
+      0.22758
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-16 20:00:00",
+    "last_bar": "2026-07-16 20:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.2199,
+    "lo_seen": 0.2199,
+    "created": "2026-07-16T20:35:17"
   }
 }
