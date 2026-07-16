@@ -134,5 +134,39 @@
     "armed": true,
     "opened_ts": "2026-07-16T09:18:36",
     "msg_id": 4963
+  },
+  "CHRUSDT": {
+    "symbol": "CHRUSDT",
+    "tf": "15m",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.01499
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.015025532888036642,
+        "qty": 6655.338,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.015025532888036642,
+    "entry": 0.015025532888036642,
+    "init_stop": 0.0148408,
+    "stop": 0.0148408,
+    "R": 0.00018473288803664244,
+    "tp1": 0.01503536,
+    "tp2": 0.01508034,
+    "qty": 6655.338,
+    "qty_open": 6655.338,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-16T10:25:15",
+    "msg_id": 4970
   }
 }

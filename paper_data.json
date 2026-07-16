@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-16T10:21:56",
+  "updated_at": "2026-07-16T10:25:19",
   "stats": {
-    "open": 11,
+    "open": 12,
     "closed": 39,
     "win_rate": 59.0,
     "profit_factor": 0.93,
@@ -283,6 +283,20 @@
       "closed_at": "2026-07-16T10:08:57",
       "realized_pct": 2.61,
       "result_pct": 2.61
+    },
+    {
+      "id": "SD Stable|CHRUSDT|2026-07-16 10:15:00",
+      "symbol": "CHRUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01499,
+      "stop": 0.0148408,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-16T10:22:58",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "العرض/الطلب|ADXUSDT|2026-07-06 02:00:00",

@@ -365,5 +365,42 @@
     "exit_price": 0.408416,
     "close_card_sent": true,
     "closed_at": "2026-07-16T10:08:57"
+  },
+  "SD Stable|CHRUSDT|2026-07-16 10:15:00": {
+    "symbol": "CHRUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 4969,
+    "entry": 0.01499,
+    "stop": 0.0148408,
+    "init_stop": 0.0148408,
+    "cur_stop": 0.0148408,
+    "legs": [
+      0.01499,
+      0.01495034,
+      0.014935,
+      0.01491966,
+      0.01489782
+    ],
+    "last_alert_stop": 0.0148408,
+    "armed": false,
+    "targets": [
+      0.01503536,
+      0.01508034
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-16 10:15:00",
+    "last_bar": "2026-07-16 10:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01499,
+    "lo_seen": 0.01499,
+    "created": "2026-07-16T10:22:58"
   }
 }
