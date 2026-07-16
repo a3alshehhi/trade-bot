@@ -101,10 +101,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-15 13:00:00",
-    "last_bar": "2026-07-16 01:59:59.999000",
+    "last_bar": "2026-07-16 08:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.2846,
+    "hi_seen": 0.2867,
     "lo_seen": 0.2777,
     "created": "2026-07-15T13:18:00"
   },
@@ -172,12 +172,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-15 13:00:00",
-    "last_bar": "2026-07-16 01:59:59.999000",
+    "last_bar": "2026-07-16 08:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 6.773,
-    "lo_seen": 6.647,
-    "created": "2026-07-15T13:38:34"
+    "lo_seen": 6.546,
+    "created": "2026-07-15T13:38:34",
+    "exit_price": 6.57737,
+    "close_card_sent": true,
+    "closed_at": "2026-07-16T09:10:09"
   },
   "SD Stable|CITYUSDT|2026-07-15 14:45:00": {
     "symbol": "CITYUSDT",
@@ -284,11 +287,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-16 01:00:00",
-    "last_bar": "2026-07-16 01:59:59.999000",
+    "last_bar": "2026-07-16 08:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.2256,
-    "lo_seen": 0.2226,
+    "hi_seen": 0.2272,
+    "lo_seen": 0.221,
     "created": "2026-07-16T01:52:29"
   },
   "SD Stable|AGLDUSDT|2026-07-16 05:00:00": {
@@ -317,10 +320,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-16 05:00:00",
-    "last_bar": "2026-07-16 05:00:00",
+    "last_bar": "2026-07-16 08:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.1639,
+    "hi_seen": 0.1701,
     "lo_seen": 0.1639,
     "created": "2026-07-16T05:22:06"
   }
