@@ -101,7 +101,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-15 13:00:00",
-    "last_bar": "2026-07-16 13:59:59.999000",
+    "last_bar": "2026-07-16 14:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2867,
@@ -269,11 +269,11 @@
     "entry": 0.225,
     "stop": 0.218973,
     "init_stop": 0.218973,
-    "cur_stop": 0.218973,
+    "cur_stop": 0.225,
     "legs": [
       0.225
     ],
-    "last_alert_stop": 0.218973,
+    "last_alert_stop": 0.225,
     "armed": false,
     "targets": [
       0.229976,
@@ -287,10 +287,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-16 01:00:00",
-    "last_bar": "2026-07-16 13:59:59.999000",
-    "hits": [],
+    "last_bar": "2026-07-16 14:59:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.2276,
+    "hi_seen": 0.2307,
     "lo_seen": 0.221,
     "created": "2026-07-16T01:52:29"
   },
@@ -320,12 +322,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-16 05:00:00",
-    "last_bar": "2026-07-16 13:59:59.999000",
+    "last_bar": "2026-07-16 14:59:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.1738,
+    "hi_seen": 0.1763,
     "lo_seen": 0.1639,
     "created": "2026-07-16T05:22:06"
   },
@@ -398,12 +400,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-16 10:15:00",
-    "last_bar": "2026-07-16 14:29:59.999000",
+    "last_bar": "2026-07-16 14:59:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.01506,
+    "hi_seen": 0.01508,
     "lo_seen": 0.01488,
     "created": "2026-07-16T10:22:58"
   },
@@ -433,11 +435,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-16 14:00:00",
-    "last_bar": "2026-07-16 14:00:00",
+    "last_bar": "2026-07-16 14:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.000916,
-    "lo_seen": 0.000916,
+    "hi_seen": 0.000925,
+    "lo_seen": 0.000913,
     "created": "2026-07-16T14:23:00"
   }
 }

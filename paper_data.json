@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-16T15:07:48",
+  "updated_at": "2026-07-16T15:10:30",
   "stats": {
     "open": 13,
     "closed": 39,
@@ -246,11 +246,13 @@
       "timeframe": "1h",
       "entry": 0.225,
       "stop": 0.218973,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-16T01:52:29",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.11
     },
     {
       "id": "SD Stable|AGLDUSDT|2026-07-16 05:00:00",
