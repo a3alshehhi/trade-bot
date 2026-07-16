@@ -254,5 +254,38 @@
     "exit_price": 0.077127,
     "close_card_sent": true,
     "closed_at": "2026-07-15T19:09:03"
+  },
+  "SD Stable|API3USDT|2026-07-16 01:00:00": {
+    "symbol": "API3USDT",
+    "label": "SD Stable",
+    "timeframe": "1h",
+    "message_id": 4952,
+    "entry": 0.225,
+    "stop": 0.218973,
+    "init_stop": 0.218973,
+    "cur_stop": 0.218973,
+    "legs": [
+      0.225
+    ],
+    "last_alert_stop": 0.218973,
+    "armed": false,
+    "targets": [
+      0.229976,
+      0.232744
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-16 01:00:00",
+    "last_bar": "2026-07-16 01:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.225,
+    "lo_seen": 0.225,
+    "created": "2026-07-16T01:52:29"
   }
 }

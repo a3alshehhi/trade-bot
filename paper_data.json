@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-16T01:50:50",
+  "updated_at": "2026-07-16T01:53:02",
   "stats": {
-    "open": 10,
+    "open": 11,
     "closed": 36,
     "win_rate": 58.3,
     "profit_factor": 0.91,
@@ -227,6 +227,20 @@
       "closed_at": "2026-07-15T19:09:03",
       "realized_pct": 1.81,
       "result_pct": 1.81
+    },
+    {
+      "id": "SD Stable|API3USDT|2026-07-16 01:00:00",
+      "symbol": "API3USDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.225,
+      "stop": 0.218973,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-16T01:52:29",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "العرض/الطلب|ADXUSDT|2026-07-06 02:00:00",
