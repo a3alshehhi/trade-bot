@@ -33,40 +33,6 @@
     "opened_ts": "2026-07-15T16:07:03",
     "msg_id": 4936
   },
-  "API3USDT": {
-    "symbol": "API3USDT",
-    "tf": "1h",
-    "label": "SD Stable",
-    "prob": null,
-    "levels": [
-      0.225
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.2243290307473892,
-        "qty": 445.77378000000044,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.2243290307473892,
-    "entry": 0.2243290307473892,
-    "init_stop": 0.218973,
-    "stop": 0.22593583997160593,
-    "R": 0.00535603074738919,
-    "tp1": 0.229976,
-    "tp2": 0.232744,
-    "qty": 445.77378000000044,
-    "qty_open": 445.77378000000044,
-    "tp1_done": false,
-    "armed": true,
-    "opened_ts": "2026-07-16T04:13:13",
-    "msg_id": 4953
-  },
   "CKBUSDT": {
     "symbol": "CKBUSDT",
     "tf": "1h",
