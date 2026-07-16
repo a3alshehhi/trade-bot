@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-16T09:10:11",
+  "updated_at": "2026-07-16T09:18:39",
   "stats": {
-    "open": 10,
+    "open": 11,
     "closed": 38,
     "win_rate": 57.9,
     "profit_factor": 0.87,
@@ -263,6 +263,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-16T05:22:06",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "SD Stable|CITYUSDT|2026-07-16 09:00:00",
+      "symbol": "CITYUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.396,
+      "stop": 0.38657,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-16T09:16:51",
       "closed_at": null,
       "realized_pct": 0.0
     },
