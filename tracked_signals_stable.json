@@ -400,14 +400,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-16 10:15:00",
-    "last_bar": "2026-07-16 14:59:59.999000",
+    "last_bar": "2026-07-16 15:14:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.01508,
-    "lo_seen": 0.01488,
-    "created": "2026-07-16T10:22:58"
+    "lo_seen": 0.01473,
+    "created": "2026-07-16T10:22:58",
+    "exit_price": 0.01499,
+    "close_card_sent": true,
+    "closed_at": "2026-07-16T15:19:56"
   },
   "SD Stable|CKBUSDT|2026-07-16 14:00:00": {
     "symbol": "CKBUSDT",

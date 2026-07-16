@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-16T15:17:54",
+  "updated_at": "2026-07-16T15:19:57",
   "stats": {
-    "open": 13,
-    "closed": 39,
-    "win_rate": 59.0,
+    "open": 12,
+    "closed": 40,
+    "win_rate": 60.0,
     "profit_factor": 0.93,
-    "total_pct": -3.93,
+    "total_pct": -3.78,
     "avg_pct": -0.07,
     "max_drawdown_pct": -17.09
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-16",
-        "trades": 3,
-        "win_rate": 66.7,
-        "return_pct": 0.73,
+        "trades": 4,
+        "win_rate": 75.0,
+        "return_pct": 0.88,
         "week": "2026-W29",
         "month": "2026-07"
       },
@@ -103,9 +103,9 @@
     "weekly": [
       {
         "key": "2026-W29",
-        "trades": 11,
-        "win_rate": 63.6,
-        "return_pct": -2.13,
+        "trades": 12,
+        "win_rate": 66.7,
+        "return_pct": -1.98,
         "month": "2026-07"
       },
       {
@@ -119,9 +119,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 39,
-        "win_rate": 59.0,
-        "return_pct": -3.93
+        "trades": 40,
+        "win_rate": 60.0,
+        "return_pct": -3.78
       }
     ]
   },
@@ -299,10 +299,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-16T10:22:58",
-      "closed_at": null,
-      "realized_pct": 0.15
+      "closed_at": "2026-07-16T15:19:56",
+      "realized_pct": 0.15,
+      "result_pct": 0.15
     },
     {
       "id": "SD Stable|CKBUSDT|2026-07-16 14:00:00",
