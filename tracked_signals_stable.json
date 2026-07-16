@@ -447,5 +447,38 @@
     "hi_seen": 0.000925,
     "lo_seen": 0.000911,
     "created": "2026-07-16T14:23:00"
+  },
+  "SD Stable|CRVUSDT|2026-07-16 20:00:00": {
+    "symbol": "CRVUSDT",
+    "label": "SD Stable",
+    "timeframe": "1h",
+    "message_id": 4990,
+    "entry": 0.2199,
+    "stop": 0.210155,
+    "init_stop": 0.210155,
+    "cur_stop": 0.210155,
+    "legs": [
+      0.2199
+    ],
+    "last_alert_stop": 0.210155,
+    "armed": false,
+    "targets": [
+      0.2248832,
+      0.2285508
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-16 20:00:00",
+    "last_bar": "2026-07-16 20:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.2199,
+    "lo_seen": 0.2199,
+    "created": "2026-07-16T20:48:05"
   }
 }
