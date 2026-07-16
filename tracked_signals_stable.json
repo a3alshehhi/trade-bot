@@ -290,5 +290,38 @@
     "hi_seen": 0.2256,
     "lo_seen": 0.2226,
     "created": "2026-07-16T01:52:29"
+  },
+  "SD Stable|AGLDUSDT|2026-07-16 05:00:00": {
+    "symbol": "AGLDUSDT",
+    "label": "SD Stable",
+    "timeframe": "1h",
+    "message_id": 4954,
+    "entry": 0.1639,
+    "stop": 0.15203,
+    "init_stop": 0.15203,
+    "cur_stop": 0.15203,
+    "legs": [
+      0.1639
+    ],
+    "last_alert_stop": 0.15203,
+    "armed": false,
+    "targets": [
+      0.1719712,
+      0.1770228
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-16 05:00:00",
+    "last_bar": "2026-07-16 05:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1639,
+    "lo_seen": 0.1639,
+    "created": "2026-07-16T05:22:06"
   }
 }
