@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-17T03:09:51",
+  "updated_at": "2026-07-17T03:20:59",
   "stats": {
-    "open": 11,
-    "closed": 43,
-    "win_rate": 60.5,
-    "profit_factor": 0.96,
-    "total_pct": -2.73,
-    "avg_pct": -0.04,
+    "open": 10,
+    "closed": 44,
+    "win_rate": 59.1,
+    "profit_factor": 0.93,
+    "total_pct": -4.29,
+    "avg_pct": -0.07,
     "max_drawdown_pct": -17.09
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-17",
-        "trades": 1,
+        "trades": 2,
         "win_rate": 0.0,
-        "return_pct": -2.42,
+        "return_pct": -3.98,
         "week": "2026-W29",
         "month": "2026-07"
       },
@@ -111,9 +111,9 @@
     "weekly": [
       {
         "key": "2026-W29",
-        "trades": 15,
-        "win_rate": 66.7,
-        "return_pct": -0.92,
+        "trades": 16,
+        "win_rate": 62.5,
+        "return_pct": -2.5,
         "month": "2026-07"
       },
       {
@@ -127,9 +127,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 43,
-        "win_rate": 60.5,
-        "return_pct": -2.73
+        "trades": 44,
+        "win_rate": 59.1,
+        "return_pct": -4.29
       }
     ]
   },
@@ -815,10 +815,11 @@
       "entry": 0.1661,
       "stop": 0.163436,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-11T13:38:37",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-17T03:02:05",
+      "realized_pct": -1.6,
+      "result_pct": -1.6
     },
     {
       "id": "عرض/طلب+دايفرجنس|ANKRUSDT|2026-07-11 21:45:00",
