@@ -1,37 +1,4 @@
 {
-  "BANDUSDT": {
-    "symbol": "BANDUSDT",
-    "tf": "1h",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "levels": [
-      0.1661
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.17252688745277506,
-        "qty": 579.6198,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.17252688745277506,
-    "entry": 0.17252688745277506,
-    "init_stop": 0.163436,
-    "stop": 0.163436,
-    "R": 0.00909088745277506,
-    "tp1": 0.178092,
-    "tp2": 0.181898,
-    "qty": 579.6198,
-    "qty_open": 579.6198,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-11T13:40:43"
-  },
   "CITYUSDT": {
     "symbol": "CITYUSDT",
     "tf": "1h",
