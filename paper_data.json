@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-17T03:20:59",
+  "updated_at": "2026-07-17T03:24:36",
   "stats": {
-    "open": 10,
+    "open": 11,
     "closed": 44,
     "win_rate": 59.1,
     "profit_factor": 0.93,
@@ -341,6 +341,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-16T20:48:05",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "SD Stable|CFXUSDT|2026-07-17 03:15:00",
+      "symbol": "CFXUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.04522,
+      "stop": 0.0443903,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-17T03:22:06",
       "closed_at": null,
       "realized_pct": 0.0
     },

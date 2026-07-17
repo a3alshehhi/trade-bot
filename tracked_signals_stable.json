@@ -486,5 +486,42 @@
     "hi_seen": 0.2244,
     "lo_seen": 0.2107,
     "created": "2026-07-16T20:48:05"
+  },
+  "SD Stable|CFXUSDT|2026-07-17 03:15:00": {
+    "symbol": "CFXUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 4996,
+    "entry": 0.04522,
+    "stop": 0.0443903,
+    "init_stop": 0.0443903,
+    "cur_stop": 0.0443903,
+    "legs": [
+      0.04522,
+      0.045108,
+      0.04499,
+      0.044872,
+      0.044704
+    ],
+    "last_alert_stop": 0.0443903,
+    "armed": false,
+    "targets": [
+      0.045762,
+      0.046108
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-17 03:15:00",
+    "last_bar": "2026-07-17 03:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.04522,
+    "lo_seen": 0.04522,
+    "created": "2026-07-17T03:22:06"
   }
 }
