@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-17T16:54:05",
+  "updated_at": "2026-07-17T17:08:14",
   "stats": {
-    "open": 6,
+    "open": 7,
     "closed": 51,
     "win_rate": 56.9,
     "profit_factor": 0.8,
@@ -975,6 +975,20 @@
       "closed_at": "2026-07-17T11:08:26",
       "realized_pct": 1.99,
       "result_pct": 1.99
+    },
+    {
+      "id": "العرض/الطلب|ACTUSDT|2026-07-17 16:30:00",
+      "symbol": "ACTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00894822,
+      "stop": 0.00846,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-17T16:46:08",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
