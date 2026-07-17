@@ -101,11 +101,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-15 13:00:00",
-    "last_bar": "2026-07-16 22:59:59.999000",
+    "last_bar": "2026-07-17 02:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2867,
-    "lo_seen": 0.2765,
+    "lo_seen": 0.2746,
     "created": "2026-07-15T13:18:00"
   },
   "SD Stable|API3USDT|2026-07-15 13:00:00": {
@@ -444,12 +444,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-16 14:00:00",
-    "last_bar": "2026-07-16 22:59:59.999000",
+    "last_bar": "2026-07-17 02:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.000925,
-    "lo_seen": 0.000905,
-    "created": "2026-07-16T14:23:00"
+    "lo_seen": 0.000893,
+    "created": "2026-07-16T14:23:00",
+    "exit_price": 0.00089386,
+    "close_card_sent": true,
+    "closed_at": "2026-07-17T03:09:50"
   },
   "SD Stable|CRVUSDT|2026-07-16 20:00:00": {
     "symbol": "CRVUSDT",
@@ -477,11 +480,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-16 20:00:00",
-    "last_bar": "2026-07-16 22:59:59.999000",
+    "last_bar": "2026-07-17 02:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2244,
-    "lo_seen": 0.2174,
+    "lo_seen": 0.2107,
     "created": "2026-07-16T20:48:05"
   }
 }

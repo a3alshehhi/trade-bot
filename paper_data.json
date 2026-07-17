@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-07-17T03:07:42",
+  "updated_at": "2026-07-17T03:09:51",
   "stats": {
     "open": 11,
     "closed": 43,
     "win_rate": 60.5,
-    "profit_factor": 0.98,
-    "total_pct": -1.92,
-    "avg_pct": -0.02,
+    "profit_factor": 0.96,
+    "total_pct": -2.73,
+    "avg_pct": -0.04,
     "max_drawdown_pct": -17.09
   },
   "periods": {
@@ -15,7 +15,7 @@
         "key": "2026-07-17",
         "trades": 1,
         "win_rate": 0.0,
-        "return_pct": -1.6,
+        "return_pct": -2.42,
         "week": "2026-W29",
         "month": "2026-07"
       },
@@ -113,7 +113,7 @@
         "key": "2026-W29",
         "trades": 15,
         "win_rate": 66.7,
-        "return_pct": -0.08,
+        "return_pct": -0.92,
         "month": "2026-07"
       },
       {
@@ -129,7 +129,7 @@
         "key": "2026-07",
         "trades": 43,
         "win_rate": 60.5,
-        "return_pct": -1.92
+        "return_pct": -2.73
       }
     ]
   },
@@ -324,10 +324,11 @@
       "entry": 0.000916,
       "stop": 0.00089386,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-16T14:23:00",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-17T03:09:50",
+      "realized_pct": -2.42,
+      "result_pct": -2.42
     },
     {
       "id": "SD Stable|CRVUSDT|2026-07-16 20:00:00",
@@ -814,11 +815,10 @@
       "entry": 0.1661,
       "stop": 0.163436,
       "hits": [],
-      "status": "closed",
+      "status": "open",
       "opened_at": "2026-07-11T13:38:37",
-      "closed_at": "2026-07-17T03:02:05",
-      "realized_pct": -1.6,
-      "result_pct": -1.6
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "عرض/طلب+دايفرجنس|ANKRUSDT|2026-07-11 21:45:00",
