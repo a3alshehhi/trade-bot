@@ -77,5 +77,45 @@
     "armed": false,
     "opened_ts": "2026-07-17T16:48:12",
     "msg_id": 5016
+  },
+  "BANDUSDT": {
+    "symbol": "BANDUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.1728588,
+      0.1709,
+      0.1689412,
+      0.1661524
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 25.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.17187517187517187,
+        "qty": 145.4544,
+        "usd": 25.0
+      }
+    ],
+    "avg_entry": 0.17187517187517187,
+    "entry": 0.17187517187517187,
+    "init_stop": 0.1626,
+    "stop": 0.1626,
+    "R": 0.009275171875171878,
+    "tp1": 0.1837152,
+    "tp2": 0.1894588,
+    "qty": 145.4544,
+    "qty_open": 145.4544,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-17T18:03:20",
+    "msg_id": 5019
   }
 }
