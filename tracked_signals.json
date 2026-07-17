@@ -1324,12 +1324,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-16 09:00:00",
-    "last_bar": "2026-07-17 05:59:59.999000",
+    "last_bar": "2026-07-17 08:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.412,
-    "lo_seen": 0.391,
-    "created": "2026-07-16T09:46:44"
+    "lo_seen": 0.385,
+    "created": "2026-07-16T09:46:44",
+    "exit_price": 0.38646,
+    "close_card_sent": true,
+    "closed_at": "2026-07-17T09:01:26"
   },
   "عرض/طلب+دايفرجنس|CRVUSDT|2026-07-16 20:00:00": {
     "symbol": "CRVUSDT",
