@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-17T06:07:41",
+  "updated_at": "2026-07-17T06:10:17",
   "stats": {
-    "open": 10,
-    "closed": 45,
-    "win_rate": 57.8,
-    "profit_factor": 0.85,
-    "total_pct": -8.53,
-    "avg_pct": -0.17,
+    "open": 9,
+    "closed": 46,
+    "win_rate": 56.5,
+    "profit_factor": 0.82,
+    "total_pct": -10.19,
+    "avg_pct": -0.2,
     "max_drawdown_pct": -17.09
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-17",
-        "trades": 3,
+        "trades": 4,
         "win_rate": 0.0,
-        "return_pct": -8.23,
+        "return_pct": -9.91,
         "week": "2026-W29",
         "month": "2026-07"
       },
@@ -111,9 +111,9 @@
     "weekly": [
       {
         "key": "2026-W29",
-        "trades": 17,
-        "win_rate": 58.8,
-        "return_pct": -6.82,
+        "trades": 18,
+        "win_rate": 55.6,
+        "return_pct": -8.52,
         "month": "2026-07"
       },
       {
@@ -127,9 +127,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 45,
-        "win_rate": 57.8,
-        "return_pct": -8.53
+        "trades": 46,
+        "win_rate": 56.5,
+        "return_pct": -10.19
       }
     ]
   },
@@ -176,10 +176,11 @@
       "entry": 0.2778,
       "stop": 0.272748,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-15T13:18:00",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-17T06:10:14",
+      "realized_pct": -1.82,
+      "result_pct": -1.82
     },
     {
       "id": "SD Stable|API3USDT|2026-07-15 13:00:00",
@@ -339,10 +340,11 @@
       "entry": 0.2199,
       "stop": 0.210155,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-16T20:48:05",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-17T06:10:15",
+      "realized_pct": -4.43,
+      "result_pct": -4.43
     },
     {
       "id": "SD Stable|CFXUSDT|2026-07-17 03:15:00",
@@ -352,11 +354,13 @@
       "timeframe": "15m",
       "entry": 0.04522,
       "stop": 0.0443903,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-17T03:22:06",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.6
     },
     {
       "id": "العرض/الطلب|ADXUSDT|2026-07-06 02:00:00",
@@ -928,11 +932,10 @@
       "entry": 0.2199,
       "stop": 0.210155,
       "hits": [],
-      "status": "closed",
+      "status": "open",
       "opened_at": "2026-07-16T20:42:47",
-      "closed_at": "2026-07-17T06:01:49",
-      "realized_pct": -4.43,
-      "result_pct": -4.43
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
