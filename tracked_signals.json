@@ -1496,5 +1496,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|BTCUSDT|2026-07-17 20:00:00": {
+    "symbol": "BTCUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5021,
+    "entry": 63681.12574,
+    "stop": 62537.56,
+    "init_stop": 62537.56,
+    "cur_stop": 62537.56,
+    "legs": [
+      63681.12574,
+      63462.775,
+      63244.42426,
+      62933.55202
+    ],
+    "last_alert_stop": 62537.56,
+    "armed": false,
+    "targets": [
+      64891.30696,
+      65531.55574
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-17 20:00:00",
+    "last_bar": "2026-07-17 20:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 63681.12574,
+    "lo_seen": 63681.12574,
+    "created": "2026-07-17T20:16:02",
+    "dca_levels": [
+      63681.12574,
+      63462.775,
+      63244.42426,
+      62933.55202
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
