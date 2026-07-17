@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-17T10:12:01",
+  "updated_at": "2026-07-17T10:21:00",
   "stats": {
-    "open": 7,
+    "open": 8,
     "closed": 49,
     "win_rate": 55.1,
     "profit_factor": 0.73,
@@ -953,6 +953,20 @@
       "closed_at": "2026-07-17T06:01:49",
       "realized_pct": -4.43,
       "result_pct": -4.43
+    },
+    {
+      "id": "عرض/طلب+دايفرجنس|CHRUSDT|2026-07-17 10:00:00",
+      "symbol": "CHRUSDT",
+      "label": "عرض/طلب+دايفرجنس",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0149,
+      "stop": 0.0144866,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-17T10:04:30",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
