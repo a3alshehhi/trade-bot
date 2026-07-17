@@ -2,7 +2,10 @@ name: SD Bot — العرض/الطلب (15m + 1h + 5m كل ربع ساعة)
 
 # ══════════════════════════════════════════════════════════════════════════
 # وركفلو واحد موحّد لبوت العرض/الطلب + بوتين تجريبيين (كاتب واحد على الحالة).
-#   • البوت الرئيسي: عرض/طلب (EMA حيّ + ML) — مسح 15m + 1h + trackmon.
+#   • البوت الرئيسي (بدّل بالكامل 2026-07-17، طلب بو محمد): استراتيجية «الفيواب الأسبوعي»
+#     على 15m فقط: تشبّع RSI21≤20 → اختراق الفيواب الأسبوعي + RSI21≥80 → تحوّل MACD4C
+#     للأحمر → دخول DCA بانتظار مستويات فيبو التصحيح · وقف قاع الموجة · أهداف 1.272/1.618.
+#     (أُلغيت الشروط القديمة كلها: مناطق العرض/الطلب، CHoCH، ML، بوابة الحجم، مسح 1h.)
 #   • بوت تجريبي 1: «عرض/طلب+تشبّع»   = SMA50 + تشبّع RSI21≤20 (بلا ML).
 #   • بوت تجريبي 2: «عرض/طلب+دايفرجنس» = SMA50 + دايفرجنس صعودي MACD (بلا ML) — 15m + 1h + 5m.
 # كل بوت باسم/وسم مختلف، وحالة منفصلة، ودفتر تنفيذ منفصل (Bybit Testnet + Binance Demo).
@@ -45,7 +48,6 @@ jobs:
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          SD_REQUIRE_MACD4C: "1"          # فلتر زخم MACD 4C≥1 (الأفضل بالباك-تست 2026-07-06) — للرئيسي
           # ── تنفيذ آلي تجريبي (Bybit Testnet + Binance Demo) ──
           SD_EXECUTE: "1"
           BYBIT_ENV: testnet
@@ -61,9 +63,10 @@ jobs:
           # التقاط وقت بدء الخطوة الآن (قبل المسوح الطويلة) — تستخدمه بوابة مسح trendwave أدناه.
           # لولاه لقُيّمت الدقيقة بعد ~20 دقيقة من المسوح فتُتخطى مسوح trendwave دائماً.
           MIN=$(date -u +%M); HOUR=$(date -u +%H)
-          # ══ البوت الرئيسي: عرض/طلب (EMA حيّ + ML) — بوابة الحجم touchVolZ≥1.5 (فحص متانة 2026-07-12) ══
-          SD_MIN_TOUCHVOLZ=1.5 SD_ENTRY_TF=15m SD_HTF=1h SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_15m.json python sd_bot.py
-          SD_MIN_TOUCHVOLZ=1.5 SD_ENTRY_TF=1h  SD_HTF=4h  SD_MODEL=sd_model_1h.joblib  SD_STATE=sd_state_1h.json  python sd_bot.py
+          # ══ البوت الرئيسي: استراتيجية «الفيواب الأسبوعي» (2026-07-17) — 15m فقط ══
+          # تشبّع RSI21≤20 (لمسة+) → اختراق الفيواب الأسبوعي → RSI21≥80 → تحوّل MACD4C للأحمر
+          # → إشارة DCA بانتظار مستويات فيبو (بلا شراء فوري) · وقف قاع الموجة · أهداف 1.272/1.618
+          SD_STRATEGY=vwap_wave SD_ENTRY_TF=15m SD_STATE=sd_state_15m.json python sd_bot.py scan
           # تنفيذ + متابعة الرئيسي (وسمه فقط) + لوحة المتتبّع
           SD_LABELS="العرض/الطلب" python trading_bot.py --mode trackmon
 
