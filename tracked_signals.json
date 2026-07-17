@@ -1369,5 +1369,38 @@
     "exit_price": 0.210155,
     "close_card_sent": true,
     "closed_at": "2026-07-17T06:01:49"
+  },
+  "عرض/طلب+دايفرجنس|CHRUSDT|2026-07-17 10:00:00": {
+    "symbol": "CHRUSDT",
+    "label": "عرض/طلب+دايفرجنس",
+    "timeframe": "1h",
+    "message_id": 5006,
+    "entry": 0.0149,
+    "stop": 0.0144866,
+    "init_stop": 0.0144866,
+    "cur_stop": 0.0144866,
+    "legs": [
+      0.0149
+    ],
+    "last_alert_stop": 0.0144866,
+    "armed": false,
+    "targets": [
+      0.01511968,
+      0.01527192
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-17 10:00:00",
+    "last_bar": "2026-07-17 10:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0149,
+    "lo_seen": 0.0149,
+    "created": "2026-07-17T10:04:30"
   }
 }
