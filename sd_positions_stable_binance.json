@@ -1,38 +1,4 @@
 {
-  "BNTUSDT": {
-    "symbol": "BNTUSDT",
-    "tf": "1h",
-    "label": "SD Stable",
-    "prob": null,
-    "levels": [
-      0.2778
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.28213106003410393,
-        "qty": 354.4452000000001,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.28213106003410393,
-    "entry": 0.28213106003410393,
-    "init_stop": 0.272748,
-    "stop": 0.272748,
-    "R": 0.00938306003410394,
-    "tp1": 0.2875104,
-    "tp2": 0.2912126,
-    "qty": 354.4452000000001,
-    "qty_open": 354.4452000000001,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-15T16:07:03",
-    "msg_id": 4936
-  },
   "CRVUSDT": {
     "symbol": "CRVUSDT",
     "tf": "1h",
