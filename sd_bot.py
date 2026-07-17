@@ -990,16 +990,17 @@ def vwave_signal(d1):
                 phase, os_hits = 0, 0
                 wave_low = wave_low_i = cross_i = None
                 continue
-            if hist[i] < 0 <= hist[i - 1]:               # (3) أخضر ← أحمر: نهاية الموجة
+            if hist[i] < 0 <= hist[i - 1]:               # (3) أخضر ← أحمر: نهاية الموجة ← إلزامي ✅
                 wave_high = max(h[wave_low_i:i + 1])
                 span = wave_high - wave_low
                 if span > 0:
                     levels = [wave_high - fb * span for fb in CFG["dca_fibs"]]
+                    # 2026-07-17 (طلب بو محمد): TP1=قمة التصحيح، TP2=1.272
                     sig = dict(i=i, ts=t[i], os_hits=os_hits,
                                wave_low=wave_low, wave_high=wave_high,
                                entry=levels[0], levels=levels, stop=wave_low,
-                               tp1=wave_low + 1.272 * span,
-                               tp2=wave_low + CFG["tp2_ext"] * span,
+                               tp1=wave_high,                      # الهدف الأول = قمة التصحيح
+                               tp2=wave_low + 1.272 * span,        # الهدف الثاني = 1.272
                                vwap=vw[i], rsi=rs[i])
                 phase, os_hits = 0, 0                    # جاهز لدورة جديدة
                 wave_low = wave_low_i = cross_i = None
