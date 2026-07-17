@@ -128,6 +128,18 @@ CFG["ema_len"] = int(os.environ.get(
     "SD_EMA_LEN", 365 if CFG["entry_tf"] == "15m" else CFG["ema_len"]))
 # نافذة الحداثة: أقصى شموع بين تكوين المنطقة والدخول (تضييقها = دخول أبكر = أقل تأخّراً)
 CFG["max_bars_to_touch"] = int(os.environ.get("SD_MAX_BARS", CFG["max_bars_to_touch"]))
+# ═══ استراتيجية «الفيواب الأسبوعي» الجديدة (طلب بو محمد 2026-07-17) ═══
+# SD_STRATEGY=vwap_wave تستبدل محرك العرض/الطلب القديم بالكامل (لا مناطق/CHoCH/ML/حجم):
+#   1) تشبّع بيعي RSI21 ≤ 20 (لمسة أو أكثر بنفس الموجة)
+#   2) اختراق الفيواب الأسبوعي ثم RSI21 ≥ 80 والسعر فوق الفيواب (فلتر الاتجاه)
+#   3) نهاية الموجة: تحوّل هيستوجرام MACD 4C من الأخضر إلى الأحمر ← إشارة
+#   الدخول: DCA بانتظار مستويات فيبو التصحيح الأربعة (بلا شراء فوري)
+#   الوقف: قاع الموجة التي اخترقت الفيواب أول مرة · الأهداف: امتداد 1.272 و1.618
+CFG["strategy"] = os.environ.get("SD_STRATEGY", "legacy").strip().lower()
+CFG["vw_os"] = float(os.environ.get("SD_VW_OS", "20"))   # عتبة التشبّع البيعي RSI21
+CFG["vw_ob"] = float(os.environ.get("SD_VW_OB", "80"))   # عتبة التشبّع الشرائي RSI21
+# صلاحية إشارة «انتظار المستويات» قبل أن يتجاهلها المنفّذ (ساعات)
+CFG["wait_max_age_h"] = float(os.environ.get("SD_WAIT_MAX_AGE_H", "48"))
 BINANCE_BASES = ["https://data-api.binance.vision", "https://api.binance.com"]
 # ملفات النموذج/الحالة قابلة للتخصيص لكل فريم (لتفادي التضارب بين الفريمات)
 MODEL_PATH = os.environ.get("SD_MODEL", "sd_model.joblib")
@@ -608,6 +620,8 @@ def save_state(state):
         print("state save error", ex)
 
 def scan(basket=None):
+    if CFG["strategy"] == "vwap_wave":     # الاستراتيجية الجديدة: بلا نموذج ولا مناطق
+        return scan_vwave(basket)
     bundle = load_model()
     if bundle and bundle.get("keys") != ML_KEYS:
         print("model feature-set changed -> retraining"); train(); bundle = load_model()
@@ -836,10 +850,196 @@ def track_for_dashboard(signals, message_id, tf=None, path=TRACK_FILE):
             "hits": [], "stopped": False, "hi_seen": entry, "lo_seen": entry,
             "created": dt.datetime.now().isoformat(timespec="seconds"),
         }
+        # حقول استراتيجية الفيواب الأسبوعي: سلالم DCA للمنفّذ + وضع انتظار المستويات
+        if s.get("dca_levels"):
+            data[key]["dca_levels"] = s["dca_levels"]
+        if s.get("wait_entry"):
+            data[key]["wait_entry"] = True
+            data[key]["max_age_h"] = s.get("max_age_h", 48)
         added += 1
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     print(f"tracked {added} signals to {path}")
+
+# ═══════════ استراتيجية «الفيواب الأسبوعي + تشبّع RSI21 + MACD4C» (2026-07-17) ═══════════
+def vwap_weekly(t, h, l, c, v):
+    """فيواب أسبوعي مرسّى: يتجمّع (سعر نموذجي × حجم) ويُصفَّر مع بداية كل أسبوع ISO (UTC)."""
+    out = [float("nan")] * len(c)
+    cum_pv = cum_v = 0.0
+    wk = None
+    for i in range(len(c)):
+        d = dt.datetime.fromtimestamp(t[i] / 1000, dt.timezone.utc)
+        k = d.isocalendar()[:2]                 # (سنة، رقم الأسبوع)
+        if k != wk:
+            wk = k
+            cum_pv = cum_v = 0.0
+        tp = (h[i] + l[i] + c[i]) / 3.0
+        cum_pv += tp * v[i]
+        cum_v += v[i]
+        if cum_v > 0:
+            out[i] = cum_pv / cum_v
+    return out
+
+
+def vwave_signal(d1):
+    """آلة حالات على الشموع المغلقة (شروط بو محمد الخمسة):
+      المرحلة 1: تشبّع بيعي RSI21 ≤ vw_os — لمسة أو أكثر بنفس الموجة، قاع الموجة يتحدّث.
+      المرحلة 2: اختراق الفيواب الأسبوعي (يتجمّد قاع الموجة عندها) ثم RSI21 ≥ vw_ob فوق الفيواب.
+      المرحلة 3: نهاية الموجة = تحوّل هيستوجرام MACD 4C من الأخضر (≥0) إلى الأحمر (<0) ← إشارة.
+      إلغاء التكوين إذا كُسر قاع الموجة في أي لحظة بعد الاختراق وقبل الإشارة.
+    يعيد dict إذا اكتملت الشروط على آخر شمعة مغلقة، وإلا None."""
+    h, l, c, v, t = d1["h"], d1["l"], d1["c"], d1["v"], d1["t"]
+    n = len(c)
+    if n < 120:
+        return None
+    rs = rsi(c, CFG["rsi_entry_len"])
+    _, _, hist = macd(c)
+    vw = vwap_weekly(t, h, l, c, v)
+    OS, OB = CFG["vw_os"], CFG["vw_ob"]
+    phase = 0            # 0=انتظار تشبّع · 1=موجة تتكوّن · 2=فوق 80 بانتظار الأحمر
+    os_hits = 0
+    wave_low = None; wave_low_i = None; cross_i = None
+    sig = None
+    for i in range(1, n):
+        if not (math.isfinite(rs[i]) and math.isfinite(vw[i]) and math.isfinite(hist[i])
+                and math.isfinite(hist[i - 1])):
+            continue
+        if phase == 0:
+            if rs[i] <= OS:                              # (1) دخول التشبّع البيعي
+                phase, os_hits = 1, 1
+                wave_low, wave_low_i, cross_i = l[i], i, None
+        elif phase == 1:
+            if rs[i] <= OS:                              # تشبّع إضافي بنفس الموجة (مسموح)
+                os_hits += 1
+                if c[i] < vw[i]:
+                    cross_i = None                       # رجع تحت الفيواب: «أول اختراق» يصير القادم
+            if cross_i is None:
+                if l[i] < wave_low:
+                    wave_low, wave_low_i = l[i], i       # قاع الموجة يتحدّث قبل الاختراق
+                if c[i] > vw[i]:
+                    cross_i = i                          # (2أ) اختراق الفيواب الأسبوعي أول مرة
+            else:
+                if l[i] < wave_low:                      # كسر القاع بعد الاختراق: إلغاء التكوين
+                    phase, os_hits = 0, 0
+                    wave_low = wave_low_i = cross_i = None
+                    if rs[i] <= OS:                      # الكسر نفسه قد يبدأ تشبّعاً جديداً
+                        phase, os_hits = 1, 1
+                        wave_low, wave_low_i = l[i], i
+                    continue
+                if rs[i] >= OB and c[i] > vw[i]:         # (2ب) تشبّع شرائي فوق الفيواب
+                    phase = 2
+        else:                                            # phase == 2
+            if l[i] < wave_low:                          # كسر القاع قبل الإشارة: إلغاء
+                phase, os_hits = 0, 0
+                wave_low = wave_low_i = cross_i = None
+                continue
+            if hist[i] < 0 <= hist[i - 1]:               # (3) أخضر ← أحمر: نهاية الموجة
+                wave_high = max(h[wave_low_i:i + 1])
+                span = wave_high - wave_low
+                if span > 0:
+                    levels = [wave_high - fb * span for fb in CFG["dca_fibs"]]
+                    sig = dict(i=i, ts=t[i], os_hits=os_hits,
+                               wave_low=wave_low, wave_high=wave_high,
+                               entry=levels[0], levels=levels, stop=wave_low,
+                               tp1=wave_low + 1.272 * span,
+                               tp2=wave_low + CFG["tp2_ext"] * span,
+                               vwap=vw[i], rsi=rs[i])
+                phase, os_hits = 0, 0                    # جاهز لدورة جديدة
+                wave_low = wave_low_i = cross_i = None
+    return sig if (sig and sig["i"] == n - 1) else None
+
+
+def format_message_vwave(signals):
+    """بطاقة تيليجرام لاستراتيجية الفيواب الأسبوعي (دخول بانتظار مستويات الفيبو)."""
+    nums = ["1️⃣", "2️⃣"]
+    now = dt.datetime.now().strftime("%H:%M:%S")
+    sep = "\n➖➖➖➖➖➖➖➖➖\n"
+    blocks = []
+    for s in signals:
+        entry, stop = s["entry"], s["stop"]
+        legs = s.get("legs") or [entry]
+        avg = sum(legs) / len(legs)
+        risk_pct = ((entry - stop) / entry * 100) if entry else 0.0
+        lines = [
+            f"🟢 إشارة {DASH_LABEL} — شراء (انتظار المستويات)",
+            f"💎 {s['sym']} · ⏱️ {s.get('tf', CFG['entry_tf'])}",
+            f"📊 الشروط: تشبّع RSI21≤{CFG['vw_os']:.0f} ({s.get('os_hits', 1)} لمسة) → "
+            f"اختراق الفيواب الأسبوعي → RSI21≥{CFG['vw_ob']:.0f} → تحوّل MACD4C للأحمر",
+            "",
+            "📍 سلالم الدخول DCA (فيبو التصحيح — لا شراء قبل بلوغها):",
+        ]
+        for fb, p in zip(CFG["dca_fibs"], legs):
+            lines.append(f"   • {fb:.3f} ← {_fmt(p)}")
+        lines += [
+            f"⚖️ المتوسط لو امتلأت السلالم: {_fmt(avg)}",
+            f"🛑 الوقف (قاع الموجة التي اخترقت الفيواب): {_fmt(stop)}  (−{risk_pct:.2f}% من المستوى الأول)",
+            "",
+            "🎯 الأهداف (امتدادات فيبو):",
+        ]
+        for k, tgt in enumerate([s.get("tp1"), s.get("tp2")]):
+            if not tgt:
+                continue
+            gain = ((tgt - entry) / entry * 100) if entry else 0.0
+            lines.append(f"{nums[k]} {_fmt(tgt)}  (+{gain:.2f}% من المستوى الأول)")
+        lines += [
+            "",
+            "⚖️ إدارة 50/50: جني 50% عند الهدف الأول + تعادل + قفل 0.3R",
+            f"⏰ {now}",
+        ]
+        blocks.append("\n".join(lines))
+    header = ("📊 <b>إشارات الفيواب الأسبوعي — شراء</b>\n"
+              "<i>تشبّع → اختراق الفيواب → نهاية الموجة (MACD4C) → دخول DCA بفيبو</i>")
+    footer = "⚠️ تحليل تعليمي — ليس نصيحة مالية"
+    return header + sep + sep.join(blocks) + sep + footer
+
+
+def scan_vwave(basket=None):
+    """المسح الحيّ لاستراتيجية الفيواب الأسبوعي — بلا نموذج ML وبلا مناطق عرض/طلب."""
+    basket = basket or parse_watchlist_crypto(WATCHLIST)[:60]
+    state = load_state(); sent = set(state.get("sent", []))
+    signals = []
+
+    def _fetch(s):
+        try:
+            return s, fetch_klines(s, CFG["entry_tf"], CFG["pages_1h"])
+        except Exception:
+            return s, None
+
+    _workers = max(1, int(os.environ.get("SD_SCAN_WORKERS", "8")))
+    with ThreadPoolExecutor(max_workers=_workers) as _pool:
+        fetched = list(_pool.map(_fetch, basket))
+    for s, d1 in fetched:
+        try:
+            if not d1 or len(d1["c"]) < 300:
+                continue
+            d1 = {k: vv[:-1] for k, vv in d1.items()}    # استبعاد الشمعة الجارية (غير المغلقة)
+            sig = vwave_signal(d1)
+            if not sig:
+                continue
+            key = f"{s}:{sig['ts']}"                     # منع تكرار نفس الإشارة
+            if key in sent:
+                continue
+            levels = [round(p, 8) for p in sig["levels"]]
+            signals.append(dict(
+                key=key, sym=s, tf=CFG["entry_tf"], ts=sig["ts"],
+                entry=levels[0], stop=round(sig["stop"], 8),
+                legs=levels, dca_levels=levels, wait_entry=True,
+                max_age_h=CFG["wait_max_age_h"],
+                tp1=round(sig["tp1"], 8), tp2=round(sig["tp2"], 8),
+                os_hits=sig["os_hits"]))
+        except Exception as ex:
+            print("vwave skip", s, ex)
+    signals = signals[:CFG["top_n"]]
+    if signals:
+        mid = send_telegram(format_message_vwave(signals))
+        track_for_dashboard(signals, mid)                # نفس لوحة المتتبّع والتنفيذ
+        for sig in signals:
+            state.setdefault("sent", []).append(sig["key"])
+        save_state(state)
+    else:
+        print("no vwave signals this scan")
+    return signals
+
 
 # ----------------------- باك-تست حقيقي (مقارنة القديم/الجديد) -----------------------
 def _dca_average(legs, stop, tp1, h, l, c, tch, hold):
@@ -1186,9 +1386,11 @@ if __name__ == "__main__":
     elif mode == "sweep":
         sweep()
     else:  # both: يدرّب فقط إذا غاب النموذج أو تجاوز عمره 24 ساعة، ثم يفحص
-        if not model_is_fresh():
+        if CFG["strategy"] != "vwap_wave" and not model_is_fresh():
             print("model missing/stale -> training")
             train()
+        elif CFG["strategy"] == "vwap_wave":
+            print("vwap_wave strategy -> no model needed")
         else:
             print("model fresh -> skip training")
         scan()

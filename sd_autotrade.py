@@ -390,6 +390,7 @@ def execute_from_tracker():
     # الأقدم أولاً حتى نحترم ترتيب ظهور الإشارات ضمن حدّ المراكز
     items = sorted(data.items(), key=lambda kv: (kv[1] or {}).get("created", ""))
     opened = 0
+    cancelled = 0        # إشارات «انتظار المستويات» أُلغيت (كسر وقف/فات الهدف) — تُحفظ كي لا تُعاد
     for key, tr in items:
         if not isinstance(tr, dict):
             continue
@@ -421,7 +422,12 @@ def execute_from_tracker():
             age_h = (now - dt.datetime.fromisoformat(created)).total_seconds() / 3600
         except Exception:
             age_h = 0
-        if age_h > MAX_SIGNAL_AGE_H:
+        # إشارات «انتظار المستويات» لها صلاحية أطول (max_age_h من الإشارة نفسها)
+        try:
+            age_limit = float(tr.get("max_age_h") or MAX_SIGNAL_AGE_H)
+        except Exception:
+            age_limit = MAX_SIGNAL_AGE_H
+        if age_h > age_limit:
             continue
         if len(positions) >= MAX_CONCURRENT:
             print(f"autotrade[{EX_NAME}]: بلغ حدّ المراكز ({MAX_CONCURRENT})")
@@ -436,15 +442,35 @@ def execute_from_tracker():
             continue
         tp1 = float(targets[0])
         tp2 = float(targets[1]) if len(targets) > 1 else 0.0
+        # ── وضع «انتظار المستويات» (استراتيجية الفيواب الأسبوعي 2026-07-17) ──
+        # لا شراء فوري عند الإشارة: ننتظر نزول السعر إلى مستوى الفيبو الأول (entry).
+        # تُلغى نهائياً إذا كُسر الوقف أو تحقّق الهدف الأول قبل النزول للمستوى.
+        if tr.get("wait_entry"):
+            live = bx.last_price(sym) or 0.0
+            if live <= 0:
+                continue
+            if live <= stop:
+                executed.add(ekey); cancelled += 1
+                print(f"autotrade[{EX_NAME}]: {sym} كسر الوقف قبل بلوغ مستوى الدخول — أُلغيت")
+                continue
+            if tp1 and live >= tp1:
+                executed.add(ekey); cancelled += 1
+                print(f"autotrade[{EX_NAME}]: {sym} بلغ الهدف الأول قبل النزول للمستوى — أُلغيت")
+                continue
+            if live > entry:
+                print(f"autotrade[{EX_NAME}]: {sym} بانتظار النزول لمستوى الفيبو الأول "
+                      f"({_fmt(live)} > {_fmt(entry)}) — تأجيل")
+                continue
         if _open_position(sym, tr.get("timeframe", ""), entry, stop, tp1, tp2,
                           tr.get("prob"), label or "إشارة", positions, equity,
                           levels=tr.get("dca_levels")):
             executed.add(ekey)
             last_entry[sym] = now.isoformat(timespec="seconds")   # ابدأ التهدئة
             opened += 1
-    if opened:
+    if opened or cancelled:
         _save(EXEC_PATH, sorted(executed)[-1000:])
-        _save(LAST_PATH, last_entry)
+        if opened:
+            _save(LAST_PATH, last_entry)
 
 
 # ── إدارة المراكز المفتوحة ───────────────────────────────────────────────────
