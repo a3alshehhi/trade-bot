@@ -1131,12 +1131,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-11 13:00:00",
-    "last_bar": "2026-07-14 23:59:59.999000",
+    "last_bar": "2026-07-17 02:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.1775,
-    "lo_seen": 0.1643,
-    "created": "2026-07-11T13:38:37"
+    "lo_seen": 0.1627,
+    "created": "2026-07-11T13:38:37",
+    "exit_price": 0.163436,
+    "close_card_sent": true,
+    "closed_at": "2026-07-17T03:02:05"
   },
   "عرض/طلب+دايفرجنس|ANKRUSDT|2026-07-11 21:45:00": {
     "symbol": "ANKRUSDT",
@@ -1321,11 +1324,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-16 09:00:00",
-    "last_bar": "2026-07-16 09:00:00",
+    "last_bar": "2026-07-17 02:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.396,
-    "lo_seen": 0.396,
+    "hi_seen": 0.412,
+    "lo_seen": 0.394,
     "created": "2026-07-16T09:46:44"
   },
   "عرض/طلب+دايفرجنس|CRVUSDT|2026-07-16 20:00:00": {
@@ -1354,11 +1357,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-16 20:00:00",
-    "last_bar": "2026-07-16 20:00:00",
+    "last_bar": "2026-07-17 02:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.2199,
-    "lo_seen": 0.2199,
+    "hi_seen": 0.2244,
+    "lo_seen": 0.2107,
     "created": "2026-07-16T20:42:47"
   }
 }
