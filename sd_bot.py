@@ -138,6 +138,8 @@ CFG["max_bars_to_touch"] = int(os.environ.get("SD_MAX_BARS", CFG["max_bars_to_to
 CFG["strategy"] = os.environ.get("SD_STRATEGY", "legacy").strip().lower()
 CFG["vw_os"] = float(os.environ.get("SD_VW_OS", "20"))   # عتبة التشبّع البيعي RSI21
 CFG["vw_ob"] = float(os.environ.get("SD_VW_OB", "80"))   # عتبة التشبّع الشرائي RSI21
+# نوع مؤشر التشبّع: ultimate = Ultimate RSI من LuxAlgo (الافتراضي، طلب 2026-07-17) أو classic
+CFG["vw_rsi"] = os.environ.get("SD_VW_RSI", "ultimate").strip().lower()
 # صلاحية إشارة «انتظار المستويات» قبل أن يتجاهلها المنفّذ (ساعات)
 CFG["wait_max_age_h"] = float(os.environ.get("SD_WAIT_MAX_AGE_H", "48"))
 BINANCE_BASES = ["https://data-api.binance.vision", "https://api.binance.com"]
@@ -862,6 +864,56 @@ def track_for_dashboard(signals, message_id, tf=None, path=TRACK_FILE):
     print(f"tracked {added} signals to {path}")
 
 # ═══════════ استراتيجية «الفيواب الأسبوعي + تشبّع RSI21 + MACD4C» (2026-07-17) ═══════════
+def rma(arr, n):
+    """متوسط Wilder (RMA): يُبذَر بمتوسط أول n قيمة صالحة ثم rma=(prev*(n-1)+x)/n."""
+    out = [float("nan")] * len(arr)
+    prev = None; buf = []
+    for i, x in enumerate(arr):
+        if not math.isfinite(x):
+            continue
+        if prev is None:
+            buf.append(x)
+            if len(buf) == n:
+                prev = sum(buf) / n
+                out[i] = prev
+        else:
+            prev = (prev * (n - 1) + x) / n
+            out[i] = prev
+    return out
+
+
+def ultimate_rsi(c, n):
+    """Ultimate RSI — ترجمة أمينة لمؤشر LuxAlgo (Pine v5، طريقة RMA الافتراضية):
+      upper/lower = أعلى/أدنى إغلاق في نافذة n
+      diff = +r عند قمة نافذة جديدة، −r عند قاع نافذة جديد، وإلا فرق الإغلاقين (r = upper−lower)
+      arsi = RMA(diff,n) / RMA(|diff|,n) × 50 + 50
+    (المصدر مرخّص CC BY-NC-SA 4.0 © LuxAlgo — استخدام شخصي غير تجاري.)"""
+    m = len(c)
+    diff = [float("nan")] * m
+    prev_up = prev_dn = None
+    for i in range(m):
+        if i < n - 1:
+            continue
+        win = c[i - n + 1:i + 1]
+        up, dn = max(win), min(win)
+        if prev_up is not None:
+            r = up - dn
+            if up > prev_up:
+                diff[i] = r
+            elif dn < prev_dn:
+                diff[i] = -r
+            else:
+                diff[i] = c[i] - c[i - 1]
+        prev_up, prev_dn = up, dn
+    num = rma(diff, n)
+    den = rma([abs(x) if math.isfinite(x) else x for x in diff], n)
+    out = [float("nan")] * m
+    for i in range(m):
+        if math.isfinite(num[i]) and math.isfinite(den[i]) and den[i] > 0:
+            out[i] = num[i] / den[i] * 50 + 50
+    return out
+
+
 def vwap_weekly(t, h, l, c, v):
     """فيواب أسبوعي مرسّى: يتجمّع (سعر نموذجي × حجم) ويُصفَّر مع بداية كل أسبوع ISO (UTC)."""
     out = [float("nan")] * len(c)
@@ -892,7 +944,12 @@ def vwave_signal(d1):
     n = len(c)
     if n < 120:
         return None
-    rs = rsi(c, CFG["rsi_entry_len"])
+    # مؤشر التشبّع: Ultimate RSI (LuxAlgo) بطول 21 — طلب بو محمد 2026-07-17.
+    # SD_VW_RSI=classic يرجع لـ RSI Wilder الكلاسيكي للمقارنة.
+    if CFG["vw_rsi"] == "classic":
+        rs = rsi(c, CFG["rsi_entry_len"])
+    else:
+        rs = ultimate_rsi(c, CFG["rsi_entry_len"])
     _, _, hist = macd(c)
     vw = vwap_weekly(t, h, l, c, v)
     OS, OB = CFG["vw_os"], CFG["vw_ob"]
@@ -963,7 +1020,7 @@ def format_message_vwave(signals):
         lines = [
             f"🟢 إشارة {DASH_LABEL} — شراء (انتظار المستويات)",
             f"💎 {s['sym']} · ⏱️ {s.get('tf', CFG['entry_tf'])}",
-            f"📊 الشروط: تشبّع RSI21≤{CFG['vw_os']:.0f} ({s.get('os_hits', 1)} لمسة) → "
+            f"📊 الشروط: تشبّع Ultimate RSI21≤{CFG['vw_os']:.0f} ({s.get('os_hits', 1)} لمسة) → "
             f"اختراق الفيواب الأسبوعي → RSI21≥{CFG['vw_ob']:.0f} → تحوّل MACD4C للأحمر",
             "",
             "📍 سلالم الدخول DCA (فيبو التصحيح — لا شراء قبل بلوغها):",
