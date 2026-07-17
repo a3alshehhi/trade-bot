@@ -561,13 +561,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-17 10:00:00",
-    "last_bar": "2026-07-17 10:59:59.999000",
+    "last_bar": "2026-07-17 11:59:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.01529,
+    "stopped": true,
+    "hi_seen": 0.01549,
     "lo_seen": 0.0149,
-    "created": "2026-07-17T10:09:58"
+    "created": "2026-07-17T10:09:58",
+    "exit_price": 0.01530428,
+    "close_card_sent": true,
+    "closed_at": "2026-07-17T12:10:39"
   }
 }
