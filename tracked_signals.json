@@ -1408,5 +1408,49 @@
     "exit_price": 0.01527192,
     "close_card_sent": true,
     "closed_at": "2026-07-17T11:08:26"
+  },
+  "العرض/الطلب|ACTUSDT|2026-07-17 16:30:00": {
+    "symbol": "ACTUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5015,
+    "entry": 0.00894822,
+    "stop": 0.00846,
+    "init_stop": 0.00846,
+    "cur_stop": 0.00846,
+    "legs": [
+      0.00894822,
+      0.008855,
+      0.00876178,
+      0.00862906
+    ],
+    "last_alert_stop": 0.00846,
+    "armed": false,
+    "targets": [
+      0.00946488,
+      0.00973822
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-17 16:30:00",
+    "last_bar": "2026-07-17 16:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00894822,
+    "lo_seen": 0.00894822,
+    "created": "2026-07-17T16:46:08",
+    "dca_levels": [
+      0.00894822,
+      0.008855,
+      0.00876178,
+      0.00862906
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
