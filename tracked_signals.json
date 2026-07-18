@@ -1540,5 +1540,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|APTUSDT|2026-07-18 01:45:00": {
+    "symbol": "APTUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5030,
+    "entry": 0.613866,
+    "stop": 0.591,
+    "init_stop": 0.591,
+    "cur_stop": 0.591,
+    "legs": [
+      0.613866,
+      0.6095,
+      0.605134,
+      0.598918
+    ],
+    "last_alert_stop": 0.591,
+    "armed": false,
+    "targets": [
+      0.628,
+      0.638064
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-18 01:45:00",
+    "last_bar": "2026-07-18 01:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.613866,
+    "lo_seen": 0.613866,
+    "created": "2026-07-18T02:01:18",
+    "dca_levels": [
+      0.613866,
+      0.6095,
+      0.605134,
+      0.598918
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
