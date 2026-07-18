@@ -32,5 +32,45 @@
     "armed": false,
     "opened_ts": "2026-07-16T09:46:51",
     "msg_id": 4966
+  },
+  "APTUSDT": {
+    "symbol": "APTUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.613866,
+      0.6095,
+      0.605134,
+      0.598918
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 75.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.6142142142361185,
+        "qty": 122.10723598,
+        "usd": 75.0
+      }
+    ],
+    "avg_entry": 0.6142142142361185,
+    "entry": 0.6142142142361185,
+    "init_stop": 0.591,
+    "stop": 0.591,
+    "R": 0.02321421423611858,
+    "tp1": 0.628,
+    "tp2": 0.638064,
+    "qty": 122.10723598,
+    "qty_open": 122.10723598,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-18T08:16:17",
+    "msg_id": 5037
   }
 }
