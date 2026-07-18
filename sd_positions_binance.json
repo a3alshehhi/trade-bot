@@ -187,5 +187,45 @@
     "armed": false,
     "opened_ts": "2026-07-18T09:34:58",
     "msg_id": 5047
+  },
+  "AWEUSDT": {
+    "symbol": "AWEUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.05851702,
+      0.057645,
+      0.05677298,
+      0.05553146
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 25.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.0588824118235883,
+        "qty": 424.575,
+        "usd": 25.0
+      }
+    ],
+    "avg_entry": 0.0588824118235883,
+    "entry": 0.0588824118235883,
+    "init_stop": 0.05395,
+    "stop": 0.05395,
+    "R": 0.004932411823588299,
+    "tp1": 0.06134,
+    "tp2": 0.06335008,
+    "qty": 424.575,
+    "qty_open": 424.575,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-18T23:48:16",
+    "msg_id": 5079
   }
 }
