@@ -1485,7 +1485,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-17 17:45:00",
-    "last_bar": "2026-07-18 15:59:59.999000",
+    "last_bar": "2026-07-18 21:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1728588,
@@ -1529,10 +1529,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-17 20:00:00",
-    "last_bar": "2026-07-18 15:59:59.999000",
+    "last_bar": "2026-07-18 21:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 64274.47,
+    "hi_seen": 64846.83,
     "lo_seen": 63681.12574,
     "created": "2026-07-17T20:16:02",
     "dca_levels": [
@@ -1573,7 +1573,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-18 01:45:00",
-    "last_bar": "2026-07-18 15:59:59.999000",
+    "last_bar": "2026-07-18 21:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.625,
@@ -1653,11 +1653,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-18 08:30:00",
-    "last_bar": "2026-07-18 15:59:59.999000",
+    "last_bar": "2026-07-18 21:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00387,
-    "lo_seen": 0.00341,
+    "lo_seen": 0.00321,
     "created": "2026-07-18T08:46:04",
     "dca_levels": [
       0.00350452,
@@ -1767,14 +1767,14 @@
     "entry": 0.07141432,
     "stop": 0.07003,
     "init_stop": 0.07003,
-    "cur_stop": 0.07003,
+    "cur_stop": 0.07141432,
     "legs": [
       0.07141432,
       0.07115,
       0.07088568,
       0.07050936
     ],
-    "last_alert_stop": 0.07003,
+    "last_alert_stop": 0.07141432,
     "armed": false,
     "targets": [
       0.07227,
@@ -1788,10 +1788,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-18 19:45:00",
-    "last_bar": "2026-07-18 19:45:00",
-    "hits": [],
+    "last_bar": "2026-07-18 21:44:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.07141432,
+    "hi_seen": 0.0724,
     "lo_seen": 0.07141432,
     "created": "2026-07-18T20:01:16",
     "dca_levels": [
@@ -1799,6 +1801,50 @@
       0.07115,
       0.07088568,
       0.07050936
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|ETHUSDT|2026-07-18 21:30:00": {
+    "symbol": "ETHUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5073,
+    "entry": 1842.92954,
+    "stop": 1803.05,
+    "init_stop": 1803.05,
+    "cur_stop": 1803.05,
+    "legs": [
+      1842.92954,
+      1835.315,
+      1827.70046,
+      1816.85942
+    ],
+    "last_alert_stop": 1803.05,
+    "armed": false,
+    "targets": [
+      1867.58,
+      1885.13216
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-18 21:30:00",
+    "last_bar": "2026-07-18 21:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1859.97,
+    "lo_seen": 1842.92954,
+    "created": "2026-07-18T21:46:09",
+    "dca_levels": [
+      1842.92954,
+      1835.315,
+      1827.70046,
+      1816.85942
     ],
     "wait_entry": true,
     "max_age_h": 48.0

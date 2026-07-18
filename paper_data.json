@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-18T21:37:25",
+  "updated_at": "2026-07-18T21:51:20",
   "stats": {
-    "open": 10,
+    "open": 11,
     "closed": 61,
     "win_rate": 59.0,
     "profit_factor": 0.91,
@@ -1183,9 +1183,25 @@
       "timeframe": "15m",
       "entry": 0.07141432,
       "stop": 0.07003,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-18T20:01:16",
+      "closed_at": null,
+      "realized_pct": 0.6
+    },
+    {
+      "id": "العرض/الطلب|ETHUSDT|2026-07-18 21:30:00",
+      "symbol": "ETHUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1842.92954,
+      "stop": 1803.05,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-18T21:46:09",
       "closed_at": null,
       "realized_pct": 0.0
     },
