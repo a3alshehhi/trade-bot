@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-18T00:18:09",
+  "updated_at": "2026-07-18T00:36:27",
   "stats": {
-    "open": 10,
+    "open": 11,
     "closed": 51,
     "win_rate": 56.9,
     "profit_factor": 0.8,
@@ -380,6 +380,20 @@
       "closed_at": "2026-07-17T12:10:39",
       "realized_pct": 2.18,
       "result_pct": 2.18
+    },
+    {
+      "id": "SD Stable|1000SATSUSDT|2026-07-18 00:15:00",
+      "symbol": "1000SATSUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 9.55e-06,
+      "stop": 9.45e-06,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-18T00:22:41",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "العرض/الطلب|ADXUSDT|2026-07-06 02:00:00",
