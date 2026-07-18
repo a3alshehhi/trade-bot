@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-18T08:54:25",
+  "updated_at": "2026-07-18T09:08:37",
   "stats": {
-    "open": 11,
+    "open": 12,
     "closed": 54,
     "win_rate": 55.6,
     "profit_factor": 0.74,
@@ -1085,6 +1085,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|DGBUSDT|2026-07-18 08:30:00",
+      "symbol": "DGBUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00350452,
+      "stop": 0.0028,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-18T08:46:04",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -1092,11 +1106,13 @@
       "timeframe": "1h",
       "entry": 0.00361,
       "stop": 0.00275595,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-14T18:07:49",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 4.39
     },
     {
       "id": "trendwave · 1h · std|RIFUSDT|2026-07-15 12:59:59.999000",
