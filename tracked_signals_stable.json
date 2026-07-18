@@ -695,5 +695,39 @@
     "exit_price": 64433.99916,
     "close_card_sent": true,
     "closed_at": "2026-07-18T17:38:23"
+  },
+  "SD Stable|CITYUSDT|2026-07-18 17:45:00": {
+    "symbol": "CITYUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 5064,
+    "entry": 0.393,
+    "stop": 0.39111,
+    "init_stop": 0.39111,
+    "cur_stop": 0.39111,
+    "legs": [
+      0.393,
+      0.392856
+    ],
+    "last_alert_stop": 0.39111,
+    "armed": false,
+    "targets": [
+      0.397088,
+      0.398472
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-18 17:45:00",
+    "last_bar": "2026-07-18 17:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.393,
+    "lo_seen": 0.393,
+    "created": "2026-07-18T17:51:44"
   }
 }
