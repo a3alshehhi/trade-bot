@@ -642,14 +642,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-18 07:30:00",
-    "last_bar": "2026-07-18 17:14:59.999000",
+    "last_bar": "2026-07-18 17:29:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.07202,
+    "stopped": true,
+    "hi_seen": 0.07226,
     "lo_seen": 0.07014,
-    "created": "2026-07-18T07:37:12"
+    "created": "2026-07-18T07:37:12",
+    "exit_price": 0.07203632,
+    "close_card_sent": true,
+    "closed_at": "2026-07-18T17:38:21"
   },
   "SD Stable|BTCUSDT|2026-07-18 12:00:00": {
     "symbol": "BTCUSDT",
@@ -679,13 +683,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-18 12:00:00",
-    "last_bar": "2026-07-18 17:14:59.999000",
+    "last_bar": "2026-07-18 17:29:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 64323.97,
+    "stopped": true,
+    "hi_seen": 64449.83,
     "lo_seen": 63963.0,
-    "created": "2026-07-18T12:09:40"
+    "created": "2026-07-18T12:09:40",
+    "exit_price": 64433.99916,
+    "close_card_sent": true,
+    "closed_at": "2026-07-18T17:38:23"
   }
 }
