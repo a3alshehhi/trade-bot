@@ -1620,5 +1620,49 @@
     "hi_seen": 1845.65,
     "lo_seen": 1845.65,
     "created": "2026-07-18T08:34:22"
+  },
+  "العرض/الطلب|DGBUSDT|2026-07-18 08:30:00": {
+    "symbol": "DGBUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5039,
+    "entry": 0.00350452,
+    "stop": 0.0028,
+    "init_stop": 0.0028,
+    "cur_stop": 0.0028,
+    "legs": [
+      0.00350452,
+      0.00337,
+      0.00323548,
+      0.00304396
+    ],
+    "last_alert_stop": 0.0028,
+    "armed": false,
+    "targets": [
+      0.00394,
+      0.00425008
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-18 08:30:00",
+    "last_bar": "2026-07-18 08:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00350452,
+    "lo_seen": 0.00350452,
+    "created": "2026-07-18T08:46:04",
+    "dca_levels": [
+      0.00350452,
+      0.00337,
+      0.00323548,
+      0.00304396
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
