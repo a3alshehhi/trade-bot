@@ -1587,5 +1587,38 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "عرض/طلب+دايفرجنس|ETHUSDT|2026-07-18 08:30:00": {
+    "symbol": "ETHUSDT",
+    "label": "عرض/طلب+دايفرجنس",
+    "timeframe": "5m",
+    "message_id": 5038,
+    "entry": 1845.65,
+    "stop": 1841.6484,
+    "init_stop": 1841.6484,
+    "cur_stop": 1841.6484,
+    "legs": [
+      1845.65
+    ],
+    "last_alert_stop": 1841.6484,
+    "armed": false,
+    "targets": [
+      1851.15312,
+      1853.56128
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-18 08:30:00",
+    "last_bar": "2026-07-18 08:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1845.65,
+    "lo_seen": 1845.65,
+    "created": "2026-07-18T08:34:22"
   }
 }
