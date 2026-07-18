@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-18T19:52:48",
+  "updated_at": "2026-07-18T20:07:31",
   "stats": {
-    "open": 10,
+    "open": 11,
     "closed": 60,
     "win_rate": 58.3,
     "profit_factor": 0.89,
@@ -1170,6 +1170,20 @@
       "closed_at": "2026-07-18T15:46:05",
       "realized_pct": 2.0,
       "result_pct": 2.0
+    },
+    {
+      "id": "العرض/الطلب|CELOUSDT|2026-07-18 19:45:00",
+      "symbol": "CELOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.07141432,
+      "stop": 0.07003,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-18T20:01:16",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",

@@ -1758,5 +1758,49 @@
     "exit_price": 0.00092752,
     "close_card_sent": true,
     "closed_at": "2026-07-18T15:46:05"
+  },
+  "العرض/الطلب|CELOUSDT|2026-07-18 19:45:00": {
+    "symbol": "CELOUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5069,
+    "entry": 0.07141432,
+    "stop": 0.07003,
+    "init_stop": 0.07003,
+    "cur_stop": 0.07003,
+    "legs": [
+      0.07141432,
+      0.07115,
+      0.07088568,
+      0.07050936
+    ],
+    "last_alert_stop": 0.07003,
+    "armed": false,
+    "targets": [
+      0.07227,
+      0.07287928
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-18 19:45:00",
+    "last_bar": "2026-07-18 19:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.07141432,
+    "lo_seen": 0.07141432,
+    "created": "2026-07-18T20:01:16",
+    "dca_levels": [
+      0.07141432,
+      0.07115,
+      0.07088568,
+      0.07050936
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
