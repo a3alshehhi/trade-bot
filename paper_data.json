@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-18T14:52:49",
+  "updated_at": "2026-07-18T15:07:21",
   "stats": {
-    "open": 12,
+    "open": 13,
     "closed": 56,
     "win_rate": 57.1,
     "profit_factor": 0.83,
@@ -1129,6 +1129,20 @@
       "closed_at": "2026-07-18T12:01:26",
       "realized_pct": 1.39,
       "result_pct": 1.39
+    },
+    {
+      "id": "العرض/الطلب|CKBUSDT|2026-07-18 14:45:00",
+      "symbol": "CKBUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00090463,
+      "stop": 0.000883,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-18T15:01:21",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",

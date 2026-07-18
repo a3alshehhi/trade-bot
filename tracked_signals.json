@@ -1705,5 +1705,49 @@
     "exit_price": 0.00090242,
     "close_card_sent": true,
     "closed_at": "2026-07-18T12:01:26"
+  },
+  "العرض/الطلب|CKBUSDT|2026-07-18 14:45:00": {
+    "symbol": "CKBUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5056,
+    "entry": 0.00090463,
+    "stop": 0.000883,
+    "init_stop": 0.000883,
+    "cur_stop": 0.000883,
+    "legs": [
+      0.00090463,
+      0.0009005,
+      0.00089637,
+      0.00089049
+    ],
+    "last_alert_stop": 0.000883,
+    "armed": false,
+    "targets": [
+      0.000918,
+      0.00092752
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-18 14:45:00",
+    "last_bar": "2026-07-18 14:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00090463,
+    "lo_seen": 0.00090463,
+    "created": "2026-07-18T15:01:21",
+    "dca_levels": [
+      0.00090463,
+      0.0009005,
+      0.00089637,
+      0.00089049
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
