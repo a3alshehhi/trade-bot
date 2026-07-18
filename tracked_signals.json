@@ -1438,11 +1438,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-17 16:30:00",
-    "last_bar": "2026-07-17 16:30:00",
+    "last_bar": "2026-07-18 03:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.00894822,
-    "lo_seen": 0.00894822,
+    "lo_seen": 0.00846,
     "created": "2026-07-17T16:46:08",
     "dca_levels": [
       0.00894822,
@@ -1451,7 +1451,10 @@
       0.00862906
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.00846,
+    "close_card_sent": true,
+    "closed_at": "2026-07-18T03:31:12"
   },
   "العرض/الطلب|BANDUSDT|2026-07-17 17:45:00": {
     "symbol": "BANDUSDT",
@@ -1482,11 +1485,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-17 17:45:00",
-    "last_bar": "2026-07-17 17:45:00",
+    "last_bar": "2026-07-18 03:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1728588,
-    "lo_seen": 0.1728588,
+    "lo_seen": 0.1661,
     "created": "2026-07-17T18:01:21",
     "dca_levels": [
       0.1728588,
@@ -1526,10 +1529,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-17 20:00:00",
-    "last_bar": "2026-07-17 20:00:00",
+    "last_bar": "2026-07-18 03:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 63681.12574,
+    "hi_seen": 64216.61,
     "lo_seen": 63681.12574,
     "created": "2026-07-17T20:16:02",
     "dca_levels": [
@@ -1570,10 +1573,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-18 01:45:00",
-    "last_bar": "2026-07-18 01:45:00",
+    "last_bar": "2026-07-18 03:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.613866,
+    "hi_seen": 0.624,
     "lo_seen": 0.613866,
     "created": "2026-07-18T02:01:18",
     "dca_levels": [
