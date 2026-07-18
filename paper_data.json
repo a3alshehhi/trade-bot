@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T17:16:24",
+  "updated_at": "2026-07-18T17:19:07",
   "stats": {
     "open": 11,
     "closed": 58,
@@ -412,11 +412,13 @@
       "timeframe": "15m",
       "entry": 0.07059,
       "stop": 0.0698965,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-18T07:37:12",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.72
     },
     {
       "id": "SD Stable|BTCUSDT|2026-07-18 12:00:00",
@@ -426,11 +428,13 @@
       "timeframe": "15m",
       "entry": 64026.03,
       "stop": 63865.4557,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-18T12:09:40",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.23
     },
     {
       "id": "العرض/الطلب|ADXUSDT|2026-07-06 02:00:00",
