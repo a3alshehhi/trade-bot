@@ -190,5 +190,37 @@
     "hi_seen": 78.28,
     "lo_seen": 78.28,
     "created": "2026-07-15T15:07:19"
+  },
+  "trendwave · 1h · std|EGLDUSDT|2026-07-17 23:59:59.999000": {
+    "symbol": "EGLDUSDT",
+    "label": "trendwave · 1h · std",
+    "timeframe": "1h",
+    "message_id": -1,
+    "entry": 3.23,
+    "dca_levels": [
+      3.16124,
+      3.14,
+      3.11876
+    ],
+    "stop": 3.02577502,
+    "init_stop": 3.02577502,
+    "cur_stop": 3.02577502,
+    "last_alert_stop": 3.02577502,
+    "armed": false,
+    "targets": [
+      3.29876,
+      3.34124
+    ],
+    "tp_split": null,
+    "is_trendwave": true,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-17 23:59:59.999000",
+    "last_bar": "2026-07-17 23:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 3.23,
+    "lo_seen": 3.23,
+    "created": "2026-07-18T00:14:27"
   }
 }

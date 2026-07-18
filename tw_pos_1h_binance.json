@@ -119,5 +119,43 @@
     "tp1_done": false,
     "armed": false,
     "opened_ts": "2026-07-15T13:10:17"
+  },
+  "EGLDUSDT": {
+    "symbol": "EGLDUSDT",
+    "tf": "1h",
+    "label": "trendwave · 1h · std",
+    "prob": null,
+    "levels": [
+      3.16124,
+      3.14,
+      3.11876
+    ],
+    "filled": [
+      true,
+      false,
+      false
+    ],
+    "leg_usd": 33.33,
+    "n_legs": 3,
+    "fills": [
+      {
+        "price": 3.284124019032156,
+        "qty": 10.14984,
+        "usd": 33.333333333333336
+      }
+    ],
+    "avg_entry": 3.284124019032156,
+    "entry": 3.284124019032156,
+    "init_stop": 3.02577502,
+    "stop": 3.02577502,
+    "R": 0.2583489990321559,
+    "tp1": 3.29876,
+    "tp2": 3.34124,
+    "qty": 10.14984,
+    "qty_open": 10.14984,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-18T00:18:07",
+    "msg_id": 5027
   }
 }
