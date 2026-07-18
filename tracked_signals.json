@@ -1664,5 +1664,40 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "عرض/طلب+دايفرجنس|CKBUSDT|2026-07-18 10:00:00": {
+    "symbol": "CKBUSDT",
+    "label": "عرض/طلب+دايفرجنس",
+    "timeframe": "15m",
+    "message_id": 5048,
+    "entry": 0.000888,
+    "stop": 0.00088216,
+    "init_stop": 0.00088216,
+    "cur_stop": 0.00088216,
+    "legs": [
+      0.000888,
+      0.00088758,
+      0.00088557
+    ],
+    "last_alert_stop": 0.00088216,
+    "armed": false,
+    "targets": [
+      0.00089826,
+      0.00090242
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-18 10:00:00",
+    "last_bar": "2026-07-18 10:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.000888,
+    "lo_seen": 0.000888,
+    "created": "2026-07-18T10:03:59"
   }
 }
