@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-18T04:36:40",
+  "updated_at": "2026-07-18T04:38:42",
   "stats": {
-    "open": 10,
-    "closed": 53,
-    "win_rate": 56.6,
-    "profit_factor": 0.75,
-    "total_pct": -16.1,
-    "avg_pct": -0.3,
-    "max_drawdown_pct": -20.46
+    "open": 9,
+    "closed": 54,
+    "win_rate": 55.6,
+    "profit_factor": 0.74,
+    "total_pct": -16.98,
+    "avg_pct": -0.31,
+    "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-18",
-        "trades": 2,
-        "win_rate": 50.0,
-        "return_pct": -4.46,
+        "trades": 3,
+        "win_rate": 33.3,
+        "return_pct": -5.46,
         "week": "2026-W29",
         "month": "2026-07"
       },
@@ -119,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W29",
-        "trades": 25,
-        "win_rate": 56.0,
-        "return_pct": -14.54,
+        "trades": 26,
+        "win_rate": 53.8,
+        "return_pct": -15.43,
         "month": "2026-07"
       },
       {
@@ -135,9 +135,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 53,
-        "win_rate": 56.6,
-        "return_pct": -16.1
+        "trades": 54,
+        "win_rate": 55.6,
+        "return_pct": -16.98
       }
     ]
   },
@@ -398,10 +398,11 @@
       "entry": 9.55e-06,
       "stop": 9.45e-06,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-18T00:22:41",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-18T04:38:42",
+      "realized_pct": -1.05,
+      "result_pct": -1.05
     },
     {
       "id": "العرض/الطلب|ADXUSDT|2026-07-06 02:00:00",

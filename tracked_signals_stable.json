@@ -604,11 +604,14 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-18 00:15:00",
-    "last_bar": "2026-07-18 00:15:00",
+    "last_bar": "2026-07-18 04:29:59.999000",
     "hits": [],
-    "stopped": false,
-    "hi_seen": 9.55e-06,
-    "lo_seen": 9.55e-06,
-    "created": "2026-07-18T00:22:41"
+    "stopped": true,
+    "hi_seen": 9.57e-06,
+    "lo_seen": 9.45e-06,
+    "created": "2026-07-18T00:22:41",
+    "exit_price": 9.45e-06,
+    "close_card_sent": true,
+    "closed_at": "2026-07-18T04:38:42"
   }
 }
