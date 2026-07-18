@@ -704,12 +704,12 @@
     "entry": 0.393,
     "stop": 0.39111,
     "init_stop": 0.39111,
-    "cur_stop": 0.39111,
+    "cur_stop": 0.393,
     "legs": [
       0.393,
       0.392856
     ],
-    "last_alert_stop": 0.39111,
+    "last_alert_stop": 0.393,
     "armed": false,
     "targets": [
       0.397088,
@@ -723,10 +723,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-18 17:45:00",
-    "last_bar": "2026-07-18 17:45:00",
-    "hits": [],
+    "last_bar": "2026-07-18 20:29:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.393,
+    "hi_seen": 0.398,
     "lo_seen": 0.393,
     "created": "2026-07-18T17:51:44"
   }
