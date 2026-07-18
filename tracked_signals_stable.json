@@ -573,5 +573,42 @@
     "exit_price": 0.01530428,
     "close_card_sent": true,
     "closed_at": "2026-07-17T12:10:39"
+  },
+  "SD Stable|1000SATSUSDT|2026-07-18 00:15:00": {
+    "symbol": "1000SATSUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 5028,
+    "entry": 9.55e-06,
+    "stop": 9.45e-06,
+    "init_stop": 9.45e-06,
+    "cur_stop": 9.45e-06,
+    "legs": [
+      9.55e-06,
+      9.53e-06,
+      9.52e-06,
+      9.51e-06,
+      9.49e-06
+    ],
+    "last_alert_stop": 9.45e-06,
+    "armed": false,
+    "targets": [
+      9.6e-06,
+      9.63e-06
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-18 00:15:00",
+    "last_bar": "2026-07-18 00:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 9.55e-06,
+    "lo_seen": 9.55e-06,
+    "created": "2026-07-18T00:22:41"
   }
 }
