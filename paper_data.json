@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-07-18T02:08:17",
+  "updated_at": "2026-07-18T02:21:24",
   "stats": {
     "open": 11,
-    "closed": 51,
-    "win_rate": 56.9,
-    "profit_factor": 0.8,
-    "total_pct": -12.19,
-    "avg_pct": -0.23,
+    "closed": 52,
+    "win_rate": 57.7,
+    "profit_factor": 0.82,
+    "total_pct": -11.26,
+    "avg_pct": -0.2,
     "max_drawdown_pct": -20.11
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-07-18",
+        "trades": 1,
+        "win_rate": 100.0,
+        "return_pct": 1.06,
+        "week": "2026-W29",
+        "month": "2026-07"
+      },
       {
         "key": "2026-07-17",
         "trades": 9,
@@ -111,9 +119,9 @@
     "weekly": [
       {
         "key": "2026-W29",
-        "trades": 23,
-        "win_rate": 56.5,
-        "return_pct": -10.55,
+        "trades": 24,
+        "win_rate": 58.3,
+        "return_pct": -9.6,
         "month": "2026-07"
       },
       {
@@ -127,9 +135,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 51,
-        "win_rate": 56.9,
-        "return_pct": -12.19
+        "trades": 52,
+        "win_rate": 57.7,
+        "return_pct": -11.26
       }
     ]
   },
@@ -1033,6 +1041,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|APTUSDT|2026-07-18 01:45:00",
+      "symbol": "APTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.613866,
+      "stop": 0.591,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-18T02:01:18",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -1127,10 +1149,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-18T00:14:27",
-      "closed_at": null,
-      "realized_pct": 1.06
+      "closed_at": "2026-07-18T02:05:39",
+      "realized_pct": 1.06,
+      "result_pct": 1.06
     }
   ]
 }
