@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-19T15:53:24",
+  "updated_at": "2026-07-19T16:07:36",
   "stats": {
-    "open": 16,
+    "open": 17,
     "closed": 68,
     "win_rate": 63.2,
     "profit_factor": 1.1,
@@ -1409,6 +1409,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-19T13:16:02",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "عرض/طلب+دايفرجنس|CELRUSDT|2026-07-19 15:00:00",
+      "symbol": "CELRUSDT",
+      "label": "عرض/طلب+دايفرجنس",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.001668,
+      "stop": 0.00164099,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-19T15:49:18",
       "closed_at": null,
       "realized_pct": 0.0
     },
