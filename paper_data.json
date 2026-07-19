@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-19T07:08:27",
+  "updated_at": "2026-07-19T07:15:53",
   "stats": {
-    "open": 14,
-    "closed": 65,
-    "win_rate": 61.5,
-    "profit_factor": 1.04,
-    "total_pct": 0.72,
-    "avg_pct": 0.04,
+    "open": 13,
+    "closed": 66,
+    "win_rate": 62.1,
+    "profit_factor": 1.08,
+    "total_pct": 3.0,
+    "avg_pct": 0.08,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-19",
-        "trades": 4,
+        "trades": 5,
         "win_rate": 100.0,
-        "return_pct": 8.76,
+        "return_pct": 11.23,
         "week": "2026-W29",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W29",
-        "trades": 37,
-        "win_rate": 64.9,
-        "return_pct": 2.6,
+        "trades": 38,
+        "win_rate": 65.8,
+        "return_pct": 4.93,
         "month": "2026-07"
       },
       {
@@ -143,9 +143,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 65,
-        "win_rate": 61.5,
-        "return_pct": 0.72
+        "trades": 66,
+        "win_rate": 62.1,
+        "return_pct": 3.0
       }
     ]
   },
@@ -1293,12 +1293,14 @@
       "entry": 0.0136708,
       "stop": 0.0133,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-19T03:16:13",
-      "closed_at": null,
-      "realized_pct": 0.84
+      "closed_at": "2026-07-19T07:01:23",
+      "realized_pct": 2.27,
+      "result_pct": 2.27
     },
     {
       "id": "العرض/الطلب|BNTUSDT|2026-07-19 03:15:00",
