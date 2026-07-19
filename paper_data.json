@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-19T14:51:14",
+  "updated_at": "2026-07-19T14:56:38",
   "stats": {
-    "open": 14,
+    "open": 16,
     "closed": 68,
     "win_rate": 63.2,
     "profit_factor": 1.1,
@@ -518,6 +518,34 @@
       "closed_at": "2026-07-19T11:38:25",
       "realized_pct": 0.77,
       "result_pct": 0.77
+    },
+    {
+      "id": "SD Stable|CFXUSDT|2026-07-19 14:45:00",
+      "symbol": "CFXUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.04665,
+      "stop": 0.0458986,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-19T14:52:09",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "SD Stable|ADAUSDT|2026-07-19 14:45:00",
+      "symbol": "ADAUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1659,
+      "stop": 0.16444,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-19T14:52:09",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "العرض/الطلب|ADXUSDT|2026-07-06 02:00:00",

@@ -861,5 +861,78 @@
     "exit_price": 0.01889304,
     "close_card_sent": true,
     "closed_at": "2026-07-19T11:38:25"
+  },
+  "SD Stable|CFXUSDT|2026-07-19 14:45:00": {
+    "symbol": "CFXUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 5113,
+    "entry": 0.04665,
+    "stop": 0.0458986,
+    "init_stop": 0.0458986,
+    "cur_stop": 0.0458986,
+    "legs": [
+      0.04665,
+      0.04644586,
+      0.046355,
+      0.04626414,
+      0.04613478
+    ],
+    "last_alert_stop": 0.0458986,
+    "armed": false,
+    "targets": [
+      0.04694944,
+      0.04721586
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-19 14:45:00",
+    "last_bar": "2026-07-19 14:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.04665,
+    "lo_seen": 0.04665,
+    "created": "2026-07-19T14:52:09"
+  },
+  "SD Stable|ADAUSDT|2026-07-19 14:45:00": {
+    "symbol": "ADAUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 5113,
+    "entry": 0.1659,
+    "stop": 0.16444,
+    "init_stop": 0.16444,
+    "cur_stop": 0.16444,
+    "legs": [
+      0.1659,
+      0.16575,
+      0.1655022,
+      0.1651494
+    ],
+    "last_alert_stop": 0.16444,
+    "armed": false,
+    "targets": [
+      0.1673712,
+      0.1680978
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-19 14:45:00",
+    "last_bar": "2026-07-19 14:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1659,
+    "lo_seen": 0.1659,
+    "created": "2026-07-19T14:52:09"
   }
 }
