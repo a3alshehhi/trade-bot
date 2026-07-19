@@ -1,38 +1,4 @@
 {
-  "CELOUSDT": {
-    "symbol": "CELOUSDT",
-    "tf": "15m",
-    "label": "SD Stable",
-    "prob": null,
-    "levels": [
-      0.07059
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 300.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.07106106106117771,
-        "qty": 4221.7213692000005,
-        "usd": 300.0
-      }
-    ],
-    "avg_entry": 0.07106106106117771,
-    "entry": 0.07106106106117771,
-    "init_stop": 0.0698965,
-    "stop": 0.0698965,
-    "R": 0.0011645610611777102,
-    "tp1": 0.07160728,
-    "tp2": 0.07203632,
-    "qty": 4221.7213692000005,
-    "qty_open": 4221.7213692000005,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-18T07:37:41",
-    "msg_id": 5035
-  },
   "ADAUSDT": {
     "symbol": "ADAUSDT",
     "tf": "15m",
