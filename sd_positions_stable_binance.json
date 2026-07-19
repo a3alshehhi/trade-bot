@@ -32,5 +32,39 @@
     "armed": false,
     "opened_ts": "2026-07-18T22:54:45",
     "msg_id": 5077
+  },
+  "CGPTUSDT": {
+    "symbol": "CGPTUSDT",
+    "tf": "15m",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.01853
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.0186364499739537,
+        "qty": 5365.828799999999,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.0186364499739537,
+    "entry": 0.0186364499739537,
+    "init_stop": 0.0184512,
+    "stop": 0.0184512,
+    "R": 0.00018524997395369738,
+    "tp1": 0.01864808,
+    "tp2": 0.01869652,
+    "qty": 5365.828799999999,
+    "qty_open": 5365.828799999999,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-19T06:55:00",
+    "msg_id": 5090
   }
 }

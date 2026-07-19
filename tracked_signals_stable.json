@@ -777,5 +777,40 @@
     "exit_price": 0.1172,
     "close_card_sent": true,
     "closed_at": "2026-07-19T06:23:07"
+  },
+  "SD Stable|CGPTUSDT|2026-07-19 06:45:00": {
+    "symbol": "CGPTUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 5088,
+    "entry": 0.01853,
+    "stop": 0.0184512,
+    "init_stop": 0.0184512,
+    "cur_stop": 0.0184512,
+    "legs": [
+      0.01853,
+      0.01852348,
+      0.01849996
+    ],
+    "last_alert_stop": 0.0184512,
+    "armed": false,
+    "targets": [
+      0.01864808,
+      0.01869652
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-19 06:45:00",
+    "last_bar": "2026-07-19 06:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01853,
+    "lo_seen": 0.01853,
+    "created": "2026-07-19T06:52:40"
   }
 }
