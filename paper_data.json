@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-19T21:33:32",
+  "updated_at": "2026-07-19T21:35:30",
   "stats": {
-    "open": 15,
-    "closed": 72,
-    "win_rate": 61.1,
-    "profit_factor": 0.95,
-    "total_pct": -5.62,
-    "avg_pct": -0.05,
+    "open": 14,
+    "closed": 73,
+    "win_rate": 60.3,
+    "profit_factor": 0.93,
+    "total_pct": -7.14,
+    "avg_pct": -0.07,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-19",
-        "trades": 11,
-        "win_rate": 72.7,
-        "return_pct": 1.91,
+        "trades": 12,
+        "win_rate": 66.7,
+        "return_pct": 0.27,
         "week": "2026-W29",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W29",
-        "trades": 44,
-        "win_rate": 63.6,
-        "return_pct": -3.86,
+        "trades": 45,
+        "win_rate": 62.2,
+        "return_pct": -5.41,
         "month": "2026-07"
       },
       {
@@ -143,9 +143,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 72,
-        "win_rate": 61.1,
-        "return_pct": -5.62
+        "trades": 73,
+        "win_rate": 60.3,
+        "return_pct": -7.14
       }
     ]
   },
@@ -528,10 +528,11 @@
       "entry": 0.04665,
       "stop": 0.0458986,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-19T14:52:09",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-19T21:35:29",
+      "realized_pct": -1.61,
+      "result_pct": -1.61
     },
     {
       "id": "SD Stable|ADAUSDT|2026-07-19 14:45:00",

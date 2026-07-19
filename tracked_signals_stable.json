@@ -892,12 +892,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 14:45:00",
-    "last_bar": "2026-07-19 17:14:59.999000",
+    "last_bar": "2026-07-19 21:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.04674,
-    "lo_seen": 0.04612,
-    "created": "2026-07-19T14:52:09"
+    "lo_seen": 0.04578,
+    "created": "2026-07-19T14:52:09",
+    "exit_price": 0.0458986,
+    "close_card_sent": true,
+    "closed_at": "2026-07-19T21:35:29"
   },
   "SD Stable|ADAUSDT|2026-07-19 14:45:00": {
     "symbol": "ADAUSDT",
