@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-19T11:03:01",
+  "updated_at": "2026-07-19T11:21:59",
   "stats": {
-    "open": 13,
+    "open": 14,
     "closed": 67,
     "win_rate": 62.7,
     "profit_factor": 1.09,
@@ -500,6 +500,20 @@
       "closed_at": "2026-07-19T07:52:39",
       "realized_pct": 0.77,
       "result_pct": 0.77
+    },
+    {
+      "id": "SD Stable|CGPTUSDT|2026-07-19 10:45:00",
+      "symbol": "CGPTUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0187,
+      "stop": 0.0184184,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-19T10:59:19",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "العرض/الطلب|ADXUSDT|2026-07-06 02:00:00",
@@ -1314,11 +1328,13 @@
       "timeframe": "15m",
       "entry": 0.2728114,
       "stop": 0.2683,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-19T03:31:09",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.51
     },
     {
       "id": "العرض/الطلب|1000SATSUSDT|2026-07-19 05:00:00",
