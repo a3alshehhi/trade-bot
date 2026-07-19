@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-19T02:20:40",
+  "updated_at": "2026-07-19T02:22:50",
   "stats": {
-    "open": 12,
-    "closed": 63,
-    "win_rate": 60.3,
-    "profit_factor": 0.94,
-    "total_pct": -5.78,
-    "avg_pct": -0.07,
+    "open": 13,
+    "closed": 62,
+    "win_rate": 59.7,
+    "profit_factor": 0.92,
+    "total_pct": -6.84,
+    "avg_pct": -0.08,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-19",
-        "trades": 2,
+        "trades": 1,
         "win_rate": 100.0,
-        "return_pct": 1.74,
+        "return_pct": 0.6,
         "week": "2026-W29",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W29",
-        "trades": 35,
-        "win_rate": 62.9,
-        "return_pct": -4.02,
+        "trades": 34,
+        "win_rate": 61.8,
+        "return_pct": -5.1,
         "month": "2026-07"
       },
       {
@@ -143,9 +143,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 63,
-        "win_rate": 60.3,
-        "return_pct": -5.78
+        "trades": 62,
+        "win_rate": 59.7,
+        "return_pct": -6.84
       }
     ]
   },
@@ -1226,13 +1226,11 @@
       "timeframe": "15m",
       "entry": 1842.92954,
       "stop": 1803.05,
-      "hits": [
-        1
-      ],
+      "hits": [],
       "status": "open",
       "opened_at": "2026-07-18T21:46:09",
       "closed_at": null,
-      "realized_pct": 0.67
+      "realized_pct": 0.0
     },
     {
       "id": "العرض/الطلب|AWEUSDT|2026-07-18 23:00:00",
@@ -1256,15 +1254,11 @@
       "timeframe": "15m",
       "entry": 34.02732,
       "stop": 33.57,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
+      "hits": [],
+      "status": "open",
       "opened_at": "2026-07-19T00:31:06",
-      "closed_at": "2026-07-19T02:16:10",
-      "realized_pct": 1.13,
-      "result_pct": 1.13
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
