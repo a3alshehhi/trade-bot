@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T07:36:19",
+  "updated_at": "2026-07-19T07:39:18",
   "stats": {
     "open": 13,
     "closed": 66,
@@ -491,11 +491,13 @@
       "timeframe": "15m",
       "entry": 0.01853,
       "stop": 0.0184512,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-19T06:52:40",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.32
     },
     {
       "id": "العرض/الطلب|ADXUSDT|2026-07-06 02:00:00",
