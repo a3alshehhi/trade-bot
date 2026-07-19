@@ -940,5 +940,76 @@
     "exit_price": 0.16444,
     "close_card_sent": true,
     "closed_at": "2026-07-19T17:24:54"
+  },
+  "SD Stable|ARBUSDT|2026-07-19 22:15:00": {
+    "symbol": "ARBUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 5132,
+    "entry": 0.0889,
+    "stop": 0.087868,
+    "init_stop": 0.087868,
+    "cur_stop": 0.087868,
+    "legs": [
+      0.0889,
+      0.08875,
+      0.0885966,
+      0.0883782
+    ],
+    "last_alert_stop": 0.087868,
+    "armed": false,
+    "targets": [
+      0.0897536,
+      0.0902034
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-19 22:15:00",
+    "last_bar": "2026-07-19 22:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0889,
+    "lo_seen": 0.0889,
+    "created": "2026-07-19T22:22:18"
+  },
+  "SD Stable|BTCUSDT|2026-07-19 22:15:00": {
+    "symbol": "BTCUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 5132,
+    "entry": 64562.55,
+    "stop": 64225.1864,
+    "init_stop": 64225.1864,
+    "cur_stop": 64225.1864,
+    "legs": [
+      64562.55,
+      64516.84,
+      64412.68
+    ],
+    "last_alert_stop": 64225.1864,
+    "armed": false,
+    "targets": [
+      65068.64,
+      65283.16
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-19 22:15:00",
+    "last_bar": "2026-07-19 22:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 64562.55,
+    "lo_seen": 64562.55,
+    "created": "2026-07-19T22:22:18"
   }
 }

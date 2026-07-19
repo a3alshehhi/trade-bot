@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-19T22:21:13",
+  "updated_at": "2026-07-19T22:25:56",
   "stats": {
-    "open": 13,
+    "open": 15,
     "closed": 74,
     "win_rate": 60.8,
     "profit_factor": 0.95,
@@ -548,6 +548,34 @@
       "closed_at": "2026-07-19T17:24:54",
       "realized_pct": -0.88,
       "result_pct": -0.88
+    },
+    {
+      "id": "SD Stable|ARBUSDT|2026-07-19 22:15:00",
+      "symbol": "ARBUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0889,
+      "stop": 0.087868,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-19T22:22:18",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "SD Stable|BTCUSDT|2026-07-19 22:15:00",
+      "symbol": "BTCUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 64562.55,
+      "stop": 64225.1864,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-19T22:22:18",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "العرض/الطلب|ADXUSDT|2026-07-06 02:00:00",
