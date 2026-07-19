@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-19T11:36:18",
+  "updated_at": "2026-07-19T11:38:26",
   "stats": {
-    "open": 14,
-    "closed": 67,
-    "win_rate": 62.7,
-    "profit_factor": 1.09,
-    "total_pct": 3.8,
-    "avg_pct": 0.09,
+    "open": 13,
+    "closed": 68,
+    "win_rate": 63.2,
+    "profit_factor": 1.1,
+    "total_pct": 4.59,
+    "avg_pct": 0.1,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-19",
-        "trades": 6,
+        "trades": 7,
         "win_rate": 100.0,
-        "return_pct": 12.08,
+        "return_pct": 12.95,
         "week": "2026-W29",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W29",
-        "trades": 39,
-        "win_rate": 66.7,
-        "return_pct": 5.74,
+        "trades": 40,
+        "win_rate": 67.5,
+        "return_pct": 6.55,
         "month": "2026-07"
       },
       {
@@ -143,9 +143,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 67,
-        "win_rate": 62.7,
-        "return_pct": 3.8
+        "trades": 68,
+        "win_rate": 63.2,
+        "return_pct": 4.59
       }
     ]
   },
@@ -510,12 +510,14 @@
       "entry": 0.0187,
       "stop": 0.0184184,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-19T10:59:19",
-      "closed_at": null,
-      "realized_pct": 0.26
+      "closed_at": "2026-07-19T11:38:25",
+      "realized_pct": 0.77,
+      "result_pct": 0.77
     },
     {
       "id": "العرض/الطلب|ADXUSDT|2026-07-06 02:00:00",
@@ -1360,13 +1362,11 @@
       "timeframe": "15m",
       "entry": 0.1179204,
       "stop": 0.1131,
-      "hits": [
-        1
-      ],
+      "hits": [],
       "status": "open",
       "opened_at": "2026-07-19T09:31:14",
       "closed_at": null,
-      "realized_pct": 1.26
+      "realized_pct": 0.0
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",

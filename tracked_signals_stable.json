@@ -849,13 +849,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 10:45:00",
-    "last_bar": "2026-07-19 11:14:59.999000",
+    "last_bar": "2026-07-19 11:29:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.01884,
+    "stopped": true,
+    "hi_seen": 0.01904,
     "lo_seen": 0.01854,
-    "created": "2026-07-19T10:59:19"
+    "created": "2026-07-19T10:59:19",
+    "exit_price": 0.01889304,
+    "close_card_sent": true,
+    "closed_at": "2026-07-19T11:38:25"
   }
 }
