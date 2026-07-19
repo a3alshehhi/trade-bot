@@ -1,41 +1,4 @@
 {
-  "GUSDT": {
-    "symbol": "GUSDT",
-    "tf": "1h",
-    "label": "trendwave · 1h · std",
-    "prob": null,
-    "levels": [
-      0.00329294,
-      0.003195,
-      0.00309706
-    ],
-    "filled": [
-      true,
-      false,
-      false
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 3,
-    "fills": [
-      {
-        "price": 0.00362962962963006,
-        "qty": 27551.02040816,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.00362962962963006,
-    "entry": 0.00362962962963006,
-    "init_stop": 0.00275595,
-    "stop": 0.003891733518519078,
-    "R": 0.0008736796296300599,
-    "tp1": 0.00392706,
-    "tp2": 0.00412294,
-    "qty": 27551.02040816,
-    "qty_open": 27551.02040816,
-    "tp1_done": false,
-    "armed": true,
-    "opened_ts": "2026-07-14T18:07:55"
-  },
   "SOLUSDT": {
     "symbol": "SOLUSDT",
     "tf": "1h",

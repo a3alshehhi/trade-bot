@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T11:24:05",
+  "updated_at": "2026-07-19T11:36:18",
   "stats": {
     "open": 14,
     "closed": 67,
@@ -1330,11 +1330,13 @@
       "timeframe": "15m",
       "entry": 0.2728114,
       "stop": 0.2683,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-19T03:31:09",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.51
     },
     {
       "id": "العرض/الطلب|1000SATSUSDT|2026-07-19 05:00:00",
@@ -1358,11 +1360,13 @@
       "timeframe": "15m",
       "entry": 0.1179204,
       "stop": 0.1131,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-19T09:31:14",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.26
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
