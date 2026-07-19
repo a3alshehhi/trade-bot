@@ -2092,5 +2092,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|ALICEUSDT|2026-07-19 09:15:00": {
+    "symbol": "ALICEUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5096,
+    "entry": 0.1179204,
+    "stop": 0.1131,
+    "init_stop": 0.1131,
+    "cur_stop": 0.1131,
+    "legs": [
+      0.1179204,
+      0.117,
+      0.1160796,
+      0.1147692
+    ],
+    "last_alert_stop": 0.1131,
+    "armed": false,
+    "targets": [
+      0.1209,
+      0.1230216
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-19 09:15:00",
+    "last_bar": "2026-07-19 09:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1179204,
+    "lo_seen": 0.1179204,
+    "created": "2026-07-19T09:31:14",
+    "dca_levels": [
+      0.1179204,
+      0.117,
+      0.1160796,
+      0.1147692
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
