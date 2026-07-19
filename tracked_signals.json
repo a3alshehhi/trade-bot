@@ -1951,5 +1951,49 @@
     "exit_price": 34.51128,
     "close_card_sent": true,
     "closed_at": "2026-07-19T02:16:10"
+  },
+  "العرض/الطلب|BICOUSDT|2026-07-19 03:00:00": {
+    "symbol": "BICOUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5082,
+    "entry": 0.0136708,
+    "stop": 0.0133,
+    "init_stop": 0.0133,
+    "cur_stop": 0.0133,
+    "legs": [
+      0.0136708,
+      0.0136,
+      0.0135292,
+      0.0134284
+    ],
+    "last_alert_stop": 0.0133,
+    "armed": false,
+    "targets": [
+      0.0139,
+      0.0140632
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-19 03:00:00",
+    "last_bar": "2026-07-19 03:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0136708,
+    "lo_seen": 0.0136708,
+    "created": "2026-07-19T03:16:13",
+    "dca_levels": [
+      0.0136708,
+      0.0136,
+      0.0135292,
+      0.0134284
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
