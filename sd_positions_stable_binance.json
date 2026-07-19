@@ -1,38 +1,4 @@
 {
-  "CFXUSDT": {
-    "symbol": "CFXUSDT",
-    "tf": "15m",
-    "label": "SD Stable",
-    "prob": null,
-    "levels": [
-      0.04665
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.046797615755072505,
-        "qty": 2136.8610000000003,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.046797615755072505,
-    "entry": 0.046797615755072505,
-    "init_stop": 0.0458986,
-    "stop": 0.0458986,
-    "R": 0.0008990157550725075,
-    "tp1": 0.04694944,
-    "tp2": 0.04721586,
-    "qty": 2136.8610000000003,
-    "qty_open": 2136.8610000000003,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-19T14:54:56",
-    "msg_id": 5115
-  },
   "ADAUSDT": {
     "symbol": "ADAUSDT",
     "tf": "15m",
