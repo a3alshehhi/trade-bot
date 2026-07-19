@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-19T06:08:34",
+  "updated_at": "2026-07-19T06:20:58",
   "stats": {
-    "open": 15,
-    "closed": 63,
-    "win_rate": 60.3,
-    "profit_factor": 0.94,
-    "total_pct": -5.78,
-    "avg_pct": -0.07,
+    "open": 14,
+    "closed": 64,
+    "win_rate": 60.9,
+    "profit_factor": 1.03,
+    "total_pct": 0.07,
+    "avg_pct": 0.03,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-19",
-        "trades": 2,
+        "trades": 3,
         "win_rate": 100.0,
-        "return_pct": 1.74,
+        "return_pct": 8.05,
         "week": "2026-W29",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W29",
-        "trades": 35,
-        "win_rate": 62.9,
-        "return_pct": -4.02,
+        "trades": 36,
+        "win_rate": 63.9,
+        "return_pct": 1.94,
         "month": "2026-07"
       },
       {
@@ -143,9 +143,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 63,
-        "win_rate": 60.3,
-        "return_pct": -5.78
+        "trades": 64,
+        "win_rate": 60.9,
+        "return_pct": 0.07
       }
     ]
   },
@@ -1162,10 +1162,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-18T08:46:04",
-      "closed_at": null,
-      "realized_pct": 6.21
+      "closed_at": "2026-07-19T06:01:16",
+      "realized_pct": 6.21,
+      "result_pct": 6.21
     },
     {
       "id": "عرض/طلب+دايفرجنس|CKBUSDT|2026-07-18 10:00:00",
@@ -1276,11 +1277,13 @@
       "timeframe": "15m",
       "entry": 0.0136708,
       "stop": 0.0133,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-19T03:16:13",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.84
     },
     {
       "id": "العرض/الطلب|BNTUSDT|2026-07-19 03:15:00",
