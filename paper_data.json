@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-19T03:23:22",
+  "updated_at": "2026-07-19T03:35:57",
   "stats": {
-    "open": 12,
+    "open": 14,
     "closed": 63,
     "win_rate": 60.3,
     "profit_factor": 0.94,
@@ -1265,6 +1265,34 @@
       "closed_at": "2026-07-19T02:16:10",
       "realized_pct": 1.13,
       "result_pct": 1.13
+    },
+    {
+      "id": "العرض/الطلب|BICOUSDT|2026-07-19 03:00:00",
+      "symbol": "BICOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0136708,
+      "stop": 0.0133,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-19T03:16:13",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|BNTUSDT|2026-07-19 03:15:00",
+      "symbol": "BNTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2728114,
+      "stop": 0.2683,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-19T03:31:09",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
