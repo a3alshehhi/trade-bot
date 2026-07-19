@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-19T05:09:32",
+  "updated_at": "2026-07-19T05:22:35",
   "stats": {
-    "open": 14,
+    "open": 15,
     "closed": 63,
     "win_rate": 60.3,
     "profit_factor": 0.94,
@@ -1291,6 +1291,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-19T03:31:09",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|1000SATSUSDT|2026-07-19 05:00:00",
+      "symbol": "1000SATSUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 9.62e-06,
+      "stop": 9.25e-06,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-19T05:16:09",
       "closed_at": null,
       "realized_pct": 0.0
     },
