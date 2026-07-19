@@ -892,11 +892,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 14:45:00",
-    "last_bar": "2026-07-19 14:45:00",
+    "last_bar": "2026-07-19 17:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.04665,
-    "lo_seen": 0.04665,
+    "hi_seen": 0.04674,
+    "lo_seen": 0.04612,
     "created": "2026-07-19T14:52:09"
   },
   "SD Stable|ADAUSDT|2026-07-19 14:45:00": {
@@ -928,11 +928,14 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 14:45:00",
-    "last_bar": "2026-07-19 14:45:00",
+    "last_bar": "2026-07-19 17:14:59.999000",
     "hits": [],
-    "stopped": false,
-    "hi_seen": 0.1659,
-    "lo_seen": 0.1659,
-    "created": "2026-07-19T14:52:09"
+    "stopped": true,
+    "hi_seen": 0.1671,
+    "lo_seen": 0.1639,
+    "created": "2026-07-19T14:52:09",
+    "exit_price": 0.16444,
+    "close_card_sent": true,
+    "closed_at": "2026-07-19T17:24:54"
   }
 }
