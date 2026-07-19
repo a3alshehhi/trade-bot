@@ -766,13 +766,16 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-18 22:45:00",
-    "last_bar": "2026-07-19 05:59:59.999000",
+    "last_bar": "2026-07-19 06:14:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.1189,
     "lo_seen": 0.116,
-    "created": "2026-07-18T22:52:25"
+    "created": "2026-07-18T22:52:25",
+    "exit_price": 0.1172,
+    "close_card_sent": true,
+    "closed_at": "2026-07-19T06:23:07"
   }
 }
