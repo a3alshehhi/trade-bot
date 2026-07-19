@@ -2140,5 +2140,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|AEURUSDT|2026-07-19 13:00:00": {
+    "symbol": "AEURUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5109,
+    "entry": 1.1428664,
+    "stop": 1.1399,
+    "init_stop": 1.1399,
+    "cur_stop": 1.1399,
+    "legs": [
+      1.1428664,
+      1.1423,
+      1.1417336,
+      1.1409272
+    ],
+    "last_alert_stop": 1.1399,
+    "armed": false,
+    "targets": [
+      1.1447,
+      1.1460056
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-19 13:00:00",
+    "last_bar": "2026-07-19 13:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1.1428664,
+    "lo_seen": 1.1428664,
+    "created": "2026-07-19T13:16:02",
+    "dca_levels": [
+      1.1428664,
+      1.1423,
+      1.1417336,
+      1.1409272
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
