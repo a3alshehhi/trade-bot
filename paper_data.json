@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-19T00:35:49",
+  "updated_at": "2026-07-19T00:37:46",
   "stats": {
-    "open": 14,
+    "open": 13,
     "closed": 61,
     "win_rate": 59.0,
     "profit_factor": 0.91,
@@ -1104,13 +1104,11 @@
       "timeframe": "15m",
       "entry": 63681.12574,
       "stop": 62537.56,
-      "hits": [
-        1
-      ],
+      "hits": [],
       "status": "open",
       "opened_at": "2026-07-17T20:16:02",
       "closed_at": null,
-      "realized_pct": 0.95
+      "realized_pct": 0.0
     },
     {
       "id": "العرض/الطلب|APTUSDT|2026-07-18 01:45:00",
@@ -1232,20 +1230,6 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-18T23:16:10",
-      "closed_at": null,
-      "realized_pct": 0.0
-    },
-    {
-      "id": "العرض/الطلب|DASHUSDT|2026-07-19 00:15:00",
-      "symbol": "DASHUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 34.02732,
-      "stop": 33.57,
-      "hits": [],
-      "status": "open",
-      "opened_at": "2026-07-19T00:31:06",
       "closed_at": null,
       "realized_pct": 0.0
     },
