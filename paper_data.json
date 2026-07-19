@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-19T13:23:34",
+  "updated_at": "2026-07-19T13:36:38",
   "stats": {
-    "open": 13,
+    "open": 14,
     "closed": 68,
     "win_rate": 63.2,
     "profit_factor": 1.1,
@@ -1369,6 +1369,20 @@
       "opened_at": "2026-07-19T09:31:14",
       "closed_at": null,
       "realized_pct": 1.26
+    },
+    {
+      "id": "العرض/الطلب|AEURUSDT|2026-07-19 13:00:00",
+      "symbol": "AEURUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.1428664,
+      "stop": 1.1399,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-19T13:16:02",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
