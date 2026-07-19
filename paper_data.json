@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-19T17:24:55",
+  "updated_at": "2026-07-19T17:39:12",
   "stats": {
-    "open": 17,
-    "closed": 69,
-    "win_rate": 62.3,
-    "profit_factor": 1.09,
-    "total_pct": 3.67,
-    "avg_pct": 0.08,
+    "open": 16,
+    "closed": 71,
+    "win_rate": 62.0,
+    "profit_factor": 1.03,
+    "total_pct": 0.33,
+    "avg_pct": 0.03,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-19",
-        "trades": 8,
-        "win_rate": 87.5,
-        "return_pct": 11.95,
+        "trades": 10,
+        "win_rate": 80.0,
+        "return_pct": 8.34,
         "week": "2026-W29",
         "month": "2026-07"
       },
@@ -127,9 +127,9 @@
     "weekly": [
       {
         "key": "2026-W29",
-        "trades": 41,
-        "win_rate": 65.9,
-        "return_pct": 5.61,
+        "trades": 43,
+        "win_rate": 65.1,
+        "return_pct": 2.2,
         "month": "2026-07"
       },
       {
@@ -143,9 +143,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 69,
-        "win_rate": 62.3,
-        "return_pct": 3.67
+        "trades": 71,
+        "win_rate": 62.0,
+        "return_pct": 0.33
       }
     ]
   },
@@ -1197,10 +1197,11 @@
       "entry": 0.613866,
       "stop": 0.591,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-18T02:01:18",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-19T17:16:05",
+      "realized_pct": -3.72,
+      "result_pct": -3.72
     },
     {
       "id": "عرض/طلب+دايفرجنس|ETHUSDT|2026-07-18 08:30:00",
@@ -1364,10 +1365,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-19T03:31:09",
-      "closed_at": null,
-      "realized_pct": 0.51
+      "closed_at": "2026-07-19T17:16:08",
+      "realized_pct": 0.51,
+      "result_pct": 0.51
     },
     {
       "id": "العرض/الطلب|1000SATSUSDT|2026-07-19 05:00:00",
@@ -1442,6 +1444,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-19T16:46:33",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|DIAUSDT|2026-07-19 17:00:00",
+      "symbol": "DIAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.102499,
+      "stop": 0.0991,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-19T17:16:02",
       "closed_at": null,
       "realized_pct": 0.0
     },
