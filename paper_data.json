@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T11:21:59",
+  "updated_at": "2026-07-19T11:24:05",
   "stats": {
     "open": 14,
     "closed": 67,
@@ -509,11 +509,13 @@
       "timeframe": "15m",
       "entry": 0.0187,
       "stop": 0.0184184,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-19T10:59:19",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.26
     },
     {
       "id": "العرض/الطلب|ADXUSDT|2026-07-06 02:00:00",
@@ -1328,13 +1330,11 @@
       "timeframe": "15m",
       "entry": 0.2728114,
       "stop": 0.2683,
-      "hits": [
-        1
-      ],
+      "hits": [],
       "status": "open",
       "opened_at": "2026-07-19T03:31:09",
       "closed_at": null,
-      "realized_pct": 0.51
+      "realized_pct": 0.0
     },
     {
       "id": "العرض/الطلب|1000SATSUSDT|2026-07-19 05:00:00",
