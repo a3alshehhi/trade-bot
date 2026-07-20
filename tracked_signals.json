@@ -2715,5 +2715,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|BIOUSDT|2026-07-20 18:45:00": {
+    "symbol": "BIOUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5241,
+    "entry": 0.02569542,
+    "stop": 0.02496,
+    "init_stop": 0.02496,
+    "cur_stop": 0.02496,
+    "legs": [
+      0.02569542,
+      0.025555,
+      0.02541458,
+      0.02521466
+    ],
+    "last_alert_stop": 0.02496,
+    "armed": false,
+    "targets": [
+      0.02615,
+      0.02647368
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 18:45:00",
+    "last_bar": "2026-07-20 18:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.02569542,
+    "lo_seen": 0.02569542,
+    "created": "2026-07-20T19:01:12",
+    "dca_levels": [
+      0.02569542,
+      0.025555,
+      0.02541458,
+      0.02521466
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
