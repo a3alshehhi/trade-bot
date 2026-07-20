@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-20T16:14:41",
+  "updated_at": "2026-07-20T16:21:32",
   "stats": {
-    "open": 20,
+    "open": 22,
     "closed": 88,
     "win_rate": 65.9,
     "profit_factor": 1.08,
@@ -624,9 +624,25 @@
       "timeframe": "1h",
       "entry": 0.2135,
       "stop": 0.204862,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-20T09:37:58",
+      "closed_at": null,
+      "realized_pct": 1.27
+    },
+    {
+      "id": "SD Stable|CGPTUSDT|2026-07-20 16:00:00",
+      "symbol": "CGPTUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.01957,
+      "stop": 0.0188192,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-20T16:01:50",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -757,6 +773,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-20T16:08:25",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "زخم سيولة الحيتان|ORDIUSDT|2026-07-20 16:00:00",
+      "symbol": "ORDIUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 3.624,
+      "stop": 3.48185,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-20T16:18:04",
       "closed_at": null,
       "realized_pct": 0.0
     },
