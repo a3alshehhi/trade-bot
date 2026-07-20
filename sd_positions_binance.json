@@ -338,40 +338,6 @@
     "opened_ts": "2026-07-20T11:50:17",
     "msg_id": 5177
   },
-  "ARBUSDT": {
-    "symbol": "ARBUSDT",
-    "tf": "15m",
-    "label": "زخم سيولة الحيتان",
-    "prob": null,
-    "levels": [
-      0.088
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.08829505168924769,
-        "qty": 1132.5663,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.08829505168924769,
-    "entry": 0.08829505168924769,
-    "init_stop": 0.08577357,
-    "stop": 0.08829505168924769,
-    "R": 0.0025214816892476927,
-    "tp1": 0.0888,
-    "tp2": 0.0889,
-    "qty": 1132.5663,
-    "qty_open": 566.3662999999999,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-20T11:51:33",
-    "msg_id": 5178
-  },
   "ANKRUSDT": {
     "symbol": "ANKRUSDT",
     "tf": "15m",
