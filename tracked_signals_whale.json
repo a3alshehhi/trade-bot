@@ -200,11 +200,11 @@
     "entry": 3.585,
     "stop": 3.48330714,
     "init_stop": 3.48330714,
-    "cur_stop": 3.48330714,
+    "cur_stop": 3.585,
     "legs": [
       3.585
     ],
-    "last_alert_stop": 3.48330714,
+    "last_alert_stop": 3.585,
     "armed": false,
     "targets": [
       3.642,
@@ -218,10 +218,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 15:00:00",
-    "last_bar": "2026-07-20 16:44:59.999000",
-    "hits": [],
+    "last_bar": "2026-07-20 17:14:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 3.637,
+    "hi_seen": 3.645,
     "lo_seen": 3.55,
     "created": "2026-07-20T15:21:47"
   },
@@ -251,7 +253,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 15:30:00",
-    "last_bar": "2026-07-20 16:44:59.999000",
+    "last_bar": "2026-07-20 17:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 65666.8,
@@ -284,10 +286,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 15:45:00",
-    "last_bar": "2026-07-20 16:44:59.999000",
+    "last_bar": "2026-07-20 17:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 1.115,
+    "hi_seen": 1.1157,
     "lo_seen": 1.1069,
     "created": "2026-07-20T16:08:25"
   },
@@ -299,7 +301,7 @@
     "entry": 3.624,
     "stop": 3.48185,
     "init_stop": 3.48185,
-    "cur_stop": 3.48185,
+    "cur_stop": 3.624,
     "legs": [
       3.624
     ],
@@ -317,12 +319,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 16:00:00",
-    "last_bar": "2026-07-20 16:44:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 3.637,
+    "last_bar": "2026-07-20 17:14:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": true,
+    "hi_seen": 3.645,
     "lo_seen": 3.579,
-    "created": "2026-07-20T16:24:58"
+    "created": "2026-07-20T16:24:58",
+    "exit_price": 3.624,
+    "close_card_sent": true,
+    "closed_at": "2026-07-20T17:18:16"
   },
   "زخم سيولة الحيتان|DGBUSDT|2026-07-20 16:30:00": {
     "symbol": "DGBUSDT",
