@@ -600,6 +600,13 @@ def _manage_one(sym, positions):
     entry = pos.get("avg_entry", pos.get("entry"))   # متوسط دخول DCA
     R = pos["R"]
 
+    # مرجع تسليح/وقف موحّد عبر كل المنصّات: دخول الإشارة الأصلي (أعلى مستوى فيبو)
+    # ووقفها الأصلي. الـ levels و init_stop من الإشارة نفسها فهي متطابقة على بايبت وبايننس،
+    # بعكس avg_entry الذي يختلف باختلاف ملء DCA لكل منصّة. يمنع انقسام النتيجة على الصفقات الحديّة. (fix 2026-07-20)
+    sig_entry = (pos.get("levels") or [entry])[0] or entry
+    sig_stop = pos.get("init_stop", pos["stop"])
+    sig_R = max(sig_entry - sig_stop, 1e-12)
+
     # (1) الوقف أولاً — حماية رأس المال
     if price <= pos["stop"]:
         sold = _sell(sym, pos["qty_open"], price)
@@ -631,7 +638,7 @@ def _manage_one(sym, positions):
             pos["qty_open"] -= sold
             pos["tp1_done"] = True
             pos["armed"] = True
-            lock = entry + LOCK_R * R              # قفل ربح صغير (0.3R) بدل التعادل الصفري
+            lock = sig_entry + LOCK_R * sig_R      # قفل ربح صغير (0.3R) — مرجع الإشارة الموحّد بدل التعادل الصفري
             if pos["tp1"] <= lock:                 # هدف قريب جداً؟ ارجع لتعادل حقيقي بدل تعادل صفري خاسر
                 lock = entry
             # الحدّ الأدنى الصارم: الوقف لا ينزل تحت سعر الدخول أبداً (بلا خسارة USDT)
@@ -662,18 +669,18 @@ def _manage_one(sym, positions):
         rh = _recent_high(sym, pos.get("tf", ""))
         if rh is not None and rh > arm_px:
             arm_px = rh
-    if not pos.get("armed") and arm_px >= entry + R:
+    if not pos.get("armed") and arm_px >= sig_entry + sig_R:   # +1R على مرجع الإشارة الموحّد
         pos["armed"] = True
-        lock = entry + LOCK_R * R              # بلوغ +1R، فقفل +0.3R آمن تحته
+        lock = sig_entry + LOCK_R * sig_R      # بلوغ +1R، فقفل +0.3R آمن تحته
         lock = max(lock, _breakeven_price(entry))   # لا ينزل الوقف أبداً عن تعادل حقيقي بعد العمولتين
         if lock > pos["stop"]:
             pos["stop"] = lock
         changed = True
     if pos.get("armed"):
-        # الوقف المتحرّك يتابع (price - R) لكن أرضيته الدنيا = سعر الدخول (بلا خسارة USDT)
+        # الوقف المتحرّك يتابع (price - sig_R) لكن أرضيته الدنيا = سعر الدخول (بلا خسارة USDT)
         # لا نستخدم _breakeven_price هنا لأن الهدف1 جنّى الربح فعلاً، والنص الثاني يجب محميّاً من الخسارة
         floor_price = entry  # الحدّ الأدنى الصارم: لا نزول تحت الدخول
-        trail = max(price - R, floor_price)
+        trail = max(price - sig_R, floor_price)
         if trail > pos["stop"]:
             pos["stop"] = trail
             changed = True
