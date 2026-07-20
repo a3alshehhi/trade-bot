@@ -153,5 +153,40 @@
     "exit_price": 0.0889,
     "close_card_sent": true,
     "closed_at": "2026-07-20T13:33:12"
+  },
+  "زخم سيولة الحيتان|SUIUSDT|2026-07-20 13:30:00": {
+    "symbol": "SUIUSDT",
+    "label": "زخم سيولة الحيتان",
+    "timeframe": "15m",
+    "message_id": 5197,
+    "entry": 0.7575,
+    "stop": 0.74343071,
+    "init_stop": 0.74343071,
+    "cur_stop": 0.7575,
+    "legs": [
+      0.7575
+    ],
+    "last_alert_stop": 0.7575,
+    "armed": false,
+    "targets": [
+      0.7588,
+      0.77416929
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 13:30:00",
+    "last_bar": "2026-07-20 13:44:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": false,
+    "hi_seen": 0.7603,
+    "lo_seen": 0.7528,
+    "created": "2026-07-20T13:48:02"
   }
 }
