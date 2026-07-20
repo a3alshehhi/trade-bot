@@ -202,5 +202,39 @@
     "armed": false,
     "opened_ts": "2026-07-20T19:10:43",
     "msg_id": 5244
+  },
+  "ADXUSDT": {
+    "symbol": "ADXUSDT",
+    "tf": "1h",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.0579
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.058675322450234525,
+        "qty": 1704.294,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.058675322450234525,
+    "entry": 0.058675322450234525,
+    "init_stop": 0.054779,
+    "stop": 0.054779,
+    "R": 0.003896322450234524,
+    "tp1": 0.0595792,
+    "tp2": 0.0608248,
+    "qty": 1704.294,
+    "qty_open": 1704.294,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-20T19:41:13",
+    "msg_id": 5248
   }
 }

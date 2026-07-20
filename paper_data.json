@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-20T19:37:36",
+  "updated_at": "2026-07-20T19:41:19",
   "stats": {
-    "open": 30,
+    "open": 31,
     "closed": 91,
     "win_rate": 67.0,
     "profit_factor": 1.16,
@@ -699,6 +699,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-20T19:08:07",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "SD Stable|ADXUSDT|2026-07-20 19:00:00",
+      "symbol": "ADXUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0579,
+      "stop": 0.054779,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-20T19:39:13",
       "closed_at": null,
       "realized_pct": 0.0
     },

@@ -1267,5 +1267,38 @@
     "hi_seen": 35.381,
     "lo_seen": 35.381,
     "created": "2026-07-20T19:08:07"
+  },
+  "SD Stable|ADXUSDT|2026-07-20 19:00:00": {
+    "symbol": "ADXUSDT",
+    "label": "SD Stable",
+    "timeframe": "1h",
+    "message_id": 5247,
+    "entry": 0.0579,
+    "stop": 0.054779,
+    "init_stop": 0.054779,
+    "cur_stop": 0.054779,
+    "legs": [
+      0.0579
+    ],
+    "last_alert_stop": 0.054779,
+    "armed": false,
+    "targets": [
+      0.0595792,
+      0.0608248
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 19:00:00",
+    "last_bar": "2026-07-20 19:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0579,
+    "lo_seen": 0.0579,
+    "created": "2026-07-20T19:39:13"
   }
 }
