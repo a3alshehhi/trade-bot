@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T19:07:07",
+  "updated_at": "2026-07-20T19:10:47",
   "stats": {
     "open": 28,
     "closed": 91,
@@ -685,6 +685,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-20T16:58:24",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "SD Stable|DEXEUSDT|2026-07-20 19:00:00",
+      "symbol": "DEXEUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 35.381,
+      "stop": 34.10991,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-20T19:08:07",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -1888,20 +1902,6 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-20T18:32:14",
-      "closed_at": null,
-      "realized_pct": 0.0
-    },
-    {
-      "id": "العرض/الطلب|BIOUSDT|2026-07-20 18:45:00",
-      "symbol": "BIOUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.02569542,
-      "stop": 0.02496,
-      "hits": [],
-      "status": "open",
-      "opened_at": "2026-07-20T19:01:12",
       "closed_at": null,
       "realized_pct": 0.0
     },

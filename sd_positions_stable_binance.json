@@ -168,5 +168,39 @@
     "armed": false,
     "opened_ts": "2026-07-20T17:02:08",
     "msg_id": 5236
+  },
+  "DEXEUSDT": {
+    "symbol": "DEXEUSDT",
+    "tf": "15m",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      35.381
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 35.75003575003575,
+        "qty": 2.7972,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 35.75003575003575,
+    "entry": 35.75003575003575,
+    "init_stop": 34.10991,
+    "stop": 34.10991,
+    "R": 1.6401257500357502,
+    "tp1": 36.961224,
+    "tp2": 37.676406,
+    "qty": 2.7972,
+    "qty_open": 2.7972,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-20T19:10:43",
+    "msg_id": 5244
   }
 }

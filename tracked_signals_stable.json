@@ -1231,5 +1231,41 @@
     "hi_seen": 9.57e-06,
     "lo_seen": 9.57e-06,
     "created": "2026-07-20T16:58:24"
+  },
+  "SD Stable|DEXEUSDT|2026-07-20 19:00:00": {
+    "symbol": "DEXEUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 5242,
+    "entry": 35.381,
+    "stop": 34.10991,
+    "init_stop": 34.10991,
+    "cur_stop": 34.10991,
+    "legs": [
+      35.381,
+      35.3655,
+      35.121594,
+      34.774338
+    ],
+    "last_alert_stop": 34.10991,
+    "armed": false,
+    "targets": [
+      36.961224,
+      37.676406
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 19:00:00",
+    "last_bar": "2026-07-20 19:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 35.381,
+    "lo_seen": 35.381,
+    "created": "2026-07-20T19:08:07"
   }
 }
