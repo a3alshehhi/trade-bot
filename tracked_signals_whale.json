@@ -218,14 +218,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 15:00:00",
-    "last_bar": "2026-07-20 17:14:59.999000",
+    "last_bar": "2026-07-20 22:14:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 3.645,
     "lo_seen": 3.55,
-    "created": "2026-07-20T15:21:47"
+    "created": "2026-07-20T15:21:47",
+    "exit_price": 3.585,
+    "close_card_sent": true,
+    "closed_at": "2026-07-20T22:18:13"
   },
   "زخم سيولة الحيتان|BTCUSDT|2026-07-20 15:30:00": {
     "symbol": "BTCUSDT",
@@ -253,10 +256,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 15:30:00",
-    "last_bar": "2026-07-20 17:14:59.999000",
+    "last_bar": "2026-07-20 22:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 65666.8,
+    "hi_seen": 65799.0,
     "lo_seen": 64802.41,
     "created": "2026-07-20T15:48:23"
   },
@@ -286,10 +289,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 15:45:00",
-    "last_bar": "2026-07-20 17:14:59.999000",
+    "last_bar": "2026-07-20 22:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 1.1157,
+    "hi_seen": 1.1207,
     "lo_seen": 1.1069,
     "created": "2026-07-20T16:08:25"
   },

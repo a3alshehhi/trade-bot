@@ -2852,5 +2852,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|DEXEUSDT|2026-07-20 22:00:00": {
+    "symbol": "DEXEUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5255,
+    "entry": 34.76126,
+    "stop": 31.319,
+    "init_stop": 31.319,
+    "cur_stop": 31.319,
+    "legs": [
+      34.76126,
+      34.104,
+      33.44674,
+      32.51098
+    ],
+    "last_alert_stop": 31.319,
+    "armed": false,
+    "targets": [
+      36.889,
+      38.40404
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 22:00:00",
+    "last_bar": "2026-07-20 22:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 34.76126,
+    "lo_seen": 34.76126,
+    "created": "2026-07-20T22:16:04",
+    "dca_levels": [
+      34.76126,
+      34.104,
+      33.44674,
+      32.51098
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
