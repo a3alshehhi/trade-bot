@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-20T16:37:49",
+  "updated_at": "2026-07-20T16:41:21",
   "stats": {
-    "open": 22,
+    "open": 23,
     "closed": 88,
     "win_rate": 65.9,
     "profit_factor": 1.08,
@@ -643,6 +643,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-20T16:01:50",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "SD Stable|DASHUSDT|2026-07-20 16:00:00",
+      "symbol": "DASHUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 34.38,
+      "stop": 33.4777,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-20T16:39:30",
       "closed_at": null,
       "realized_pct": 0.0
     },
