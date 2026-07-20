@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-20T12:08:07",
+  "updated_at": "2026-07-20T12:10:16",
   "stats": {
-    "open": 15,
+    "open": 14,
     "closed": 82,
     "win_rate": 63.4,
     "profit_factor": 1.0,
@@ -656,13 +656,11 @@
       "timeframe": "15m",
       "entry": 8.48,
       "stop": 8.29367857,
-      "hits": [
-        1
-      ],
+      "hits": [],
       "status": "open",
       "opened_at": "2026-07-20T11:48:16",
       "closed_at": null,
-      "realized_pct": 0.09
+      "realized_pct": 0.0
     },
     {
       "id": "زخم سيولة الحيتان|ARBUSDT|2026-07-20 11:30:00",
@@ -675,20 +673,6 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-20T11:48:16",
-      "closed_at": null,
-      "realized_pct": 0.0
-    },
-    {
-      "id": "زخم سيولة الحيتان|ARBUSDT|2026-07-20 11:45:00",
-      "symbol": "ARBUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0884,
-      "stop": 0.08597143,
-      "hits": [],
-      "status": "open",
-      "opened_at": "2026-07-20T12:03:07",
       "closed_at": null,
       "realized_pct": 0.0
     },
