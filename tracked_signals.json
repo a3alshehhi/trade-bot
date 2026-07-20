@@ -1,43 +1,4 @@
 {
-  "العرض/الطلب|ADXUSDT|2026-07-06 02:00:00": {
-    "symbol": "ADXUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "1h",
-    "message_id": 4606,
-    "entry": 0.0549,
-    "stop": 0.05201,
-    "init_stop": 0.05201,
-    "cur_stop": 0.0549,
-    "legs": [
-      0.0549
-    ],
-    "last_alert_stop": 0.0549,
-    "armed": false,
-    "targets": [
-      0.0568792,
-      0.0581248
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-06 02:00:00",
-    "last_bar": "2026-07-06 22:59:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.0584,
-    "lo_seen": 0.0545,
-    "created": "2026-07-06T02:18:20",
-    "exit_price": 0.0581248,
-    "close_card_sent": true,
-    "closed_at": "2026-07-06T23:03:46"
-  },
   "العرض/الطلب|CFXUSDT|2026-07-06 15:45:00": {
     "symbol": "CFXUSDT",
     "label": "العرض/الطلب",
@@ -2322,6 +2283,50 @@
       0.10185,
       0.101201,
       0.100277
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|AVAXUSDT|2026-07-20 04:15:00": {
+    "symbol": "AVAXUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5147,
+    "entry": 6.551444,
+    "stop": 6.392,
+    "init_stop": 6.392,
+    "cur_stop": 6.392,
+    "legs": [
+      6.551444,
+      6.521,
+      6.490556,
+      6.447212
+    ],
+    "last_alert_stop": 6.392,
+    "armed": false,
+    "targets": [
+      6.65,
+      6.720176
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 04:15:00",
+    "last_bar": "2026-07-20 04:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 6.551444,
+    "lo_seen": 6.551444,
+    "created": "2026-07-20T04:31:17",
+    "dca_levels": [
+      6.551444,
+      6.521,
+      6.490556,
+      6.447212
     ],
     "wait_entry": true,
     "max_age_h": 48.0
