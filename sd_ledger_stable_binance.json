@@ -531,5 +531,31 @@
     "r": 0.26,
     "reason": "هدف1 (50%)",
     "closed_ts": "2026-07-20T15:17:25"
+  },
+  {
+    "symbol": "CRVUSDT",
+    "tf": "1h",
+    "label": "SD Stable",
+    "entry": 0.21624563,
+    "exit": 0.2162,
+    "qty": 231.2,
+    "pnl_usdt": -0.1105,
+    "pnl_pct": -0.021,
+    "r": -0.004,
+    "reason": "تعادل/تتبّع",
+    "closed_ts": "2026-07-20T22:23:51"
+  },
+  {
+    "symbol": "ALTUSDT",
+    "tf": "15m",
+    "label": "SD Stable",
+    "entry": 0.00638679,
+    "exit": 0.00631,
+    "qty": 15657.0,
+    "pnl_usdt": -1.401,
+    "pnl_pct": -1.202,
+    "r": -1.1,
+    "reason": "وقف خسارة",
+    "closed_ts": "2026-07-20T22:24:33"
   }
 ]
