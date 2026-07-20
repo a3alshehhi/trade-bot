@@ -1822,7 +1822,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-18 23:00:00",
-    "last_bar": "2026-07-20 15:44:59.999000",
+    "last_bar": "2026-07-20 16:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.06056,
@@ -2015,10 +2015,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 05:00:00",
-    "last_bar": "2026-07-20 15:44:59.999000",
+    "last_bar": "2026-07-20 16:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 9.66e-06,
+    "hi_seen": 9.7e-06,
     "lo_seen": 9.37e-06,
     "created": "2026-07-19T05:16:09",
     "dca_levels": [
@@ -2108,7 +2108,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 13:00:00",
-    "last_bar": "2026-07-20 15:44:59.999000",
+    "last_bar": "2026-07-20 16:44:59.999000",
     "hits": [
       1
     ],
@@ -2192,10 +2192,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 16:30:00",
-    "last_bar": "2026-07-20 15:44:59.999000",
+    "last_bar": "2026-07-20 16:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.01971,
+    "hi_seen": 0.01983,
     "lo_seen": 0.0189,
     "created": "2026-07-19T16:46:33",
     "dca_levels": [
@@ -2283,7 +2283,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 04:15:00",
-    "last_bar": "2026-07-20 15:44:59.999000",
+    "last_bar": "2026-07-20 16:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 6.635,
@@ -2327,7 +2327,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 11:00:00",
-    "last_bar": "2026-07-20 15:44:59.999000",
+    "last_bar": "2026-07-20 16:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0239704,
@@ -2371,12 +2371,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 12:15:00",
-    "last_bar": "2026-07-20 15:44:59.999000",
+    "last_bar": "2026-07-20 16:44:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.22,
+    "hi_seen": 0.2202,
     "lo_seen": 0.213116,
     "created": "2026-07-20T12:37:13",
     "dca_levels": [
@@ -2417,7 +2417,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 12:30:00",
-    "last_bar": "2026-07-20 15:44:59.999000",
+    "last_bar": "2026-07-20 16:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0036972,
@@ -2440,14 +2440,14 @@
     "entry": 0.00862238,
     "stop": 0.00806,
     "init_stop": 0.00806,
-    "cur_stop": 0.00806,
+    "cur_stop": 0.00862238,
     "legs": [
       0.00862238,
       0.008515,
       0.00840762,
       0.00825474
     ],
-    "last_alert_stop": 0.00806,
+    "last_alert_stop": 0.00862238,
     "armed": false,
     "targets": [
       0.00897,
@@ -2461,10 +2461,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 12:45:00",
-    "last_bar": "2026-07-20 15:44:59.999000",
-    "hits": [],
+    "last_bar": "2026-07-20 16:44:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.00876,
+    "hi_seen": 0.00908,
     "lo_seen": 0.00845,
     "created": "2026-07-20T13:01:24",
     "dca_levels": [
@@ -2605,10 +2607,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 15:45:00",
-    "last_bar": "2026-07-20 15:45:00",
+    "last_bar": "2026-07-20 16:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.01523464,
+    "hi_seen": 0.01566,
     "lo_seen": 0.01523464,
     "created": "2026-07-20T16:06:05",
     "dca_levels": [
@@ -2652,5 +2654,38 @@
     "hi_seen": 9.57e-06,
     "lo_seen": 9.57e-06,
     "created": "2026-07-20T16:10:30"
+  },
+  "عرض/طلب+دايفرجنس|DASHUSDT|2026-07-20 16:00:00": {
+    "symbol": "DASHUSDT",
+    "label": "عرض/طلب+دايفرجنس",
+    "timeframe": "1h",
+    "message_id": 5230,
+    "entry": 34.38,
+    "stop": 33.4777,
+    "init_stop": 33.4777,
+    "cur_stop": 33.4777,
+    "legs": [
+      34.38
+    ],
+    "last_alert_stop": 33.4777,
+    "armed": false,
+    "targets": [
+      34.85656,
+      35.19564
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 16:00:00",
+    "last_bar": "2026-07-20 16:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 34.38,
+    "lo_seen": 34.38,
+    "created": "2026-07-20T16:49:45"
   }
 }

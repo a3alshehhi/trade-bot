@@ -218,11 +218,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 15:00:00",
-    "last_bar": "2026-07-20 15:00:00",
+    "last_bar": "2026-07-20 16:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 3.585,
-    "lo_seen": 3.585,
+    "hi_seen": 3.637,
+    "lo_seen": 3.55,
     "created": "2026-07-20T15:21:47"
   },
   "زخم سيولة الحيتان|BTCUSDT|2026-07-20 15:30:00": {
@@ -251,11 +251,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 15:30:00",
-    "last_bar": "2026-07-20 15:30:00",
+    "last_bar": "2026-07-20 16:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 65240.81,
-    "lo_seen": 65240.81,
+    "hi_seen": 65666.8,
+    "lo_seen": 64802.41,
     "created": "2026-07-20T15:48:23"
   },
   "زخم سيولة الحيتان|XRPUSDT|2026-07-20 15:45:00": {
@@ -284,11 +284,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 15:45:00",
-    "last_bar": "2026-07-20 15:45:00",
+    "last_bar": "2026-07-20 16:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 1.1126,
-    "lo_seen": 1.1126,
+    "hi_seen": 1.115,
+    "lo_seen": 1.1069,
     "created": "2026-07-20T16:08:25"
   },
   "زخم سيولة الحيتان|ORDIUSDT|2026-07-20 16:00:00": {
@@ -317,11 +317,50 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 16:00:00",
-    "last_bar": "2026-07-20 16:00:00",
+    "last_bar": "2026-07-20 16:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 3.624,
-    "lo_seen": 3.624,
+    "hi_seen": 3.637,
+    "lo_seen": 3.579,
     "created": "2026-07-20T16:24:58"
+  },
+  "زخم سيولة الحيتان|DGBUSDT|2026-07-20 16:30:00": {
+    "symbol": "DGBUSDT",
+    "label": "زخم سيولة الحيتان",
+    "timeframe": "15m",
+    "message_id": 5229,
+    "entry": 0.00375,
+    "stop": 0.00352371,
+    "init_stop": 0.00352371,
+    "cur_stop": 0.00375,
+    "legs": [
+      0.00375
+    ],
+    "last_alert_stop": 0.00352371,
+    "armed": false,
+    "targets": [
+      0.00377,
+      0.0037724
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 16:30:00",
+    "last_bar": "2026-07-20 16:44:59.999000",
+    "hits": [
+      1,
+      2
+    ],
+    "stopped": true,
+    "hi_seen": 0.00378,
+    "lo_seen": 0.00364,
+    "created": "2026-07-20T16:48:01",
+    "exit_price": 0.0037724,
+    "close_card_sent": true,
+    "closed_at": "2026-07-20T16:48:05"
   }
 }
