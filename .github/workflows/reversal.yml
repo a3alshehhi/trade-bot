@@ -6,7 +6,8 @@ name: SD Bot — العرض/الطلب (15m + 1h + 5m كل ربع ساعة)
 #     على 15m فقط: تشبّع RSI21≤20 → اختراق الفيواب الأسبوعي + RSI21≥80 → تحوّل MACD4C
 #     للأحمر → دخول DCA بانتظار مستويات فيبو التصحيح · وقف قاع الموجة · أهداف 1.272/1.618.
 #     (أُلغيت الشروط القديمة كلها: مناطق العرض/الطلب، CHoCH، ML، بوابة الحجم، مسح 1h.)
-#   • بوت تجريبي 1: «عرض/طلب+تشبّع»   = SMA50 + تشبّع RSI21≤20 (بلا ML).
+#   • بوت تجريبي 1: «زخم سيولة الحيتان» = Whale Liquidity Momentum (15m · إشارات فقط · بلا ML/تنفيذ)
+#     نافذة ذهبية: كنس سيولة → قاعدة هادئة → اختراق مصغّر بحجم معتدل فوق الفيواب · رفض توزيع/مطاردة.
 #   • بوت تجريبي 2: «عرض/طلب+دايفرجنس» = SMA50 + دايفرجنس صعودي MACD (بلا ML) — 15m + 1h + 5m.
 # كل بوت باسم/وسم مختلف، وحالة منفصلة، ودفتر تنفيذ منفصل (Bybit Testnet + Binance Demo).
 # التنفيذ testnet/demo فقط — لا mainnet (محميّ داخل sd_autotrade). البوتان التجريبيان
@@ -73,14 +74,15 @@ jobs:
           # ══ البوتان التجريبيان (غير حاسمَين: فشلهما لا يوقف الرئيسي) ══
           set +e
 
-          # ── بوت 1: «عرض/طلب+تشبّع» — SMA50 + تشبّع RSI21≤20 · بلا ML · بلا MACD4C ──
-          export SD_LABEL="عرض/طلب+تشبّع" SD_TREND_MA=sma50 SD_REQUIRE_OS21=1 SD_RSI21_OS=20 \
-                 SD_REQUIRE_MACD4C=0 SD_ML_THRESHOLD=0
-          SD_ENTRY_TF=15m SD_HTF=1h SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_os21_15m.json python sd_bot.py
-          SD_ENTRY_TF=1h  SD_HTF=4h  SD_MODEL=sd_model_1h.joblib  SD_STATE=sd_state_os21_1h.json  python sd_bot.py
-          SD_LABELS="عرض/طلب+تشبّع" SD_POS=sd_pos_os21.json SD_LEDGER=sd_ledger_os21.json \
-                 SD_EXECUTED=sd_exec_os21.json SD_LAST_ENTRY=sd_last_os21.json python sd_autotrade.py run
-          unset SD_LABEL SD_TREND_MA SD_REQUIRE_OS21 SD_RSI21_OS SD_REQUIRE_MACD4C SD_ML_THRESHOLD
+          # ── بوت 1: «زخم سيولة الحيتان» — Whale Liquidity Momentum (15m · إشارات فقط) ──
+          # مبني على whale_liquidity_momentum_strategy.md (2026-07-20):
+          #   نافذة ذهبية = كنس سيولة → قاعدة هادئة → اختراق مصغّر بحجم معتدل (×3-9 القاعدة)
+          #   فوق الفيواب الأسبوعي/الشهري + OBV صاعد + MACD4C أخضر. رفض قمة التوزيع (Pattern B)
+          #   والمطاردة (حجم >×15 أو MFI4س>85) والسوق الرقيق. بلا ML وبلا تنفيذ آلي (إشارات فقط).
+          #   فريم القرار 15m دائماً؛ سياق MFI من 4h. تصنيف الحجم على «قاعدة هادئة» (لا نافذة تشمل الانفجار).
+          export SD_LABEL="زخم سيولة الحيتان"
+          SD_STRATEGY=whale SD_ENTRY_TF=15m SD_STATE=sd_state_whale_15m.json python sd_bot.py scan
+          unset SD_LABEL
 
           # ── بوت 2: «عرض/طلب+دايفرجنس» — SMA50 + دايفرجنس صعودي MACD يتكوّن تحت SMA50 · بلا ML · بلا MACD4C ──
           # SD_MAX_CHASE_R=0.3: حارس الملاحقة — تخطّي الدخول إن تجاوز السعر الدخول بأكثر من 0.3R
@@ -136,9 +138,7 @@ jobs:
                  tracked_signals.json pending_signals.json tg_offset.json paper_data.json \
                  sd_positions.json sd_ledger.json sd_executed.json sd_last_entry.json \
                  sd_positions_binance.json sd_ledger_binance.json sd_executed_binance.json sd_last_entry_binance.json \
-                 sd_state_os21_15m.json sd_state_os21_1h.json \
-                 sd_pos_os21.json sd_ledger_os21.json sd_exec_os21.json sd_last_os21.json \
-                 sd_pos_os21_binance.json sd_ledger_os21_binance.json sd_exec_os21_binance.json sd_last_os21_binance.json \
+                 sd_state_whale_15m.json \
                  sd_state_div_15m.json sd_state_div_1h.json sd_state_div_5m.json \
                  sd_pos_div.json sd_ledger_div.json sd_exec_div.json sd_last_div.json \
                  sd_pos_div_binance.json sd_ledger_div_binance.json sd_exec_div_binance.json sd_last_div_binance.json \
