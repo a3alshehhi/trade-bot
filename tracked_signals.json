@@ -1,46 +1,4 @@
 {
-  "العرض/الطلب|CFXUSDT|2026-07-06 15:45:00": {
-    "symbol": "CFXUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 4616,
-    "entry": 0.04494,
-    "stop": 0.0436733,
-    "init_stop": 0.0436733,
-    "cur_stop": 0.04494,
-    "legs": [
-      0.04494,
-      0.04463756,
-      0.04447,
-      0.04430244,
-      0.04406388
-    ],
-    "last_alert_stop": 0.04494,
-    "armed": false,
-    "targets": [
-      0.04556624,
-      0.04605756
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-06 15:45:00",
-    "last_bar": "2026-07-06 20:14:59.999000",
-    "hits": [
-      1
-    ],
-    "stopped": true,
-    "hi_seen": 0.04572,
-    "lo_seen": 0.04488,
-    "created": "2026-07-06T15:49:07",
-    "exit_price": 0.04494,
-    "close_card_sent": true,
-    "closed_at": "2026-07-06T20:22:39"
-  },
   "العرض/الطلب|BNTUSDT|2026-07-06 16:00:00": {
     "symbol": "BNTUSDT",
     "label": "العرض/الطلب",
@@ -2617,5 +2575,82 @@
     "exit_price": 0.01912376,
     "close_card_sent": true,
     "closed_at": "2026-07-20T15:31:26"
+  },
+  "العرض/الطلب|CHZUSDT|2026-07-20 15:45:00": {
+    "symbol": "CHZUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5220,
+    "entry": 0.01523464,
+    "stop": 0.01432,
+    "init_stop": 0.01432,
+    "cur_stop": 0.01432,
+    "legs": [
+      0.01523464,
+      0.01506,
+      0.01488536,
+      0.01463672
+    ],
+    "last_alert_stop": 0.01432,
+    "armed": false,
+    "targets": [
+      0.0158,
+      0.01620256
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 15:45:00",
+    "last_bar": "2026-07-20 15:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01523464,
+    "lo_seen": 0.01523464,
+    "created": "2026-07-20T16:06:05",
+    "dca_levels": [
+      0.01523464,
+      0.01506,
+      0.01488536,
+      0.01463672
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "عرض/طلب+دايفرجنس|1000SATSUSDT|2026-07-20 16:00:00": {
+    "symbol": "1000SATSUSDT",
+    "label": "عرض/طلب+دايفرجنس",
+    "timeframe": "1h",
+    "message_id": 5223,
+    "entry": 9.57e-06,
+    "stop": 9.33e-06,
+    "init_stop": 9.33e-06,
+    "cur_stop": 9.33e-06,
+    "legs": [
+      9.57e-06
+    ],
+    "last_alert_stop": 9.33e-06,
+    "armed": false,
+    "targets": [
+      9.78e-06,
+      9.89e-06
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 16:00:00",
+    "last_bar": "2026-07-20 16:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 9.57e-06,
+    "lo_seen": 9.57e-06,
+    "created": "2026-07-20T16:10:30"
   }
 }

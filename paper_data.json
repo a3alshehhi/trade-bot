@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-20T16:04:20",
+  "updated_at": "2026-07-20T16:14:41",
   "stats": {
-    "open": 18,
+    "open": 20,
     "closed": 88,
     "win_rate": 65.9,
     "profit_factor": 1.08,
@@ -624,25 +624,9 @@
       "timeframe": "1h",
       "entry": 0.2135,
       "stop": 0.204862,
-      "hits": [
-        1
-      ],
-      "status": "open",
-      "opened_at": "2026-07-20T09:37:58",
-      "closed_at": null,
-      "realized_pct": 1.27
-    },
-    {
-      "id": "SD Stable|CGPTUSDT|2026-07-20 16:00:00",
-      "symbol": "CGPTUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.01957,
-      "stop": 0.0188192,
       "hits": [],
       "status": "open",
-      "opened_at": "2026-07-20T16:01:50",
+      "opened_at": "2026-07-20T09:37:58",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -763,21 +747,18 @@
       "realized_pct": 0.0
     },
     {
-      "id": "العرض/الطلب|CFXUSDT|2026-07-06 15:45:00",
-      "symbol": "CFXUSDT",
-      "label": "العرض/الطلب",
+      "id": "زخم سيولة الحيتان|XRPUSDT|2026-07-20 15:45:00",
+      "symbol": "XRPUSDT",
+      "label": "زخم سيولة الحيتان",
       "side": "buy",
       "timeframe": "15m",
-      "entry": 0.04494,
-      "stop": 0.0436733,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-06T15:49:07",
-      "closed_at": "2026-07-06T20:22:39",
-      "realized_pct": 0.7,
-      "result_pct": 0.7
+      "entry": 1.1126,
+      "stop": 1.08484643,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-20T16:08:25",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "العرض/الطلب|BNTUSDT|2026-07-06 16:00:00",
@@ -1773,6 +1754,34 @@
       "result_pct": 3.04
     },
     {
+      "id": "العرض/الطلب|CHZUSDT|2026-07-20 15:45:00",
+      "symbol": "CHZUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01523464,
+      "stop": 0.01432,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-20T16:06:05",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "عرض/طلب+دايفرجنس|1000SATSUSDT|2026-07-20 16:00:00",
+      "symbol": "1000SATSUSDT",
+      "label": "عرض/طلب+دايفرجنس",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 9.57e-06,
+      "stop": 9.33e-06,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-20T16:10:30",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -1875,6 +1884,23 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|CFXUSDT|2026-07-06 15:45:00",
+      "symbol": "CFXUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.04494,
+      "stop": 0.0436733,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-06T15:49:07",
+      "closed_at": "2026-07-06T20:22:39",
+      "realized_pct": 0.7,
+      "result_pct": 0.7
     },
     {
       "id": "العرض/الطلب|ADXUSDT|2026-07-06 02:00:00",
