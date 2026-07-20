@@ -224,5 +224,38 @@
     "hi_seen": 3.585,
     "lo_seen": 3.585,
     "created": "2026-07-20T15:21:47"
+  },
+  "زخم سيولة الحيتان|BTCUSDT|2026-07-20 15:30:00": {
+    "symbol": "BTCUSDT",
+    "label": "زخم سيولة الحيتان",
+    "timeframe": "15m",
+    "message_id": 5213,
+    "entry": 65240.81,
+    "stop": 63995.488,
+    "init_stop": 63995.488,
+    "cur_stop": 63995.488,
+    "legs": [
+      65240.81
+    ],
+    "last_alert_stop": 63995.488,
+    "armed": false,
+    "targets": [
+      66486.132,
+      68976.776
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 15:30:00",
+    "last_bar": "2026-07-20 15:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 65240.81,
+    "lo_seen": 65240.81,
+    "created": "2026-07-20T15:48:23"
   }
 }

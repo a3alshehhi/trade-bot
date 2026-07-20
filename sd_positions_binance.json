@@ -437,5 +437,39 @@
     "armed": false,
     "opened_ts": "2026-07-20T15:24:38",
     "msg_id": 5211
+  },
+  "BTCUSDT": {
+    "symbol": "BTCUSDT",
+    "tf": "15m",
+    "label": "زخم سيولة الحيتان",
+    "prob": null,
+    "levels": [
+      65240.81
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 65424.90202620921,
+        "qty": 0.00152847,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 65424.90202620921,
+    "entry": 65424.90202620921,
+    "init_stop": 63995.488,
+    "stop": 63995.488,
+    "R": 1429.4140262092114,
+    "tp1": 66486.132,
+    "tp2": 68976.776,
+    "qty": 0.00152847,
+    "qty_open": 0.00152847,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-20T15:51:10",
+    "msg_id": 5216
   }
 }
