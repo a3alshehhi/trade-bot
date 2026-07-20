@@ -2627,5 +2627,93 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|BCHUSDT|2026-07-20 18:15:00": {
+    "symbol": "BCHUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5240,
+    "entry": 215.4856,
+    "stop": 209.8,
+    "init_stop": 209.8,
+    "cur_stop": 209.8,
+    "legs": [
+      215.4856,
+      214.4,
+      213.3144,
+      211.7688
+    ],
+    "last_alert_stop": 209.8,
+    "armed": false,
+    "targets": [
+      219.0,
+      221.5024
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 18:15:00",
+    "last_bar": "2026-07-20 18:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 215.4856,
+    "lo_seen": 215.4856,
+    "created": "2026-07-20T18:32:14",
+    "dca_levels": [
+      215.4856,
+      214.4,
+      213.3144,
+      211.7688
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|BLURUSDT|2026-07-20 18:15:00": {
+    "symbol": "BLURUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5240,
+    "entry": 0.01580834,
+    "stop": 0.01511,
+    "init_stop": 0.01511,
+    "cur_stop": 0.01511,
+    "legs": [
+      0.01580834,
+      0.015675,
+      0.01554166,
+      0.01535182
+    ],
+    "last_alert_stop": 0.01511,
+    "armed": false,
+    "targets": [
+      0.01624,
+      0.01654736
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 18:15:00",
+    "last_bar": "2026-07-20 18:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01580834,
+    "lo_seen": 0.01580834,
+    "created": "2026-07-20T18:32:14",
+    "dca_levels": [
+      0.01580834,
+      0.015675,
+      0.01554166,
+      0.01535182
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
