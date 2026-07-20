@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-20T05:26:08",
+  "updated_at": "2026-07-20T05:36:28",
   "stats": {
-    "open": 13,
-    "closed": 77,
-    "win_rate": 62.3,
-    "profit_factor": 0.98,
-    "total_pct": -3.6,
-    "avg_pct": -0.02,
+    "open": 11,
+    "closed": 79,
+    "win_rate": 62.0,
+    "profit_factor": 0.96,
+    "total_pct": -5.62,
+    "avg_pct": -0.04,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-20",
-        "trades": 3,
-        "win_rate": 100.0,
-        "return_pct": 2.7,
+        "trades": 5,
+        "win_rate": 80.0,
+        "return_pct": 0.54,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -135,9 +135,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 3,
-        "win_rate": 100.0,
-        "return_pct": 2.7,
+        "trades": 5,
+        "win_rate": 80.0,
+        "return_pct": 0.54,
         "month": "2026-07"
       },
       {
@@ -158,9 +158,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 77,
-        "win_rate": 62.3,
-        "return_pct": -3.6
+        "trades": 79,
+        "win_rate": 62.0,
+        "return_pct": -5.62
       }
     ]
   },
@@ -1431,10 +1431,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-19T09:31:14",
-      "closed_at": null,
-      "realized_pct": 1.26
+      "closed_at": "2026-07-20T05:16:09",
+      "realized_pct": 1.26,
+      "result_pct": 1.26
     },
     {
       "id": "العرض/الطلب|AEURUSDT|2026-07-19 13:00:00",
@@ -1492,10 +1493,11 @@
       "entry": 0.102499,
       "stop": 0.0991,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-19T17:16:02",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-20T05:16:11",
+      "realized_pct": -3.32,
+      "result_pct": -3.32
     },
     {
       "id": "العرض/الطلب|AVAXUSDT|2026-07-20 04:15:00",
