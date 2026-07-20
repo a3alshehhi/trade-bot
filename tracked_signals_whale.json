@@ -180,13 +180,16 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 13:30:00",
-    "last_bar": "2026-07-20 13:44:59.999000",
+    "last_bar": "2026-07-20 13:59:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.7603,
-    "lo_seen": 0.7528,
-    "created": "2026-07-20T13:48:02"
+    "lo_seen": 0.7501,
+    "created": "2026-07-20T13:48:02",
+    "exit_price": 0.7575,
+    "close_card_sent": true,
+    "closed_at": "2026-07-20T14:03:46"
   }
 }

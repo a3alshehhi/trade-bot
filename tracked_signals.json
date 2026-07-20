@@ -2561,5 +2561,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|AIXBTUSDT|2026-07-20 13:45:00": {
+    "symbol": "AIXBTUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5198,
+    "entry": 0.01841744,
+    "stop": 0.01775,
+    "init_stop": 0.01775,
+    "cur_stop": 0.01775,
+    "legs": [
+      0.01841744,
+      0.01829,
+      0.01816256,
+      0.01798112
+    ],
+    "last_alert_stop": 0.01775,
+    "armed": false,
+    "targets": [
+      0.01883,
+      0.01912376
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 13:45:00",
+    "last_bar": "2026-07-20 13:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01841744,
+    "lo_seen": 0.01841744,
+    "created": "2026-07-20T14:01:23",
+    "dca_levels": [
+      0.01841744,
+      0.01829,
+      0.01816256,
+      0.01798112
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
