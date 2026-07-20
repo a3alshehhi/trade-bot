@@ -38,5 +38,45 @@
     "armed": false,
     "opened_ts": "2026-07-20T04:16:18",
     "msg_id": 5146
+  },
+  "AVAXUSDT": {
+    "symbol": "AVAXUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      6.551444,
+      6.521,
+      6.490556,
+      6.447212
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 75.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 6.547547547360537,
+        "qty": 11.45467054,
+        "usd": 75.0
+      }
+    ],
+    "avg_entry": 6.547547547360537,
+    "entry": 6.547547547360537,
+    "init_stop": 6.392,
+    "stop": 6.392,
+    "R": 0.15554754736053678,
+    "tp1": 6.65,
+    "tp2": 6.720176,
+    "qty": 11.45467054,
+    "qty_open": 11.45467054,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-20T05:01:31",
+    "msg_id": 5149
   }
 }
