@@ -949,14 +949,14 @@
     "entry": 0.0889,
     "stop": 0.087868,
     "init_stop": 0.087868,
-    "cur_stop": 0.087868,
+    "cur_stop": 0.0889,
     "legs": [
       0.0889,
       0.08875,
       0.0885966,
       0.0883782
     ],
-    "last_alert_stop": 0.087868,
+    "last_alert_stop": 0.0889,
     "armed": false,
     "targets": [
       0.0897536,
@@ -970,11 +970,13 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 22:15:00",
-    "last_bar": "2026-07-19 22:15:00",
-    "hits": [],
+    "last_bar": "2026-07-20 00:14:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.0889,
-    "lo_seen": 0.0889,
+    "hi_seen": 0.0902,
+    "lo_seen": 0.0886,
     "created": "2026-07-19T22:22:18"
   },
   "SD Stable|BTCUSDT|2026-07-19 22:15:00": {
@@ -1005,10 +1007,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 22:15:00",
-    "last_bar": "2026-07-19 22:15:00",
+    "last_bar": "2026-07-20 00:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 64562.55,
+    "hi_seen": 65057.08,
     "lo_seen": 64562.55,
     "created": "2026-07-19T22:22:18"
   }

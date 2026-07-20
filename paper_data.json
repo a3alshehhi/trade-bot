@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T00:22:36",
+  "updated_at": "2026-07-20T00:25:41",
   "stats": {
     "open": 15,
     "closed": 74,
@@ -557,11 +557,13 @@
       "timeframe": "15m",
       "entry": 0.0889,
       "stop": 0.087868,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-19T22:22:18",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.48
     },
     {
       "id": "SD Stable|BTCUSDT|2026-07-19 22:15:00",
