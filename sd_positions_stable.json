@@ -1,38 +1,4 @@
 {
-  "ARBUSDT": {
-    "symbol": "ARBUSDT",
-    "tf": "15m",
-    "label": "SD Stable",
-    "prob": null,
-    "levels": [
-      0.0889
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 300.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.08934934934917249,
-        "qty": 3357.60699082,
-        "usd": 300.0
-      }
-    ],
-    "avg_entry": 0.08934934934917249,
-    "entry": 0.08934934934917249,
-    "init_stop": 0.087868,
-    "stop": 0.08934934934917249,
-    "R": 0.0014813493491724894,
-    "tp1": 0.0897536,
-    "tp2": 0.0902034,
-    "qty": 3357.60699082,
-    "qty_open": 1678.8069908200002,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-19T22:22:58",
-    "msg_id": 5133
-  },
   "BTCUSDT": {
     "symbol": "BTCUSDT",
     "tf": "15m",

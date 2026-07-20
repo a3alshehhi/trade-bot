@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-07-20T00:33:32",
+  "updated_at": "2026-07-20T01:02:37",
   "stats": {
-    "open": 15,
-    "closed": 74,
-    "win_rate": 60.8,
-    "profit_factor": 0.95,
-    "total_pct": -6.13,
-    "avg_pct": -0.05,
+    "open": 13,
+    "closed": 76,
+    "win_rate": 61.8,
+    "profit_factor": 0.96,
+    "total_pct": -5.31,
+    "avg_pct": -0.04,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-07-20",
+        "trades": 2,
+        "win_rate": 100.0,
+        "return_pct": 0.87,
+        "week": "2026-W30",
+        "month": "2026-07"
+      },
       {
         "key": "2026-07-19",
         "trades": 13,
@@ -126,6 +134,13 @@
     ],
     "weekly": [
       {
+        "key": "2026-W30",
+        "trades": 2,
+        "win_rate": 100.0,
+        "return_pct": 0.87,
+        "month": "2026-07"
+      },
+      {
         "key": "2026-W29",
         "trades": 46,
         "win_rate": 63.0,
@@ -143,9 +158,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 74,
-        "win_rate": 60.8,
-        "return_pct": -6.13
+        "trades": 76,
+        "win_rate": 61.8,
+        "return_pct": -5.31
       }
     ]
   },
@@ -560,10 +575,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-19T22:22:18",
-      "closed_at": null,
-      "realized_pct": 0.48
+      "closed_at": "2026-07-20T01:02:35",
+      "realized_pct": 0.48,
+      "result_pct": 0.48
     },
     {
       "id": "SD Stable|BTCUSDT|2026-07-19 22:15:00",
@@ -576,10 +592,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-19T22:22:18",
-      "closed_at": null,
-      "realized_pct": 0.39
+      "closed_at": "2026-07-20T01:02:36",
+      "realized_pct": 0.39,
+      "result_pct": 0.39
     },
     {
       "id": "العرض/الطلب|ADXUSDT|2026-07-06 02:00:00",
