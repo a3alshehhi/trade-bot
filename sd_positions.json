@@ -44,40 +44,6 @@
     "opened_ts": "2026-07-20T04:16:18",
     "msg_id": 5146
   },
-  "LINKUSDT": {
-    "symbol": "LINKUSDT",
-    "tf": "15m",
-    "label": "زخم سيولة الحيتان",
-    "prob": null,
-    "levels": [
-      8.48
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 300.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 8.501501503881752,
-        "qty": 35.28788413,
-        "usd": 300.0
-      }
-    ],
-    "avg_entry": 8.501501503881752,
-    "entry": 8.501501503881752,
-    "init_stop": 8.29367857,
-    "stop": 8.29367857,
-    "R": 0.20782293388175077,
-    "tp1": 8.496,
-    "tp2": 8.536,
-    "qty": 35.28788413,
-    "qty_open": 35.28788413,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-20T11:48:26",
-    "msg_id": 5175
-  },
   "ANKRUSDT": {
     "symbol": "ANKRUSDT",
     "tf": "15m",
@@ -172,5 +138,39 @@
     "armed": false,
     "opened_ts": "2026-07-20T14:01:46",
     "msg_id": 5200
+  },
+  "ORDIUSDT": {
+    "symbol": "ORDIUSDT",
+    "tf": "15m",
+    "label": "زخم سيولة الحيتان",
+    "prob": null,
+    "levels": [
+      3.585
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 300.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 3.5875875878327457,
+        "qty": 83.62165178,
+        "usd": 300.0
+      }
+    ],
+    "avg_entry": 3.5875875878327457,
+    "entry": 3.5875875878327457,
+    "init_stop": 3.48330714,
+    "stop": 3.48330714,
+    "R": 0.1042804478327457,
+    "tp1": 3.642,
+    "tp2": 3.69956,
+    "qty": 83.62165178,
+    "qty_open": 83.62165178,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-20T15:21:58",
+    "msg_id": 5209
   }
 }

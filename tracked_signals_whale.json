@@ -191,5 +191,38 @@
     "exit_price": 0.7575,
     "close_card_sent": true,
     "closed_at": "2026-07-20T14:03:46"
+  },
+  "زخم سيولة الحيتان|ORDIUSDT|2026-07-20 15:00:00": {
+    "symbol": "ORDIUSDT",
+    "label": "زخم سيولة الحيتان",
+    "timeframe": "15m",
+    "message_id": 5207,
+    "entry": 3.585,
+    "stop": 3.48330714,
+    "init_stop": 3.48330714,
+    "cur_stop": 3.48330714,
+    "legs": [
+      3.585
+    ],
+    "last_alert_stop": 3.48330714,
+    "armed": false,
+    "targets": [
+      3.642,
+      3.69956
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 15:00:00",
+    "last_bar": "2026-07-20 15:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 3.585,
+    "lo_seen": 3.585,
+    "created": "2026-07-20T15:21:47"
   }
 }
