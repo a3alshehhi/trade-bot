@@ -66,5 +66,39 @@
     "armed": false,
     "opened_ts": "2026-07-20T16:01:56",
     "msg_id": 5218
+  },
+  "ALTUSDT": {
+    "symbol": "ALTUSDT",
+    "tf": "15m",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.00639
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 300.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.006396396396395609,
+        "qty": 46901.40845071,
+        "usd": 300.0
+      }
+    ],
+    "avg_entry": 0.006396396396395609,
+    "entry": 0.006396396396395609,
+    "init_stop": 0.006317,
+    "stop": 0.006317,
+    "R": 7.939639639560972e-05,
+    "tp1": 0.00641904,
+    "tp2": 0.00644326,
+    "qty": 46901.40845071,
+    "qty_open": 46901.40845071,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-20T20:38:54",
+    "msg_id": 5253
   }
 }

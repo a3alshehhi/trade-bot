@@ -1300,5 +1300,42 @@
     "hi_seen": 0.0579,
     "lo_seen": 0.0579,
     "created": "2026-07-20T19:39:13"
+  },
+  "SD Stable|ALTUSDT|2026-07-20 20:30:00": {
+    "symbol": "ALTUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 5252,
+    "entry": 0.00639,
+    "stop": 0.006317,
+    "init_stop": 0.006317,
+    "cur_stop": 0.006317,
+    "legs": [
+      0.00639,
+      0.00637326,
+      0.006365,
+      0.00635674,
+      0.00634498
+    ],
+    "last_alert_stop": 0.006317,
+    "armed": false,
+    "targets": [
+      0.00641904,
+      0.00644326
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 20:30:00",
+    "last_bar": "2026-07-20 20:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00639,
+    "lo_seen": 0.00639,
+    "created": "2026-07-20T20:38:23"
   }
 }
