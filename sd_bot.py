@@ -622,6 +622,8 @@ def save_state(state):
         print("state save error", ex)
 
 def scan(basket=None):
+    if CFG["strategy"] == "whale":         # زخم سيولة الحيتان: بلا نموذج ولا مناطق
+        return scan_whale(basket)
     if CFG["strategy"] == "vwap_wave":     # الاستراتيجية الجديدة: بلا نموذج ولا مناطق
         return scan_vwave(basket)
     bundle = load_model()
@@ -931,6 +933,360 @@ def vwap_weekly(t, h, l, c, v):
         if cum_v > 0:
             out[i] = cum_pv / cum_v
     return out
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+#  استراتيجية «زخم سيولة الحيتان» (Whale Liquidity Momentum) — SD_STRATEGY=whale
+#  مبنية على ملف whale_liquidity_momentum_strategy.md (2026-07-20).
+#  الفكرة: الفوليوم يفضح الحيتان. ندخل في «النافذة الذهبية» (المرحلة 3 من تسلسل
+#  دخول الحيتان: كنس سيولة → قاعدة هادئة → اختراق مصغّر بحجم معتدل)، ونتجنّب
+#  «تسارع الجمهور» (المرحلة 4) و«قمة التوزيع» (Pattern B). فريم القرار = 15د دائماً،
+#  والفريمات الأعلى (1س/4س) للسياق فقط. إشارات فقط — لا تنفيذ آلي.
+#  ملاحظة: نسخة Python تقارِب مؤشرات TradingView من بيانات OHLCV الخام:
+#    Volume Profile (POC/VAH/VAL)، مستويات السيولة (قمم/قيعان محورية)، VWAP
+#    أسبوعي/شهري، OBV، MFI، MACD4C. غير مُنفَّذ: ذاكرة momentum وaccumulation_footprint
+#    والفلتر الكلّي (BTC.D/USDT.D) — تحتاج مصادر TradingView خارجية.
+# ═══════════════════════════════════════════════════════════════════════════
+WHALE = dict(
+    qbase_win   = int(os.environ.get("WH_QBASE_WIN", "40")),   # نافذة القاعدة الهادئة (8-12س على 15د)
+    qbase_skip  = int(os.environ.get("WH_QBASE_SKIP", "2")),   # تخطّي آخر شمعات (قد تكون الانفجار)
+    qbase_trim  = float(os.environ.get("WH_QBASE_TRIM", "0.20")),  # اقتطاع أعلى % حجماً (سبايكات) من القاعدة
+    rel_vol_min = float(os.environ.get("WH_RELVOL_MIN", "2.0")),   # الحجم النسبي الأدنى (rel_volume>2x)
+    golden_lo   = float(os.environ.get("WH_GOLDEN_LO", "3.0")),    # النافذة الذهبية: مضاعف حجم أدنى (×القاعدة)
+    golden_hi   = float(os.environ.get("WH_GOLDEN_HI", "9.0")),    # النافذة الذهبية: مضاعف حجم أقصى
+    chase_ratio = float(os.environ.get("WH_CHASE_RATIO", "15.0")), # فوقه = مطاردة/تسارع جمهور (لا دخول)
+    z_high      = float(os.environ.get("WH_Z_HIGH", "2.5")),       # عتبة z للتصنيف High (قمة توزيع محتملة)
+    dist_rsi    = float(os.environ.get("WH_DIST_RSI", "65")),      # Pattern B: RSI21≥هذا + حجم High = توزيع
+    mfi_len     = int(os.environ.get("WH_MFI_LEN", "14")),
+    mfi_chase   = float(os.environ.get("WH_MFI_CHASE", "85")),     # MFI(4س) فوقه = مطاردة (لا دخول)
+    min_dollar_vol = float(os.environ.get("WH_MIN_DOLLAR_VOL", "30000")),  # حارس السوق الرقيق (سيولة $/شمعة)
+    obv_lb      = int(os.environ.get("WH_OBV_LB", "10")),          # نافذة تأكيد صعود OBV
+    brk_lb      = int(os.environ.get("WH_BRK_LB", "12")),          # نافذة الاختراق المصغّر (higher-high)
+    stop_atr    = float(os.environ.get("WH_STOP_ATR", "0.3")),     # حاجز الوقف تحت قاع القاعدة (×ATR)
+    res_lb      = int(os.environ.get("WH_RES_LB", "60")),          # نافذة البحث عن مقاومات/جدران سيولة للأهداف
+    vp_lb       = int(os.environ.get("WH_VP_LB", "480")),          # نافذة Volume Profile (~5 أيام على 15د)
+    vp_bins     = int(os.environ.get("WH_VP_BINS", "50")),
+)
+
+
+def obv(c, v):
+    """On-Balance Volume: تراكم/توزيع الحجم حسب اتجاه الإغلاق."""
+    out = [0.0] * len(c)
+    for i in range(1, len(c)):
+        if c[i] > c[i - 1]:
+            out[i] = out[i - 1] + v[i]
+        elif c[i] < c[i - 1]:
+            out[i] = out[i - 1] - v[i]
+        else:
+            out[i] = out[i - 1]
+    return out
+
+
+def mfi(h, l, c, v, n=14):
+    """Money Flow Index: RSI مرجّح بالحجم على السعر النموذجي."""
+    out = [float("nan")] * len(c)
+    if len(c) <= n:
+        return out
+    tp = [(h[i] + l[i] + c[i]) / 3.0 for i in range(len(c))]
+    rmf = [tp[i] * v[i] for i in range(len(c))]
+    for i in range(n, len(c)):
+        pos = neg = 0.0
+        for k in range(i - n + 1, i + 1):
+            if tp[k] > tp[k - 1]:
+                pos += rmf[k]
+            elif tp[k] < tp[k - 1]:
+                neg += rmf[k]
+        out[i] = 100.0 if neg == 0 else 100.0 - 100.0 / (1.0 + pos / neg)
+    return out
+
+
+def vwap_monthly(t, h, l, c, v):
+    """فيواب شهري مرسّى: يُصفَّر مع بداية كل شهر تقويمي (UTC)."""
+    out = [float("nan")] * len(c)
+    cum_pv = cum_v = 0.0
+    mo = None
+    for i in range(len(c)):
+        d = dt.datetime.fromtimestamp(t[i] / 1000, dt.timezone.utc)
+        k = (d.year, d.month)
+        if k != mo:
+            mo = k
+            cum_pv = cum_v = 0.0
+        tp = (h[i] + l[i] + c[i]) / 3.0
+        cum_pv += tp * v[i]
+        cum_v += v[i]
+        if cum_v > 0:
+            out[i] = cum_pv / cum_v
+    return out
+
+
+def quiet_baseline(v, i, win, skip, trim):
+    """قاعدة الحجم الهادئة قبل الشمعة i (قسم 3.2 من الملف): متوسط وانحراف على نافذة
+    سابقة، مع تخطّي آخر `skip` شمعة واقتطاع أعلى `trim` نسبةً حجماً كي لا يدخل الانفجار
+    نفسه في الحساب (يرفع المتوسط/الانحراف اصطناعياً ويخفي الإشارة). يعيد (mean, std)."""
+    hi = i - skip
+    lo = hi - win
+    if lo < 0:
+        return None, None
+    window = sorted(v[lo:hi])
+    if not window:
+        return None, None
+    cut = int(len(window) * trim)
+    core = window[:len(window) - cut] if cut > 0 else window
+    if not core:
+        core = window
+    m = sum(core) / len(core)
+    sd = math.sqrt(sum((x - m) ** 2 for x in core) / len(core))
+    return m, sd
+
+
+def volume_profile(h, l, c, v, lo_i, hi_i, bins):
+    """Volume Profile مبسّط على النطاق [lo_i, hi_i): يوزّع حجم كل شمعة على خانة سعرها
+    النموذجي. يعيد (POC, VAH, VAL) — نقطة أعلى تحكّم + حدود منطقة القيمة 70%."""
+    seg_h = h[lo_i:hi_i]; seg_l = l[lo_i:hi_i]
+    seg_c = c[lo_i:hi_i]; seg_v = v[lo_i:hi_i]
+    if not seg_c:
+        return None, None, None
+    pmin, pmax = min(seg_l), max(seg_h)
+    if pmax <= pmin:
+        return None, None, None
+    step = (pmax - pmin) / bins
+    vol = [0.0] * bins
+    for j in range(len(seg_c)):
+        tp = (seg_h[j] + seg_l[j] + seg_c[j]) / 3.0
+        b = min(bins - 1, max(0, int((tp - pmin) / step)))
+        vol[b] += seg_v[j]
+    poc_b = max(range(bins), key=lambda b: vol[b])
+    poc = pmin + (poc_b + 0.5) * step
+    total = sum(vol); target = total * 0.70
+    lo_b = hi_b = poc_b; acc = vol[poc_b]
+    while acc < target and (lo_b > 0 or hi_b < bins - 1):
+        down = vol[lo_b - 1] if lo_b > 0 else -1
+        up = vol[hi_b + 1] if hi_b < bins - 1 else -1
+        if up >= down:
+            hi_b += 1; acc += max(up, 0)
+        else:
+            lo_b -= 1; acc += max(down, 0)
+    val = pmin + lo_b * step
+    vah = pmin + (hi_b + 1) * step
+    return poc, vah, val
+
+
+def _vol_class(z):
+    """تصنيف الحجم حسب z-score (قسم 3.2): Normal/Medium/High/ExtraHigh."""
+    if z is None or not math.isfinite(z):
+        return "Normal"
+    if z < 1.2:
+        return "Normal"
+    if z < 2.5:
+        return "Medium"
+    if z < 4.0:
+        return "High"
+    return "ExtraHigh"
+
+
+def whale_signal(d15, mfi_ctx=None):
+    """يقيّم آخر شمعة 15د مغلقة كدخول «نافذة ذهبية» (المرحلة 3). يعيد dict أو None.
+    الشروط (شراء فقط):
+      • انحياز: السعر فوق الفيواب الأسبوعي والشهري (اتجاه صاعد).
+      • OBV صاعد + حجم نسبي > rel_vol_min.
+      • حجم النافذة الذهبية: مضاعف الحجم على القاعدة الهادئة ضمن [golden_lo, golden_hi].
+      • اختراق مصغّر: الإغلاق يكسر أعلى نطاق آخر brk_lb شمعة، مع قاع-أعلى محفوظ.
+      • MACD4C أخضر على 15د (زخم صعودي).
+      • رفض Pattern B (قمة توزيع): RSI21≥dist_rsi مع حجم High/ExtraHigh.
+      • حارس المطاردة: المضاعف ≤ chase_ratio و MFI(4س) ≤ mfi_chase.
+      • حارس السوق الرقيق: سيولة الدولار للشمعة ≥ min_dollar_vol.
+    """
+    h, l, c, v, t = d15["h"], d15["l"], d15["c"], d15["v"], d15["t"]
+    n = len(c)
+    if n < max(WHALE["vp_lb"], 120) + 5:
+        return None
+    i = n - 1
+    W = WHALE
+
+    rs21 = rsi(c, 21)
+    _, _, hist = macd(c)
+    vw_w = vwap_weekly(t, h, l, c, v)
+    vw_m = vwap_monthly(t, h, l, c, v)
+    ob = obv(c, v)
+    a = atr(h, l, c, 14)
+
+    for arr in (rs21[i], hist[i], hist[i - 1], vw_w[i], vw_m[i], a[i]):
+        if not math.isfinite(arr):
+            return None
+
+    # (1) الانحياز: فوق الفيواب الأسبوعي والشهري
+    if not (c[i] > vw_w[i] and c[i] > vw_m[i]):
+        return None
+    # (2) OBV صاعد
+    if not (ob[i] > ob[i - W["obv_lb"]]):
+        return None
+    # (3) الحجم النسبي > العتبة
+    vsma = sum(v[i - 20:i]) / 20.0 if i >= 20 else None
+    if not vsma or v[i] / vsma < W["rel_vol_min"]:
+        return None
+    # تصنيف الحجم على القاعدة الهادئة (قسم 3.2)
+    qm, qsd = quiet_baseline(v, i, W["qbase_win"], W["qbase_skip"], W["qbase_trim"])
+    if not qm or qm <= 0 or not qsd or qsd <= 0:
+        return None
+    ratio = v[i] / qm
+    z = (v[i] - qm) / qsd
+    vclass = _vol_class(z)
+    # (4) حجم النافذة الذهبية: معتدل (لا Normal ولا تسارع جمهور)
+    if not (W["golden_lo"] <= ratio <= W["golden_hi"]):
+        return None
+    # (5) اختراق مصغّر: الإغلاق يكسر أعلى النطاق السابق
+    range_high = max(h[i - W["brk_lb"]:i])
+    if not (c[i] > range_high):
+        return None
+    # قاع-أعلى محفوظ: قاع آخر brk_lb أعلى من قاع النافذة الأسبق
+    recent_low = min(l[i - W["brk_lb"]:i])
+    prior_low = min(l[i - 2 * W["brk_lb"]:i - W["brk_lb"]]) if i >= 2 * W["brk_lb"] else recent_low
+    if recent_low < prior_low:
+        return None
+    # (6) MACD4C أخضر على 15د
+    if macd4c_state(hist, i) < 1:
+        return None
+    # (7) رفض Pattern B — قمة توزيع الحيتان
+    if rs21[i] >= W["dist_rsi"] and vclass in ("High", "ExtraHigh"):
+        return None
+    # (8) حارس المطاردة
+    if ratio > W["chase_ratio"]:
+        return None
+    if mfi_ctx is not None and math.isfinite(mfi_ctx) and mfi_ctx > W["mfi_chase"]:
+        return None
+    # (9) حارس السوق الرقيق (سيولة دولارية)
+    if v[i] * c[i] < W["min_dollar_vol"]:
+        return None
+
+    # ── الوقف والأهداف (بنيوية — جدران سيولة/مقاومات، لا R-multiples) ──
+    entry = c[i]
+    stop = recent_low - W["stop_atr"] * a[i]
+    if stop >= entry:
+        return None
+    # مقاومات فوق الدخول = قمم محورية (جدران سيولة) داخل نافذة البحث
+    piv = pivots(h, l, 3, 3)
+    res = sorted({round(p, 10) for (pi, p, kind) in piv
+                  if kind == "H" and pi >= i - W["res_lb"] and p > entry})
+    # Volume Profile (POC/VAH/VAL) — سياق الغرفة وأهداف بديلة
+    poc, vah, val = volume_profile(h, l, c, v, max(0, i - W["vp_lb"]), i + 1, W["vp_bins"])
+    if len(res) >= 2:
+        tp1, tp2 = res[0], res[1]
+    elif len(res) == 1:
+        tp1 = res[0]
+        tp2 = vah if (vah and vah > tp1) else tp1 + (tp1 - stop)
+    else:
+        tp1 = vah if (vah and vah > entry) else entry + (entry - stop)
+        tp2 = tp1 + (tp1 - stop)
+
+    return dict(
+        i=i, ts=t[i], sym=None, entry=entry, stop=stop, tp1=tp1, tp2=tp2,
+        ratio=round(ratio, 2), z=round(z, 2), vclass=vclass,
+        rsi=round(rs21[i], 1), mfi=(round(mfi_ctx, 1) if (mfi_ctx is not None and math.isfinite(mfi_ctx)) else None),
+        rel_vol=round(v[i] / vsma, 2), poc=poc, vah=vah, val=val,
+        dollar_vol=round(v[i] * c[i]))
+
+
+def format_message_whale(signals):
+    """بطاقة تيليجرام لاستراتيجية زخم سيولة الحيتان."""
+    nums = ["1️⃣", "2️⃣"]
+    now = dt.datetime.now().strftime("%H:%M:%S")
+    sep = "\n➖➖➖➖➖➖➖➖➖\n"
+    blocks = []
+    for s in signals:
+        entry, stop = s["entry"], s["stop"]
+        risk_pct = ((entry - stop) / entry * 100) if entry else 0.0
+        room = ""
+        if s.get("poc"):
+            pos = "تحت/عند POC (مجال للركض)" if entry <= s["poc"] * 1.005 else "فوق POC"
+            room = f"  ·  {pos}"
+        lines = [
+            f"🟢 إشارة {DASH_LABEL} — شراء (نافذة ذهبية)",
+            f"💎 {s['sym']} · ⏱️ {s.get('tf', CFG['entry_tf'])}",
+            f"🐋 حجم الحيتان: {s['vclass']} · ×{s['ratio']} القاعدة الهادئة · z={s['z']} · حجم نسبي ×{s['rel_vol']}",
+            f"📈 RSI21={s['rsi']}" + (f" · MFI(4س)={s['mfi']}" if s.get("mfi") is not None else "")
+            + f" · سيولة ~${s['dollar_vol']:,}{room}",
+            "",
+            f"📍 الدخول (اختراق مصغّر مؤكّد): {_fmt(entry)}",
+            f"🛑 الوقف (تحت قاع القاعدة): {_fmt(stop)}  (−{risk_pct:.2f}%)",
+            "",
+            "🎯 الأهداف (جدران سيولة/مقاومات):",
+        ]
+        for k, tgt in enumerate([s.get("tp1"), s.get("tp2")]):
+            if not tgt:
+                continue
+            gain = ((tgt - entry) / entry * 100) if entry else 0.0
+            lines.append(f"{nums[k]} {_fmt(tgt)}  (+{gain:.2f}%)")
+        lines += [
+            "",
+            "⚖️ إدارة 50/50: جني 50% عند الهدف الأول + تعادل + قفل 0.3R",
+            f"⏰ {now}",
+        ]
+        blocks.append("\n".join(lines))
+    header = ("🐋 <b>زخم سيولة الحيتان — شراء</b>\n"
+              "<i>كنس سيولة → قاعدة هادئة → نافذة ذهبية (حجم معتدل + اختراق مصغّر فوق الفيواب)</i>")
+    footer = "⚠️ تحليل تعليمي — ليس نصيحة مالية"
+    return header + sep + sep.join(blocks) + sep + footer
+
+
+def scan_whale(basket=None):
+    """المسح الحيّ لاستراتيجية زخم سيولة الحيتان — فريم القرار 15د، سياق MFI من 4س.
+    بلا نموذج ML وبلا مناطق عرض/طلب. إشارات فقط (تيليجرام + لوحة المتتبّع)."""
+    # فريم القرار 15د على كامل القائمة (btc crypto list) — لا تحديد (تفادي تفويت عملة كـACE).
+    basket = basket or parse_watchlist_crypto(WATCHLIST)
+    _wh_pages = int(os.environ.get("WH_PAGES", "2"))    # صفحتان ≈ 2000 شمعة (~20 يوم: فيواب شهري مرسّى)
+    state = load_state(); sent = set(state.get("sent", []))
+    signals = []
+
+    def _fetch(s):
+        try:
+            d15 = fetch_klines(s, "15m", _wh_pages)
+            d4h = fetch_klines(s, "4h", 1)
+            return s, d15, d4h
+        except Exception:
+            return s, None, None
+
+    _workers = max(1, int(os.environ.get("SD_SCAN_WORKERS", "8")))
+    with ThreadPoolExecutor(max_workers=_workers) as _pool:
+        fetched = list(_pool.map(_fetch, basket))
+    for s, d15, d4h in fetched:
+        try:
+            if not d15 or len(d15["c"]) < 520:
+                continue
+            d15 = {k: vv[:-1] for k, vv in d15.items()}      # استبعاد الشمعة الجارية
+            mfi_ctx = None
+            if d4h and len(d4h["c"]) > WHALE["mfi_len"] + 2:
+                d4 = {k: vv[:-1] for k, vv in d4h.items()}
+                mvals = mfi(d4["h"], d4["l"], d4["c"], d4["v"], WHALE["mfi_len"])
+                mfi_ctx = mvals[-1]
+            sig = whale_signal(d15, mfi_ctx)
+            if not sig:
+                continue
+            key = f"{s}:{sig['ts']}"
+            if key in sent:
+                continue
+            sig["sym"] = s
+            signals.append(dict(
+                key=key, sym=s, tf="15m", ts=sig["ts"],
+                entry=round(sig["entry"], 8), stop=round(sig["stop"], 8),
+                legs=[round(sig["entry"], 8)], wait_entry=False,
+                tp1=round(sig["tp1"], 8), tp2=round(sig["tp2"], 8),
+                ratio=sig["ratio"], z=sig["z"], vclass=sig["vclass"], rsi=sig["rsi"],
+                mfi=sig["mfi"], rel_vol=sig["rel_vol"], poc=sig["poc"],
+                dollar_vol=sig["dollar_vol"]))
+        except Exception as ex:
+            print("whale skip", s, ex)
+    # ترتيب: الأقرب للنافذة الذهبية المثالية (حجم معتدل عالٍ + مجال للركض)
+    signals.sort(key=lambda x: x.get("ratio", 0), reverse=True)
+    signals = signals[:CFG["top_n"]]
+    if signals:
+        mid = send_telegram(format_message_whale(signals))
+        track_for_dashboard(signals, mid)
+        for sig in signals:
+            state.setdefault("sent", []).append(sig["key"])
+        save_state(state)
+    else:
+        print("no whale signals this scan")
+    return signals
 
 
 def vwave_signal(d1):
@@ -1444,11 +1800,11 @@ if __name__ == "__main__":
     elif mode == "sweep":
         sweep()
     else:  # both: يدرّب فقط إذا غاب النموذج أو تجاوز عمره 24 ساعة، ثم يفحص
-        if CFG["strategy"] != "vwap_wave" and not model_is_fresh():
+        if CFG["strategy"] in ("vwap_wave", "whale"):
+            print(f"{CFG['strategy']} strategy -> no model needed")
+        elif not model_is_fresh():
             print("model missing/stale -> training")
             train()
-        elif CFG["strategy"] == "vwap_wave":
-            print("vwap_wave strategy -> no model needed")
         else:
             print("model fresh -> skip training")
         scan()
