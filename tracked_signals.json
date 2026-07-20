@@ -2383,5 +2383,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|CRVUSDT|2026-07-20 12:15:00": {
+    "symbol": "CRVUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5180,
+    "entry": 0.213116,
+    "stop": 0.2057,
+    "init_stop": 0.2057,
+    "cur_stop": 0.2057,
+    "legs": [
+      0.213116,
+      0.2117,
+      0.210284,
+      0.208268
+    ],
+    "last_alert_stop": 0.2057,
+    "armed": false,
+    "targets": [
+      0.2177,
+      0.220964
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 12:15:00",
+    "last_bar": "2026-07-20 12:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.213116,
+    "lo_seen": 0.213116,
+    "created": "2026-07-20T12:31:12",
+    "dca_levels": [
+      0.213116,
+      0.2117,
+      0.210284,
+      0.208268
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
