@@ -46,11 +46,11 @@
     "entry": 8.48,
     "stop": 8.29367857,
     "init_stop": 8.29367857,
-    "cur_stop": 8.29367857,
+    "cur_stop": 8.48,
     "legs": [
       8.48
     ],
-    "last_alert_stop": 8.29367857,
+    "last_alert_stop": 8.48,
     "armed": false,
     "targets": [
       8.496,
@@ -64,10 +64,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 11:30:00",
-    "last_bar": "2026-07-20 11:44:59.999000",
-    "hits": [],
+    "last_bar": "2026-07-20 11:59:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 8.494,
+    "hi_seen": 8.521,
     "lo_seen": 8.407,
     "created": "2026-07-20T11:48:16"
   },
@@ -97,11 +99,44 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 11:30:00",
-    "last_bar": "2026-07-20 11:44:59.999000",
+    "last_bar": "2026-07-20 11:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.0882,
+    "hi_seen": 0.0886,
     "lo_seen": 0.0871,
     "created": "2026-07-20T11:48:16"
+  },
+  "زخم سيولة الحيتان|ARBUSDT|2026-07-20 11:45:00": {
+    "symbol": "ARBUSDT",
+    "label": "زخم سيولة الحيتان",
+    "timeframe": "15m",
+    "message_id": 5179,
+    "entry": 0.0884,
+    "stop": 0.08597143,
+    "init_stop": 0.08597143,
+    "cur_stop": 0.08597143,
+    "legs": [
+      0.0884
+    ],
+    "last_alert_stop": 0.08597143,
+    "armed": false,
+    "targets": [
+      0.0888,
+      0.0889
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 11:45:00",
+    "last_bar": "2026-07-20 11:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0886,
+    "lo_seen": 0.088,
+    "created": "2026-07-20T12:03:07"
   }
 }
