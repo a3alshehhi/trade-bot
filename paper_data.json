@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-20T15:36:43",
+  "updated_at": "2026-07-20T15:38:57",
   "stats": {
-    "open": 17,
-    "closed": 87,
-    "win_rate": 65.5,
-    "profit_factor": 1.06,
-    "total_pct": 2.43,
-    "avg_pct": 0.06,
+    "open": 18,
+    "closed": 86,
+    "win_rate": 65.1,
+    "profit_factor": 1.02,
+    "total_pct": -0.59,
+    "avg_pct": 0.02,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-20",
-        "trades": 13,
-        "win_rate": 92.3,
-        "return_pct": 9.12,
+        "trades": 12,
+        "win_rate": 91.7,
+        "return_pct": 5.9,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -135,9 +135,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 13,
-        "win_rate": 92.3,
-        "return_pct": 9.12,
+        "trades": 12,
+        "win_rate": 91.7,
+        "return_pct": 5.9,
         "month": "2026-07"
       },
       {
@@ -158,9 +158,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 87,
-        "win_rate": 65.5,
-        "return_pct": 2.43
+        "trades": 86,
+        "win_rate": 65.1,
+        "return_pct": -0.59
       }
     ]
   },
@@ -1714,13 +1714,11 @@
       "timeframe": "15m",
       "entry": 0.01154574,
       "stop": 0.01128,
-      "hits": [
-        1
-      ],
+      "hits": [],
       "status": "open",
       "opened_at": "2026-07-20T13:31:11",
       "closed_at": null,
-      "realized_pct": 0.71
+      "realized_pct": 0.0
     },
     {
       "id": "العرض/الطلب|AIXBTUSDT|2026-07-20 13:45:00",
@@ -1731,14 +1729,12 @@
       "entry": 0.01841744,
       "stop": 0.01775,
       "hits": [
-        1,
-        2
+        1
       ],
-      "status": "closed",
+      "status": "open",
       "opened_at": "2026-07-20T14:01:23",
-      "closed_at": "2026-07-20T15:31:26",
-      "realized_pct": 3.04,
-      "result_pct": 3.04
+      "closed_at": null,
+      "realized_pct": 1.12
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
