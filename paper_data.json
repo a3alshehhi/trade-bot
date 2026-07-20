@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-20T14:08:11",
+  "updated_at": "2026-07-20T14:10:15",
   "stats": {
     "open": 17,
-    "closed": 86,
-    "win_rate": 65.1,
+    "closed": 85,
+    "win_rate": 64.7,
     "profit_factor": 1.02,
-    "total_pct": -0.59,
+    "total_pct": -0.68,
     "avg_pct": 0.02,
     "max_drawdown_pct": -21.29
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-20",
-        "trades": 12,
-        "win_rate": 91.7,
-        "return_pct": 5.9,
+        "trades": 11,
+        "win_rate": 90.9,
+        "return_pct": 5.8,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -135,9 +135,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 12,
-        "win_rate": 91.7,
-        "return_pct": 5.9,
+        "trades": 11,
+        "win_rate": 90.9,
+        "return_pct": 5.8,
         "month": "2026-07"
       },
       {
@@ -158,9 +158,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 86,
-        "win_rate": 65.1,
-        "return_pct": -0.59
+        "trades": 85,
+        "win_rate": 64.7,
+        "return_pct": -0.68
       }
     ]
   },
@@ -712,11 +712,10 @@
       "hits": [
         1
       ],
-      "status": "closed",
+      "status": "open",
       "opened_at": "2026-07-20T13:48:02",
-      "closed_at": "2026-07-20T14:03:46",
-      "realized_pct": 0.09,
-      "result_pct": 0.09
+      "closed_at": null,
+      "realized_pct": 0.09
     },
     {
       "id": "العرض/الطلب|CFXUSDT|2026-07-06 15:45:00",
@@ -1703,20 +1702,6 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-20T13:31:11",
-      "closed_at": null,
-      "realized_pct": 0.0
-    },
-    {
-      "id": "العرض/الطلب|AIXBTUSDT|2026-07-20 13:45:00",
-      "symbol": "AIXBTUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.01841744,
-      "stop": 0.01775,
-      "hits": [],
-      "status": "open",
-      "opened_at": "2026-07-20T14:01:23",
       "closed_at": null,
       "realized_pct": 0.0
     },
