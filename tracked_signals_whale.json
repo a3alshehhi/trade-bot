@@ -64,14 +64,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 11:30:00",
-    "last_bar": "2026-07-20 11:59:59.999000",
+    "last_bar": "2026-07-20 12:14:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 8.521,
     "lo_seen": 8.407,
-    "created": "2026-07-20T11:48:16"
+    "created": "2026-07-20T11:48:16",
+    "exit_price": 8.48,
+    "close_card_sent": true,
+    "closed_at": "2026-07-20T12:17:54"
   },
   "زخم سيولة الحيتان|ARBUSDT|2026-07-20 11:30:00": {
     "symbol": "ARBUSDT",
@@ -99,7 +102,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 11:30:00",
-    "last_bar": "2026-07-20 11:59:59.999000",
+    "last_bar": "2026-07-20 12:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0886,
@@ -132,11 +135,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 11:45:00",
-    "last_bar": "2026-07-20 11:59:59.999000",
+    "last_bar": "2026-07-20 12:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0886,
-    "lo_seen": 0.088,
+    "lo_seen": 0.0879,
     "created": "2026-07-20T12:03:07"
   }
 }
