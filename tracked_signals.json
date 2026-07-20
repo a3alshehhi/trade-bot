@@ -2803,5 +2803,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|API3USDT|2026-07-20 19:30:00": {
+    "symbol": "API3USDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5250,
+    "entry": 0.216407,
+    "stop": 0.2093,
+    "init_stop": 0.2093,
+    "cur_stop": 0.2093,
+    "legs": [
+      0.216407,
+      0.21505,
+      0.213693,
+      0.211761
+    ],
+    "last_alert_stop": 0.2093,
+    "armed": false,
+    "targets": [
+      0.2208,
+      0.223928
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 19:30:00",
+    "last_bar": "2026-07-20 19:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.216407,
+    "lo_seen": 0.216407,
+    "created": "2026-07-20T19:46:03",
+    "dca_levels": [
+      0.216407,
+      0.21505,
+      0.213693,
+      0.211761
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
