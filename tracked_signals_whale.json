@@ -1,0 +1,107 @@
+{
+  "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00": {
+    "symbol": "ETHUSDT",
+    "label": "زخم سيولة الحيتان",
+    "timeframe": "15m",
+    "message_id": 5174,
+    "entry": 1887.6,
+    "stop": 1852.39107143,
+    "init_stop": 1852.39107143,
+    "cur_stop": 1887.6,
+    "legs": [
+      1887.6
+    ],
+    "last_alert_stop": 1852.39107143,
+    "armed": false,
+    "targets": [
+      1891.71,
+      1894.8708
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 11:30:00",
+    "last_bar": "2026-07-20 11:44:59.999000",
+    "hits": [
+      1,
+      2
+    ],
+    "stopped": true,
+    "hi_seen": 1894.88,
+    "lo_seen": 1873.92,
+    "created": "2026-07-20T11:48:16",
+    "exit_price": 1894.8708,
+    "close_card_sent": true,
+    "closed_at": "2026-07-20T11:48:18"
+  },
+  "زخم سيولة الحيتان|LINKUSDT|2026-07-20 11:30:00": {
+    "symbol": "LINKUSDT",
+    "label": "زخم سيولة الحيتان",
+    "timeframe": "15m",
+    "message_id": 5174,
+    "entry": 8.48,
+    "stop": 8.29367857,
+    "init_stop": 8.29367857,
+    "cur_stop": 8.29367857,
+    "legs": [
+      8.48
+    ],
+    "last_alert_stop": 8.29367857,
+    "armed": false,
+    "targets": [
+      8.496,
+      8.536
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 11:30:00",
+    "last_bar": "2026-07-20 11:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 8.494,
+    "lo_seen": 8.407,
+    "created": "2026-07-20T11:48:16"
+  },
+  "زخم سيولة الحيتان|ARBUSDT|2026-07-20 11:30:00": {
+    "symbol": "ARBUSDT",
+    "label": "زخم سيولة الحيتان",
+    "timeframe": "15m",
+    "message_id": 5174,
+    "entry": 0.088,
+    "stop": 0.08577357,
+    "init_stop": 0.08577357,
+    "cur_stop": 0.08577357,
+    "legs": [
+      0.088
+    ],
+    "last_alert_stop": 0.08577357,
+    "armed": false,
+    "targets": [
+      0.0888,
+      0.0889
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 11:30:00",
+    "last_bar": "2026-07-20 11:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0882,
+    "lo_seen": 0.0871,
+    "created": "2026-07-20T11:48:16"
+  }
+}
