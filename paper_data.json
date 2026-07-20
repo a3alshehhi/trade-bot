@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-20T12:21:03",
+  "updated_at": "2026-07-20T12:22:57",
   "stats": {
-    "open": 14,
-    "closed": 83,
-    "win_rate": 63.9,
+    "open": 15,
+    "closed": 82,
+    "win_rate": 63.4,
     "profit_factor": 1.0,
-    "total_pct": -2.14,
+    "total_pct": -2.22,
     "avg_pct": 0.0,
     "max_drawdown_pct": -21.29
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-20",
-        "trades": 9,
-        "win_rate": 88.9,
-        "return_pct": 4.25,
+        "trades": 8,
+        "win_rate": 87.5,
+        "return_pct": 4.16,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -135,9 +135,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 9,
-        "win_rate": 88.9,
-        "return_pct": 4.25,
+        "trades": 8,
+        "win_rate": 87.5,
+        "return_pct": 4.16,
         "month": "2026-07"
       },
       {
@@ -158,9 +158,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 83,
-        "win_rate": 63.9,
-        "return_pct": -2.14
+        "trades": 82,
+        "win_rate": 63.4,
+        "return_pct": -2.22
       }
     ]
   },
@@ -659,11 +659,10 @@
       "hits": [
         1
       ],
-      "status": "closed",
+      "status": "open",
       "opened_at": "2026-07-20T11:48:16",
-      "closed_at": "2026-07-20T12:17:54",
-      "realized_pct": 0.09,
-      "result_pct": 0.09
+      "closed_at": null,
+      "realized_pct": 0.09
     },
     {
       "id": "زخم سيولة الحيتان|ARBUSDT|2026-07-20 11:30:00",
