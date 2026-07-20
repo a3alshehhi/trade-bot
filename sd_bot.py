@@ -966,7 +966,33 @@ WHALE = dict(
     res_lb      = int(os.environ.get("WH_RES_LB", "60")),          # نافذة البحث عن مقاومات/جدران سيولة للأهداف
     vp_lb       = int(os.environ.get("WH_VP_LB", "480")),          # نافذة Volume Profile (~5 أيام على 15د)
     vp_bins     = int(os.environ.get("WH_VP_BINS", "50")),
+    # ── تحديث 2026-07-20 (momentum_project_log): حجم موزّع + كنس سيولة ──
+    dist_ratio  = float(os.environ.get("WH_DIST_RATIO", "1.5")),   # عتبة مضاعف الحجم لعدّ شمعة «مرتفعة»
+    dist_min    = int(os.environ.get("WH_DIST_MIN", "2")),         # أدنى عدد شمعات مرتفعة = حجم موزّع (لا سبايك منفرد)
+    require_distributed = int(os.environ.get("WH_REQUIRE_DIST", "1")),   # اشتراط حجم موزّع (نمط ج: قناعة > سبايك)
+    sweep_lb    = int(os.environ.get("WH_SWEEP_LB", "20")),        # نافذة البحث عن كنس سيولة قبل الاختراق
+    sweep_base  = int(os.environ.get("WH_SWEEP_BASE", "10")),      # نافذة قاع النطاق لتعريف الكنس
+    require_sweep = int(os.environ.get("WH_REQUIRE_SWEEP", "0")),  # اشتراط كنس سيولة (نمط أ) — افتراضي: إبلاغ فقط
 )
+
+
+def _distributed_volume(v, qm, i, window, ratio_min):
+    """عدد الشمعات «المرتفعة» (مضاعف الحجم على القاعدة الهادئة ≥ ratio_min) داخل نافذة الاختراق.
+    حجم موزّع على عدة شمعات = اختراق بقناعة (نمط ج)، أقوى من سبايك حجم منفرد."""
+    if qm <= 0:
+        return 0
+    return sum(1 for k in range(max(0, i - window + 1), i + 1) if v[k] / qm >= ratio_min)
+
+
+def _recent_sweep(l, c, i, lookback, base_lb):
+    """كنس سيولة (شطف ستوبات): شمعة ضمن آخر lookback هبط قاعها تحت أدنى قاع النطاق السابق لها
+    ثم أغلقت فوقه (استرداد). يمثّل المرحلة 3 من «بصمة الحوت الكامل» (نمط أ)."""
+    start = max(base_lb, i - lookback)
+    for j in range(start, i + 1):
+        base_low = min(l[j - base_lb:j])
+        if l[j] < base_low and c[j] > base_low:
+            return True
+    return False
 
 
 def obv(c, v):
@@ -1134,14 +1160,24 @@ def whale_signal(d15, mfi_ctx=None):
     # (4) حجم النافذة الذهبية: معتدل (لا Normal ولا تسارع جمهور)
     if not (W["golden_lo"] <= ratio <= W["golden_hi"]):
         return None
+    # (4ب) حجم موزّع لا سبايك منفرد (نمط ج، تحديث 2026-07-20): الاختراق مدعوم بعدة شمعات حجم مرتفعة
+    n_elev = _distributed_volume(v, qm, i, W["brk_lb"], W["dist_ratio"])
+    distributed = n_elev >= W["dist_min"]
+    if W["require_distributed"] and not distributed:
+        return None
+    # (4ج) كنس سيولة قبل الإشعال (نمط أ «بصمة الحوت»): شطف ستوبات تحت النطاق ثم استرداد
+    swept = _recent_sweep(l, c, i, W["sweep_lb"], W["sweep_base"])
+    if W["require_sweep"] and not swept:
+        return None
     # (5) اختراق مصغّر: الإغلاق يكسر أعلى النطاق السابق
     range_high = max(h[i - W["brk_lb"]:i])
     if not (c[i] > range_high):
         return None
-    # قاع-أعلى محفوظ: قاع آخر brk_lb أعلى من قاع النافذة الأسبق
-    recent_low = min(l[i - W["brk_lb"]:i])
-    prior_low = min(l[i - 2 * W["brk_lb"]:i - W["brk_lb"]]) if i >= 2 * W["brk_lb"] else recent_low
-    if recent_low < prior_low:
+    # قاع-أعلى محفوظ على الإغلاقات (يتحمّل كنس الفتائل: الاسترداد بالإغلاق لا يكسر البنية — نمط أ)
+    recent_low = min(l[i - W["brk_lb"]:i])                 # فتيل: يُستخدم لوضع الوقف (تحت الكنس)
+    recent_clow = min(c[i - W["brk_lb"]:i])                # إغلاق: يُستخدم لفحص البنية
+    prior_clow = min(c[i - 2 * W["brk_lb"]:i - W["brk_lb"]]) if i >= 2 * W["brk_lb"] else recent_clow
+    if recent_clow < prior_clow:
         return None
     # (6) MACD4C أخضر على 15د
     if macd4c_state(hist, i) < 1:
@@ -1180,6 +1216,7 @@ def whale_signal(d15, mfi_ctx=None):
 
     return dict(
         i=i, ts=t[i], sym=None, entry=entry, stop=stop, tp1=tp1, tp2=tp2,
+        distributed=distributed, n_elev=n_elev, swept=swept,
         ratio=round(ratio, 2), z=round(z, 2), vclass=vclass,
         rsi=round(rs21[i], 1), mfi=(round(mfi_ctx, 1) if (mfi_ctx is not None and math.isfinite(mfi_ctx)) else None),
         rel_vol=round(v[i] / vsma, 2), poc=poc, vah=vah, val=val,
@@ -1203,6 +1240,8 @@ def format_message_whale(signals):
             f"🟢 إشارة {DASH_LABEL} — شراء (نافذة ذهبية)",
             f"💎 {s['sym']} · ⏱️ {s.get('tf', CFG['entry_tf'])}",
             f"🐋 حجم الحيتان: {s['vclass']} · ×{s['ratio']} القاعدة الهادئة · z={s['z']} · حجم نسبي ×{s['rel_vol']}",
+            f"🧱 حجم موزّع: {'نعم' if s.get('distributed') else 'لا'} ({s.get('n_elev', 0)} شمعات مرتفعة)"
+            + (" · 🩸 كنس سيولة قبل الاختراق ✓" if s.get('swept') else ""),
             f"📈 RSI21={s['rsi']}" + (f" · MFI(4س)={s['mfi']}" if s.get("mfi") is not None else "")
             + f" · سيولة ~${s['dollar_vol']:,}{room}",
             "",
@@ -1272,7 +1311,8 @@ def scan_whale(basket=None):
                 tp1=round(sig["tp1"], 8), tp2=round(sig["tp2"], 8),
                 ratio=sig["ratio"], z=sig["z"], vclass=sig["vclass"], rsi=sig["rsi"],
                 mfi=sig["mfi"], rel_vol=sig["rel_vol"], poc=sig["poc"],
-                dollar_vol=sig["dollar_vol"]))
+                dollar_vol=sig["dollar_vol"],
+                distributed=sig["distributed"], n_elev=sig["n_elev"], swept=sig["swept"]))
         except Exception as ex:
             print("whale skip", s, ex)
     # ترتيب: الأقرب للنافذة الذهبية المثالية (حجم معتدل عالٍ + مجال للركض)
