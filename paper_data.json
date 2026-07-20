@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-20T13:16:56",
+  "updated_at": "2026-07-20T13:26:20",
   "stats": {
-    "open": 16,
+    "open": 17,
     "closed": 83,
     "win_rate": 63.9,
     "profit_factor": 1.0,
@@ -1631,11 +1631,13 @@
       "timeframe": "15m",
       "entry": 0.213116,
       "stop": 0.2057,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-20T12:37:13",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.08
     },
     {
       "id": "العرض/الطلب|ANKRUSDT|2026-07-20 12:30:00",
@@ -1648,6 +1650,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-20T12:46:12",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ACTUSDT|2026-07-20 12:45:00",
+      "symbol": "ACTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00862238,
+      "stop": 0.00806,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-20T13:01:24",
       "closed_at": null,
       "realized_pct": 0.0
     },
