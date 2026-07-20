@@ -80,9 +80,12 @@ jobs:
           #   فوق الفيواب الأسبوعي/الشهري + OBV صاعد + MACD4C أخضر. رفض قمة التوزيع (Pattern B)
           #   والمطاردة (حجم >×15 أو MFI4س>85) والسوق الرقيق. بلا ML وبلا تنفيذ آلي (إشارات فقط).
           #   فريم القرار 15m دائماً؛ سياق MFI من 4h. تصنيف الحجم على «قاعدة هادئة» (لا نافذة تشمل الانفجار).
-          export SD_LABEL="زخم سيولة الحيتان"
+          # دفتر تتبّع معزول (tracked_signals_whale.json يطابق نمط لوحة المتتبّع) لقياس أدائه لحاله
+          export SD_LABEL="زخم سيولة الحيتان" SD_TRACK=tracked_signals_whale.json
           SD_STRATEGY=whale SD_ENTRY_TF=15m SD_STATE=sd_state_whale_15m.json python sd_bot.py scan
-          unset SD_LABEL
+          # متابعة إشارات الحوت (ورقي فقط — بلا تنفيذ) — إدارة 50/50 + قفل 0.3R + رد تيليجرام + تحديث اللوحة
+          SD_TRACK=tracked_signals_whale.json python trading_bot.py --mode trackmon
+          unset SD_LABEL SD_TRACK
 
           # ── بوت 2: «عرض/طلب+دايفرجنس» — SMA50 + دايفرجنس صعودي MACD يتكوّن تحت SMA50 · بلا ML · بلا MACD4C ──
           # SD_MAX_CHASE_R=0.3: حارس الملاحقة — تخطّي الدخول إن تجاوز السعر الدخول بأكثر من 0.3R
@@ -138,7 +141,7 @@ jobs:
                  tracked_signals.json pending_signals.json tg_offset.json paper_data.json \
                  sd_positions.json sd_ledger.json sd_executed.json sd_last_entry.json \
                  sd_positions_binance.json sd_ledger_binance.json sd_executed_binance.json sd_last_entry_binance.json \
-                 sd_state_whale_15m.json \
+                 sd_state_whale_15m.json tracked_signals_whale.json \
                  sd_state_div_15m.json sd_state_div_1h.json sd_state_div_5m.json \
                  sd_pos_div.json sd_ledger_div.json sd_exec_div.json sd_last_div.json \
                  sd_pos_div_binance.json sd_ledger_div_binance.json sd_exec_div_binance.json sd_last_div_binance.json \
