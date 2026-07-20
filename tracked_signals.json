@@ -1493,13 +1493,13 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-17 20:00:00",
-    "last_bar": "2026-07-20 05:14:59.999000",
+    "last_bar": "2026-07-20 08:44:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 65107.99,
-    "lo_seen": 63681.12574,
+    "lo_seen": 63100.0,
     "created": "2026-07-17T20:16:02",
     "dca_levels": [
       63681.12574,
@@ -1508,7 +1508,10 @@
       62933.55202
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 63681.12574,
+    "close_card_sent": true,
+    "closed_at": "2026-07-20T08:46:06"
   },
   "العرض/الطلب|APTUSDT|2026-07-18 01:45:00": {
     "symbol": "APTUSDT",
@@ -1861,11 +1864,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-18 23:00:00",
-    "last_bar": "2026-07-20 05:14:59.999000",
+    "last_bar": "2026-07-20 08:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.06056,
-    "lo_seen": 0.05801,
+    "lo_seen": 0.05535,
     "created": "2026-07-18T23:16:10",
     "dca_levels": [
       0.05851702,
@@ -2054,7 +2057,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 05:00:00",
-    "last_bar": "2026-07-20 05:14:59.999000",
+    "last_bar": "2026-07-20 08:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 9.65e-06,
@@ -2147,12 +2150,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 13:00:00",
-    "last_bar": "2026-07-20 05:14:59.999000",
+    "last_bar": "2026-07-20 08:44:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 1.1449,
+    "hi_seen": 1.145,
     "lo_seen": 1.1428664,
     "created": "2026-07-19T13:16:02",
     "dca_levels": [
@@ -2231,7 +2234,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 16:30:00",
-    "last_bar": "2026-07-20 05:14:59.999000",
+    "last_bar": "2026-07-20 08:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01971,
@@ -2322,11 +2325,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 04:15:00",
-    "last_bar": "2026-07-20 05:14:59.999000",
+    "last_bar": "2026-07-20 08:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 6.586,
-    "lo_seen": 6.457,
+    "lo_seen": 6.446,
     "created": "2026-07-20T04:31:17",
     "dca_levels": [
       6.551444,
