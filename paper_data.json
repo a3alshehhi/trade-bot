@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-20T21:07:24",
+  "updated_at": "2026-07-20T21:09:37",
   "stats": {
-    "open": 32,
-    "closed": 92,
-    "win_rate": 67.4,
+    "open": 33,
+    "closed": 91,
+    "win_rate": 67.0,
     "profit_factor": 1.16,
-    "total_pct": 11.11,
+    "total_pct": 11.02,
     "avg_pct": 0.14,
     "max_drawdown_pct": -21.29
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-20",
-        "trades": 18,
-        "win_rate": 94.4,
-        "return_pct": 18.36,
+        "trades": 17,
+        "win_rate": 94.1,
+        "return_pct": 18.27,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -135,9 +135,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 18,
-        "win_rate": 94.4,
-        "return_pct": 18.36,
+        "trades": 17,
+        "win_rate": 94.1,
+        "return_pct": 18.27,
         "month": "2026-07"
       },
       {
@@ -158,9 +158,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 92,
-        "win_rate": 67.4,
-        "return_pct": 11.11
+        "trades": 91,
+        "win_rate": 67.0,
+        "return_pct": 11.02
       }
     ]
   },
@@ -1686,11 +1686,10 @@
       "hits": [
         1
       ],
-      "status": "closed",
+      "status": "open",
       "opened_at": "2026-07-19T13:16:02",
-      "closed_at": "2026-07-20T21:01:26",
-      "realized_pct": 0.08,
-      "result_pct": 0.08
+      "closed_at": null,
+      "realized_pct": 0.08
     },
     {
       "id": "عرض/طلب+دايفرجنس|CELRUSDT|2026-07-19 15:00:00",
