@@ -1493,7 +1493,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-17 20:00:00",
-    "last_bar": "2026-07-20 00:59:59.999000",
+    "last_bar": "2026-07-20 05:14:59.999000",
     "hits": [
       1
     ],
@@ -1861,7 +1861,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-18 23:00:00",
-    "last_bar": "2026-07-20 00:59:59.999000",
+    "last_bar": "2026-07-20 05:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.06056,
@@ -2054,11 +2054,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 05:00:00",
-    "last_bar": "2026-07-20 00:59:59.999000",
+    "last_bar": "2026-07-20 05:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 9.65e-06,
-    "lo_seen": 9.41e-06,
+    "lo_seen": 9.37e-06,
     "created": "2026-07-19T05:16:09",
     "dca_levels": [
       9.62e-06,
@@ -2098,13 +2098,13 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 09:15:00",
-    "last_bar": "2026-07-20 00:59:59.999000",
+    "last_bar": "2026-07-20 05:14:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
-    "hi_seen": 0.1225,
-    "lo_seen": 0.1175,
+    "stopped": true,
+    "hi_seen": 0.1227,
+    "lo_seen": 0.117,
     "created": "2026-07-19T09:31:14",
     "dca_levels": [
       0.1179204,
@@ -2113,7 +2113,10 @@
       0.1147692
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.1179204,
+    "close_card_sent": true,
+    "closed_at": "2026-07-20T05:16:09"
   },
   "العرض/الطلب|AEURUSDT|2026-07-19 13:00:00": {
     "symbol": "AEURUSDT",
@@ -2144,7 +2147,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 13:00:00",
-    "last_bar": "2026-07-20 00:59:59.999000",
+    "last_bar": "2026-07-20 05:14:59.999000",
     "hits": [
       1
     ],
@@ -2228,11 +2231,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 16:30:00",
-    "last_bar": "2026-07-20 00:59:59.999000",
+    "last_bar": "2026-07-20 05:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01971,
-    "lo_seen": 0.01915,
+    "lo_seen": 0.0189,
     "created": "2026-07-19T16:46:33",
     "dca_levels": [
       0.01923386,
@@ -2272,11 +2275,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 17:00:00",
-    "last_bar": "2026-07-20 00:59:59.999000",
+    "last_bar": "2026-07-20 05:14:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.102499,
-    "lo_seen": 0.1003,
+    "lo_seen": 0.0989,
     "created": "2026-07-19T17:16:02",
     "dca_levels": [
       0.102499,
@@ -2285,7 +2288,10 @@
       0.100277
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.0991,
+    "close_card_sent": true,
+    "closed_at": "2026-07-20T05:16:11"
   },
   "العرض/الطلب|AVAXUSDT|2026-07-20 04:15:00": {
     "symbol": "AVAXUSDT",
@@ -2316,11 +2322,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 04:15:00",
-    "last_bar": "2026-07-20 04:15:00",
+    "last_bar": "2026-07-20 05:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 6.551444,
-    "lo_seen": 6.551444,
+    "hi_seen": 6.586,
+    "lo_seen": 6.457,
     "created": "2026-07-20T04:31:17",
     "dca_levels": [
       6.551444,
