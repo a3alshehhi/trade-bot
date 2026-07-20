@@ -1864,11 +1864,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-18 23:00:00",
-    "last_bar": "2026-07-20 08:44:59.999000",
+    "last_bar": "2026-07-20 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.06056,
-    "lo_seen": 0.05535,
+    "lo_seen": 0.05487,
     "created": "2026-07-18T23:16:10",
     "dca_levels": [
       0.05851702,
@@ -2057,7 +2057,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 05:00:00",
-    "last_bar": "2026-07-20 08:44:59.999000",
+    "last_bar": "2026-07-20 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 9.65e-06,
@@ -2150,7 +2150,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 13:00:00",
-    "last_bar": "2026-07-20 08:44:59.999000",
+    "last_bar": "2026-07-20 12:59:59.999000",
     "hits": [
       1
     ],
@@ -2234,7 +2234,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 16:30:00",
-    "last_bar": "2026-07-20 08:44:59.999000",
+    "last_bar": "2026-07-20 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01971,
@@ -2325,10 +2325,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 04:15:00",
-    "last_bar": "2026-07-20 08:44:59.999000",
+    "last_bar": "2026-07-20 12:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 6.586,
+    "hi_seen": 6.635,
     "lo_seen": 6.446,
     "created": "2026-07-20T04:31:17",
     "dca_levels": [
@@ -2369,11 +2369,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 11:00:00",
-    "last_bar": "2026-07-20 11:00:00",
+    "last_bar": "2026-07-20 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0239704,
-    "lo_seen": 0.0239704,
+    "lo_seen": 0.02304,
     "created": "2026-07-20T11:16:07",
     "dca_levels": [
       0.0239704,
@@ -2392,14 +2392,14 @@
     "entry": 0.213116,
     "stop": 0.2057,
     "init_stop": 0.2057,
-    "cur_stop": 0.2057,
+    "cur_stop": 0.213116,
     "legs": [
       0.213116,
       0.2117,
       0.210284,
       0.208268
     ],
-    "last_alert_stop": 0.2057,
+    "last_alert_stop": 0.213116,
     "armed": false,
     "targets": [
       0.2177,
@@ -2413,10 +2413,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 12:15:00",
-    "last_bar": "2026-07-20 12:15:00",
-    "hits": [],
+    "last_bar": "2026-07-20 12:59:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.213116,
+    "hi_seen": 0.2178,
     "lo_seen": 0.213116,
     "created": "2026-07-20T12:37:13",
     "dca_levels": [
@@ -2457,17 +2459,61 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 12:30:00",
-    "last_bar": "2026-07-20 12:30:00",
+    "last_bar": "2026-07-20 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0036972,
-    "lo_seen": 0.0036972,
+    "lo_seen": 0.0035,
     "created": "2026-07-20T12:46:12",
     "dca_levels": [
       0.0036972,
       0.00365,
       0.0036028,
       0.0035356
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|ACTUSDT|2026-07-20 12:45:00": {
+    "symbol": "ACTUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5187,
+    "entry": 0.00862238,
+    "stop": 0.00806,
+    "init_stop": 0.00806,
+    "cur_stop": 0.00806,
+    "legs": [
+      0.00862238,
+      0.008515,
+      0.00840762,
+      0.00825474
+    ],
+    "last_alert_stop": 0.00806,
+    "armed": false,
+    "targets": [
+      0.00897,
+      0.00921752
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 12:45:00",
+    "last_bar": "2026-07-20 12:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00862238,
+    "lo_seen": 0.00849,
+    "created": "2026-07-20T13:01:24",
+    "dca_levels": [
+      0.00862238,
+      0.008515,
+      0.00840762,
+      0.00825474
     ],
     "wait_entry": true,
     "max_age_h": 48.0
