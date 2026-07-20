@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-20T16:56:26",
+  "updated_at": "2026-07-20T17:02:12",
   "stats": {
-    "open": 24,
-    "closed": 88,
-    "win_rate": 65.9,
-    "profit_factor": 1.08,
-    "total_pct": 4.41,
+    "open": 26,
+    "closed": 89,
+    "win_rate": 66.3,
+    "profit_factor": 1.09,
+    "total_pct": 5.0,
     "avg_pct": 0.08,
     "max_drawdown_pct": -21.29
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-20",
-        "trades": 14,
-        "win_rate": 92.9,
-        "return_pct": 11.22,
+        "trades": 15,
+        "win_rate": 93.3,
+        "return_pct": 11.86,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -135,9 +135,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 14,
-        "win_rate": 92.9,
-        "return_pct": 11.22,
+        "trades": 15,
+        "win_rate": 93.3,
+        "return_pct": 11.86,
         "month": "2026-07"
       },
       {
@@ -158,9 +158,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 88,
-        "win_rate": 65.9,
-        "return_pct": 4.41
+        "trades": 89,
+        "win_rate": 66.3,
+        "return_pct": 5.0
       }
     ]
   },
@@ -670,7 +670,21 @@
       "stop": 0.00089123,
       "hits": [],
       "status": "open",
-      "opened_at": "2026-07-20T16:54:18",
+      "opened_at": "2026-07-20T16:58:24",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "SD Stable|1000SATSUSDT|2026-07-20 16:00:00",
+      "symbol": "1000SATSUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 9.57e-06,
+      "stop": 9.33e-06,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-20T16:58:24",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -817,6 +831,24 @@
       "opened_at": "2026-07-20T16:24:58",
       "closed_at": null,
       "realized_pct": 0.0
+    },
+    {
+      "id": "زخم سيولة الحيتان|DGBUSDT|2026-07-20 16:30:00",
+      "symbol": "DGBUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00375,
+      "stop": 0.00352371,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T16:48:01",
+      "closed_at": "2026-07-20T16:48:05",
+      "realized_pct": 0.57,
+      "result_pct": 0.57
     },
     {
       "id": "العرض/الطلب|BNTUSDT|2026-07-06 16:00:00",
@@ -1769,11 +1801,13 @@
       "timeframe": "15m",
       "entry": 0.00862238,
       "stop": 0.00806,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-20T13:01:24",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 2.02
     },
     {
       "id": "العرض/الطلب|BMTUSDT|2026-07-20 13:15:00",
@@ -1836,6 +1870,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-20T16:10:30",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "عرض/طلب+دايفرجنس|DASHUSDT|2026-07-20 16:00:00",
+      "symbol": "DASHUSDT",
+      "label": "عرض/طلب+دايفرجنس",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 34.38,
+      "stop": 33.4777,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-20T16:49:45",
       "closed_at": null,
       "realized_pct": 0.0
     },
