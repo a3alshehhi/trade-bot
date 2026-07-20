@@ -1030,7 +1030,7 @@
     "entry": 0.01505,
     "stop": 0.0146906,
     "init_stop": 0.0146906,
-    "cur_stop": 0.0146906,
+    "cur_stop": 0.01505,
     "legs": [
       0.01505,
       0.01501046,
@@ -1052,11 +1052,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 07:15:00",
-    "last_bar": "2026-07-20 07:15:00",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.01505,
+    "last_bar": "2026-07-20 07:59:59.999000",
+    "hits": [
+      1,
+      2
+    ],
+    "stopped": true,
+    "hi_seen": 0.01557,
     "lo_seen": 0.01505,
-    "created": "2026-07-20T07:22:19"
+    "created": "2026-07-20T07:22:19",
+    "exit_price": 0.01548046,
+    "close_card_sent": true,
+    "closed_at": "2026-07-20T08:11:08"
   }
 }
