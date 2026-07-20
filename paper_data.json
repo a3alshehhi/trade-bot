@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-20T15:29:16",
+  "updated_at": "2026-07-20T15:36:43",
   "stats": {
     "open": 17,
-    "closed": 86,
-    "win_rate": 65.1,
-    "profit_factor": 1.02,
-    "total_pct": -0.59,
-    "avg_pct": 0.02,
+    "closed": 87,
+    "win_rate": 65.5,
+    "profit_factor": 1.06,
+    "total_pct": 2.43,
+    "avg_pct": 0.06,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-20",
-        "trades": 12,
-        "win_rate": 91.7,
-        "return_pct": 5.9,
+        "trades": 13,
+        "win_rate": 92.3,
+        "return_pct": 9.12,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -135,9 +135,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 12,
-        "win_rate": 91.7,
-        "return_pct": 5.9,
+        "trades": 13,
+        "win_rate": 92.3,
+        "return_pct": 9.12,
         "month": "2026-07"
       },
       {
@@ -158,9 +158,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 86,
-        "win_rate": 65.1,
-        "return_pct": -0.59
+        "trades": 87,
+        "win_rate": 65.5,
+        "return_pct": 2.43
       }
     ]
   },
@@ -717,6 +717,20 @@
       "closed_at": "2026-07-20T14:03:46",
       "realized_pct": 0.09,
       "result_pct": 0.09
+    },
+    {
+      "id": "زخم سيولة الحيتان|ORDIUSDT|2026-07-20 15:00:00",
+      "symbol": "ORDIUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 3.585,
+      "stop": 3.48330714,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-20T15:21:47",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "العرض/الطلب|CFXUSDT|2026-07-06 15:45:00",
@@ -1700,11 +1714,13 @@
       "timeframe": "15m",
       "entry": 0.01154574,
       "stop": 0.01128,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-20T13:31:11",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.71
     },
     {
       "id": "العرض/الطلب|AIXBTUSDT|2026-07-20 13:45:00",
@@ -1715,12 +1731,14 @@
       "entry": 0.01841744,
       "stop": 0.01775,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-20T14:01:23",
-      "closed_at": null,
-      "realized_pct": 1.12
+      "closed_at": "2026-07-20T15:31:26",
+      "realized_pct": 3.04,
+      "result_pct": 3.04
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",

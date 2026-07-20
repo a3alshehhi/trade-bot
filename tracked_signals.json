@@ -1864,7 +1864,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-18 23:00:00",
-    "last_bar": "2026-07-20 14:44:59.999000",
+    "last_bar": "2026-07-20 15:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.06056,
@@ -2057,7 +2057,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 05:00:00",
-    "last_bar": "2026-07-20 14:44:59.999000",
+    "last_bar": "2026-07-20 15:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 9.65e-06,
@@ -2150,7 +2150,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 13:00:00",
-    "last_bar": "2026-07-20 14:44:59.999000",
+    "last_bar": "2026-07-20 15:29:59.999000",
     "hits": [
       1
     ],
@@ -2234,7 +2234,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-19 16:30:00",
-    "last_bar": "2026-07-20 14:44:59.999000",
+    "last_bar": "2026-07-20 15:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01971,
@@ -2325,7 +2325,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 04:15:00",
-    "last_bar": "2026-07-20 14:44:59.999000",
+    "last_bar": "2026-07-20 15:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 6.635,
@@ -2369,11 +2369,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 11:00:00",
-    "last_bar": "2026-07-20 14:44:59.999000",
+    "last_bar": "2026-07-20 15:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0239704,
-    "lo_seen": 0.02304,
+    "lo_seen": 0.02288,
     "created": "2026-07-20T11:16:07",
     "dca_levels": [
       0.0239704,
@@ -2413,12 +2413,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 12:15:00",
-    "last_bar": "2026-07-20 14:44:59.999000",
+    "last_bar": "2026-07-20 15:29:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.218,
+    "hi_seen": 0.22,
     "lo_seen": 0.213116,
     "created": "2026-07-20T12:37:13",
     "dca_levels": [
@@ -2459,7 +2459,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 12:30:00",
-    "last_bar": "2026-07-20 14:44:59.999000",
+    "last_bar": "2026-07-20 15:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0036972,
@@ -2503,10 +2503,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 12:45:00",
-    "last_bar": "2026-07-20 14:44:59.999000",
+    "last_bar": "2026-07-20 15:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.00862238,
+    "hi_seen": 0.00868,
     "lo_seen": 0.00845,
     "created": "2026-07-20T13:01:24",
     "dca_levels": [
@@ -2526,14 +2526,14 @@
     "entry": 0.01154574,
     "stop": 0.01128,
     "init_stop": 0.01128,
-    "cur_stop": 0.01128,
+    "cur_stop": 0.01154574,
     "legs": [
       0.01154574,
       0.011495,
       0.01144426,
       0.01137202
     ],
-    "last_alert_stop": 0.01128,
+    "last_alert_stop": 0.01154574,
     "armed": false,
     "targets": [
       0.01171,
@@ -2547,10 +2547,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 13:15:00",
-    "last_bar": "2026-07-20 14:44:59.999000",
-    "hits": [],
+    "last_bar": "2026-07-20 15:29:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.01162,
+    "hi_seen": 0.01175,
     "lo_seen": 0.01152,
     "created": "2026-07-20T13:31:11",
     "dca_levels": [
@@ -2591,12 +2593,13 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 13:45:00",
-    "last_bar": "2026-07-20 14:44:59.999000",
+    "last_bar": "2026-07-20 15:29:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.01883,
+    "stopped": true,
+    "hi_seen": 0.01925,
     "lo_seen": 0.01841744,
     "created": "2026-07-20T14:01:23",
     "dca_levels": [
@@ -2606,6 +2609,9 @@
       0.01798112
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.01912376,
+    "close_card_sent": true,
+    "closed_at": "2026-07-20T15:31:26"
   }
 }
