@@ -1,38 +1,4 @@
 {
-  "ADAUSDT": {
-    "symbol": "ADAUSDT",
-    "tf": "15m",
-    "label": "SD Stable",
-    "prob": null,
-    "levels": [
-      0.1659
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 300.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.16686686686720262,
-        "qty": 1797.84043191,
-        "usd": 300.0
-      }
-    ],
-    "avg_entry": 0.16686686686720262,
-    "entry": 0.16686686686720262,
-    "init_stop": 0.16444,
-    "stop": 0.16686686686720262,
-    "R": 0.002426866867202615,
-    "tp1": 0.1673712,
-    "tp2": 0.1680978,
-    "qty": 1797.84043191,
-    "qty_open": 898.92043191,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-19T14:52:43",
-    "msg_id": 5114
-  },
   "ARBUSDT": {
     "symbol": "ARBUSDT",
     "tf": "15m",
