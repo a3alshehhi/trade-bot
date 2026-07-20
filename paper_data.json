@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-20T22:25:11",
+  "updated_at": "2026-07-20T22:37:40",
   "stats": {
-    "open": 32,
-    "closed": 92,
-    "win_rate": 67.4,
-    "profit_factor": 1.16,
-    "total_pct": 11.11,
-    "avg_pct": 0.14,
+    "open": 33,
+    "closed": 93,
+    "win_rate": 67.7,
+    "profit_factor": 1.17,
+    "total_pct": 11.99,
+    "avg_pct": 0.15,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-20",
-        "trades": 18,
-        "win_rate": 94.4,
-        "return_pct": 18.36,
+        "trades": 19,
+        "win_rate": 94.7,
+        "return_pct": 19.3,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -135,9 +135,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 18,
-        "win_rate": 94.4,
-        "return_pct": 18.36,
+        "trades": 19,
+        "win_rate": 94.7,
+        "return_pct": 19.3,
         "month": "2026-07"
       },
       {
@@ -158,9 +158,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 92,
-        "win_rate": 67.4,
-        "return_pct": 11.11
+        "trades": 93,
+        "win_rate": 67.7,
+        "return_pct": 11.99
       }
     ]
   },
@@ -829,10 +829,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-20T15:21:47",
-      "closed_at": null,
-      "realized_pct": 0.79
+      "closed_at": "2026-07-20T22:18:13",
+      "realized_pct": 0.79,
+      "result_pct": 0.79
     },
     {
       "id": "زخم سيولة الحيتان|BTCUSDT|2026-07-20 15:30:00",
@@ -1975,6 +1976,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-20T19:46:03",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|DEXEUSDT|2026-07-20 22:00:00",
+      "symbol": "DEXEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 34.76126,
+      "stop": 31.319,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-20T22:16:04",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ADAUSDT|2026-07-20 22:15:00",
+      "symbol": "ADAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1676834,
+      "stop": 0.1607,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-20T22:31:17",
       "closed_at": null,
       "realized_pct": 0.0
     },
