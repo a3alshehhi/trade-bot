@@ -676,16 +676,29 @@
     "closed_ts": "2026-07-21T09:11:30"
   },
   {
+    "symbol": "DIAUSDT",
+    "tf": "15m",
+    "label": "SD Stable",
+    "entry": 0.10474009,
+    "exit": 0.1052,
+    "qty": 477.3,
+    "pnl_usdt": 0.1193,
+    "pnl_pct": 0.439,
+    "r": 0.247,
+    "reason": "هدف1 (50%)",
+    "closed_ts": "2026-07-21T16:17:29"
+  },
+  {
     "symbol": "AIXBTUSDT",
     "tf": "15m",
     "label": "SD Stable",
     "entry": 0.01938947,
     "exit": 0.01924,
-    "qty": 5157.4,
-    "pnl_usdt": -0.9701,
+    "qty": 0.1,
+    "pnl_usdt": -0.0,
     "pnl_pct": -0.771,
     "r": -0.345,
     "reason": "وقف خسارة",
-    "closed_ts": "2026-07-21T16:13:59"
+    "closed_ts": "2026-07-21T16:19:29"
   }
 ]
