@@ -1000,9 +1000,12 @@ WHALE = dict(
 
 
 def _in_whale_window(ts_ms):
-    """نافذة تجميع الحيتان المتكررة (درس ARKM 7/19–7/21): 12:00–16:00 بتوقيت الإمارات = 08:00–12:00 UTC."""
+    """نافذة تجميع الحيتان (بطلب بو محمد 2026-07-21): فترة واسعة من 12:00 ظهراً بتوقيت الإمارات
+    إلى 08:00 صباح اليوم التالي (تشمل الظهر/المساء/الليل/الفجر). بالإمارات UTC+4 يقابلها UTC:
+    12:00 الإمارات = 08:00 UTC، و08:00 الإمارات = 04:00 UTC → النافذة = ساعة UTC ≥ 8 أو < 4.
+    المستبعَد الوحيد: صباح الإمارات 08:00–12:00 (= 04:00–08:00 UTC)."""
     h = dt.datetime.fromtimestamp(ts_ms / 1000, dt.timezone.utc).hour
-    return 8 <= h < 12
+    return h >= 8 or h < 4
 
 
 def _whale_footprint(v, qm, i, lb, mult):
@@ -1302,7 +1305,7 @@ def format_message_whale(signals):
             + (" · 🩸 كنس سيولة قبل الاختراق ✓" if s.get('swept') else ""),
             (f"🐋 بصمة تجميع مبكر: نعم (قبل ~{s.get('footprint_h')}س)" if s.get('footprint')
              else "🐋 بصمة تجميع مبكر: لا")
-            + (" · ⏰ ضمن نافذة الحيتان (12–16 الإمارات) ✓" if s.get('in_window') else ""),
+            + (" · ⏰ ضمن نافذة الحيتان (12ظ→08ص الإمارات) ✓" if s.get('in_window') else ""),
             f"📈 RSI21={s['rsi']}" + (f" · MFI(4س)={s['mfi']}" if s.get("mfi") is not None else "")
             + f" · سيولة ~${s['dollar_vol']:,}{room}",
             "",
