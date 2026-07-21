@@ -28,6 +28,7 @@ jobs:
       - name: "Run Hunter bot (الوصفة الفائزة: 1س + VWAP أسبوعي + VOL_Z=2)"
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          MIN_TP1_PCT: "1.3"
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           # فحص فريم الساعة فقط (15د خاسرة في الباك-تست) — الافتراضيات الآن 1h/4h/wvwap/vol_z=2
