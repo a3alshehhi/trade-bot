@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-07-21T00:39:20",
+  "updated_at": "2026-07-21T00:51:41",
   "stats": {
     "open": 33,
-    "closed": 94,
-    "win_rate": 67.0,
-    "profit_factor": 1.16,
-    "total_pct": 10.71,
-    "avg_pct": 0.14,
+    "closed": 95,
+    "win_rate": 66.3,
+    "profit_factor": 1.11,
+    "total_pct": 7.25,
+    "avg_pct": 0.1,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-07-21",
+        "trades": 1,
+        "win_rate": 0.0,
+        "return_pct": -3.13,
+        "week": "2026-W30",
+        "month": "2026-07"
+      },
       {
         "key": "2026-07-20",
         "trades": 20,
@@ -135,9 +143,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 20,
-        "win_rate": 90.0,
-        "return_pct": 17.94,
+        "trades": 21,
+        "win_rate": 85.7,
+        "return_pct": 14.25,
         "month": "2026-07"
       },
       {
@@ -158,9 +166,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 94,
-        "win_rate": 67.0,
-        "return_pct": 10.71
+        "trades": 95,
+        "win_rate": 66.3,
+        "return_pct": 7.25
       }
     ]
   },
@@ -908,10 +916,11 @@
       "entry": 1.0033,
       "stop": 0.971855,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-21T00:03:24",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-21T00:48:17",
+      "realized_pct": -3.13,
+      "result_pct": -3.13
     },
     {
       "id": "العرض/الطلب|ALICEUSDT|2026-07-07 07:00:00",
@@ -2002,11 +2011,13 @@
       "timeframe": "15m",
       "entry": 34.76126,
       "stop": 31.319,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-20T22:16:04",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 3.06
     },
     {
       "id": "العرض/الطلب|ADAUSDT|2026-07-20 22:15:00",
@@ -2016,9 +2027,25 @@
       "timeframe": "15m",
       "entry": 0.1676834,
       "stop": 0.1607,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-20T22:38:33",
+      "closed_at": null,
+      "realized_pct": 1.29
+    },
+    {
+      "id": "العرض/الطلب|0GUSDT|2026-07-21 00:30:00",
+      "symbol": "0GUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.175888,
+      "stop": 0.166,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-21T00:46:07",
       "closed_at": null,
       "realized_pct": 0.0
     },
