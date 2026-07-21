@@ -1091,7 +1091,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 09:00:00",
-    "last_bar": "2026-07-20 23:59:59.999000",
+    "last_bar": "2026-07-21 00:59:59.999000",
     "hits": [
       1
     ],
@@ -1126,7 +1126,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 16:00:00",
-    "last_bar": "2026-07-20 23:59:59.999000",
+    "last_bar": "2026-07-21 00:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01983,
@@ -1159,11 +1159,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 16:00:00",
-    "last_bar": "2026-07-20 23:59:59.999000",
+    "last_bar": "2026-07-21 00:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 34.54,
-    "lo_seen": 34.1,
+    "lo_seen": 34.03,
     "created": "2026-07-20T16:39:30"
   },
   "SD Stable|CKBUSDT|2026-07-20 16:00:00": {
@@ -1192,11 +1192,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 16:00:00",
-    "last_bar": "2026-07-20 23:59:59.999000",
+    "last_bar": "2026-07-21 00:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.000916,
-    "lo_seen": 0.000901,
+    "lo_seen": 0.0009,
     "created": "2026-07-20T16:58:24"
   },
   "SD Stable|1000SATSUSDT|2026-07-20 16:00:00": {
@@ -1225,11 +1225,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 16:00:00",
-    "last_bar": "2026-07-20 23:59:59.999000",
+    "last_bar": "2026-07-21 00:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 9.74e-06,
-    "lo_seen": 9.57e-06,
+    "lo_seen": 9.51e-06,
     "created": "2026-07-20T16:58:24"
   },
   "SD Stable|DEXEUSDT|2026-07-20 19:00:00": {
@@ -1261,14 +1261,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 19:00:00",
-    "last_bar": "2026-07-21 00:44:59.999000",
+    "last_bar": "2026-07-21 00:59:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 37.442,
+    "stopped": true,
+    "hi_seen": 37.766,
     "lo_seen": 35.344,
-    "created": "2026-07-20T19:08:07"
+    "created": "2026-07-20T19:08:07",
+    "exit_price": 37.676406,
+    "close_card_sent": true,
+    "closed_at": "2026-07-21T01:10:52"
   },
   "SD Stable|ADXUSDT|2026-07-20 19:00:00": {
     "symbol": "ADXUSDT",
@@ -1296,7 +1300,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 19:00:00",
-    "last_bar": "2026-07-20 23:59:59.999000",
+    "last_bar": "2026-07-21 00:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0592,
