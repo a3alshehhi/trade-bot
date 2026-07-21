@@ -33,40 +33,6 @@
     "opened_ts": "2026-07-20T16:04:18",
     "msg_id": 5219
   },
-  "DASHUSDT": {
-    "symbol": "DASHUSDT",
-    "tf": "1h",
-    "label": "SD Stable",
-    "prob": null,
-    "levels": [
-      34.38
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 34.50537749055501,
-        "qty": 2.898099,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 34.50537749055501,
-    "entry": 34.50537749055501,
-    "init_stop": 33.4777,
-    "stop": 34.81368073772152,
-    "R": 1.0276774905550141,
-    "tp1": 34.85656,
-    "tp2": 35.19564,
-    "qty": 2.898099,
-    "qty_open": 1.4490990000000001,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-20T16:41:18",
-    "msg_id": 5228
-  },
   "1000SATSUSDT": {
     "symbol": "1000SATSUSDT",
     "tf": "1h",
