@@ -990,7 +990,32 @@ WHALE = dict(
     sweep_lb    = int(os.environ.get("WH_SWEEP_LB", "20")),        # نافذة البحث عن كنس سيولة قبل الاختراق
     sweep_base  = int(os.environ.get("WH_SWEEP_BASE", "10")),      # نافذة قاع النطاق لتعريف الكنس
     require_sweep = int(os.environ.get("WH_REQUIRE_SWEEP", "0")),  # اشتراط كنس سيولة (نمط أ) — افتراضي: إبلاغ فقط
+    # ── تحديث 2026-07-21 (جلسة الزخم البحثي — دروس ARKM): رفض الحركة المنتهية + بصمة تجميع مبكر ──
+    reject_exhausted = int(os.environ.get("WH_REJECT_EXHAUSTED", "1")),  # رفض الاندفاع المنتهي (سبايك عمودي مضى)
+    exhaust_lb  = int(os.environ.get("WH_EXHAUST_LB", "16")),      # نافذة فحص السبايك العمودي المنتهي (4س على 15د)
+    footprint_mult = float(os.environ.get("WH_FOOTPRINT_MULT", "12")),  # مضاعف حجم «بصمة حوت» (تجميع مبكر)
+    footprint_lb   = int(os.environ.get("WH_FOOTPRINT_LB", "192")),     # نافذة البحث عن البصمة (48س على 15د)
+    require_footprint = int(os.environ.get("WH_REQUIRE_FOOTPRINT", "0")),  # اشتراط بصمة تجميع سابقة — افتراضي: إبلاغ
 )
+
+
+def _in_whale_window(ts_ms):
+    """نافذة تجميع الحيتان المتكررة (درس ARKM 7/19–7/21): 12:00–16:00 بتوقيت الإمارات = 08:00–12:00 UTC."""
+    h = dt.datetime.fromtimestamp(ts_ms / 1000, dt.timezone.utc).hour
+    return 8 <= h < 12
+
+
+def _whale_footprint(v, qm, i, lb, mult):
+    """يبحث عن "بصمة حوت" (حجم ≥ mult×القاعدة الهادئة) خلال آخر lb شمعة قبل i = تجميع مبكر (24–48س
+    قبل الاندفاع). المبدأ: الحوت يجمّع بهدوء قبل الصعود بيوم/يومين، والحجم يفضحه. اصطياد المُجمَّع
+    أمس لا مطاردة الصاعد اليوم. يعيد (found, bars_ago) لأحدث بصمة، أو (False, None)."""
+    if qm <= 0:
+        return False, None
+    start = max(0, i - lb)
+    for j in range(i - 1, start - 1, -1):     # الأحدث أولاً
+        if v[j] / qm >= mult:
+            return True, i - j
+    return False, None
 
 
 def _distributed_volume(v, qm, i, window, ratio_min):
@@ -1186,6 +1211,16 @@ def whale_signal(d15, mfi_ctx=None):
     swept = _recent_sweep(l, c, i, W["sweep_lb"], W["sweep_base"])
     if W["require_sweep"] and not swept:
         return None
+    # (4د) رفض الحركة المنتهية (درس ARKM 2026-07-21): سبايك عمودي (≥ عتبة المطاردة) وقع في النافذة
+    # القريبة = الاندفاع مضى، والزخم الحالي ذيلٌ لا مقدمة. لا مطاردة ذيول الحركات المنتهية.
+    if W["reject_exhausted"] and i >= W["exhaust_lb"]:
+        recent_max = max(v[k] / qm for k in range(i - W["exhaust_lb"], i))
+        if recent_max >= W["chase_ratio"]:
+            return None
+    # (4هـ) بصمة تجميع مبكر (24–48س): هل جمّع حوتٌ بهدوء قبل الاندفاع؟ (اصطياد المُجمَّع أمس)
+    footprint, fp_bars = _whale_footprint(v, qm, i, W["footprint_lb"], W["footprint_mult"])
+    if W["require_footprint"] and not footprint:
+        return None
     # (5) اختراق مصغّر: الإغلاق يكسر أعلى النطاق السابق
     range_high = max(h[i - W["brk_lb"]:i])
     if not (c[i] > range_high):
@@ -1238,6 +1273,8 @@ def whale_signal(d15, mfi_ctx=None):
     return dict(
         i=i, ts=t[i], sym=None, entry=entry, stop=stop, tp1=tp1, tp2=tp2,
         distributed=distributed, n_elev=n_elev, swept=swept,
+        footprint=footprint, footprint_h=(round(fp_bars / 4.0, 1) if fp_bars else None),
+        in_window=_in_whale_window(t[i]),
         ratio=round(ratio, 2), z=round(z, 2), vclass=vclass,
         rsi=round(rs21[i], 1), mfi=(round(mfi_ctx, 1) if (mfi_ctx is not None and math.isfinite(mfi_ctx)) else None),
         rel_vol=round(v[i] / vsma, 2), poc=poc, vah=vah, val=val,
@@ -1263,6 +1300,9 @@ def format_message_whale(signals):
             f"🐋 حجم الحيتان: {s['vclass']} · ×{s['ratio']} القاعدة الهادئة · z={s['z']} · حجم نسبي ×{s['rel_vol']}",
             f"🧱 حجم موزّع: {'نعم' if s.get('distributed') else 'لا'} ({s.get('n_elev', 0)} شمعات مرتفعة)"
             + (" · 🩸 كنس سيولة قبل الاختراق ✓" if s.get('swept') else ""),
+            (f"🐋 بصمة تجميع مبكر: نعم (قبل ~{s.get('footprint_h')}س)" if s.get('footprint')
+             else "🐋 بصمة تجميع مبكر: لا")
+            + (" · ⏰ ضمن نافذة الحيتان (12–16 الإمارات) ✓" if s.get('in_window') else ""),
             f"📈 RSI21={s['rsi']}" + (f" · MFI(4س)={s['mfi']}" if s.get("mfi") is not None else "")
             + f" · سيولة ~${s['dollar_vol']:,}{room}",
             "",
@@ -1335,7 +1375,8 @@ def scan_whale(basket=None):
                 ratio=sig["ratio"], z=sig["z"], vclass=sig["vclass"], rsi=sig["rsi"],
                 mfi=sig["mfi"], rel_vol=sig["rel_vol"], poc=sig["poc"],
                 dollar_vol=sig["dollar_vol"],
-                distributed=sig["distributed"], n_elev=sig["n_elev"], swept=sig["swept"]))
+                distributed=sig["distributed"], n_elev=sig["n_elev"], swept=sig["swept"],
+                footprint=sig["footprint"], footprint_h=sig["footprint_h"], in_window=sig["in_window"]))
         except Exception as ex:
             print("whale skip", s, ex)
     # ترتيب: الأقرب للنافذة الذهبية المثالية (حجم معتدل عالٍ + مجال للركض)
