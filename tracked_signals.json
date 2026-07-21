@@ -3162,5 +3162,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|ASTRUSDT|2026-07-21 08:00:00": {
+    "symbol": "ASTRUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5306,
+    "entry": 0.00519236,
+    "stop": 0.004981,
+    "init_stop": 0.004981,
+    "cur_stop": 0.004981,
+    "legs": [
+      0.00519236,
+      0.005152,
+      0.00511164,
+      0.00505419
+    ],
+    "last_alert_stop": 0.004981,
+    "armed": false,
+    "targets": [
+      0.005323,
+      0.00541602
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-21 08:00:00",
+    "last_bar": "2026-07-21 08:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00519236,
+    "lo_seen": 0.00519236,
+    "created": "2026-07-21T08:16:05",
+    "dca_levels": [
+      0.00519236,
+      0.005152,
+      0.00511164,
+      0.00505419
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
