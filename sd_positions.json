@@ -99,40 +99,6 @@
     "opened_ts": "2026-07-20T12:46:30",
     "msg_id": 5183
   },
-  "ORDIUSDT": {
-    "symbol": "ORDIUSDT",
-    "tf": "15m",
-    "label": "زخم سيولة الحيتان",
-    "prob": null,
-    "levels": [
-      3.585
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 300.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 3.5875875878327457,
-        "qty": 83.62165178,
-        "usd": 300.0
-      }
-    ],
-    "avg_entry": 3.5875875878327457,
-    "entry": 3.5875875878327457,
-    "init_stop": 3.48330714,
-    "stop": 3.615507858,
-    "R": 0.1042804478327457,
-    "tp1": 3.642,
-    "tp2": 3.69956,
-    "qty": 83.62165178,
-    "qty_open": 41.81165177999999,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-20T15:21:58",
-    "msg_id": 5209
-  },
   "BTCUSDT": {
     "symbol": "BTCUSDT",
     "tf": "15m",

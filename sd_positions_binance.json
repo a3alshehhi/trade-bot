@@ -359,40 +359,6 @@
     "opened_ts": "2026-07-20T13:03:39",
     "msg_id": 5188
   },
-  "ORDIUSDT": {
-    "symbol": "ORDIUSDT",
-    "tf": "15m",
-    "label": "زخم سيولة الحيتان",
-    "prob": null,
-    "levels": [
-      3.585
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 3.5891036249587702,
-        "qty": 27.86211,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 3.5891036249587702,
-    "entry": 3.5891036249587702,
-    "init_stop": 3.48330714,
-    "stop": 3.615507858,
-    "R": 0.10579648495877025,
-    "tp1": 3.642,
-    "tp2": 3.69956,
-    "qty": 27.86211,
-    "qty_open": 13.932110000000002,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-20T15:24:38",
-    "msg_id": 5211
-  },
   "BTCUSDT": {
     "symbol": "BTCUSDT",
     "tf": "15m",
@@ -460,5 +426,45 @@
     "armed": false,
     "opened_ts": "2026-07-20T17:50:53",
     "msg_id": 5239
+  },
+  "CHZUSDT": {
+    "symbol": "CHZUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.01523464,
+      0.01506,
+      0.01488536,
+      0.01463672
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 25.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.015166681833348501,
+        "qty": 1648.35,
+        "usd": 25.0
+      }
+    ],
+    "avg_entry": 0.015166681833348501,
+    "entry": 0.015166681833348501,
+    "init_stop": 0.01432,
+    "stop": 0.01432,
+    "R": 0.0008466818333485015,
+    "tp1": 0.0158,
+    "tp2": 0.01620256,
+    "qty": 1648.35,
+    "qty_open": 1648.35,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-21T02:19:28",
+    "msg_id": 5273
   }
 }
