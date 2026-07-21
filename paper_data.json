@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-21T17:22:26",
+  "updated_at": "2026-07-21T17:24:48",
   "stats": {
-    "open": 36,
-    "closed": 113,
-    "win_rate": 69.9,
+    "open": 35,
+    "closed": 114,
+    "win_rate": 70.2,
     "profit_factor": 1.45,
-    "total_pct": 42.74,
-    "avg_pct": 0.34,
+    "total_pct": 43.52,
+    "avg_pct": 0.35,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-21",
-        "trades": 19,
-        "win_rate": 84.2,
-        "return_pct": 28.93,
+        "trades": 20,
+        "win_rate": 85.0,
+        "return_pct": 29.64,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -143,9 +143,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 39,
-        "win_rate": 87.2,
-        "return_pct": 52.06,
+        "trades": 40,
+        "win_rate": 87.5,
+        "return_pct": 52.9,
         "month": "2026-07"
       },
       {
@@ -166,9 +166,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 113,
-        "win_rate": 69.9,
-        "return_pct": 42.74
+        "trades": 114,
+        "win_rate": 70.2,
+        "return_pct": 43.52
       }
     ]
   },
@@ -836,10 +836,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-21T14:08:56",
-      "closed_at": null,
-      "realized_pct": 0.55
+      "closed_at": "2026-07-21T17:24:47",
+      "realized_pct": 0.55,
+      "result_pct": 0.55
     },
     {
       "id": "SD Stable|AIXBTUSDT|2026-07-21 15:45:00",
