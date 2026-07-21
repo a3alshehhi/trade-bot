@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-21T06:52:44",
+  "updated_at": "2026-07-21T06:54:59",
   "stats": {
-    "open": 34,
-    "closed": 104,
-    "win_rate": 69.2,
-    "profit_factor": 1.43,
-    "total_pct": 39.23,
-    "avg_pct": 0.35,
+    "open": 35,
+    "closed": 102,
+    "win_rate": 68.6,
+    "profit_factor": 1.35,
+    "total_pct": 30.28,
+    "avg_pct": 0.29,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-21",
-        "trades": 10,
-        "win_rate": 90.0,
-        "return_pct": 25.76,
+        "trades": 8,
+        "win_rate": 87.5,
+        "return_pct": 17.68,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -143,9 +143,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 30,
-        "win_rate": 90.0,
-        "return_pct": 48.32,
+        "trades": 28,
+        "win_rate": 89.3,
+        "return_pct": 38.79,
         "month": "2026-07"
       },
       {
@@ -166,9 +166,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 104,
-        "win_rate": 69.2,
-        "return_pct": 39.23
+        "trades": 102,
+        "win_rate": 68.6,
+        "return_pct": 30.28
       }
     ]
   },
@@ -1017,22 +1017,6 @@
       "opened_at": "2026-07-21T06:03:38",
       "closed_at": null,
       "realized_pct": 0.0
-    },
-    {
-      "id": "زخم سيولة الحيتان|ZECUSDT|2026-07-21 06:30:00",
-      "symbol": "ZECUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 553.36,
-      "stop": 544.37735714,
-      "hits": [
-        1
-      ],
-      "status": "open",
-      "opened_at": "2026-07-21T06:48:50",
-      "closed_at": null,
-      "realized_pct": 0.05
     },
     {
       "id": "العرض/الطلب|ALICEUSDT|2026-07-07 07:00:00",
@@ -2100,14 +2084,12 @@
       "entry": 1889.50236,
       "stop": 1843.14,
       "hits": [
-        1,
-        2
+        1
       ],
-      "status": "closed",
+      "status": "open",
       "opened_at": "2026-07-20T19:16:12",
-      "closed_at": "2026-07-21T06:46:27",
-      "realized_pct": 2.06,
-      "result_pct": 2.06
+      "closed_at": null,
+      "realized_pct": 0.76
     },
     {
       "id": "العرض/الطلب|API3USDT|2026-07-20 19:30:00",
@@ -2171,14 +2153,12 @@
       "entry": 0.175888,
       "stop": 0.166,
       "hits": [
-        1,
-        2
+        1
       ],
-      "status": "closed",
+      "status": "open",
       "opened_at": "2026-07-21T00:46:07",
-      "closed_at": "2026-07-21T06:46:28",
-      "realized_pct": 4.71,
-      "result_pct": 4.71
+      "closed_at": null,
+      "realized_pct": 1.74
     },
     {
       "id": "العرض/الطلب|AWEUSDT|2026-07-21 03:15:00",
