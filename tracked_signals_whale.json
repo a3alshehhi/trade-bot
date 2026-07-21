@@ -256,12 +256,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 15:30:00",
-    "last_bar": "2026-07-21 12:29:59.999000",
+    "last_bar": "2026-07-21 12:59:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 66497.91,
+    "hi_seen": 66640.0,
     "lo_seen": 64802.41,
     "created": "2026-07-20T15:48:23"
   },
@@ -273,11 +273,11 @@
     "entry": 1.1126,
     "stop": 1.08484643,
     "init_stop": 1.08484643,
-    "cur_stop": 1.08484643,
+    "cur_stop": 1.1126,
     "legs": [
       1.1126
     ],
-    "last_alert_stop": 1.08484643,
+    "last_alert_stop": 1.1126,
     "armed": false,
     "targets": [
       1.14035357,
@@ -291,10 +291,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 15:45:00",
-    "last_bar": "2026-07-21 12:29:59.999000",
-    "hits": [],
+    "last_bar": "2026-07-21 12:59:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 1.1396,
+    "hi_seen": 1.1418,
     "lo_seen": 1.1069,
     "created": "2026-07-20T16:08:25"
   },
@@ -437,11 +439,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 05:45:00",
-    "last_bar": "2026-07-21 12:29:59.999000",
+    "last_bar": "2026-07-21 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.08184,
-    "lo_seen": 0.08042,
+    "lo_seen": 0.0804,
     "created": "2026-07-21T06:03:38"
   },
   "زخم سيولة الحيتان|ZECUSDT|2026-07-21 06:30:00": {
