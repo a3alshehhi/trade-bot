@@ -1625,5 +1625,42 @@
     "exit_price": 0.0189563,
     "close_card_sent": true,
     "closed_at": "2026-07-21T18:02:53"
+  },
+  "SD Stable|BIOUSDT|2026-07-21 21:15:00": {
+    "symbol": "BIOUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 5357,
+    "entry": 0.02641,
+    "stop": 0.0259233,
+    "init_stop": 0.0259233,
+    "cur_stop": 0.0259233,
+    "legs": [
+      0.02641,
+      0.02636698,
+      0.026295,
+      0.02622302,
+      0.02612054
+    ],
+    "last_alert_stop": 0.0259233,
+    "armed": false,
+    "targets": [
+      0.02676592,
+      0.02697698
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-21 21:15:00",
+    "last_bar": "2026-07-21 21:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.02641,
+    "lo_seen": 0.02641,
+    "created": "2026-07-21T21:22:31"
   }
 }

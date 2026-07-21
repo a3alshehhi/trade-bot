@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-21T21:21:34",
+  "updated_at": "2026-07-21T21:25:10",
   "stats": {
-    "open": 27,
-    "closed": 123,
-    "win_rate": 70.7,
-    "profit_factor": 1.55,
-    "total_pct": 58.43,
-    "avg_pct": 0.4,
+    "open": 30,
+    "closed": 121,
+    "win_rate": 70.2,
+    "profit_factor": 1.52,
+    "total_pct": 53.57,
+    "avg_pct": 0.38,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-21",
-        "trades": 29,
-        "win_rate": 82.8,
-        "return_pct": 43.11,
+        "trades": 27,
+        "win_rate": 81.5,
+        "return_pct": 38.71,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -143,9 +143,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 49,
-        "win_rate": 85.7,
-        "return_pct": 68.78,
+        "trades": 47,
+        "win_rate": 85.1,
+        "return_pct": 63.6,
         "month": "2026-07"
       },
       {
@@ -166,9 +166,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 123,
-        "win_rate": 70.7,
-        "return_pct": 58.43
+        "trades": 121,
+        "win_rate": 70.2,
+        "return_pct": 53.57
       }
     ]
   },
@@ -859,6 +859,20 @@
       "closed_at": "2026-07-21T18:02:53",
       "realized_pct": -1.11,
       "result_pct": -1.11
+    },
+    {
+      "id": "SD Stable|BIOUSDT|2026-07-21 21:15:00",
+      "symbol": "BIOUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.02641,
+      "stop": 0.0259233,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-21T21:22:31",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
@@ -1907,11 +1921,10 @@
       "hits": [
         1
       ],
-      "status": "closed",
+      "status": "open",
       "opened_at": "2026-07-20T04:31:17",
-      "closed_at": "2026-07-21T21:16:09",
-      "realized_pct": 0.75,
-      "result_pct": 0.75
+      "closed_at": null,
+      "realized_pct": 0.75
     },
     {
       "id": "العرض/الطلب|CTSIUSDT|2026-07-20 11:00:00",
@@ -2116,14 +2129,12 @@
       "entry": 0.02569542,
       "stop": 0.02496,
       "hits": [
-        1,
-        2
+        1
       ],
-      "status": "closed",
+      "status": "open",
       "opened_at": "2026-07-20T19:01:12",
-      "closed_at": "2026-07-21T21:16:13",
-      "realized_pct": 2.4,
-      "result_pct": 2.4
+      "closed_at": null,
+      "realized_pct": 0.88
     },
     {
       "id": "العرض/الطلب|ETHUSDT|2026-07-20 19:00:00",
