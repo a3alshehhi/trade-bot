@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-21T21:07:14",
+  "updated_at": "2026-07-21T21:21:34",
   "stats": {
-    "open": 29,
-    "closed": 121,
-    "win_rate": 70.2,
-    "profit_factor": 1.52,
-    "total_pct": 53.57,
-    "avg_pct": 0.38,
+    "open": 27,
+    "closed": 123,
+    "win_rate": 70.7,
+    "profit_factor": 1.55,
+    "total_pct": 58.43,
+    "avg_pct": 0.4,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-21",
-        "trades": 27,
-        "win_rate": 81.5,
-        "return_pct": 38.71,
+        "trades": 29,
+        "win_rate": 82.8,
+        "return_pct": 43.11,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -143,9 +143,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 47,
-        "win_rate": 85.1,
-        "return_pct": 63.6,
+        "trades": 49,
+        "win_rate": 85.7,
+        "return_pct": 68.78,
         "month": "2026-07"
       },
       {
@@ -166,9 +166,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 121,
-        "win_rate": 70.2,
-        "return_pct": 53.57
+        "trades": 123,
+        "win_rate": 70.7,
+        "return_pct": 58.43
       }
     ]
   },
@@ -1907,10 +1907,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-20T04:31:17",
-      "closed_at": null,
-      "realized_pct": 0.75
+      "closed_at": "2026-07-21T21:16:09",
+      "realized_pct": 0.75,
+      "result_pct": 0.75
     },
     {
       "id": "العرض/الطلب|CTSIUSDT|2026-07-20 11:00:00",
@@ -2115,12 +2116,14 @@
       "entry": 0.02569542,
       "stop": 0.02496,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-20T19:01:12",
-      "closed_at": null,
-      "realized_pct": 0.88
+      "closed_at": "2026-07-21T21:16:13",
+      "realized_pct": 2.4,
+      "result_pct": 2.4
     },
     {
       "id": "العرض/الطلب|ETHUSDT|2026-07-20 19:00:00",
