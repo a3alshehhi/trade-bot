@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-21T15:52:36",
+  "updated_at": "2026-07-21T15:56:43",
   "stats": {
-    "open": 36,
+    "open": 37,
     "closed": 112,
     "win_rate": 70.5,
     "profit_factor": 1.47,
@@ -836,6 +836,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-21T14:08:56",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "SD Stable|AIXBTUSDT|2026-07-21 15:45:00",
+      "symbol": "AIXBTUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01917,
+      "stop": 0.0189563,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-21T15:53:39",
       "closed_at": null,
       "realized_pct": 0.0
     },

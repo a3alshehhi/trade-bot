@@ -1575,5 +1575,40 @@
     "hi_seen": 0.1039,
     "lo_seen": 0.1039,
     "created": "2026-07-21T14:08:56"
+  },
+  "SD Stable|AIXBTUSDT|2026-07-21 15:45:00": {
+    "symbol": "AIXBTUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 5334,
+    "entry": 0.01917,
+    "stop": 0.0189563,
+    "init_stop": 0.0189563,
+    "cur_stop": 0.0189563,
+    "legs": [
+      0.01917,
+      0.01915662,
+      0.01908774
+    ],
+    "last_alert_stop": 0.0189563,
+    "armed": false,
+    "targets": [
+      0.01952152,
+      0.01966338
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-21 15:45:00",
+    "last_bar": "2026-07-21 15:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01917,
+    "lo_seen": 0.01917,
+    "created": "2026-07-21T15:53:39"
   }
 }

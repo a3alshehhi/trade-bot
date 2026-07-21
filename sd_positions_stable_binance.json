@@ -168,5 +168,39 @@
     "armed": false,
     "opened_ts": "2026-07-21T14:11:38",
     "msg_id": 5325
+  },
+  "AIXBTUSDT": {
+    "symbol": "AIXBTUSDT",
+    "tf": "15m",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.01917
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.01938947431528689,
+        "qty": 5157.4374,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.01938947431528689,
+    "entry": 0.01938947431528689,
+    "init_stop": 0.0189563,
+    "stop": 0.019457434519806385,
+    "R": 0.0004331743152868918,
+    "tp1": 0.01952152,
+    "tp2": 0.01966338,
+    "qty": 5157.4374,
+    "qty_open": 5157.4374,
+    "tp1_done": false,
+    "armed": true,
+    "opened_ts": "2026-07-21T15:56:36",
+    "msg_id": 5336
   }
 }
