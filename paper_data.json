@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-21T06:24:28",
+  "updated_at": "2026-07-21T06:36:46",
   "stats": {
-    "open": 34,
+    "open": 35,
     "closed": 102,
     "win_rate": 68.6,
     "profit_factor": 1.35,
@@ -2189,6 +2189,22 @@
       "opened_at": "2026-07-21T06:01:16",
       "closed_at": null,
       "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ARPAUSDT|2026-07-21 06:15:00",
+      "symbol": "ARPAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00831922,
+      "stop": 0.00814,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "opened_at": "2026-07-21T06:31:15",
+      "closed_at": null,
+      "realized_pct": 0.67
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
