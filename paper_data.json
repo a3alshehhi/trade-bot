@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-21T05:25:17",
+  "updated_at": "2026-07-21T05:37:26",
   "stats": {
-    "open": 34,
-    "closed": 99,
-    "win_rate": 67.7,
-    "profit_factor": 1.25,
-    "total_pct": 20.63,
-    "avg_pct": 0.22,
+    "open": 32,
+    "closed": 101,
+    "win_rate": 68.3,
+    "profit_factor": 1.33,
+    "total_pct": 28.27,
+    "avg_pct": 0.28,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-21",
-        "trades": 5,
-        "win_rate": 80.0,
-        "return_pct": 8.96,
+        "trades": 7,
+        "win_rate": 85.7,
+        "return_pct": 15.86,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -143,9 +143,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 25,
-        "win_rate": 88.0,
-        "return_pct": 28.5,
+        "trades": 27,
+        "win_rate": 88.9,
+        "return_pct": 36.64,
         "month": "2026-07"
       },
       {
@@ -166,9 +166,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 99,
-        "win_rate": 67.7,
-        "return_pct": 20.63
+        "trades": 101,
+        "win_rate": 68.3,
+        "return_pct": 28.27
       }
     ]
   },
@@ -2068,12 +2068,14 @@
       "entry": 0.216407,
       "stop": 0.2093,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-20T19:46:03",
-      "closed_at": null,
-      "realized_pct": 1.01
+      "closed_at": "2026-07-21T05:31:23",
+      "realized_pct": 2.75,
+      "result_pct": 2.75
     },
     {
       "id": "العرض/الطلب|DEXEUSDT|2026-07-20 22:00:00",
@@ -2101,12 +2103,14 @@
       "entry": 0.1676834,
       "stop": 0.1607,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-20T22:38:33",
-      "closed_at": null,
-      "realized_pct": 1.29
+      "closed_at": "2026-07-21T05:16:19",
+      "realized_pct": 3.49,
+      "result_pct": 3.49
     },
     {
       "id": "العرض/الطلب|0GUSDT|2026-07-21 00:30:00",
