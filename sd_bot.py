@@ -154,6 +154,21 @@ ML_KEYS = ["strength", "heightATR", "baseVolZ", "touchVolZ", "bos", "choch", "rs
 TG_TOKEN = os.environ.get("TELEGRAM_TOKEN", os.environ.get("TG_TOKEN", ""))
 TG_CHAT = os.environ.get("TELEGRAM_CHAT_ID", os.environ.get("TG_CHAT", ""))
 
+# ═══ قاعدة رئيسية دائمة (طلب بو محمد 2026-07-20) ═══
+# أي صفقة يكون هدفها الأول (TP1) أقرب من 1% من سعر الدخول تُلغى ولا يُدخل فيها نهائياً
+# لأنها غير مجدية (الربح المحتمل لا يغطّي العمولات والمخاطرة). تُطبَّق على كل البوتات.
+MIN_TP1_PCT = float(os.environ.get("MIN_TP1_PCT", "1.0"))
+
+def tp1_too_close(entry, tp1):
+    """True إذا كان الهدف الأول أقرب من الحد الأدنى (%) ← ترفض الإشارة."""
+    try:
+        entry = float(entry); tp1 = float(tp1)
+        if entry <= 0:
+            return False
+        return abs(tp1 - entry) / entry * 100.0 < MIN_TP1_PCT
+    except Exception:
+        return False
+
 # سجل المتتبّع المشترك: نكتب فيه إشاراتنا لتظهر وتُتابَع في اللوحة مثل بقية البوتات.
 # (يتابعها trackmon في reversal.yml كل 15 دقيقة ويُصدّر paper_data.json للوحة)
 TRACK_FILE = os.environ.get("SD_TRACK", "tracked_signals.json")  # ملف التتبّع (قابل للعزل لكل بوت عبر SD_TRACK)
@@ -704,6 +719,8 @@ def scan(basket=None):
                 if prob < CFG["ml_threshold"]:
                     continue
                 entry, stop = st["entry"], st["stop"]
+                if tp1_too_close(entry, st["tp1"]):   # هدف أول < 1% ← إلغاء الصفقة
+                    continue
                 signals.append(dict(key=key, sym=s, prob=round(float(prob), 3),
                     tf=CFG["entry_tf"],
                     entry=round(entry, 8), stop=round(stop, 8),
@@ -1214,6 +1231,10 @@ def whale_signal(d15, mfi_ctx=None):
         tp1 = vah if (vah and vah > entry) else entry + (entry - stop)
         tp2 = tp1 + (tp1 - stop)
 
+    # قاعدة دائمة (بو محمد): لا دخول إذا كان الهدف الأول أقرب من MIN_TP1_PCT (=1% افتراضياً)
+    if tp1_too_close(entry, tp1):
+        return None
+
     return dict(
         i=i, ts=t[i], sym=None, entry=entry, stop=stop, tp1=tp1, tp2=tp2,
         distributed=distributed, n_elev=n_elev, swept=swept,
@@ -1302,6 +1323,8 @@ def scan_whale(basket=None):
                 continue
             key = f"{s}:{sig['ts']}"
             if key in sent:
+                continue
+            if tp1_too_close(sig["entry"], sig["tp1"]):   # هدف أول < 1% ← إلغاء الصفقة
                 continue
             sig["sym"] = s
             signals.append(dict(
@@ -1472,6 +1495,8 @@ def scan_vwave(basket=None):
                 continue
             key = f"{s}:{sig['ts']}"                     # منع تكرار نفس الإشارة
             if key in sent:
+                continue
+            if tp1_too_close(sig["levels"][0], sig["tp1"]):   # هدف أول < 1% ← إلغاء الصفقة
                 continue
             levels = [round(p, 8) for p in sig["levels"]]
             signals.append(dict(
