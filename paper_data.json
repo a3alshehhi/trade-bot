@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-21T19:24:37",
+  "updated_at": "2026-07-21T19:36:38",
   "stats": {
-    "open": 29,
-    "closed": 120,
-    "win_rate": 70.0,
-    "profit_factor": 1.5,
-    "total_pct": 51.63,
-    "avg_pct": 0.37,
+    "open": 28,
+    "closed": 121,
+    "win_rate": 70.2,
+    "profit_factor": 1.52,
+    "total_pct": 53.57,
+    "avg_pct": 0.38,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-21",
-        "trades": 26,
-        "win_rate": 80.8,
-        "return_pct": 36.96,
+        "trades": 27,
+        "win_rate": 81.5,
+        "return_pct": 38.71,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -143,9 +143,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 46,
-        "win_rate": 84.8,
-        "return_pct": 61.53,
+        "trades": 47,
+        "win_rate": 85.1,
+        "return_pct": 63.6,
         "month": "2026-07"
       },
       {
@@ -166,9 +166,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 120,
-        "win_rate": 70.0,
-        "return_pct": 51.63
+        "trades": 121,
+        "win_rate": 70.2,
+        "return_pct": 53.57
       }
     ]
   },
@@ -2252,10 +2252,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-21T03:31:08",
-      "closed_at": null,
-      "realized_pct": 1.28
+      "closed_at": "2026-07-21T19:16:23",
+      "realized_pct": 1.28,
+      "result_pct": 1.28
     },
     {
       "id": "العرض/الطلب|CELOUSDT|2026-07-21 05:45:00",
