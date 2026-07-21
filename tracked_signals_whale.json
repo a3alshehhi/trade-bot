@@ -256,10 +256,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 15:30:00",
-    "last_bar": "2026-07-21 07:44:59.999000",
+    "last_bar": "2026-07-21 07:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 66149.62,
+    "hi_seen": 66245.64,
     "lo_seen": 64802.41,
     "created": "2026-07-20T15:48:23"
   },
@@ -289,7 +289,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 15:45:00",
-    "last_bar": "2026-07-21 07:44:59.999000",
+    "last_bar": "2026-07-21 07:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.1385,
@@ -435,10 +435,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 05:45:00",
-    "last_bar": "2026-07-21 07:44:59.999000",
+    "last_bar": "2026-07-21 07:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.08151,
+    "hi_seen": 0.08176,
     "lo_seen": 0.08057,
     "created": "2026-07-21T06:03:38"
   },
@@ -506,13 +506,51 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 07:30:00",
-    "last_bar": "2026-07-21 07:44:59.999000",
+    "last_bar": "2026-07-21 07:59:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": true,
+    "hi_seen": 42.657,
+    "lo_seen": 34.296,
+    "created": "2026-07-21T07:48:36",
+    "exit_price": 37.565,
+    "close_card_sent": true,
+    "closed_at": "2026-07-21T08:03:28"
+  },
+  "زخم سيولة الحيتان|KAITOUSDT|2026-07-21 07:45:00": {
+    "symbol": "KAITOUSDT",
+    "label": "زخم سيولة الحيتان",
+    "timeframe": "15m",
+    "message_id": 5305,
+    "entry": 0.9933,
+    "stop": 0.94742214,
+    "init_stop": 0.94742214,
+    "cur_stop": 0.9933,
+    "legs": [
+      0.9933
+    ],
+    "last_alert_stop": 0.9933,
+    "armed": false,
+    "targets": [
+      0.9939,
+      1.02
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-21 07:45:00",
+    "last_bar": "2026-07-21 07:59:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 37.902,
-    "lo_seen": 34.296,
-    "created": "2026-07-21T07:48:36"
+    "hi_seen": 0.9965,
+    "lo_seen": 0.9821,
+    "created": "2026-07-21T08:03:25"
   }
 }
