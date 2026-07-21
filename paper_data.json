@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-21T11:23:41",
+  "updated_at": "2026-07-21T11:37:40",
   "stats": {
-    "open": 34,
+    "open": 35,
     "closed": 111,
     "win_rate": 70.3,
     "profit_factor": 1.45,
@@ -1087,36 +1087,6 @@
       "closed_at": "2026-07-21T10:48:14",
       "realized_pct": 0.02,
       "result_pct": 0.02
-    },
-    {
-      "id": "العرض/الطلب|2ZUSDT|2026-07-07 10:30:00",
-      "symbol": "2ZUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0735,
-      "stop": 0.0718992,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-07T10:34:06",
-      "closed_at": "2026-07-07T13:08:23",
-      "realized_pct": -2.18,
-      "result_pct": -2.18
-    },
-    {
-      "id": "العرض/الطلب|BIOUSDT|2026-07-07 10:30:00",
-      "symbol": "BIOUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.03038,
-      "stop": 0.0297597,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-07T10:34:06",
-      "closed_at": "2026-07-07T13:42:44",
-      "realized_pct": -2.04,
-      "result_pct": -2.04
     },
     {
       "id": "العرض/الطلب|ALTUSDT|2026-07-07 16:00:00",
@@ -2325,6 +2295,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|ARKMUSDT|2026-07-21 11:00:00",
+      "symbol": "ARKMUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.108562,
+      "stop": 0.103,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-21T11:16:03",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -2427,6 +2411,36 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|2ZUSDT|2026-07-07 10:30:00",
+      "symbol": "2ZUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0735,
+      "stop": 0.0718992,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-07T10:34:06",
+      "closed_at": "2026-07-07T13:08:23",
+      "realized_pct": -2.18,
+      "result_pct": -2.18
+    },
+    {
+      "id": "العرض/الطلب|BIOUSDT|2026-07-07 10:30:00",
+      "symbol": "BIOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03038,
+      "stop": 0.0297597,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-07T10:34:06",
+      "closed_at": "2026-07-07T13:42:44",
+      "realized_pct": -2.04,
+      "result_pct": -2.04
     },
     {
       "id": "العرض/الطلب|ALICEUSDT|2026-07-07 07:00:00",
