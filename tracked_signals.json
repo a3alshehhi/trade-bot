@@ -3206,5 +3206,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|AVAUSDT|2026-07-21 08:45:00": {
+    "symbol": "AVAUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5309,
+    "entry": 0.1595116,
+    "stop": 0.1495,
+    "init_stop": 0.1495,
+    "cur_stop": 0.1495,
+    "legs": [
+      0.1595116,
+      0.1576,
+      0.1556884,
+      0.1529668
+    ],
+    "last_alert_stop": 0.1495,
+    "armed": false,
+    "targets": [
+      0.1657,
+      0.1701064
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-21 08:45:00",
+    "last_bar": "2026-07-21 08:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1595116,
+    "lo_seen": 0.1595116,
+    "created": "2026-07-21T09:01:26",
+    "dca_levels": [
+      0.1595116,
+      0.1576,
+      0.1556884,
+      0.1529668
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
