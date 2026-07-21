@@ -67,40 +67,6 @@
     "opened_ts": "2026-07-20T16:41:18",
     "msg_id": 5228
   },
-  "CKBUSDT": {
-    "symbol": "CKBUSDT",
-    "tf": "1h",
-    "label": "SD Stable",
-    "prob": null,
-    "levels": [
-      0.000911
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.0009149165068696369,
-        "qty": 109299.591,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.0009149165068696369,
-    "entry": 0.0009149165068696369,
-    "init_stop": 0.00089123,
-    "stop": 0.00089123,
-    "R": 2.3686506869636842e-05,
-    "tp1": 0.00092171,
-    "tp2": 0.00092898,
-    "qty": 109299.591,
-    "qty_open": 109299.591,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-20T17:00:35",
-    "msg_id": 5235
-  },
   "1000SATSUSDT": {
     "symbol": "1000SATSUSDT",
     "tf": "1h",

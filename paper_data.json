@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-21T05:37:26",
+  "updated_at": "2026-07-21T05:40:11",
   "stats": {
-    "open": 32,
-    "closed": 101,
-    "win_rate": 68.3,
-    "profit_factor": 1.33,
-    "total_pct": 28.27,
-    "avg_pct": 0.28,
+    "open": 33,
+    "closed": 100,
+    "win_rate": 68.0,
+    "profit_factor": 1.3,
+    "total_pct": 24.84,
+    "avg_pct": 0.25,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-21",
-        "trades": 7,
-        "win_rate": 85.7,
-        "return_pct": 15.86,
+        "trades": 6,
+        "win_rate": 83.3,
+        "return_pct": 12.76,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -143,9 +143,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 27,
-        "win_rate": 88.9,
-        "return_pct": 36.64,
+        "trades": 26,
+        "win_rate": 88.5,
+        "return_pct": 32.99,
         "month": "2026-07"
       },
       {
@@ -166,9 +166,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 101,
-        "win_rate": 68.3,
-        "return_pct": 28.27
+        "trades": 100,
+        "win_rate": 68.0,
+        "return_pct": 24.84
       }
     ]
   },
@@ -2068,14 +2068,12 @@
       "entry": 0.216407,
       "stop": 0.2093,
       "hits": [
-        1,
-        2
+        1
       ],
-      "status": "closed",
+      "status": "open",
       "opened_at": "2026-07-20T19:46:03",
-      "closed_at": "2026-07-21T05:31:23",
-      "realized_pct": 2.75,
-      "result_pct": 2.75
+      "closed_at": null,
+      "realized_pct": 1.01
     },
     {
       "id": "العرض/الطلب|DEXEUSDT|2026-07-20 22:00:00",
