@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-21T08:21:38",
+  "updated_at": "2026-07-21T08:23:45",
   "stats": {
     "open": 35,
-    "closed": 107,
-    "win_rate": 70.1,
+    "closed": 106,
+    "win_rate": 69.8,
     "profit_factor": 1.43,
-    "total_pct": 39.72,
-    "avg_pct": 0.34,
+    "total_pct": 39.67,
+    "avg_pct": 0.35,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-21",
-        "trades": 13,
-        "win_rate": 92.3,
-        "return_pct": 26.2,
+        "trades": 12,
+        "win_rate": 91.7,
+        "return_pct": 26.16,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -143,9 +143,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 33,
-        "win_rate": 90.9,
-        "return_pct": 48.84,
+        "trades": 32,
+        "win_rate": 90.6,
+        "return_pct": 48.8,
         "month": "2026-07"
       },
       {
@@ -166,9 +166,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 107,
-        "win_rate": 70.1,
-        "return_pct": 39.72
+        "trades": 106,
+        "win_rate": 69.8,
+        "return_pct": 39.67
       }
     ]
   },
@@ -1063,11 +1063,10 @@
       "hits": [
         1
       ],
-      "status": "closed",
+      "status": "open",
       "opened_at": "2026-07-21T08:03:25",
-      "closed_at": "2026-07-21T08:18:10",
-      "realized_pct": 0.03,
-      "result_pct": 0.03
+      "closed_at": null,
+      "realized_pct": 0.03
     },
     {
       "id": "العرض/الطلب|2ZUSDT|2026-07-07 10:30:00",
@@ -2259,20 +2258,6 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-21T07:46:08",
-      "closed_at": null,
-      "realized_pct": 0.0
-    },
-    {
-      "id": "العرض/الطلب|ASTRUSDT|2026-07-21 08:00:00",
-      "symbol": "ASTRUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.00519236,
-      "stop": 0.004981,
-      "hits": [],
-      "status": "open",
-      "opened_at": "2026-07-21T08:16:05",
       "closed_at": null,
       "realized_pct": 0.0
     },
