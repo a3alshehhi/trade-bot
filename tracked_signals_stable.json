@@ -1539,5 +1539,41 @@
     "exit_price": 0.0156529,
     "close_card_sent": true,
     "closed_at": "2026-07-21T09:25:00"
+  },
+  "SD Stable|DIAUSDT|2026-07-21 14:00:00": {
+    "symbol": "DIAUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 5324,
+    "entry": 0.1039,
+    "stop": 0.102875,
+    "init_stop": 0.102875,
+    "cur_stop": 0.102875,
+    "legs": [
+      0.1039,
+      0.1038,
+      0.1036112,
+      0.1033424
+    ],
+    "last_alert_stop": 0.102875,
+    "armed": false,
+    "targets": [
+      0.1050352,
+      0.1055888
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-21 14:00:00",
+    "last_bar": "2026-07-21 14:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1039,
+    "lo_seen": 0.1039,
+    "created": "2026-07-21T14:08:56"
   }
 }
