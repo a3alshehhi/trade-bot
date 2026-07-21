@@ -256,12 +256,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 15:30:00",
-    "last_bar": "2026-07-21 12:59:59.999000",
+    "last_bar": "2026-07-21 16:29:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 66640.0,
+    "hi_seen": 66956.15,
     "lo_seen": 64802.41,
     "created": "2026-07-20T15:48:23"
   },
@@ -291,12 +291,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 15:45:00",
-    "last_bar": "2026-07-21 12:59:59.999000",
+    "last_bar": "2026-07-21 16:29:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 1.1418,
+    "hi_seen": 1.1583,
     "lo_seen": 1.1069,
     "created": "2026-07-20T16:08:25"
   },
@@ -439,12 +439,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 05:45:00",
-    "last_bar": "2026-07-21 12:59:59.999000",
+    "last_bar": "2026-07-21 16:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.08184,
-    "lo_seen": 0.0804,
-    "created": "2026-07-21T06:03:38"
+    "lo_seen": 0.07999,
+    "created": "2026-07-21T06:03:38",
+    "exit_price": 0.08001571,
+    "close_card_sent": true,
+    "closed_at": "2026-07-21T16:33:57"
   },
   "زخم سيولة الحيتان|ZECUSDT|2026-07-21 06:30:00": {
     "symbol": "ZECUSDT",
