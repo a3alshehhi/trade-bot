@@ -168,5 +168,39 @@
     "armed": false,
     "opened_ts": "2026-07-20T19:41:13",
     "msg_id": 5248
+  },
+  "ASTRUSDT": {
+    "symbol": "ASTRUSDT",
+    "tf": "1h",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.005196
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.005279290545285303,
+        "qty": 18941.9391,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.005279290545285303,
+    "entry": 0.005279290545285303,
+    "init_stop": 0.00510377,
+    "stop": 0.005297794485069403,
+    "R": 0.0001755205452853032,
+    "tp1": 0.00537767,
+    "tp2": 0.00544722,
+    "qty": 18941.9391,
+    "qty_open": 18941.9391,
+    "tp1_done": false,
+    "armed": true,
+    "opened_ts": "2026-07-21T05:11:23",
+    "msg_id": 5291
   }
 }

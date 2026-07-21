@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-21T05:07:15",
+  "updated_at": "2026-07-21T05:11:29",
   "stats": {
-    "open": 33,
+    "open": 34,
     "closed": 99,
     "win_rate": 67.7,
     "profit_factor": 1.25,
@@ -786,6 +786,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-21T03:53:26",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "SD Stable|ASTRUSDT|2026-07-21 05:00:00",
+      "symbol": "ASTRUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.005196,
+      "stop": 0.00510377,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-21T05:08:44",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -2053,13 +2067,11 @@
       "timeframe": "15m",
       "entry": 0.216407,
       "stop": 0.2093,
-      "hits": [
-        1
-      ],
+      "hits": [],
       "status": "open",
       "opened_at": "2026-07-20T19:46:03",
       "closed_at": null,
-      "realized_pct": 1.01
+      "realized_pct": 0.0
     },
     {
       "id": "العرض/الطلب|DEXEUSDT|2026-07-20 22:00:00",
