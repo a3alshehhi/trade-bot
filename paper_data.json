@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T03:10:54",
+  "updated_at": "2026-07-21T03:22:07",
   "stats": {
     "open": 31,
     "closed": 99,
@@ -1807,11 +1807,13 @@
       "timeframe": "15m",
       "entry": 6.551444,
       "stop": 6.392,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-20T04:31:17",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.75
     },
     {
       "id": "العرض/الطلب|CTSIUSDT|2026-07-20 11:00:00",
