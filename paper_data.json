@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-21T07:52:32",
+  "updated_at": "2026-07-21T07:54:51",
   "stats": {
-    "open": 35,
+    "open": 33,
     "closed": 105,
     "win_rate": 69.5,
     "profit_factor": 1.43,
@@ -1036,20 +1036,19 @@
       "result_pct": 0.05
     },
     {
-      "id": "زخم سيولة الحيتان|DEXEUSDT|2026-07-21 07:30:00",
-      "symbol": "DEXEUSDT",
-      "label": "زخم سيولة الحيتان",
+      "id": "العرض/الطلب|ALICEUSDT|2026-07-07 07:00:00",
+      "symbol": "ALICEUSDT",
+      "label": "العرض/الطلب",
       "side": "buy",
       "timeframe": "15m",
-      "entry": 37.565,
-      "stop": 31.85645714,
-      "hits": [
-        1
-      ],
-      "status": "open",
-      "opened_at": "2026-07-21T07:48:36",
-      "closed_at": null,
-      "realized_pct": 0.27
+      "entry": 0.1355,
+      "stop": 0.130799,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-07T07:08:04",
+      "closed_at": "2026-07-07T12:23:32",
+      "realized_pct": -3.47,
+      "result_pct": -3.47
     },
     {
       "id": "العرض/الطلب|2ZUSDT|2026-07-07 10:30:00",
@@ -2231,20 +2230,6 @@
       "realized_pct": 0.67
     },
     {
-      "id": "العرض/الطلب|CUSDT|2026-07-21 07:30:00",
-      "symbol": "CUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.06658,
-      "stop": 0.0604,
-      "hits": [],
-      "status": "open",
-      "opened_at": "2026-07-21T07:46:08",
-      "closed_at": null,
-      "realized_pct": 0.0
-    },
-    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -2347,21 +2332,6 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
-    },
-    {
-      "id": "العرض/الطلب|ALICEUSDT|2026-07-07 07:00:00",
-      "symbol": "ALICEUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.1355,
-      "stop": 0.130799,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-07T07:08:04",
-      "closed_at": "2026-07-07T12:23:32",
-      "realized_pct": -3.47,
-      "result_pct": -3.47
     },
     {
       "id": "العرض/الطلب|BNTUSDT|2026-07-06 16:00:00",
