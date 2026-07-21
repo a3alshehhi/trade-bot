@@ -48,6 +48,7 @@ jobs:
       - name: Run SD scans (main + 2 experimental) + trackmon
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          MIN_TP1_PCT: "1.3"
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           # ── تنفيذ آلي تجريبي (Bybit Testnet + Binance Demo) ──
           SD_EXECUTE: "1"
