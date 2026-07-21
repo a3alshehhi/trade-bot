@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-21T05:52:25",
+  "updated_at": "2026-07-21T05:56:23",
   "stats": {
-    "open": 32,
+    "open": 33,
     "closed": 101,
     "win_rate": 68.3,
     "profit_factor": 1.33,
@@ -800,6 +800,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-21T05:08:44",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "SD Stable|BLURUSDT|2026-07-21 05:45:00",
+      "symbol": "BLURUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01577,
+      "stop": 0.0156529,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-21T05:53:28",
       "closed_at": null,
       "realized_pct": 0.0
     },
