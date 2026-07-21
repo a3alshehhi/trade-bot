@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-21T09:52:52",
+  "updated_at": "2026-07-21T10:01:40",
   "stats": {
-    "open": 37,
-    "closed": 108,
-    "win_rate": 69.4,
-    "profit_factor": 1.42,
-    "total_pct": 38.68,
-    "avg_pct": 0.33,
+    "open": 36,
+    "closed": 109,
+    "win_rate": 69.7,
+    "profit_factor": 1.43,
+    "total_pct": 40.44,
+    "avg_pct": 0.34,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-21",
-        "trades": 14,
-        "win_rate": 85.7,
-        "return_pct": 25.27,
+        "trades": 15,
+        "win_rate": 86.7,
+        "return_pct": 26.86,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -143,9 +143,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 34,
-        "win_rate": 88.2,
-        "return_pct": 47.74,
+        "trades": 35,
+        "win_rate": 88.6,
+        "return_pct": 49.62,
         "month": "2026-07"
       },
       {
@@ -166,9 +166,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 108,
-        "win_rate": 69.4,
-        "return_pct": 38.68
+        "trades": 109,
+        "win_rate": 69.7,
+        "return_pct": 40.44
       }
     ]
   },
@@ -635,10 +635,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-20T09:37:58",
-      "closed_at": null,
-      "realized_pct": 1.27
+      "closed_at": "2026-07-21T10:01:35",
+      "realized_pct": 1.27,
+      "result_pct": 1.27
     },
     {
       "id": "SD Stable|CGPTUSDT|2026-07-20 16:00:00",
