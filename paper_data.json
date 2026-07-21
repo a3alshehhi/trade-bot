@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-21T20:32:33",
+  "updated_at": "2026-07-21T20:40:27",
   "stats": {
-    "open": 28,
+    "open": 29,
     "closed": 121,
     "win_rate": 70.2,
     "profit_factor": 1.52,
@@ -1129,36 +1129,6 @@
       "closed_at": "2026-07-21T10:48:14",
       "realized_pct": 0.02,
       "result_pct": 0.02
-    },
-    {
-      "id": "العرض/الطلب|ALTUSDT|2026-07-07 16:00:00",
-      "symbol": "ALTUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.00636,
-      "stop": 0.0061914,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-07T16:04:59",
-      "closed_at": "2026-07-08T02:23:29",
-      "realized_pct": -2.65,
-      "result_pct": -2.65
-    },
-    {
-      "id": "العرض/الطلب|CITYUSDT|2026-07-07 16:00:00",
-      "symbol": "CITYUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.395,
-      "stop": 0.38132,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-07T16:27:19",
-      "closed_at": "2026-07-12T23:24:30",
-      "realized_pct": -3.46,
-      "result_pct": -3.46
     },
     {
       "id": "العرض/الطلب|AWEUSDT|2026-07-07 23:15:00",
@@ -2381,6 +2351,20 @@
       "result_pct": 2.58
     },
     {
+      "id": "العرض/الطلب|APEUSDT|2026-07-21 20:15:00",
+      "symbol": "APEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1453812,
+      "stop": 0.1371,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-21T20:34:10",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -2483,6 +2467,36 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|ALTUSDT|2026-07-07 16:00:00",
+      "symbol": "ALTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00636,
+      "stop": 0.0061914,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-07T16:04:59",
+      "closed_at": "2026-07-08T02:23:29",
+      "realized_pct": -2.65,
+      "result_pct": -2.65
+    },
+    {
+      "id": "العرض/الطلب|CITYUSDT|2026-07-07 16:00:00",
+      "symbol": "CITYUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.395,
+      "stop": 0.38132,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-07T16:27:19",
+      "closed_at": "2026-07-12T23:24:30",
+      "realized_pct": -3.46,
+      "result_pct": -3.46
     },
     {
       "id": "العرض/الطلب|2ZUSDT|2026-07-07 10:30:00",
