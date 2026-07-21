@@ -372,5 +372,38 @@
     "exit_price": 0.0037724,
     "close_card_sent": true,
     "closed_at": "2026-07-20T16:48:05"
+  },
+  "زخم سيولة الحيتان|KAITOUSDT|2026-07-20 23:45:00": {
+    "symbol": "KAITOUSDT",
+    "label": "زخم سيولة الحيتان",
+    "timeframe": "15m",
+    "message_id": 5264,
+    "entry": 1.0033,
+    "stop": 0.971855,
+    "init_stop": 0.971855,
+    "cur_stop": 0.971855,
+    "legs": [
+      1.0033
+    ],
+    "last_alert_stop": 0.971855,
+    "armed": false,
+    "targets": [
+      1.034745,
+      1.097635
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-20 23:45:00",
+    "last_bar": "2026-07-20 23:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1.0033,
+    "lo_seen": 1.0033,
+    "created": "2026-07-21T00:03:24"
   }
 }
