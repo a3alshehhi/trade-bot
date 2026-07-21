@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T19:08:34",
+  "updated_at": "2026-07-21T19:10:40",
   "stats": {
     "open": 30,
     "closed": 119,
@@ -664,12 +664,14 @@
       "entry": 34.38,
       "stop": 33.4777,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-20T16:39:30",
-      "closed_at": null,
-      "realized_pct": 0.69
+      "closed_at": "2026-07-21T19:10:37",
+      "realized_pct": 1.88,
+      "result_pct": 1.88
     },
     {
       "id": "SD Stable|CKBUSDT|2026-07-20 16:00:00",
@@ -2076,14 +2078,12 @@
       "entry": 34.38,
       "stop": 33.4777,
       "hits": [
-        1,
-        2
+        1
       ],
-      "status": "closed",
+      "status": "open",
       "opened_at": "2026-07-20T16:49:45",
-      "closed_at": "2026-07-21T19:01:33",
-      "realized_pct": 1.88,
-      "result_pct": 1.88
+      "closed_at": null,
+      "realized_pct": 0.69
     },
     {
       "id": "العرض/الطلب|ARBUSDT|2026-07-20 17:00:00",
