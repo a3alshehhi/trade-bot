@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-21T08:08:50",
+  "updated_at": "2026-07-21T08:11:15",
   "stats": {
     "open": 35,
-    "closed": 106,
-    "win_rate": 69.8,
+    "closed": 105,
+    "win_rate": 69.5,
     "profit_factor": 1.43,
-    "total_pct": 39.67,
+    "total_pct": 39.3,
     "avg_pct": 0.35,
     "max_drawdown_pct": -21.29
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-21",
-        "trades": 12,
-        "win_rate": 91.7,
-        "return_pct": 26.16,
+        "trades": 11,
+        "win_rate": 90.9,
+        "return_pct": 25.82,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -143,9 +143,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 32,
-        "win_rate": 90.6,
-        "return_pct": 48.8,
+        "trades": 31,
+        "win_rate": 90.3,
+        "return_pct": 48.4,
         "month": "2026-07"
       },
       {
@@ -166,9 +166,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 106,
-        "win_rate": 69.8,
-        "return_pct": 39.67
+        "trades": 105,
+        "win_rate": 69.5,
+        "return_pct": 39.3
       }
     ]
   },
@@ -1046,27 +1046,10 @@
       "hits": [
         1
       ],
-      "status": "closed",
-      "opened_at": "2026-07-21T07:48:36",
-      "closed_at": "2026-07-21T08:03:28",
-      "realized_pct": 0.27,
-      "result_pct": 0.27
-    },
-    {
-      "id": "زخم سيولة الحيتان|KAITOUSDT|2026-07-21 07:45:00",
-      "symbol": "KAITOUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.9933,
-      "stop": 0.94742214,
-      "hits": [
-        1
-      ],
       "status": "open",
-      "opened_at": "2026-07-21T08:03:25",
+      "opened_at": "2026-07-21T07:48:36",
       "closed_at": null,
-      "realized_pct": 0.03
+      "realized_pct": 0.27
     },
     {
       "id": "العرض/الطلب|2ZUSDT|2026-07-07 10:30:00",
