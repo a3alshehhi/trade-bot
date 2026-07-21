@@ -86,6 +86,17 @@
     font-size:10px;padding:1px 6px;border-radius:10px;margin-right:4px}
   /* ── خسارة كبيرة > 8% ── */
   tr.big-loss td{background:#da363312}
+  /* ── خلايا قابلة للنقر + تنقّل الصفحات ── */
+  td.cell-click{cursor:pointer;transition:background .15s}
+  td.cell-click:hover{background:#1f6feb22}
+  td.dbb-bot{text-align:right;font-weight:700;position:sticky;right:0;background:var(--card);z-index:1}
+  .pager{display:flex;gap:6px;align-items:center;justify-content:center;margin-top:12px;flex-wrap:wrap}
+  .pager button{background:var(--bg);color:var(--text);border:1px solid var(--line);
+    border-radius:8px;padding:6px 11px;font-size:12px;cursor:pointer}
+  .pager button:disabled{opacity:.35;cursor:default}
+  .pager .pinfo{color:var(--muted);font-size:12px;margin:0 4px}
+  #drillSummary .chip{display:inline-block;background:var(--bg);border:1px solid var(--line);
+    border-radius:20px;padding:3px 10px;margin:2px 4px 2px 0;font-size:12px}
   @media(max-width:560px){.kpi .val{font-size:18px}h1{font-size:17px}}
 </style>
 </head>
@@ -117,6 +128,13 @@
 <div class="panel">
   <h2>📅 أداء آخر 7 أيام</h2>
   <div class="chartbox sm"><canvas id="daily7"></canvas></div>
+</div>
+
+<!-- أداء يومي لكل بوت (الأسبوع الحالي) -->
+<div class="panel">
+  <h2>🗓️ الأداء اليومي لكل بوت <span class="sub" id="dailyWeekLabel"></span></h2>
+  <div class="hint">أيام الأسبوع الحالي (تتجدّد تلقائياً كل أسبوع). اضغط أي خانة لعرض صفقاتها.</div>
+  <div class="scroll"><table id="dailyByBot"></table></div>
 </div>
 
 <!-- أداء أسبوعي لكل بوت -->
@@ -153,9 +171,9 @@
 <div class="panel">
   <h2>📜 سجل الصفقات</h2>
   <div class="filters">
-    <select id="f_strat" onchange="renderLog()"><option value="">كل الاستراتيجيات</option></select>
-    <select id="f_tf" onchange="renderLog()"><option value="">كل الفريمات</option></select>
-    <select id="f_res" onchange="renderLog()">
+    <select id="f_strat" onchange="logPage=1;renderLog()"><option value="">كل الاستراتيجيات</option></select>
+    <select id="f_tf" onchange="logPage=1;renderLog()"><option value="">كل الفريمات</option></select>
+    <select id="f_res" onchange="logPage=1;renderLog()">
       <option value="">كل النتائج</option>
       <option value="win">ربح</option>
       <option value="loss">خسارة</option>
@@ -163,6 +181,7 @@
     </select>
   </div>
   <div class="scroll"><table id="logTbl"></table></div>
+  <div id="logPager" class="pager"></div>
 </div>
 
 <!-- صفقاتي اليدوية -->
@@ -211,6 +230,18 @@
   </div>
 </div>
 
+<!-- نافذة الرجوع لخانة أداء (يومي/أسبوعي/شهري) -->
+<div class="overlay" id="drill" onclick="if(event.target===this)closeDrill()">
+  <div class="modal" style="max-width:600px">
+    <h3 id="drillTitle">تفاصيل</h3>
+    <div id="drillSummary"></div>
+    <div class="scroll"><table id="drillTbl"></table></div>
+    <div class="modal-actions" style="margin-top:12px">
+      <button onclick="closeDrill()">إغلاق</button>
+    </div>
+  </div>
+</div>
+
 <script>
 /* ─── helpers ─── */
 const fmt  = (v,d=2) => (Number(v)>=0?'+':'')+Number(v).toFixed(d)+'%';
@@ -221,6 +252,7 @@ const dur  = (a,b) => { if(!a||!b) return '—'; const h=Math.round((new Date(b)
 const strat= t => t.label || 'كلاسيكي';
 
 let allTrades = [];
+let logPage = 1; const LOG_PAGE = 50;   // سجل الصفقات: 50 لكل صفحة
 let priceCache = {};
 let equityChart, dailyChart;
 
@@ -296,6 +328,7 @@ async function loadServer(){
   renderAlerts(closed);
   renderEquity(closed);
   renderDaily7(closed);
+  renderDailyByBot(closed);
   renderWeeklyByBot(closed);
   renderMonthlyByBot(closed);
   renderByStrat(closed);
@@ -352,6 +385,78 @@ function renderDaily7(closed){
         x:{grid:{display:false},ticks:{color:'#8b949e'}}}}});
 }
 
+/* ─── Daily performance per bot (current week) + drill-down ─── */
+const AR_DOW=['الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت','الأحد'];
+const localDay=ts=>{ const d=new Date(ts); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); };
+function currentWeekDays(){
+  const start=isoWeekStart(new Date());              // إثنين الأسبوع الحالي (محلي)
+  const arr=[]; for(let i=0;i<7;i++){ const d=new Date(start); d.setDate(d.getDate()+i); arr.push(d); }
+  return arr;
+}
+function renderDailyByBot(closed){
+  const days=currentWeekDays();
+  const keys=days.map(localDay);
+  const bots=[...new Set(closed.map(strat))].sort();
+  const wl=document.getElementById('dailyWeekLabel');
+  const f=x=>(x.getMonth()+1)+'/'+x.getDate();
+  if(wl) wl.textContent='('+f(days[0])+' – '+f(days[6])+')';
+  const tbl=document.getElementById('dailyByBot');
+  if(!bots.length){ tbl.innerHTML='<tr><td class="empty">لا صفقات مغلقة هذا الأسبوع</td></tr>'; return; }
+  const agg={}; bots.forEach(b=>{ agg[b]={}; keys.forEach(k=>agg[b][k]={pct:0,n:0}); });
+  closed.forEach(t=>{
+    const b=strat(t); const k=localDay(t.closed_at||t.opened_at||Date.now());
+    if(agg[b]&&agg[b][k]!==undefined){ agg[b][k].pct+=(t.result_pct||0); agg[b][k].n++; }
+  });
+  const head='<tr><th>البوت \\ اليوم</th>'+
+    days.map((d,i)=>`<th>${AR_DOW[i]}<div class="sub" style="font-size:10px">${f(d)}</div></th>`).join('')+
+    '<th>الأسبوع</th></tr>';
+  const esc=b=>b.replace(/'/g,"\\'");
+  const body=bots.map(b=>{
+    let wsum=0,wn=0;
+    const cells=keys.map(k=>{
+      const c=agg[b][k]; wsum+=c.pct; wn+=c.n;
+      if(!c.n) return '<td style="color:var(--muted)">·</td>';
+      return `<td class="cell-click ${cls(c.pct)}" onclick="openDrill('${esc(b)}','day','${k}')">`+
+             `${fmt(c.pct)}<div class="sub" style="font-size:10px;color:var(--muted)">${c.n} صفقة</div></td>`;
+    }).join('');
+    const wcell=wn?`<td class="cell-click ${cls(wsum)}" style="font-weight:700" onclick="openDrill('${esc(b)}','curweek','${keys[0]}')">${fmt(wsum)}</td>`
+                  :'<td style="color:var(--muted)">·</td>';
+    return `<tr><td class="dbb-bot">${b}</td>${cells}${wcell}</tr>`;
+  }).join('');
+  tbl.innerHTML=head+body;
+}
+
+/* نافذة الرجوع: تعرض صفقات (بوت × فترة) المغلقة */
+function tradeWeekKey(t){ return weekKey(isoWeekStart(new Date(t.closed_at||t.opened_at||Date.now()))); }
+function tradeMonthKey(t){ return monthKey(new Date(t.closed_at||t.opened_at||Date.now())); }
+function openDrill(bot, type, key){
+  const closed=allTrades.filter(t=>t.status==='closed'&&t.result_pct!=null);
+  let rows=closed.filter(t=>strat(t)===bot);
+  let periodTxt='';
+  if(type==='day'){ rows=rows.filter(t=>localDay(t.closed_at||t.opened_at)===key); periodTxt='يوم '+key; }
+  else if(type==='curweek'){ const wk=weekKey(isoWeekStart(new Date(key))); rows=rows.filter(t=>tradeWeekKey(t)===wk); periodTxt='الأسبوع الحالي'; }
+  else if(type==='week'){ rows=rows.filter(t=>tradeWeekKey(t)===key); periodTxt='أسبوع '+key; }
+  else if(type==='month'){ rows=rows.filter(t=>tradeMonthKey(t)===key); periodTxt='شهر '+key; }
+  rows.sort((a,b)=>String(b.closed_at).localeCompare(String(a.closed_at)));
+  document.getElementById('drillTitle').textContent=`🔎 ${bot} — ${periodTxt}`;
+  const n=rows.length, ret=rows.reduce((a,t)=>a+(t.result_pct||0),0);
+  const wins=rows.filter(t=>(t.result_pct||0)>0).length;
+  const wr=n?Math.round(wins/n*100):0;
+  document.getElementById('drillSummary').innerHTML=
+    `<span class="chip">${n} صفقة</span>`+
+    `<span class="chip">فوز ${wr}%</span>`+
+    `<span class="chip">صافي: <span class="${cls(ret)}">${fmt(ret)}</span></span>`;
+  const tbl=document.getElementById('drillTbl');
+  tbl.innerHTML = n
+    ? '<tr><th>العملة</th><th>فريم</th><th>الدخول</th><th>أُغلقت</th><th>النتيجة</th></tr>'+
+      rows.map(t=>`<tr><td class="sym">${t.symbol}</td><td>${t.timeframe||'—'}</td>`+
+        `<td>${px(t.entry)}</td><td>${dt(t.closed_at)}</td>`+
+        `<td class="${cls(t.result_pct)}">${fmt(t.result_pct)}</td></tr>`).join('')
+    : '<tr><td class="empty">لا صفقات في هذه الفترة</td></tr>';
+  document.getElementById('drill').classList.add('show');
+}
+function closeDrill(){ document.getElementById('drill').classList.remove('show'); }
+
 /* ─── Weekly / Monthly comparison by bot ─── */
 let weeklyChart, monthlyChart;
 const PALETTE=['#2ea043','#388bfd','#d29922','#da3633','#a371f7','#39c5cf','#f778ba','#ffa657','#56d364','#79c0ff'];
@@ -404,6 +509,7 @@ function buildBotPeriodChart(closed, periods, keyFn, labelFn){
 
 function renderWeeklyByBot(closed){
   const periods=lastWeeks(8);
+  const keys=periods.map(weekKey);
   const {labels,datasets,bots}=buildBotPeriodChart(closed,periods,weekKey,weekLabel);
   const ctx=document.getElementById('weekly');
   if(weeklyChart) weeklyChart.destroy();
@@ -411,6 +517,7 @@ function renderWeeklyByBot(closed){
   weeklyChart=new Chart(ctx,{type:'bar',
     data:{labels,datasets},
     options:{responsive:true,maintainAspectRatio:false,
+      onClick:(e,els)=>{ if(els.length){ const el=els[0]; openDrill(bots[el.datasetIndex],'week',keys[el.index]); } },
       plugins:{legend:{display:true,position:'bottom',labels:{color:'#8b949e',boxWidth:11,font:{size:10}}},
         tooltip:{callbacks:{label:c=>c.dataset.label+': '+(c.parsed.y>=0?'+':'')+c.parsed.y+'%'}}},
       scales:{y:{grid:{color:'#21262d'},ticks:{color:'#8b949e',callback:v=>v+'%'}},
@@ -419,6 +526,7 @@ function renderWeeklyByBot(closed){
 
 function renderMonthlyByBot(closed){
   const periods=lastMonths(6);
+  const keys=periods.map(monthKey);
   const {labels,datasets,bots}=buildBotPeriodChart(closed,periods,monthKey,monthLabel);
   const ctx=document.getElementById('monthly');
   if(monthlyChart) monthlyChart.destroy();
@@ -426,6 +534,7 @@ function renderMonthlyByBot(closed){
   monthlyChart=new Chart(ctx,{type:'bar',
     data:{labels,datasets},
     options:{responsive:true,maintainAspectRatio:false,
+      onClick:(e,els)=>{ if(els.length){ const el=els[0]; openDrill(bots[el.datasetIndex],'month',keys[el.index]); } },
       plugins:{legend:{display:true,position:'bottom',labels:{color:'#8b949e',boxWidth:11,font:{size:10}}},
         tooltip:{callbacks:{label:c=>c.dataset.label+': '+(c.parsed.y>=0?'+':'')+c.parsed.y+'%'}}},
       scales:{y:{grid:{color:'#21262d'},ticks:{color:'#8b949e',callback:v=>v+'%'}},
@@ -621,10 +730,16 @@ function renderLog(){
   if(fRes==='open') trades=trades.filter(t=>t.status==='open');
 
   const lg=document.getElementById('logTbl');
-  if(!trades.length){ lg.innerHTML='<tr><td class="empty">لا نتائج</td></tr>'; return; }
+  const pager=document.getElementById('logPager');
+  if(!trades.length){ lg.innerHTML='<tr><td class="empty">لا نتائج</td></tr>'; if(pager) pager.innerHTML=''; return; }
+  // ترقيم الصفحات: أحدث 50 صفقة في الصفحة الأولى، والباقي صفحات يُتنقّل بينها
+  const total=trades.length;
+  const pages=Math.max(1,Math.ceil(total/LOG_PAGE));
+  if(logPage>pages) logPage=pages; if(logPage<1) logPage=1;
+  const pageTrades=trades.slice((logPage-1)*LOG_PAGE, logPage*LOG_PAGE);
   lg.innerHTML='<tr><th>العملة</th><th>استراتيجية</th><th>فريم</th><th>الحالة</th>'+
     '<th>الدخول</th><th>فُتحت</th><th>أُغلقت</th><th>مدة</th><th>النتيجة</th></tr>'+
-    trades.map(t=>{
+    pageTrades.map(t=>{
       let badge,res;
       const bigLoss = t.status==='closed' && (t.result_pct||0) < -8;
       if(t.status==='open'){ badge='<span class="badge b-open">مفتوحة</span>'; res='—'; }
@@ -646,7 +761,22 @@ function renderLog(){
         <td>${dur(t.opened_at,t.closed_at)}</td>
         <td>${res}</td></tr>`;
     }).join('');
+  renderLogPager(total, pages);
 }
+
+function renderLogPager(total, pages){
+  const el=document.getElementById('logPager');
+  if(!el) return;
+  if(total<=LOG_PAGE){ el.innerHTML=''; return; }
+  const from=(logPage-1)*LOG_PAGE+1, to=Math.min(total, logPage*LOG_PAGE);
+  el.innerHTML=
+    `<button onclick="logGo(1)" ${logPage===1?'disabled':''}>« الأحدث</button>`+
+    `<button onclick="logGo(${logPage-1})" ${logPage===1?'disabled':''}>‹ السابق</button>`+
+    `<span class="pinfo">${from}–${to} من ${total} · صفحة ${logPage}/${pages}</span>`+
+    `<button onclick="logGo(${logPage+1})" ${logPage===pages?'disabled':''}>التالي ›</button>`+
+    `<button onclick="logGo(${pages})" ${logPage===pages?'disabled':''}>الأقدم »</button>`;
+}
+function logGo(p){ logPage=p; renderLog(); document.getElementById('logTbl').scrollIntoView({behavior:'smooth',block:'nearest'}); }
 
 /* ─── Local trades ─── */
 const LS_KEY='ptracker_local_v1';
