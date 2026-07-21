@@ -555,5 +555,38 @@
     "exit_price": 0.9933,
     "close_card_sent": true,
     "closed_at": "2026-07-21T08:18:10"
+  },
+  "زخم سيولة الحيتان|TRXUSDT|2026-07-21 08:30:00": {
+    "symbol": "TRXUSDT",
+    "label": "زخم سيولة الحيتان",
+    "timeframe": "15m",
+    "message_id": 5307,
+    "entry": 0.3269,
+    "stop": 0.32592286,
+    "init_stop": 0.32592286,
+    "cur_stop": 0.32592286,
+    "legs": [
+      0.3269
+    ],
+    "last_alert_stop": 0.32592286,
+    "armed": false,
+    "targets": [
+      0.327,
+      0.3271
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-21 08:30:00",
+    "last_bar": "2026-07-21 08:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.3269,
+    "lo_seen": 0.3269,
+    "created": "2026-07-21T08:48:43"
   }
 }
