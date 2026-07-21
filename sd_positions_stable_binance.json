@@ -134,39 +134,5 @@
     "armed": false,
     "opened_ts": "2026-07-20T19:41:13",
     "msg_id": 5248
-  },
-  "BLURUSDT": {
-    "symbol": "BLURUSDT",
-    "tf": "15m",
-    "label": "SD Stable",
-    "prob": null,
-    "levels": [
-      0.01577
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.015886131008887354,
-        "qty": 6294.7989,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.015886131008887354,
-    "entry": 0.015886131008887354,
-    "init_stop": 0.0156529,
-    "stop": 0.0156529,
-    "R": 0.00023323100888735307,
-    "tp1": 0.0159344,
-    "tp2": 0.0160036,
-    "qty": 6294.7989,
-    "qty_open": 6294.7989,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-21T05:56:16",
-    "msg_id": 5297
   }
 }
