@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T13:08:11",
+  "updated_at": "2026-07-21T13:10:29",
   "stats": {
     "open": 34,
     "closed": 112,
@@ -663,11 +663,13 @@
       "timeframe": "1h",
       "entry": 34.38,
       "stop": 33.4777,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-20T16:39:30",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.69
     },
     {
       "id": "SD Stable|CKBUSDT|2026-07-20 16:00:00",
@@ -952,13 +954,11 @@
       "timeframe": "15m",
       "entry": 1.1126,
       "stop": 1.08484643,
-      "hits": [
-        1
-      ],
+      "hits": [],
       "status": "open",
       "opened_at": "2026-07-20T16:08:25",
       "closed_at": null,
-      "realized_pct": 1.25
+      "realized_pct": 0.0
     },
     {
       "id": "زخم سيولة الحيتان|ORDIUSDT|2026-07-20 16:00:00",

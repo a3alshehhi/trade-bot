@@ -1129,7 +1129,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 16:00:00",
-    "last_bar": "2026-07-21 09:59:59.999000",
+    "last_bar": "2026-07-21 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01983,
@@ -1144,11 +1144,11 @@
     "entry": 34.38,
     "stop": 33.4777,
     "init_stop": 33.4777,
-    "cur_stop": 33.4777,
+    "cur_stop": 34.38,
     "legs": [
       34.38
     ],
-    "last_alert_stop": 33.4777,
+    "last_alert_stop": 34.38,
     "armed": false,
     "targets": [
       34.85656,
@@ -1162,10 +1162,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 16:00:00",
-    "last_bar": "2026-07-21 09:59:59.999000",
-    "hits": [],
+    "last_bar": "2026-07-21 12:59:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 34.58,
+    "hi_seen": 34.86,
     "lo_seen": 33.84,
     "created": "2026-07-20T16:39:30"
   },
@@ -1234,7 +1236,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 16:00:00",
-    "last_bar": "2026-07-21 09:59:59.999000",
+    "last_bar": "2026-07-21 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 9.74e-06,
@@ -1309,11 +1311,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 19:00:00",
-    "last_bar": "2026-07-21 09:59:59.999000",
+    "last_bar": "2026-07-21 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0593,
-    "lo_seen": 0.0579,
+    "lo_seen": 0.0578,
     "created": "2026-07-20T19:39:13"
   },
   "SD Stable|ALTUSDT|2026-07-20 20:30:00": {
@@ -1425,7 +1427,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 03:00:00",
-    "last_bar": "2026-07-21 09:59:59.999000",
+    "last_bar": "2026-07-21 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.07239,
@@ -1460,11 +1462,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 03:45:00",
-    "last_bar": "2026-07-21 09:59:59.999000",
+    "last_bar": "2026-07-21 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.05905,
-    "lo_seen": 0.05817,
+    "lo_seen": 0.05801,
     "created": "2026-07-21T03:53:26"
   },
   "SD Stable|ASTRUSDT|2026-07-21 05:00:00": {
@@ -1493,7 +1495,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 05:00:00",
-    "last_bar": "2026-07-21 09:59:59.999000",
+    "last_bar": "2026-07-21 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.005294,
