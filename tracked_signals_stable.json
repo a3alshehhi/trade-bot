@@ -1346,5 +1346,42 @@
     "exit_price": 0.006317,
     "close_card_sent": true,
     "closed_at": "2026-07-20T22:49:30"
+  },
+  "SD Stable|CELOUSDT|2026-07-21 02:15:00": {
+    "symbol": "CELOUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 5275,
+    "entry": 0.06994,
+    "stop": 0.0691501,
+    "init_stop": 0.0691501,
+    "cur_stop": 0.0691501,
+    "legs": [
+      0.06994,
+      0.06992508,
+      0.0698,
+      0.06967492,
+      0.06949684
+    ],
+    "last_alert_stop": 0.0691501,
+    "armed": false,
+    "targets": [
+      0.07061832,
+      0.07098508
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-21 02:15:00",
+    "last_bar": "2026-07-21 02:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.06994,
+    "lo_seen": 0.06994,
+    "created": "2026-07-21T02:25:37"
   }
 }
