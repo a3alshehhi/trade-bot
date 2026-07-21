@@ -1,43 +1,4 @@
 {
-  "العرض/الطلب|ALICEUSDT|2026-07-07 07:00:00": {
-    "symbol": "ALICEUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 4641,
-    "entry": 0.1355,
-    "stop": 0.130799,
-    "init_stop": 0.130799,
-    "cur_stop": 0.130799,
-    "legs": [
-      0.1355,
-      0.135,
-      0.1341504,
-      0.1329408
-    ],
-    "last_alert_stop": 0.130799,
-    "armed": false,
-    "targets": [
-      0.1405584,
-      0.1430496
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-07 07:00:00",
-    "last_bar": "2026-07-07 12:14:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.1385,
-    "lo_seen": 0.1304,
-    "created": "2026-07-07T07:08:04",
-    "exit_price": 0.130799,
-    "close_card_sent": true,
-    "closed_at": "2026-07-07T12:23:32"
-  },
   "العرض/الطلب|2ZUSDT|2026-07-07 10:30:00": {
     "symbol": "2ZUSDT",
     "label": "العرض/الطلب",
@@ -3154,6 +3115,50 @@
       0.008285,
       0.00825078,
       0.00820206
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|CUSDT|2026-07-21 07:30:00": {
+    "symbol": "CUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5303,
+    "entry": 0.06658,
+    "stop": 0.0604,
+    "init_stop": 0.0604,
+    "cur_stop": 0.0604,
+    "legs": [
+      0.06658,
+      0.0654,
+      0.06422,
+      0.06254
+    ],
+    "last_alert_stop": 0.0604,
+    "armed": false,
+    "targets": [
+      0.0704,
+      0.07312
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-21 07:30:00",
+    "last_bar": "2026-07-21 07:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.06658,
+    "lo_seen": 0.06658,
+    "created": "2026-07-21T07:46:08",
+    "dca_levels": [
+      0.06658,
+      0.0654,
+      0.06422,
+      0.06254
     ],
     "wait_entry": true,
     "max_age_h": 48.0

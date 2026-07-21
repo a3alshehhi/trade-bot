@@ -256,10 +256,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 15:30:00",
-    "last_bar": "2026-07-21 06:59:59.999000",
+    "last_bar": "2026-07-21 07:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 65991.05,
+    "hi_seen": 66149.62,
     "lo_seen": 64802.41,
     "created": "2026-07-20T15:48:23"
   },
@@ -289,7 +289,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 15:45:00",
-    "last_bar": "2026-07-21 06:59:59.999000",
+    "last_bar": "2026-07-21 07:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.1385,
@@ -435,7 +435,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 05:45:00",
-    "last_bar": "2026-07-21 06:59:59.999000",
+    "last_bar": "2026-07-21 07:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.08151,
@@ -479,5 +479,40 @@
     "exit_price": 553.36,
     "close_card_sent": true,
     "closed_at": "2026-07-21T07:03:33"
+  },
+  "زخم سيولة الحيتان|DEXEUSDT|2026-07-21 07:30:00": {
+    "symbol": "DEXEUSDT",
+    "label": "زخم سيولة الحيتان",
+    "timeframe": "15m",
+    "message_id": 5304,
+    "entry": 37.565,
+    "stop": 31.85645714,
+    "init_stop": 31.85645714,
+    "cur_stop": 37.565,
+    "legs": [
+      37.565
+    ],
+    "last_alert_stop": 37.565,
+    "armed": false,
+    "targets": [
+      37.766,
+      43.67554286
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-21 07:30:00",
+    "last_bar": "2026-07-21 07:44:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": false,
+    "hi_seen": 37.902,
+    "lo_seen": 34.296,
+    "created": "2026-07-21T07:48:36"
   }
 }
