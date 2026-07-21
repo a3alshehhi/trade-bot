@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-21T09:25:01",
+  "updated_at": "2026-07-21T09:32:24",
   "stats": {
-    "open": 36,
+    "open": 37,
     "closed": 108,
     "win_rate": 69.4,
     "profit_factor": 1.42,
@@ -2302,6 +2302,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-21T09:01:26",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|APTUSDT|2026-07-21 09:00:00",
+      "symbol": "APTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.605338,
+      "stop": 0.58,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-21T09:16:12",
       "closed_at": null,
       "realized_pct": 0.0
     },
