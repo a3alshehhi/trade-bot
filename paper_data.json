@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-22T20:22:03",
+  "updated_at": "2026-07-22T20:24:46",
   "stats": {
-    "open": 32,
-    "closed": 136,
-    "win_rate": 71.3,
-    "profit_factor": 1.67,
-    "total_pct": 82.58,
-    "avg_pct": 0.47,
+    "open": 31,
+    "closed": 137,
+    "win_rate": 71.5,
+    "profit_factor": 1.71,
+    "total_pct": 88.84,
+    "avg_pct": 0.49,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-22",
-        "trades": 12,
-        "win_rate": 75.0,
-        "return_pct": 13.26,
+        "trades": 13,
+        "win_rate": 76.9,
+        "return_pct": 17.14,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -151,9 +151,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 62,
-        "win_rate": 83.9,
-        "return_pct": 94.5,
+        "trades": 63,
+        "win_rate": 84.1,
+        "return_pct": 101.17,
         "month": "2026-07"
       },
       {
@@ -174,9 +174,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 136,
-        "win_rate": 71.3,
-        "return_pct": 82.58
+        "trades": 137,
+        "win_rate": 71.5,
+        "return_pct": 88.84
       }
     ]
   },
@@ -2449,12 +2449,14 @@
       "entry": 0.07060606,
       "stop": 0.06772,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-21T06:01:16",
-      "closed_at": null,
-      "realized_pct": 1.26
+      "closed_at": "2026-07-22T20:16:20",
+      "realized_pct": 3.43,
+      "result_pct": 3.43
     },
     {
       "id": "العرض/الطلب|ARPAUSDT|2026-07-21 06:15:00",
