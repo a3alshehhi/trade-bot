@@ -134,5 +134,39 @@
     "armed": false,
     "opened_ts": "2026-07-22T15:32:02",
     "msg_id": 5420
+  },
+  "CRVUSDT": {
+    "symbol": "CRVUSDT",
+    "tf": "1h",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.2176
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 300.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.21901901901916518,
+        "qty": 1369.7440585,
+        "usd": 300.0
+      }
+    ],
+    "avg_entry": 0.21901901901916518,
+    "entry": 0.21901901901916518,
+    "init_stop": 0.213508,
+    "stop": 0.213508,
+    "R": 0.005511019019165175,
+    "tp1": 0.2212688,
+    "tp2": 0.2231372,
+    "qty": 1369.7440585,
+    "qty_open": 1369.7440585,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-22T17:08:57",
+    "msg_id": 5436
   }
 }
