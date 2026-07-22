@@ -103,6 +103,7 @@ jobs:
           # ══ بوتات trendwave الورقية الثلاثة (2026-07-14) — غير حاسمة ══
           # الإعدادات الفائزة بالباك-تست: hl_gate + rsi60 (+vwap على 4h، +volz على 1h)
           export TW_HL_GATE=1 TW_RSI_MIN=60
+          if false; then  # trendwave disabled temporarily 2026-07-22
           # MIN/HOUR التُقطا في بداية الخطوة (قبل المسوح الطويلة)
           if [ "$MIN" -lt 15 ]; then
             # أول تشغيلة كل ساعة → مسح 1h (TW-C: volz + MA200)
@@ -133,6 +134,7 @@ jobs:
             SD_POS=tw_pos_vwapm.json SD_LEDGER=tw_ledger_vwapm.json \
             SD_EXECUTED=tw_exec_vwapm.json SD_LAST_ENTRY=tw_last_vwapm.json \
             python trading_bot.py --mode trackmon || true
+            fi
           unset TW_HL_GATE TW_RSI_MIN
           true
 
