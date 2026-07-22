@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-22T16:08:08",
+  "updated_at": "2026-07-22T16:18:13",
   "stats": {
-    "open": 31,
+    "open": 33,
     "closed": 130,
     "win_rate": 70.8,
     "profit_factor": 1.61,
@@ -1324,6 +1324,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "SD Stable|CKBUSDT|2026-07-22 16:00:00",
+      "symbol": "CKBUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.000921,
+      "stop": 0.00090497,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-22T16:01:41",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "العرض/الطلب|2ZUSDT|2026-07-08 23:45:00",
       "symbol": "2ZUSDT",
       "label": "العرض/الطلب",
@@ -2388,11 +2402,13 @@
       "timeframe": "15m",
       "entry": 0.07060606,
       "stop": 0.06772,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-21T06:01:16",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.26
     },
     {
       "id": "العرض/الطلب|ARPAUSDT|2026-07-21 06:15:00",
@@ -2535,6 +2551,20 @@
       "closed_at": "2026-07-22T10:46:21",
       "realized_pct": 2.24,
       "result_pct": 2.24
+    },
+    {
+      "id": "العرض/الطلب|API3USDT|2026-07-22 16:00:00",
+      "symbol": "API3USDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2286532,
+      "stop": 0.2179,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-22T16:16:08",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
