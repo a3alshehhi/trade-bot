@@ -100,5 +100,39 @@
     "armed": false,
     "opened_ts": "2026-07-22T14:08:08",
     "msg_id": 5414
+  },
+  "AVAXUSDT": {
+    "symbol": "AVAXUSDT",
+    "tf": "1h",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      6.615
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 300.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 6.646646646451483,
+        "qty": 45.13554217,
+        "usd": 300.0
+      }
+    ],
+    "avg_entry": 6.646646646451483,
+    "entry": 6.646646646451483,
+    "init_stop": 6.44121,
+    "stop": 6.44121,
+    "R": 0.20543664645148318,
+    "tp1": 6.70568,
+    "tp2": 6.77142,
+    "qty": 45.13554217,
+    "qty_open": 45.13554217,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-22T15:32:02",
+    "msg_id": 5420
   }
 }

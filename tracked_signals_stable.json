@@ -1129,7 +1129,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 16:00:00",
-    "last_bar": "2026-07-22 13:59:59.999000",
+    "last_bar": "2026-07-22 14:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01983,
@@ -1240,7 +1240,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 16:00:00",
-    "last_bar": "2026-07-22 13:59:59.999000",
+    "last_bar": "2026-07-22 14:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 9.74e-06,
@@ -1315,7 +1315,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 19:00:00",
-    "last_bar": "2026-07-22 13:59:59.999000",
+    "last_bar": "2026-07-22 14:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0593,
@@ -1431,7 +1431,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 03:00:00",
-    "last_bar": "2026-07-22 13:59:59.999000",
+    "last_bar": "2026-07-22 14:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.07239,
@@ -1502,7 +1502,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 05:00:00",
-    "last_bar": "2026-07-22 13:59:59.999000",
+    "last_bar": "2026-07-22 14:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.005294,
@@ -1734,7 +1734,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-22 05:00:00",
-    "last_bar": "2026-07-22 13:59:59.999000",
+    "last_bar": "2026-07-22 14:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0918,
@@ -1767,11 +1767,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-22 12:00:00",
-    "last_bar": "2026-07-22 13:59:59.999000",
+    "last_bar": "2026-07-22 14:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00921,
-    "lo_seen": 0.00899,
+    "lo_seen": 0.00894,
     "created": "2026-07-22T12:37:45"
   },
   "SD Stable|API3USDT|2026-07-22 13:00:00": {
@@ -1821,7 +1821,7 @@
     "entry": 0.001718,
     "stop": 0.00168588,
     "init_stop": 0.00168588,
-    "cur_stop": 0.00168588,
+    "cur_stop": 0.001718,
     "legs": [
       0.001718,
       0.00171657,
@@ -1829,7 +1829,7 @@
       0.00170643,
       0.0016992
     ],
-    "last_alert_stop": 0.00168588,
+    "last_alert_stop": 0.001718,
     "armed": false,
     "targets": [
       0.0017447,
@@ -1843,11 +1843,13 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-22 14:00:00",
-    "last_bar": "2026-07-22 14:00:00",
-    "hits": [],
+    "last_bar": "2026-07-22 15:29:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.001718,
-    "lo_seen": 0.001718,
+    "hi_seen": 0.001753,
+    "lo_seen": 0.001716,
     "created": "2026-07-22T14:07:25"
   },
   "SD Stable|ADAUSDT|2026-07-22 14:00:00": {
@@ -1876,11 +1878,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-22 14:00:00",
-    "last_bar": "2026-07-22 14:00:00",
+    "last_bar": "2026-07-22 14:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.1754,
-    "lo_seen": 0.1754,
+    "hi_seen": 0.178,
+    "lo_seen": 0.1739,
     "created": "2026-07-22T14:08:00"
   },
   "SD Stable|BNTUSDT|2026-07-22 14:00:00": {
@@ -1909,11 +1911,44 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-22 14:00:00",
-    "last_bar": "2026-07-22 14:00:00",
+    "last_bar": "2026-07-22 14:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.2837,
-    "lo_seen": 0.2837,
+    "hi_seen": 0.2864,
+    "lo_seen": 0.2813,
     "created": "2026-07-22T14:08:00"
+  },
+  "SD Stable|AVAXUSDT|2026-07-22 15:00:00": {
+    "symbol": "AVAXUSDT",
+    "label": "SD Stable",
+    "timeframe": "1h",
+    "message_id": 5419,
+    "entry": 6.615,
+    "stop": 6.44121,
+    "init_stop": 6.44121,
+    "cur_stop": 6.44121,
+    "legs": [
+      6.615
+    ],
+    "last_alert_stop": 6.44121,
+    "armed": false,
+    "targets": [
+      6.70568,
+      6.77142
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-22 15:00:00",
+    "last_bar": "2026-07-22 15:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 6.615,
+    "lo_seen": 6.615,
+    "created": "2026-07-22T15:31:51"
   }
 }
