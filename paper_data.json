@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-22T20:04:55",
+  "updated_at": "2026-07-22T20:16:28",
   "stats": {
-    "open": 34,
-    "closed": 134,
-    "win_rate": 70.9,
-    "profit_factor": 1.64,
-    "total_pct": 76.15,
-    "avg_pct": 0.45,
+    "open": 31,
+    "closed": 137,
+    "win_rate": 71.5,
+    "profit_factor": 1.71,
+    "total_pct": 88.84,
+    "avg_pct": 0.49,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-22",
-        "trades": 10,
-        "win_rate": 70.0,
-        "return_pct": 9.27,
+        "trades": 13,
+        "win_rate": 76.9,
+        "return_pct": 17.14,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -151,9 +151,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 60,
-        "win_rate": 83.3,
-        "return_pct": 87.65,
+        "trades": 63,
+        "win_rate": 84.1,
+        "return_pct": 101.17,
         "month": "2026-07"
       },
       {
@@ -174,9 +174,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 134,
-        "win_rate": 70.9,
-        "return_pct": 76.15
+        "trades": 137,
+        "win_rate": 71.5,
+        "return_pct": 88.84
       }
     ]
   },
@@ -1249,12 +1249,14 @@
       "entry": 0.07060606,
       "stop": 0.06772,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-21T06:01:16",
-      "closed_at": null,
-      "realized_pct": 1.26
+      "closed_at": "2026-07-22T20:16:20",
+      "realized_pct": 3.43,
+      "result_pct": 3.43
     },
     {
       "id": "العرض/الطلب|ARPAUSDT|2026-07-21 06:15:00",
@@ -1934,12 +1936,14 @@
       "entry": 0.01957,
       "stop": 0.0188192,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-20T16:01:50",
-      "closed_at": null,
-      "realized_pct": 0.81
+      "closed_at": "2026-07-22T20:02:51",
+      "realized_pct": 2.29,
+      "result_pct": 2.29
     },
     {
       "id": "SD Stable|DASHUSDT|2026-07-20 16:00:00",
@@ -2258,10 +2262,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-22T14:08:00",
-      "closed_at": null,
-      "realized_pct": 1.33
+      "closed_at": "2026-07-22T20:02:57",
+      "realized_pct": 1.33,
+      "result_pct": 1.33
     },
     {
       "id": "SD Stable|BNTUSDT|2026-07-22 14:00:00",
