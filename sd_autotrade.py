@@ -247,7 +247,7 @@ def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equit
     # سلّم الفيبو تنازلياً (الأعلى أولاً). إن غاب → دخول مفرد بمستوى واحد.
     levels = sorted([float(x) for x in (levels or []) if x], reverse=True) or [entry]
     n = len(levels)
-    leg_usd = ORDER_USD / n
+    leg_usd = ORDER_USD
     if stop >= min(levels):                         # الوقف يجب أن يبقى تحت أعمق مستوى
         stop = min(levels) * 0.999
 
