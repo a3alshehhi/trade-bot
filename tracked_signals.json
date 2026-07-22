@@ -3379,5 +3379,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|CKBUSDT|2026-07-22 19:00:00": {
+    "symbol": "CKBUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5454,
+    "entry": 0.00093296,
+    "stop": 0.000907,
+    "init_stop": 0.000907,
+    "cur_stop": 0.000907,
+    "legs": [
+      0.00093296,
+      0.000928,
+      0.00092304,
+      0.00091599
+    ],
+    "last_alert_stop": 0.000907,
+    "armed": false,
+    "targets": [
+      0.000949,
+      0.00096042
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-22 19:00:00",
+    "last_bar": "2026-07-22 19:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00093296,
+    "lo_seen": 0.00093296,
+    "created": "2026-07-22T19:19:08",
+    "dca_levels": [
+      0.00093296,
+      0.000928,
+      0.00092304,
+      0.00091599
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
