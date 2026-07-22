@@ -3997,6 +3997,7 @@ def export_dashboard(track_path=TRACK_FILE, out_path="paper_data.json"):
                 trades.append(t); have.add(t.get("id"))
     except Exception:
         pass
+    trades = [t for t in trades if t.get("symbol") != "RIFUSDT"]  # RIFUSDT excluded (2026-07-22)
     closed = [t for t in trades if t["status"] == "closed" and t.get("result_pct") is not None]
     payload = {"updated_at": datetime.now().isoformat(timespec="seconds"),
                "stats": _dash_stats(trades, closed),
