@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-22T15:39:05",
+  "updated_at": "2026-07-22T15:48:14",
   "stats": {
-    "open": 30,
+    "open": 31,
     "closed": 130,
     "win_rate": 70.8,
     "profit_factor": 1.61,
@@ -1271,11 +1271,13 @@
       "timeframe": "15m",
       "entry": 0.001718,
       "stop": 0.00168588,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-22T14:07:25",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.78
     },
     {
       "id": "SD Stable|ADAUSDT|2026-07-22 14:00:00",
@@ -1302,6 +1304,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-22T14:08:00",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "SD Stable|AVAXUSDT|2026-07-22 15:00:00",
+      "symbol": "AVAXUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 6.615,
+      "stop": 6.44121,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-22T15:31:51",
       "closed_at": null,
       "realized_pct": 0.0
     },
