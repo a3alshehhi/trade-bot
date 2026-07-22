@@ -67,40 +67,6 @@
     "opened_ts": "2026-07-22T05:54:08",
     "msg_id": 5383
   },
-  "ADAUSDT": {
-    "symbol": "ADAUSDT",
-    "tf": "1h",
-    "label": "SD Stable",
-    "prob": null,
-    "levels": [
-      0.1754
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 300.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.1769769769765943,
-        "qty": 1695.13574661,
-        "usd": 300.0
-      }
-    ],
-    "avg_entry": 0.1769769769765943,
-    "entry": 0.1769769769765943,
-    "init_stop": 0.169447,
-    "stop": 0.17923597006957262,
-    "R": 0.007529976976594327,
-    "tp1": 0.1800672,
-    "tp2": 0.1826968,
-    "qty": 1695.13574661,
-    "qty_open": 847.5757466100001,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-22T14:08:08",
-    "msg_id": 5414
-  },
   "AVAXUSDT": {
     "symbol": "AVAXUSDT",
     "tf": "1h",
