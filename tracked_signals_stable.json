@@ -1129,14 +1129,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 16:00:00",
-    "last_bar": "2026-07-22 18:59:59.999000",
+    "last_bar": "2026-07-22 19:59:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.02013,
+    "stopped": true,
+    "hi_seen": 0.0203,
     "lo_seen": 0.01897,
-    "created": "2026-07-20T16:01:50"
+    "created": "2026-07-20T16:01:50",
+    "exit_price": 0.02014968,
+    "close_card_sent": true,
+    "closed_at": "2026-07-22T20:02:51"
   },
   "SD Stable|DASHUSDT|2026-07-20 16:00:00": {
     "symbol": "DASHUSDT",
@@ -1242,7 +1246,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 16:00:00",
-    "last_bar": "2026-07-22 18:59:59.999000",
+    "last_bar": "2026-07-22 19:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 9.74e-06,
@@ -1317,7 +1321,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 19:00:00",
-    "last_bar": "2026-07-22 18:59:59.999000",
+    "last_bar": "2026-07-22 19:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0593,
@@ -1433,7 +1437,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 03:00:00",
-    "last_bar": "2026-07-22 18:59:59.999000",
+    "last_bar": "2026-07-22 19:59:59.999000",
     "hits": [
       1
     ],
@@ -1506,7 +1510,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 05:00:00",
-    "last_bar": "2026-07-22 18:59:59.999000",
+    "last_bar": "2026-07-22 19:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.005294,
@@ -1738,7 +1742,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-22 05:00:00",
-    "last_bar": "2026-07-22 18:59:59.999000",
+    "last_bar": "2026-07-22 19:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0919,
@@ -1771,11 +1775,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-22 12:00:00",
-    "last_bar": "2026-07-22 18:59:59.999000",
+    "last_bar": "2026-07-22 19:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00921,
-    "lo_seen": 0.00879,
+    "lo_seen": 0.00873,
     "created": "2026-07-22T12:37:45"
   },
   "SD Stable|API3USDT|2026-07-22 13:00:00": {
@@ -1886,14 +1890,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-22 14:00:00",
-    "last_bar": "2026-07-22 18:59:59.999000",
+    "last_bar": "2026-07-22 19:59:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.1808,
-    "lo_seen": 0.1739,
-    "created": "2026-07-22T14:08:00"
+    "lo_seen": 0.1738,
+    "created": "2026-07-22T14:08:00",
+    "exit_price": 0.1754,
+    "close_card_sent": true,
+    "closed_at": "2026-07-22T20:02:57"
   },
   "SD Stable|BNTUSDT|2026-07-22 14:00:00": {
     "symbol": "BNTUSDT",
@@ -1921,11 +1928,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-22 14:00:00",
-    "last_bar": "2026-07-22 18:59:59.999000",
+    "last_bar": "2026-07-22 19:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2885,
-    "lo_seen": 0.2809,
+    "lo_seen": 0.2798,
     "created": "2026-07-22T14:08:00"
   },
   "SD Stable|AVAXUSDT|2026-07-22 15:00:00": {
@@ -1954,11 +1961,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-22 15:00:00",
-    "last_bar": "2026-07-22 18:59:59.999000",
+    "last_bar": "2026-07-22 19:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 6.657,
-    "lo_seen": 6.573,
+    "lo_seen": 6.568,
     "created": "2026-07-22T15:31:51"
   },
   "SD Stable|CKBUSDT|2026-07-22 16:00:00": {
@@ -2026,11 +2033,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-22 16:00:00",
-    "last_bar": "2026-07-22 18:59:59.999000",
+    "last_bar": "2026-07-22 19:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 6.657,
-    "lo_seen": 6.591,
+    "lo_seen": 6.568,
     "created": "2026-07-22T16:31:56"
   },
   "SD Stable|CRVUSDT|2026-07-22 17:00:00": {

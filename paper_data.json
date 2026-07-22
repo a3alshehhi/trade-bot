@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-22T19:51:49",
+  "updated_at": "2026-07-22T20:02:59",
   "stats": {
-    "open": 34,
-    "closed": 134,
-    "win_rate": 70.9,
-    "profit_factor": 1.64,
-    "total_pct": 76.15,
-    "avg_pct": 0.45,
+    "open": 32,
+    "closed": 136,
+    "win_rate": 71.3,
+    "profit_factor": 1.67,
+    "total_pct": 82.58,
+    "avg_pct": 0.47,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-22",
-        "trades": 10,
-        "win_rate": 70.0,
-        "return_pct": 9.27,
+        "trades": 12,
+        "win_rate": 75.0,
+        "return_pct": 13.26,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -151,9 +151,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 60,
-        "win_rate": 83.3,
-        "return_pct": 87.65,
+        "trades": 62,
+        "win_rate": 83.9,
+        "return_pct": 94.5,
         "month": "2026-07"
       },
       {
@@ -174,9 +174,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 134,
-        "win_rate": 70.9,
-        "return_pct": 76.15
+        "trades": 136,
+        "win_rate": 71.3,
+        "return_pct": 82.58
       }
     ]
   },
@@ -658,12 +658,14 @@
       "entry": 0.01957,
       "stop": 0.0188192,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-20T16:01:50",
-      "closed_at": null,
-      "realized_pct": 0.81
+      "closed_at": "2026-07-22T20:02:51",
+      "realized_pct": 2.29,
+      "result_pct": 2.29
     },
     {
       "id": "SD Stable|DASHUSDT|2026-07-20 16:00:00",
@@ -982,10 +984,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-22T14:08:00",
-      "closed_at": null,
-      "realized_pct": 1.33
+      "closed_at": "2026-07-22T20:02:57",
+      "realized_pct": 1.33,
+      "result_pct": 1.33
     },
     {
       "id": "SD Stable|BNTUSDT|2026-07-22 14:00:00",
