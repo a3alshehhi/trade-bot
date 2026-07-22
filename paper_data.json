@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-07-22T02:54:44",
+  "updated_at": "2026-07-22T03:07:10",
   "stats": {
-    "open": 29,
-    "closed": 124,
-    "win_rate": 71.0,
-    "profit_factor": 1.57,
-    "total_pct": 61.2,
-    "avg_pct": 0.41,
-    "max_drawdown_pct": -21.29
+    "open": 26,
+    "closed": 127,
+    "win_rate": 69.3,
+    "profit_factor": 0.72,
+    "total_pct": -63.91,
+    "avg_pct": -0.43,
+    "max_drawdown_pct": -77.62
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-07-22",
+        "trades": 3,
+        "win_rate": 0.0,
+        "return_pct": -77.62,
+        "week": "2026-W30",
+        "month": "2026-07"
+      },
       {
         "key": "2026-07-21",
         "trades": 30,
@@ -143,9 +151,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 50,
-        "win_rate": 86.0,
-        "return_pct": 71.73,
+        "trades": 53,
+        "win_rate": 81.1,
+        "return_pct": -61.56,
         "month": "2026-07"
       },
       {
@@ -166,9 +174,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 124,
-        "win_rate": 71.0,
-        "return_pct": 61.2
+        "trades": 127,
+        "win_rate": 69.3,
+        "return_pct": -63.91
       }
     ]
   },
@@ -1173,10 +1181,11 @@
       "entry": 3.707,
       "stop": 3.64464286,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-22T01:03:51",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-22T03:03:16",
+      "realized_pct": -1.68,
+      "result_pct": -1.68
     },
     {
       "id": "العرض/الطلب|AWEUSDT|2026-07-07 23:15:00",
@@ -2443,10 +2452,11 @@
       "entry": 0.1381,
       "stop": 0.06586898,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-15T13:06:45",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-22T03:06:29",
+      "realized_pct": -52.3,
+      "result_pct": -52.3
     },
     {
       "id": "trendwave · 1h · std|SOLUSDT|2026-07-15 12:59:59.999000",
@@ -2485,10 +2495,11 @@
       "entry": 0.1381,
       "stop": 0.06591534,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-15T15:07:18",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-22T03:06:31",
+      "realized_pct": -52.27,
+      "result_pct": -52.27
     },
     {
       "id": "trendwave · 1h · std|SOLUSDT|2026-07-15 14:59:59.999000",
