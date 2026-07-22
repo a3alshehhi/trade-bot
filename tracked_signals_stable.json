@@ -1983,5 +1983,38 @@
     "hi_seen": 0.000921,
     "lo_seen": 0.000921,
     "created": "2026-07-22T16:01:41"
+  },
+  "SD Stable|AVAXUSDT|2026-07-22 16:00:00": {
+    "symbol": "AVAXUSDT",
+    "label": "SD Stable",
+    "timeframe": "1h",
+    "message_id": 5427,
+    "entry": 6.615,
+    "stop": 6.44155,
+    "init_stop": 6.44155,
+    "cur_stop": 6.44155,
+    "legs": [
+      6.615
+    ],
+    "last_alert_stop": 6.44155,
+    "armed": false,
+    "targets": [
+      6.70568,
+      6.77142
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-22 16:00:00",
+    "last_bar": "2026-07-22 16:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 6.615,
+    "lo_seen": 6.615,
+    "created": "2026-07-22T16:31:56"
   }
 }
