@@ -636,5 +636,38 @@
     "exit_price": 3.64464286,
     "close_card_sent": true,
     "closed_at": "2026-07-22T03:03:16"
+  },
+  "زخم سيولة الحيتان|ARBUSDT|2026-07-22 04:45:00": {
+    "symbol": "ARBUSDT",
+    "label": "زخم سيولة الحيتان",
+    "timeframe": "15m",
+    "message_id": 5376,
+    "entry": 0.0909,
+    "stop": 0.08927143,
+    "init_stop": 0.08927143,
+    "cur_stop": 0.08927143,
+    "legs": [
+      0.0909
+    ],
+    "last_alert_stop": 0.08927143,
+    "armed": false,
+    "targets": [
+      0.09252857,
+      0.09578571
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-22 04:45:00",
+    "last_bar": "2026-07-22 04:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0909,
+    "lo_seen": 0.0909,
+    "created": "2026-07-22T05:03:52"
   }
 }
