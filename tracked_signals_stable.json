@@ -1950,5 +1950,38 @@
     "hi_seen": 6.615,
     "lo_seen": 6.615,
     "created": "2026-07-22T15:31:51"
+  },
+  "SD Stable|CKBUSDT|2026-07-22 16:00:00": {
+    "symbol": "CKBUSDT",
+    "label": "SD Stable",
+    "timeframe": "1h",
+    "message_id": 5422,
+    "entry": 0.000921,
+    "stop": 0.00090497,
+    "init_stop": 0.00090497,
+    "cur_stop": 0.00090497,
+    "legs": [
+      0.000921
+    ],
+    "last_alert_stop": 0.00090497,
+    "armed": false,
+    "targets": [
+      0.00093344,
+      0.00094036
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-22 16:00:00",
+    "last_bar": "2026-07-22 16:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.000921,
+    "lo_seen": 0.000921,
+    "created": "2026-07-22T16:01:41"
   }
 }

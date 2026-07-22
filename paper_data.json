@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-22T15:53:40",
+  "updated_at": "2026-07-22T16:04:19",
   "stats": {
-    "open": 31,
+    "open": 32,
     "closed": 130,
     "win_rate": 70.8,
     "profit_factor": 1.61,
@@ -1004,6 +1004,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-22T15:31:51",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "SD Stable|CKBUSDT|2026-07-22 16:00:00",
+      "symbol": "CKBUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.000921,
+      "stop": 0.00090497,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-22T16:01:41",
       "closed_at": null,
       "realized_pct": 0.0
     },

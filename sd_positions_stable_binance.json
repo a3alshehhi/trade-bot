@@ -304,5 +304,39 @@
     "armed": false,
     "opened_ts": "2026-07-22T15:34:32",
     "msg_id": 5421
+  },
+  "CKBUSDT": {
+    "symbol": "CKBUSDT",
+    "tf": "1h",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.000921
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.0009289342795903794,
+        "qty": 107650.242,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.0009289342795903794,
+    "entry": 0.0009289342795903794,
+    "init_stop": 0.00090497,
+    "stop": 0.00090497,
+    "R": 2.3964279590379402e-05,
+    "tp1": 0.00093344,
+    "tp2": 0.00094036,
+    "qty": 107650.242,
+    "qty_open": 107650.242,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-22T16:04:12",
+    "msg_id": 5423
   }
 }
