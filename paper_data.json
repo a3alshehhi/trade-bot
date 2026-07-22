@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-22T18:52:29",
+  "updated_at": "2026-07-22T19:02:52",
   "stats": {
-    "open": 34,
-    "closed": 133,
-    "win_rate": 71.4,
-    "profit_factor": 1.67,
-    "total_pct": 79.52,
-    "avg_pct": 0.47,
+    "open": 33,
+    "closed": 134,
+    "win_rate": 70.9,
+    "profit_factor": 1.64,
+    "total_pct": 76.15,
+    "avg_pct": 0.45,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-22",
-        "trades": 9,
-        "win_rate": 77.8,
-        "return_pct": 11.36,
+        "trades": 10,
+        "win_rate": 70.0,
+        "return_pct": 9.27,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -151,9 +151,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 59,
-        "win_rate": 84.7,
-        "return_pct": 91.25,
+        "trades": 60,
+        "win_rate": 83.3,
+        "return_pct": 87.65,
         "month": "2026-07"
       },
       {
@@ -174,9 +174,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 133,
-        "win_rate": 71.4,
-        "return_pct": 79.52
+        "trades": 134,
+        "win_rate": 70.9,
+        "return_pct": 76.15
       }
     ]
   },
@@ -657,11 +657,13 @@
       "timeframe": "1h",
       "entry": 0.01957,
       "stop": 0.0188192,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-20T16:01:50",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.81
     },
     {
       "id": "SD Stable|DASHUSDT|2026-07-20 16:00:00",
@@ -1054,10 +1056,11 @@
       "entry": 0.2176,
       "stop": 0.213508,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-22T17:08:47",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-22T19:02:51",
+      "realized_pct": -1.88,
+      "result_pct": -1.88
     },
     {
       "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
