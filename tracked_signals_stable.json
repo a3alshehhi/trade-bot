@@ -1740,5 +1740,38 @@
     "hi_seen": 0.0905,
     "lo_seen": 0.0905,
     "created": "2026-07-22T05:54:01"
+  },
+  "SD Stable|ACTUSDT|2026-07-22 12:00:00": {
+    "symbol": "ACTUSDT",
+    "label": "SD Stable",
+    "timeframe": "1h",
+    "message_id": 5395,
+    "entry": 0.00919,
+    "stop": 0.0087228,
+    "init_stop": 0.0087228,
+    "cur_stop": 0.0087228,
+    "legs": [
+      0.00919
+    ],
+    "last_alert_stop": 0.0087228,
+    "armed": false,
+    "targets": [
+      0.00939512,
+      0.00955428
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-22 12:00:00",
+    "last_bar": "2026-07-22 12:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00919,
+    "lo_seen": 0.00919,
+    "created": "2026-07-22T12:37:45"
   }
 }
