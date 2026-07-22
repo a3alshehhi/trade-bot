@@ -3427,5 +3427,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|CFXUSDT|2026-07-22 23:30:00": {
+    "symbol": "CFXUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5461,
+    "entry": 0.04653682,
+    "stop": 0.04438,
+    "init_stop": 0.04438,
+    "cur_stop": 0.04438,
+    "legs": [
+      0.04653682,
+      0.046125,
+      0.04571318,
+      0.04512686
+    ],
+    "last_alert_stop": 0.04438,
+    "armed": false,
+    "targets": [
+      0.04787,
+      0.04881928
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-22 23:30:00",
+    "last_bar": "2026-07-22 23:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.04653682,
+    "lo_seen": 0.04653682,
+    "created": "2026-07-22T23:46:09",
+    "dca_levels": [
+      0.04653682,
+      0.046125,
+      0.04571318,
+      0.04512686
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
