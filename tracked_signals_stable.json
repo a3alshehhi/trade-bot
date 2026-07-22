@@ -1129,7 +1129,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 16:00:00",
-    "last_bar": "2026-07-21 23:59:59.999000",
+    "last_bar": "2026-07-22 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01983,
@@ -1240,7 +1240,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 16:00:00",
-    "last_bar": "2026-07-21 23:59:59.999000",
+    "last_bar": "2026-07-22 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 9.74e-06,
@@ -1315,7 +1315,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 19:00:00",
-    "last_bar": "2026-07-21 23:59:59.999000",
+    "last_bar": "2026-07-22 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0593,
@@ -1431,7 +1431,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 03:00:00",
-    "last_bar": "2026-07-21 23:59:59.999000",
+    "last_bar": "2026-07-22 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.07239,
@@ -1502,11 +1502,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 05:00:00",
-    "last_bar": "2026-07-21 23:59:59.999000",
+    "last_bar": "2026-07-22 04:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.005294,
-    "lo_seen": 0.005174,
+    "lo_seen": 0.005173,
     "created": "2026-07-21T05:08:44"
   },
   "SD Stable|BLURUSDT|2026-07-21 05:45:00": {
@@ -1696,13 +1696,16 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-22 00:15:00",
-    "last_bar": "2026-07-22 00:29:59.999000",
+    "last_bar": "2026-07-22 05:29:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
-    "hi_seen": 0.077,
-    "lo_seen": 0.0754,
-    "created": "2026-07-22T00:25:16"
+    "stopped": true,
+    "hi_seen": 0.0772,
+    "lo_seen": 0.0752,
+    "created": "2026-07-22T00:25:16",
+    "exit_price": 0.0754,
+    "close_card_sent": true,
+    "closed_at": "2026-07-22T05:43:21"
   }
 }
