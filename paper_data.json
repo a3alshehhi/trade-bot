@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-22T11:53:35",
+  "updated_at": "2026-07-22T12:04:04",
   "stats": {
     "open": 26,
     "closed": 128,
@@ -181,6 +181,306 @@
     ]
   },
   "trades": [
+    {
+      "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
+      "symbol": "ETHUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1887.6,
+      "stop": 1852.39107143,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T11:48:16",
+      "closed_at": "2026-07-20T11:48:18",
+      "realized_pct": 0.3,
+      "result_pct": 0.3
+    },
+    {
+      "id": "زخم سيولة الحيتان|LINKUSDT|2026-07-20 11:30:00",
+      "symbol": "LINKUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 8.48,
+      "stop": 8.29367857,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T11:48:16",
+      "closed_at": "2026-07-20T12:17:54",
+      "realized_pct": 0.09,
+      "result_pct": 0.09
+    },
+    {
+      "id": "زخم سيولة الحيتان|ARBUSDT|2026-07-20 11:30:00",
+      "symbol": "ARBUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.088,
+      "stop": 0.08577357,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T11:48:16",
+      "closed_at": "2026-07-20T13:33:10",
+      "realized_pct": 0.97,
+      "result_pct": 0.97
+    },
+    {
+      "id": "زخم سيولة الحيتان|ARBUSDT|2026-07-20 11:45:00",
+      "symbol": "ARBUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0884,
+      "stop": 0.08597143,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T12:03:07",
+      "closed_at": "2026-07-20T13:33:12",
+      "realized_pct": 0.51,
+      "result_pct": 0.51
+    },
+    {
+      "id": "زخم سيولة الحيتان|SUIUSDT|2026-07-20 13:30:00",
+      "symbol": "SUIUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.7575,
+      "stop": 0.74343071,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T13:48:02",
+      "closed_at": "2026-07-20T14:03:46",
+      "realized_pct": 0.09,
+      "result_pct": 0.09
+    },
+    {
+      "id": "زخم سيولة الحيتان|ORDIUSDT|2026-07-20 15:00:00",
+      "symbol": "ORDIUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 3.585,
+      "stop": 3.48330714,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T15:21:47",
+      "closed_at": "2026-07-20T22:18:13",
+      "realized_pct": 0.79,
+      "result_pct": 0.79
+    },
+    {
+      "id": "زخم سيولة الحيتان|BTCUSDT|2026-07-20 15:30:00",
+      "symbol": "BTCUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 65240.81,
+      "stop": 63995.488,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "opened_at": "2026-07-20T15:48:23",
+      "closed_at": null,
+      "realized_pct": 0.95
+    },
+    {
+      "id": "زخم سيولة الحيتان|XRPUSDT|2026-07-20 15:45:00",
+      "symbol": "XRPUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.1126,
+      "stop": 1.08484643,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "opened_at": "2026-07-20T16:08:25",
+      "closed_at": null,
+      "realized_pct": 1.25
+    },
+    {
+      "id": "زخم سيولة الحيتان|ORDIUSDT|2026-07-20 16:00:00",
+      "symbol": "ORDIUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 3.624,
+      "stop": 3.48185,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T16:24:58",
+      "closed_at": "2026-07-20T17:18:16",
+      "realized_pct": 0.25,
+      "result_pct": 0.25
+    },
+    {
+      "id": "زخم سيولة الحيتان|DGBUSDT|2026-07-20 16:30:00",
+      "symbol": "DGBUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00375,
+      "stop": 0.00352371,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T16:48:01",
+      "closed_at": "2026-07-20T16:48:05",
+      "realized_pct": 0.57,
+      "result_pct": 0.57
+    },
+    {
+      "id": "زخم سيولة الحيتان|KAITOUSDT|2026-07-20 23:45:00",
+      "symbol": "KAITOUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.0033,
+      "stop": 0.971855,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-21T00:03:24",
+      "closed_at": "2026-07-21T00:48:17",
+      "realized_pct": -3.13,
+      "result_pct": -3.13
+    },
+    {
+      "id": "زخم سيولة الحيتان|POLUSDT|2026-07-21 05:45:00",
+      "symbol": "POLUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.08104,
+      "stop": 0.08001571,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-21T06:03:38",
+      "closed_at": "2026-07-21T16:33:57",
+      "realized_pct": -1.26,
+      "result_pct": -1.26
+    },
+    {
+      "id": "زخم سيولة الحيتان|ZECUSDT|2026-07-21 06:30:00",
+      "symbol": "ZECUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 553.36,
+      "stop": 544.37735714,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-21T06:48:50",
+      "closed_at": "2026-07-21T07:03:33",
+      "realized_pct": 0.05,
+      "result_pct": 0.05
+    },
+    {
+      "id": "زخم سيولة الحيتان|DEXEUSDT|2026-07-21 07:30:00",
+      "symbol": "DEXEUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 37.565,
+      "stop": 31.85645714,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-21T07:48:36",
+      "closed_at": "2026-07-21T08:03:28",
+      "realized_pct": 0.27,
+      "result_pct": 0.27
+    },
+    {
+      "id": "زخم سيولة الحيتان|KAITOUSDT|2026-07-21 07:45:00",
+      "symbol": "KAITOUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.9933,
+      "stop": 0.94742214,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-21T08:03:25",
+      "closed_at": "2026-07-21T08:18:10",
+      "realized_pct": 0.03,
+      "result_pct": 0.03
+    },
+    {
+      "id": "زخم سيولة الحيتان|TRXUSDT|2026-07-21 08:30:00",
+      "symbol": "TRXUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.3269,
+      "stop": 0.32592286,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-21T08:48:43",
+      "closed_at": "2026-07-21T10:48:14",
+      "realized_pct": 0.02,
+      "result_pct": 0.02
+    },
+    {
+      "id": "زخم سيولة الحيتان|ORDIUSDT|2026-07-22 00:45:00",
+      "symbol": "ORDIUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 3.707,
+      "stop": 3.64464286,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-22T01:03:51",
+      "closed_at": "2026-07-22T03:03:16",
+      "realized_pct": -1.68,
+      "result_pct": -1.68
+    },
+    {
+      "id": "زخم سيولة الحيتان|ARBUSDT|2026-07-22 04:45:00",
+      "symbol": "ARBUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0909,
+      "stop": 0.08927143,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-22T05:03:52",
+      "closed_at": "2026-07-22T08:07:11",
+      "realized_pct": -1.79,
+      "result_pct": -1.79
+    },
     {
       "id": "SD Stable|2ZUSDT|2026-07-14 15:00:00",
       "symbol": "2ZUSDT",
@@ -916,306 +1216,6 @@
       "opened_at": "2026-07-22T05:54:01",
       "closed_at": null,
       "realized_pct": 0.0
-    },
-    {
-      "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
-      "symbol": "ETHUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 1887.6,
-      "stop": 1852.39107143,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T11:48:16",
-      "closed_at": "2026-07-20T11:48:18",
-      "realized_pct": 0.3,
-      "result_pct": 0.3
-    },
-    {
-      "id": "زخم سيولة الحيتان|LINKUSDT|2026-07-20 11:30:00",
-      "symbol": "LINKUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 8.48,
-      "stop": 8.29367857,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T11:48:16",
-      "closed_at": "2026-07-20T12:17:54",
-      "realized_pct": 0.09,
-      "result_pct": 0.09
-    },
-    {
-      "id": "زخم سيولة الحيتان|ARBUSDT|2026-07-20 11:30:00",
-      "symbol": "ARBUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.088,
-      "stop": 0.08577357,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T11:48:16",
-      "closed_at": "2026-07-20T13:33:10",
-      "realized_pct": 0.97,
-      "result_pct": 0.97
-    },
-    {
-      "id": "زخم سيولة الحيتان|ARBUSDT|2026-07-20 11:45:00",
-      "symbol": "ARBUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0884,
-      "stop": 0.08597143,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T12:03:07",
-      "closed_at": "2026-07-20T13:33:12",
-      "realized_pct": 0.51,
-      "result_pct": 0.51
-    },
-    {
-      "id": "زخم سيولة الحيتان|SUIUSDT|2026-07-20 13:30:00",
-      "symbol": "SUIUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.7575,
-      "stop": 0.74343071,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T13:48:02",
-      "closed_at": "2026-07-20T14:03:46",
-      "realized_pct": 0.09,
-      "result_pct": 0.09
-    },
-    {
-      "id": "زخم سيولة الحيتان|ORDIUSDT|2026-07-20 15:00:00",
-      "symbol": "ORDIUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 3.585,
-      "stop": 3.48330714,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T15:21:47",
-      "closed_at": "2026-07-20T22:18:13",
-      "realized_pct": 0.79,
-      "result_pct": 0.79
-    },
-    {
-      "id": "زخم سيولة الحيتان|BTCUSDT|2026-07-20 15:30:00",
-      "symbol": "BTCUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 65240.81,
-      "stop": 63995.488,
-      "hits": [
-        1
-      ],
-      "status": "open",
-      "opened_at": "2026-07-20T15:48:23",
-      "closed_at": null,
-      "realized_pct": 0.95
-    },
-    {
-      "id": "زخم سيولة الحيتان|XRPUSDT|2026-07-20 15:45:00",
-      "symbol": "XRPUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 1.1126,
-      "stop": 1.08484643,
-      "hits": [
-        1
-      ],
-      "status": "open",
-      "opened_at": "2026-07-20T16:08:25",
-      "closed_at": null,
-      "realized_pct": 1.25
-    },
-    {
-      "id": "زخم سيولة الحيتان|ORDIUSDT|2026-07-20 16:00:00",
-      "symbol": "ORDIUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 3.624,
-      "stop": 3.48185,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T16:24:58",
-      "closed_at": "2026-07-20T17:18:16",
-      "realized_pct": 0.25,
-      "result_pct": 0.25
-    },
-    {
-      "id": "زخم سيولة الحيتان|DGBUSDT|2026-07-20 16:30:00",
-      "symbol": "DGBUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.00375,
-      "stop": 0.00352371,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T16:48:01",
-      "closed_at": "2026-07-20T16:48:05",
-      "realized_pct": 0.57,
-      "result_pct": 0.57
-    },
-    {
-      "id": "زخم سيولة الحيتان|KAITOUSDT|2026-07-20 23:45:00",
-      "symbol": "KAITOUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 1.0033,
-      "stop": 0.971855,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-21T00:03:24",
-      "closed_at": "2026-07-21T00:48:17",
-      "realized_pct": -3.13,
-      "result_pct": -3.13
-    },
-    {
-      "id": "زخم سيولة الحيتان|POLUSDT|2026-07-21 05:45:00",
-      "symbol": "POLUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.08104,
-      "stop": 0.08001571,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-21T06:03:38",
-      "closed_at": "2026-07-21T16:33:57",
-      "realized_pct": -1.26,
-      "result_pct": -1.26
-    },
-    {
-      "id": "زخم سيولة الحيتان|ZECUSDT|2026-07-21 06:30:00",
-      "symbol": "ZECUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 553.36,
-      "stop": 544.37735714,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-21T06:48:50",
-      "closed_at": "2026-07-21T07:03:33",
-      "realized_pct": 0.05,
-      "result_pct": 0.05
-    },
-    {
-      "id": "زخم سيولة الحيتان|DEXEUSDT|2026-07-21 07:30:00",
-      "symbol": "DEXEUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 37.565,
-      "stop": 31.85645714,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-21T07:48:36",
-      "closed_at": "2026-07-21T08:03:28",
-      "realized_pct": 0.27,
-      "result_pct": 0.27
-    },
-    {
-      "id": "زخم سيولة الحيتان|KAITOUSDT|2026-07-21 07:45:00",
-      "symbol": "KAITOUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.9933,
-      "stop": 0.94742214,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-21T08:03:25",
-      "closed_at": "2026-07-21T08:18:10",
-      "realized_pct": 0.03,
-      "result_pct": 0.03
-    },
-    {
-      "id": "زخم سيولة الحيتان|TRXUSDT|2026-07-21 08:30:00",
-      "symbol": "TRXUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.3269,
-      "stop": 0.32592286,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-21T08:48:43",
-      "closed_at": "2026-07-21T10:48:14",
-      "realized_pct": 0.02,
-      "result_pct": 0.02
-    },
-    {
-      "id": "زخم سيولة الحيتان|ORDIUSDT|2026-07-22 00:45:00",
-      "symbol": "ORDIUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 3.707,
-      "stop": 3.64464286,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-22T01:03:51",
-      "closed_at": "2026-07-22T03:03:16",
-      "realized_pct": -1.68,
-      "result_pct": -1.68
-    },
-    {
-      "id": "زخم سيولة الحيتان|ARBUSDT|2026-07-22 04:45:00",
-      "symbol": "ARBUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0909,
-      "stop": 0.08927143,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-22T05:03:52",
-      "closed_at": "2026-07-22T08:07:11",
-      "realized_pct": -1.79,
-      "result_pct": -1.79
     },
     {
       "id": "العرض/الطلب|2ZUSDT|2026-07-08 23:45:00",
