@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-22T14:13:27",
+  "updated_at": "2026-07-22T14:17:43",
   "stats": {
     "open": 30,
-    "closed": 129,
-    "win_rate": 70.5,
-    "profit_factor": 1.57,
-    "total_pct": 63.97,
-    "avg_pct": 0.41,
+    "closed": 130,
+    "win_rate": 70.8,
+    "profit_factor": 1.61,
+    "total_pct": 70.03,
+    "avg_pct": 0.44,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-22",
-        "trades": 5,
-        "win_rate": 60.0,
-        "return_pct": 1.71,
+        "trades": 6,
+        "win_rate": 66.7,
+        "return_pct": 5.48,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -151,9 +151,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 55,
-        "win_rate": 83.6,
-        "return_pct": 74.67,
+        "trades": 56,
+        "win_rate": 83.9,
+        "return_pct": 81.14,
         "month": "2026-07"
       },
       {
@@ -174,9 +174,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 129,
-        "win_rate": 70.5,
-        "return_pct": 63.97
+        "trades": 130,
+        "win_rate": 70.8,
+        "return_pct": 70.03
       }
     ]
   },
@@ -1292,6 +1292,20 @@
       "result_pct": -1.79
     },
     {
+      "id": "زخم سيولة الحيتان|ADAUSDT|2026-07-22 13:45:00",
+      "symbol": "ADAUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1755,
+      "stop": 0.17137714,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-22T14:03:24",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "العرض/الطلب|2ZUSDT|2026-07-08 23:45:00",
       "symbol": "2ZUSDT",
       "label": "العرض/الطلب",
@@ -2215,12 +2229,14 @@
       "entry": 0.01580834,
       "stop": 0.01511,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-20T18:32:14",
-      "closed_at": null,
-      "realized_pct": 1.37
+      "closed_at": "2026-07-22T14:01:24",
+      "realized_pct": 3.7,
+      "result_pct": 3.7
     },
     {
       "id": "العرض/الطلب|BIOUSDT|2026-07-20 18:45:00",
