@@ -100,5 +100,39 @@
     "armed": false,
     "opened_ts": "2026-07-20T19:41:13",
     "msg_id": 5248
+  },
+  "ARBUSDT": {
+    "symbol": "ARBUSDT",
+    "tf": "1h",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.0905
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.09129888735871954,
+        "qty": 1095.3036,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.09129888735871954,
+    "entry": 0.09129888735871954,
+    "init_stop": 0.087712,
+    "stop": 0.087712,
+    "R": 0.003586887358719537,
+    "tp1": 0.0923976,
+    "tp2": 0.0935394,
+    "qty": 1095.3036,
+    "qty_open": 1095.3036,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-22T05:56:32",
+    "msg_id": 5384
   }
 }

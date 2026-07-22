@@ -1707,5 +1707,38 @@
     "exit_price": 0.0754,
     "close_card_sent": true,
     "closed_at": "2026-07-22T05:43:21"
+  },
+  "SD Stable|ARBUSDT|2026-07-22 05:00:00": {
+    "symbol": "ARBUSDT",
+    "label": "SD Stable",
+    "timeframe": "1h",
+    "message_id": 5382,
+    "entry": 0.0905,
+    "stop": 0.087712,
+    "init_stop": 0.087712,
+    "cur_stop": 0.087712,
+    "legs": [
+      0.0905
+    ],
+    "last_alert_stop": 0.087712,
+    "armed": false,
+    "targets": [
+      0.0923976,
+      0.0935394
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-22 05:00:00",
+    "last_bar": "2026-07-22 05:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0905,
+    "lo_seen": 0.0905,
+    "created": "2026-07-22T05:54:01"
   }
 }
