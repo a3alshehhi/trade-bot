@@ -32,5 +32,39 @@
     "armed": false,
     "opened_ts": "2026-07-20T16:01:56",
     "msg_id": 5218
+  },
+  "BREVUSDT": {
+    "symbol": "BREVUSDT",
+    "tf": "15m",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.0754
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 300.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.07602602602610366,
+        "qty": 3946.01711652,
+        "usd": 300.0
+      }
+    ],
+    "avg_entry": 0.07602602602610366,
+    "entry": 0.07602602602610366,
+    "init_stop": 0.074877,
+    "stop": 0.07629249762783578,
+    "R": 0.0011490260261036583,
+    "tp1": 0.0767808,
+    "tp2": 0.0772652,
+    "qty": 3946.01711652,
+    "qty_open": 3946.01711652,
+    "tp1_done": false,
+    "armed": true,
+    "opened_ts": "2026-07-22T00:25:57",
+    "msg_id": 5365
   }
 }
