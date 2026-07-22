@@ -83,9 +83,9 @@ jobs:
           #   فريم القرار 15m دائماً؛ سياق MFI من 4h. تصنيف الحجم على «قاعدة هادئة» (لا نافذة تشمل الانفجار).
           # دفتر تتبّع معزول (tracked_signals_whale.json يطابق نمط لوحة المتتبّع) لقياس أدائه لحاله
           export SD_LABEL="زخم سيولة الحيتان" SD_TRACK=tracked_signals_whale.json
-          SD_STRATEGY=whale SD_ENTRY_TF=15m SD_STATE=sd_state_whale_15m.json python sd_bot.py scan
+          # SD_STRATEGY=whale SD_ENTRY_TF=15m SD_STATE=sd_state_whale_15m.json python sd_bot.py scan
           # متابعة إشارات الحوت (ورقي فقط — بلا تنفيذ) — إدارة 50/50 + قفل 0.3R + رد تيليجرام + تحديث اللوحة
-          SD_TRACK=tracked_signals_whale.json python trading_bot.py --mode trackmon
+          # SD_TRACK=tracked_signals_whale.json python trading_bot.py --mode trackmon
           unset SD_LABEL SD_TRACK
 
           # ── بوت 2: «عرض/طلب+دايفرجنس» — SMA50 + دايفرجنس صعودي MACD يتكوّن تحت SMA50 · بلا ML · بلا MACD4C ──
