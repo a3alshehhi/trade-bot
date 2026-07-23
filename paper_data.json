@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-07-23T02:04:47",
+  "updated_at": "2026-07-23T02:16:22",
   "stats": {
-    "open": 31,
-    "closed": 138,
-    "win_rate": 71.7,
-    "profit_factor": 1.76,
-    "total_pct": 97.53,
-    "avg_pct": 0.52,
+    "open": 30,
+    "closed": 139,
+    "win_rate": 71.2,
+    "profit_factor": 1.67,
+    "total_pct": 87.49,
+    "avg_pct": 0.48,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-07-23",
+        "trades": 1,
+        "win_rate": 0.0,
+        "return_pct": -5.08,
+        "week": "2026-W30",
+        "month": "2026-07"
+      },
       {
         "key": "2026-07-22",
         "trades": 14,
@@ -151,9 +159,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 64,
-        "win_rate": 84.4,
-        "return_pct": 110.43,
+        "trades": 65,
+        "win_rate": 83.1,
+        "return_pct": 99.74,
         "month": "2026-07"
       },
       {
@@ -174,9 +182,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 138,
-        "win_rate": 71.7,
-        "return_pct": 97.53
+        "trades": 139,
+        "win_rate": 71.2,
+        "return_pct": 87.49
       }
     ]
   },
@@ -2226,10 +2234,11 @@
       "entry": 0.00919,
       "stop": 0.0087228,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-22T12:37:45",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-23T02:02:50",
+      "realized_pct": -5.08,
+      "result_pct": -5.08
     },
     {
       "id": "SD Stable|API3USDT|2026-07-22 13:00:00",
