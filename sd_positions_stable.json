@@ -1,38 +1,4 @@
 {
-  "ARBUSDT": {
-    "symbol": "ARBUSDT",
-    "tf": "1h",
-    "label": "SD Stable",
-    "prob": null,
-    "levels": [
-      0.0905
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 300.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.09156156156143003,
-        "qty": 3276.4840931500003,
-        "usd": 300.0
-      }
-    ],
-    "avg_entry": 0.09156156156143003,
-    "entry": 0.09156156156143003,
-    "init_stop": 0.087712,
-    "stop": 0.087712,
-    "R": 0.003849561561430029,
-    "tp1": 0.0923976,
-    "tp2": 0.0935394,
-    "qty": 3276.4840931500003,
-    "qty_open": 3276.4840931500003,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-22T05:54:08",
-    "msg_id": 5383
-  },
   "AVAXUSDT": {
     "symbol": "AVAXUSDT",
     "tf": "1h",
