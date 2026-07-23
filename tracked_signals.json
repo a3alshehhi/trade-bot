@@ -3404,5 +3404,38 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "عرض/طلب+دايفرجنس|BMTUSDT|2026-07-23 13:30:00": {
+    "symbol": "BMTUSDT",
+    "label": "عرض/طلب+دايفرجنس",
+    "timeframe": "5m",
+    "message_id": 5504,
+    "entry": 0.01247,
+    "stop": 0.0121512,
+    "init_stop": 0.0121512,
+    "cur_stop": 0.0121512,
+    "legs": [
+      0.01247
+    ],
+    "last_alert_stop": 0.0121512,
+    "armed": false,
+    "targets": [
+      0.01264064,
+      0.01276866
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-23 13:30:00",
+    "last_bar": "2026-07-23 13:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01247,
+    "lo_seen": 0.01247,
+    "created": "2026-07-23T13:34:01"
   }
 }
