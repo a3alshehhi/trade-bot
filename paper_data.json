@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-23T16:34:21",
+  "updated_at": "2026-07-23T16:46:11",
   "stats": {
     "open": 24,
     "closed": 150,
@@ -1474,11 +1474,13 @@
       "timeframe": "15m",
       "entry": 0.1480384,
       "stop": 0.1426,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-23T14:19:05",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.14
     },
     {
       "id": "SD Stable|2ZUSDT|2026-07-14 15:00:00",
