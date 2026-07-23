@@ -67,40 +67,6 @@
     "opened_ts": "2026-07-20T19:41:13",
     "msg_id": 5248
   },
-  "BNTUSDT": {
-    "symbol": "BNTUSDT",
-    "tf": "1h",
-    "label": "SD Stable",
-    "prob": null,
-    "levels": [
-      0.2837
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.28486084262976685,
-        "qty": 351.0486000000001,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.28486084262976685,
-    "entry": 0.28486084262976685,
-    "init_stop": 0.275831,
-    "stop": 0.275831,
-    "R": 0.00902984262976686,
-    "tp1": 0.2889568,
-    "tp2": 0.2922092,
-    "qty": 351.0486000000001,
-    "qty_open": 351.0486000000001,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-22T14:13:16",
-    "msg_id": 5417
-  },
   "AVAXUSDT": {
     "symbol": "AVAXUSDT",
     "tf": "1h",
