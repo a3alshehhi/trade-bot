@@ -2082,5 +2082,42 @@
     "exit_price": 0.213508,
     "close_card_sent": true,
     "closed_at": "2026-07-22T19:02:51"
+  },
+  "SD Stable|ALICEUSDT|2026-07-23 04:30:00": {
+    "symbol": "ALICEUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 5472,
+    "entry": 0.125,
+    "stop": 0.122398,
+    "init_stop": 0.122398,
+    "cur_stop": 0.122398,
+    "legs": [
+      0.125,
+      0.1248012,
+      0.1244,
+      0.1239988,
+      0.1234276
+    ],
+    "last_alert_stop": 0.122398,
+    "armed": false,
+    "targets": [
+      0.1270248,
+      0.1282012
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-23 04:30:00",
+    "last_bar": "2026-07-23 04:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.125,
+    "lo_seen": 0.125,
+    "created": "2026-07-23T04:38:38"
   }
 }
