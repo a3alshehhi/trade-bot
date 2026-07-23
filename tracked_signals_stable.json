@@ -1246,7 +1246,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 16:00:00",
-    "last_bar": "2026-07-23 05:59:59.999000",
+    "last_bar": "2026-07-23 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 9.74e-06,
@@ -1321,7 +1321,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 19:00:00",
-    "last_bar": "2026-07-23 05:59:59.999000",
+    "last_bar": "2026-07-23 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0593,
@@ -1514,7 +1514,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 05:00:00",
-    "last_bar": "2026-07-23 05:59:59.999000",
+    "last_bar": "2026-07-23 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.005294,
@@ -1746,12 +1746,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-22 05:00:00",
-    "last_bar": "2026-07-23 05:59:59.999000",
+    "last_bar": "2026-07-23 12:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0919,
-    "lo_seen": 0.0883,
-    "created": "2026-07-22T05:54:01"
+    "lo_seen": 0.0869,
+    "created": "2026-07-22T05:54:01",
+    "exit_price": 0.087712,
+    "close_card_sent": true,
+    "closed_at": "2026-07-23T13:07:38"
   },
   "SD Stable|ACTUSDT|2026-07-22 12:00:00": {
     "symbol": "ACTUSDT",
@@ -1935,11 +1938,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-22 14:00:00",
-    "last_bar": "2026-07-23 05:59:59.999000",
+    "last_bar": "2026-07-23 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2885,
-    "lo_seen": 0.2786,
+    "lo_seen": 0.276,
     "created": "2026-07-22T14:08:00"
   },
   "SD Stable|AVAXUSDT|2026-07-22 15:00:00": {
@@ -1968,11 +1971,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-22 15:00:00",
-    "last_bar": "2026-07-23 05:59:59.999000",
+    "last_bar": "2026-07-23 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 6.664,
-    "lo_seen": 6.521,
+    "lo_seen": 6.473,
     "created": "2026-07-22T15:31:51"
   },
   "SD Stable|CKBUSDT|2026-07-22 16:00:00": {
@@ -2040,11 +2043,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-22 16:00:00",
-    "last_bar": "2026-07-23 05:59:59.999000",
+    "last_bar": "2026-07-23 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 6.664,
-    "lo_seen": 6.521,
+    "lo_seen": 6.473,
     "created": "2026-07-22T16:31:56"
   },
   "SD Stable|CRVUSDT|2026-07-22 17:00:00": {
@@ -2150,11 +2153,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-23 07:00:00",
-    "last_bar": "2026-07-23 07:00:00",
+    "last_bar": "2026-07-23 12:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.2243,
-    "lo_seen": 0.2243,
+    "hi_seen": 0.2279,
+    "lo_seen": 0.2227,
     "created": "2026-07-23T07:05:53"
   }
 }
