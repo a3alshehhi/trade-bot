@@ -3437,5 +3437,49 @@
     "hi_seen": 0.01247,
     "lo_seen": 0.01247,
     "created": "2026-07-23T13:34:01"
+  },
+  "العرض/الطلب|APEUSDT|2026-07-23 14:00:00": {
+    "symbol": "APEUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5507,
+    "entry": 0.1480384,
+    "stop": 0.1426,
+    "init_stop": 0.1426,
+    "cur_stop": 0.1426,
+    "legs": [
+      0.1480384,
+      0.147,
+      0.1459616,
+      0.1444832
+    ],
+    "last_alert_stop": 0.1426,
+    "armed": false,
+    "targets": [
+      0.1514,
+      0.1537936
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-23 14:00:00",
+    "last_bar": "2026-07-23 14:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1480384,
+    "lo_seen": 0.1480384,
+    "created": "2026-07-23T14:19:05",
+    "dca_levels": [
+      0.1480384,
+      0.147,
+      0.1459616,
+      0.1444832
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
