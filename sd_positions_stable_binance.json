@@ -168,39 +168,5 @@
     "armed": false,
     "opened_ts": "2026-07-22T15:34:32",
     "msg_id": 5421
-  },
-  "ALICEUSDT": {
-    "symbol": "ALICEUSDT",
-    "tf": "15m",
-    "label": "SD Stable",
-    "prob": null,
-    "levels": [
-      0.125
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.12502510504109224,
-        "qty": 799.83936,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.12502510504109224,
-    "entry": 0.12502510504109224,
-    "init_stop": 0.122398,
-    "stop": 0.12581323655341992,
-    "R": 0.0026271050410922314,
-    "tp1": 0.1270248,
-    "tp2": 0.1282012,
-    "qty": 799.83936,
-    "qty_open": 399.92936000000003,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-07-23T04:41:39",
-    "msg_id": 5473
   }
 }
