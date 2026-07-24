@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-07-24T08:04:19",
+  "updated_at": "2026-07-24T08:16:13",
   "stats": {
-    "open": 25,
-    "closed": 153,
-    "win_rate": 68.6,
-    "profit_factor": 1.52,
-    "total_pct": 77.63,
-    "avg_pct": 0.4,
+    "open": 24,
+    "closed": 154,
+    "win_rate": 68.8,
+    "profit_factor": 1.54,
+    "total_pct": 83.44,
+    "avg_pct": 0.42,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-07-24",
+        "trades": 1,
+        "win_rate": 100.0,
+        "return_pct": 3.27,
+        "week": "2026-W30",
+        "month": "2026-07"
+      },
       {
         "key": "2026-07-23",
         "trades": 15,
@@ -159,9 +167,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 79,
-        "win_rate": 75.9,
-        "return_pct": 89.23,
+        "trades": 80,
+        "win_rate": 76.2,
+        "return_pct": 95.42,
         "month": "2026-07"
       },
       {
@@ -182,9 +190,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 153,
-        "win_rate": 68.6,
-        "return_pct": 77.63
+        "trades": 154,
+        "win_rate": 68.8,
+        "return_pct": 83.44
       }
     ]
   },
@@ -1441,12 +1449,14 @@
       "entry": 0.1519328,
       "stop": 0.146,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-24T05:31:13",
-      "closed_at": null,
-      "realized_pct": 1.21
+      "closed_at": "2026-07-24T08:16:12",
+      "realized_pct": 3.27,
+      "result_pct": 3.27
     },
     {
       "id": "العرض/الطلب|BREVUSDT|2026-07-24 07:30:00",
