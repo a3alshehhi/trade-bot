@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-24T11:53:32",
+  "updated_at": "2026-07-24T12:02:42",
   "stats": {
-    "open": 21,
-    "closed": 157,
-    "win_rate": 68.2,
-    "profit_factor": 1.5,
-    "total_pct": 78.24,
-    "avg_pct": 0.4,
+    "open": 20,
+    "closed": 158,
+    "win_rate": 67.7,
+    "profit_factor": 1.46,
+    "total_pct": 71.37,
+    "avg_pct": 0.37,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-24",
-        "trades": 4,
-        "win_rate": 50.0,
-        "return_pct": 0.34,
+        "trades": 5,
+        "win_rate": 40.0,
+        "return_pct": -3.52,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -167,9 +167,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 83,
-        "win_rate": 74.7,
-        "return_pct": 89.88,
+        "trades": 84,
+        "win_rate": 73.8,
+        "return_pct": 82.57,
         "month": "2026-07"
       },
       {
@@ -190,9 +190,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 157,
-        "win_rate": 68.2,
-        "return_pct": 78.24
+        "trades": 158,
+        "win_rate": 67.7,
+        "return_pct": 71.37
       }
     ]
   },
@@ -1949,10 +1949,11 @@
       "entry": 9.62e-06,
       "stop": 9.25e-06,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-19T05:16:09",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-24T11:46:08",
+      "realized_pct": -3.85,
+      "result_pct": -3.85
     },
     {
       "id": "العرض/الطلب|ALICEUSDT|2026-07-19 09:15:00",
