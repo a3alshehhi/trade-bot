@@ -3380,5 +3380,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|AGLDUSDT|2026-07-24 05:15:00": {
+    "symbol": "AGLDUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5518,
+    "entry": 0.1519328,
+    "stop": 0.146,
+    "init_stop": 0.146,
+    "cur_stop": 0.146,
+    "legs": [
+      0.1519328,
+      0.1508,
+      0.1496672,
+      0.1480544
+    ],
+    "last_alert_stop": 0.146,
+    "armed": false,
+    "targets": [
+      0.1556,
+      0.1582112
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-24 05:15:00",
+    "last_bar": "2026-07-24 05:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1519328,
+    "lo_seen": 0.1519328,
+    "created": "2026-07-24T05:31:13",
+    "dca_levels": [
+      0.1519328,
+      0.1508,
+      0.1496672,
+      0.1480544
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
