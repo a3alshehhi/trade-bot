@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-24T13:05:55",
+  "updated_at": "2026-07-24T13:16:24",
   "stats": {
-    "open": 20,
-    "closed": 159,
-    "win_rate": 67.9,
-    "profit_factor": 1.46,
-    "total_pct": 73.05,
-    "avg_pct": 0.37,
-    "max_drawdown_pct": -21.29
+    "open": 18,
+    "closed": 161,
+    "win_rate": 67.1,
+    "profit_factor": 1.33,
+    "total_pct": 50.93,
+    "avg_pct": 0.29,
+    "max_drawdown_pct": -23.59
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-24",
-        "trades": 6,
-        "win_rate": 50.0,
-        "return_pct": -2.58,
+        "trades": 8,
+        "win_rate": 37.5,
+        "return_pct": -15.04,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -167,9 +167,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 85,
-        "win_rate": 74.1,
-        "return_pct": 84.35,
+        "trades": 87,
+        "win_rate": 72.4,
+        "return_pct": 60.78,
         "month": "2026-07"
       },
       {
@@ -190,9 +190,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 159,
-        "win_rate": 67.9,
-        "return_pct": 73.05
+        "trades": 161,
+        "win_rate": 67.1,
+        "return_pct": 50.93
       }
     ]
   },
@@ -823,10 +823,11 @@
       "entry": 0.0239704,
       "stop": 0.02224,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-20T11:16:07",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-24T13:16:15",
+      "realized_pct": -7.22,
+      "result_pct": -7.22
     },
     {
       "id": "العرض/الطلب|CRVUSDT|2026-07-20 12:15:00",
@@ -922,10 +923,11 @@
       "entry": 0.01523464,
       "stop": 0.01432,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-20T16:06:05",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-24T13:16:17",
+      "realized_pct": -6.0,
+      "result_pct": -6.0
     },
     {
       "id": "عرض/طلب+دايفرجنس|1000SATSUSDT|2026-07-20 16:00:00",
