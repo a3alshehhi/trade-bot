@@ -1,38 +1,4 @@
 {
-  "1000SATSUSDT": {
-    "symbol": "1000SATSUSDT",
-    "tf": "1h",
-    "label": "SD Stable",
-    "prob": null,
-    "levels": [
-      9.57e-06
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 9.67968027210712e-06,
-        "qty": 10330919.739999998,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 9.67968027210712e-06,
-    "entry": 9.67968027210712e-06,
-    "init_stop": 9.33e-06,
-    "stop": 9.33e-06,
-    "R": 3.4968027210711984e-07,
-    "tp1": 9.79e-06,
-    "tp2": 9.9e-06,
-    "qty": 10330919.739999998,
-    "qty_open": 10330919.739999998,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-20T17:02:08",
-    "msg_id": 5236
-  },
   "ADXUSDT": {
     "symbol": "ADXUSDT",
     "tf": "1h",
