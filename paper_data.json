@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-24T07:53:37",
+  "updated_at": "2026-07-24T08:02:38",
   "stats": {
-    "open": 23,
+    "open": 24,
     "closed": 153,
     "win_rate": 68.6,
     "profit_factor": 1.52,
@@ -2685,6 +2685,22 @@
       "opened_at": "2026-07-24T05:31:13",
       "closed_at": null,
       "realized_pct": 1.21
+    },
+    {
+      "id": "العرض/الطلب|BREVUSDT|2026-07-24 07:30:00",
+      "symbol": "BREVUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0741484,
+      "stop": 0.0718,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "opened_at": "2026-07-24T07:46:35",
+      "closed_at": null,
+      "realized_pct": 0.98
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
