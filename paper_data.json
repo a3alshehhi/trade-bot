@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-24T09:16:24",
+  "updated_at": "2026-07-24T09:31:34",
   "stats": {
-    "open": 24,
-    "closed": 154,
-    "win_rate": 68.8,
-    "profit_factor": 1.54,
-    "total_pct": 83.44,
-    "avg_pct": 0.42,
+    "open": 23,
+    "closed": 155,
+    "win_rate": 69.0,
+    "profit_factor": 1.56,
+    "total_pct": 87.53,
+    "avg_pct": 0.43,
     "max_drawdown_pct": -21.29
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-24",
-        "trades": 1,
+        "trades": 2,
         "win_rate": 100.0,
-        "return_pct": 3.27,
+        "return_pct": 5.57,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -167,9 +167,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 80,
-        "win_rate": 76.2,
-        "return_pct": 95.42,
+        "trades": 81,
+        "win_rate": 76.5,
+        "return_pct": 99.78,
         "month": "2026-07"
       },
       {
@@ -190,9 +190,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 154,
-        "win_rate": 68.8,
-        "return_pct": 83.44
+        "trades": 155,
+        "win_rate": 69.0,
+        "return_pct": 87.53
       }
     ]
   },
@@ -1433,12 +1433,14 @@
       "entry": 0.0266707,
       "stop": 0.02596,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-24T04:16:07",
-      "closed_at": null,
-      "realized_pct": 0.82
+      "closed_at": "2026-07-24T09:31:32",
+      "realized_pct": 2.23,
+      "result_pct": 2.23
     },
     {
       "id": "العرض/الطلب|AGLDUSDT|2026-07-24 05:15:00",
