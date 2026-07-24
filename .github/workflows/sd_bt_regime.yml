@@ -1,0 +1,58 @@
+name: Backtest — فلتر النظام (BTC + استحواذ USDT) + رتّب-ثم-اختر
+
+on:
+  workflow_dispatch:
+    inputs:
+      slots:
+        description: "عدد خانات المحفظة (max concurrent)"
+        default: "10"
+      min_majority:
+        description: "أغلبية الفريمات المطلوبة (من 4)"
+        default: "3"
+      pages:
+        description: "صفحات جلب 15m لكل عملة (6≈62 يوم)"
+        default: "6"
+      risk_usd:
+        description: "مخاطرة ثابتة لكل صفقة (لتحويل R إلى دولار)"
+        default: "10"
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pandas
+          pip install --no-cache-dir tvdatafeed || pip install --no-cache-dir git+https://github.com/rongardF/tvdatafeed.git || true
+
+      - name: Fetch regime data (BTC binance.vision + USDT.D TradingView)
+        continue-on-error: true
+        run: python fetch_regime.py
+
+      - name: Run regime backtest
+        env:
+          BT_SLOTS: ${{ github.event.inputs.slots }}
+          BT_MIN_MAJORITY: ${{ github.event.inputs.min_majority }}
+          BT_PAGES: ${{ github.event.inputs.pages }}
+          BT_RISK_USD: ${{ github.event.inputs.risk_usd }}
+        run: python sd_bt_regime.py | tee regime_bt_log.txt
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: regime-backtest-results
+          path: |
+            regime_bt_log.txt
+            regime_bt_result.json
+            regime.json
