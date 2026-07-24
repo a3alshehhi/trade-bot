@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-24T07:19:14",
+  "updated_at": "2026-07-24T07:31:32",
   "stats": {
     "open": 23,
     "closed": 153,
@@ -189,1246 +189,6 @@
     ]
   },
   "trades": [
-    {
-      "id": "SD Stable|2ZUSDT|2026-07-14 15:00:00",
-      "symbol": "2ZUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.07108,
-      "stop": 0.0686744,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-14T15:51:22",
-      "closed_at": "2026-07-15T11:39:59",
-      "realized_pct": -3.38,
-      "result_pct": -3.38
-    },
-    {
-      "id": "SD Stable|BREVUSDT|2026-07-15 12:45:00",
-      "symbol": "BREVUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0739,
-      "stop": 0.073431,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-15T12:47:21",
-      "closed_at": "2026-07-15T13:22:32",
-      "realized_pct": 1.74,
-      "result_pct": 1.74
-    },
-    {
-      "id": "SD Stable|BNTUSDT|2026-07-15 13:00:00",
-      "symbol": "BNTUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.2778,
-      "stop": 0.272748,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-15T13:18:00",
-      "closed_at": "2026-07-17T06:10:14",
-      "realized_pct": -1.82,
-      "result_pct": -1.82
-    },
-    {
-      "id": "SD Stable|API3USDT|2026-07-15 13:00:00",
-      "symbol": "API3USDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.224,
-      "stop": 0.219338,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-15T13:18:00",
-      "closed_at": "2026-07-16T02:09:10",
-      "realized_pct": 0.51,
-      "result_pct": 0.51
-    },
-    {
-      "id": "SD Stable|AVAXUSDT|2026-07-15 13:00:00",
-      "symbol": "AVAXUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 6.734,
-      "stop": 6.57737,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-15T13:38:34",
-      "closed_at": "2026-07-16T09:10:09",
-      "realized_pct": -2.33,
-      "result_pct": -2.33
-    },
-    {
-      "id": "SD Stable|CITYUSDT|2026-07-15 14:45:00",
-      "symbol": "CITYUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.401,
-      "stop": 0.39648,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-15T14:51:46",
-      "closed_at": "2026-07-15T19:50:56",
-      "realized_pct": -1.13,
-      "result_pct": -1.13
-    },
-    {
-      "id": "SD Stable|BREVUSDT|2026-07-15 18:00:00",
-      "symbol": "BREVUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0755,
-      "stop": 0.074518,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-15T18:08:45",
-      "closed_at": "2026-07-15T19:09:03",
-      "realized_pct": 1.81,
-      "result_pct": 1.81
-    },
-    {
-      "id": "SD Stable|API3USDT|2026-07-16 01:00:00",
-      "symbol": "API3USDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.225,
-      "stop": 0.218973,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-16T01:52:29",
-      "closed_at": "2026-07-16T20:14:17",
-      "realized_pct": 1.11,
-      "result_pct": 1.11
-    },
-    {
-      "id": "SD Stable|AGLDUSDT|2026-07-16 05:00:00",
-      "symbol": "AGLDUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.1639,
-      "stop": 0.15203,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-16T05:22:06",
-      "closed_at": "2026-07-16T23:10:06",
-      "realized_pct": 2.46,
-      "result_pct": 2.46
-    },
-    {
-      "id": "SD Stable|CITYUSDT|2026-07-16 09:00:00",
-      "symbol": "CITYUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.396,
-      "stop": 0.38657,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-16T09:16:51",
-      "closed_at": "2026-07-16T10:08:57",
-      "realized_pct": 2.61,
-      "result_pct": 2.61
-    },
-    {
-      "id": "SD Stable|CHRUSDT|2026-07-16 10:15:00",
-      "symbol": "CHRUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.01499,
-      "stop": 0.0148408,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-16T10:22:58",
-      "closed_at": "2026-07-16T15:19:56",
-      "realized_pct": 0.15,
-      "result_pct": 0.15
-    },
-    {
-      "id": "SD Stable|CKBUSDT|2026-07-16 14:00:00",
-      "symbol": "CKBUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.000916,
-      "stop": 0.00089386,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-16T14:23:00",
-      "closed_at": "2026-07-17T03:09:50",
-      "realized_pct": -2.42,
-      "result_pct": -2.42
-    },
-    {
-      "id": "SD Stable|CRVUSDT|2026-07-16 20:00:00",
-      "symbol": "CRVUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.2199,
-      "stop": 0.210155,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-16T20:48:05",
-      "closed_at": "2026-07-17T06:10:15",
-      "realized_pct": -4.43,
-      "result_pct": -4.43
-    },
-    {
-      "id": "SD Stable|CFXUSDT|2026-07-17 03:15:00",
-      "symbol": "CFXUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.04522,
-      "stop": 0.0443903,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-17T03:22:06",
-      "closed_at": "2026-07-17T08:42:18",
-      "realized_pct": 0.6,
-      "result_pct": 0.6
-    },
-    {
-      "id": "SD Stable|CHRUSDT|2026-07-17 10:00:00",
-      "symbol": "CHRUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.0149,
-      "stop": 0.0144864,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-17T10:09:58",
-      "closed_at": "2026-07-17T12:10:39",
-      "realized_pct": 2.18,
-      "result_pct": 2.18
-    },
-    {
-      "id": "SD Stable|1000SATSUSDT|2026-07-18 00:15:00",
-      "symbol": "1000SATSUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 9.55e-06,
-      "stop": 9.45e-06,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-18T00:22:41",
-      "closed_at": "2026-07-18T04:38:42",
-      "realized_pct": -1.05,
-      "result_pct": -1.05
-    },
-    {
-      "id": "SD Stable|CELOUSDT|2026-07-18 07:30:00",
-      "symbol": "CELOUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.07059,
-      "stop": 0.0698965,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-18T07:37:12",
-      "closed_at": "2026-07-18T17:38:21",
-      "realized_pct": 1.75,
-      "result_pct": 1.75
-    },
-    {
-      "id": "SD Stable|BTCUSDT|2026-07-18 12:00:00",
-      "symbol": "BTCUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 64026.03,
-      "stop": 63865.4557,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-18T12:09:40",
-      "closed_at": "2026-07-18T17:38:23",
-      "realized_pct": 0.55,
-      "result_pct": 0.55
-    },
-    {
-      "id": "SD Stable|CITYUSDT|2026-07-18 17:45:00",
-      "symbol": "CITYUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.393,
-      "stop": 0.39111,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-18T17:51:44",
-      "closed_at": "2026-07-18T21:10:09",
-      "realized_pct": 1.22,
-      "result_pct": 1.22
-    },
-    {
-      "id": "SD Stable|ALICEUSDT|2026-07-18 22:45:00",
-      "symbol": "ALICEUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.1172,
-      "stop": 0.114948,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-18T22:52:25",
-      "closed_at": "2026-07-19T06:23:07",
-      "realized_pct": 0.65,
-      "result_pct": 0.65
-    },
-    {
-      "id": "SD Stable|CGPTUSDT|2026-07-19 06:45:00",
-      "symbol": "CGPTUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.01853,
-      "stop": 0.0184512,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-19T06:52:40",
-      "closed_at": "2026-07-19T07:52:39",
-      "realized_pct": 0.77,
-      "result_pct": 0.77
-    },
-    {
-      "id": "SD Stable|CGPTUSDT|2026-07-19 10:45:00",
-      "symbol": "CGPTUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0187,
-      "stop": 0.0184184,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-19T10:59:19",
-      "closed_at": "2026-07-19T11:38:25",
-      "realized_pct": 0.77,
-      "result_pct": 0.77
-    },
-    {
-      "id": "SD Stable|CFXUSDT|2026-07-19 14:45:00",
-      "symbol": "CFXUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.04665,
-      "stop": 0.0458986,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-19T14:52:09",
-      "closed_at": "2026-07-19T21:38:00",
-      "realized_pct": -1.61,
-      "result_pct": -1.61
-    },
-    {
-      "id": "SD Stable|ADAUSDT|2026-07-19 14:45:00",
-      "symbol": "ADAUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.1659,
-      "stop": 0.16444,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-19T14:52:09",
-      "closed_at": "2026-07-19T17:24:54",
-      "realized_pct": -0.88,
-      "result_pct": -0.88
-    },
-    {
-      "id": "SD Stable|ARBUSDT|2026-07-19 22:15:00",
-      "symbol": "ARBUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0889,
-      "stop": 0.087868,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-19T22:22:18",
-      "closed_at": "2026-07-20T01:02:35",
-      "realized_pct": 0.48,
-      "result_pct": 0.48
-    },
-    {
-      "id": "SD Stable|BTCUSDT|2026-07-19 22:15:00",
-      "symbol": "BTCUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 64562.55,
-      "stop": 64225.1864,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-19T22:22:18",
-      "closed_at": "2026-07-20T01:02:36",
-      "realized_pct": 0.39,
-      "result_pct": 0.39
-    },
-    {
-      "id": "SD Stable|CHRUSDT|2026-07-20 07:15:00",
-      "symbol": "CHRUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.01505,
-      "stop": 0.0146906,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T07:22:19",
-      "closed_at": "2026-07-20T08:11:08",
-      "realized_pct": 2.32,
-      "result_pct": 2.32
-    },
-    {
-      "id": "SD Stable|CRVUSDT|2026-07-20 09:00:00",
-      "symbol": "CRVUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.2135,
-      "stop": 0.204862,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T09:37:58",
-      "closed_at": "2026-07-21T10:01:35",
-      "realized_pct": 1.27,
-      "result_pct": 1.27
-    },
-    {
-      "id": "SD Stable|CGPTUSDT|2026-07-20 16:00:00",
-      "symbol": "CGPTUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.01957,
-      "stop": 0.0188192,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T16:01:50",
-      "closed_at": "2026-07-22T20:02:51",
-      "realized_pct": 2.29,
-      "result_pct": 2.29
-    },
-    {
-      "id": "SD Stable|DASHUSDT|2026-07-20 16:00:00",
-      "symbol": "DASHUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 34.38,
-      "stop": 33.4777,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T16:39:30",
-      "closed_at": "2026-07-21T19:10:37",
-      "realized_pct": 1.88,
-      "result_pct": 1.88
-    },
-    {
-      "id": "SD Stable|CKBUSDT|2026-07-20 16:00:00",
-      "symbol": "CKBUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.000911,
-      "stop": 0.00089123,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T16:58:24",
-      "closed_at": "2026-07-21T06:10:32",
-      "realized_pct": 1.57,
-      "result_pct": 1.57
-    },
-    {
-      "id": "SD Stable|1000SATSUSDT|2026-07-20 16:00:00",
-      "symbol": "1000SATSUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 9.57e-06,
-      "stop": 9.33e-06,
-      "hits": [],
-      "status": "open",
-      "opened_at": "2026-07-20T16:58:24",
-      "closed_at": null,
-      "realized_pct": 0.0
-    },
-    {
-      "id": "SD Stable|DEXEUSDT|2026-07-20 19:00:00",
-      "symbol": "DEXEUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 35.381,
-      "stop": 34.10991,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T19:08:07",
-      "closed_at": "2026-07-21T01:10:52",
-      "realized_pct": 5.48,
-      "result_pct": 5.48
-    },
-    {
-      "id": "SD Stable|ADXUSDT|2026-07-20 19:00:00",
-      "symbol": "ADXUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.0579,
-      "stop": 0.054779,
-      "hits": [],
-      "status": "open",
-      "opened_at": "2026-07-20T19:39:13",
-      "closed_at": null,
-      "realized_pct": 0.0
-    },
-    {
-      "id": "SD Stable|ALTUSDT|2026-07-20 20:30:00",
-      "symbol": "ALTUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.00639,
-      "stop": 0.006317,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-20T20:38:23",
-      "closed_at": "2026-07-20T22:49:30",
-      "realized_pct": -1.14,
-      "result_pct": -1.14
-    },
-    {
-      "id": "SD Stable|CELOUSDT|2026-07-21 02:15:00",
-      "symbol": "CELOUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.06994,
-      "stop": 0.0691501,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-21T02:25:37",
-      "closed_at": "2026-07-21T02:53:34",
-      "realized_pct": 1.23,
-      "result_pct": 1.23
-    },
-    {
-      "id": "SD Stable|CELOUSDT|2026-07-21 03:00:00",
-      "symbol": "CELOUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.06992,
-      "stop": 0.0686609,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-21T03:10:06",
-      "closed_at": "2026-07-22T21:07:02",
-      "realized_pct": 4.6,
-      "result_pct": 4.6
-    },
-    {
-      "id": "SD Stable|AWEUSDT|2026-07-21 03:45:00",
-      "symbol": "AWEUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.05831,
-      "stop": 0.0577394,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-21T03:53:26",
-      "closed_at": "2026-07-21T18:02:51",
-      "realized_pct": -0.98,
-      "result_pct": -0.98
-    },
-    {
-      "id": "SD Stable|ASTRUSDT|2026-07-21 05:00:00",
-      "symbol": "ASTRUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.005196,
-      "stop": 0.00510377,
-      "hits": [],
-      "status": "open",
-      "opened_at": "2026-07-21T05:08:44",
-      "closed_at": null,
-      "realized_pct": 0.0
-    },
-    {
-      "id": "SD Stable|BLURUSDT|2026-07-21 05:45:00",
-      "symbol": "BLURUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.01577,
-      "stop": 0.0156529,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-21T05:53:28",
-      "closed_at": "2026-07-21T09:25:00",
-      "realized_pct": -0.74,
-      "result_pct": -0.74
-    },
-    {
-      "id": "SD Stable|DIAUSDT|2026-07-21 14:00:00",
-      "symbol": "DIAUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.1039,
-      "stop": 0.102875,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-21T14:08:56",
-      "closed_at": "2026-07-21T17:24:47",
-      "realized_pct": 0.55,
-      "result_pct": 0.55
-    },
-    {
-      "id": "SD Stable|AIXBTUSDT|2026-07-21 15:45:00",
-      "symbol": "AIXBTUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.01917,
-      "stop": 0.0189563,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-21T15:53:39",
-      "closed_at": "2026-07-21T18:02:53",
-      "realized_pct": -1.11,
-      "result_pct": -1.11
-    },
-    {
-      "id": "SD Stable|BIOUSDT|2026-07-21 21:15:00",
-      "symbol": "BIOUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.02641,
-      "stop": 0.0259233,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-21T21:22:31",
-      "closed_at": "2026-07-21T22:09:29",
-      "realized_pct": 1.75,
-      "result_pct": 1.75
-    },
-    {
-      "id": "SD Stable|BREVUSDT|2026-07-22 00:15:00",
-      "symbol": "BREVUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0754,
-      "stop": 0.074877,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-22T00:25:16",
-      "closed_at": "2026-07-22T05:43:21",
-      "realized_pct": 0.92,
-      "result_pct": 0.92
-    },
-    {
-      "id": "SD Stable|ARBUSDT|2026-07-22 05:00:00",
-      "symbol": "ARBUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.0905,
-      "stop": 0.087712,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-22T05:54:01",
-      "closed_at": "2026-07-23T13:07:38",
-      "realized_pct": -3.08,
-      "result_pct": -3.08
-    },
-    {
-      "id": "SD Stable|ACTUSDT|2026-07-22 12:00:00",
-      "symbol": "ACTUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.00919,
-      "stop": 0.0087228,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-22T12:37:45",
-      "closed_at": "2026-07-23T02:02:50",
-      "realized_pct": -5.08,
-      "result_pct": -5.08
-    },
-    {
-      "id": "SD Stable|API3USDT|2026-07-22 13:00:00",
-      "symbol": "API3USDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.2218,
-      "stop": 0.217085,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-22T13:06:29",
-      "closed_at": "2026-07-22T14:13:24",
-      "realized_pct": 2.09,
-      "result_pct": 2.09
-    },
-    {
-      "id": "SD Stable|CELRUSDT|2026-07-22 14:00:00",
-      "symbol": "CELRUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.001718,
-      "stop": 0.00168588,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-22T14:07:25",
-      "closed_at": "2026-07-22T16:51:06",
-      "realized_pct": 1.99,
-      "result_pct": 1.99
-    },
-    {
-      "id": "SD Stable|ADAUSDT|2026-07-22 14:00:00",
-      "symbol": "ADAUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.1754,
-      "stop": 0.169447,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-22T14:08:00",
-      "closed_at": "2026-07-22T20:02:57",
-      "realized_pct": 1.33,
-      "result_pct": 1.33
-    },
-    {
-      "id": "SD Stable|BNTUSDT|2026-07-22 14:00:00",
-      "symbol": "BNTUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.2837,
-      "stop": 0.275831,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-22T14:08:00",
-      "closed_at": "2026-07-23T14:06:49",
-      "realized_pct": -2.77,
-      "result_pct": -2.77
-    },
-    {
-      "id": "SD Stable|AVAXUSDT|2026-07-22 15:00:00",
-      "symbol": "AVAXUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 6.615,
-      "stop": 6.44121,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-22T15:31:51",
-      "closed_at": "2026-07-23T14:06:51",
-      "realized_pct": -2.63,
-      "result_pct": -2.63
-    },
-    {
-      "id": "SD Stable|CKBUSDT|2026-07-22 16:00:00",
-      "symbol": "CKBUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.000921,
-      "stop": 0.00090497,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-22T16:01:41",
-      "closed_at": "2026-07-22T18:07:46",
-      "realized_pct": 1.73,
-      "result_pct": 1.73
-    },
-    {
-      "id": "SD Stable|AVAXUSDT|2026-07-22 16:00:00",
-      "symbol": "AVAXUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 6.615,
-      "stop": 6.44155,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-22T16:31:56",
-      "closed_at": "2026-07-23T14:06:52",
-      "realized_pct": -2.62,
-      "result_pct": -2.62
-    },
-    {
-      "id": "SD Stable|CRVUSDT|2026-07-22 17:00:00",
-      "symbol": "CRVUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.2176,
-      "stop": 0.213508,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-22T17:08:47",
-      "closed_at": "2026-07-22T19:02:51",
-      "realized_pct": -1.88,
-      "result_pct": -1.88
-    },
-    {
-      "id": "SD Stable|ALICEUSDT|2026-07-23 04:30:00",
-      "symbol": "ALICEUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.125,
-      "stop": 0.122398,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-23T04:38:38",
-      "closed_at": "2026-07-23T06:54:47",
-      "realized_pct": -2.08,
-      "result_pct": -2.08
-    },
-    {
-      "id": "SD Stable|API3USDT|2026-07-23 07:00:00",
-      "symbol": "API3USDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.2243,
-      "stop": 0.222059,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-23T07:05:53",
-      "closed_at": "2026-07-23T18:36:14",
-      "realized_pct": 3.15,
-      "result_pct": 3.15
-    },
-    {
-      "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
-      "symbol": "ETHUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 1887.6,
-      "stop": 1852.39107143,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T11:48:16",
-      "closed_at": "2026-07-20T11:48:18",
-      "realized_pct": 0.3,
-      "result_pct": 0.3
-    },
-    {
-      "id": "زخم سيولة الحيتان|LINKUSDT|2026-07-20 11:30:00",
-      "symbol": "LINKUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 8.48,
-      "stop": 8.29367857,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T11:48:16",
-      "closed_at": "2026-07-20T12:17:54",
-      "realized_pct": 0.09,
-      "result_pct": 0.09
-    },
-    {
-      "id": "زخم سيولة الحيتان|ARBUSDT|2026-07-20 11:30:00",
-      "symbol": "ARBUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.088,
-      "stop": 0.08577357,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T11:48:16",
-      "closed_at": "2026-07-20T13:33:10",
-      "realized_pct": 0.97,
-      "result_pct": 0.97
-    },
-    {
-      "id": "زخم سيولة الحيتان|ARBUSDT|2026-07-20 11:45:00",
-      "symbol": "ARBUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0884,
-      "stop": 0.08597143,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T12:03:07",
-      "closed_at": "2026-07-20T13:33:12",
-      "realized_pct": 0.51,
-      "result_pct": 0.51
-    },
-    {
-      "id": "زخم سيولة الحيتان|SUIUSDT|2026-07-20 13:30:00",
-      "symbol": "SUIUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.7575,
-      "stop": 0.74343071,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T13:48:02",
-      "closed_at": "2026-07-20T14:03:46",
-      "realized_pct": 0.09,
-      "result_pct": 0.09
-    },
-    {
-      "id": "زخم سيولة الحيتان|ORDIUSDT|2026-07-20 15:00:00",
-      "symbol": "ORDIUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 3.585,
-      "stop": 3.48330714,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T15:21:47",
-      "closed_at": "2026-07-20T22:18:13",
-      "realized_pct": 0.79,
-      "result_pct": 0.79
-    },
-    {
-      "id": "زخم سيولة الحيتان|BTCUSDT|2026-07-20 15:30:00",
-      "symbol": "BTCUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 65240.81,
-      "stop": 63995.488,
-      "hits": [
-        1
-      ],
-      "status": "open",
-      "opened_at": "2026-07-20T15:48:23",
-      "closed_at": null,
-      "realized_pct": 0.95
-    },
-    {
-      "id": "زخم سيولة الحيتان|XRPUSDT|2026-07-20 15:45:00",
-      "symbol": "XRPUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 1.1126,
-      "stop": 1.08484643,
-      "hits": [
-        1
-      ],
-      "status": "open",
-      "opened_at": "2026-07-20T16:08:25",
-      "closed_at": null,
-      "realized_pct": 1.25
-    },
-    {
-      "id": "زخم سيولة الحيتان|ORDIUSDT|2026-07-20 16:00:00",
-      "symbol": "ORDIUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 3.624,
-      "stop": 3.48185,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T16:24:58",
-      "closed_at": "2026-07-20T17:18:16",
-      "realized_pct": 0.25,
-      "result_pct": 0.25
-    },
-    {
-      "id": "زخم سيولة الحيتان|DGBUSDT|2026-07-20 16:30:00",
-      "symbol": "DGBUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.00375,
-      "stop": 0.00352371,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-20T16:48:01",
-      "closed_at": "2026-07-20T16:48:05",
-      "realized_pct": 0.57,
-      "result_pct": 0.57
-    },
-    {
-      "id": "زخم سيولة الحيتان|KAITOUSDT|2026-07-20 23:45:00",
-      "symbol": "KAITOUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 1.0033,
-      "stop": 0.971855,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-21T00:03:24",
-      "closed_at": "2026-07-21T00:48:17",
-      "realized_pct": -3.13,
-      "result_pct": -3.13
-    },
-    {
-      "id": "زخم سيولة الحيتان|POLUSDT|2026-07-21 05:45:00",
-      "symbol": "POLUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.08104,
-      "stop": 0.08001571,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-21T06:03:38",
-      "closed_at": "2026-07-21T16:33:57",
-      "realized_pct": -1.26,
-      "result_pct": -1.26
-    },
-    {
-      "id": "زخم سيولة الحيتان|ZECUSDT|2026-07-21 06:30:00",
-      "symbol": "ZECUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 553.36,
-      "stop": 544.37735714,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-21T06:48:50",
-      "closed_at": "2026-07-21T07:03:33",
-      "realized_pct": 0.05,
-      "result_pct": 0.05
-    },
-    {
-      "id": "زخم سيولة الحيتان|DEXEUSDT|2026-07-21 07:30:00",
-      "symbol": "DEXEUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 37.565,
-      "stop": 31.85645714,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-21T07:48:36",
-      "closed_at": "2026-07-21T08:03:28",
-      "realized_pct": 0.27,
-      "result_pct": 0.27
-    },
-    {
-      "id": "زخم سيولة الحيتان|KAITOUSDT|2026-07-21 07:45:00",
-      "symbol": "KAITOUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.9933,
-      "stop": 0.94742214,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-21T08:03:25",
-      "closed_at": "2026-07-21T08:18:10",
-      "realized_pct": 0.03,
-      "result_pct": 0.03
-    },
-    {
-      "id": "زخم سيولة الحيتان|TRXUSDT|2026-07-21 08:30:00",
-      "symbol": "TRXUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.3269,
-      "stop": 0.32592286,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-21T08:48:43",
-      "closed_at": "2026-07-21T10:48:14",
-      "realized_pct": 0.02,
-      "result_pct": 0.02
-    },
-    {
-      "id": "زخم سيولة الحيتان|ORDIUSDT|2026-07-22 00:45:00",
-      "symbol": "ORDIUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 3.707,
-      "stop": 3.64464286,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-22T01:03:51",
-      "closed_at": "2026-07-22T03:03:16",
-      "realized_pct": -1.68,
-      "result_pct": -1.68
-    },
-    {
-      "id": "زخم سيولة الحيتان|ARBUSDT|2026-07-22 04:45:00",
-      "symbol": "ARBUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0909,
-      "stop": 0.08927143,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-22T05:03:52",
-      "closed_at": "2026-07-22T08:07:11",
-      "realized_pct": -1.79,
-      "result_pct": -1.79
-    },
-    {
-      "id": "زخم سيولة الحيتان|ADAUSDT|2026-07-22 13:45:00",
-      "symbol": "ADAUSDT",
-      "label": "زخم سيولة الحيتان",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.1755,
-      "stop": 0.17137714,
-      "hits": [
-        1
-      ],
-      "status": "open",
-      "opened_at": "2026-07-22T14:03:24",
-      "closed_at": null,
-      "realized_pct": 1.17
-    },
     {
       "id": "عرض/طلب+دايفرجنس|AVAXUSDT|2026-07-10 02:00:00",
       "symbol": "AVAXUSDT",
@@ -2678,11 +1438,1253 @@
       "timeframe": "15m",
       "entry": 0.1519328,
       "stop": 0.146,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-24T05:31:13",
       "closed_at": null,
+      "realized_pct": 1.21
+    },
+    {
+      "id": "SD Stable|2ZUSDT|2026-07-14 15:00:00",
+      "symbol": "2ZUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.07108,
+      "stop": 0.0686744,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-14T15:51:22",
+      "closed_at": "2026-07-15T11:39:59",
+      "realized_pct": -3.38,
+      "result_pct": -3.38
+    },
+    {
+      "id": "SD Stable|BREVUSDT|2026-07-15 12:45:00",
+      "symbol": "BREVUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0739,
+      "stop": 0.073431,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-15T12:47:21",
+      "closed_at": "2026-07-15T13:22:32",
+      "realized_pct": 1.74,
+      "result_pct": 1.74
+    },
+    {
+      "id": "SD Stable|BNTUSDT|2026-07-15 13:00:00",
+      "symbol": "BNTUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.2778,
+      "stop": 0.272748,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-15T13:18:00",
+      "closed_at": "2026-07-17T06:10:14",
+      "realized_pct": -1.82,
+      "result_pct": -1.82
+    },
+    {
+      "id": "SD Stable|API3USDT|2026-07-15 13:00:00",
+      "symbol": "API3USDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.224,
+      "stop": 0.219338,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-15T13:18:00",
+      "closed_at": "2026-07-16T02:09:10",
+      "realized_pct": 0.51,
+      "result_pct": 0.51
+    },
+    {
+      "id": "SD Stable|AVAXUSDT|2026-07-15 13:00:00",
+      "symbol": "AVAXUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 6.734,
+      "stop": 6.57737,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-15T13:38:34",
+      "closed_at": "2026-07-16T09:10:09",
+      "realized_pct": -2.33,
+      "result_pct": -2.33
+    },
+    {
+      "id": "SD Stable|CITYUSDT|2026-07-15 14:45:00",
+      "symbol": "CITYUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.401,
+      "stop": 0.39648,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-15T14:51:46",
+      "closed_at": "2026-07-15T19:50:56",
+      "realized_pct": -1.13,
+      "result_pct": -1.13
+    },
+    {
+      "id": "SD Stable|BREVUSDT|2026-07-15 18:00:00",
+      "symbol": "BREVUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0755,
+      "stop": 0.074518,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-15T18:08:45",
+      "closed_at": "2026-07-15T19:09:03",
+      "realized_pct": 1.81,
+      "result_pct": 1.81
+    },
+    {
+      "id": "SD Stable|API3USDT|2026-07-16 01:00:00",
+      "symbol": "API3USDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.225,
+      "stop": 0.218973,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-16T01:52:29",
+      "closed_at": "2026-07-16T20:14:17",
+      "realized_pct": 1.11,
+      "result_pct": 1.11
+    },
+    {
+      "id": "SD Stable|AGLDUSDT|2026-07-16 05:00:00",
+      "symbol": "AGLDUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1639,
+      "stop": 0.15203,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-16T05:22:06",
+      "closed_at": "2026-07-16T23:10:06",
+      "realized_pct": 2.46,
+      "result_pct": 2.46
+    },
+    {
+      "id": "SD Stable|CITYUSDT|2026-07-16 09:00:00",
+      "symbol": "CITYUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.396,
+      "stop": 0.38657,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-16T09:16:51",
+      "closed_at": "2026-07-16T10:08:57",
+      "realized_pct": 2.61,
+      "result_pct": 2.61
+    },
+    {
+      "id": "SD Stable|CHRUSDT|2026-07-16 10:15:00",
+      "symbol": "CHRUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01499,
+      "stop": 0.0148408,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-16T10:22:58",
+      "closed_at": "2026-07-16T15:19:56",
+      "realized_pct": 0.15,
+      "result_pct": 0.15
+    },
+    {
+      "id": "SD Stable|CKBUSDT|2026-07-16 14:00:00",
+      "symbol": "CKBUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.000916,
+      "stop": 0.00089386,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-16T14:23:00",
+      "closed_at": "2026-07-17T03:09:50",
+      "realized_pct": -2.42,
+      "result_pct": -2.42
+    },
+    {
+      "id": "SD Stable|CRVUSDT|2026-07-16 20:00:00",
+      "symbol": "CRVUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.2199,
+      "stop": 0.210155,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-16T20:48:05",
+      "closed_at": "2026-07-17T06:10:15",
+      "realized_pct": -4.43,
+      "result_pct": -4.43
+    },
+    {
+      "id": "SD Stable|CFXUSDT|2026-07-17 03:15:00",
+      "symbol": "CFXUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.04522,
+      "stop": 0.0443903,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-17T03:22:06",
+      "closed_at": "2026-07-17T08:42:18",
+      "realized_pct": 0.6,
+      "result_pct": 0.6
+    },
+    {
+      "id": "SD Stable|CHRUSDT|2026-07-17 10:00:00",
+      "symbol": "CHRUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0149,
+      "stop": 0.0144864,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-17T10:09:58",
+      "closed_at": "2026-07-17T12:10:39",
+      "realized_pct": 2.18,
+      "result_pct": 2.18
+    },
+    {
+      "id": "SD Stable|1000SATSUSDT|2026-07-18 00:15:00",
+      "symbol": "1000SATSUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 9.55e-06,
+      "stop": 9.45e-06,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-18T00:22:41",
+      "closed_at": "2026-07-18T04:38:42",
+      "realized_pct": -1.05,
+      "result_pct": -1.05
+    },
+    {
+      "id": "SD Stable|CELOUSDT|2026-07-18 07:30:00",
+      "symbol": "CELOUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.07059,
+      "stop": 0.0698965,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-18T07:37:12",
+      "closed_at": "2026-07-18T17:38:21",
+      "realized_pct": 1.75,
+      "result_pct": 1.75
+    },
+    {
+      "id": "SD Stable|BTCUSDT|2026-07-18 12:00:00",
+      "symbol": "BTCUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 64026.03,
+      "stop": 63865.4557,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-18T12:09:40",
+      "closed_at": "2026-07-18T17:38:23",
+      "realized_pct": 0.55,
+      "result_pct": 0.55
+    },
+    {
+      "id": "SD Stable|CITYUSDT|2026-07-18 17:45:00",
+      "symbol": "CITYUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.393,
+      "stop": 0.39111,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-18T17:51:44",
+      "closed_at": "2026-07-18T21:10:09",
+      "realized_pct": 1.22,
+      "result_pct": 1.22
+    },
+    {
+      "id": "SD Stable|ALICEUSDT|2026-07-18 22:45:00",
+      "symbol": "ALICEUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1172,
+      "stop": 0.114948,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-18T22:52:25",
+      "closed_at": "2026-07-19T06:23:07",
+      "realized_pct": 0.65,
+      "result_pct": 0.65
+    },
+    {
+      "id": "SD Stable|CGPTUSDT|2026-07-19 06:45:00",
+      "symbol": "CGPTUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01853,
+      "stop": 0.0184512,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-19T06:52:40",
+      "closed_at": "2026-07-19T07:52:39",
+      "realized_pct": 0.77,
+      "result_pct": 0.77
+    },
+    {
+      "id": "SD Stable|CGPTUSDT|2026-07-19 10:45:00",
+      "symbol": "CGPTUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0187,
+      "stop": 0.0184184,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-19T10:59:19",
+      "closed_at": "2026-07-19T11:38:25",
+      "realized_pct": 0.77,
+      "result_pct": 0.77
+    },
+    {
+      "id": "SD Stable|CFXUSDT|2026-07-19 14:45:00",
+      "symbol": "CFXUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.04665,
+      "stop": 0.0458986,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-19T14:52:09",
+      "closed_at": "2026-07-19T21:38:00",
+      "realized_pct": -1.61,
+      "result_pct": -1.61
+    },
+    {
+      "id": "SD Stable|ADAUSDT|2026-07-19 14:45:00",
+      "symbol": "ADAUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1659,
+      "stop": 0.16444,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-19T14:52:09",
+      "closed_at": "2026-07-19T17:24:54",
+      "realized_pct": -0.88,
+      "result_pct": -0.88
+    },
+    {
+      "id": "SD Stable|ARBUSDT|2026-07-19 22:15:00",
+      "symbol": "ARBUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0889,
+      "stop": 0.087868,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-19T22:22:18",
+      "closed_at": "2026-07-20T01:02:35",
+      "realized_pct": 0.48,
+      "result_pct": 0.48
+    },
+    {
+      "id": "SD Stable|BTCUSDT|2026-07-19 22:15:00",
+      "symbol": "BTCUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 64562.55,
+      "stop": 64225.1864,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-19T22:22:18",
+      "closed_at": "2026-07-20T01:02:36",
+      "realized_pct": 0.39,
+      "result_pct": 0.39
+    },
+    {
+      "id": "SD Stable|CHRUSDT|2026-07-20 07:15:00",
+      "symbol": "CHRUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01505,
+      "stop": 0.0146906,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T07:22:19",
+      "closed_at": "2026-07-20T08:11:08",
+      "realized_pct": 2.32,
+      "result_pct": 2.32
+    },
+    {
+      "id": "SD Stable|CRVUSDT|2026-07-20 09:00:00",
+      "symbol": "CRVUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.2135,
+      "stop": 0.204862,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T09:37:58",
+      "closed_at": "2026-07-21T10:01:35",
+      "realized_pct": 1.27,
+      "result_pct": 1.27
+    },
+    {
+      "id": "SD Stable|CGPTUSDT|2026-07-20 16:00:00",
+      "symbol": "CGPTUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.01957,
+      "stop": 0.0188192,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T16:01:50",
+      "closed_at": "2026-07-22T20:02:51",
+      "realized_pct": 2.29,
+      "result_pct": 2.29
+    },
+    {
+      "id": "SD Stable|DASHUSDT|2026-07-20 16:00:00",
+      "symbol": "DASHUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 34.38,
+      "stop": 33.4777,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T16:39:30",
+      "closed_at": "2026-07-21T19:10:37",
+      "realized_pct": 1.88,
+      "result_pct": 1.88
+    },
+    {
+      "id": "SD Stable|CKBUSDT|2026-07-20 16:00:00",
+      "symbol": "CKBUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.000911,
+      "stop": 0.00089123,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T16:58:24",
+      "closed_at": "2026-07-21T06:10:32",
+      "realized_pct": 1.57,
+      "result_pct": 1.57
+    },
+    {
+      "id": "SD Stable|1000SATSUSDT|2026-07-20 16:00:00",
+      "symbol": "1000SATSUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 9.57e-06,
+      "stop": 9.33e-06,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-20T16:58:24",
+      "closed_at": null,
       "realized_pct": 0.0
+    },
+    {
+      "id": "SD Stable|DEXEUSDT|2026-07-20 19:00:00",
+      "symbol": "DEXEUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 35.381,
+      "stop": 34.10991,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T19:08:07",
+      "closed_at": "2026-07-21T01:10:52",
+      "realized_pct": 5.48,
+      "result_pct": 5.48
+    },
+    {
+      "id": "SD Stable|ADXUSDT|2026-07-20 19:00:00",
+      "symbol": "ADXUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0579,
+      "stop": 0.054779,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-20T19:39:13",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "SD Stable|ALTUSDT|2026-07-20 20:30:00",
+      "symbol": "ALTUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00639,
+      "stop": 0.006317,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-20T20:38:23",
+      "closed_at": "2026-07-20T22:49:30",
+      "realized_pct": -1.14,
+      "result_pct": -1.14
+    },
+    {
+      "id": "SD Stable|CELOUSDT|2026-07-21 02:15:00",
+      "symbol": "CELOUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06994,
+      "stop": 0.0691501,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-21T02:25:37",
+      "closed_at": "2026-07-21T02:53:34",
+      "realized_pct": 1.23,
+      "result_pct": 1.23
+    },
+    {
+      "id": "SD Stable|CELOUSDT|2026-07-21 03:00:00",
+      "symbol": "CELOUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.06992,
+      "stop": 0.0686609,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-21T03:10:06",
+      "closed_at": "2026-07-22T21:07:02",
+      "realized_pct": 4.6,
+      "result_pct": 4.6
+    },
+    {
+      "id": "SD Stable|AWEUSDT|2026-07-21 03:45:00",
+      "symbol": "AWEUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.05831,
+      "stop": 0.0577394,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-21T03:53:26",
+      "closed_at": "2026-07-21T18:02:51",
+      "realized_pct": -0.98,
+      "result_pct": -0.98
+    },
+    {
+      "id": "SD Stable|ASTRUSDT|2026-07-21 05:00:00",
+      "symbol": "ASTRUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.005196,
+      "stop": 0.00510377,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-21T05:08:44",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "SD Stable|BLURUSDT|2026-07-21 05:45:00",
+      "symbol": "BLURUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01577,
+      "stop": 0.0156529,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-21T05:53:28",
+      "closed_at": "2026-07-21T09:25:00",
+      "realized_pct": -0.74,
+      "result_pct": -0.74
+    },
+    {
+      "id": "SD Stable|DIAUSDT|2026-07-21 14:00:00",
+      "symbol": "DIAUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1039,
+      "stop": 0.102875,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-21T14:08:56",
+      "closed_at": "2026-07-21T17:24:47",
+      "realized_pct": 0.55,
+      "result_pct": 0.55
+    },
+    {
+      "id": "SD Stable|AIXBTUSDT|2026-07-21 15:45:00",
+      "symbol": "AIXBTUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01917,
+      "stop": 0.0189563,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-21T15:53:39",
+      "closed_at": "2026-07-21T18:02:53",
+      "realized_pct": -1.11,
+      "result_pct": -1.11
+    },
+    {
+      "id": "SD Stable|BIOUSDT|2026-07-21 21:15:00",
+      "symbol": "BIOUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.02641,
+      "stop": 0.0259233,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-21T21:22:31",
+      "closed_at": "2026-07-21T22:09:29",
+      "realized_pct": 1.75,
+      "result_pct": 1.75
+    },
+    {
+      "id": "SD Stable|BREVUSDT|2026-07-22 00:15:00",
+      "symbol": "BREVUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0754,
+      "stop": 0.074877,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-22T00:25:16",
+      "closed_at": "2026-07-22T05:43:21",
+      "realized_pct": 0.92,
+      "result_pct": 0.92
+    },
+    {
+      "id": "SD Stable|ARBUSDT|2026-07-22 05:00:00",
+      "symbol": "ARBUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0905,
+      "stop": 0.087712,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-22T05:54:01",
+      "closed_at": "2026-07-23T13:07:38",
+      "realized_pct": -3.08,
+      "result_pct": -3.08
+    },
+    {
+      "id": "SD Stable|ACTUSDT|2026-07-22 12:00:00",
+      "symbol": "ACTUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.00919,
+      "stop": 0.0087228,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-22T12:37:45",
+      "closed_at": "2026-07-23T02:02:50",
+      "realized_pct": -5.08,
+      "result_pct": -5.08
+    },
+    {
+      "id": "SD Stable|API3USDT|2026-07-22 13:00:00",
+      "symbol": "API3USDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.2218,
+      "stop": 0.217085,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-22T13:06:29",
+      "closed_at": "2026-07-22T14:13:24",
+      "realized_pct": 2.09,
+      "result_pct": 2.09
+    },
+    {
+      "id": "SD Stable|CELRUSDT|2026-07-22 14:00:00",
+      "symbol": "CELRUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.001718,
+      "stop": 0.00168588,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-22T14:07:25",
+      "closed_at": "2026-07-22T16:51:06",
+      "realized_pct": 1.99,
+      "result_pct": 1.99
+    },
+    {
+      "id": "SD Stable|ADAUSDT|2026-07-22 14:00:00",
+      "symbol": "ADAUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1754,
+      "stop": 0.169447,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-22T14:08:00",
+      "closed_at": "2026-07-22T20:02:57",
+      "realized_pct": 1.33,
+      "result_pct": 1.33
+    },
+    {
+      "id": "SD Stable|BNTUSDT|2026-07-22 14:00:00",
+      "symbol": "BNTUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.2837,
+      "stop": 0.275831,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-22T14:08:00",
+      "closed_at": "2026-07-23T14:06:49",
+      "realized_pct": -2.77,
+      "result_pct": -2.77
+    },
+    {
+      "id": "SD Stable|AVAXUSDT|2026-07-22 15:00:00",
+      "symbol": "AVAXUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 6.615,
+      "stop": 6.44121,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-22T15:31:51",
+      "closed_at": "2026-07-23T14:06:51",
+      "realized_pct": -2.63,
+      "result_pct": -2.63
+    },
+    {
+      "id": "SD Stable|CKBUSDT|2026-07-22 16:00:00",
+      "symbol": "CKBUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.000921,
+      "stop": 0.00090497,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-22T16:01:41",
+      "closed_at": "2026-07-22T18:07:46",
+      "realized_pct": 1.73,
+      "result_pct": 1.73
+    },
+    {
+      "id": "SD Stable|AVAXUSDT|2026-07-22 16:00:00",
+      "symbol": "AVAXUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 6.615,
+      "stop": 6.44155,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-22T16:31:56",
+      "closed_at": "2026-07-23T14:06:52",
+      "realized_pct": -2.62,
+      "result_pct": -2.62
+    },
+    {
+      "id": "SD Stable|CRVUSDT|2026-07-22 17:00:00",
+      "symbol": "CRVUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.2176,
+      "stop": 0.213508,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-22T17:08:47",
+      "closed_at": "2026-07-22T19:02:51",
+      "realized_pct": -1.88,
+      "result_pct": -1.88
+    },
+    {
+      "id": "SD Stable|ALICEUSDT|2026-07-23 04:30:00",
+      "symbol": "ALICEUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.125,
+      "stop": 0.122398,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-23T04:38:38",
+      "closed_at": "2026-07-23T06:54:47",
+      "realized_pct": -2.08,
+      "result_pct": -2.08
+    },
+    {
+      "id": "SD Stable|API3USDT|2026-07-23 07:00:00",
+      "symbol": "API3USDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2243,
+      "stop": 0.222059,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-23T07:05:53",
+      "closed_at": "2026-07-23T18:36:14",
+      "realized_pct": 3.15,
+      "result_pct": 3.15
+    },
+    {
+      "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
+      "symbol": "ETHUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1887.6,
+      "stop": 1852.39107143,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T11:48:16",
+      "closed_at": "2026-07-20T11:48:18",
+      "realized_pct": 0.3,
+      "result_pct": 0.3
+    },
+    {
+      "id": "زخم سيولة الحيتان|LINKUSDT|2026-07-20 11:30:00",
+      "symbol": "LINKUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 8.48,
+      "stop": 8.29367857,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T11:48:16",
+      "closed_at": "2026-07-20T12:17:54",
+      "realized_pct": 0.09,
+      "result_pct": 0.09
+    },
+    {
+      "id": "زخم سيولة الحيتان|ARBUSDT|2026-07-20 11:30:00",
+      "symbol": "ARBUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.088,
+      "stop": 0.08577357,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T11:48:16",
+      "closed_at": "2026-07-20T13:33:10",
+      "realized_pct": 0.97,
+      "result_pct": 0.97
+    },
+    {
+      "id": "زخم سيولة الحيتان|ARBUSDT|2026-07-20 11:45:00",
+      "symbol": "ARBUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0884,
+      "stop": 0.08597143,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T12:03:07",
+      "closed_at": "2026-07-20T13:33:12",
+      "realized_pct": 0.51,
+      "result_pct": 0.51
+    },
+    {
+      "id": "زخم سيولة الحيتان|SUIUSDT|2026-07-20 13:30:00",
+      "symbol": "SUIUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.7575,
+      "stop": 0.74343071,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T13:48:02",
+      "closed_at": "2026-07-20T14:03:46",
+      "realized_pct": 0.09,
+      "result_pct": 0.09
+    },
+    {
+      "id": "زخم سيولة الحيتان|ORDIUSDT|2026-07-20 15:00:00",
+      "symbol": "ORDIUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 3.585,
+      "stop": 3.48330714,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T15:21:47",
+      "closed_at": "2026-07-20T22:18:13",
+      "realized_pct": 0.79,
+      "result_pct": 0.79
+    },
+    {
+      "id": "زخم سيولة الحيتان|BTCUSDT|2026-07-20 15:30:00",
+      "symbol": "BTCUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 65240.81,
+      "stop": 63995.488,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "opened_at": "2026-07-20T15:48:23",
+      "closed_at": null,
+      "realized_pct": 0.95
+    },
+    {
+      "id": "زخم سيولة الحيتان|XRPUSDT|2026-07-20 15:45:00",
+      "symbol": "XRPUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.1126,
+      "stop": 1.08484643,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "opened_at": "2026-07-20T16:08:25",
+      "closed_at": null,
+      "realized_pct": 1.25
+    },
+    {
+      "id": "زخم سيولة الحيتان|ORDIUSDT|2026-07-20 16:00:00",
+      "symbol": "ORDIUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 3.624,
+      "stop": 3.48185,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T16:24:58",
+      "closed_at": "2026-07-20T17:18:16",
+      "realized_pct": 0.25,
+      "result_pct": 0.25
+    },
+    {
+      "id": "زخم سيولة الحيتان|DGBUSDT|2026-07-20 16:30:00",
+      "symbol": "DGBUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00375,
+      "stop": 0.00352371,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-20T16:48:01",
+      "closed_at": "2026-07-20T16:48:05",
+      "realized_pct": 0.57,
+      "result_pct": 0.57
+    },
+    {
+      "id": "زخم سيولة الحيتان|KAITOUSDT|2026-07-20 23:45:00",
+      "symbol": "KAITOUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.0033,
+      "stop": 0.971855,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-21T00:03:24",
+      "closed_at": "2026-07-21T00:48:17",
+      "realized_pct": -3.13,
+      "result_pct": -3.13
+    },
+    {
+      "id": "زخم سيولة الحيتان|POLUSDT|2026-07-21 05:45:00",
+      "symbol": "POLUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.08104,
+      "stop": 0.08001571,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-21T06:03:38",
+      "closed_at": "2026-07-21T16:33:57",
+      "realized_pct": -1.26,
+      "result_pct": -1.26
+    },
+    {
+      "id": "زخم سيولة الحيتان|ZECUSDT|2026-07-21 06:30:00",
+      "symbol": "ZECUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 553.36,
+      "stop": 544.37735714,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-21T06:48:50",
+      "closed_at": "2026-07-21T07:03:33",
+      "realized_pct": 0.05,
+      "result_pct": 0.05
+    },
+    {
+      "id": "زخم سيولة الحيتان|DEXEUSDT|2026-07-21 07:30:00",
+      "symbol": "DEXEUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 37.565,
+      "stop": 31.85645714,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-21T07:48:36",
+      "closed_at": "2026-07-21T08:03:28",
+      "realized_pct": 0.27,
+      "result_pct": 0.27
+    },
+    {
+      "id": "زخم سيولة الحيتان|KAITOUSDT|2026-07-21 07:45:00",
+      "symbol": "KAITOUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.9933,
+      "stop": 0.94742214,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-21T08:03:25",
+      "closed_at": "2026-07-21T08:18:10",
+      "realized_pct": 0.03,
+      "result_pct": 0.03
+    },
+    {
+      "id": "زخم سيولة الحيتان|TRXUSDT|2026-07-21 08:30:00",
+      "symbol": "TRXUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.3269,
+      "stop": 0.32592286,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-21T08:48:43",
+      "closed_at": "2026-07-21T10:48:14",
+      "realized_pct": 0.02,
+      "result_pct": 0.02
+    },
+    {
+      "id": "زخم سيولة الحيتان|ORDIUSDT|2026-07-22 00:45:00",
+      "symbol": "ORDIUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 3.707,
+      "stop": 3.64464286,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-22T01:03:51",
+      "closed_at": "2026-07-22T03:03:16",
+      "realized_pct": -1.68,
+      "result_pct": -1.68
+    },
+    {
+      "id": "زخم سيولة الحيتان|ARBUSDT|2026-07-22 04:45:00",
+      "symbol": "ARBUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0909,
+      "stop": 0.08927143,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-22T05:03:52",
+      "closed_at": "2026-07-22T08:07:11",
+      "realized_pct": -1.79,
+      "result_pct": -1.79
+    },
+    {
+      "id": "زخم سيولة الحيتان|ADAUSDT|2026-07-22 13:45:00",
+      "symbol": "ADAUSDT",
+      "label": "زخم سيولة الحيتان",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1755,
+      "stop": 0.17137714,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "opened_at": "2026-07-22T14:03:24",
+      "closed_at": null,
+      "realized_pct": 1.17
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
