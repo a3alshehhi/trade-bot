@@ -32,5 +32,39 @@
     "armed": false,
     "opened_ts": "2026-07-20T19:41:13",
     "msg_id": 5248
+  },
+  "AWEUSDT": {
+    "symbol": "AWEUSDT",
+    "tf": "15m",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.05699
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.058675322450234525,
+        "qty": 1704.294,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.058675322450234525,
+    "entry": 0.058675322450234525,
+    "init_stop": 0.056069,
+    "stop": 0.05888097974909288,
+    "R": 0.0026063224502345245,
+    "tp1": 0.05959168,
+    "tp2": 0.06052242,
+    "qty": 1704.294,
+    "qty_open": 1704.294,
+    "tp1_done": false,
+    "armed": true,
+    "opened_ts": "2026-07-24T14:08:05",
+    "msg_id": 5538
   }
 }
