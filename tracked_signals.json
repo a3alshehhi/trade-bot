@@ -989,7 +989,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-18 23:00:00",
-    "last_bar": "2026-07-25 07:14:59.999000",
+    "last_bar": "2026-07-25 07:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.06056,
@@ -2569,7 +2569,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 08:00:00",
-    "last_bar": "2026-07-25 07:14:59.999000",
+    "last_bar": "2026-07-25 07:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.005292,
@@ -2613,7 +2613,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 08:45:00",
-    "last_bar": "2026-07-25 07:14:59.999000",
+    "last_bar": "2026-07-25 07:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1628,
@@ -2905,11 +2905,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-22 16:00:00",
-    "last_bar": "2026-07-25 07:14:59.999000",
+    "last_bar": "2026-07-25 07:44:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.2326,
-    "lo_seen": 0.2196,
+    "lo_seen": 0.2012,
     "created": "2026-07-22T16:16:08",
     "dca_levels": [
       0.2286532,
@@ -2918,7 +2918,10 @@
       0.2216236
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.2179,
+    "close_card_sent": true,
+    "closed_at": "2026-07-25T07:46:11"
   },
   "عرض/طلب+دايفرجنس|ALGOUSDT|2026-07-22 16:00:00": {
     "symbol": "ALGOUSDT",
@@ -3126,7 +3129,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-23 10:45:00",
-    "last_bar": "2026-07-25 07:14:59.999000",
+    "last_bar": "2026-07-25 07:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00364,
@@ -3504,12 +3507,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-25 06:00:00",
-    "last_bar": "2026-07-25 07:14:59.999000",
+    "last_bar": "2026-07-25 07:44:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 5.477,
+    "hi_seen": 6.025,
     "lo_seen": 3.958458,
     "created": "2026-07-25T06:16:08",
     "dca_levels": [
@@ -3550,11 +3553,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-25 07:00:00",
-    "last_bar": "2026-07-25 07:14:59.999000",
+    "last_bar": "2026-07-25 07:44:59.999000",
     "hits": [],
-    "stopped": false,
-    "hi_seen": 0.2271,
-    "lo_seen": 0.225471,
+    "stopped": true,
+    "hi_seen": 0.2279,
+    "lo_seen": 0.2012,
     "created": "2026-07-25T07:16:08",
     "dca_levels": [
       0.225471,
@@ -3563,6 +3566,9 @@
       0.221633
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.2196,
+    "close_card_sent": true,
+    "closed_at": "2026-07-25T07:46:14"
   }
 }
