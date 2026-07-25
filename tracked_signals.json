@@ -3685,5 +3685,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|AVAXUSDT|2026-07-25 18:00:00": {
+    "symbol": "AVAXUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5570,
+    "entry": 6.506564,
+    "stop": 6.137,
+    "init_stop": 6.137,
+    "cur_stop": 6.137,
+    "legs": [
+      6.506564,
+      6.436,
+      6.365436,
+      6.264972
+    ],
+    "last_alert_stop": 6.137,
+    "armed": false,
+    "targets": [
+      6.735,
+      6.897656
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-25 18:00:00",
+    "last_bar": "2026-07-25 18:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 6.506564,
+    "lo_seen": 6.506564,
+    "created": "2026-07-25T18:16:06",
+    "dca_levels": [
+      6.506564,
+      6.436,
+      6.365436,
+      6.264972
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
