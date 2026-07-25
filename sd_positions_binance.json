@@ -264,46 +264,6 @@
     "opened_ts": "2026-07-24T15:09:57",
     "msg_id": 5547
   },
-  "ACTUSDT": {
-    "symbol": "ACTUSDT",
-    "tf": "15m",
-    "label": "العرض/الطلب",
-    "prob": null,
-    "levels": [
-      0.0091453,
-      0.009045,
-      0.0089447,
-      0.0088019
-    ],
-    "filled": [
-      true,
-      false,
-      false,
-      false
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 4,
-    "fills": [
-      {
-        "price": 0.009119159334611784,
-        "qty": 10965.9231,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.009119159334611784,
-    "entry": 0.009119159334611784,
-    "init_stop": 0.00862,
-    "stop": 0.009302890000000001,
-    "R": 0.0004991593346117852,
-    "tp1": 0.00947,
-    "tp2": 0.0097012,
-    "qty": 10965.9231,
-    "qty_open": 10965.9231,
-    "tp1_done": false,
-    "armed": true,
-    "opened_ts": "2026-07-25T14:18:54",
-    "msg_id": 5561
-  },
   "ALPINEUSDT": {
     "symbol": "ALPINEUSDT",
     "tf": "15m",
