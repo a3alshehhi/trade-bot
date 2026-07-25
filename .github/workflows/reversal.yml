@@ -43,7 +43,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install deps
-        run: pip install -r requirements.txt
+        run: pip install -r requirements.txt && (pip install pandas tvdatafeed || pip install git+https://github.com/rongardF/tvdatafeed.git) || true
 
       - name: Run SD scans (main + 2 experimental) + trackmon
         env:
@@ -86,6 +86,14 @@ jobs:
           # SD_STRATEGY=whale SD_ENTRY_TF=15m SD_STATE=sd_state_whale_15m.json python sd_bot.py scan
           # متابعة إشارات الحوت (ورقي فقط — بلا تنفيذ) — إدارة 50/50 + قفل 0.3R + رد تيليجرام + تحديث اللوحة
           # SD_TRACK=tracked_signals_whale.json python trading_bot.py --mode trackmon
+          unset SD_LABEL SD_TRACK
+
+          # ── بوت «الفيواب الأسبوعي — نسخة BTC» (فلتر النظام BTC+استحواذ USDT · أغلبية 2/4 + رتّب-ثم-اختر · 15m · إشارات فقط) ──
+          # نسخة مستقلّة (vwbtc_bot.py) لا تمسّ scan_vwave الرئيسي؛ دفتر/حالة/وسم معزول؛ بلا تنفيذ (SD_EXECUTE=0).
+          python fetch_regime.py || true
+          export SD_LABEL="الفيواب الأسبوعي · BTC" SD_TRACK=tracked_signals_vwbtc.json
+          SD_EXECUTE=0 SD_REGIME_MIN=2 SD_ENTRY_TF=15m SD_STATE=sd_state_vwbtc_15m.json python vwbtc_bot.py scan
+          SD_EXECUTE=0 SD_TRACK=tracked_signals_vwbtc.json python trading_bot.py --mode trackmon
           unset SD_LABEL SD_TRACK
 
           # ── بوت 2: «عرض/طلب+دايفرجنس» — SMA50 + دايفرجنس صعودي MACD يتكوّن تحت SMA50 · بلا ML · بلا MACD4C ──
@@ -145,6 +153,7 @@ jobs:
                  sd_positions.json sd_ledger.json sd_executed.json sd_last_entry.json \
                  sd_positions_binance.json sd_ledger_binance.json sd_executed_binance.json sd_last_entry_binance.json \
                  sd_state_whale_15m.json tracked_signals_whale.json \
+                 sd_state_vwbtc_15m.json tracked_signals_vwbtc.json regime.json \
                  sd_state_div_15m.json sd_state_div_1h.json sd_state_div_5m.json \
                  sd_pos_div.json sd_ledger_div.json sd_exec_div.json sd_last_div.json \
                  sd_pos_div_binance.json sd_ledger_div_binance.json sd_exec_div_binance.json sd_last_div_binance.json \
