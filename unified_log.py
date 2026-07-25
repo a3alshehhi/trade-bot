@@ -13,7 +13,8 @@ unified_log.py — السجل الموحّد لكل صفقات البوت.
 كل صفقة تحمل وسماً يبيّن مصدرها (بايننس ديمو / بايبت تيستنت / ورقية).
 
 ═══ قاعدة «النمط الحقيقي» (قرار بو محمد 2026-07-26) ═══
-كل صفقة — أياً كان مصدرها — يُعاد احتساب نتيجتها على الشموع الوقف موقوفة، وإن لمست
+كل صفقة — أياً كان مصدرها — يُعاد احتساب نتيجتها على الشموع الحقيقية
+بقاعدة **ذيل الشمعة**: إن لمس قاع الشمعة الوقف فالصفقة موقوفة، وإن لمست
 قمتها الهدف فالهدف محقَّق. تماماً كأمر وقف/هدف راكد على المنصة.
 
 هذا يُصلح التضارب الذي ظهر في ALICE: المنفّذ يقرأ السعر كل ~15 دقيقة
@@ -41,7 +42,7 @@ from datetime import datetime, timezone
 
 import requests
 
-# ── إعدادات ─────────────────────────────────────────────────────────────────
+# ── إعدادات ────────────────────────────────────────────────────────────────
 OUT_FILE = os.environ.get("UNIFIED_OUT", "unified_data.json")
 
 SOURCES = [
@@ -52,6 +53,16 @@ SOURCES = [
      "sd_positions_stable.json", "sd_ledger_stable.json", 300.0),
 ]
 PAPER_FILE = os.environ.get("UNIFIED_PAPER", "paper_trades.json")
+
+# البوتات الفعّالة فقط (المُشغّلة حالياً) — تُستبعد البوتات الموقوفة (الحوت، trendwave، RSI70…).
+# قابلة للضبط عبر UNIFIED_ACTIVE_LABELS (مفصولة بفواصل)؛ فارغة = بلا فلترة.
+ACTIVE_LABELS = [x.strip() for x in os.environ.get(
+    "UNIFIED_ACTIVE_LABELS",
+    "العرض/الطلب,عرض/طلب+دايفرجنس,SD Stable"
+).split(",") if x.strip()]
+
+def _label_active(lbl):
+    return (not ACTIVE_LABELS) or ((lbl or "").strip() in ACTIVE_LABELS)
 
 # إدارة 50/50 (مطابقة للبوت الحيّ)
 LOCK_R = float(os.environ.get("SD_LOCK_R", "0.3"))
@@ -355,6 +366,9 @@ def collect_paper():
 # ── البناء ─────────────────────────────────────────────────────────────────
 def build():
     records = collect_exec_positions() + collect_paper() + collect_exec_closed()
+
+    # إبقاء البوتات الفعّالة فقط (استبعاد الموقوفة: الحوت، trendwave، RSI70…)
+    records = [r for r in records if _label_active(r.get("label"))]
 
     # إزالة التكرار: نفس (المصدر، الرمز، الدخول) — نُبقي الأغنى بياناً
     seen = {}
