@@ -1324,12 +1324,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-20 19:00:00",
-    "last_bar": "2026-07-25 02:59:59.999000",
+    "last_bar": "2026-07-25 10:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0593,
-    "lo_seen": 0.0549,
-    "created": "2026-07-20T19:39:13"
+    "lo_seen": 0.0546,
+    "created": "2026-07-20T19:39:13",
+    "exit_price": 0.054779,
+    "close_card_sent": true,
+    "closed_at": "2026-07-25T11:06:05"
   },
   "SD Stable|ALTUSDT|2026-07-20 20:30:00": {
     "symbol": "ALTUSDT",
