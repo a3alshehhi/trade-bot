@@ -112,42 +112,6 @@
     "close_card_sent": true,
     "closed_at": "2026-07-11T16:35:14"
   },
-  "العرض/الطلب|BANDUSDT|2026-07-11 13:00:00": {
-    "symbol": "BANDUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "1h",
-    "message_id": 4760,
-    "entry": 0.1661,
-    "stop": 0.163436,
-    "init_stop": 0.163436,
-    "cur_stop": 0.163436,
-    "legs": [
-      0.1661
-    ],
-    "last_alert_stop": 0.163436,
-    "armed": false,
-    "targets": [
-      0.178092,
-      0.181898
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-11 13:00:00",
-    "last_bar": "2026-07-17 02:59:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.1775,
-    "lo_seen": 0.1627,
-    "created": "2026-07-11T13:38:37",
-    "exit_price": 0.163436,
-    "close_card_sent": true,
-    "closed_at": "2026-07-17T03:02:05"
-  },
   "عرض/طلب+دايفرجنس|ANKRUSDT|2026-07-11 21:45:00": {
     "symbol": "ANKRUSDT",
     "label": "عرض/طلب+دايفرجنس",
@@ -3584,6 +3548,50 @@
       0.009045,
       0.0089447,
       0.0088019
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|ALPINEUSDT|2026-07-25 14:30:00": {
+    "symbol": "ALPINEUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5562,
+    "entry": 0.326248,
+    "stop": 0.304,
+    "init_stop": 0.304,
+    "cur_stop": 0.304,
+    "legs": [
+      0.326248,
+      0.322,
+      0.317752,
+      0.311704
+    ],
+    "last_alert_stop": 0.304,
+    "armed": false,
+    "targets": [
+      0.34,
+      0.349792
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-25 14:30:00",
+    "last_bar": "2026-07-25 14:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.326248,
+    "lo_seen": 0.326248,
+    "created": "2026-07-25T14:46:08",
+    "dca_levels": [
+      0.326248,
+      0.322,
+      0.317752,
+      0.311704
     ],
     "wait_entry": true,
     "max_age_h": 48.0
