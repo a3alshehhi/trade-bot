@@ -989,7 +989,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-18 23:00:00",
-    "last_bar": "2026-07-25 09:29:59.999000",
+    "last_bar": "2026-07-25 11:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.06056,
@@ -2569,7 +2569,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 08:00:00",
-    "last_bar": "2026-07-25 09:29:59.999000",
+    "last_bar": "2026-07-25 11:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.005292,
@@ -2613,7 +2613,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 08:45:00",
-    "last_bar": "2026-07-25 09:29:59.999000",
+    "last_bar": "2026-07-25 11:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1628,
@@ -3129,11 +3129,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-23 10:45:00",
-    "last_bar": "2026-07-25 09:29:59.999000",
+    "last_bar": "2026-07-25 11:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00364,
-    "lo_seen": 0.0033,
+    "lo_seen": 0.00329,
     "created": "2026-07-23T11:04:15",
     "dca_levels": [
       0.00343934,
@@ -3507,13 +3507,13 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-25 06:00:00",
-    "last_bar": "2026-07-25 09:29:59.999000",
+    "last_bar": "2026-07-25 11:44:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 6.45,
-    "lo_seen": 3.958458,
+    "lo_seen": 3.71,
     "created": "2026-07-25T06:16:08",
     "dca_levels": [
       3.958458,
@@ -3522,7 +3522,10 @@
       2.390534
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 3.958458,
+    "close_card_sent": true,
+    "closed_at": "2026-07-25T11:46:16"
   },
   "العرض/الطلب|API3USDT|2026-07-25 07:00:00": {
     "symbol": "API3USDT",
@@ -3600,13 +3603,13 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-25 07:45:00",
-    "last_bar": "2026-07-25 09:29:59.999000",
+    "last_bar": "2026-07-25 11:44:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
-    "hi_seen": 0.1482,
-    "lo_seen": 0.1456698,
+    "stopped": true,
+    "hi_seen": 0.1488,
+    "lo_seen": 0.1455,
     "created": "2026-07-25T08:03:57",
     "dca_levels": [
       0.1456698,
@@ -3615,6 +3618,9 @@
       0.1432054
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.1456698,
+    "close_card_sent": true,
+    "closed_at": "2026-07-25T11:46:17"
   }
 }
