@@ -1,0 +1,65 @@
+name: unified-log
+
+# السجل الموحّد: يدمج بايننس ديمو + بايبت تيستنت + المتتبّع الورقي في
+# unified_data.json بقاعدة «ذيل الشمعة» (نمط حقيقي)، ثم يدفعه للمستودع
+# لتقرأه لوحة docs/unified.html.
+
+on:
+  schedule:
+    - cron: "7,22,37,52 * * * *"      # كل 15 دقيقة، بعد فحوص البوتات
+  workflow_dispatch:
+  repository_dispatch:
+    types: [unified]
+
+concurrency:
+  group: repo-state                   # نفس مجموعة بقية الوركفلوهات (يمنع تعارض الحفظ)
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: تثبيت المتطلبات
+        run: pip install requests
+
+      - name: بناء السجل الموحّد
+        env:
+          UNIFIED_FEE_PCT: "0.1"      # عمولة لكل جهة (%)
+          SD_LOCK_R: "0.3"            # قفل الربح بعد الهدف الأول
+        run: python unified_log.py build
+
+      - name: حفظ النتيجة في المستودع
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          for f in unified_data.json docs/unified_data.json; do
+            [ -f "$f" ] && git add "$f"
+          done
+          if git diff --cached --quiet; then
+            echo "لا تغيير"; exit 0
+          fi
+          git commit -m "unified: تحديث السجل الموحّد [skip ci]"
+          # دفع مع إعادة محاولة عند تعارض مع وركفلو آخر
+          for i in 1 2 3 4 5; do
+            if git push; then echo "تم الدفع"; exit 0; fi
+            git fetch origin main
+            git rebase origin/main || {
+              conflicts=$(git diff --name-only --diff-filter=U)
+              if [ -n "$conflicts" ]; then
+                for c in $conflicts; do git checkout --ours -- "$c" && git add "$c"; done
+                GIT_EDITOR=true git rebase --continue || { git rebase --abort 2>/dev/null || true; sleep 3; continue; }
+              else
+                git rebase --abort 2>/dev/null || true; sleep 3; continue
+              fi
+            }
+          done
+          echo "تعذّر الدفع بعد عدة محاولات"; exit 1
