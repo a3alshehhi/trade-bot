@@ -2249,11 +2249,14 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-26 12:45:00",
-    "last_bar": "2026-07-26 12:45:00",
+    "last_bar": "2026-07-26 14:14:59.999000",
     "hits": [],
-    "stopped": false,
-    "hi_seen": 0.1219,
-    "lo_seen": 0.1219,
-    "created": "2026-07-26T12:48:41"
+    "stopped": true,
+    "hi_seen": 0.1236,
+    "lo_seen": 0.1201,
+    "created": "2026-07-26T12:48:41",
+    "exit_price": 0.120204,
+    "close_card_sent": true,
+    "closed_at": "2026-07-26T14:23:32"
   }
 }
