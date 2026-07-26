@@ -2506,11 +2506,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 08:45:00",
-    "last_bar": "2026-07-26 14:59:59.999000",
+    "last_bar": "2026-07-26 18:29:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.169,
     "lo_seen": 0.1525,
     "created": "2026-07-21T09:01:26",
@@ -2522,7 +2522,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 3
+    "st_stage": 3,
+    "exit_price": 0.16030915799999998,
+    "close_card_sent": true,
+    "closed_at": "2026-07-26T18:31:19"
   },
   "العرض/الطلب|APTUSDT|2026-07-21 09:00:00": {
     "symbol": "APTUSDT",
@@ -3747,7 +3750,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-25 18:00:00",
-    "last_bar": "2026-07-26 14:59:59.999000",
+    "last_bar": "2026-07-26 18:29:59.999000",
     "hits": [
       1
     ],
@@ -3942,10 +3945,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-26 12:15:00",
-    "last_bar": "2026-07-26 14:59:59.999000",
+    "last_bar": "2026-07-26 18:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.329,
+    "hi_seen": 0.33,
     "lo_seen": 0.325,
     "created": "2026-07-26T12:31:16",
     "dca_levels": [
@@ -3986,11 +3989,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-26 14:30:00",
-    "last_bar": "2026-07-26 14:59:59.999000",
+    "last_bar": "2026-07-26 18:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0042554,
-    "lo_seen": 0.00422,
+    "lo_seen": 0.0042,
     "created": "2026-07-26T14:46:09",
     "dca_levels": [
       0.0042554,
