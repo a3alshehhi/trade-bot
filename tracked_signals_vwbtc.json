@@ -1,0 +1,46 @@
+{
+  "الفيواب الأسبوعي · BTC|WUSDT|2026-07-26 08:45:00": {
+    "symbol": "WUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5583,
+    "entry": 0.00904552,
+    "stop": 0.00865,
+    "init_stop": 0.00865,
+    "cur_stop": 0.00865,
+    "legs": [
+      0.00904552,
+      0.00897,
+      0.00889448,
+      0.00878696
+    ],
+    "last_alert_stop": 0.00865,
+    "armed": false,
+    "targets": [
+      0.00929,
+      0.00946408
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-26 08:45:00",
+    "last_bar": "2026-07-26 08:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00904552,
+    "lo_seen": 0.00904552,
+    "created": "2026-07-26T09:03:41",
+    "dca_levels": [
+      0.00904552,
+      0.00897,
+      0.00889448,
+      0.00878696
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  }
+}

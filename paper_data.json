@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-26T08:56:35",
+  "updated_at": "2026-07-26T09:03:42",
   "stats": {
-    "open": 14,
+    "open": 15,
     "closed": 177,
     "win_rate": 65.0,
     "profit_factor": 1.25,
@@ -213,6 +213,20 @@
     ]
   },
   "trades": [
+    {
+      "id": "الفيواب الأسبوعي · BTC|WUSDT|2026-07-26 08:45:00",
+      "symbol": "WUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00904552,
+      "stop": 0.00865,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-26T09:03:41",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
     {
       "id": "SD Stable|2ZUSDT|2026-07-14 15:00:00",
       "symbol": "2ZUSDT",
