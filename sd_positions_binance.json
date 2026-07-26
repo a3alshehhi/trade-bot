@@ -298,5 +298,45 @@
     "armed": false,
     "opened_ts": "2026-07-26T06:19:11",
     "msg_id": 5582
+  },
+  "CYBERUSDT": {
+    "symbol": "CYBERUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.327416,
+      0.326,
+      0.324584,
+      0.322568
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.32633533318152214,
+        "qty": 306.43326,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.32633533318152214,
+    "entry": 0.32633533318152214,
+    "init_stop": 0.32,
+    "stop": 0.32,
+    "R": 0.006335333181522129,
+    "tp1": 0.332,
+    "tp2": 0.335264,
+    "qty": 306.43326,
+    "qty_open": 306.43326,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-26T13:19:31",
+    "msg_id": 5598
   }
 }
