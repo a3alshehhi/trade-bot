@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-26T17:34:21",
+  "updated_at": "2026-07-26T17:44:54",
   "stats": {
-    "open": 21,
-    "closed": 184,
-    "win_rate": 63.0,
-    "profit_factor": 1.24,
-    "total_pct": 43.3,
-    "avg_pct": 0.24,
+    "open": 20,
+    "closed": 185,
+    "win_rate": 63.2,
+    "profit_factor": 1.25,
+    "total_pct": 45.78,
+    "avg_pct": 0.25,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-26",
-        "trades": 10,
-        "win_rate": 40.0,
-        "return_pct": 13.88,
+        "trades": 11,
+        "win_rate": 45.5,
+        "return_pct": 15.85,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -183,9 +183,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 110,
-        "win_rate": 64.5,
-        "return_pct": 52.66,
+        "trades": 111,
+        "win_rate": 64.9,
+        "return_pct": 55.3,
         "month": "2026-07"
       },
       {
@@ -206,9 +206,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 184,
-        "win_rate": 63.0,
-        "return_pct": 43.3
+        "trades": 185,
+        "win_rate": 63.2,
+        "return_pct": 45.78
       }
     ]
   },
@@ -1497,10 +1497,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-26T09:03:41",
-      "closed_at": null,
-      "realized_pct": 1.35
+      "closed_at": "2026-07-26T17:30:04",
+      "realized_pct": 1.73,
+      "result_pct": 1.73
     },
     {
       "id": "الفيواب الأسبوعي · BTC|LINEAUSDT|2026-07-26 09:00:00",
