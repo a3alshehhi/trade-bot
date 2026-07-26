@@ -258,5 +258,45 @@
     "armed": false,
     "opened_ts": "2026-07-25T14:49:10",
     "msg_id": 5563
+  },
+  "ADXUSDT": {
+    "symbol": "ADXUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.0567012,
+      0.0563,
+      0.0558988,
+      0.0553276
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.05697216852595339,
+        "qty": 1755.243,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.05697216852595339,
+    "entry": 0.05697216852595339,
+    "init_stop": 0.0546,
+    "stop": 0.0546,
+    "R": 0.002372168525953386,
+    "tp1": 0.058,
+    "tp2": 0.0589248,
+    "qty": 1755.243,
+    "qty_open": 1755.243,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-26T06:19:11",
+    "msg_id": 5582
   }
 }
