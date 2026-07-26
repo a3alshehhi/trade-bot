@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-26T17:38:03",
+  "updated_at": "2026-07-26T18:46:10",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -211,11 +211,11 @@
       "opened_at": "2026-07-26T10:04:03",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
+      "status": "closed",
+      "closed_at": "2026-07-26T18:40:19",
       "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "result_pct": 0.0,
+      "exec_pct": 0.0
     },
     {
       "id": "paper|LINEAUSDT|2026-07-26T09:18:52",
@@ -257,11 +257,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-26T17:30:04",
+      "realized_pct": 1.73,
+      "result_pct": 1.73,
+      "exec_pct": 1.73
     },
     {
       "id": "paper|AIXBTUSDT|2026-07-26T04:46:12",
@@ -1647,11 +1647,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-26T18:37:39",
+      "realized_pct": 2.19,
+      "result_pct": 2.19,
+      "exec_pct": 2.19
     },
     {
       "id": "paper|ASTRUSDT|2026-07-21T08:16:05",
@@ -4746,12 +4746,12 @@
   ],
   "stats": {
     "total": 199,
-    "open": 13,
-    "closed": 186,
-    "wins": 109,
-    "win_rate": 58.6,
-    "net_pct": 13.19,
-    "pf": 1.07,
+    "open": 10,
+    "closed": 189,
+    "wins": 111,
+    "win_rate": 58.7,
+    "net_pct": 17.11,
+    "pf": 1.08,
     "simulated": 1
   }
 }
