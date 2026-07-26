@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-07-26T10:36:24",
+  "updated_at": "2026-07-26T11:12:11",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|DOTUSDT|2026-07-26T11:04:10",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "DOTUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.814192,
+      "stop_orig": 0.787,
+      "stop": 0.787,
+      "targets": [],
+      "opened_at": "2026-07-26T11:04:10",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|ZKPUSDT|2026-07-26T10:49:10",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ZKPUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0466832,
+      "stop_orig": 0.0452,
+      "stop": 0.0452,
+      "targets": [],
+      "opened_at": "2026-07-26T10:49:10",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|IOUSDT|2026-07-26T10:04:03",
       "source": "paper",
@@ -1901,7 +1943,7 @@
       "cur_stop": 0.054779,
       "remaining": 0.0,
       "pnl_usdt": -6.8405,
-      "last_price": 0.0571,
+      "last_price": 0.0568,
       "events": [
         {
           "ts": "2026-07-25T10:00:00",
@@ -4550,8 +4592,8 @@
     }
   ],
   "stats": {
-    "total": 190,
-    "open": 11,
+    "total": 192,
+    "open": 13,
     "closed": 179,
     "wins": 108,
     "win_rate": 60.3,
