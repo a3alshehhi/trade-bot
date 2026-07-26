@@ -3709,6 +3709,26 @@ def _advance_trade(df, tr):
     #    لمتوسط الدخول (تعادل)، ثم جني 50% المتبقية وإغلاق عند الهدف الثاني.
     #    (لا وقف متحرك ولا أهداف إضافية)
     if _is_5050(tr):
+        # ── وقف متدرّج بنيوي (طلب بو محمد 2026-07-26) — بوتا «العرض/الطلب» و«الفيواب·BTC» فقط ──
+        #    يُضاف فوق 50/50 + قفل 0.3R: الوقف الأعلى يفوز، ولا ينزل أبداً. idempotent.
+        try:
+            import staged_trail as _stg
+            if _stg.applies_to(tr.get("label")):
+                try:
+                    _e_ts = pd.Timestamp(tr.get("bar_ts") or tr.get("created"))
+                    _e = next((i for i in range(len(df)) if dates.iloc[i] >= _e_ts), 0)
+                except Exception:
+                    _e = 0
+                _tgt, _stage, _note = _stg.compute_staged_stop(
+                    list(high[_e:]), list(low[_e:]), list(close[_e:]), entry, targets[0])
+                if _tgt is not None and _tgt > cur_stop:
+                    cur_stop = _tgt
+                if _stage > tr.get("st_stage", 0):
+                    tr["st_stage"] = _stage
+                    events.append(f"🧗 {sym} — {_note}\nالوقف الجديد: {fmt(cur_stop)}")
+                    tr["last_alert_stop"] = cur_stop
+        except Exception as _ex:
+            print(f"[staged] {tr.get('symbol')}: {_ex}")
         for j in idxs:
             # (أ) ضرب الوقف أولاً — بالمستوى الجاري (الابتدائي قبل الهدف1، التعادل بعده)
             if low[j] <= cur_stop:
@@ -3730,7 +3750,7 @@ def _advance_trade(df, tr):
             if 1 not in tr["hits"] and high[j] >= targets[0]:
                 tr["hits"].append(1)
                 gain = ((targets[0] - entry) / entry * 100) if entry else 0.0
-                cur_stop = entry                   # الوقف = متوسط الدخول
+                cur_stop = max(cur_stop, entry)    # الوقف = متوسط الدخول (لا ينزل عن وقف متدرّج أعلى)
                 events.append(f"🎯 {sym} — تحقق الهدف الأول ✅ — جني 50% ورفع الوقف "
                               f"لمتوسط الدخول (تعادل)\n"
                               f"السعر: {fmt(targets[0])}  (+{gain:.2f}%)")

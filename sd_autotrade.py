@@ -58,6 +58,8 @@ LOCK_SAFETY_PCT = float(os.environ.get("SD_LOCK_SAFETY_PCT", "0.0015"))
 # الـCHoCH) بأكثر من MAX_CHASE_R×R، نتخطّى الصفقة بدل الدخول متأخّراً بعائد/مخاطرة مشوّه.
 # 0 = معطّل (الافتراضي لكل البوتات). يُفعَّل لبوت الدايفرجنس فقط عبر SD_MAX_CHASE_R في reversal.yml.
 MAX_CHASE_R = float(os.environ.get("SD_MAX_CHASE_R", "0"))
+# قاعدة رئيسية دائمة (بو محمد 2026-07-20): صفقة هدفها الأول < 1% تُلغى ولا تُنفَّذ.
+MIN_TP1_PCT = float(os.environ.get("MIN_TP1_PCT", "1.3"))
 # كشف تسليح +1R عبر قمة آخر شمعة بدل last_price فقط (المسار أ — فجوة اللقطة 2026-07-09).
 # البيع يبقى سوقياً؛ فقط اكتشاف بلوغ +1R يقرأ القمة ليُسلّح الوقف مبكراً. باك-تست: +10.4R(15m)/+9.7R(1h).
 # للتعطيل: SD_ARM_ON_HIGH=0.
@@ -228,6 +230,9 @@ def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equit
     من الإشارة (تحت أعمق مستوى). يرجع True عند نجاح فتح الساق الأولى."""
     if tp1 <= entry:                                # long فقط: هدف فوق الدخول
         return False
+    if entry > 0 and (tp1 - entry) / entry * 100.0 < MIN_TP1_PCT:   # هدف أول < 1% ← غير مجدٍ، إلغاء
+        print(f"autotrade[{EX_NAME}]: {sym} الهدف الأول < {MIN_TP1_PCT}% — تخطّي (غير مجدٍ)")
+        return False
     filt = bx.instrument_filters(sym)
     if not filt:                                    # الزوج غير مُدرَج للتداول (Spot/Demo)
         print(f"autotrade[{EX_NAME}]: {sym} غير متاح للتداول على المنصّة — تخطّي")
@@ -247,6 +252,8 @@ def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equit
     # سلّم الفيبو تنازلياً (الأعلى أولاً). إن غاب → دخول مفرد بمستوى واحد.
     levels = sorted([float(x) for x in (levels or []) if x], reverse=True) or [entry]
     n = len(levels)
+    # طلب بو محمد 2026-07-22: كل ساق بكامل قيمة ORDER_USD (بايبت 300 / بايننس 100) —
+    # الدخول الأول وكل ساق DCA بنفس القيمة (لا تقسيم على عدد السيقان).
     leg_usd = ORDER_USD
     if stop >= min(levels):                         # الوقف يجب أن يبقى تحت أعمق مستوى
         stop = min(levels) * 0.999
@@ -601,11 +608,38 @@ def _manage_one(sym, positions):
     R = pos["R"]
 
     # مرجع تسليح/وقف موحّد عبر كل المنصّات: دخول الإشارة الأصلي (أعلى مستوى فيبو)
-    # ووقفها الأصلي. الـ levels و init_stop من الإشارة نفسها فهي متطابقة على بايبت وبايننس،
-    # بعكس avg_entry الذي يختلف باختلاف ملء DCA لكل منصّة. يمنع انقسام النتيجة على الصفقات الحديّة. (fix 2026-07-20)
+    # ووقفها الأصلي. الـ levels و init_stop تأتيان من الإشارة نفسها فهي متطابقة على
+    # بايبت وبايننس، بعكس avg_entry الذي يختلف باختلاف ملء DCA لكل منصّة. هذا يمنع
+    # انقسام النتيجة (منصّة تُسلَّح/تُغلق وأخرى لا) على الصفقات الحديّة. (fix 2026-07-20)
     sig_entry = (pos.get("levels") or [entry])[0] or entry
     sig_stop = pos.get("init_stop", pos["stop"])
     sig_R = max(sig_entry - sig_stop, 1e-12)
+
+    # ── وقف متدرّج بنيوي (طلب بو محمد 2026-07-26) — العرض/الطلب فقط (تنفيذ حيّ) ──
+    #    يُضاف فوق قفل 0.3R: الوقف الأعلى يفوز ولا ينزل أبداً. idempotent من شموع 15م.
+    try:
+        import staged_trail as _stg
+        if _stg.applies_to(pos.get("label")):
+            import sd_bot as _sb
+            _d = _sb.fetch_klines(sym, pos.get("tf") or "15m", 1)
+            if _d and _d.get("c") and len(_d["c"]) > 40:
+                _d = {k: v[:-1] for k, v in _d.items()}       # استبعاد الشمعة الجارية
+                try:
+                    _e_ms = int(dt.datetime.fromisoformat(pos["opened_ts"]).timestamp() * 1000)
+                    _e = next((i for i in range(len(_d["t"])) if _d["t"][i] >= _e_ms), 0)
+                except Exception:
+                    _e = max(0, len(_d["c"]) - 192)
+                _tgt, _stage, _note = _stg.compute_staged_stop(
+                    list(_d["h"][_e:]), list(_d["l"][_e:]), list(_d["c"][_e:]), entry, pos["tp1"])
+                if _tgt is not None and _tgt > pos["stop"]:
+                    pos["stop"] = _tgt
+                    changed = True
+                    if _stage > pos.get("st_stage", 0):
+                        pos["st_stage"] = _stage
+                        _notify(f"🧗 [{EX_NAME}] {sym} — {_note}\nالوقف: {_fmt(pos['stop'])}",
+                                reply_to=pos.get("msg_id"))
+    except Exception as _ex:
+        print(f"[staged] {sym}: {_ex}")
 
     # (1) الوقف أولاً — حماية رأس المال
     if price <= pos["stop"]:
@@ -638,11 +672,12 @@ def _manage_one(sym, positions):
             pos["qty_open"] -= sold
             pos["tp1_done"] = True
             pos["armed"] = True
-            lock = sig_entry + LOCK_R * sig_R      # قفل ربح صغير (0.3R) — مرجع الإشارة الموحّد بدل التعادل الصفري
-            if pos["tp1"] <= lock:                 # هدف قريب جداً؟ ارجع لتعادل حقيقي بدل تعادل صفري خاسر
-                lock = entry
-            # الحدّ الأدنى الصارم: الوقف لا ينزل تحت سعر الدخول أبداً (بلا خسارة USDT)
-            lock = max(lock, entry)
+            lock = sig_entry + LOCK_R * sig_R      # قفل ربح صغير (0.3R) — مرجع الإشارة الموحّد
+            be = _breakeven_price(entry)           # التعادل الحقيقي بعد العمولتين
+            if pos["tp1"] <= lock:                 # هدف قريب جداً؟ ارجع للتعادل الحقيقي
+                lock = be
+            # الحدّ الأدنى الصارم: الوقف لا ينزل أبداً عن التعادل الحقيقي (بلا خسارة USDT)
+            lock = max(lock, be)
             if lock > pos["stop"]:
                 pos["stop"] = lock
             changed = True
@@ -677,9 +712,9 @@ def _manage_one(sym, positions):
             pos["stop"] = lock
         changed = True
     if pos.get("armed"):
-        # الوقف المتحرّك يتابع (price - sig_R) لكن أرضيته الدنيا = سعر الدخول (بلا خسارة USDT)
-        # لا نستخدم _breakeven_price هنا لأن الهدف1 جنّى الربح فعلاً، والنص الثاني يجب محميّاً من الخسارة
-        floor_price = entry  # الحدّ الأدنى الصارم: لا نزول تحت الدخول
+        # الوقف المتحرّك يتابع (price - sig_R) لكن أرضيته الدنيا = التعادل الحقيقي بعد العمولتين
+        # حتى لو جنّى الهدف1 ربح، النص الثاني يجب محميّاً من الخسارة بعد العمولتين
+        floor_price = _breakeven_price(entry)  # الحدّ الأدنى الصارم: التعادل الحقيقي (بلا خسارة)
         trail = max(price - sig_R, floor_price)
         if trail > pos["stop"]:
             pos["stop"] = trail
