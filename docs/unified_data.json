@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-07-26T15:36:35",
+  "updated_at": "2026-07-26T17:38:03",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|MINAUSDT|2026-07-26T15:48:49",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "MINAUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0480114,
+      "stop_orig": 0.0435,
+      "stop": 0.0435,
+      "targets": [],
+      "opened_at": "2026-07-26T15:48:49",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|ACHUSDT|2026-07-26T14:50:45",
       "source": "paper",
@@ -2075,7 +2096,7 @@
       "cur_stop": 0.054779,
       "remaining": 0.0,
       "pnl_usdt": -6.8405,
-      "last_price": 0.0567,
+      "last_price": 0.0571,
       "events": [
         {
           "ts": "2026-07-25T10:00:00",
@@ -4724,8 +4745,8 @@
     }
   ],
   "stats": {
-    "total": 198,
-    "open": 12,
+    "total": 199,
+    "open": 13,
     "closed": 186,
     "wins": 109,
     "win_rate": 58.6,
