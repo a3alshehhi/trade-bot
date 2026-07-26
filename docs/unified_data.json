@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-07-26T14:11:52",
+  "updated_at": "2026-07-26T15:36:35",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|ACHUSDT|2026-07-26T14:50:45",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ACHUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0042554,
+      "stop_orig": 0.00407,
+      "stop": 0.00407,
+      "targets": [],
+      "opened_at": "2026-07-26T14:50:45",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|HYPERUSDT|2026-07-26T13:07:08",
       "source": "paper",
@@ -284,11 +305,11 @@
       "opened_at": "2026-07-25T19:49:51",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-26T15:01:36",
+      "realized_pct": -0.3,
+      "result_pct": -0.3,
+      "exec_pct": -0.3
     },
     {
       "id": "paper|AVAXUSDT|2026-07-25T18:16:06",
@@ -328,11 +349,11 @@
       "opened_at": "2026-07-25T17:31:17",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-26T15:01:33",
+      "realized_pct": 0.02,
+      "result_pct": 0.02,
+      "exec_pct": 0.02
     },
     {
       "id": "paper|APTUSDT|2026-07-25T17:16:08",
@@ -372,11 +393,11 @@
       "opened_at": "2026-07-25T14:46:08",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
+      "status": "closed",
+      "closed_at": "2026-07-26T15:01:31",
       "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "result_pct": 0.0,
+      "exec_pct": 0.0
     },
     {
       "id": "paper|ACTUSDT|2026-07-25T13:31:11",
@@ -822,11 +843,11 @@
       "opened_at": "2026-07-23T11:04:15",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
+      "status": "closed",
+      "closed_at": "2026-07-26T15:01:29",
       "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "result_pct": 0.0,
+      "exec_pct": 0.0
     },
     {
       "id": "binance|ALICEUSDT|2026-07-23T08:06:34",
@@ -1626,11 +1647,11 @@
       "opened_at": "2026-07-21T08:16:05",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
+      "status": "closed",
+      "closed_at": "2026-07-26T15:01:26",
       "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "result_pct": 0.0,
+      "exec_pct": 0.0
     },
     {
       "id": "paper|CUSDT|2026-07-21T07:46:08",
@@ -2054,7 +2075,7 @@
       "cur_stop": 0.054779,
       "remaining": 0.0,
       "pnl_usdt": -6.8405,
-      "last_price": 0.0563,
+      "last_price": 0.0567,
       "events": [
         {
           "ts": "2026-07-25T10:00:00",
@@ -2989,11 +3010,11 @@
       "opened_at": "2026-07-18T23:16:10",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
+      "status": "closed",
+      "closed_at": "2026-07-26T15:01:25",
       "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "result_pct": 0.0,
+      "exec_pct": 0.0
     },
     {
       "id": "paper|ETHUSDT|2026-07-18T21:46:09",
@@ -4703,12 +4724,12 @@
     }
   ],
   "stats": {
-    "total": 197,
-    "open": 17,
-    "closed": 180,
-    "wins": 108,
-    "win_rate": 60.0,
-    "net_pct": 13.47,
+    "total": 198,
+    "open": 12,
+    "closed": 186,
+    "wins": 109,
+    "win_rate": 58.6,
+    "net_pct": 13.19,
     "pf": 1.07,
     "simulated": 1
   }
