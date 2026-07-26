@@ -1,10 +1,31 @@
 {
-  "updated_at": "2026-07-26T11:12:11",
+  "updated_at": "2026-07-26T12:36:36",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
     {
-      "id": "paper|DOTUSDT|2026-07-26T11:04:10",
+      "id": "paper|LPTUSDT|2026-07-26T12:03:42",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "LPTUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.647582,
+      "stop_orig": 1.401,
+      "stop": 1.401,
+      "targets": [],
+      "opened_at": "2026-07-26T12:03:42",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|DOTUSDT|2026-07-26T11:09:57",
       "source": "paper",
       "source_ar": "ورقية",
       "symbol": "DOTUSDT",
@@ -15,7 +36,7 @@
       "stop_orig": 0.787,
       "stop": 0.787,
       "targets": [],
-      "opened_at": "2026-07-26T11:04:10",
+      "opened_at": "2026-07-26T11:09:57",
       "usd": 100.0,
       "hits": [],
       "status": "open",
@@ -80,7 +101,9 @@
       "targets": [],
       "opened_at": "2026-07-26T09:18:52",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -1943,7 +1966,7 @@
       "cur_stop": 0.054779,
       "remaining": 0.0,
       "pnl_usdt": -6.8405,
-      "last_price": 0.0568,
+      "last_price": 0.0567,
       "events": [
         {
           "ts": "2026-07-25T10:00:00",
@@ -4592,8 +4615,8 @@
     }
   ],
   "stats": {
-    "total": 192,
-    "open": 13,
+    "total": 193,
+    "open": 14,
     "closed": 179,
     "wins": 108,
     "win_rate": 60.3,
