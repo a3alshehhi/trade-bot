@@ -42,5 +42,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|LINEAUSDT|2026-07-26 09:00:00": {
+    "symbol": "LINEAUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5584,
+    "entry": 0.00242715,
+    "stop": 0.002374,
+    "init_stop": 0.002374,
+    "cur_stop": 0.002374,
+    "legs": [
+      0.00242715,
+      0.002417,
+      0.00240685,
+      0.0023924
+    ],
+    "last_alert_stop": 0.002374,
+    "armed": false,
+    "targets": [
+      0.00246,
+      0.00248339
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-26 09:00:00",
+    "last_bar": "2026-07-26 09:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00242715,
+    "lo_seen": 0.00242715,
+    "created": "2026-07-26T09:18:52",
+    "dca_levels": [
+      0.00242715,
+      0.002417,
+      0.00240685,
+      0.0023924
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
