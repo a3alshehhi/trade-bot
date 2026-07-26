@@ -58,7 +58,9 @@ PAPER_FILE = os.environ.get("UNIFIED_PAPER", "paper_trades.json")
 # قابلة للضبط عبر UNIFIED_ACTIVE_LABELS (مفصولة بفواصل)؛ فارغة = بلا فلترة.
 ACTIVE_LABELS = [x.strip() for x in os.environ.get(
     "UNIFIED_ACTIVE_LABELS",
-    "العرض/الطلب,عرض/طلب+دايفرجنس,SD Stable"
+    # البوتات الشغّالة (طلب بو محمد 2026-07-26): البوت المستقر + الفيواب الأسبوعي
+    # (وسمه «العرض/الطلب») + عرض/طلب+دايفرجنس + vwbtc. المستبعد: الحوت + trendwave + الهنتر.
+    "SD Stable,العرض/الطلب,عرض/طلب+دايفرجنس,vwbtc_bot"
 ).split(",") if x.strip()]
 
 def _label_active(lbl):
