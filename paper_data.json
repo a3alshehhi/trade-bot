@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-26T09:49:09",
+  "updated_at": "2026-07-26T09:53:40",
   "stats": {
     "open": 16,
     "closed": 177,
@@ -213,36 +213,6 @@
     ]
   },
   "trades": [
-    {
-      "id": "الفيواب الأسبوعي · BTC|WUSDT|2026-07-26 08:45:00",
-      "symbol": "WUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.00904552,
-      "stop": 0.00865,
-      "hits": [
-        1
-      ],
-      "status": "open",
-      "opened_at": "2026-07-26T09:03:41",
-      "closed_at": null,
-      "realized_pct": 1.35
-    },
-    {
-      "id": "الفيواب الأسبوعي · BTC|LINEAUSDT|2026-07-26 09:00:00",
-      "symbol": "LINEAUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.00242715,
-      "stop": 0.002374,
-      "hits": [],
-      "status": "open",
-      "opened_at": "2026-07-26T09:18:52",
-      "closed_at": null,
-      "realized_pct": 0.0
-    },
     {
       "id": "SD Stable|2ZUSDT|2026-07-14 15:00:00",
       "symbol": "2ZUSDT",
@@ -1500,6 +1470,34 @@
       "opened_at": "2026-07-22T14:03:24",
       "closed_at": null,
       "realized_pct": 1.17
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|WUSDT|2026-07-26 08:45:00",
+      "symbol": "WUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00904552,
+      "stop": 0.00865,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-26T09:03:41",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|LINEAUSDT|2026-07-26 09:00:00",
+      "symbol": "LINEAUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00242715,
+      "stop": 0.002374,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-26T09:18:52",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "عرض/طلب+دايفرجنس|AVAXUSDT|2026-07-10 02:00:00",
