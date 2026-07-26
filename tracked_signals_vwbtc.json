@@ -176,5 +176,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|DOTUSDT|2026-07-26 10:45:00": {
+    "symbol": "DOTUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5587,
+    "entry": 0.814192,
+    "stop": 0.787,
+    "init_stop": 0.787,
+    "cur_stop": 0.787,
+    "legs": [
+      0.814192,
+      0.809,
+      0.803808,
+      0.796416
+    ],
+    "last_alert_stop": 0.787,
+    "armed": false,
+    "targets": [
+      0.831,
+      0.842968
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-26 10:45:00",
+    "last_bar": "2026-07-26 10:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.814192,
+    "lo_seen": 0.814192,
+    "created": "2026-07-26T11:04:10",
+    "dca_levels": [
+      0.814192,
+      0.809,
+      0.803808,
+      0.796416
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
