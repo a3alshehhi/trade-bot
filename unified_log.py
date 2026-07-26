@@ -60,7 +60,7 @@ ACTIVE_LABELS = [x.strip() for x in os.environ.get(
     "UNIFIED_ACTIVE_LABELS",
     # البوتات الشغّالة (طلب بو محمد 2026-07-26): البوت المستقر + الفيواب الأسبوعي
     # (وسمه «العرض/الطلب») + عرض/طلب+دايفرجنس + vwbtc. المستبعد: الحوت + trendwave + الهنتر.
-    "SD Stable,العرض/الطلب,عرض/طلب+دايفرجنس,vwbtc_bot"
+    "SD Stable,العرض/الطلب,عرض/طلب+دايفرجنس,الفيواب الأسبوعي · BTC,vwbtc_bot"
 ).split(",") if x.strip()]
 
 def _label_active(lbl):
@@ -330,19 +330,20 @@ def collect_exec_closed():
 
 
 def collect_paper():
-    """صفقات المتتبّع الورقي (كل البوتات).
-
-    يقرأ paper_trades.json، وإن كان فارغاً يرجع إلى paper_data.json
-    (ملف اللوحة) لأنه يحوي نفس الصفقات بصيغة مختصرة.
+    """صفقات المتتبّع الورقي = **`paper_data.json`** (لوحة البوتات التي تحوي كل
+    الوسوم: العرض/الطلب، عرض/طلب+دايفرجنس، vwbtc_bot…). هذا هو المصدر الوحيد
+    للبوتات الإشارية (غير المنفَّذة). يُتخطّى وسم «SD Stable» هنا لأنه مغطّى
+    بالكامل من دفاتر التنفيذ (بايننس/بايبت) فلا يُكرَّر.
     """
     out = []
-    trades = _load(PAPER_FILE, [])
-    if isinstance(trades, dict):
-        trades = trades.get("trades", [])
-    if not trades:
-        alt = _load("paper_data.json", {})
-        trades = alt.get("trades", []) if isinstance(alt, dict) else []
+    data = _load("paper_data.json", {})
+    trades = data.get("trades", []) if isinstance(data, dict) else []
+    if not trades:                       # احتياط: ملف paper.py الداخلي
+        alt = _load(PAPER_FILE, [])
+        trades = alt.get("trades", []) if isinstance(alt, dict) else (alt or [])
     for t in trades or []:
+        if (t.get("label") or "").strip() == "SD Stable":
+            continue                     # مغطّى بدفاتر التنفيذ
         entry = float(t.get("entry") or 0)
         stop = float(t.get("stop_orig") or t.get("stop") or 0)
         if entry <= 0 or stop <= 0:
