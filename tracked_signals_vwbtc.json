@@ -88,5 +88,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|IOUSDT|2026-07-26 09:45:00": {
+    "symbol": "IOUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5585,
+    "entry": 0.1492014,
+    "stop": 0.1416,
+    "init_stop": 0.1416,
+    "cur_stop": 0.1416,
+    "legs": [
+      0.1492014,
+      0.14775,
+      0.1462986,
+      0.1442322
+    ],
+    "last_alert_stop": 0.1416,
+    "armed": false,
+    "targets": [
+      0.1539,
+      0.1572456
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-26 09:45:00",
+    "last_bar": "2026-07-26 09:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1492014,
+    "lo_seen": 0.1492014,
+    "created": "2026-07-26T10:04:03",
+    "dca_levels": [
+      0.1492014,
+      0.14775,
+      0.1462986,
+      0.1442322
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
