@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-26T05:07:54",
+  "updated_at": "2026-07-26T05:17:17",
   "stats": {
-    "open": 16,
-    "closed": 175,
-    "win_rate": 64.6,
-    "profit_factor": 1.17,
-    "total_pct": 26.74,
-    "avg_pct": 0.18,
+    "open": 15,
+    "closed": 176,
+    "win_rate": 64.8,
+    "profit_factor": 1.24,
+    "total_pct": 41.22,
+    "avg_pct": 0.24,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-26",
-        "trades": 1,
+        "trades": 2,
         "win_rate": 100.0,
-        "return_pct": 0.72,
+        "return_pct": 12.23,
         "week": "2026-W30",
         "month": "2026-07"
       },
@@ -183,9 +183,9 @@
     "weekly": [
       {
         "key": "2026-W30",
-        "trades": 101,
-        "win_rate": 67.3,
-        "return_pct": 35.01,
+        "trades": 102,
+        "win_rate": 67.6,
+        "return_pct": 50.44,
         "month": "2026-07"
       },
       {
@@ -206,9 +206,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 175,
-        "win_rate": 64.6,
-        "return_pct": 26.74
+        "trades": 176,
+        "win_rate": 64.8,
+        "return_pct": 41.22
       }
     ]
   },
@@ -2839,12 +2839,14 @@
       "entry": 0.11325,
       "stop": 0.0978,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-26T00:46:14",
-      "closed_at": null,
-      "realized_pct": 4.22
+      "closed_at": "2026-07-26T05:01:32",
+      "realized_pct": 11.43,
+      "result_pct": 11.43
     },
     {
       "id": "العرض/الطلب|AIXBTUSDT|2026-07-26 04:30:00",
