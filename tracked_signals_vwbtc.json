@@ -132,5 +132,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|ZKPUSDT|2026-07-26 10:30:00": {
+    "symbol": "ZKPUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5586,
+    "entry": 0.0466832,
+    "stop": 0.0452,
+    "init_stop": 0.0452,
+    "cur_stop": 0.0452,
+    "legs": [
+      0.0466832,
+      0.0464,
+      0.0461168,
+      0.0457136
+    ],
+    "last_alert_stop": 0.0452,
+    "armed": false,
+    "targets": [
+      0.0476,
+      0.0482528
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-26 10:30:00",
+    "last_bar": "2026-07-26 10:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0466832,
+    "lo_seen": 0.0466832,
+    "created": "2026-07-26T10:49:10",
+    "dca_levels": [
+      0.0466832,
+      0.0464,
+      0.0461168,
+      0.0457136
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
