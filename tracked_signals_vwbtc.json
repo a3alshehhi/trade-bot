@@ -442,5 +442,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|MINAUSDT|2026-07-26 15:30:00": {
+    "symbol": "MINAUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5621,
+    "entry": 0.0480114,
+    "stop": 0.0435,
+    "init_stop": 0.0435,
+    "cur_stop": 0.0435,
+    "legs": [
+      0.0480114,
+      0.04715,
+      0.0462886,
+      0.0450622
+    ],
+    "last_alert_stop": 0.0435,
+    "armed": false,
+    "targets": [
+      0.0508,
+      0.0527856
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-26 15:30:00",
+    "last_bar": "2026-07-26 15:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0480114,
+    "lo_seen": 0.0480114,
+    "created": "2026-07-26T15:48:49",
+    "dca_levels": [
+      0.0480114,
+      0.04715,
+      0.0462886,
+      0.0450622
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
