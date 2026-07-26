@@ -3723,10 +3723,10 @@ def _advance_trade(df, tr):
                     list(high[_e:]), list(low[_e:]), list(close[_e:]), entry, targets[0])
                 if _tgt is not None and _tgt > cur_stop:
                     cur_stop = _tgt
-                if _stage > tr.get("st_stage", 0):
-                    tr["st_stage"] = _stage
-                    events.append(f"🧗 {sym} — {_note}\nالوقف الجديد: {fmt(cur_stop)}")
-                    tr["last_alert_stop"] = cur_stop
+                    if _stage > tr.get("st_stage", 0):
+                        tr["st_stage"] = _stage
+                        events.append(f"🧗 {sym} — {_note}\nالوقف الجديد: {fmt(cur_stop)}")
+                        tr["last_alert_stop"] = cur_stop
         except Exception as _ex:
             print(f"[staged] {tr.get('symbol')}: {_ex}")
         for j in idxs:
