@@ -853,14 +853,14 @@
     "entry": 0.05851702,
     "stop": 0.05395,
     "init_stop": 0.05395,
-    "cur_stop": 0.05395,
+    "cur_stop": 0.05851702,
     "legs": [
       0.05851702,
       0.057645,
       0.05677298,
       0.05553146
     ],
-    "last_alert_stop": 0.05395,
+    "last_alert_stop": 0.05851702,
     "armed": false,
     "targets": [
       0.06134,
@@ -874,9 +874,9 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-18 23:00:00",
-    "last_bar": "2026-07-26 07:14:59.999000",
+    "last_bar": "2026-07-26 07:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.06056,
     "lo_seen": 0.05487,
     "created": "2026-07-18T23:16:10",
@@ -887,7 +887,11 @@
       0.05553146
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2,
+    "exit_price": 0.05851702,
+    "close_card_sent": true,
+    "closed_at": "2026-07-26T15:01:25"
   },
   "العرض/الطلب|DASHUSDT|2026-07-19 00:15:00": {
     "symbol": "DASHUSDT",
@@ -2433,14 +2437,14 @@
     "entry": 0.00519236,
     "stop": 0.004981,
     "init_stop": 0.004981,
-    "cur_stop": 0.004981,
+    "cur_stop": 0.00519236,
     "legs": [
       0.00519236,
       0.005152,
       0.00511164,
       0.00505419
     ],
-    "last_alert_stop": 0.004981,
+    "last_alert_stop": 0.00519236,
     "armed": false,
     "targets": [
       0.005323,
@@ -2454,9 +2458,9 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 08:00:00",
-    "last_bar": "2026-07-26 07:14:59.999000",
+    "last_bar": "2026-07-26 07:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.005292,
     "lo_seen": 0.005054,
     "created": "2026-07-21T08:16:05",
@@ -2467,7 +2471,11 @@
       0.00505419
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2,
+    "exit_price": 0.00519236,
+    "close_card_sent": true,
+    "closed_at": "2026-07-26T15:01:26"
   },
   "العرض/الطلب|AVAUSDT|2026-07-21 08:45:00": {
     "symbol": "AVAUSDT",
@@ -2477,14 +2485,14 @@
     "entry": 0.1595116,
     "stop": 0.1495,
     "init_stop": 0.1495,
-    "cur_stop": 0.1595116,
+    "cur_stop": 0.16030915799999998,
     "legs": [
       0.1595116,
       0.1576,
       0.1556884,
       0.1529668
     ],
-    "last_alert_stop": 0.1595116,
+    "last_alert_stop": 0.16030915799999998,
     "armed": false,
     "targets": [
       0.1657,
@@ -2498,7 +2506,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-21 08:45:00",
-    "last_bar": "2026-07-26 07:14:59.999000",
+    "last_bar": "2026-07-26 14:59:59.999000",
     "hits": [
       1
     ],
@@ -2513,7 +2521,8 @@
       0.1529668
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 3
   },
   "العرض/الطلب|APTUSDT|2026-07-21 09:00:00": {
     "symbol": "APTUSDT",
@@ -2995,14 +3004,14 @@
     "entry": 0.00343934,
     "stop": 0.00305,
     "init_stop": 0.00305,
-    "cur_stop": 0.00305,
+    "cur_stop": 0.00343934,
     "legs": [
       0.00343934,
       0.003365,
       0.00329066,
       0.00318482
     ],
-    "last_alert_stop": 0.00305,
+    "last_alert_stop": 0.00343934,
     "armed": false,
     "targets": [
       0.00368,
@@ -3016,9 +3025,9 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-23 10:45:00",
-    "last_bar": "2026-07-26 07:14:59.999000",
+    "last_bar": "2026-07-26 07:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.00364,
     "lo_seen": 0.00324,
     "created": "2026-07-23T11:04:15",
@@ -3029,7 +3038,11 @@
       0.00318482
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2,
+    "exit_price": 0.00343934,
+    "close_card_sent": true,
+    "closed_at": "2026-07-26T15:01:29"
   },
   "عرض/طلب+دايفرجنس|BMTUSDT|2026-07-23 13:30:00": {
     "symbol": "BMTUSDT",
@@ -3568,14 +3581,14 @@
     "entry": 0.326248,
     "stop": 0.304,
     "init_stop": 0.304,
-    "cur_stop": 0.304,
+    "cur_stop": 0.326248,
     "legs": [
       0.326248,
       0.322,
       0.317752,
       0.311704
     ],
-    "last_alert_stop": 0.304,
+    "last_alert_stop": 0.326248,
     "armed": false,
     "targets": [
       0.34,
@@ -3589,9 +3602,9 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-25 14:30:00",
-    "last_bar": "2026-07-26 07:14:59.999000",
+    "last_bar": "2026-07-26 07:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.33,
     "lo_seen": 0.313,
     "created": "2026-07-25T14:46:08",
@@ -3602,7 +3615,11 @@
       0.311704
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2,
+    "exit_price": 0.326248,
+    "close_card_sent": true,
+    "closed_at": "2026-07-26T15:01:31"
   },
   "العرض/الطلب|APTUSDT|2026-07-25 17:00:00": {
     "symbol": "APTUSDT",
@@ -3661,14 +3678,14 @@
     "entry": 0.0567012,
     "stop": 0.0546,
     "init_stop": 0.0546,
-    "cur_stop": 0.0546,
+    "cur_stop": 0.056715,
     "legs": [
       0.0567012,
       0.0563,
       0.0558988,
       0.0553276
     ],
-    "last_alert_stop": 0.0546,
+    "last_alert_stop": 0.056715,
     "armed": false,
     "targets": [
       0.058,
@@ -3682,11 +3699,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-25 17:15:00",
-    "last_bar": "2026-07-26 07:14:59.999000",
+    "last_bar": "2026-07-26 09:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0579,
-    "lo_seen": 0.0567,
+    "lo_seen": 0.0566,
     "created": "2026-07-25T17:31:17",
     "dca_levels": [
       0.0567012,
@@ -3695,7 +3712,11 @@
       0.0553276
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2,
+    "exit_price": 0.056715,
+    "close_card_sent": true,
+    "closed_at": "2026-07-26T15:01:33"
   },
   "العرض/الطلب|AVAXUSDT|2026-07-25 18:00:00": {
     "symbol": "AVAXUSDT",
@@ -3705,14 +3726,14 @@
     "entry": 6.506564,
     "stop": 6.137,
     "init_stop": 6.137,
-    "cur_stop": 6.506564,
+    "cur_stop": 6.590879999999999,
     "legs": [
       6.506564,
       6.436,
       6.365436,
       6.264972
     ],
-    "last_alert_stop": 6.506564,
+    "last_alert_stop": 6.590879999999999,
     "armed": false,
     "targets": [
       6.735,
@@ -3726,7 +3747,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-25 18:00:00",
-    "last_bar": "2026-07-26 07:14:59.999000",
+    "last_bar": "2026-07-26 14:59:59.999000",
     "hits": [
       1
     ],
@@ -3741,7 +3762,8 @@
       6.264972
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 3
   },
   "العرض/الطلب|AWEUSDT|2026-07-25 19:30:00": {
     "symbol": "AWEUSDT",
@@ -3751,14 +3773,14 @@
     "entry": 0.05817458,
     "stop": 0.05582,
     "init_stop": 0.05582,
-    "cur_stop": 0.05582,
+    "cur_stop": 0.05799855,
     "legs": [
       0.05817458,
       0.057725,
       0.05727542,
       0.05663534
     ],
-    "last_alert_stop": 0.05582,
+    "last_alert_stop": 0.05799855,
     "armed": false,
     "targets": [
       0.05963,
@@ -3772,9 +3794,9 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-25 19:30:00",
-    "last_bar": "2026-07-26 07:14:59.999000",
+    "last_bar": "2026-07-26 07:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0584,
     "lo_seen": 0.05739,
     "created": "2026-07-25T19:49:51",
@@ -3785,7 +3807,11 @@
       0.05663534
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 1,
+    "exit_price": 0.05799855,
+    "close_card_sent": true,
+    "closed_at": "2026-07-26T15:01:36"
   },
   "العرض/الطلب|DIAUSDT|2026-07-26 00:30:00": {
     "symbol": "DIAUSDT",
@@ -3916,11 +3942,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-26 12:15:00",
-    "last_bar": "2026-07-26 12:15:00",
+    "last_bar": "2026-07-26 14:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.327416,
-    "lo_seen": 0.327416,
+    "hi_seen": 0.329,
+    "lo_seen": 0.325,
     "created": "2026-07-26T12:31:16",
     "dca_levels": [
       0.327416,
@@ -3960,11 +3986,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-26 14:30:00",
-    "last_bar": "2026-07-26 14:30:00",
+    "last_bar": "2026-07-26 14:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0042554,
-    "lo_seen": 0.0042554,
+    "lo_seen": 0.00422,
     "created": "2026-07-26T14:46:09",
     "dca_levels": [
       0.0042554,
