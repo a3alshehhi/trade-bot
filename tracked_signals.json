@@ -3886,5 +3886,49 @@
     "exit_price": 0.01893464,
     "close_card_sent": true,
     "closed_at": "2026-07-26T07:16:22"
+  },
+  "العرض/الطلب|CYBERUSDT|2026-07-26 12:15:00": {
+    "symbol": "CYBERUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5590,
+    "entry": 0.327416,
+    "stop": 0.32,
+    "init_stop": 0.32,
+    "cur_stop": 0.32,
+    "legs": [
+      0.327416,
+      0.326,
+      0.324584,
+      0.322568
+    ],
+    "last_alert_stop": 0.32,
+    "armed": false,
+    "targets": [
+      0.332,
+      0.335264
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-26 12:15:00",
+    "last_bar": "2026-07-26 12:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.327416,
+    "lo_seen": 0.327416,
+    "created": "2026-07-26T12:31:16",
+    "dca_levels": [
+      0.327416,
+      0.326,
+      0.324584,
+      0.322568
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }

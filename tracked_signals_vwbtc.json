@@ -266,5 +266,93 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|CYBERUSDT|2026-07-26 12:15:00": {
+    "symbol": "CYBERUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5591,
+    "entry": 0.327416,
+    "stop": 0.32,
+    "init_stop": 0.32,
+    "cur_stop": 0.32,
+    "legs": [
+      0.327416,
+      0.326,
+      0.324584,
+      0.322568
+    ],
+    "last_alert_stop": 0.32,
+    "armed": false,
+    "targets": [
+      0.332,
+      0.335264
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-26 12:15:00",
+    "last_bar": "2026-07-26 12:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.327416,
+    "lo_seen": 0.327416,
+    "created": "2026-07-26T12:34:04",
+    "dca_levels": [
+      0.327416,
+      0.326,
+      0.324584,
+      0.322568
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|UMAUSDT|2026-07-26 12:15:00": {
+    "symbol": "UMAUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5591,
+    "entry": 0.362888,
+    "stop": 0.353,
+    "init_stop": 0.353,
+    "cur_stop": 0.353,
+    "legs": [
+      0.362888,
+      0.361,
+      0.359112,
+      0.356424
+    ],
+    "last_alert_stop": 0.353,
+    "armed": false,
+    "targets": [
+      0.369,
+      0.373352
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-26 12:15:00",
+    "last_bar": "2026-07-26 12:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.362888,
+    "lo_seen": 0.362888,
+    "created": "2026-07-26T12:34:04",
+    "dca_levels": [
+      0.362888,
+      0.361,
+      0.359112,
+      0.356424
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
