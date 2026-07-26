@@ -3783,5 +3783,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|DIAUSDT|2026-07-26 00:30:00": {
+    "symbol": "DIAUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5575,
+    "entry": 0.11325,
+    "stop": 0.0978,
+    "init_stop": 0.0978,
+    "cur_stop": 0.0978,
+    "legs": [
+      0.11325,
+      0.1103,
+      0.10735,
+      0.10315
+    ],
+    "last_alert_stop": 0.0978,
+    "armed": false,
+    "targets": [
+      0.1228,
+      0.1296
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-26 00:30:00",
+    "last_bar": "2026-07-26 00:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.11325,
+    "lo_seen": 0.11325,
+    "created": "2026-07-26T00:46:14",
+    "dca_levels": [
+      0.11325,
+      0.1103,
+      0.10735,
+      0.10315
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
