@@ -48,8 +48,39 @@ bx = bybit_exec          # المنصّة النشطة حالياً (تُبدَ�
 
 # ── إعدادات ──────────────────────────────────────────────────────────────────
 RISK_PCT = float(os.environ.get("SD_RISK_PCT", "0.005"))     # 0.5% لكل صفقة (غير مستخدم عند تثبيت القيمة)
-ORDER_USD = float(os.environ.get("SD_ORDER_USD", "300"))     # قيمة ثابتة لكل أمر شراء (USDT)
+ORDER_USD = float(os.environ.get("SD_ORDER_USD", "300"))     # قيمة مرجعية للأمر (USDT) — تُستخدم الآن كمرجع للمخاطرة وسقفٍ للقيمة
 MAX_CONCURRENT = int(os.environ.get("SD_MAX_POS", "15"))      # حد المراكز المتزامنة (بايبت)
+
+# ── تطبيع المخاطرة (2026-07-27، بطلب بو محمد — الإصلاح رقم 1) ──────────────────
+# المشكلة: التحجيم كان بقيمة دفترية ثابتة (ORDER_USD)، فالأوقاف العريضة تخسر دولارات
+# أكثر بكثير من ربح الأوقاف الضيّقة → R موجب لكن دولار سالب (PF < 1).
+# الحل: نحسب قيمة المركز بحيث تكون *خسارة الوقف مبلغاً ثابتاً* لكل صفقة:
+#   قيمة المركز = مبلغ_المخاطرة ÷ (نسبة مسافة الوقف)
+# مبلغ المخاطرة الافتراضي = ORDER_USD × RISK_REF (= ~2%) للحفاظ على نفس متوسط الحجم
+# الحالي مع تطبيع التباين. مقيَّد بسقف [ORDER_USD × CAP] لتفادي التضخّم عند الأوقاف
+# الضيّقة جداً. للتعطيل والرجوع للسلوك القديم: SD_RISK_NORM=0.
+RISK_NORM = os.environ.get("SD_RISK_NORM", "1") == "1"       # 1 = تطبيع المخاطرة مفعّل
+RISK_REF = float(os.environ.get("SD_RISK_REF", "0.02"))      # مخاطرة مرجعية = 2% من قيمة الأمر المرجعية
+NOTIONAL_CAP_MULT = float(os.environ.get("SD_NOTIONAL_CAP_MULT", "3"))  # سقف القيمة = 3× الأمر المرجعي
+
+
+def _risk_target_notional(entry, stop):
+    """قيمة المركز الكامل بحيث تكون خسارة الوقف مبلغاً ثابتاً (تطبيع المخاطرة).
+    المبلغ الثابت = SD_RISK_USD إن حُدّد، وإلا ORDER_USD × RISK_REF (يعادل ~متوسط
+    المخاطرة الحالي). القيمة مقيَّدة بسقف [ORDER_USD × CAP]. عند تعطيل التطبيع أو
+    تعذّر الحساب ترجع ORDER_USD (السلوك القديم تماماً)."""
+    if not RISK_NORM:
+        return ORDER_USD
+    try:
+        entry = float(entry); stop = float(stop)
+        risk_frac = (entry - stop) / entry
+    except Exception:
+        return ORDER_USD
+    if risk_frac <= 0:
+        return ORDER_USD
+    risk_usd = float(os.environ.get("SD_RISK_USD", ORDER_USD * RISK_REF))
+    tgt = risk_usd / risk_frac
+    return max(min(tgt, ORDER_USD * NOTIONAL_CAP_MULT), 0.0)
 
 # ── إعدادات خاصّة ببايننس (2026-07-03، بطلب بو محمد) ──────────────────────────
 # بايننس Demo = مثل بايبت تماماً في الإدارة والإغلاق (50/50)، لكن بحجم أمر 100$.
@@ -229,6 +260,11 @@ def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equit
     من الإشارة (تحت أعمق مستوى). يرجع True عند نجاح فتح الساق الأولى."""
     if tp1 <= entry:                                # long فقط: هدف فوق الدخول
         return False
+    # قاعدة رئيسية دائمة (بو محمد 2026-07-20): هدف أول < 1% ← غير مجدٍ، إلغاء
+    _min_tp1 = float(os.environ.get("MIN_TP1_PCT", "1.3"))
+    if entry > 0 and (tp1 - entry) / entry * 100.0 < _min_tp1:
+        print(f"autotrade[{EX_NAME}]: {sym} الهدف الأول < {_min_tp1}% — تخطّي (غير مجدٍ)")
+        return False
     filt = bx.instrument_filters(sym)
     if not filt:                                    # الزوج غير مُدرَج للتداول (Spot/Demo)
         print(f"autotrade[{EX_NAME}]: {sym} غير متاح للتداول على المنصّة — تخطّي")
@@ -237,9 +273,11 @@ def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equit
     # سلّم الفيبو تنازلياً (الأعلى أولاً). إن غاب → دخول مفرد بمستوى واحد.
     levels = sorted([float(x) for x in (levels or []) if x], reverse=True) or [entry]
     n = len(levels)
-    leg_usd = ORDER_USD / n
     if stop >= min(levels):                         # الوقف يجب أن يبقى تحت أعمق مستوى
         stop = min(levels) * 0.999
+    # تطبيع المخاطرة: قيمة المركز الكامل تُحسب من مسافة الوقف (خسارة ثابتة/صفقة)
+    target_notional = _risk_target_notional(entry, stop)
+    leg_usd = target_notional / n
 
     qty, notional, fill = _buy_leg(sym, filt, leg_usd)   # الساق الأولى الآن
     if qty <= 0:
