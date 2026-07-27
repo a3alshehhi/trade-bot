@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-26T23:21:40",
+  "updated_at": "2026-07-27T00:23:02",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -39,11 +39,11 @@
       "opened_at": "2026-07-26T14:50:45",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-26T23:19:05",
+      "realized_pct": -1.56,
+      "result_pct": -1.56,
+      "exec_pct": -1.56
     },
     {
       "id": "paper|HYPERUSDT|2026-07-26T13:07:08",
@@ -2097,7 +2097,7 @@
       "cur_stop": 0.054779,
       "remaining": 0.0,
       "pnl_usdt": -6.8405,
-      "last_price": 0.0574,
+      "last_price": 0.0573,
       "events": [
         {
           "ts": "2026-07-25T10:00:00",
@@ -4747,12 +4747,12 @@
   ],
   "stats": {
     "total": 199,
-    "open": 8,
-    "closed": 191,
+    "open": 7,
+    "closed": 192,
     "wins": 113,
-    "win_rate": 59.2,
-    "net_pct": 19.65,
-    "pf": 1.1,
+    "win_rate": 58.9,
+    "net_pct": 18.09,
+    "pf": 1.09,
     "simulated": 1
   }
 }
