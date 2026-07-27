@@ -1,1 +1,36 @@
-{}
+{
+  "0GUSDT": {
+    "symbol": "0GUSDT",
+    "tf": "15m",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.176
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 300.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.179079079078469,
+        "qty": 1675.23756289,
+        "usd": 300.0
+      }
+    ],
+    "avg_entry": 0.179079079078469,
+    "entry": 0.179079079078469,
+    "init_stop": 0.16918,
+    "stop": 0.16918,
+    "R": 0.009899079078469014,
+    "tp1": 0.181448,
+    "tp2": 0.184562,
+    "qty": 1675.23756289,
+    "qty_open": 1675.23756289,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-27T17:21:20",
+    "msg_id": 5636
+  }
+}

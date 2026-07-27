@@ -2258,5 +2258,42 @@
     "exit_price": 0.120204,
     "close_card_sent": true,
     "closed_at": "2026-07-26T14:23:32"
+  },
+  "SD Stable|0GUSDT|2026-07-27 17:15:00": {
+    "symbol": "0GUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 5635,
+    "entry": 0.176,
+    "stop": 0.16918,
+    "init_stop": 0.16918,
+    "cur_stop": 0.16918,
+    "legs": [
+      0.176,
+      0.175562,
+      0.1745,
+      0.173438,
+      0.171926
+    ],
+    "last_alert_stop": 0.16918,
+    "armed": false,
+    "targets": [
+      0.181448,
+      0.184562
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-27 17:15:00",
+    "last_bar": "2026-07-27 17:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.176,
+    "lo_seen": 0.176,
+    "created": "2026-07-27T17:20:39"
   }
 }
