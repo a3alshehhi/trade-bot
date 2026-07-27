@@ -273,11 +273,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-26 11:45:00",
-    "last_bar": "2026-07-27 14:44:59.999000",
+    "last_bar": "2026-07-27 21:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 1.647582,
-    "lo_seen": 1.41,
+    "lo_seen": 1.397,
     "created": "2026-07-26T12:03:42",
     "dca_levels": [
       1.647582,
@@ -286,7 +286,10 @@
       1.486386
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 1.401,
+    "close_card_sent": true,
+    "closed_at": "2026-07-27T21:32:16"
   },
   "الفيواب الأسبوعي · BTC|CYBERUSDT|2026-07-26 12:15:00": {
     "symbol": "CYBERUSDT",
@@ -556,7 +559,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:30:00",
-    "last_bar": "2026-07-27 14:44:59.999000",
+    "last_bar": "2026-07-27 21:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 4099.68,
@@ -601,7 +604,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-07-27 14:44:59.999000",
+    "last_bar": "2026-07-27 21:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.1421,
