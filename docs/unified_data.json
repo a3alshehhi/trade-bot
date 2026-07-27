@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-07-27T00:23:02",
+  "updated_at": "2026-07-27T04:09:06",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|EURIUSDT|2026-07-27T03:03:31",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "EURIUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.126835,
+      "stop_orig": 1.0913,
+      "stop": 1.0913,
+      "targets": [],
+      "opened_at": "2026-07-27T03:03:31",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|PAXGUSDT|2026-07-27T02:48:11",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "PAXGUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 4090.5508,
+      "stop_orig": 3982.03,
+      "stop": 3982.03,
+      "targets": [],
+      "opened_at": "2026-07-27T02:48:11",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|MINAUSDT|2026-07-26T15:48:49",
       "source": "paper",
@@ -190,11 +232,11 @@
       "opened_at": "2026-07-26T10:49:10",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-27T00:34:07",
+      "realized_pct": 0.5,
+      "result_pct": 0.5,
+      "exec_pct": 0.5
     },
     {
       "id": "paper|IOUSDT|2026-07-26T10:04:03",
@@ -2097,7 +2139,7 @@
       "cur_stop": 0.054779,
       "remaining": 0.0,
       "pnl_usdt": -6.8405,
-      "last_price": 0.0573,
+      "last_price": 0.0574,
       "events": [
         {
           "ts": "2026-07-25T10:00:00",
@@ -4746,12 +4788,12 @@
     }
   ],
   "stats": {
-    "total": 199,
-    "open": 7,
-    "closed": 192,
-    "wins": 113,
-    "win_rate": 58.9,
-    "net_pct": 18.09,
+    "total": 201,
+    "open": 8,
+    "closed": 193,
+    "wins": 114,
+    "win_rate": 59.1,
+    "net_pct": 18.59,
     "pf": 1.09,
     "simulated": 1
   }
