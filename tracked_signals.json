@@ -3750,7 +3750,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-25 18:00:00",
-    "last_bar": "2026-07-26 23:14:59.999000",
+    "last_bar": "2026-07-27 08:59:59.999000",
     "hits": [
       1
     ],
@@ -3945,9 +3945,9 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-26 12:15:00",
-    "last_bar": "2026-07-26 23:14:59.999000",
+    "last_bar": "2026-07-27 08:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.331,
     "lo_seen": 0.325,
     "created": "2026-07-26T12:31:16",
@@ -3959,7 +3959,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 2
+    "st_stage": 2,
+    "exit_price": 0.325365,
+    "close_card_sent": true,
+    "closed_at": "2026-07-27T09:01:34"
   },
   "العرض/الطلب|ACHUSDT|2026-07-26 14:30:00": {
     "symbol": "ACHUSDT",
