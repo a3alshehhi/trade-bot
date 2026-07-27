@@ -1,8 +1,84 @@
 {
-  "updated_at": "2026-07-27T16:29:46",
+  "updated_at": "2026-07-27T18:09:52",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "binance|0GUSDT|2026-07-27T17:33:14",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "0GUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.18018198,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-07-27T17:33:14",
+      "usd": 100.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-07-27T17:54:20",
+      "realized_pct": 0.0,
+      "result_pct": 0.454,
+      "exec_pct": 0.454,
+      "exec_usdt": 0.2535,
+      "exec_reasons": [
+        "هدف1 (50%)",
+        "تعادل/تتبّع"
+      ]
+    },
+    {
+      "id": "bybit|0GUSDT|2026-07-27T17:21:20",
+      "source": "bybit",
+      "source_ar": "بايبت تيستنت",
+      "symbol": "0GUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.179079079078469,
+      "stop_orig": 0.16918,
+      "stop": 0.16918,
+      "targets": [
+        0.181448,
+        0.184562
+      ],
+      "opened_at": "2026-07-27T17:21:20",
+      "usd": 300.0,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-07-27T17:45:00",
+      "realized_pct": 0.661,
+      "result_pct": 0.461,
+      "exec_pct": null,
+      "net_pct": 0.461,
+      "result_r": 0.12,
+      "unrealized_pct": 0.0,
+      "exit_price": 0.179079079078469,
+      "exit_reason": "تعادل",
+      "cur_stop": 0.179079079078469,
+      "remaining": 0.0,
+      "pnl_usdt": 1.3843,
+      "last_price": 0.181,
+      "events": [
+        {
+          "ts": "2026-07-27T17:30:00",
+          "type": "tp1",
+          "price": 0.181448,
+          "pct": 1.323
+        },
+        {
+          "ts": "2026-07-27T17:45:00",
+          "type": "stop",
+          "price": 0.179079079078469,
+          "pct": 0.0
+        }
+      ],
+      "real_rule": "wick"
+    },
     {
       "id": "binance|ADXUSDT|2026-07-27T14:47:26",
       "source": "binance",
@@ -4771,13 +4847,13 @@
     }
   ],
   "stats": {
-    "total": 201,
+    "total": 203,
     "open": 3,
-    "closed": 198,
-    "wins": 115,
-    "win_rate": 58.1,
-    "net_pct": 6.58,
+    "closed": 200,
+    "wins": 117,
+    "win_rate": 58.5,
+    "net_pct": 7.5,
     "pf": 1.03,
-    "simulated": 0
+    "simulated": 1
   }
 }
