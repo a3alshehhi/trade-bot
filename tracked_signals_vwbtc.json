@@ -273,11 +273,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-26 11:45:00",
-    "last_bar": "2026-07-27 11:14:59.999000",
+    "last_bar": "2026-07-27 14:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.647582,
-    "lo_seen": 1.44,
+    "lo_seen": 1.41,
     "created": "2026-07-26T12:03:42",
     "dca_levels": [
       1.647582,
@@ -365,11 +365,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-26 12:15:00",
-    "last_bar": "2026-07-27 11:14:59.999000",
+    "last_bar": "2026-07-27 14:44:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.364,
-    "lo_seen": 0.357,
+    "lo_seen": 0.352,
     "created": "2026-07-26T12:34:04",
     "dca_levels": [
       0.362888,
@@ -378,7 +378,10 @@
       0.356424
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.353,
+    "close_card_sent": true,
+    "closed_at": "2026-07-27T14:52:20"
   },
   "الفيواب الأسبوعي · BTC|HYPERUSDT|2026-07-26 12:45:00": {
     "symbol": "HYPERUSDT",
@@ -553,11 +556,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:30:00",
-    "last_bar": "2026-07-27 11:14:59.999000",
+    "last_bar": "2026-07-27 14:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 4099.68,
-    "lo_seen": 4080.19,
+    "lo_seen": 4060.69,
     "created": "2026-07-27T02:48:11",
     "dca_levels": [
       4090.5508,
@@ -598,7 +601,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-07-27 11:14:59.999000",
+    "last_bar": "2026-07-27 14:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.1421,

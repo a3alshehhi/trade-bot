@@ -3750,11 +3750,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-25 18:00:00",
-    "last_bar": "2026-07-27 08:59:59.999000",
+    "last_bar": "2026-07-27 14:44:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 6.845,
     "lo_seen": 6.506564,
     "created": "2026-07-25T18:16:06",
@@ -3766,7 +3766,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 3
+    "st_stage": 3,
+    "exit_price": 6.590879999999999,
+    "close_card_sent": true,
+    "closed_at": "2026-07-27T14:49:39"
   },
   "العرض/الطلب|AWEUSDT|2026-07-25 19:30:00": {
     "symbol": "AWEUSDT",
