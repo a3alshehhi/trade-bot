@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-27T21:23:01",
+  "updated_at": "2026-07-27T22:34:14",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -319,11 +319,11 @@
       "opened_at": "2026-07-26T12:03:42",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-27T21:36:16",
+      "realized_pct": -14.97,
+      "result_pct": -14.97,
+      "exec_pct": -14.97
     },
     {
       "id": "paper|DOTUSDT|2026-07-26T11:09:57",
@@ -4876,12 +4876,12 @@
   ],
   "stats": {
     "total": 205,
-    "open": 3,
-    "closed": 202,
+    "open": 2,
+    "closed": 203,
     "wins": 119,
-    "win_rate": 58.9,
-    "net_pct": 13.24,
-    "pf": 1.06,
+    "win_rate": 58.6,
+    "net_pct": -1.73,
+    "pf": 0.99,
     "simulated": 0
   }
 }
