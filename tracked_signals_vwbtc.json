@@ -558,5 +558,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|EURIUSDT|2026-07-27 02:45:00": {
+    "symbol": "EURIUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5628,
+    "entry": 1.126835,
+    "stop": 1.0913,
+    "init_stop": 1.0913,
+    "cur_stop": 1.0913,
+    "legs": [
+      1.126835,
+      1.12005,
+      1.113265,
+      1.103605
+    ],
+    "last_alert_stop": 1.0913,
+    "armed": false,
+    "targets": [
+      1.1488,
+      1.16444
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-27 02:45:00",
+    "last_bar": "2026-07-27 02:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1.126835,
+    "lo_seen": 1.126835,
+    "created": "2026-07-27T03:03:31",
+    "dca_levels": [
+      1.126835,
+      1.12005,
+      1.113265,
+      1.103605
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
