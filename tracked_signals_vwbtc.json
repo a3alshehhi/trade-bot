@@ -514,5 +514,49 @@
     "wait_entry": true,
     "max_age_h": 48.0,
     "st_stage": 2
+  },
+  "الفيواب الأسبوعي · BTC|PAXGUSDT|2026-07-27 02:30:00": {
+    "symbol": "PAXGUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5627,
+    "entry": 4090.5508,
+    "stop": 3982.03,
+    "init_stop": 3982.03,
+    "cur_stop": 3982.03,
+    "legs": [
+      4090.5508,
+      4069.83,
+      4049.1092,
+      4019.6084
+    ],
+    "last_alert_stop": 3982.03,
+    "armed": false,
+    "targets": [
+      4157.63,
+      4205.3932
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-27 02:30:00",
+    "last_bar": "2026-07-27 02:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 4090.5508,
+    "lo_seen": 4090.5508,
+    "created": "2026-07-27T02:48:11",
+    "dca_levels": [
+      4090.5508,
+      4069.83,
+      4049.1092,
+      4019.6084
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
