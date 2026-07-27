@@ -156,14 +156,14 @@
     "entry": 0.0466832,
     "stop": 0.0452,
     "init_stop": 0.0452,
-    "cur_stop": 0.0456705,
+    "cur_stop": 0.046916615999999994,
     "legs": [
       0.0466832,
       0.0464,
       0.0461168,
       0.0457136
     ],
-    "last_alert_stop": 0.0456705,
+    "last_alert_stop": 0.046916615999999994,
     "armed": false,
     "targets": [
       0.0476,
@@ -177,9 +177,9 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-26 10:30:00",
-    "last_bar": "2026-07-26 23:14:59.999000",
+    "last_bar": "2026-07-26 23:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0473,
     "lo_seen": 0.0459,
     "created": "2026-07-26T10:49:10",
@@ -191,7 +191,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 2
+    "st_stage": 3,
+    "exit_price": 0.046916615999999994,
+    "close_card_sent": true,
+    "closed_at": "2026-07-27T00:34:07"
   },
   "الفيواب الأسبوعي · BTC|DOTUSDT|2026-07-26 10:45:00": {
     "symbol": "DOTUSDT",
@@ -270,7 +273,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-26 11:45:00",
-    "last_bar": "2026-07-26 23:14:59.999000",
+    "last_bar": "2026-07-27 00:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.647582,
@@ -314,7 +317,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-26 12:15:00",
-    "last_bar": "2026-07-26 23:14:59.999000",
+    "last_bar": "2026-07-27 00:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.331,
@@ -359,7 +362,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-26 12:15:00",
-    "last_bar": "2026-07-26 23:14:59.999000",
+    "last_bar": "2026-07-27 00:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.364,
@@ -403,7 +406,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-26 12:45:00",
-    "last_bar": "2026-07-26 23:14:59.999000",
+    "last_bar": "2026-07-27 00:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0676,
@@ -475,14 +478,14 @@
     "entry": 0.0480114,
     "stop": 0.0435,
     "init_stop": 0.0435,
-    "cur_stop": 0.0435,
+    "cur_stop": 0.044178,
     "legs": [
       0.0480114,
       0.04715,
       0.0462886,
       0.0450622
     ],
-    "last_alert_stop": 0.0435,
+    "last_alert_stop": 0.044178,
     "armed": false,
     "targets": [
       0.0508,
@@ -496,7 +499,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-26 15:30:00",
-    "last_bar": "2026-07-26 23:14:59.999000",
+    "last_bar": "2026-07-27 00:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0480114,
@@ -509,6 +512,7 @@
       0.0450622
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2
   }
 }
