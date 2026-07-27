@@ -1,8 +1,171 @@
 {
-  "updated_at": "2026-07-27T18:09:52",
+  "updated_at": "2026-07-27T19:59:18",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "bybit|AGLDUSDT|2026-07-27T19:52:27",
+      "source": "bybit",
+      "source_ar": "بايبت تيستنت",
+      "symbol": "AGLDUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.15045045,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-07-27T19:52:27",
+      "usd": 300.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-07-27T19:52:27",
+      "realized_pct": 0.0,
+      "result_pct": 1.761,
+      "exec_pct": 1.761,
+      "exec_usdt": 2.339,
+      "exec_reasons": [
+        "هدف1 (50%)"
+      ]
+    },
+    {
+      "id": "binance|AGLDUSDT|2026-07-27T19:51:42",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "AGLDUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.15075316,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-07-27T19:51:42",
+      "usd": 100.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-07-27T19:51:42",
+      "realized_pct": 0.0,
+      "result_pct": 1.358,
+      "exec_pct": 1.358,
+      "exec_usdt": 0.5781,
+      "exec_reasons": [
+        "هدف1 (50%)"
+      ]
+    },
+    {
+      "id": "bybit|0GUSDT|2026-07-27T18:20:38",
+      "source": "bybit",
+      "source_ar": "بايبت تيستنت",
+      "symbol": "0GUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.17907908,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-07-27T18:20:38",
+      "usd": 300.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-07-27T18:20:38",
+      "realized_pct": 0.0,
+      "result_pct": 1.631,
+      "exec_pct": 1.631,
+      "exec_usdt": 2.1441,
+      "exec_reasons": [
+        "هدف1 (50%)"
+      ]
+    },
+    {
+      "id": "binance|AGLDUSDT|2026-07-27T18:08:58",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "AGLDUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.15075316280135556,
+      "stop_orig": 0.141484,
+      "stop": 0.141484,
+      "targets": [
+        0.152712,
+        0.155653
+      ],
+      "opened_at": "2026-07-27T18:08:58",
+      "usd": 100.0,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.65,
+      "result_pct": null,
+      "exec_pct": null,
+      "net_pct": 0.5,
+      "result_r": 0.106,
+      "unrealized_pct": 0.778,
+      "exit_price": null,
+      "exit_reason": null,
+      "cur_stop": 0.15075316280135556,
+      "remaining": 0.5,
+      "pnl_usdt": 0.4997,
+      "last_price": 0.1531,
+      "events": [
+        {
+          "ts": "2026-07-27T19:45:00",
+          "type": "tp1",
+          "price": 0.152712,
+          "pct": 1.299
+        }
+      ],
+      "real_rule": "wick"
+    },
+    {
+      "id": "bybit|AGLDUSDT|2026-07-27T18:06:40",
+      "source": "bybit",
+      "source_ar": "بايبت تيستنت",
+      "symbol": "AGLDUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.15045045045029232,
+      "stop_orig": 0.141484,
+      "stop": 0.141484,
+      "targets": [
+        0.152712,
+        0.155653
+      ],
+      "opened_at": "2026-07-27T18:06:40",
+      "usd": 300.0,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.752,
+      "result_pct": null,
+      "exec_pct": null,
+      "net_pct": 0.602,
+      "result_r": 0.126,
+      "unrealized_pct": 0.881,
+      "exit_price": null,
+      "exit_reason": null,
+      "cur_stop": 0.15045045045029232,
+      "remaining": 0.5,
+      "pnl_usdt": 1.8048,
+      "last_price": 0.1531,
+      "events": [
+        {
+          "ts": "2026-07-27T19:45:00",
+          "type": "tp1",
+          "price": 0.152712,
+          "pct": 1.503
+        }
+      ],
+      "real_rule": "wick"
+    },
     {
       "id": "binance|0GUSDT|2026-07-27T17:33:14",
       "source": "binance",
@@ -62,7 +225,7 @@
       "cur_stop": 0.179079079078469,
       "remaining": 0.0,
       "pnl_usdt": 1.3843,
-      "last_price": 0.181,
+      "last_price": 0.18,
       "events": [
         {
           "ts": "2026-07-27T17:30:00",
@@ -4847,13 +5010,13 @@
     }
   ],
   "stats": {
-    "total": 203,
-    "open": 3,
-    "closed": 200,
-    "wins": 117,
-    "win_rate": 58.5,
-    "net_pct": 7.5,
-    "pf": 1.03,
-    "simulated": 1
+    "total": 208,
+    "open": 5,
+    "closed": 203,
+    "wins": 120,
+    "win_rate": 59.1,
+    "net_pct": 12.25,
+    "pf": 1.06,
+    "simulated": 3
   }
 }
