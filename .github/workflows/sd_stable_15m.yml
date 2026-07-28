@@ -53,6 +53,7 @@ jobs:
           SD_ENTRY_TF=15m SD_HTF=1h SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_stable_15m.json python sd_bot.py
           SD_ENTRY_TF=1h SD_HTF=4h SD_MODEL=sd_model_1h.joblib SD_STATE=sd_state_stable_1h.json python sd_bot.py
           SD_LABELS="SD Stable" python sd_autotrade_stable.py run
+          SD_LABELS="SD Stable" python sd_autotrade_stable.py reconcile apply
           SD_LABELS="SD Stable" python trading_bot.py --mode trackmon
 
       - name: Persist stable state (conflict-proof)
