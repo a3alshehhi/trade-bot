@@ -138,10 +138,8 @@ CFG["max_bars_to_touch"] = int(os.environ.get("SD_MAX_BARS", CFG["max_bars_to_to
 CFG["strategy"] = os.environ.get("SD_STRATEGY", "legacy").strip().lower()
 CFG["vw_os"] = float(os.environ.get("SD_VW_OS", "20"))   # عتبة التشبّع البيعي RSI21
 CFG["vw_ob"] = float(os.environ.get("SD_VW_OB", "80"))   # عتبة التشبّع الشرائي RSI21
-# نوع مؤشر التشبّع: classic = RSI(21) الكلاسيكي القياسي (الافتراضي منذ 2026-07-26 بطلب بو محمد
-# بعد أن ثبت أن Ultimate RSI يطلق التشبّع 80 على حركات يكون فيها RSI21 الكلاسيكي ~70 مثل ARPAUSDT).
-# ultimate = Ultimate RSI من LuxAlgo (متاح عبر SD_VW_RSI=ultimate).
-CFG["vw_rsi"] = os.environ.get("SD_VW_RSI", "classic").strip().lower()
+# نوع مؤشر التشبّع: ultimate = Ultimate RSI من LuxAlgo (الافتراضي، طلب 2026-07-17) أو classic
+CFG["vw_rsi"] = os.environ.get("SD_VW_RSI", "ultimate").strip().lower()
 # صلاحية إشارة «انتظار المستويات» قبل أن يتجاهلها المنفّذ (ساعات)
 CFG["wait_max_age_h"] = float(os.environ.get("SD_WAIT_MAX_AGE_H", "48"))
 BINANCE_BASES = ["https://data-api.binance.vision", "https://api.binance.com"]
