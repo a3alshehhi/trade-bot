@@ -939,5 +939,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|CHRUSDT|2026-07-28 20:00:00": {
+    "symbol": "CHRUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5696,
+    "entry": 0.01297668,
+    "stop": 0.01158,
+    "init_stop": 0.01158,
+    "cur_stop": 0.01158,
+    "legs": [
+      0.01297668,
+      0.01271,
+      0.01244332,
+      0.01206364
+    ],
+    "last_alert_stop": 0.01158,
+    "armed": false,
+    "targets": [
+      0.01384,
+      0.01445472
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-28 20:00:00",
+    "last_bar": "2026-07-28 20:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01297668,
+    "lo_seen": 0.01297668,
+    "created": "2026-07-28T20:20:29",
+    "dca_levels": [
+      0.01297668,
+      0.01271,
+      0.01244332,
+      0.01206364
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
