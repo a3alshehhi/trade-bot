@@ -559,11 +559,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:30:00",
-    "last_bar": "2026-07-27 21:29:59.999000",
+    "last_bar": "2026-07-28 00:14:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 4099.68,
-    "lo_seen": 4060.69,
+    "lo_seen": 4057.69,
     "created": "2026-07-27T02:48:11",
     "dca_levels": [
       4090.5508,
@@ -573,7 +573,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 2
+    "st_stage": 2,
+    "exit_price": 4060.2069500000002,
+    "close_card_sent": true,
+    "closed_at": "2026-07-28T00:32:22"
   },
   "الفيواب الأسبوعي · BTC|EURIUSDT|2026-07-27 02:45:00": {
     "symbol": "EURIUSDT",
@@ -604,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-07-27 21:29:59.999000",
+    "last_bar": "2026-07-28 00:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.1421,
