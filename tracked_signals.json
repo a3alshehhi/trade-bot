@@ -3982,5 +3982,49 @@
     "hi_seen": 1896.28,
     "lo_seen": 1896.28,
     "created": "2026-07-28T15:33:05"
+  },
+  "العرض/الطلب|CHZUSDT|2026-07-28 17:30:00": {
+    "symbol": "CHZUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5676,
+    "entry": 0.01340058,
+    "stop": 0.0129,
+    "init_stop": 0.0129,
+    "cur_stop": 0.0129,
+    "legs": [
+      0.01340058,
+      0.013305,
+      0.01320942,
+      0.01307334
+    ],
+    "last_alert_stop": 0.0129,
+    "armed": false,
+    "targets": [
+      0.01371,
+      0.01393032
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-28 17:30:00",
+    "last_bar": "2026-07-28 17:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01340058,
+    "lo_seen": 0.01340058,
+    "created": "2026-07-28T17:46:17",
+    "dca_levels": [
+      0.01340058,
+      0.013305,
+      0.01320942,
+      0.01307334
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
