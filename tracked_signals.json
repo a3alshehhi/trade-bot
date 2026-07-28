@@ -3827,14 +3827,14 @@
     "entry": 0.1178496,
     "stop": 0.1134,
     "init_stop": 0.1134,
-    "cur_stop": 0.1178496,
+    "cur_stop": 0.11843884799999999,
     "legs": [
       0.1178496,
       0.117,
       0.1161504,
       0.1149408
     ],
-    "last_alert_stop": 0.1178496,
+    "last_alert_stop": 0.11843884799999999,
     "armed": false,
     "targets": [
       0.1206,
@@ -3848,11 +3848,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 10:00:00",
-    "last_bar": "2026-07-28 15:29:59.999000",
+    "last_bar": "2026-07-28 17:59:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.1207,
     "lo_seen": 0.117,
     "created": "2026-07-28T10:16:14",
@@ -3863,7 +3863,11 @@
       0.1149408
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 3,
+    "exit_price": 0.11843884799999999,
+    "close_card_sent": true,
+    "closed_at": "2026-07-28T18:59:40"
   },
   "العرض/الطلب|ADXUSDT|2026-07-28 13:45:00": {
     "symbol": "ADXUSDT",
@@ -3894,12 +3898,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 13:45:00",
-    "last_bar": "2026-07-28 15:29:59.999000",
+    "last_bar": "2026-07-28 18:44:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.056,
+    "hi_seen": 0.0563,
     "lo_seen": 0.0545304,
     "created": "2026-07-28T14:04:25",
     "dca_levels": [
@@ -3940,11 +3944,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 15:30:00",
-    "last_bar": "2026-07-28 15:30:00",
+    "last_bar": "2026-07-28 18:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.1461,
-    "lo_seen": 0.1461,
+    "hi_seen": 0.1486,
+    "lo_seen": 0.1441,
     "created": "2026-07-28T15:33:05"
   },
   "عرض/طلب+دايفرجنس|ETHUSDT|2026-07-28 15:30:00": {
@@ -3976,11 +3980,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 15:30:00",
-    "last_bar": "2026-07-28 15:30:00",
+    "last_bar": "2026-07-28 18:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 1896.28,
-    "lo_seen": 1896.28,
+    "hi_seen": 1928.95,
+    "lo_seen": 1892.71,
     "created": "2026-07-28T15:33:05"
   },
   "العرض/الطلب|CHZUSDT|2026-07-28 17:30:00": {
@@ -4012,10 +4016,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 17:30:00",
-    "last_bar": "2026-07-28 17:30:00",
+    "last_bar": "2026-07-28 18:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.01340058,
+    "hi_seen": 0.01368,
     "lo_seen": 0.01340058,
     "created": "2026-07-28T17:46:17",
     "dca_levels": [
@@ -4056,10 +4060,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 17:45:00",
-    "last_bar": "2026-07-28 17:45:00",
+    "last_bar": "2026-07-28 18:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.01149934,
+    "hi_seen": 0.01159,
     "lo_seen": 0.01149934,
     "created": "2026-07-28T18:01:26",
     "dca_levels": [
@@ -4100,10 +4104,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 18:00:00",
-    "last_bar": "2026-07-28 18:00:00",
+    "last_bar": "2026-07-28 18:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 31.1142,
+    "hi_seen": 31.6,
     "lo_seen": 31.1142,
     "created": "2026-07-28T18:16:16",
     "dca_levels": [

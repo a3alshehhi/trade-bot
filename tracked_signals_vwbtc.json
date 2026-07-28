@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-07-28 15:29:59.999000",
+    "last_bar": "2026-07-28 18:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.1421,
@@ -630,14 +630,14 @@
     "entry": 0.1178496,
     "stop": 0.1134,
     "init_stop": 0.1134,
-    "cur_stop": 0.1178496,
+    "cur_stop": 0.11843884799999999,
     "legs": [
       0.1178496,
       0.117,
       0.1161504,
       0.1149408
     ],
-    "last_alert_stop": 0.1178496,
+    "last_alert_stop": 0.11843884799999999,
     "armed": false,
     "targets": [
       0.1206,
@@ -651,11 +651,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 10:00:00",
-    "last_bar": "2026-07-28 15:29:59.999000",
+    "last_bar": "2026-07-28 17:59:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.1207,
     "lo_seen": 0.117,
     "created": "2026-07-28T10:18:56",
@@ -666,7 +666,11 @@
       0.1149408
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 3,
+    "exit_price": 0.11843884799999999,
+    "close_card_sent": true,
+    "closed_at": "2026-07-28T19:02:35"
   },
   "الفيواب الأسبوعي · BTC|TOWNSUSDT|2026-07-28 13:30:00": {
     "symbol": "TOWNSUSDT",
@@ -697,12 +701,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 13:30:00",
-    "last_bar": "2026-07-28 15:29:59.999000",
+    "last_bar": "2026-07-28 18:59:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.00212,
+    "hi_seen": 0.00215,
     "lo_seen": 0.00203214,
     "created": "2026-07-28T13:53:58",
     "dca_levels": [
@@ -743,12 +747,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 13:45:00",
-    "last_bar": "2026-07-28 15:29:59.999000",
+    "last_bar": "2026-07-28 18:59:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.056,
+    "hi_seen": 0.0563,
     "lo_seen": 0.0545304,
     "created": "2026-07-28T14:07:42",
     "dca_levels": [
@@ -789,10 +793,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 18:00:00",
-    "last_bar": "2026-07-28 18:00:00",
+    "last_bar": "2026-07-28 18:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 31.1142,
+    "hi_seen": 31.6,
     "lo_seen": 31.1142,
     "created": "2026-07-28T18:18:29",
     "dca_levels": [
@@ -833,10 +837,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 18:00:00",
-    "last_bar": "2026-07-28 18:00:00",
+    "last_bar": "2026-07-28 18:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.040945,
+    "hi_seen": 0.0414,
     "lo_seen": 0.040945,
     "created": "2026-07-28T18:18:29",
     "dca_levels": [
@@ -877,17 +881,61 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 18:15:00",
-    "last_bar": "2026-07-28 18:15:00",
+    "last_bar": "2026-07-28 18:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.660574,
-    "lo_seen": 0.660574,
+    "lo_seen": 0.651,
     "created": "2026-07-28T18:34:10",
     "dca_levels": [
       0.660574,
       0.6555,
       0.650426,
       0.643202
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|ZILUSDT|2026-07-28 18:45:00": {
+    "symbol": "ZILUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5686,
+    "entry": 0.00256428,
+    "stop": 0.00228,
+    "init_stop": 0.00228,
+    "cur_stop": 0.00228,
+    "legs": [
+      0.00256428,
+      0.00251,
+      0.00245572,
+      0.00237844
+    ],
+    "last_alert_stop": 0.00228,
+    "armed": false,
+    "targets": [
+      0.00274,
+      0.00286512
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-28 18:45:00",
+    "last_bar": "2026-07-28 18:59:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.002665,
+    "lo_seen": 0.00256428,
+    "created": "2026-07-28T19:02:33",
+    "dca_levels": [
+      0.00256428,
+      0.00251,
+      0.00245572,
+      0.00237844
     ],
     "wait_entry": true,
     "max_age_h": 48.0
