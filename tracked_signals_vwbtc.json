@@ -621,5 +621,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|ALICEUSDT|2026-07-28 10:00:00": {
+    "symbol": "ALICEUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5651,
+    "entry": 0.1178496,
+    "stop": 0.1134,
+    "init_stop": 0.1134,
+    "cur_stop": 0.1134,
+    "legs": [
+      0.1178496,
+      0.117,
+      0.1161504,
+      0.1149408
+    ],
+    "last_alert_stop": 0.1134,
+    "armed": false,
+    "targets": [
+      0.1206,
+      0.1225584
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-28 10:00:00",
+    "last_bar": "2026-07-28 10:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1178496,
+    "lo_seen": 0.1178496,
+    "created": "2026-07-28T10:18:56",
+    "dca_levels": [
+      0.1178496,
+      0.117,
+      0.1161504,
+      0.1149408
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
