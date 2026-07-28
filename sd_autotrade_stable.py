@@ -707,6 +707,7 @@ def reconcile(apply=False):
       • يتيمة (orphan): رصيد فعلي لعملة بلا مركز متتبَّع (فُتح لكن ضاع من التتبّع).
     الوضع الافتراضي *تقرير فقط*. apply يزيل الوهمية من الملف فقط (لا يمسّ اليتيمة، ولا ينفّذ صفقات)."""
     lines = []
+    found = False                       # هل وُجدت وهمية/يتيمة؟ (لتفادي إزعاج تيليجرام عند لا شيء)
     for module, suffix, name in _enabled_exchanges():
         _use_exchange(module, suffix, name)
         if not is_enabled():
@@ -728,6 +729,8 @@ def reconcile(apply=False):
         orphans = [f"{c}(≈{v.get('usd_value', 0):.0f}$)" for c, v in coins.items()
                    if c not in ("USDT", "USDC", "FDUSD", "BUSD")
                    and (v.get("usd_value") or 0) >= 1 and c not in tracked_bases]
+        if phantoms or orphans:
+            found = True
         if apply and phantoms:
             for s in phantoms:
                 positions.pop(s, None)
@@ -737,7 +740,10 @@ def reconcile(apply=False):
     report = ("🧹 مطابقة الحساب بالمتتبّع " + ("(تطبيق)" if apply else "(تقرير)") + "\n"
               + ("\n".join(lines) if lines else "لا منصّات مُفعّلة")
               + "\nاليتيمة = أرصدة بلا تتبّع: أغلقها يدوياً أو اطلب تبنّيها.")
-    _notify(report)
+    if found:                       # أرسل تيليجرام فقط عند وجود وهمية/يتيمة (وإلا اكتفِ بسجلّ CI)
+        _notify(report)
+    else:
+        print(report)
 
 
 if __name__ == "__main__":
