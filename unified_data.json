@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-07-28T20:23:01",
+  "updated_at": "2026-07-28T21:37:04",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|CHRUSDT|2026-07-28T20:20:29",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "CHRUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01297668,
+      "stop_orig": 0.01158,
+      "stop": 0.01158,
+      "targets": [],
+      "opened_at": "2026-07-28T20:20:29",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|ZILUSDT|2026-07-28T19:02:33",
       "source": "paper",
@@ -17,12 +38,15 @@
       "targets": [],
       "opened_at": "2026-07-28T19:02:33",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "closed_at": "2026-07-28T20:49:12",
+      "realized_pct": 9.29,
+      "result_pct": 9.29,
+      "exec_pct": 9.29
     },
     {
       "id": "paper|QTUMUSDT|2026-07-28T18:34:10",
@@ -122,7 +146,9 @@
       "targets": [],
       "opened_at": "2026-07-28T17:46:17",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -154,13 +180,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -0.066,
+      "unrealized_pct": 0.059,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.0885,
-      "last_price": 1920.01,
+      "last_price": 1922.4,
       "events": [],
       "real_rule": "wick"
     },
@@ -189,13 +215,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": 0.067,
+      "unrealized_pct": 0.192,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.2655,
-      "last_price": 1920.01,
+      "last_price": 1922.41,
       "events": [],
       "real_rule": "wick"
     },
@@ -5182,13 +5208,13 @@
     }
   ],
   "stats": {
-    "total": 218,
+    "total": 219,
     "open": 13,
-    "closed": 205,
-    "wins": 120,
-    "win_rate": 58.5,
-    "net_pct": -1.05,
-    "pf": 1.0,
+    "closed": 206,
+    "wins": 121,
+    "win_rate": 58.7,
+    "net_pct": 8.24,
+    "pf": 1.04,
     "simulated": 2
   }
 }
