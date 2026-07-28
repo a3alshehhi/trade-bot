@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-07-28T07:24:11",
+  "updated_at": "2026-07-28T12:08:37",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|ALICEUSDT|2026-07-28T10:18:56",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ALICEUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1178496,
+      "stop_orig": 0.1134,
+      "stop": 0.1134,
+      "targets": [],
+      "opened_at": "2026-07-28T10:18:56",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "bybit|AGLDUSDT|2026-07-27T19:52:27",
       "source": "bybit",
@@ -4875,8 +4896,8 @@
     }
   ],
   "stats": {
-    "total": 205,
-    "open": 1,
+    "total": 206,
+    "open": 2,
     "closed": 204,
     "wins": 119,
     "win_rate": 58.3,
