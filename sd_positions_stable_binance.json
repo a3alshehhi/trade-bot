@@ -1,1 +1,36 @@
-{}
+{
+  "ETHUSDT": {
+    "symbol": "ETHUSDT",
+    "tf": "15m",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      1896.28
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 88.48,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 1921.2706506042869,
+        "qty": 0.0460539,
+        "usd": 88.48200641586477
+      }
+    ],
+    "avg_entry": 1921.2706506042869,
+    "entry": 1921.2706506042869,
+    "init_stop": 1853.4175,
+    "stop": 1853.4175,
+    "R": 67.85315060428684,
+    "tp1": 1942.77816,
+    "tp2": 1966.14354,
+    "qty": 0.0460539,
+    "qty_open": 0.0460539,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-28T15:39:15",
+    "msg_id": 5662
+  }
+}
