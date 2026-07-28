@@ -38,9 +38,16 @@ import sys
 import json
 import time
 import argparse
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 import requests
+
+# مرحلة الخروج الفوري (تحت الفيواب الأسبوعي + هيستوجرام أحمر قبل الهدف1) — طلب بو محمد 2026-07-28.
+# نُعيد استخدام منطق الحيّ نفسه من staged_trail كي يبقى السجل مطابقاً للتنفيذ.
+try:
+    import staged_trail as _st
+except Exception:
+    _st = None
 
 # ── إعدادات ────────────────────────────────────────────────────────────────
 OUT_FILE = os.environ.get("UNIFIED_OUT", "unified_data.json")
@@ -144,7 +151,8 @@ def klines(symbol, interval, start_ms, limit=1000):
             if r.status_code != 200:
                 continue
             raw = r.json()
-            out = [[int(k[0]), float(k[1]), float(k[2]), float(k[3]), float(k[4])]
+            out = [[int(k[0]), float(k[1]), float(k[2]), float(k[3]),
+                    float(k[4]), float(k[5])]        # + الحجم (للفيواب الأسبوعي)
                    for k in raw]
             _CANDLE_CACHE[key] = out
             return out
@@ -156,18 +164,62 @@ def klines(symbol, interval, start_ms, limit=1000):
     return []
 
 
+# ── الفيواب الأسبوعي (لمرحلة الخروج الفوري) ────────────────────────────────
+def _week_start_ms(ms):
+    """بداية أسبوع ISO (الإثنين 00:00 UTC) الذي يقع فيه ms — مرساة الفيواب."""
+    d = datetime.fromtimestamp(ms / 1000, tz=timezone.utc)
+    monday = (d - timedelta(days=d.weekday())).replace(
+        hour=0, minute=0, second=0, microsecond=0)
+    return int(monday.timestamp() * 1000)
+
+
+def _weekly_vwap(T, H, L, C, V):
+    """فيواب أسبوعي مرسّى يُصفَّر مع كل أسبوع ISO/UTC — مطابق لـ sd_bot.vwap_weekly."""
+    out = [float("nan")] * len(C)
+    cum_pv = cum_v = 0.0
+    wk = None
+    for i in range(len(C)):
+        d = datetime.fromtimestamp(T[i] / 1000, tz=timezone.utc)
+        k = d.isocalendar()[:2]
+        if k != wk:
+            wk = k
+            cum_pv = cum_v = 0.0
+        tp = (H[i] + L[i] + C[i]) / 3.0
+        cum_pv += tp * V[i]
+        cum_v += V[i]
+        if cum_v > 0:
+            out[i] = cum_pv / cum_v
+    return out
+
+
 # ── محاكاة «النمط الحقيقي» بذيل الشمعة ─────────────────────────────────────
-def simulate_real(symbol, tf, entry, stop, targets, start_ms, usd):
+def simulate_real(symbol, tf, entry, stop, targets, start_ms, usd, label=None):
     """يعيد نتيجة الصفقة كما لو كانت أوامر وقف/هدف راكدة على المنصة.
 
     القاعدة: قاع الشمعة يلمس الوقف = وقف. قمتها تلمس الهدف = هدف.
     الوقف يُفحص أولاً داخل نفس الشمعة (الأكثر تحفّظاً وواقعية).
+
+    مرحلة الخروج الفوري (بوتَي العرض/الطلب و الفيواب·BTC فقط، عبر staged_trail):
+    قبل بلوغ الهدف الأول، إن أغلقت شمعة **تحت الفيواب الأسبوعي** والهيستوجرام
+    **أحمر** → خروج فوري عند إغلاق تلك الشمعة (بنفس منطق التنفيذ الحيّ).
     """
     interval = BINANCE_INTERVAL.get(tf, "1h")
-    bars = klines(symbol, interval, start_ms)
+    # هل تُطبَّق مرحلة الخروج الفوري على وسم هذا البوت؟ (نفس فلتر الحيّ applies_to)
+    hard_on = bool(_st) and _st.applies_to(label)
+    # لمرحلة الخروج نجلب من بداية أسبوع الدخول (كي يُرسى الفيواب صحيحاً) ونحاكي من الدخول فقط
+    fetch_ms = _week_start_ms(start_ms) if hard_on else start_ms
+    bars = klines(symbol, interval, fetch_ms)
     risk = entry - stop
     if risk <= 0 or not bars:
         return None
+
+    T = [b[0] for b in bars]
+    H = [b[2] for b in bars]
+    L = [b[3] for b in bars]
+    C = [b[4] for b in bars]
+    V = [b[5] if len(b) > 5 else 0.0 for b in bars]
+    e = next((i for i in range(len(T)) if T[i] >= start_ms), 0)   # فهرس الدخول
+    wv = _weekly_vwap(T, H, L, C, V) if hard_on else None
 
     tp1 = targets[0] if targets else None
     tp2 = targets[1] if len(targets) > 1 else None
@@ -182,7 +234,8 @@ def simulate_real(symbol, tf, entry, stop, targets, start_ms, usd):
     exit_reason = None
     closed_ms = None
 
-    for ts, o, h, l, c in bars:
+    for i in range(e, len(bars)):        # نحاكي من شمعة الدخول فقط (ما قبلها سياق للفيواب)
+        ts, h, l, c = T[i], H[i], L[i], C[i]
         # (1) الوقف أولاً — تحفّظاً (داخل الشمعة لا نعرف الترتيب)
         if l <= cur_stop:
             part = _pct(entry, cur_stop) * remaining
@@ -210,6 +263,22 @@ def simulate_real(symbol, tf, entry, stop, targets, start_ms, usd):
             cur_stop = max(cur_stop, lock)
             events.append({"ts": _iso(ts), "type": "tp1",
                            "price": tp1, "pct": round(_pct(entry, tp1), 3)})
+
+        # (2.5) الخروج الفوري — قبل الهدف1: إغلاق تحت الفيواب الأسبوعي + هيستوجرام أحمر
+        if hard_on and 1 not in hits and wv is not None:
+            ex, _note = _st.hard_exit(H[e:i + 1], L[e:i + 1], C[e:i + 1],
+                                      entry, tp1, wv[i])
+            if ex:
+                part = _pct(entry, c) * remaining      # الخروج عند إغلاق الشمعة
+                realized += part
+                exit_reason = "خروج فوري (تحت الفيواب+أحمر)"
+                events.append({"ts": _iso(ts), "type": "hard_exit",
+                               "price": c, "pct": round(part, 3)})
+                exit_price = c
+                remaining = 0.0
+                status = "closed"
+                closed_ms = ts
+                break
 
         # (3) الهدف الثاني: بيع الباقي
         if tp2 is not None and 1 in hits and 2 not in hits and h >= tp2:
@@ -386,7 +455,8 @@ def build():
         if r.get("_exec_only") or not r.get("_bar_ms") or not r.get("targets"):
             continue
         sim = simulate_real(r["symbol"], r["timeframe"], r["entry"],
-                            r["stop_orig"], r["targets"], r["_bar_ms"], r["usd"])
+                            r["stop_orig"], r["targets"], r["_bar_ms"], r["usd"],
+                            label=r.get("label"))
         if not sim:
             continue
         simulated += 1
