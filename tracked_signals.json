@@ -4058,5 +4058,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|ADXUSDT|2026-07-28 13:45:00": {
+    "symbol": "ADXUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5654,
+    "entry": 0.0545304,
+    "stop": 0.0528,
+    "init_stop": 0.0528,
+    "cur_stop": 0.0528,
+    "legs": [
+      0.0545304,
+      0.0542,
+      0.0538696,
+      0.0533992
+    ],
+    "last_alert_stop": 0.0528,
+    "armed": false,
+    "targets": [
+      0.0556,
+      0.0563616
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-28 13:45:00",
+    "last_bar": "2026-07-28 13:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0545304,
+    "lo_seen": 0.0545304,
+    "created": "2026-07-28T14:04:25",
+    "dca_levels": [
+      0.0545304,
+      0.0542,
+      0.0538696,
+      0.0533992
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
