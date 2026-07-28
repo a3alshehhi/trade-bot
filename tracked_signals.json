@@ -4026,5 +4026,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|BMTUSDT|2026-07-28 17:45:00": {
+    "symbol": "BMTUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5677,
+    "entry": 0.01149934,
+    "stop": 0.01111,
+    "init_stop": 0.01111,
+    "cur_stop": 0.01111,
+    "legs": [
+      0.01149934,
+      0.011425,
+      0.01135066,
+      0.01124482
+    ],
+    "last_alert_stop": 0.01111,
+    "armed": false,
+    "targets": [
+      0.01174,
+      0.01191136
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-28 17:45:00",
+    "last_bar": "2026-07-28 17:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01149934,
+    "lo_seen": 0.01149934,
+    "created": "2026-07-28T18:01:26",
+    "dca_levels": [
+      0.01149934,
+      0.011425,
+      0.01135066,
+      0.01124482
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
