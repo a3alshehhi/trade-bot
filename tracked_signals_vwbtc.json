@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-07-28 22:14:59.999000",
+    "last_bar": "2026-07-28 22:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.1421,
@@ -701,7 +701,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 13:30:00",
-    "last_bar": "2026-07-28 22:14:59.999000",
+    "last_bar": "2026-07-28 22:29:59.999000",
     "hits": [
       1
     ],
@@ -727,14 +727,14 @@
     "entry": 0.0545304,
     "stop": 0.0528,
     "init_stop": 0.0528,
-    "cur_stop": 0.0545304,
+    "cur_stop": 0.05480305199999999,
     "legs": [
       0.0545304,
       0.0542,
       0.0538696,
       0.0533992
     ],
-    "last_alert_stop": 0.0545304,
+    "last_alert_stop": 0.05480305199999999,
     "armed": false,
     "targets": [
       0.0556,
@@ -748,7 +748,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 13:45:00",
-    "last_bar": "2026-07-28 22:14:59.999000",
+    "last_bar": "2026-07-28 22:29:59.999000",
     "hits": [
       1
     ],
@@ -763,7 +763,8 @@
       0.0533992
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 3
   },
   "الفيواب الأسبوعي · BTC|DASHUSDT|2026-07-28 18:00:00": {
     "symbol": "DASHUSDT",
@@ -794,7 +795,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 18:00:00",
-    "last_bar": "2026-07-28 22:14:59.999000",
+    "last_bar": "2026-07-28 22:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 31.61,
@@ -838,7 +839,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 18:00:00",
-    "last_bar": "2026-07-28 22:14:59.999000",
+    "last_bar": "2026-07-28 22:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0414,
@@ -882,10 +883,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 18:15:00",
-    "last_bar": "2026-07-28 22:14:59.999000",
+    "last_bar": "2026-07-28 22:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.663,
+    "hi_seen": 0.667,
     "lo_seen": 0.651,
     "created": "2026-07-28T18:34:10",
     "dca_levels": [
@@ -976,11 +977,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 20:00:00",
-    "last_bar": "2026-07-28 22:14:59.999000",
+    "last_bar": "2026-07-28 22:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01297668,
-    "lo_seen": 0.01226,
+    "lo_seen": 0.01224,
     "created": "2026-07-28T20:20:29",
     "dca_levels": [
       0.01297668,
