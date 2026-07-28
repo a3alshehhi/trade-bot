@@ -617,6 +617,8 @@ def _manage_one(sym, positions):
 
     # ── وقف متدرّج بنيوي (طلب بو محمد 2026-07-26) — العرض/الطلب فقط (تنفيذ حيّ) ──
     #    يُضاف فوق قفل 0.3R: الوقف الأعلى يفوز ولا ينزل أبداً. idempotent من شموع 15م.
+    #    + مرحلة الخروج الفوري (2026-07-28): تحت الفيواب الأسبوعي + هيستوجرام أحمر قبل الهدف1.
+    _hard_exit, _hard_note = False, ""
     try:
         import staged_trail as _stg
         if _stg.applies_to(pos.get("label")):
@@ -638,8 +640,23 @@ def _manage_one(sym, positions):
                         pos["st_stage"] = _stage
                         _notify(f"🧗 [{EX_NAME}] {sym} — {_note}\nالوقف: {_fmt(pos['stop'])}",
                                 reply_to=pos.get("msg_id"))
+                # الفيواب الأسبوعي على *كامل* السلسلة المغلقة (الإرساء الأسبوعي يتطلّب ذلك)
+                if not pos["tp1_done"]:
+                    _wv = _sb.vwap_weekly(_d["t"], _d["h"], _d["l"], _d["c"], _d["v"])
+                    _hard_exit, _hard_note = _stg.hard_exit(
+                        list(_d["h"][_e:]), list(_d["l"][_e:]), list(_d["c"][_e:]),
+                        entry, pos["tp1"], _wv[-1] if _wv else None)
     except Exception as _ex:
         print(f"[staged] {sym}: {_ex}")
+
+    # (0.5) الخروج الفوري — قبل الهدف1، تحت الفيواب الأسبوعي + هيستوجرام أحمر
+    if _hard_exit and not pos["tp1_done"]:
+        sold = _sell(sym, pos["qty_open"], price)
+        pnl = _record_exit(pos, sold or pos["qty_open"], price, "خروج فوري (تحت الفيواب+هيستوجرام أحمر)")
+        del positions[sym]
+        _notify(f"⚠️ خروج فوري [{EX_NAME}] {sym} @ {_fmt(price)} — {_hard_note} "
+                f"(ربح/خسارة ≈ {_fmt(pnl)} USDT)", reply_to=pos.get("msg_id"))
+        return True
 
     # (1) الوقف أولاً — حماية رأس المال
     if price <= pos["stop"]:

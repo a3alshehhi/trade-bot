@@ -11,8 +11,15 @@
   (1) قمة أعلى من قمة (بعد انتهاء التصحيح) → الوقف تحت «أقرب قاع للتصحيح» ناقص 0.5%.
   (2) بلوغ الهدف الأول → الوقف فوق متوسط الدخول + 0.5%.
 
-الدالة الأساسية نقية و idempotent: تُعيد حساب المرحلة المستهدَفة من كامل شموع
-الصفقة المغلقة في كل نداء (لا حالة تراكمية هشّة). المُنادي يدمج الناتج بـ:
+مرحلة الخروج الفوري (طلب بو محمد 2026-07-28) — دالة مستقلّة `hard_exit`:
+  إذا لم يبلغ السعر الهدف الأول ثم بدأ يتراجع فأغلق **تحت الفيواب الأسبوعي**
+  و**تحوّل هيستوجرام الماكد إلى الأحمر (hist<0)** → خروج فوري من كامل الصفقة.
+  ليست رفعاً للوقف بل إغلاق كامل. افتراضياً لا تُسلَّح إلا بعد انتهاء التصحيح
+  (نفس البوابة) لتفادي الخروج أثناء انخفاض الدخول الطبيعي — يُضبط بـ
+  STAGED_EXIT_REQUIRE_GATE، والميزة كلها بـ STAGED_HARD_EXIT.
+
+الدوال نقية و idempotent: تُعيد حساب الحالة من كامل شموع الصفقة المغلقة في كل
+نداء (لا حالة تراكمية هشّة). المُنادي يدمج ناتج `compute_staged_stop` بـ:
     new_stop = max(cur_stop, target)   # الأعلى يفوز، لا ينزل أبداً
 """
 
@@ -22,6 +29,10 @@ import os
 SUPPORT_BUF = float(os.environ.get("STAGED_SUPPORT_BUF", "0.005"))   # 0.5% تحت أقرب قاع تصحيح (عند قمة أعلى)
 TP1_BUF     = float(os.environ.get("STAGED_TP1_BUF", "0.005"))       # 0.5% فوق المتوسط عند الهدف1
 PIVOT_W     = int(os.environ.get("STAGED_PIVOT_W", "2"))             # نصف نافذة القمة المحورية
+
+# مرحلة الخروج الفوري (تحت الفيواب الأسبوعي + هيستوجرام أحمر قبل الهدف1)
+HARD_EXIT      = os.environ.get("STAGED_HARD_EXIT", "1").strip() not in ("0", "", "false", "False")
+EXIT_REQ_GATE  = os.environ.get("STAGED_EXIT_REQUIRE_GATE", "1").strip() not in ("0", "", "false", "False")
 
 # تفعيل عام + قائمة البوتات المعنيّة (تُطابق حقل label في tracked_signals)
 ENABLED = os.environ.get("STAGED_TRAIL", "1").strip() not in ("0", "", "false", "False")
@@ -124,3 +135,41 @@ def compute_staged_stop(highs, lows, closes, entry, tp1, w=PIVOT_W):
         note = "الهدف الأول → الوقف فوق متوسط الدخول +0.5%"
 
     return target, stage, note
+
+
+def hard_exit(highs, lows, closes, entry, tp1, wvwap):
+    """مرحلة الخروج الفوري (طلب بو محمد 2026-07-28) — idempotent، بلا حالة.
+
+    قبل بلوغ الهدف الأول، إذا أغلقت آخر شمعة **تحت الفيواب الأسبوعي** وكان
+    هيستوجرام الماكد **أحمر (hist<0)** → خروج فوري من كامل الصفقة.
+
+    highs/lows/closes: شموع الصفقة المغلقة منذ الدخول (العنصر [0] ≈ الدخول).
+    entry/tp1: متوسط الدخول والهدف الأول. wvwap: قيمة الفيواب الأسبوعي عند آخر
+      شمعة مغلقة (يحسبها المُنادي على كامل السلسلة كي يبقى الإرساء الأسبوعي صحيحاً).
+    يعيد (should_exit: bool, note: str).
+    """
+    if not HARD_EXIT:
+        return False, ""
+    n = len(closes)
+    if n < 3 or wvwap is None or wvwap != wvwap:          # nan-safe
+        return False, ""
+    if tp1 and max(highs) >= tp1:                          # الهدف تحقّق → تُدار 50/50 لا خروج فوري
+        return False, ""
+
+    hist = macd_hist(closes)
+
+    # البوابة (افتراضياً مطلوبة): لا يُسلَّح الخروج إلا بعد انتهاء التصحيح — أي
+    # ارتد الزخم للأخضر صعوداً مرّة، ثم «بدأ يتراجع» بعدها. يمنع الخروج أثناء
+    # انخفاض الدخول الطبيعي. STAGED_EXIT_REQUIRE_GATE=0 يُلغي هذا الشرط.
+    if EXIT_REQ_GATE:
+        gated = False
+        for j in range(1, n):
+            if hist[j] > 0 and hist[j] > hist[j - 1] and closes[j] > closes[j - 1]:
+                gated = True
+                break
+        if not gated:
+            return False, ""
+
+    if closes[-1] < wvwap and hist[-1] < 0:
+        return True, "تراجع تحت الفيواب الأسبوعي + هيستوجرام أحمر (قبل الهدف1) → خروج فوري"
+    return False, ""
