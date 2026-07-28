@@ -759,5 +759,93 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|DASHUSDT|2026-07-28 18:00:00": {
+    "symbol": "DASHUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5680,
+    "entry": 31.1142,
+    "stop": 29.94,
+    "init_stop": 29.94,
+    "cur_stop": 29.94,
+    "legs": [
+      31.1142,
+      30.89,
+      30.6658,
+      30.3466
+    ],
+    "last_alert_stop": 29.94,
+    "armed": false,
+    "targets": [
+      31.84,
+      32.3568
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-28 18:00:00",
+    "last_bar": "2026-07-28 18:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 31.1142,
+    "lo_seen": 31.1142,
+    "created": "2026-07-28T18:18:29",
+    "dca_levels": [
+      31.1142,
+      30.89,
+      30.6658,
+      30.3466
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|POWRUSDT|2026-07-28 18:00:00": {
+    "symbol": "POWRUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5680,
+    "entry": 0.040945,
+    "stop": 0.0394,
+    "init_stop": 0.0394,
+    "cur_stop": 0.0394,
+    "legs": [
+      0.040945,
+      0.04065,
+      0.040355,
+      0.039935
+    ],
+    "last_alert_stop": 0.0394,
+    "armed": false,
+    "targets": [
+      0.0419,
+      0.04258
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-28 18:00:00",
+    "last_bar": "2026-07-28 18:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.040945,
+    "lo_seen": 0.040945,
+    "created": "2026-07-28T18:18:29",
+    "dca_levels": [
+      0.040945,
+      0.04065,
+      0.040355,
+      0.039935
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
