@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-07-28 00:29:59.999000",
+    "last_bar": "2026-07-28 15:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.1421,
@@ -630,14 +630,14 @@
     "entry": 0.1178496,
     "stop": 0.1134,
     "init_stop": 0.1134,
-    "cur_stop": 0.1134,
+    "cur_stop": 0.1178496,
     "legs": [
       0.1178496,
       0.117,
       0.1161504,
       0.1149408
     ],
-    "last_alert_stop": 0.1134,
+    "last_alert_stop": 0.1178496,
     "armed": false,
     "targets": [
       0.1206,
@@ -651,11 +651,13 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 10:00:00",
-    "last_bar": "2026-07-28 10:00:00",
-    "hits": [],
+    "last_bar": "2026-07-28 15:29:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.1178496,
-    "lo_seen": 0.1178496,
+    "hi_seen": 0.1207,
+    "lo_seen": 0.117,
     "created": "2026-07-28T10:18:56",
     "dca_levels": [
       0.1178496,
@@ -674,14 +676,14 @@
     "entry": 0.00203214,
     "stop": 0.00189,
     "init_stop": 0.00189,
-    "cur_stop": 0.00189,
+    "cur_stop": 0.00203214,
     "legs": [
       0.00203214,
       0.002005,
       0.00197786,
       0.00193922
     ],
-    "last_alert_stop": 0.00189,
+    "last_alert_stop": 0.00203214,
     "armed": false,
     "targets": [
       0.00212,
@@ -695,10 +697,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 13:30:00",
-    "last_bar": "2026-07-28 13:30:00",
-    "hits": [],
+    "last_bar": "2026-07-28 15:29:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.00203214,
+    "hi_seen": 0.00212,
     "lo_seen": 0.00203214,
     "created": "2026-07-28T13:53:58",
     "dca_levels": [
@@ -718,14 +722,14 @@
     "entry": 0.0545304,
     "stop": 0.0528,
     "init_stop": 0.0528,
-    "cur_stop": 0.0528,
+    "cur_stop": 0.0545304,
     "legs": [
       0.0545304,
       0.0542,
       0.0538696,
       0.0533992
     ],
-    "last_alert_stop": 0.0528,
+    "last_alert_stop": 0.0545304,
     "armed": false,
     "targets": [
       0.0556,
@@ -739,10 +743,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 13:45:00",
-    "last_bar": "2026-07-28 13:45:00",
-    "hits": [],
+    "last_bar": "2026-07-28 15:29:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.0545304,
+    "hi_seen": 0.056,
     "lo_seen": 0.0545304,
     "created": "2026-07-28T14:07:42",
     "dca_levels": [
