@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-27T23:39:11",
+  "updated_at": "2026-07-28T01:12:03",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -168,11 +168,11 @@
       "opened_at": "2026-07-27T02:48:11",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-28T00:32:22",
+      "realized_pct": -0.74,
+      "result_pct": -0.74,
+      "exec_pct": -0.74
     },
     {
       "id": "paper|MINAUSDT|2026-07-26T15:48:49",
@@ -4876,11 +4876,11 @@
   ],
   "stats": {
     "total": 205,
-    "open": 2,
-    "closed": 203,
+    "open": 1,
+    "closed": 204,
     "wins": 119,
-    "win_rate": 58.6,
-    "net_pct": -1.73,
+    "win_rate": 58.3,
+    "net_pct": -2.47,
     "pf": 0.99,
     "simulated": 0
   }
