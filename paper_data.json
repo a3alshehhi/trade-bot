@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-29T16:22:52",
+  "updated_at": "2026-07-29T16:33:19",
   "stats": {
-    "open": 21,
-    "closed": 219,
-    "win_rate": 61.6,
-    "profit_factor": 1.16,
-    "total_pct": 30.4,
-    "avg_pct": 0.17,
+    "open": 20,
+    "closed": 220,
+    "win_rate": 61.8,
+    "profit_factor": 1.17,
+    "total_pct": 32.94,
+    "avg_pct": 0.18,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-29",
-        "trades": 12,
-        "win_rate": 50.0,
-        "return_pct": -5.02,
+        "trades": 13,
+        "win_rate": 53.8,
+        "return_pct": -3.17,
         "week": "2026-W31",
         "month": "2026-07"
       },
@@ -207,9 +207,9 @@
     "weekly": [
       {
         "key": "2026-W31",
-        "trades": 28,
-        "win_rate": 53.6,
-        "return_pct": -11.92,
+        "trades": 29,
+        "win_rate": 55.2,
+        "return_pct": -10.2,
         "month": "2026-07"
       },
       {
@@ -237,9 +237,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 219,
-        "win_rate": 61.6,
-        "return_pct": 30.4
+        "trades": 220,
+        "win_rate": 61.8,
+        "return_pct": 32.94
       }
     ]
   },
@@ -1997,11 +1997,13 @@
       "timeframe": "15m",
       "entry": 1.2122428,
       "stop": 1.0858,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-29T04:06:08",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 3.22
     },
     {
       "id": "الفيواب الأسبوعي · BTC|ACHUSDT|2026-07-29 12:30:00",
@@ -3577,10 +3579,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-29T14:46:17",
-      "closed_at": null,
-      "realized_pct": 1.95
+      "closed_at": "2026-07-29T16:16:24",
+      "realized_pct": 1.95,
+      "result_pct": 1.95
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
