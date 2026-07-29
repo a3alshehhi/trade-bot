@@ -586,14 +586,14 @@
     "entry": 1.126835,
     "stop": 1.0913,
     "init_stop": 1.0913,
-    "cur_stop": 1.0913,
+    "cur_stop": 1.131514,
     "legs": [
       1.126835,
       1.12005,
       1.113265,
       1.103605
     ],
-    "last_alert_stop": 1.0913,
+    "last_alert_stop": 1.131514,
     "armed": false,
     "targets": [
       1.1488,
@@ -607,10 +607,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-07-29 16:29:59.999000",
+    "last_bar": "2026-07-29 18:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 1.1421,
+    "hi_seen": 1.1438,
     "lo_seen": 1.126835,
     "created": "2026-07-27T03:03:31",
     "dca_levels": [
@@ -620,7 +620,8 @@
       1.103605
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2
   },
   "الفيواب الأسبوعي · BTC|ALICEUSDT|2026-07-28 10:00:00": {
     "symbol": "ALICEUSDT",
@@ -801,11 +802,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 18:00:00",
-    "last_bar": "2026-07-29 16:29:59.999000",
+    "last_bar": "2026-07-29 18:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 31.61,
-    "lo_seen": 30.1,
+    "lo_seen": 30.01,
     "created": "2026-07-28T18:18:29",
     "dca_levels": [
       31.1142,
@@ -990,7 +991,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 20:00:00",
-    "last_bar": "2026-07-29 16:29:59.999000",
+    "last_bar": "2026-07-29 18:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01297668,
@@ -1134,7 +1135,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 23:30:00",
-    "last_bar": "2026-07-29 16:29:59.999000",
+    "last_bar": "2026-07-29 18:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00351248,
@@ -1226,7 +1227,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-29 02:30:00",
-    "last_bar": "2026-07-29 16:29:59.999000",
+    "last_bar": "2026-07-29 18:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.125,
@@ -1371,11 +1372,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-29 12:30:00",
-    "last_bar": "2026-07-29 16:29:59.999000",
+    "last_bar": "2026-07-29 18:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00502,
-    "lo_seen": 0.00469,
+    "lo_seen": 0.00462,
     "created": "2026-07-29T12:48:21",
     "dca_levels": [
       0.00474542,
@@ -1415,7 +1416,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-29 12:45:00",
-    "last_bar": "2026-07-29 16:29:59.999000",
+    "last_bar": "2026-07-29 18:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.7371,
@@ -1459,12 +1460,13 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-29 12:45:00",
-    "last_bar": "2026-07-29 16:29:59.999000",
+    "last_bar": "2026-07-29 18:14:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 2.286,
+    "stopped": true,
+    "hi_seen": 2.35,
     "lo_seen": 2.198634,
     "created": "2026-07-29T13:03:25",
     "dca_levels": [
@@ -1474,6 +1476,9 @@
       2.112582
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 2.337936,
+    "close_card_sent": true,
+    "closed_at": "2026-07-29T18:17:15"
   }
 }
