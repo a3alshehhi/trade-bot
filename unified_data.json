@@ -1,8 +1,31 @@
 {
-  "updated_at": "2026-07-29T14:59:40",
+  "updated_at": "2026-07-29T16:38:57",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|AGLDUSDT|2026-07-29T14:46:17",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "AGLDUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1487936,
+      "stop_orig": 0.1394,
+      "stop": 0.1394,
+      "targets": [],
+      "opened_at": "2026-07-29T14:46:17",
+      "usd": 100.0,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-07-29T16:16:24",
+      "realized_pct": 1.95,
+      "result_pct": 1.95,
+      "exec_pct": 1.95
+    },
     {
       "id": "paper|EPICUSDT|2026-07-29T13:03:25",
       "source": "paper",
@@ -82,7 +105,9 @@
       "targets": [],
       "opened_at": "2026-07-29T04:06:08",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -445,13 +470,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -1.362,
+      "unrealized_pct": -1.459,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.0885,
-      "last_price": 1895.11,
+      "last_price": 1893.23,
       "events": [],
       "real_rule": "wick"
     },
@@ -480,13 +505,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -1.231,
+      "unrealized_pct": -1.328,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.2655,
-      "last_price": 1895.11,
+      "last_price": 1893.23,
       "events": [],
       "real_rule": "wick"
     },
@@ -5473,13 +5498,13 @@
     }
   ],
   "stats": {
-    "total": 231,
+    "total": 232,
     "open": 12,
-    "closed": 219,
-    "wins": 128,
-    "win_rate": 58.4,
-    "net_pct": 4.98,
-    "pf": 1.02,
+    "closed": 220,
+    "wins": 129,
+    "win_rate": 58.6,
+    "net_pct": 6.93,
+    "pf": 1.03,
     "simulated": 2
   }
 }
