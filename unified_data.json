@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-29T18:53:23",
+  "updated_at": "2026-07-29T19:38:34",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -43,7 +43,9 @@
       "targets": [],
       "opened_at": "2026-07-29T18:01:26",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -519,13 +521,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": 0.304,
+      "unrealized_pct": -1.019,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.0885,
-      "last_price": 1927.11,
+      "last_price": 1901.7,
       "events": [],
       "real_rule": "wick"
     },
@@ -554,13 +556,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": 0.437,
+      "unrealized_pct": -0.887,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.2655,
-      "last_price": 1927.11,
+      "last_price": 1901.7,
       "events": [],
       "real_rule": "wick"
     },
