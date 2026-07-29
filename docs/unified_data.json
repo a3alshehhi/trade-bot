@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-29T20:39:19",
+  "updated_at": "2026-07-29T21:41:31",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -46,11 +46,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-29T20:31:22",
+      "realized_pct": 1.37,
+      "result_pct": 1.37,
+      "exec_pct": 1.37
     },
     {
       "id": "paper|AGLDUSDT|2026-07-29T14:46:17",
@@ -359,11 +359,11 @@
       "opened_at": "2026-07-28T20:20:29",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-29T20:32:31",
+      "realized_pct": -6.99,
+      "result_pct": -6.99,
+      "exec_pct": -6.99
     },
     {
       "id": "paper|ZILUSDT|2026-07-28T19:02:33",
@@ -521,13 +521,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -1.619,
+      "unrealized_pct": -1.572,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.0885,
-      "last_price": 1890.17,
+      "last_price": 1891.06,
       "events": [],
       "real_rule": "wick"
     },
@@ -556,13 +556,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -1.488,
+      "unrealized_pct": -1.429,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.2655,
-      "last_price": 1890.17,
+      "last_price": 1891.3,
       "events": [],
       "real_rule": "wick"
     },
@@ -5550,12 +5550,12 @@
   ],
   "stats": {
     "total": 234,
-    "open": 9,
-    "closed": 225,
-    "wins": 132,
-    "win_rate": 58.7,
-    "net_pct": 19.36,
-    "pf": 1.07,
+    "open": 7,
+    "closed": 227,
+    "wins": 133,
+    "win_rate": 58.6,
+    "net_pct": 13.74,
+    "pf": 1.05,
     "simulated": 2
   }
 }
