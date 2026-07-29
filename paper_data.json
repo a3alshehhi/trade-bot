@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-29T04:23:34",
+  "updated_at": "2026-07-29T04:32:17",
   "stats": {
-    "open": 22,
-    "closed": 213,
-    "win_rate": 62.0,
-    "profit_factor": 1.21,
-    "total_pct": 42.01,
-    "avg_pct": 0.22,
+    "open": 21,
+    "closed": 214,
+    "win_rate": 61.7,
+    "profit_factor": 1.19,
+    "total_pct": 36.66,
+    "avg_pct": 0.2,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-29",
-        "trades": 6,
-        "win_rate": 50.0,
-        "return_pct": 3.44,
+        "trades": 7,
+        "win_rate": 42.9,
+        "return_pct": -0.46,
         "week": "2026-W31",
         "month": "2026-07"
       },
@@ -207,9 +207,9 @@
     "weekly": [
       {
         "key": "2026-W31",
-        "trades": 22,
-        "win_rate": 54.5,
-        "return_pct": -4.08,
+        "trades": 23,
+        "win_rate": 52.2,
+        "return_pct": -7.69,
         "month": "2026-07"
       },
       {
@@ -237,9 +237,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 213,
-        "win_rate": 62.0,
-        "return_pct": 42.01
+        "trades": 214,
+        "win_rate": 61.7,
+        "return_pct": 36.66
       }
     ]
   },
@@ -1840,10 +1840,11 @@
       "entry": 0.040945,
       "stop": 0.0394,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-28T18:18:29",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-29T04:18:25",
+      "realized_pct": -3.77,
+      "result_pct": -3.77
     },
     {
       "id": "الفيواب الأسبوعي · BTC|QTUMUSDT|2026-07-28 18:15:00",
