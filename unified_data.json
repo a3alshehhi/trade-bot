@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-29T21:41:31",
+  "updated_at": "2026-07-29T22:42:48",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -90,11 +90,11 @@
       "opened_at": "2026-07-29T13:03:25",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-29T22:02:34",
+      "realized_pct": 1.22,
+      "result_pct": 1.22,
+      "exec_pct": 1.22
     },
     {
       "id": "paper|SSVUSDT|2026-07-29T13:03:25",
@@ -521,13 +521,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -1.572,
+      "unrealized_pct": -0.754,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.0885,
-      "last_price": 1891.06,
+      "last_price": 1906.79,
       "events": [],
       "real_rule": "wick"
     },
@@ -556,13 +556,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -1.429,
+      "unrealized_pct": -0.622,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.2655,
-      "last_price": 1891.3,
+      "last_price": 1906.79,
       "events": [],
       "real_rule": "wick"
     },
@@ -5550,12 +5550,12 @@
   ],
   "stats": {
     "total": 234,
-    "open": 7,
-    "closed": 227,
-    "wins": 133,
-    "win_rate": 58.6,
-    "net_pct": 13.74,
-    "pf": 1.05,
+    "open": 6,
+    "closed": 228,
+    "wins": 134,
+    "win_rate": 58.8,
+    "net_pct": 14.96,
+    "pf": 1.06,
     "simulated": 2
   }
 }
