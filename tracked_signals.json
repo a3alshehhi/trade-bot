@@ -3987,11 +3987,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 15:30:00",
-    "last_bar": "2026-07-29 20:29:59.999000",
+    "last_bar": "2026-07-29 22:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1935.68,
-    "lo_seen": 1878.14,
+    "lo_seen": 1872.0,
     "created": "2026-07-28T15:33:05"
   },
   "العرض/الطلب|CHZUSDT|2026-07-28 17:30:00": {
@@ -4291,14 +4291,14 @@
     "entry": 0.00474542,
     "stop": 0.00401,
     "init_stop": 0.00401,
-    "cur_stop": 0.00401,
+    "cur_stop": 0.00480585,
     "legs": [
       0.00474542,
       0.004605,
       0.00446458,
       0.00426466
     ],
-    "last_alert_stop": 0.00401,
+    "last_alert_stop": 0.00480585,
     "armed": false,
     "targets": [
       0.0052,
@@ -4312,9 +4312,9 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-29 12:30:00",
-    "last_bar": "2026-07-29 20:29:59.999000",
+    "last_bar": "2026-07-29 20:44:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.00502,
     "lo_seen": 0.00456,
     "created": "2026-07-29T12:46:03",
@@ -4325,7 +4325,11 @@
       0.00426466
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2,
+    "exit_price": 0.00480585,
+    "close_card_sent": true,
+    "closed_at": "2026-07-29T22:31:20"
   },
   "العرض/الطلب|AGLDUSDT|2026-07-29 14:30:00": {
     "symbol": "AGLDUSDT",
