@@ -1,30 +1,54 @@
 {
-  "updated_at": "2026-07-29T17:53:38",
+  "updated_at": "2026-07-29T18:53:23",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
     {
-      "id": "binance|DIAUSDT|2026-07-29T17:04:43",
+      "id": "binance|DIAUSDT|2026-07-29T18:08:39",
       "source": "binance",
       "source_ar": "بايننس ديمو",
       "symbol": "DIAUSDT",
       "label": "SD Stable",
       "side": "buy",
       "timeframe": "1h",
-      "entry": 0.12390090209687729,
-      "stop_orig": 0.109589,
-      "stop": 0.109589,
-      "targets": [
-        0.1313888,
-        0.1367172
-      ],
-      "opened_at": "2026-07-29T17:04:43",
-      "usd": 24.8,
+      "entry": 0.1239009,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-07-29T18:08:39",
+      "usd": 100.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-07-29T18:21:23",
+      "realized_pct": 0.0,
+      "result_pct": 8.675,
+      "exec_pct": 8.675,
+      "exec_usdt": 2.0994,
+      "exec_reasons": [
+        "هدف1 (50%)",
+        "هدف2"
+      ]
+    },
+    {
+      "id": "paper|CELOUSDT|2026-07-29T18:01:26",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "CELOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06439134,
+      "stop_orig": 0.06153,
+      "stop": 0.06153,
+      "targets": [],
+      "opened_at": "2026-07-29T18:01:26",
+      "usd": 100.0,
       "hits": [],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
-      "result_pct": null
+      "result_pct": null,
+      "exec_pct": null
     },
     {
       "id": "paper|AGLDUSDT|2026-07-29T14:46:17",
@@ -85,13 +109,14 @@
       "opened_at": "2026-07-29T13:03:25",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-29T18:17:15",
+      "realized_pct": 5.02,
+      "result_pct": 5.02,
+      "exec_pct": 5.02
     },
     {
       "id": "paper|ACHUSDT|2026-07-29T12:48:21",
@@ -494,13 +519,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -0.831,
+      "unrealized_pct": 0.304,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.0885,
-      "last_price": 1905.3,
+      "last_price": 1927.11,
       "events": [],
       "real_rule": "wick"
     },
@@ -529,13 +554,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -0.698,
+      "unrealized_pct": 0.437,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.2655,
-      "last_price": 1905.32,
+      "last_price": 1927.11,
       "events": [],
       "real_rule": "wick"
     },
@@ -5522,13 +5547,13 @@
     }
   ],
   "stats": {
-    "total": 233,
-    "open": 12,
-    "closed": 221,
-    "wins": 130,
-    "win_rate": 58.8,
-    "net_pct": 15.67,
-    "pf": 1.06,
+    "total": 234,
+    "open": 11,
+    "closed": 223,
+    "wins": 132,
+    "win_rate": 59.2,
+    "net_pct": 29.37,
+    "pf": 1.12,
     "simulated": 2
   }
 }
