@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-07-29 10:29:59.999000",
+    "last_bar": "2026-07-29 12:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.1421,
@@ -801,7 +801,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 18:00:00",
-    "last_bar": "2026-07-29 10:29:59.999000",
+    "last_bar": "2026-07-29 12:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 31.61,
@@ -990,7 +990,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 20:00:00",
-    "last_bar": "2026-07-29 10:29:59.999000",
+    "last_bar": "2026-07-29 12:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01297668,
@@ -1133,7 +1133,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 23:30:00",
-    "last_bar": "2026-07-29 10:29:59.999000",
+    "last_bar": "2026-07-29 12:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00351248,
@@ -1225,7 +1225,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-29 02:30:00",
-    "last_bar": "2026-07-29 10:29:59.999000",
+    "last_bar": "2026-07-29 12:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.125,
@@ -1298,14 +1298,14 @@
     "entry": 1.2122428,
     "stop": 1.0858,
     "init_stop": 1.0858,
-    "cur_stop": 1.0858,
+    "cur_stop": 1.2259395,
     "legs": [
       1.2122428,
       1.1881,
       1.1639572,
       1.1295844
     ],
-    "last_alert_stop": 1.0858,
+    "last_alert_stop": 1.2259395,
     "armed": false,
     "targets": [
       1.2904,
@@ -1319,10 +1319,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-29 03:45:00",
-    "last_bar": "2026-07-29 10:29:59.999000",
+    "last_bar": "2026-07-29 12:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 1.2761,
+    "hi_seen": 1.282,
     "lo_seen": 1.1946,
     "created": "2026-07-29T04:06:08",
     "dca_levels": [
@@ -1332,6 +1332,7 @@
       1.1295844
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2
   }
 }
