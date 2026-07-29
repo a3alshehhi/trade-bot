@@ -32,5 +32,39 @@
     "armed": false,
     "opened_ts": "2026-07-28T15:39:15",
     "msg_id": 5662
+  },
+  "DIAUSDT": {
+    "symbol": "DIAUSDT",
+    "tf": "1h",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.1192
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 24.8,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.12390090209687729,
+        "qty": 200.1996,
+        "usd": 24.804911039433996
+      }
+    ],
+    "avg_entry": 0.12390090209687729,
+    "entry": 0.12390090209687729,
+    "init_stop": 0.109589,
+    "stop": 0.109589,
+    "R": 0.014311902096877285,
+    "tp1": 0.1313888,
+    "tp2": 0.1367172,
+    "qty": 200.1996,
+    "qty_open": 200.1996,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-29T17:04:43",
+    "msg_id": 5824
   }
 }

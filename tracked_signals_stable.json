@@ -1,227 +1,4 @@
 {
-  "SD Stable|2ZUSDT|2026-07-14 15:00:00": {
-    "symbol": "2ZUSDT",
-    "label": "SD Stable",
-    "timeframe": "1h",
-    "message_id": 4855,
-    "entry": 0.07108,
-    "stop": 0.0686744,
-    "init_stop": 0.0686744,
-    "cur_stop": 0.0686744,
-    "legs": [
-      0.07108
-    ],
-    "last_alert_stop": 0.0686744,
-    "armed": false,
-    "targets": [
-      0.07212192,
-      0.07293848
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-14 15:00:00",
-    "last_bar": "2026-07-15 07:59:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.07429,
-    "lo_seen": 0.06844,
-    "created": "2026-07-14T15:51:22",
-    "exit_price": 0.0686744,
-    "close_card_sent": true,
-    "closed_at": "2026-07-15T11:39:59"
-  },
-  "SD Stable|BREVUSDT|2026-07-15 12:45:00": {
-    "symbol": "BREVUSDT",
-    "label": "SD Stable",
-    "timeframe": "15m",
-    "message_id": 4878,
-    "entry": 0.0739,
-    "stop": 0.073431,
-    "init_stop": 0.073431,
-    "cur_stop": 0.0739,
-    "legs": [
-      0.0739,
-      0.0738354
-    ],
-    "last_alert_stop": 0.073431,
-    "armed": false,
-    "targets": [
-      0.0749992,
-      0.0753798
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-15 12:45:00",
-    "last_bar": "2026-07-15 12:59:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.0755,
-    "lo_seen": 0.0739,
-    "created": "2026-07-15T12:47:21",
-    "exit_price": 0.0753798,
-    "close_card_sent": true,
-    "closed_at": "2026-07-15T13:22:32"
-  },
-  "SD Stable|BNTUSDT|2026-07-15 13:00:00": {
-    "symbol": "BNTUSDT",
-    "label": "SD Stable",
-    "timeframe": "1h",
-    "message_id": 4889,
-    "entry": 0.2778,
-    "stop": 0.272748,
-    "init_stop": 0.272748,
-    "cur_stop": 0.272748,
-    "legs": [
-      0.2778
-    ],
-    "last_alert_stop": 0.272748,
-    "armed": false,
-    "targets": [
-      0.2875104,
-      0.2912126
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-15 13:00:00",
-    "last_bar": "2026-07-17 05:59:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.2867,
-    "lo_seen": 0.2713,
-    "created": "2026-07-15T13:18:00",
-    "exit_price": 0.272748,
-    "close_card_sent": true,
-    "closed_at": "2026-07-17T06:10:14"
-  },
-  "SD Stable|API3USDT|2026-07-15 13:00:00": {
-    "symbol": "API3USDT",
-    "label": "SD Stable",
-    "timeframe": "1h",
-    "message_id": 4889,
-    "entry": 0.224,
-    "stop": 0.219338,
-    "init_stop": 0.219338,
-    "cur_stop": 0.224,
-    "legs": [
-      0.224
-    ],
-    "last_alert_stop": 0.224,
-    "armed": false,
-    "targets": [
-      0.2263056,
-      0.2279664
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-15 13:00:00",
-    "last_bar": "2026-07-16 01:59:59.999000",
-    "hits": [
-      1
-    ],
-    "stopped": true,
-    "hi_seen": 0.2278,
-    "lo_seen": 0.2198,
-    "created": "2026-07-15T13:18:00",
-    "exit_price": 0.224,
-    "close_card_sent": true,
-    "closed_at": "2026-07-16T02:09:10"
-  },
-  "SD Stable|AVAXUSDT|2026-07-15 13:00:00": {
-    "symbol": "AVAXUSDT",
-    "label": "SD Stable",
-    "timeframe": "1h",
-    "message_id": 4894,
-    "entry": 6.734,
-    "stop": 6.57737,
-    "init_stop": 6.57737,
-    "cur_stop": 6.57737,
-    "legs": [
-      6.734
-    ],
-    "last_alert_stop": 6.57737,
-    "armed": false,
-    "targets": [
-      6.817608,
-      6.874352
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-15 13:00:00",
-    "last_bar": "2026-07-16 08:59:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 6.773,
-    "lo_seen": 6.546,
-    "created": "2026-07-15T13:38:34",
-    "exit_price": 6.57737,
-    "close_card_sent": true,
-    "closed_at": "2026-07-16T09:10:09"
-  },
-  "SD Stable|CITYUSDT|2026-07-15 14:45:00": {
-    "symbol": "CITYUSDT",
-    "label": "SD Stable",
-    "timeframe": "15m",
-    "message_id": 4910,
-    "entry": 0.401,
-    "stop": 0.39648,
-    "init_stop": 0.39648,
-    "cur_stop": 0.39648,
-    "legs": [
-      0.401,
-      0.399712
-    ],
-    "last_alert_stop": 0.39648,
-    "armed": false,
-    "targets": [
-      0.408176,
-      0.410944
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-15 14:45:00",
-    "last_bar": "2026-07-15 19:44:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.407,
-    "lo_seen": 0.396,
-    "created": "2026-07-15T14:51:46",
-    "exit_price": 0.39648,
-    "close_card_sent": true,
-    "closed_at": "2026-07-15T19:50:56"
-  },
   "SD Stable|BREVUSDT|2026-07-15 18:00:00": {
     "symbol": "BREVUSDT",
     "label": "SD Stable",
@@ -2380,5 +2157,38 @@
     "hi_seen": 1896.28,
     "lo_seen": 1896.28,
     "created": "2026-07-28T15:35:55"
+  },
+  "SD Stable|DIAUSDT|2026-07-29 17:00:00": {
+    "symbol": "DIAUSDT",
+    "label": "SD Stable",
+    "timeframe": "1h",
+    "message_id": 5823,
+    "entry": 0.1192,
+    "stop": 0.109589,
+    "init_stop": 0.109589,
+    "cur_stop": 0.109589,
+    "legs": [
+      0.1192
+    ],
+    "last_alert_stop": 0.109589,
+    "armed": false,
+    "targets": [
+      0.1313888,
+      0.1367172
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-29 17:00:00",
+    "last_bar": "2026-07-29 17:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1192,
+    "lo_seen": 0.1192,
+    "created": "2026-07-29T17:01:43"
   }
 }
