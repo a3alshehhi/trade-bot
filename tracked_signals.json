@@ -3987,11 +3987,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 15:30:00",
-    "last_bar": "2026-07-29 18:44:59.999000",
+    "last_bar": "2026-07-29 20:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1935.68,
-    "lo_seen": 1884.51,
+    "lo_seen": 1880.0,
     "created": "2026-07-28T15:33:05"
   },
   "العرض/الطلب|CHZUSDT|2026-07-28 17:30:00": {
@@ -4120,11 +4120,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 18:00:00",
-    "last_bar": "2026-07-29 18:44:59.999000",
+    "last_bar": "2026-07-29 20:14:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 31.61,
-    "lo_seen": 30.01,
+    "lo_seen": 29.86,
     "created": "2026-07-28T18:16:16",
     "dca_levels": [
       31.1142,
@@ -4133,7 +4133,10 @@
       30.3466
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 29.94,
+    "close_card_sent": true,
+    "closed_at": "2026-07-29T20:16:05"
   },
   "العرض/الطلب|CHRUSDT|2026-07-28 20:00:00": {
     "symbol": "CHRUSDT",
@@ -4164,7 +4167,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 20:00:00",
-    "last_bar": "2026-07-29 18:44:59.999000",
+    "last_bar": "2026-07-29 20:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01297668,
@@ -4306,7 +4309,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-29 12:30:00",
-    "last_bar": "2026-07-29 18:44:59.999000",
+    "last_bar": "2026-07-29 20:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00502,
@@ -4399,12 +4402,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-29 17:45:00",
-    "last_bar": "2026-07-29 18:44:59.999000",
+    "last_bar": "2026-07-29 20:14:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.06627,
+    "hi_seen": 0.06657,
     "lo_seen": 0.06439134,
     "created": "2026-07-29T18:01:26",
     "dca_levels": [

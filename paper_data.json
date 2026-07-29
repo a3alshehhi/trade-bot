@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-29T20:06:31",
+  "updated_at": "2026-07-29T20:17:12",
   "stats": {
-    "open": 18,
-    "closed": 224,
-    "win_rate": 62.1,
-    "profit_factor": 1.25,
-    "total_pct": 60.08,
-    "avg_pct": 0.27,
+    "open": 16,
+    "closed": 226,
+    "win_rate": 61.5,
+    "profit_factor": 1.21,
+    "total_pct": 48.24,
+    "avg_pct": 0.23,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-29",
-        "trades": 17,
-        "win_rate": 58.8,
-        "return_pct": 16.6,
+        "trades": 19,
+        "win_rate": 52.6,
+        "return_pct": 7.97,
         "week": "2026-W31",
         "month": "2026-07"
       },
@@ -207,9 +207,9 @@
     "weekly": [
       {
         "key": "2026-W31",
-        "trades": 33,
-        "win_rate": 57.6,
-        "return_pct": 8.13,
+        "trades": 35,
+        "win_rate": 54.3,
+        "return_pct": 0.13,
         "month": "2026-07"
       },
       {
@@ -237,9 +237,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 224,
-        "win_rate": 62.1,
-        "return_pct": 60.08
+        "trades": 226,
+        "win_rate": 61.5,
+        "return_pct": 48.24
       }
     ]
   },
@@ -503,10 +503,11 @@
       "entry": 31.1142,
       "stop": 29.94,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-28T18:18:29",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-29T20:17:09",
+      "realized_pct": -3.77,
+      "result_pct": -3.77
     },
     {
       "id": "الفيواب الأسبوعي · BTC|POWRUSDT|2026-07-28 18:00:00",
@@ -3430,10 +3431,11 @@
       "entry": 31.1142,
       "stop": 29.94,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-28T18:16:16",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-29T20:16:05",
+      "realized_pct": -3.77,
+      "result_pct": -3.77
     },
     {
       "id": "العرض/الطلب|CHRUSDT|2026-07-28 20:00:00",
