@@ -1,38 +1,4 @@
 {
-  "AGLDUSDT": {
-    "symbol": "AGLDUSDT",
-    "tf": "15m",
-    "label": "عرض/طلب+دايفرجنس",
-    "prob": null,
-    "levels": [
-      0.1461
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 100.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.14655944377759897,
-        "qty": 682.317,
-        "usd": 100.0
-      }
-    ],
-    "avg_entry": 0.14655944377759897,
-    "entry": 0.14655944377759897,
-    "init_stop": 0.142794,
-    "stop": 0.142794,
-    "R": 0.0037654437775989646,
-    "tp1": 0.14966,
-    "tp2": 0.15139,
-    "qty": 682.317,
-    "qty_open": 682.317,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-07-28T16:21:16",
-    "msg_id": 5667
-  },
   "ETHUSDT": {
     "symbol": "ETHUSDT",
     "tf": "15m",
