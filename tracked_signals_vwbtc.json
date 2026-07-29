@@ -1271,5 +1271,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|KAITOUSDT|2026-07-29 03:45:00": {
+    "symbol": "KAITOUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5761,
+    "entry": 1.2122428,
+    "stop": 1.0858,
+    "init_stop": 1.0858,
+    "cur_stop": 1.0858,
+    "legs": [
+      1.2122428,
+      1.1881,
+      1.1639572,
+      1.1295844
+    ],
+    "last_alert_stop": 1.0858,
+    "armed": false,
+    "targets": [
+      1.2904,
+      1.3460512
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-29 03:45:00",
+    "last_bar": "2026-07-29 03:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1.2122428,
+    "lo_seen": 1.2122428,
+    "created": "2026-07-29T04:06:08",
+    "dca_levels": [
+      1.2122428,
+      1.1881,
+      1.1639572,
+      1.1295844
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }

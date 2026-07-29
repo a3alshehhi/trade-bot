@@ -3987,11 +3987,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 15:30:00",
-    "last_bar": "2026-07-29 02:44:59.999000",
+    "last_bar": "2026-07-29 03:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1929.67,
-    "lo_seen": 1892.71,
+    "lo_seen": 1891.17,
     "created": "2026-07-28T15:33:05"
   },
   "العرض/الطلب|CHZUSDT|2026-07-28 17:30:00": {
@@ -4023,7 +4023,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 17:30:00",
-    "last_bar": "2026-07-29 02:44:59.999000",
+    "last_bar": "2026-07-29 03:59:59.999000",
     "hits": [
       1
     ],
@@ -4070,11 +4070,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 17:45:00",
-    "last_bar": "2026-07-29 02:44:59.999000",
+    "last_bar": "2026-07-29 03:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01166,
-    "lo_seen": 0.01126,
+    "lo_seen": 0.01117,
     "created": "2026-07-28T18:01:26",
     "dca_levels": [
       0.01149934,
@@ -4114,11 +4114,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 18:00:00",
-    "last_bar": "2026-07-29 02:44:59.999000",
+    "last_bar": "2026-07-29 03:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 31.61,
-    "lo_seen": 30.91,
+    "lo_seen": 30.61,
     "created": "2026-07-28T18:16:16",
     "dca_levels": [
       31.1142,
@@ -4158,11 +4158,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 20:00:00",
-    "last_bar": "2026-07-29 02:44:59.999000",
+    "last_bar": "2026-07-29 03:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01297668,
-    "lo_seen": 0.01213,
+    "lo_seen": 0.012,
     "created": "2026-07-28T20:16:09",
     "dca_levels": [
       0.01297668,
@@ -4202,11 +4202,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-29 00:30:00",
-    "last_bar": "2026-07-29 02:44:59.999000",
+    "last_bar": "2026-07-29 03:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.00592,
-    "lo_seen": 0.00576,
+    "lo_seen": 0.0057,
     "created": "2026-07-29T00:46:14",
     "dca_levels": [
       0.00589158,
@@ -4215,7 +4215,10 @@
       0.00576634
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.0057,
+    "close_card_sent": true,
+    "closed_at": "2026-07-29T04:01:28"
   },
   "العرض/الطلب|ADAUSDT|2026-07-29 01:15:00": {
     "symbol": "ADAUSDT",
