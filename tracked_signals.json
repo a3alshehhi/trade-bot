@@ -4212,5 +4212,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|ADAUSDT|2026-07-29 01:15:00": {
+    "symbol": "ADAUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5733,
+    "entry": 0.1597272,
+    "stop": 0.1533,
+    "init_stop": 0.1533,
+    "cur_stop": 0.1533,
+    "legs": [
+      0.1597272,
+      0.1585,
+      0.1572728,
+      0.1555256
+    ],
+    "last_alert_stop": 0.1533,
+    "armed": false,
+    "targets": [
+      0.1637,
+      0.1665288
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-29 01:15:00",
+    "last_bar": "2026-07-29 01:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1597272,
+    "lo_seen": 0.1597272,
+    "created": "2026-07-29T01:31:27",
+    "dca_levels": [
+      0.1597272,
+      0.1585,
+      0.1572728,
+      0.1555256
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
