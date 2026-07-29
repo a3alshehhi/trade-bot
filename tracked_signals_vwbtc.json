@@ -1131,5 +1131,93 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|SXTUSDT|2026-07-29 02:30:00": {
+    "symbol": "SXTUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5752,
+    "entry": 0.00690552,
+    "stop": 0.00651,
+    "init_stop": 0.00651,
+    "cur_stop": 0.00651,
+    "legs": [
+      0.00690552,
+      0.00683,
+      0.00675448,
+      0.00664696
+    ],
+    "last_alert_stop": 0.00651,
+    "armed": false,
+    "targets": [
+      0.00715,
+      0.00732408
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-29 02:30:00",
+    "last_bar": "2026-07-29 02:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00690552,
+    "lo_seen": 0.00690552,
+    "created": "2026-07-29T02:48:27",
+    "dca_levels": [
+      0.00690552,
+      0.00683,
+      0.00675448,
+      0.00664696
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|PROMUSDT|2026-07-29 02:30:00": {
+    "symbol": "PROMUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5752,
+    "entry": 2.026974,
+    "stop": 1.815,
+    "init_stop": 1.815,
+    "cur_stop": 1.815,
+    "legs": [
+      2.026974,
+      1.9865,
+      1.946026,
+      1.888402
+    ],
+    "last_alert_stop": 1.815,
+    "armed": false,
+    "targets": [
+      2.158,
+      2.251296
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-29 02:30:00",
+    "last_bar": "2026-07-29 02:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 2.026974,
+    "lo_seen": 2.026974,
+    "created": "2026-07-29T02:48:27",
+    "dca_levels": [
+      2.026974,
+      1.9865,
+      1.946026,
+      1.888402
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
