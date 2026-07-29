@@ -1378,5 +1378,93 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|EPICUSDT|2026-07-29 12:45:00": {
+    "symbol": "EPICUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5803,
+    "entry": 0.7100034,
+    "stop": 0.6474,
+    "init_stop": 0.6474,
+    "cur_stop": 0.6474,
+    "legs": [
+      0.7100034,
+      0.69805,
+      0.6860966,
+      0.6690782
+    ],
+    "last_alert_stop": 0.6474,
+    "armed": false,
+    "targets": [
+      0.7487,
+      0.7762536
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-29 12:45:00",
+    "last_bar": "2026-07-29 12:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.7100034,
+    "lo_seen": 0.7100034,
+    "created": "2026-07-29T13:03:25",
+    "dca_levels": [
+      0.7100034,
+      0.69805,
+      0.6860966,
+      0.6690782
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|SSVUSDT|2026-07-29 12:45:00": {
+    "symbol": "SSVUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5803,
+    "entry": 2.198634,
+    "stop": 2.067,
+    "init_stop": 2.067,
+    "cur_stop": 2.067,
+    "legs": [
+      2.198634,
+      2.1735,
+      2.148366,
+      2.112582
+    ],
+    "last_alert_stop": 2.067,
+    "armed": false,
+    "targets": [
+      2.28,
+      2.337936
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-29 12:45:00",
+    "last_bar": "2026-07-29 12:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 2.198634,
+    "lo_seen": 2.198634,
+    "created": "2026-07-29T13:03:25",
+    "dca_levels": [
+      2.198634,
+      2.1735,
+      2.148366,
+      2.112582
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
