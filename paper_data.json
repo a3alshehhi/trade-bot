@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-29T07:22:59",
+  "updated_at": "2026-07-29T07:26:38",
   "stats": {
-    "open": 20,
-    "closed": 215,
-    "win_rate": 61.9,
-    "profit_factor": 1.19,
-    "total_pct": 38.6,
-    "avg_pct": 0.2,
+    "open": 19,
+    "closed": 216,
+    "win_rate": 62.0,
+    "profit_factor": 1.2,
+    "total_pct": 40.62,
+    "avg_pct": 0.21,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-29",
-        "trades": 8,
-        "win_rate": 50.0,
-        "return_pct": 0.95,
+        "trades": 9,
+        "win_rate": 55.6,
+        "return_pct": 2.42,
         "week": "2026-W31",
         "month": "2026-07"
       },
@@ -207,9 +207,9 @@
     "weekly": [
       {
         "key": "2026-W31",
-        "trades": 24,
-        "win_rate": 54.2,
-        "return_pct": -6.38,
+        "trades": 25,
+        "win_rate": 56.0,
+        "return_pct": -5.01,
         "month": "2026-07"
       },
       {
@@ -237,9 +237,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 215,
-        "win_rate": 61.9,
-        "return_pct": 38.6
+        "trades": 216,
+        "win_rate": 62.0,
+        "return_pct": 40.62
       }
     ]
   },
@@ -1922,10 +1922,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-28T23:05:59",
-      "closed_at": null,
-      "realized_pct": 1.46
+      "closed_at": "2026-07-29T07:17:40",
+      "realized_pct": 1.46,
+      "result_pct": 1.46
     },
     {
       "id": "الفيواب الأسبوعي · BTC|ANKRUSDT|2026-07-28 23:30:00",
