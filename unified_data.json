@@ -1,8 +1,31 @@
 {
-  "updated_at": "2026-07-29T16:38:57",
+  "updated_at": "2026-07-29T17:53:38",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "binance|DIAUSDT|2026-07-29T17:04:43",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "DIAUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.12390090209687729,
+      "stop_orig": 0.109589,
+      "stop": 0.109589,
+      "targets": [
+        0.1313888,
+        0.1367172
+      ],
+      "opened_at": "2026-07-29T17:04:43",
+      "usd": 24.8,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null
+    },
     {
       "id": "paper|AGLDUSDT|2026-07-29T14:46:17",
       "source": "paper",
@@ -106,13 +129,14 @@
       "opened_at": "2026-07-29T04:06:08",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-29T16:36:15",
+      "realized_pct": 8.74,
+      "result_pct": 8.74,
+      "exec_pct": 8.74
     },
     {
       "id": "paper|XRPUSDT|2026-07-29T03:33:36",
@@ -470,13 +494,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -1.459,
+      "unrealized_pct": -0.831,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.0885,
-      "last_price": 1893.23,
+      "last_price": 1905.3,
       "events": [],
       "real_rule": "wick"
     },
@@ -505,13 +529,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -1.328,
+      "unrealized_pct": -0.698,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.2655,
-      "last_price": 1893.23,
+      "last_price": 1905.32,
       "events": [],
       "real_rule": "wick"
     },
@@ -5498,13 +5522,13 @@
     }
   ],
   "stats": {
-    "total": 232,
+    "total": 233,
     "open": 12,
-    "closed": 220,
-    "wins": 129,
-    "win_rate": 58.6,
-    "net_pct": 6.93,
-    "pf": 1.03,
+    "closed": 221,
+    "wins": 130,
+    "win_rate": 58.8,
+    "net_pct": 15.67,
+    "pf": 1.06,
     "simulated": 2
   }
 }
