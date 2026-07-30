@@ -4420,5 +4420,93 @@
     "hi_seen": 0.1995,
     "lo_seen": 0.1995,
     "created": "2026-07-30T00:08:35"
+  },
+  "العرض/الطلب|ARBUSDT|2026-07-30 03:00:00": {
+    "symbol": "ARBUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5881,
+    "entry": 0.0787866,
+    "stop": 0.0765,
+    "init_stop": 0.0765,
+    "cur_stop": 0.0765,
+    "legs": [
+      0.0787866,
+      0.07835,
+      0.0779134,
+      0.0772918
+    ],
+    "last_alert_stop": 0.0765,
+    "armed": false,
+    "targets": [
+      0.0802,
+      0.0812064
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-30 03:00:00",
+    "last_bar": "2026-07-30 03:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0787866,
+    "lo_seen": 0.0787866,
+    "created": "2026-07-30T03:16:13",
+    "dca_levels": [
+      0.0787866,
+      0.07835,
+      0.0779134,
+      0.0772918
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|CGPTUSDT|2026-07-30 03:00:00": {
+    "symbol": "CGPTUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5881,
+    "entry": 0.01807924,
+    "stop": 0.01735,
+    "init_stop": 0.01735,
+    "cur_stop": 0.01735,
+    "legs": [
+      0.01807924,
+      0.01794,
+      0.01780076,
+      0.01760252
+    ],
+    "last_alert_stop": 0.01735,
+    "armed": false,
+    "targets": [
+      0.01853,
+      0.01885096
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-30 03:00:00",
+    "last_bar": "2026-07-30 03:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01807924,
+    "lo_seen": 0.01807924,
+    "created": "2026-07-30T03:16:13",
+    "dca_levels": [
+      0.01807924,
+      0.01794,
+      0.01780076,
+      0.01760252
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
