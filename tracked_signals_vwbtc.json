@@ -1948,5 +1948,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|NEARUSDT|2026-07-30 21:00:00": {
+    "symbol": "NEARUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5991,
+    "entry": 1.650104,
+    "stop": 1.571,
+    "init_stop": 1.571,
+    "cur_stop": 1.571,
+    "legs": [
+      1.650104,
+      1.635,
+      1.619896,
+      1.598392
+    ],
+    "last_alert_stop": 1.571,
+    "armed": false,
+    "targets": [
+      1.699,
+      1.733816
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-30 21:00:00",
+    "last_bar": "2026-07-30 21:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1.650104,
+    "lo_seen": 1.650104,
+    "created": "2026-07-30T21:19:25",
+    "dca_levels": [
+      1.650104,
+      1.635,
+      1.619896,
+      1.598392
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
