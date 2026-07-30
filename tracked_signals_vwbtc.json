@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-07-30 01:14:59.999000",
+    "last_bar": "2026-07-30 07:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.1482,
@@ -1236,11 +1236,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-29 02:30:00",
-    "last_bar": "2026-07-30 01:14:59.999000",
+    "last_bar": "2026-07-30 07:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.125,
-    "lo_seen": 1.908,
+    "lo_seen": 1.907,
     "created": "2026-07-29T02:48:27",
     "dca_levels": [
       2.026974,
@@ -1381,12 +1381,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-29 12:30:00",
-    "last_bar": "2026-07-30 01:14:59.999000",
+    "last_bar": "2026-07-30 07:29:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
-    "hi_seen": 0.0053,
+    "stopped": true,
+    "hi_seen": 0.00543,
     "lo_seen": 0.00456,
     "created": "2026-07-29T12:48:21",
     "dca_levels": [
@@ -1397,7 +1397,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 2
+    "st_stage": 2,
+    "exit_price": 0.00480585,
+    "close_card_sent": true,
+    "closed_at": "2026-07-30T07:32:30"
   },
   "الفيواب الأسبوعي · BTC|EPICUSDT|2026-07-29 12:45:00": {
     "symbol": "EPICUSDT",
