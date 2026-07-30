@@ -32,47 +32,6 @@
     "close_card_sent": true,
     "closed_at": "2026-07-12T00:45:11"
   },
-  "عرض/طلب+دايفرجنس|BREVUSDT|2026-07-14 22:30:00": {
-    "symbol": "BREVUSDT",
-    "label": "عرض/طلب+دايفرجنس",
-    "timeframe": "15m",
-    "message_id": 4861,
-    "entry": 0.0745,
-    "stop": 0.074054,
-    "init_stop": 0.074054,
-    "cur_stop": 0.0745,
-    "legs": [
-      0.0745,
-      0.0744292,
-      0.0743284
-    ],
-    "last_alert_stop": 0.074054,
-    "armed": false,
-    "targets": [
-      0.0749632,
-      0.0751708
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-14 22:30:00",
-    "last_bar": "2026-07-15 00:29:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.076,
-    "lo_seen": 0.0741,
-    "created": "2026-07-14T22:36:37",
-    "exit_price": 0.0751708,
-    "close_card_sent": true,
-    "closed_at": "2026-07-15T00:39:39"
-  },
   "العرض/الطلب|CITYUSDT|2026-07-16 09:00:00": {
     "symbol": "CITYUSDT",
     "label": "العرض/الطلب",
@@ -4428,5 +4387,38 @@
     "exit_price": 0.06439134,
     "close_card_sent": true,
     "closed_at": "2026-07-29T20:31:22"
+  },
+  "عرض/طلب+دايفرجنس|API3USDT|2026-07-30 00:00:00": {
+    "symbol": "API3USDT",
+    "label": "عرض/طلب+دايفرجنس",
+    "timeframe": "1h",
+    "message_id": 5866,
+    "entry": 0.1995,
+    "stop": 0.183514,
+    "init_stop": 0.183514,
+    "cur_stop": 0.183514,
+    "legs": [
+      0.1995
+    ],
+    "last_alert_stop": 0.183514,
+    "armed": false,
+    "targets": [
+      0.2058064,
+      0.2114116
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-30 00:00:00",
+    "last_bar": "2026-07-30 00:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1995,
+    "lo_seen": 0.1995,
+    "created": "2026-07-30T00:08:35"
   }
 }
