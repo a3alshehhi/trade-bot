@@ -4778,5 +4778,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|BANDUSDT|2026-07-30 09:00:00": {
+    "symbol": "BANDUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5920,
+    "entry": 0.1512228,
+    "stop": 0.1422,
+    "init_stop": 0.1422,
+    "cur_stop": 0.1422,
+    "legs": [
+      0.1512228,
+      0.1495,
+      0.1477772,
+      0.1453244
+    ],
+    "last_alert_stop": 0.1422,
+    "armed": false,
+    "targets": [
+      0.1568,
+      0.1607712
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-30 09:00:00",
+    "last_bar": "2026-07-30 09:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1512228,
+    "lo_seen": 0.1512228,
+    "created": "2026-07-30T09:19:59",
+    "dca_levels": [
+      0.1512228,
+      0.1495,
+      0.1477772,
+      0.1453244
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
