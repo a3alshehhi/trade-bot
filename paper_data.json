@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-30T00:22:03",
+  "updated_at": "2026-07-30T00:24:59",
   "stats": {
-    "open": 11,
+    "open": 12,
     "closed": 231,
     "win_rate": 61.5,
     "profit_factor": 1.16,
@@ -1996,24 +1996,6 @@
       "result_pct": -3.59
     },
     {
-      "id": "عرض/طلب+دايفرجنس|BREVUSDT|2026-07-14 22:30:00",
-      "symbol": "BREVUSDT",
-      "label": "عرض/طلب+دايفرجنس",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0745,
-      "stop": 0.074054,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-14T22:36:37",
-      "closed_at": "2026-07-15T00:39:39",
-      "realized_pct": 0.76,
-      "result_pct": 0.76
-    },
-    {
       "id": "العرض/الطلب|CITYUSDT|2026-07-16 09:00:00",
       "symbol": "CITYUSDT",
       "label": "العرض/الطلب",
@@ -3537,6 +3519,20 @@
       "result_pct": 1.37
     },
     {
+      "id": "عرض/طلب+دايفرجنس|API3USDT|2026-07-30 00:00:00",
+      "symbol": "API3USDT",
+      "label": "عرض/طلب+دايفرجنس",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1995,
+      "stop": 0.183514,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-30T00:08:35",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -3611,6 +3607,24 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "عرض/طلب+دايفرجنس|BREVUSDT|2026-07-14 22:30:00",
+      "symbol": "BREVUSDT",
+      "label": "عرض/طلب+دايفرجنس",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0745,
+      "stop": 0.074054,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-14T22:36:37",
+      "closed_at": "2026-07-15T00:39:39",
+      "realized_pct": 0.76,
+      "result_pct": 0.76
     },
     {
       "id": "SD Stable|2ZUSDT|2026-07-14 15:00:00",
