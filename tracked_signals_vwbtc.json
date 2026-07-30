@@ -1636,5 +1636,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|RENDERUSDT|2026-07-30 17:00:00": {
+    "symbol": "RENDERUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5978,
+    "entry": 1.405698,
+    "stop": 1.368,
+    "init_stop": 1.368,
+    "cur_stop": 1.368,
+    "legs": [
+      1.405698,
+      1.3985,
+      1.391302,
+      1.381054
+    ],
+    "last_alert_stop": 1.368,
+    "armed": false,
+    "targets": [
+      1.429,
+      1.445592
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-30 17:00:00",
+    "last_bar": "2026-07-30 17:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1.405698,
+    "lo_seen": 1.405698,
+    "created": "2026-07-30T17:24:07",
+    "dca_levels": [
+      1.405698,
+      1.3985,
+      1.391302,
+      1.381054
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
