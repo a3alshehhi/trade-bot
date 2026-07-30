@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-07-30T13:11:06",
+  "updated_at": "2026-07-30T15:26:26",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|ETHUSDT|2026-07-30T14:16:13",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ETHUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1906.38798,
+      "stop_orig": 1856.88,
+      "stop": 1856.88,
+      "targets": [],
+      "opened_at": "2026-07-30T14:16:13",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|BLURUSDT|2026-07-30T11:31:18",
       "source": "paper",
@@ -190,11 +211,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-30T13:16:23",
+      "realized_pct": 1.28,
+      "result_pct": 1.28,
+      "exec_pct": 1.28
     },
     {
       "id": "paper|ALPINEUSDT|2026-07-30T04:46:17",
@@ -803,13 +824,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": 0.195,
+      "unrealized_pct": -0.197,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.0885,
-      "last_price": 1925.01,
+      "last_price": 1917.49,
       "events": [],
       "real_rule": "wick"
     },
@@ -838,13 +859,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": 0.324,
+      "unrealized_pct": -0.064,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.2655,
-      "last_price": 1924.94,
+      "last_price": 1917.5,
       "events": [],
       "real_rule": "wick"
     },
@@ -5833,12 +5854,12 @@
     }
   ],
   "stats": {
-    "total": 247,
+    "total": 248,
     "open": 16,
-    "closed": 231,
-    "wins": 136,
-    "win_rate": 58.9,
-    "net_pct": 23.16,
+    "closed": 232,
+    "wins": 137,
+    "win_rate": 59.1,
+    "net_pct": 24.44,
     "pf": 1.09,
     "simulated": 2
   }
