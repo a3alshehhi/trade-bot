@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-30T16:58:46",
+  "updated_at": "2026-07-30T17:06:57",
   "stats": {
-    "open": 19,
+    "open": 22,
     "closed": 238,
     "win_rate": 61.3,
     "profit_factor": 1.15,
@@ -759,6 +759,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-30T16:03:43",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|WAXPUSDT|2026-07-30 16:45:00",
+      "symbol": "WAXPUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00373776,
+      "stop": 0.00354,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-30T17:06:54",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|CUSDT|2026-07-30 16:45:00",
+      "symbol": "CUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0572878,
+      "stop": 0.0529,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-30T17:06:54",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -3738,6 +3766,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-30T14:16:13",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|CUSDT|2026-07-30 16:45:00",
+      "symbol": "CUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0572878,
+      "stop": 0.0529,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-30T17:02:08",
       "closed_at": null,
       "realized_pct": 0.0
     },

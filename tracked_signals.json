@@ -4984,5 +4984,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|CUSDT|2026-07-30 16:45:00": {
+    "symbol": "CUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5971,
+    "entry": 0.0572878,
+    "stop": 0.0529,
+    "init_stop": 0.0529,
+    "cur_stop": 0.0529,
+    "legs": [
+      0.0572878,
+      0.05645,
+      0.0556122,
+      0.0544194
+    ],
+    "last_alert_stop": 0.0529,
+    "armed": false,
+    "targets": [
+      0.06,
+      0.0619312
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-30 16:45:00",
+    "last_bar": "2026-07-30 16:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0572878,
+    "lo_seen": 0.0572878,
+    "created": "2026-07-30T17:02:08",
+    "dca_levels": [
+      0.0572878,
+      0.05645,
+      0.0556122,
+      0.0544194
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
