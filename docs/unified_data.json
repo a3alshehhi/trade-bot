@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-07-30T11:29:23",
+  "updated_at": "2026-07-30T13:11:06",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|BLURUSDT|2026-07-30T11:31:18",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "BLURUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01434508,
+      "stop_orig": 0.01369,
+      "stop": 0.01369,
+      "targets": [],
+      "opened_at": "2026-07-30T11:31:18",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|AVAUSDT|2026-07-30T11:01:22",
       "source": "paper",
@@ -211,11 +232,11 @@
       "opened_at": "2026-07-30T03:16:13",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-30T11:46:17",
+      "realized_pct": -0.61,
+      "result_pct": -0.61,
+      "exec_pct": -0.61
     },
     {
       "id": "paper|CGPTUSDT|2026-07-30T03:16:13",
@@ -782,13 +803,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -0.04,
+      "unrealized_pct": 0.195,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.0885,
-      "last_price": 1920.5,
+      "last_price": 1925.01,
       "events": [],
       "real_rule": "wick"
     },
@@ -817,13 +838,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": 0.092,
+      "unrealized_pct": 0.324,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.2655,
-      "last_price": 1920.49,
+      "last_price": 1924.94,
       "events": [],
       "real_rule": "wick"
     },
@@ -5812,12 +5833,12 @@
     }
   ],
   "stats": {
-    "total": 246,
+    "total": 247,
     "open": 16,
-    "closed": 230,
+    "closed": 231,
     "wins": 136,
-    "win_rate": 59.1,
-    "net_pct": 23.77,
+    "win_rate": 58.9,
+    "net_pct": 23.16,
     "pf": 1.09,
     "simulated": 2
   }
