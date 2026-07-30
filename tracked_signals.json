@@ -4878,5 +4878,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|BLURUSDT|2026-07-30 11:15:00": {
+    "symbol": "BLURUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5954,
+    "entry": 0.01434508,
+    "stop": 0.01369,
+    "init_stop": 0.01369,
+    "cur_stop": 0.01369,
+    "legs": [
+      0.01434508,
+      0.01422,
+      0.01409492,
+      0.01391684
+    ],
+    "last_alert_stop": 0.01369,
+    "armed": false,
+    "targets": [
+      0.01475,
+      0.01503832
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-30 11:15:00",
+    "last_bar": "2026-07-30 11:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01434508,
+    "lo_seen": 0.01434508,
+    "created": "2026-07-30T11:31:18",
+    "dca_levels": [
+      0.01434508,
+      0.01422,
+      0.01409492,
+      0.01391684
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
