@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-07-30 16:29:59.999000",
+    "last_bar": "2026-07-30 17:44:59.999000",
     "hits": [
       1
     ],
@@ -1534,7 +1534,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 15:45:00",
-    "last_bar": "2026-07-30 16:29:59.999000",
+    "last_bar": "2026-07-30 17:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 74.84,
@@ -1578,10 +1578,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 16:45:00",
-    "last_bar": "2026-07-30 16:45:00",
+    "last_bar": "2026-07-30 17:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.00373776,
+    "hi_seen": 0.00382,
     "lo_seen": 0.00373776,
     "created": "2026-07-30T17:06:54",
     "dca_levels": [
@@ -1622,11 +1622,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 16:45:00",
-    "last_bar": "2026-07-30 16:45:00",
+    "last_bar": "2026-07-30 17:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0572878,
-    "lo_seen": 0.0572878,
+    "lo_seen": 0.0541,
     "created": "2026-07-30T17:06:54",
     "dca_levels": [
       0.0572878,
@@ -1645,14 +1645,14 @@
     "entry": 1.405698,
     "stop": 1.368,
     "init_stop": 1.368,
-    "cur_stop": 1.368,
+    "cur_stop": 1.405698,
     "legs": [
       1.405698,
       1.3985,
       1.391302,
       1.381054
     ],
-    "last_alert_stop": 1.368,
+    "last_alert_stop": 1.405698,
     "armed": false,
     "targets": [
       1.429,
@@ -1666,10 +1666,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 17:00:00",
-    "last_bar": "2026-07-30 17:00:00",
-    "hits": [],
+    "last_bar": "2026-07-30 17:44:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 1.405698,
+    "hi_seen": 1.43,
     "lo_seen": 1.405698,
     "created": "2026-07-30T17:24:07",
     "dca_levels": [
