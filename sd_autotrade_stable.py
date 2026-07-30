@@ -231,11 +231,21 @@ def _buy_leg(sym, filt, usd):
     base = sym.replace("USDT", "")
     try:
         before = bx.coin_qty(base)
-        bx.market_buy(sym, round(notional, 2))
+        res = bx.market_buy(sym, round(notional, 2))
         after = bx.coin_qty(base)
     except Exception as ex:
         print(f"autotrade[{EX_NAME}]: فشل شراء {sym} —", ex)
         return 0.0, 0.0, 0.0
+    # (أ) الأدقّ: كمية وسعر التعبئة من رد أمر المنصّة نفسه (بايننس: order_fill).
+    #     يزيل تشوّه فرق الرصيد (رسوم بالعملة الأساس/تأخّر التحديث/حيازة سابقة)
+    #     الذي كان يسجّل سعر دخول مغلوطاً. يبقى متاحاً لأي منصّة توفّر order_fill.
+    _of = getattr(bx, "order_fill", None)
+    fill_info = _of(res) if _of else None
+    if fill_info:
+        qty, quote_spent, fill_px = fill_info
+        if qty > 0 and fill_px > 0:
+            return qty, quote_spent, fill_px
+    # (ب) احتياطي (بايبت/غياب بيانات التعبئة): فرق رصيد المحفظة كما السابق.
     qty = max(after - before, 0.0)
     if qty <= 0:
         print(f"autotrade[{EX_NAME}]: {sym} لم تُرصد كمية بعد الشراء — تخطّي")
@@ -740,7 +750,7 @@ def reconcile(apply=False):
     report = ("🧹 مطابقة الحساب بالمتتبّع " + ("(تطبيق)" if apply else "(تقرير)") + "\n"
               + ("\n".join(lines) if lines else "لا منصّات مُفعّلة")
               + "\nاليتيمة = أرصدة بلا تتبّع: أغلقها يدوياً أو اطلب تبنّيها.")
-    if found and os.getenv("SD_RECON_QUIET") != "1":                       # أرسل تيليجرام فقط عند وجود وهمية/يتيمة (وإلا اكتفِ بسجلّ CI)
+    if found and os.getenv("SD_RECON_QUIET") != "1":   # صامت عند SD_RECON_QUIET=1؛ وإلا أرسل عند وجود وهمية/يتيمة
         _notify(report)
     else:
         print(report)
