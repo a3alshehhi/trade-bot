@@ -586,14 +586,14 @@
     "entry": 1.126835,
     "stop": 1.0913,
     "init_stop": 1.0913,
-    "cur_stop": 1.131514,
+    "cur_stop": 1.132469175,
     "legs": [
       1.126835,
       1.12005,
       1.113265,
       1.103605
     ],
-    "last_alert_stop": 1.131514,
+    "last_alert_stop": 1.132469175,
     "armed": false,
     "targets": [
       1.1488,
@@ -607,10 +607,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-07-30 07:29:59.999000",
-    "hits": [],
+    "last_bar": "2026-07-30 10:44:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 1.1482,
+    "hi_seen": 1.1493,
     "lo_seen": 1.126835,
     "created": "2026-07-27T03:03:31",
     "dca_levels": [
@@ -621,7 +623,7 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 2
+    "st_stage": 3
   },
   "الفيواب الأسبوعي · BTC|ALICEUSDT|2026-07-28 10:00:00": {
     "symbol": "ALICEUSDT",
@@ -1236,11 +1238,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-29 02:30:00",
-    "last_bar": "2026-07-30 07:29:59.999000",
+    "last_bar": "2026-07-30 10:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.125,
-    "lo_seen": 1.907,
+    "lo_seen": 1.846,
     "created": "2026-07-29T02:48:27",
     "dca_levels": [
       2.026974,
