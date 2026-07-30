@@ -32,42 +32,6 @@
     "close_card_sent": true,
     "closed_at": "2026-07-12T00:45:11"
   },
-  "العرض/الطلب|CITYUSDT|2026-07-16 09:00:00": {
-    "symbol": "CITYUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "1h",
-    "message_id": 4965,
-    "entry": 0.396,
-    "stop": 0.38646,
-    "init_stop": 0.38646,
-    "cur_stop": 0.38646,
-    "legs": [
-      0.396
-    ],
-    "last_alert_stop": 0.38646,
-    "armed": false,
-    "targets": [
-      0.418256,
-      0.426214
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-16 09:00:00",
-    "last_bar": "2026-07-17 08:59:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.412,
-    "lo_seen": 0.385,
-    "created": "2026-07-16T09:46:44",
-    "exit_price": 0.38646,
-    "close_card_sent": true,
-    "closed_at": "2026-07-17T09:01:26"
-  },
   "عرض/طلب+دايفرجنس|CRVUSDT|2026-07-16 20:00:00": {
     "symbol": "CRVUSDT",
     "label": "عرض/طلب+دايفرجنس",
@@ -4867,6 +4831,50 @@
       0.0048385,
       0.00480133,
       0.00474841
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|AVAUSDT|2026-07-30 10:45:00": {
+    "symbol": "AVAUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5928,
+    "entry": 0.1544542,
+    "stop": 0.1471,
+    "init_stop": 0.1471,
+    "cur_stop": 0.1471,
+    "legs": [
+      0.1544542,
+      0.15305,
+      0.1516458,
+      0.1496466
+    ],
+    "last_alert_stop": 0.1471,
+    "armed": false,
+    "targets": [
+      0.159,
+      0.1622368
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-30 10:45:00",
+    "last_bar": "2026-07-30 10:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1544542,
+    "lo_seen": 0.1544542,
+    "created": "2026-07-30T11:01:22",
+    "dca_levels": [
+      0.1544542,
+      0.15305,
+      0.1516458,
+      0.1496466
     ],
     "wait_entry": true,
     "max_age_h": 48.0

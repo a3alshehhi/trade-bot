@@ -1,1 +1,122 @@
-{}
+{
+  "ARBUSDT": {
+    "symbol": "ARBUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.0787866,
+      0.07835,
+      0.0779134,
+      0.0772918
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.07847910631132897,
+        "qty": 1274.2245,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.07847910631132897,
+    "entry": 0.07847910631132897,
+    "init_stop": 0.0765,
+    "stop": 0.0765,
+    "R": 0.001979106311328971,
+    "tp1": 0.0802,
+    "tp2": 0.0812064,
+    "qty": 1274.2245,
+    "qty_open": 1274.2245,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-30T11:04:25",
+    "msg_id": 5930
+  },
+  "BANDUSDT": {
+    "symbol": "BANDUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.1512228,
+      0.1495,
+      0.1477772,
+      0.1453244
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.1513000303810461,
+        "qty": 660.9384,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.1513000303810461,
+    "entry": 0.1513000303810461,
+    "init_stop": 0.1422,
+    "stop": 0.1422,
+    "R": 0.00910003038104612,
+    "tp1": 0.1568,
+    "tp2": 0.1607712,
+    "qty": 660.9384,
+    "qty_open": 660.9384,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-30T11:06:32",
+    "msg_id": 5931
+  },
+  "AVAUSDT": {
+    "symbol": "AVAUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      0.1544542,
+      0.15305,
+      0.1516458,
+      0.1496466
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 0.15447546311743843,
+        "qty": 647.352,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 0.15447546311743843,
+    "entry": 0.15447546311743843,
+    "init_stop": 0.1471,
+    "stop": 0.1471,
+    "R": 0.007375463117438419,
+    "tp1": 0.159,
+    "tp2": 0.1622368,
+    "qty": 647.352,
+    "qty_open": 647.352,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-30T11:08:38",
+    "msg_id": 5932
+  }
+}
