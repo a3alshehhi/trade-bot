@@ -4510,5 +4510,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|ALPINEUSDT|2026-07-30 04:30:00": {
+    "symbol": "ALPINEUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5888,
+    "entry": 0.326428,
+    "stop": 0.298,
+    "init_stop": 0.298,
+    "cur_stop": 0.298,
+    "legs": [
+      0.326428,
+      0.321,
+      0.315572,
+      0.307844
+    ],
+    "last_alert_stop": 0.298,
+    "armed": false,
+    "targets": [
+      0.344,
+      0.356512
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-30 04:30:00",
+    "last_bar": "2026-07-30 04:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.326428,
+    "lo_seen": 0.326428,
+    "created": "2026-07-30T04:46:17",
+    "dca_levels": [
+      0.326428,
+      0.321,
+      0.315572,
+      0.307844
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
