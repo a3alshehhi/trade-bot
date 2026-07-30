@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-07-30T15:26:26",
+  "updated_at": "2026-07-30T17:09:19",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|SOLUSDT|2026-07-30T16:03:43",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "SOLUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 73.91444,
+      "stop_orig": 72.32,
+      "stop": 72.32,
+      "targets": [],
+      "opened_at": "2026-07-30T16:03:43",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|ETHUSDT|2026-07-30T14:16:13",
       "source": "paper",
@@ -123,11 +144,11 @@
       "opened_at": "2026-07-30T08:20:03",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-30T16:46:21",
+      "realized_pct": -0.81,
+      "result_pct": -0.81,
+      "exec_pct": -0.81
     },
     {
       "id": "paper|CELRUSDT|2026-07-30T08:20:03",
@@ -167,11 +188,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-30T16:16:11",
+      "realized_pct": 2.29,
+      "result_pct": 2.29,
+      "exec_pct": 2.29
     },
     {
       "id": "paper|CTSIUSDT|2026-07-30T07:50:32",
@@ -187,7 +208,9 @@
       "targets": [],
       "opened_at": "2026-07-30T07:50:32",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -528,11 +551,11 @@
       "opened_at": "2026-07-29T02:48:27",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-30T16:33:32",
+      "realized_pct": -10.46,
+      "result_pct": -10.46,
+      "exec_pct": -10.46
     },
     {
       "id": "paper|ADAUSDT|2026-07-29T01:31:27",
@@ -824,13 +847,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -0.197,
+      "unrealized_pct": -0.144,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.0885,
-      "last_price": 1917.49,
+      "last_price": 1918.51,
       "events": [],
       "real_rule": "wick"
     },
@@ -859,13 +882,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -0.064,
+      "unrealized_pct": -0.011,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.2655,
-      "last_price": 1917.5,
+      "last_price": 1918.5,
       "events": [],
       "real_rule": "wick"
     },
@@ -5854,13 +5877,13 @@
     }
   ],
   "stats": {
-    "total": 248,
-    "open": 16,
-    "closed": 232,
-    "wins": 137,
-    "win_rate": 59.1,
-    "net_pct": 24.44,
-    "pf": 1.09,
+    "total": 249,
+    "open": 14,
+    "closed": 235,
+    "wins": 138,
+    "win_rate": 58.7,
+    "net_pct": 15.46,
+    "pf": 1.05,
     "simulated": 2
   }
 }
