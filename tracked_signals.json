@@ -4929,5 +4929,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|ETHUSDT|2026-07-30 14:00:00": {
+    "symbol": "ETHUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5961,
+    "entry": 1906.38798,
+    "stop": 1856.88,
+    "init_stop": 1856.88,
+    "cur_stop": 1856.88,
+    "legs": [
+      1906.38798,
+      1896.935,
+      1887.48202,
+      1874.02354
+    ],
+    "last_alert_stop": 1856.88,
+    "armed": false,
+    "targets": [
+      1936.99,
+      1958.77992
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-30 14:00:00",
+    "last_bar": "2026-07-30 14:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1906.38798,
+    "lo_seen": 1906.38798,
+    "created": "2026-07-30T14:16:13",
+    "dca_levels": [
+      1906.38798,
+      1896.935,
+      1887.48202,
+      1874.02354
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
