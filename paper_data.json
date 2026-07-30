@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-30T07:38:11",
+  "updated_at": "2026-07-30T07:48:32",
   "stats": {
     "open": 14,
-    "closed": 232,
-    "win_rate": 61.6,
-    "profit_factor": 1.17,
-    "total_pct": 37.76,
-    "avg_pct": 0.2,
+    "closed": 233,
+    "win_rate": 61.8,
+    "profit_factor": 1.19,
+    "total_pct": 45.24,
+    "avg_pct": 0.22,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-30",
-        "trades": 1,
+        "trades": 2,
         "win_rate": 100.0,
-        "return_pct": 3.38,
+        "return_pct": 8.99,
         "week": "2026-W31",
         "month": "2026-07"
       },
@@ -215,9 +215,9 @@
     "weekly": [
       {
         "key": "2026-W31",
-        "trades": 41,
-        "win_rate": 56.1,
-        "return_pct": -6.95,
+        "trades": 42,
+        "win_rate": 57.1,
+        "return_pct": -1.9,
         "month": "2026-07"
       },
       {
@@ -245,9 +245,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 232,
-        "win_rate": 61.6,
-        "return_pct": 37.76
+        "trades": 233,
+        "win_rate": 61.8,
+        "return_pct": 45.24
       }
     ]
   },
@@ -1952,10 +1952,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-29T12:48:21",
-      "closed_at": null,
-      "realized_pct": 4.79
+      "closed_at": "2026-07-30T07:32:30",
+      "realized_pct": 5.43,
+      "result_pct": 5.43
     },
     {
       "id": "الفيواب الأسبوعي · BTC|EPICUSDT|2026-07-29 12:45:00",
@@ -3585,6 +3586,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-30T04:46:17",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|BMTUSDT|2026-07-30 07:15:00",
+      "symbol": "BMTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01133968,
+      "stop": 0.01087,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-30T07:31:20",
       "closed_at": null,
       "realized_pct": 0.0
     },
