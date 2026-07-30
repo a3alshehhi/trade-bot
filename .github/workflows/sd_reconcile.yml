@@ -1,12 +1,12 @@
 name: SD Reconcile (account vs tracker)
 
-# مطابقة أرصدة بايبت/بايننس الفعلية بملف المراكز.
-#  report = تقرير فقط (يكشف اليتيمة/الوهمية ويرسلها لتيليجرام، لا يغيّر شيئاً).
-#  apply  = يزيل المراكز الوهمية (متتبَّعة بلا رصيد) من الملف. لا ينفّذ أي صفقة.س
-#  الجدولة اليومية (schedule) تعمل بوضع apply وترسل الرسالة لتيليجرام الساعة 9 مساءً بتوقيت الإمارات.
+# مطابقة أرصدة بايبت/بايننس الفعلية بملف مراكز «SD Stable» وإرسال رسالة المطابقة لتيليجرام.
+#  الجدولة اليومية (schedule) = وضع apply: تزيل الوهمية وتبلّغ عن اليتيمة وترسل الرسالة مرة واحدة 9 مساءً بتوقيت الإمارات.
+#  التشغيل اليدوي (workflow_dispatch): report=تقرير فقط · apply=إزالة الوهمية.
+#  ملاحظة: التنظيف المتكرّر كل 15 دقيقة يجري داخل sd_stable_15m.yml بصمت (SD_RECON_QUIET=1) بلا رسالة.
 on:
   schedule:
-    - cron: '0 17 * * *'   # 17:00 UTC = 9 مساءً بتوقيت الإمارات (UTC+4) — مطابقة يومية بوضع apply
+    - cron: '0 17 * * *'   # 17:00 UTC = 9 مساءً بتوقيت الإمارات (UTC+4) — رسالة المطابقة اليومية (apply)
   workflow_dispatch:
     inputs:
       mode:
@@ -36,7 +36,7 @@ jobs:
       - name: Install deps
         run: pip install -r requirements.txt
 
-      - name: Run reconcile
+      - name: Run reconcile (SD Stable — يرسل الرسالة)
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -49,20 +49,27 @@ jobs:
           BINANCE_API_KEY: ${{ secrets.BINANCE_API_KEY }}
           BINANCE_API_SECRET: ${{ secrets.BINANCE_API_SECRET }}
           BINANCE_BASE_URL: ${{ secrets.BINANCE_BASE_URL }}
+          SD_POS: sd_positions_stable.json
+          SD_LEDGER: sd_ledger_stable.json
+          SD_EXECUTED: sd_executed_stable.json
+          SD_LAST_ENTRY: sd_last_entry_stable.json
+          SD_TRACK: tracked_signals_stable.json
+          SD_LABEL: "SD Stable"
+          SD_LABELS: "SD Stable"
         run: |
-          # التشغيل المجدول (schedule) يعمل دائماً بوضع apply؛التشغيل اليدوي يتبع الاختيار (افتراضي report).
+          # الجدولة اليومية = apply؛ التشغيل اليدوي يتبع الاختيار (افتراضي report). بلا SD_RECON_QUIET ⇒ ترسل الرسالة.
           MODE="${{ inputs.mode }}"
           if [ "${{ github.event_name }}" = "schedule" ]; then MODE="apply"; fi
           if [ "$MODE" = "apply" ]; then
-            python sd_autotrade.py reconcile apply
+            python sd_autotrade_stable.py reconcile apply
           else
-            python sd_autotrade.py reconcile
+            python sd_autotrade_stable.py reconcile
           fi
 
-      - name: Persist positions (apply only)
+      - name: Persist positions (apply/schedule only)
         if: ${{ inputs.mode == 'apply' || github.event_name == 'schedule' }}
         run: |
-          for f in sd_positions.json sd_positions_binance.json; do
+          for f in sd_positions_stable.json sd_positions_stable_binance.json; do
             [ -f "$f" ] && git add "$f"
           done
           if ! git diff --cached --quiet; then
