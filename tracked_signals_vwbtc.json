@@ -607,12 +607,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-07-30 17:44:59.999000",
+    "last_bar": "2026-07-30 18:29:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 1.1538,
+    "hi_seen": 1.1539,
     "lo_seen": 1.126835,
     "created": "2026-07-27T03:03:31",
     "dca_levels": [
@@ -1513,14 +1513,14 @@
     "entry": 73.91444,
     "stop": 72.32,
     "init_stop": 72.32,
-    "cur_stop": 72.32,
+    "cur_stop": 73.91444,
     "legs": [
       73.91444,
       73.61,
       73.30556,
       72.87212
     ],
-    "last_alert_stop": 72.32,
+    "last_alert_stop": 73.91444,
     "armed": false,
     "targets": [
       74.9,
@@ -1534,10 +1534,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 15:45:00",
-    "last_bar": "2026-07-30 17:44:59.999000",
-    "hits": [],
+    "last_bar": "2026-07-30 18:29:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 74.84,
+    "hi_seen": 74.98,
     "lo_seen": 73.91444,
     "created": "2026-07-30T16:03:43",
     "dca_levels": [
@@ -1578,7 +1580,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 16:45:00",
-    "last_bar": "2026-07-30 17:44:59.999000",
+    "last_bar": "2026-07-30 18:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00382,
@@ -1622,11 +1624,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 16:45:00",
-    "last_bar": "2026-07-30 17:44:59.999000",
+    "last_bar": "2026-07-30 18:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0572878,
-    "lo_seen": 0.0541,
+    "lo_seen": 0.0533,
     "created": "2026-07-30T17:06:54",
     "dca_levels": [
       0.0572878,
@@ -1666,7 +1668,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 17:00:00",
-    "last_bar": "2026-07-30 17:44:59.999000",
+    "last_bar": "2026-07-30 18:29:59.999000",
     "hits": [
       1
     ],
@@ -1679,6 +1681,50 @@
       1.3985,
       1.391302,
       1.381054
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|STXUSDT|2026-07-30 18:15:00": {
+    "symbol": "STXUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 5980,
+    "entry": 0.137489,
+    "stop": 0.131,
+    "init_stop": 0.131,
+    "cur_stop": 0.131,
+    "legs": [
+      0.137489,
+      0.13625,
+      0.135011,
+      0.133247
+    ],
+    "last_alert_stop": 0.131,
+    "armed": false,
+    "targets": [
+      0.1415,
+      0.144356
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-30 18:15:00",
+    "last_bar": "2026-07-30 18:29:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1386,
+    "lo_seen": 0.137489,
+    "created": "2026-07-30T18:36:23",
+    "dca_levels": [
+      0.137489,
+      0.13625,
+      0.135011,
+      0.133247
     ],
     "wait_entry": true,
     "max_age_h": 48.0
