@@ -222,6 +222,33 @@ def market_buy(symbol, usdt):
     })
 
 
+def order_fill(res):
+    """يستخرج التعبئة الحقيقية من رد أمر بايننس: (الكمية الصافية، الدولار المصروف،
+    متوسط سعر التعبئة). أدقّ من فرق الرصيد لأنه يعتمد على ما نفّذته المنصّة فعلاً:
+      • executedQty        = الكمية الأساس المنفَّذة
+      • cummulativeQuoteQty = الدولار المصروف فعلاً
+      • fills[].commission  = العمولة (تُطرح إن اقتُطعت من العملة الأساس نفسها)
+    متوسط السعر = الدولار المصروف ÷ الكمية المنفَّذة (قبل خصم العمولة الأساس).
+    يعيد None إن غابت الحقول (فيرجع المُنادي لطريقة فرق الرصيد الاحتياطية)."""
+    try:
+        exec_qty = float((res or {}).get("executedQty") or 0)
+        quote = float((res or {}).get("cummulativeQuoteQty") or 0)
+        if exec_qty <= 0 or quote <= 0:
+            return None
+        sym = (res or {}).get("symbol", "") or ""
+        base = sym[:-4] if sym.endswith("USDT") else sym.replace("USDT", "")
+        fee_base = 0.0
+        for f in (res.get("fills") or []):
+            if (f.get("commissionAsset") or "") == base:
+                fee_base += float(f.get("commission") or 0)
+        net_qty = exec_qty - fee_base
+        if net_qty <= 0:
+            net_qty = exec_qty
+        return net_qty, quote, quote / exec_qty
+    except Exception:
+        return None
+
+
 def market_sell(symbol, base_qty):
     """بيع سوق لكمية من العملة الأساس (quantity)."""
     f = instrument_filters(symbol)
