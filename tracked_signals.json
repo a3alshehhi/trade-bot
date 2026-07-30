@@ -4690,5 +4690,93 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|AWEUSDT|2026-07-30 08:00:00": {
+    "symbol": "AWEUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5912,
+    "entry": 0.05532286,
+    "stop": 0.05392,
+    "init_stop": 0.05392,
+    "cur_stop": 0.05392,
+    "legs": [
+      0.05532286,
+      0.055055,
+      0.05478714,
+      0.05440578
+    ],
+    "last_alert_stop": 0.05392,
+    "armed": false,
+    "targets": [
+      0.05619,
+      0.05680744
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-30 08:00:00",
+    "last_bar": "2026-07-30 08:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.05532286,
+    "lo_seen": 0.05532286,
+    "created": "2026-07-30T08:20:03",
+    "dca_levels": [
+      0.05532286,
+      0.055055,
+      0.05478714,
+      0.05440578
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|CELRUSDT|2026-07-30 08:00:00": {
+    "symbol": "CELRUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 5912,
+    "entry": 0.00158134,
+    "stop": 0.001446,
+    "init_stop": 0.001446,
+    "cur_stop": 0.001446,
+    "legs": [
+      0.00158134,
+      0.0015555,
+      0.00152966,
+      0.00149287
+    ],
+    "last_alert_stop": 0.001446,
+    "armed": false,
+    "targets": [
+      0.001665,
+      0.00172457
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-30 08:00:00",
+    "last_bar": "2026-07-30 08:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00158134,
+    "lo_seen": 0.00158134,
+    "created": "2026-07-30T08:20:03",
+    "dca_levels": [
+      0.00158134,
+      0.0015555,
+      0.00152966,
+      0.00149287
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
