@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T09:21:25",
+  "updated_at": "2026-07-30T09:32:34",
   "stats": {
     "open": 19,
     "closed": 233,
@@ -3597,11 +3597,13 @@
       "timeframe": "15m",
       "entry": 0.01133968,
       "stop": 0.01087,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-30T07:31:20",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.28
     },
     {
       "id": "العرض/الطلب|BREVUSDT|2026-07-30 07:30:00",
