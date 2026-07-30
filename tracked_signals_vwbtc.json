@@ -607,12 +607,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-07-30 10:44:59.999000",
+    "last_bar": "2026-07-30 16:29:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 1.1493,
+    "hi_seen": 1.1538,
     "lo_seen": 1.126835,
     "created": "2026-07-27T03:03:31",
     "dca_levels": [
@@ -1238,11 +1238,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-29 02:30:00",
-    "last_bar": "2026-07-30 10:44:59.999000",
+    "last_bar": "2026-07-30 16:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 2.125,
-    "lo_seen": 1.846,
+    "lo_seen": 1.794,
     "created": "2026-07-29T02:48:27",
     "dca_levels": [
       2.026974,
@@ -1251,7 +1251,10 @@
       1.888402
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 1.815,
+    "close_card_sent": true,
+    "closed_at": "2026-07-30T16:33:32"
   },
   "الفيواب الأسبوعي · BTC|XRPUSDT|2026-07-29 03:15:00": {
     "symbol": "XRPUSDT",
@@ -1531,10 +1534,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 15:45:00",
-    "last_bar": "2026-07-30 15:45:00",
+    "last_bar": "2026-07-30 16:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 73.91444,
+    "hi_seen": 74.84,
     "lo_seen": 73.91444,
     "created": "2026-07-30T16:03:43",
     "dca_levels": [
