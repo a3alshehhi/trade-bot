@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-30T19:23:43",
+  "updated_at": "2026-07-30T19:33:26",
   "stats": {
-    "open": 25,
-    "closed": 239,
-    "win_rate": 61.5,
+    "open": 24,
+    "closed": 240,
+    "win_rate": 61.3,
     "profit_factor": 1.16,
-    "total_pct": 35.97,
+    "total_pct": 34.83,
     "avg_pct": 0.19,
     "max_drawdown_pct": -49.22
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-07-30",
-        "trades": 8,
-        "win_rate": 62.5,
-        "return_pct": 2.04,
+        "trades": 9,
+        "win_rate": 55.6,
+        "return_pct": 1.18,
         "week": "2026-W31",
         "month": "2026-07"
       },
@@ -215,9 +215,9 @@
     "weekly": [
       {
         "key": "2026-W31",
-        "trades": 48,
-        "win_rate": 56.2,
-        "return_pct": -8.16,
+        "trades": 49,
+        "win_rate": 55.1,
+        "return_pct": -8.93,
         "month": "2026-07"
       },
       {
@@ -245,9 +245,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 239,
-        "win_rate": 61.5,
-        "return_pct": 35.97
+        "trades": 240,
+        "win_rate": 61.3,
+        "return_pct": 34.83
       }
     ]
   },
@@ -3755,10 +3755,11 @@
       "entry": 0.1512228,
       "stop": 0.1422,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-30T09:19:59",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-30T19:16:14",
+      "realized_pct": -0.84,
+      "result_pct": -0.84
     },
     {
       "id": "العرض/الطلب|ASTRUSDT|2026-07-30 09:30:00",
