@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-30T22:05:52",
+  "updated_at": "2026-07-30T22:19:23",
   "stats": {
-    "open": 32,
-    "closed": 240,
-    "win_rate": 61.3,
+    "open": 31,
+    "closed": 241,
+    "win_rate": 61.0,
     "profit_factor": 1.16,
-    "total_pct": 34.83,
-    "avg_pct": 0.19,
+    "total_pct": 34.66,
+    "avg_pct": 0.18,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-30",
-        "trades": 9,
-        "win_rate": 55.6,
-        "return_pct": 1.18,
+        "trades": 10,
+        "win_rate": 50.0,
+        "return_pct": 1.06,
         "week": "2026-W31",
         "month": "2026-07"
       },
@@ -215,9 +215,9 @@
     "weekly": [
       {
         "key": "2026-W31",
-        "trades": 49,
-        "win_rate": 55.1,
-        "return_pct": -8.93,
+        "trades": 50,
+        "win_rate": 54.0,
+        "return_pct": -9.04,
         "month": "2026-07"
       },
       {
@@ -245,9 +245,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 240,
-        "win_rate": 61.3,
-        "return_pct": 34.83
+        "trades": 241,
+        "win_rate": 61.0,
+        "return_pct": 34.66
       }
     ]
   },
@@ -3896,10 +3896,11 @@
       "entry": 0.01434508,
       "stop": 0.01369,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-30T11:31:18",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-30T22:16:19",
+      "realized_pct": -0.12,
+      "result_pct": -0.12
     },
     {
       "id": "العرض/الطلب|ETHUSDT|2026-07-30 14:00:00",
