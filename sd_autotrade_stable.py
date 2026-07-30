@@ -740,7 +740,7 @@ def reconcile(apply=False):
     report = ("🧹 مطابقة الحساب بالمتتبّع " + ("(تطبيق)" if apply else "(تقرير)") + "\n"
               + ("\n".join(lines) if lines else "لا منصّات مُفعّلة")
               + "\nاليتيمة = أرصدة بلا تتبّع: أغلقها يدوياً أو اطلب تبنّيها.")
-    if found:                       # أرسل تيليجرام فقط عند وجود وهمية/يتيمة (وإلا اكتفِ بسجلّ CI)
+    if found and os.getenv("SD_RECON_QUIET") != "1":                       # أرسل تيليجرام فقط عند وجود وهمية/يتيمة (وإلا اكتفِ بسجلّ CI)
         _notify(report)
     else:
         print(report)
