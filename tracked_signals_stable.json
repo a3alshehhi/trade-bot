@@ -1,275 +1,4 @@
 {
-  "SD Stable|BREVUSDT|2026-07-15 18:00:00": {
-    "symbol": "BREVUSDT",
-    "label": "SD Stable",
-    "timeframe": "15m",
-    "message_id": 4942,
-    "entry": 0.0755,
-    "stop": 0.074518,
-    "init_stop": 0.074518,
-    "cur_stop": 0.0755,
-    "legs": [
-      0.0755,
-      0.07545,
-      0.075273,
-      0.075021
-    ],
-    "last_alert_stop": 0.074518,
-    "armed": false,
-    "targets": [
-      0.076608,
-      0.077127
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-15 18:00:00",
-    "last_bar": "2026-07-15 18:44:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.0772,
-    "lo_seen": 0.0755,
-    "created": "2026-07-15T18:08:45",
-    "exit_price": 0.077127,
-    "close_card_sent": true,
-    "closed_at": "2026-07-15T19:09:03"
-  },
-  "SD Stable|API3USDT|2026-07-16 01:00:00": {
-    "symbol": "API3USDT",
-    "label": "SD Stable",
-    "timeframe": "1h",
-    "message_id": 4952,
-    "entry": 0.225,
-    "stop": 0.218973,
-    "init_stop": 0.218973,
-    "cur_stop": 0.225,
-    "legs": [
-      0.225
-    ],
-    "last_alert_stop": 0.225,
-    "armed": false,
-    "targets": [
-      0.229976,
-      0.232744
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-16 01:00:00",
-    "last_bar": "2026-07-16 19:59:59.999000",
-    "hits": [
-      1
-    ],
-    "stopped": true,
-    "hi_seen": 0.2307,
-    "lo_seen": 0.221,
-    "created": "2026-07-16T01:52:29",
-    "exit_price": 0.225,
-    "close_card_sent": true,
-    "closed_at": "2026-07-16T20:14:17"
-  },
-  "SD Stable|AGLDUSDT|2026-07-16 05:00:00": {
-    "symbol": "AGLDUSDT",
-    "label": "SD Stable",
-    "timeframe": "1h",
-    "message_id": 4954,
-    "entry": 0.1639,
-    "stop": 0.15203,
-    "init_stop": 0.15203,
-    "cur_stop": 0.1639,
-    "legs": [
-      0.1639
-    ],
-    "last_alert_stop": 0.1639,
-    "armed": false,
-    "targets": [
-      0.1719712,
-      0.1770228
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-16 05:00:00",
-    "last_bar": "2026-07-16 22:59:59.999000",
-    "hits": [
-      1
-    ],
-    "stopped": true,
-    "hi_seen": 0.1767,
-    "lo_seen": 0.1623,
-    "created": "2026-07-16T05:22:06",
-    "exit_price": 0.1639,
-    "close_card_sent": true,
-    "closed_at": "2026-07-16T23:10:06"
-  },
-  "SD Stable|CITYUSDT|2026-07-16 09:00:00": {
-    "symbol": "CITYUSDT",
-    "label": "SD Stable",
-    "timeframe": "1h",
-    "message_id": 4961,
-    "entry": 0.396,
-    "stop": 0.38657,
-    "init_stop": 0.38657,
-    "cur_stop": 0.396,
-    "legs": [
-      0.396
-    ],
-    "last_alert_stop": 0.38657,
-    "armed": false,
-    "targets": [
-      0.404264,
-      0.408416
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-16 09:00:00",
-    "last_bar": "2026-07-16 09:59:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.412,
-    "lo_seen": 0.394,
-    "created": "2026-07-16T09:16:51",
-    "exit_price": 0.408416,
-    "close_card_sent": true,
-    "closed_at": "2026-07-16T10:08:57"
-  },
-  "SD Stable|CHRUSDT|2026-07-16 10:15:00": {
-    "symbol": "CHRUSDT",
-    "label": "SD Stable",
-    "timeframe": "15m",
-    "message_id": 4969,
-    "entry": 0.01499,
-    "stop": 0.0148408,
-    "init_stop": 0.0148408,
-    "cur_stop": 0.01499,
-    "legs": [
-      0.01499,
-      0.01495034,
-      0.014935,
-      0.01491966,
-      0.01489782
-    ],
-    "last_alert_stop": 0.01499,
-    "armed": false,
-    "targets": [
-      0.01503536,
-      0.01508034
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-16 10:15:00",
-    "last_bar": "2026-07-16 15:14:59.999000",
-    "hits": [
-      1
-    ],
-    "stopped": true,
-    "hi_seen": 0.01508,
-    "lo_seen": 0.01473,
-    "created": "2026-07-16T10:22:58",
-    "exit_price": 0.01499,
-    "close_card_sent": true,
-    "closed_at": "2026-07-16T15:19:56"
-  },
-  "SD Stable|CKBUSDT|2026-07-16 14:00:00": {
-    "symbol": "CKBUSDT",
-    "label": "SD Stable",
-    "timeframe": "1h",
-    "message_id": 4977,
-    "entry": 0.000916,
-    "stop": 0.00089386,
-    "init_stop": 0.00089386,
-    "cur_stop": 0.00089386,
-    "legs": [
-      0.000916
-    ],
-    "last_alert_stop": 0.00089386,
-    "armed": false,
-    "targets": [
-      0.00092753,
-      0.00093583
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-16 14:00:00",
-    "last_bar": "2026-07-17 02:59:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.000925,
-    "lo_seen": 0.000893,
-    "created": "2026-07-16T14:23:00",
-    "exit_price": 0.00089386,
-    "close_card_sent": true,
-    "closed_at": "2026-07-17T03:09:50"
-  },
-  "SD Stable|CRVUSDT|2026-07-16 20:00:00": {
-    "symbol": "CRVUSDT",
-    "label": "SD Stable",
-    "timeframe": "1h",
-    "message_id": 4990,
-    "entry": 0.2199,
-    "stop": 0.210155,
-    "init_stop": 0.210155,
-    "cur_stop": 0.210155,
-    "legs": [
-      0.2199
-    ],
-    "last_alert_stop": 0.210155,
-    "armed": false,
-    "targets": [
-      0.2248832,
-      0.2285508
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-16 20:00:00",
-    "last_bar": "2026-07-17 05:59:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.2244,
-    "lo_seen": 0.2089,
-    "created": "2026-07-16T20:48:05",
-    "exit_price": 0.210155,
-    "close_card_sent": true,
-    "closed_at": "2026-07-17T06:10:15"
-  },
   "SD Stable|CFXUSDT|2026-07-17 03:15:00": {
     "symbol": "CFXUSDT",
     "label": "SD Stable",
@@ -2196,5 +1925,40 @@
     "exit_price": 0.1367172,
     "close_card_sent": true,
     "closed_at": "2026-07-29T19:07:30"
+  },
+  "SD Stable|ALGOUSDT|2026-07-31 00:15:00": {
+    "symbol": "ALGOUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 5993,
+    "entry": 0.0796,
+    "stop": 0.078733,
+    "init_stop": 0.078733,
+    "cur_stop": 0.078733,
+    "legs": [
+      0.0796,
+      0.0795876,
+      0.0792852
+    ],
+    "last_alert_stop": 0.078733,
+    "armed": false,
+    "targets": [
+      0.0811896,
+      0.0818124
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-31 00:15:00",
+    "last_bar": "2026-07-31 00:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0796,
+    "lo_seen": 0.0796,
+    "created": "2026-07-31T00:19:54"
   }
 }

@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-31T00:18:00",
+  "updated_at": "2026-07-31T00:24:29",
   "stats": {
-    "open": 31,
+    "open": 32,
     "closed": 241,
     "win_rate": 61.0,
     "profit_factor": 1.16,
@@ -252,123 +252,6 @@
     ]
   },
   "trades": [
-    {
-      "id": "SD Stable|BREVUSDT|2026-07-15 18:00:00",
-      "symbol": "BREVUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0755,
-      "stop": 0.074518,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-15T18:08:45",
-      "closed_at": "2026-07-15T19:09:03",
-      "realized_pct": 1.81,
-      "result_pct": 1.81
-    },
-    {
-      "id": "SD Stable|API3USDT|2026-07-16 01:00:00",
-      "symbol": "API3USDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.225,
-      "stop": 0.218973,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-16T01:52:29",
-      "closed_at": "2026-07-16T20:14:17",
-      "realized_pct": 1.11,
-      "result_pct": 1.11
-    },
-    {
-      "id": "SD Stable|AGLDUSDT|2026-07-16 05:00:00",
-      "symbol": "AGLDUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.1639,
-      "stop": 0.15203,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-16T05:22:06",
-      "closed_at": "2026-07-16T23:10:06",
-      "realized_pct": 2.46,
-      "result_pct": 2.46
-    },
-    {
-      "id": "SD Stable|CITYUSDT|2026-07-16 09:00:00",
-      "symbol": "CITYUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.396,
-      "stop": 0.38657,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-16T09:16:51",
-      "closed_at": "2026-07-16T10:08:57",
-      "realized_pct": 2.61,
-      "result_pct": 2.61
-    },
-    {
-      "id": "SD Stable|CHRUSDT|2026-07-16 10:15:00",
-      "symbol": "CHRUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.01499,
-      "stop": 0.0148408,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-16T10:22:58",
-      "closed_at": "2026-07-16T15:19:56",
-      "realized_pct": 0.15,
-      "result_pct": 0.15
-    },
-    {
-      "id": "SD Stable|CKBUSDT|2026-07-16 14:00:00",
-      "symbol": "CKBUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.000916,
-      "stop": 0.00089386,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-16T14:23:00",
-      "closed_at": "2026-07-17T03:09:50",
-      "realized_pct": -2.42,
-      "result_pct": -2.42
-    },
-    {
-      "id": "SD Stable|CRVUSDT|2026-07-16 20:00:00",
-      "symbol": "CRVUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.2199,
-      "stop": 0.210155,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-16T20:48:05",
-      "closed_at": "2026-07-17T06:10:15",
-      "realized_pct": -4.43,
-      "result_pct": -4.43
-    },
     {
       "id": "SD Stable|CFXUSDT|2026-07-17 03:15:00",
       "symbol": "CFXUSDT",
@@ -1181,6 +1064,20 @@
       "closed_at": "2026-07-29T19:07:30",
       "realized_pct": 12.46,
       "result_pct": 12.46
+    },
+    {
+      "id": "SD Stable|ALGOUSDT|2026-07-31 00:15:00",
+      "symbol": "ALGOUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0796,
+      "stop": 0.078733,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-31T00:19:54",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
@@ -4033,6 +3930,123 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "SD Stable|BREVUSDT|2026-07-15 18:00:00",
+      "symbol": "BREVUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0755,
+      "stop": 0.074518,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-15T18:08:45",
+      "closed_at": "2026-07-15T19:09:03",
+      "realized_pct": 1.81,
+      "result_pct": 1.81
+    },
+    {
+      "id": "SD Stable|API3USDT|2026-07-16 01:00:00",
+      "symbol": "API3USDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.225,
+      "stop": 0.218973,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-16T01:52:29",
+      "closed_at": "2026-07-16T20:14:17",
+      "realized_pct": 1.11,
+      "result_pct": 1.11
+    },
+    {
+      "id": "SD Stable|AGLDUSDT|2026-07-16 05:00:00",
+      "symbol": "AGLDUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.1639,
+      "stop": 0.15203,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-16T05:22:06",
+      "closed_at": "2026-07-16T23:10:06",
+      "realized_pct": 2.46,
+      "result_pct": 2.46
+    },
+    {
+      "id": "SD Stable|CITYUSDT|2026-07-16 09:00:00",
+      "symbol": "CITYUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.396,
+      "stop": 0.38657,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-16T09:16:51",
+      "closed_at": "2026-07-16T10:08:57",
+      "realized_pct": 2.61,
+      "result_pct": 2.61
+    },
+    {
+      "id": "SD Stable|CHRUSDT|2026-07-16 10:15:00",
+      "symbol": "CHRUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01499,
+      "stop": 0.0148408,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-16T10:22:58",
+      "closed_at": "2026-07-16T15:19:56",
+      "realized_pct": 0.15,
+      "result_pct": 0.15
+    },
+    {
+      "id": "SD Stable|CKBUSDT|2026-07-16 14:00:00",
+      "symbol": "CKBUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.000916,
+      "stop": 0.00089386,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-16T14:23:00",
+      "closed_at": "2026-07-17T03:09:50",
+      "realized_pct": -2.42,
+      "result_pct": -2.42
+    },
+    {
+      "id": "SD Stable|CRVUSDT|2026-07-16 20:00:00",
+      "symbol": "CRVUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.2199,
+      "stop": 0.210155,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-16T20:48:05",
+      "closed_at": "2026-07-17T06:10:15",
+      "realized_pct": -4.43,
+      "result_pct": -4.43
     },
     {
       "id": "العرض/الطلب|CITYUSDT|2026-07-16 09:00:00",
