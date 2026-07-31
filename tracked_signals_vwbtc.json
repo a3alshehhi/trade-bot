@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-07-31 14:14:59.999000",
+    "last_bar": "2026-07-31 16:59:59.999000",
     "hits": [
       1
     ],
@@ -1635,7 +1635,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 16:45:00",
-    "last_bar": "2026-07-31 14:14:59.999000",
+    "last_bar": "2026-07-31 16:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0572878,
@@ -1830,7 +1830,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 20:45:00",
-    "last_bar": "2026-07-31 14:14:59.999000",
+    "last_bar": "2026-07-31 16:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.7251,
@@ -2001,14 +2001,14 @@
     "entry": 1.650104,
     "stop": 1.571,
     "init_stop": 1.571,
-    "cur_stop": 1.571,
+    "cur_stop": 1.674585,
     "legs": [
       1.650104,
       1.635,
       1.619896,
       1.598392
     ],
-    "last_alert_stop": 1.571,
+    "last_alert_stop": 1.674585,
     "armed": false,
     "targets": [
       1.699,
@@ -2022,9 +2022,9 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 21:00:00",
-    "last_bar": "2026-07-31 14:14:59.999000",
+    "last_bar": "2026-07-31 14:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 1.693,
     "lo_seen": 1.635,
     "created": "2026-07-30T21:19:25",
@@ -2035,7 +2035,11 @@
       1.598392
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2,
+    "exit_price": 1.674585,
+    "close_card_sent": true,
+    "closed_at": "2026-07-31T17:02:44"
   },
   "الفيواب الأسبوعي · BTC|FETUSDT|2026-07-30 21:30:00": {
     "symbol": "FETUSDT",
@@ -2116,7 +2120,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 21:30:00",
-    "last_bar": "2026-07-31 14:14:59.999000",
+    "last_bar": "2026-07-31 16:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.3309,
@@ -2160,7 +2164,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 02:00:00",
-    "last_bar": "2026-07-31 14:14:59.999000",
+    "last_bar": "2026-07-31 16:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0798,
