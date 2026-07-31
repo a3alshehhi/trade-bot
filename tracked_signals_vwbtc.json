@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-07-31 10:44:59.999000",
+    "last_bar": "2026-07-31 11:14:59.999000",
     "hits": [
       1
     ],
@@ -1635,7 +1635,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 16:45:00",
-    "last_bar": "2026-07-31 10:44:59.999000",
+    "last_bar": "2026-07-31 11:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0572878,
@@ -1779,12 +1779,13 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 18:45:00",
-    "last_bar": "2026-07-31 10:44:59.999000",
+    "last_bar": "2026-07-31 11:14:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.0089,
+    "stopped": true,
+    "hi_seen": 0.00891,
     "lo_seen": 0.00847,
     "created": "2026-07-30T19:04:05",
     "dca_levels": [
@@ -1795,7 +1796,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 3
+    "st_stage": 3,
+    "exit_price": 0.00890144,
+    "close_card_sent": true,
+    "closed_at": "2026-07-31T11:21:39"
   },
   "الفيواب الأسبوعي · BTC|FILUSDT|2026-07-30 20:45:00": {
     "symbol": "FILUSDT",
@@ -1826,7 +1830,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 20:45:00",
-    "last_bar": "2026-07-31 10:44:59.999000",
+    "last_bar": "2026-07-31 11:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.7251,
@@ -1920,7 +1924,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 20:45:00",
-    "last_bar": "2026-07-31 10:44:59.999000",
+    "last_bar": "2026-07-31 11:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.776,
@@ -2014,7 +2018,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 21:00:00",
-    "last_bar": "2026-07-31 10:44:59.999000",
+    "last_bar": "2026-07-31 11:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.693,
@@ -2108,7 +2112,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 21:30:00",
-    "last_bar": "2026-07-31 10:44:59.999000",
+    "last_bar": "2026-07-31 11:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.3309,
@@ -2152,7 +2156,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 02:00:00",
-    "last_bar": "2026-07-31 10:44:59.999000",
+    "last_bar": "2026-07-31 11:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0798,
@@ -2196,7 +2200,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 02:15:00",
-    "last_bar": "2026-07-31 10:44:59.999000",
+    "last_bar": "2026-07-31 11:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.02164,
@@ -2219,14 +2223,14 @@
     "entry": 9.05e-06,
     "stop": 8.68e-06,
     "init_stop": 8.68e-06,
-    "cur_stop": 8.68e-06,
+    "cur_stop": 8.94505e-06,
     "legs": [
       9.05e-06,
       8.98e-06,
       8.91e-06,
       8.81e-06
     ],
-    "last_alert_stop": 8.68e-06,
+    "last_alert_stop": 8.94505e-06,
     "armed": false,
     "targets": [
       9.28e-06,
@@ -2240,7 +2244,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 02:30:00",
-    "last_bar": "2026-07-31 10:44:59.999000",
+    "last_bar": "2026-07-31 11:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 9.2e-06,
@@ -2253,7 +2257,8 @@
       8.81e-06
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2
   },
   "الفيواب الأسبوعي · BTC|ERAUSDT|2026-07-31 03:30:00": {
     "symbol": "ERAUSDT",
