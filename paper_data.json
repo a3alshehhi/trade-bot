@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-31T15:03:49",
+  "updated_at": "2026-07-31T15:17:28",
   "stats": {
     "open": 17,
-    "closed": 263,
-    "win_rate": 60.8,
-    "profit_factor": 1.2,
-    "total_pct": 54.71,
-    "avg_pct": 0.22,
+    "closed": 264,
+    "win_rate": 61.0,
+    "profit_factor": 1.22,
+    "total_pct": 62.58,
+    "avg_pct": 0.24,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-31",
-        "trades": 22,
-        "win_rate": 59.1,
-        "return_pct": 14.88,
+        "trades": 23,
+        "win_rate": 60.9,
+        "return_pct": 20.73,
         "week": "2026-W31",
         "month": "2026-07"
       },
@@ -223,9 +223,9 @@
     "weekly": [
       {
         "key": "2026-W31",
-        "trades": 72,
-        "win_rate": 55.6,
-        "return_pct": 4.5,
+        "trades": 73,
+        "win_rate": 56.2,
+        "return_pct": 9.82,
         "month": "2026-07"
       },
       {
@@ -253,9 +253,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 263,
-        "win_rate": 60.8,
-        "return_pct": 54.71
+        "trades": 264,
+        "win_rate": 61.0,
+        "return_pct": 62.58
       }
     ]
   },
@@ -1849,12 +1849,14 @@
       "entry": 0.0045,
       "stop": 0.0044229,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-31T05:21:18",
-      "closed_at": null,
-      "realized_pct": 2.16
+      "closed_at": "2026-07-31T15:00:30",
+      "realized_pct": 5.09,
+      "result_pct": 5.09
     },
     {
       "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
@@ -2186,39 +2188,6 @@
       "closed_at": "2026-07-12T00:45:11",
       "realized_pct": -3.59,
       "result_pct": -3.59
-    },
-    {
-      "id": "عرض/طلب+دايفرجنس|CRVUSDT|2026-07-16 20:00:00",
-      "symbol": "CRVUSDT",
-      "label": "عرض/طلب+دايفرجنس",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.2199,
-      "stop": 0.210155,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-16T20:42:47",
-      "closed_at": "2026-07-17T06:01:49",
-      "realized_pct": -4.43,
-      "result_pct": -4.43
-    },
-    {
-      "id": "عرض/طلب+دايفرجنس|CHRUSDT|2026-07-17 10:00:00",
-      "symbol": "CHRUSDT",
-      "label": "عرض/طلب+دايفرجنس",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.0149,
-      "stop": 0.0144866,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-17T10:04:30",
-      "closed_at": "2026-07-17T11:08:26",
-      "realized_pct": 1.99,
-      "result_pct": 1.99
     },
     {
       "id": "العرض/الطلب|ACTUSDT|2026-07-17 16:30:00",
@@ -3993,6 +3962,20 @@
       "result_pct": 0.5
     },
     {
+      "id": "عرض/طلب+دايفرجنس|AIXBTUSDT|2026-07-31 15:00:00",
+      "symbol": "AIXBTUSDT",
+      "label": "عرض/طلب+دايفرجنس",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.01712,
+      "stop": 0.0164834,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-31T15:05:02",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -4067,6 +4050,39 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "عرض/طلب+دايفرجنس|CRVUSDT|2026-07-16 20:00:00",
+      "symbol": "CRVUSDT",
+      "label": "عرض/طلب+دايفرجنس",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.2199,
+      "stop": 0.210155,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-16T20:42:47",
+      "closed_at": "2026-07-17T06:01:49",
+      "realized_pct": -4.43,
+      "result_pct": -4.43
+    },
+    {
+      "id": "عرض/طلب+دايفرجنس|CHRUSDT|2026-07-17 10:00:00",
+      "symbol": "CHRUSDT",
+      "label": "عرض/طلب+دايفرجنس",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.0149,
+      "stop": 0.0144866,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-17T10:04:30",
+      "closed_at": "2026-07-17T11:08:26",
+      "realized_pct": 1.99,
+      "result_pct": 1.99
     },
     {
       "id": "SD Stable|CFXUSDT|2026-07-17 03:15:00",
