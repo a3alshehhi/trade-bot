@@ -93,6 +93,7 @@ def scan():
                 legs=levels, dca_levels=levels, wait_entry=True,
                 max_age_h=CFG["wait_max_age_h"],
                 tp1=round(sig["tp1"], 8), tp2=round(sig["tp2"], 8),
+                targets5=sig.get("targets5"),
                 os_hits=sig["os_hits"], quality=quality))
         except Exception as ex:
             print("[vwbtc] skip", s, ex, flush=True)
