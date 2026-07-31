@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-07-31T15:08:44",
+  "updated_at": "2026-07-31T16:53:57",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|AIXBTUSDT|2026-07-31T15:05:02",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "AIXBTUSDT",
+      "label": "عرض/طلب+دايفرجنس",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.01712,
+      "stop_orig": 0.0164834,
+      "stop": 0.0164834,
+      "targets": [],
+      "opened_at": "2026-07-31T15:05:02",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "binance|ACHUSDT|2026-07-31T05:41:55",
       "source": "binance",
@@ -1311,7 +1332,7 @@
       "cur_stop": 1853.4175,
       "remaining": 0.0,
       "pnl_usdt": -3.3018,
-      "last_price": 1859.23,
+      "last_price": 1865.14,
       "events": [
         {
           "ts": "2026-07-31T14:00:00",
@@ -1353,7 +1374,7 @@
       "cur_stop": 1853.4175,
       "remaining": 0.0,
       "pnl_usdt": -9.5653,
-      "last_price": 1859.3,
+      "last_price": 1865.14,
       "events": [
         {
           "ts": "2026-07-31T14:00:00",
@@ -6349,8 +6370,8 @@
     }
   ],
   "stats": {
-    "total": 269,
-    "open": 8,
+    "total": 270,
+    "open": 9,
     "closed": 261,
     "wins": 149,
     "win_rate": 57.1,
