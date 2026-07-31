@@ -1,1 +1,42 @@
-{}
+{
+  "1000SATSUSDT": {
+    "symbol": "1000SATSUSDT",
+    "tf": "15m",
+    "label": "العرض/الطلب",
+    "prob": null,
+    "levels": [
+      9.05e-06,
+      8.98e-06,
+      8.91e-06,
+      8.81e-06
+    ],
+    "filled": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "leg_usd": 100.0,
+    "n_legs": 4,
+    "fills": [
+      {
+        "price": 9.022441530548106e-06,
+        "qty": 11083474.43,
+        "usd": 100.0
+      }
+    ],
+    "avg_entry": 9.022441530548106e-06,
+    "entry": 9.022441530548106e-06,
+    "init_stop": 8.68e-06,
+    "stop": 8.68e-06,
+    "R": 3.4244153054810653e-07,
+    "tp1": 9.28e-06,
+    "tp2": 9.44e-06,
+    "qty": 11083474.43,
+    "qty_open": 11083474.43,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-07-31T03:04:20",
+    "msg_id": 6010
+  }
+}
