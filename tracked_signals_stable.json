@@ -1838,12 +1838,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 15:30:00",
-    "last_bar": "2026-07-31 10:44:59.999000",
+    "last_bar": "2026-07-31 14:14:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 1936.99,
-    "lo_seen": 1872.0,
-    "created": "2026-07-28T15:35:55"
+    "lo_seen": 1848.7,
+    "created": "2026-07-28T15:35:55",
+    "exit_price": 1853.4175,
+    "close_card_sent": true,
+    "closed_at": "2026-07-31T14:23:10"
   },
   "SD Stable|DIAUSDT|2026-07-29 17:00:00": {
     "symbol": "DIAUSDT",
@@ -1949,12 +1952,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 05:15:00",
-    "last_bar": "2026-07-31 10:44:59.999000",
+    "last_bar": "2026-07-31 14:14:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.0047,
+    "hi_seen": 0.00473,
     "lo_seen": 0.00446,
     "created": "2026-07-31T05:21:18"
   }
