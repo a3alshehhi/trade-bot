@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-07-31T18:40:29",
+  "updated_at": "2026-07-31T20:11:54",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|CYBERUSDT|2026-07-31T19:50:44",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "CYBERUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.303124,
+      "stop_orig": 0.292,
+      "stop": 0.292,
+      "targets": [],
+      "opened_at": "2026-07-31T19:50:44",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|ALTUSDT|2026-07-31T19:01:25",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ALTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00577158,
+      "stop_orig": 0.00558,
+      "stop": 0.00558,
+      "targets": [],
+      "opened_at": "2026-07-31T19:01:25",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|CUSDT|2026-07-31T17:32:59",
       "source": "paper",
@@ -1353,7 +1395,7 @@
       "cur_stop": 1853.4175,
       "remaining": 0.0,
       "pnl_usdt": -3.3018,
-      "last_price": 1866.15,
+      "last_price": 1868.02,
       "events": [
         {
           "ts": "2026-07-31T14:00:00",
@@ -1395,7 +1437,7 @@
       "cur_stop": 1853.4175,
       "remaining": 0.0,
       "pnl_usdt": -9.5653,
-      "last_price": 1866.15,
+      "last_price": 1868.02,
       "events": [
         {
           "ts": "2026-07-31T14:00:00",
@@ -6391,8 +6433,8 @@
     }
   ],
   "stats": {
-    "total": 271,
-    "open": 9,
+    "total": 273,
+    "open": 11,
     "closed": 262,
     "wins": 150,
     "win_rate": 57.3,
