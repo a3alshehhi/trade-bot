@@ -1,43 +1,4 @@
 {
-  "SD Stable|CHRUSDT|2026-07-17 10:00:00": {
-    "symbol": "CHRUSDT",
-    "label": "SD Stable",
-    "timeframe": "1h",
-    "message_id": 5008,
-    "entry": 0.0149,
-    "stop": 0.0144864,
-    "init_stop": 0.0144864,
-    "cur_stop": 0.0149,
-    "legs": [
-      0.0149
-    ],
-    "last_alert_stop": 0.0149,
-    "armed": false,
-    "targets": [
-      0.01514512,
-      0.01530428
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-17 10:00:00",
-    "last_bar": "2026-07-17 11:59:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.01549,
-    "lo_seen": 0.0149,
-    "created": "2026-07-17T10:09:58",
-    "exit_price": 0.01530428,
-    "close_card_sent": true,
-    "closed_at": "2026-07-17T12:10:39"
-  },
   "SD Stable|1000SATSUSDT|2026-07-18 00:15:00": {
     "symbol": "1000SATSUSDT",
     "label": "SD Stable",
@@ -1964,5 +1925,40 @@
     "exit_price": 0.0047636,
     "close_card_sent": true,
     "closed_at": "2026-07-31T15:00:30"
+  },
+  "SD Stable|AVAUSDT|2026-07-31 20:15:00": {
+    "symbol": "AVAUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 6033,
+    "entry": 0.1586,
+    "stop": 0.155957,
+    "init_stop": 0.155957,
+    "cur_stop": 0.155957,
+    "legs": [
+      0.1586,
+      0.1580572,
+      0.1572844
+    ],
+    "last_alert_stop": 0.155957,
+    "armed": false,
+    "targets": [
+      0.1621512,
+      0.1637428
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-31 20:15:00",
+    "last_bar": "2026-07-31 20:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1586,
+    "lo_seen": 0.1586,
+    "created": "2026-07-31T20:23:26"
   }
 }
