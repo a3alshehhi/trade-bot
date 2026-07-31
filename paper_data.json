@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-31T14:06:42",
+  "updated_at": "2026-07-31T14:17:37",
   "stats": {
-    "open": 23,
-    "closed": 257,
-    "win_rate": 61.5,
-    "profit_factor": 1.24,
-    "total_pct": 70.45,
-    "avg_pct": 0.27,
+    "open": 18,
+    "closed": 262,
+    "win_rate": 61.1,
+    "profit_factor": 1.21,
+    "total_pct": 58.28,
+    "avg_pct": 0.23,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-31",
-        "trades": 16,
-        "win_rate": 68.8,
-        "return_pct": 26.57,
+        "trades": 21,
+        "win_rate": 61.9,
+        "return_pct": 17.54,
         "week": "2026-W31",
         "month": "2026-07"
       },
@@ -223,9 +223,9 @@
     "weekly": [
       {
         "key": "2026-W31",
-        "trades": 66,
-        "win_rate": 57.6,
-        "return_pct": 15.13,
+        "trades": 71,
+        "win_rate": 56.3,
+        "return_pct": 6.92,
         "month": "2026-07"
       },
       {
@@ -253,9 +253,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 257,
-        "win_rate": 61.5,
-        "return_pct": 70.45
+        "trades": 262,
+        "win_rate": 61.1,
+        "return_pct": 58.28
       }
     ]
   },
@@ -897,10 +897,11 @@
       "entry": 0.767158,
       "stop": 0.748,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-30T21:03:39",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-31T14:17:30",
+      "realized_pct": -2.5,
+      "result_pct": -2.5
     },
     {
       "id": "الفيواب الأسبوعي · BTC|ADXUSDT|2026-07-30 20:45:00",
@@ -988,10 +989,11 @@
       "entry": 0.02144396,
       "stop": 0.02069,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-31T02:38:51",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-31T14:17:34",
+      "realized_pct": -3.52,
+      "result_pct": -3.52
     },
     {
       "id": "الفيواب الأسبوعي · BTC|1000SATSUSDT|2026-07-31 02:30:00",
@@ -1002,10 +1004,11 @@
       "entry": 9.05e-06,
       "stop": 8.68e-06,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-31T02:48:39",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-31T14:17:36",
+      "realized_pct": 0.5,
+      "result_pct": 0.5
     },
     {
       "id": "الفيواب الأسبوعي · BTC|ERAUSDT|2026-07-31 03:30:00",
@@ -3542,10 +3545,11 @@
       "entry": 1896.28,
       "stop": 1853.432,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-28T15:33:05",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-31T14:16:19",
+      "realized_pct": -2.26,
+      "result_pct": -2.26
     },
     {
       "id": "العرض/الطلب|CHZUSDT|2026-07-28 17:30:00",
@@ -3981,10 +3985,11 @@
       "entry": 9.05e-06,
       "stop": 8.68e-06,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-31T02:46:08",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-07-31T14:16:25",
+      "realized_pct": 0.5,
+      "result_pct": 0.5
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
