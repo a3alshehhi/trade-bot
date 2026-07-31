@@ -1,8 +1,92 @@
 {
-  "updated_at": "2026-07-31T01:20:21",
+  "updated_at": "2026-07-31T04:49:46",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|ERAUSDT|2026-07-31T03:49:08",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ERAUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0696946,
+      "stop_orig": 0.0637,
+      "stop": 0.0637,
+      "targets": [],
+      "opened_at": "2026-07-31T03:49:08",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|1000SATSUSDT|2026-07-31T02:48:39",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "1000SATSUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 9.05e-06,
+      "stop_orig": 8.68e-06,
+      "stop": 8.68e-06,
+      "targets": [],
+      "opened_at": "2026-07-31T02:48:39",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|SUSDT|2026-07-31T02:38:51",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "SUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.02144396,
+      "stop_orig": 0.02069,
+      "stop": 0.02069,
+      "targets": [],
+      "opened_at": "2026-07-31T02:38:51",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|ALGOUSDT|2026-07-31T02:21:12",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ALGOUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0789754,
+      "stop_orig": 0.0757,
+      "stop": 0.0757,
+      "targets": [],
+      "opened_at": "2026-07-31T02:21:12",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "binance|ALGOUSDT|2026-07-31T00:37:17",
       "source": "binance",
@@ -67,7 +151,9 @@
       "targets": [],
       "opened_at": "2026-07-30T21:48:55",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -195,12 +281,15 @@
       "targets": [],
       "opened_at": "2026-07-30T21:03:39",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "closed_at": "2026-07-31T03:49:15",
+      "realized_pct": 2.1,
+      "result_pct": 2.1,
+      "exec_pct": 2.1
     },
     {
       "id": "paper|ACTUSDT|2026-07-30T19:04:05",
@@ -240,11 +329,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-31T03:19:31",
+      "realized_pct": 1.71,
+      "result_pct": 1.71,
+      "exec_pct": 1.71
     },
     {
       "id": "paper|RENDERUSDT|2026-07-30T17:24:07",
@@ -263,11 +352,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-31T01:49:13",
+      "realized_pct": 1.16,
+      "result_pct": 1.16,
+      "exec_pct": 1.16
     },
     {
       "id": "paper|WAXPUSDT|2026-07-30T17:06:54",
@@ -283,7 +372,9 @@
       "targets": [],
       "opened_at": "2026-07-30T17:06:54",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -328,11 +419,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-31T02:04:12",
+      "realized_pct": 0.92,
+      "result_pct": 0.92,
+      "exec_pct": 0.92
     },
     {
       "id": "paper|ETHUSDT|2026-07-30T14:16:13",
@@ -349,11 +440,11 @@
       "opened_at": "2026-07-30T14:16:13",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-31T02:46:13",
+      "realized_pct": -0.13,
+      "result_pct": -0.13,
+      "exec_pct": -0.13
     },
     {
       "id": "paper|BLURUSDT|2026-07-30T11:31:18",
@@ -1157,13 +1248,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": 0.239,
+      "unrealized_pct": -0.806,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.0885,
-      "last_price": 1925.86,
+      "last_price": 1905.78,
       "events": [],
       "real_rule": "wick"
     },
@@ -1192,13 +1283,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": 0.36,
+      "unrealized_pct": -0.674,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.2655,
-      "last_price": 1925.62,
+      "last_price": 1905.78,
       "events": [],
       "real_rule": "wick"
     },
@@ -6187,13 +6278,13 @@
     }
   ],
   "stats": {
-    "total": 263,
-    "open": 22,
-    "closed": 241,
-    "wins": 139,
-    "win_rate": 57.7,
-    "net_pct": 14.14,
-    "pf": 1.05,
+    "total": 267,
+    "open": 21,
+    "closed": 246,
+    "wins": 143,
+    "win_rate": 58.1,
+    "net_pct": 19.9,
+    "pf": 1.07,
     "simulated": 2
   }
 }
