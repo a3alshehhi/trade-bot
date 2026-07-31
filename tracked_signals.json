@@ -32,81 +32,6 @@
     "close_card_sent": true,
     "closed_at": "2026-07-12T00:45:11"
   },
-  "عرض/طلب+دايفرجنس|CRVUSDT|2026-07-16 20:00:00": {
-    "symbol": "CRVUSDT",
-    "label": "عرض/طلب+دايفرجنس",
-    "timeframe": "1h",
-    "message_id": 4987,
-    "entry": 0.2199,
-    "stop": 0.210155,
-    "init_stop": 0.210155,
-    "cur_stop": 0.210155,
-    "legs": [
-      0.2199
-    ],
-    "last_alert_stop": 0.210155,
-    "armed": false,
-    "targets": [
-      0.2248832,
-      0.2285508
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-16 20:00:00",
-    "last_bar": "2026-07-17 05:59:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.2244,
-    "lo_seen": 0.2089,
-    "created": "2026-07-16T20:42:47",
-    "exit_price": 0.210155,
-    "close_card_sent": true,
-    "closed_at": "2026-07-17T06:01:49"
-  },
-  "عرض/طلب+دايفرجنس|CHRUSDT|2026-07-17 10:00:00": {
-    "symbol": "CHRUSDT",
-    "label": "عرض/طلب+دايفرجنس",
-    "timeframe": "1h",
-    "message_id": 5006,
-    "entry": 0.0149,
-    "stop": 0.0144866,
-    "init_stop": 0.0144866,
-    "cur_stop": 0.0149,
-    "legs": [
-      0.0149
-    ],
-    "last_alert_stop": 0.0144866,
-    "armed": false,
-    "targets": [
-      0.01511968,
-      0.01527192
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-17 10:00:00",
-    "last_bar": "2026-07-17 10:59:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.01529,
-    "lo_seen": 0.0149,
-    "created": "2026-07-17T10:04:30",
-    "exit_price": 0.01527192,
-    "close_card_sent": true,
-    "closed_at": "2026-07-17T11:08:26"
-  },
   "العرض/الطلب|ACTUSDT|2026-07-17 16:30:00": {
     "symbol": "ACTUSDT",
     "label": "العرض/الطلب",
@@ -5251,5 +5176,38 @@
     "exit_price": 9.095249999999999e-06,
     "close_card_sent": true,
     "closed_at": "2026-07-31T14:16:25"
+  },
+  "عرض/طلب+دايفرجنس|AIXBTUSDT|2026-07-31 15:00:00": {
+    "symbol": "AIXBTUSDT",
+    "label": "عرض/طلب+دايفرجنس",
+    "timeframe": "1h",
+    "message_id": 6024,
+    "entry": 0.01712,
+    "stop": 0.0164834,
+    "init_stop": 0.0164834,
+    "cur_stop": 0.0164834,
+    "legs": [
+      0.01712
+    ],
+    "last_alert_stop": 0.0164834,
+    "armed": false,
+    "targets": [
+      0.01743224,
+      0.01766406
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-31 15:00:00",
+    "last_bar": "2026-07-31 15:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01712,
+    "lo_seen": 0.01712,
+    "created": "2026-07-31T15:05:02"
   }
 }
