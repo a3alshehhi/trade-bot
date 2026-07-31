@@ -1,46 +1,4 @@
 {
-  "SD Stable|CFXUSDT|2026-07-17 03:15:00": {
-    "symbol": "CFXUSDT",
-    "label": "SD Stable",
-    "timeframe": "15m",
-    "message_id": 4996,
-    "entry": 0.04522,
-    "stop": 0.0443903,
-    "init_stop": 0.0443903,
-    "cur_stop": 0.04522,
-    "legs": [
-      0.04522,
-      0.045108,
-      0.04499,
-      0.044872,
-      0.044704
-    ],
-    "last_alert_stop": 0.04522,
-    "armed": false,
-    "targets": [
-      0.045762,
-      0.046108
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-17 03:15:00",
-    "last_bar": "2026-07-17 08:29:59.999000",
-    "hits": [
-      1
-    ],
-    "stopped": true,
-    "hi_seen": 0.046,
-    "lo_seen": 0.04478,
-    "created": "2026-07-17T03:22:06",
-    "exit_price": 0.04522,
-    "close_card_sent": true,
-    "closed_at": "2026-07-17T08:42:18"
-  },
   "SD Stable|CHRUSDT|2026-07-17 10:00:00": {
     "symbol": "CHRUSDT",
     "label": "SD Stable",
@@ -1960,5 +1918,39 @@
     "hi_seen": 0.0796,
     "lo_seen": 0.0796,
     "created": "2026-07-31T00:19:54"
+  },
+  "SD Stable|ACHUSDT|2026-07-31 05:15:00": {
+    "symbol": "ACHUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 6016,
+    "entry": 0.0045,
+    "stop": 0.0044229,
+    "init_stop": 0.0044229,
+    "cur_stop": 0.0044229,
+    "legs": [
+      0.0045,
+      0.0044828
+    ],
+    "last_alert_stop": 0.0044229,
+    "armed": false,
+    "targets": [
+      0.0046944,
+      0.0047636
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-31 05:15:00",
+    "last_bar": "2026-07-31 05:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0045,
+    "lo_seen": 0.0045,
+    "created": "2026-07-31T05:21:18"
   }
 }
