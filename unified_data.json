@@ -1,8 +1,58 @@
 {
-  "updated_at": "2026-07-31T20:11:54",
+  "updated_at": "2026-07-31T21:34:54",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "binance|AVAUSDT|2026-07-31T21:07:26",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "AVAUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.16,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-07-31T21:07:26",
+      "usd": 100.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-07-31T21:07:26",
+      "realized_pct": 0.0,
+      "result_pct": -0.063,
+      "exec_pct": -0.063,
+      "exec_usdt": -0.3146,
+      "exec_reasons": [
+        "وقف خسارة"
+      ]
+    },
+    {
+      "id": "bybit|AVAUSDT|2026-07-31T21:06:37",
+      "source": "bybit",
+      "source_ar": "بايبت تيستنت",
+      "symbol": "AVAUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.15965762,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-07-31T21:06:37",
+      "usd": 300.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-07-31T21:06:37",
+      "realized_pct": 0.0,
+      "result_pct": -0.036,
+      "exec_pct": -0.036,
+      "exec_usdt": -0.8499,
+      "exec_reasons": [
+        "وقف خسارة"
+      ]
+    },
     {
       "id": "paper|CYBERUSDT|2026-07-31T19:50:44",
       "source": "paper",
@@ -59,7 +109,9 @@
       "targets": [],
       "opened_at": "2026-07-31T17:32:59",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -1395,7 +1447,7 @@
       "cur_stop": 1853.4175,
       "remaining": 0.0,
       "pnl_usdt": -3.3018,
-      "last_price": 1868.02,
+      "last_price": 1862.72,
       "events": [
         {
           "ts": "2026-07-31T14:00:00",
@@ -1437,7 +1489,7 @@
       "cur_stop": 1853.4175,
       "remaining": 0.0,
       "pnl_usdt": -9.5653,
-      "last_price": 1868.02,
+      "last_price": 1862.72,
       "events": [
         {
           "ts": "2026-07-31T14:00:00",
@@ -6433,12 +6485,12 @@
     }
   ],
   "stats": {
-    "total": 273,
+    "total": 275,
     "open": 11,
-    "closed": 262,
+    "closed": 264,
     "wins": 150,
-    "win_rate": 57.3,
-    "net_pct": 20.71,
+    "win_rate": 56.8,
+    "net_pct": 20.61,
     "pf": 1.07,
     "simulated": 2
   }
