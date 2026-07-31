@@ -1838,11 +1838,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-28 15:30:00",
-    "last_bar": "2026-07-29 18:59:59.999000",
+    "last_bar": "2026-07-31 07:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 1935.68,
-    "lo_seen": 1884.51,
+    "hi_seen": 1936.99,
+    "lo_seen": 1872.0,
     "created": "2026-07-28T15:35:55"
   },
   "SD Stable|DIAUSDT|2026-07-29 17:00:00": {
@@ -1912,12 +1912,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 00:15:00",
-    "last_bar": "2026-07-31 00:15:00",
+    "last_bar": "2026-07-31 07:14:59.999000",
     "hits": [],
-    "stopped": false,
-    "hi_seen": 0.0796,
-    "lo_seen": 0.0796,
-    "created": "2026-07-31T00:19:54"
+    "stopped": true,
+    "hi_seen": 0.081,
+    "lo_seen": 0.0785,
+    "created": "2026-07-31T00:19:54",
+    "exit_price": 0.078733,
+    "close_card_sent": true,
+    "closed_at": "2026-07-31T07:25:29"
   },
   "SD Stable|ACHUSDT|2026-07-31 05:15:00": {
     "symbol": "ACHUSDT",
@@ -1946,10 +1949,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 05:15:00",
-    "last_bar": "2026-07-31 05:15:00",
+    "last_bar": "2026-07-31 07:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.0045,
+    "hi_seen": 0.00467,
     "lo_seen": 0.0045,
     "created": "2026-07-31T05:21:18"
   }
