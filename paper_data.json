@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-07-31T03:55:05",
+  "updated_at": "2026-07-31T04:03:20",
   "stats": {
-    "open": 32,
-    "closed": 246,
-    "win_rate": 61.0,
-    "profit_factor": 1.17,
-    "total_pct": 37.46,
-    "avg_pct": 0.19,
+    "open": 31,
+    "closed": 248,
+    "win_rate": 61.3,
+    "profit_factor": 1.18,
+    "total_pct": 43.29,
+    "avg_pct": 0.2,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-07-31",
-        "trades": 5,
-        "win_rate": 60.0,
-        "return_pct": 2.07,
+        "trades": 7,
+        "win_rate": 71.4,
+        "return_pct": 6.41,
         "week": "2026-W31",
         "month": "2026-07"
       },
@@ -223,9 +223,9 @@
     "weekly": [
       {
         "key": "2026-W31",
-        "trades": 55,
-        "win_rate": 54.5,
-        "return_pct": -7.15,
+        "trades": 57,
+        "win_rate": 56.1,
+        "return_pct": -3.21,
         "month": "2026-07"
       },
       {
@@ -253,9 +253,9 @@
     "monthly": [
       {
         "key": "2026-07",
-        "trades": 246,
-        "win_rate": 61.0,
-        "return_pct": 37.46
+        "trades": 248,
+        "win_rate": 61.3,
+        "return_pct": 43.29
       }
     ]
   },
@@ -2045,12 +2045,14 @@
       "entry": 0.0541596,
       "stop": 0.0528,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-30T21:03:39",
-      "closed_at": null,
-      "realized_pct": 0.78
+      "closed_at": "2026-07-31T03:49:15",
+      "realized_pct": 2.1,
+      "result_pct": 2.1
     },
     {
       "id": "الفيواب الأسبوعي · BTC|NEARUSDT|2026-07-30 21:00:00",
@@ -2135,6 +2137,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-07-31T02:48:39",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|ERAUSDT|2026-07-31 03:30:00",
+      "symbol": "ERAUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0696946,
+      "stop": 0.0637,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-07-31T03:49:08",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -3913,12 +3929,14 @@
       "entry": 0.0541596,
       "stop": 0.0528,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-07-30T21:01:20",
-      "closed_at": null,
-      "realized_pct": 0.78
+      "closed_at": "2026-07-31T03:46:21",
+      "realized_pct": 2.1,
+      "result_pct": 2.1
     },
     {
       "id": "العرض/الطلب|ALGOUSDT|2026-07-31 02:00:00",
