@@ -173,6 +173,16 @@ def tp1_too_close(entry, tp1):
 # (يتابعها trackmon في reversal.yml كل 15 دقيقة ويُصدّر paper_data.json للوحة)
 TRACK_FILE = os.environ.get("SD_TRACK", "tracked_signals.json")  # ملف التتبّع (قابل للعزل لكل بوت عبر SD_TRACK)
 DASH_LABEL = os.environ.get("SD_LABEL", "العرض/الطلب")   # اسم/وسم البوت (لتمييز الإشارات والتنفيذ)
+
+# ── إدارة الأهداف الخمسة + فلتر قمة التشبّع (طلب بو محمد 2026-07-31) ───────────
+# مقيّدة بهذين الوسمين فقط: «العرض/الطلب» و«الفيواب الأسبوعي · BTC». بقية البوتات
+# تبقى على الهدفين وإدارة 50/50 القديمة دون أي تغيير.
+_FIVE_TGT_LABELS = ("العرض/الطلب", "الفيواب الأسبوعي · BTC")
+_USE_FIVE = DASH_LABEL in _FIVE_TGT_LABELS
+# مضاعفات فيبو للأهداف الخمسة، تُقاس من قاع الموجة: target = wave_low + m·span.
+TP5_FIBS = tuple(float(x) for x in os.environ.get(
+    "SD_TP5_FIBS", "1.0,1.272,1.618,2.0,2.16").split(","))
+
 _TF_MS = {"1m": 60000, "3m": 180000, "5m": 300000, "15m": 900000, "30m": 1800000,
           "1h": 3600000, "2h": 7200000, "4h": 14400000, "1d": 86400000}
 
@@ -859,14 +869,20 @@ def track_for_dashboard(signals, message_id, tf=None, path=TRACK_FILE):
         key = f"{DASH_LABEL}|{s['sym']}|{bar_ts}"
         if key in data:
             continue
+        # أهداف/تقسيم/إدارة: خمسة أهداف للبوتين الجديدين (mgmt="5t")، وإلا الهدفان القديمان.
+        _t5 = s.get("targets5")
+        if _t5 and DASH_LABEL in _FIVE_TGT_LABELS:
+            _targets, _split, _mgmt = _t5, [50, 0, 0, 0, 50], "5t"
+        else:
+            _targets, _split, _mgmt = [tp1, tp2], [50, 50], "5050"
         data[key] = {
             "symbol": s["sym"], "label": DASH_LABEL, "timeframe": tf,
             "message_id": message_id,
             "entry": entry, "stop": stop, "init_stop": stop, "cur_stop": stop,
             "legs": s.get("legs", [entry]),          # سلالم DCA للتوسيط (للتنفيذ الحيّ)
             "last_alert_stop": stop, "armed": False,
-            "targets": [tp1, tp2], "tp_split": [50, 50],
-            "is_trendwave": False, "mgmt": "5050", "breakeven_done": False,
+            "targets": _targets, "tp_split": _split,
+            "is_trendwave": False, "mgmt": _mgmt, "breakeven_done": False,
             "bar_ts": bar_ts, "last_bar": bar_ts,
             "hits": [], "stopped": False, "hi_seen": entry, "lo_seen": entry,
             "created": dt.datetime.now().isoformat(timespec="seconds"),
@@ -1396,6 +1412,22 @@ def scan_whale(basket=None):
     return signals
 
 
+def _ob_episode_highs(rs, h, ob, upto):
+    """قمم فترات التشبّع الشرائي حتى الفهرس upto (ضمناً).
+    فترة التشبّع = سلسلة شموع متصلة قيمتها Ultimate RSI ≥ ob؛ قمتها = أعلى high فيها.
+    يعيد قائمة القمم بالترتيب الزمني (الأخيرة = التشبّع الحالي، وقبلها = السابق)."""
+    eps = []
+    peak = None
+    for j in range(0, min(upto, len(rs) - 1) + 1):
+        if math.isfinite(rs[j]) and rs[j] >= ob:
+            peak = h[j] if peak is None else max(peak, h[j])
+        elif peak is not None:
+            eps.append(peak); peak = None
+    if peak is not None:
+        eps.append(peak)
+    return eps
+
+
 def vwave_signal(d1):
     """آلة حالات على الشموع المغلقة (شروط بو محمد الخمسة):
       المرحلة 1: تشبّع بيعي RSI21 ≤ vw_os — لمسة أو أكثر بنفس الموجة، قاع الموجة يتحدّث.
@@ -1457,14 +1489,26 @@ def vwave_signal(d1):
                 wave_high = max(h[wave_low_i:i + 1])
                 span = wave_high - wave_low
                 if span > 0:
-                    levels = [wave_high - fb * span for fb in CFG["dca_fibs"]]
-                    # 2026-07-17 (طلب بو محمد): TP1=قمة التصحيح، TP2=1.272
-                    sig = dict(i=i, ts=t[i], os_hits=os_hits,
-                               wave_low=wave_low, wave_high=wave_high,
-                               entry=levels[0], levels=levels, stop=wave_low,
-                               tp1=wave_high,                      # الهدف الأول = قمة التصحيح
-                               tp2=wave_low + 1.272 * span,        # الهدف الثاني = 1.272
-                               vwap=vw[i], rsi=rs[i])
+                    # فلتر بو محمد (2026-07-31، للبوتين الخمسة-أهداف فقط): قمة التشبّع
+                    # الشرائي الحالية يجب أن تكون أعلى من قمة التشبّع السابقة، وإلا لا دخول.
+                    # ولو لم توجد قمة تشبّع سابقة (فترة واحدة فقط) → لا دخول.
+                    _pass = True
+                    if _USE_FIVE:
+                        _obh = _ob_episode_highs(rs, h, OB, i)
+                        _pass = len(_obh) >= 2 and _obh[-1] > _obh[-2]
+                    if _pass:
+                        levels = [wave_high - fb * span for fb in CFG["dca_fibs"]]
+                        # 2026-07-17: TP1=قمة التصحيح، TP2=1.272 (للبقية). وللبوتين الجديدين:
+                        # خمسة امتدادات فيبو من قاع الموجة (1.0/1.272/1.618/2.0/2.16).
+                        _t5 = ([round(wave_low + m * span, 8) for m in TP5_FIBS]
+                               if _USE_FIVE else None)
+                        sig = dict(i=i, ts=t[i], os_hits=os_hits,
+                                   wave_low=wave_low, wave_high=wave_high,
+                                   entry=levels[0], levels=levels, stop=wave_low,
+                                   tp1=wave_high,                      # الهدف الأول = قمة التصحيح = 1.0
+                                   tp2=wave_low + 1.272 * span,        # الهدف الثاني = 1.272
+                                   targets5=_t5,                       # 5 أهداف فيبو (البوتان الجديدان)
+                                   vwap=vw[i], rsi=rs[i])
                 phase, os_hits = 0, 0                    # جاهز لدورة جديدة
                 wave_low = wave_low_i = cross_i = None
     return sig if (sig and sig["i"] == n - 1) else None
@@ -1472,7 +1516,7 @@ def vwave_signal(d1):
 
 def format_message_vwave(signals):
     """بطاقة تيليجرام لاستراتيجية الفيواب الأسبوعي (دخول بانتظار مستويات الفيبو)."""
-    nums = ["1️⃣", "2️⃣"]
+    nums = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣"]
     now = dt.datetime.now().strftime("%H:%M:%S")
     sep = "\n➖➖➖➖➖➖➖➖➖\n"
     blocks = []
@@ -1497,14 +1541,19 @@ def format_message_vwave(signals):
             "",
             "🎯 الأهداف (امتدادات فيبو):",
         ]
-        for k, tgt in enumerate([s.get("tp1"), s.get("tp2")]):
+        _tgts = s.get("targets5") or [s.get("tp1"), s.get("tp2")]
+        for k, tgt in enumerate(_tgts):
             if not tgt:
                 continue
             gain = ((tgt - entry) / entry * 100) if entry else 0.0
             lines.append(f"{nums[k]} {_fmt(tgt)}  (+{gain:.2f}% من المستوى الأول)")
+        _mgmt_txt = ("⚖️ الإدارة: جني 50% عند الهدف1 + وقف=الدخول+0.5% ← "
+                     "الوقف ينتقل لكل هدف سابق ← خروج كامل عند الهدف5"
+                     if s.get("targets5") else
+                     "⚖️ إدارة 50/50: جني 50% عند الهدف الأول + تعادل + قفل 0.3R")
         lines += [
             "",
-            "⚖️ إدارة 50/50: جني 50% عند الهدف الأول + تعادل + قفل 0.3R",
+            _mgmt_txt,
             f"⏰ {now}",
         ]
         blocks.append("\n".join(lines))
@@ -1549,6 +1598,7 @@ def scan_vwave(basket=None):
                 legs=levels, dca_levels=levels, wait_entry=True,
                 max_age_h=CFG["wait_max_age_h"],
                 tp1=round(sig["tp1"], 8), tp2=round(sig["tp2"], 8),
+                targets5=sig.get("targets5"),
                 os_hits=sig["os_hits"]))
         except Exception as ex:
             print("vwave skip", s, ex)
