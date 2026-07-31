@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-31T12:24:13",
+  "updated_at": "2026-07-31T15:08:44",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -92,11 +92,11 @@
       "opened_at": "2026-07-31T02:48:39",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-31T14:17:36",
+      "realized_pct": 0.5,
+      "result_pct": 0.5,
+      "exec_pct": 0.5
     },
     {
       "id": "paper|SUSDT|2026-07-31T02:38:51",
@@ -113,11 +113,11 @@
       "opened_at": "2026-07-31T02:38:51",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-31T14:17:34",
+      "realized_pct": -3.52,
+      "result_pct": -3.52,
+      "exec_pct": -3.52
     },
     {
       "id": "paper|ALGOUSDT|2026-07-31T02:21:12",
@@ -314,11 +314,11 @@
       "opened_at": "2026-07-30T21:03:39",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-31T14:17:30",
+      "realized_pct": -2.5,
+      "result_pct": -2.5,
+      "exec_pct": -2.5
     },
     {
       "id": "paper|ADXUSDT|2026-07-30T21:03:39",
@@ -713,11 +713,11 @@
       "opened_at": "2026-07-30T04:46:17",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-31T12:31:27",
+      "realized_pct": -2.46,
+      "result_pct": -2.46,
+      "exec_pct": -2.46
     },
     {
       "id": "paper|ARBUSDT|2026-07-30T03:16:13",
@@ -1298,21 +1298,28 @@
       "opened_at": "2026-07-28T15:39:15",
       "usd": 88.48,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
+      "status": "closed",
+      "closed_at": "2026-07-31T14:00:00",
+      "realized_pct": -3.532,
+      "result_pct": -3.732,
       "exec_pct": null,
-      "net_pct": -0.1,
-      "result_r": 0.0,
-      "unrealized_pct": -2.265,
-      "exit_price": null,
-      "exit_reason": null,
+      "net_pct": -3.732,
+      "result_r": -1.0,
+      "unrealized_pct": 0.0,
+      "exit_price": 1853.4175,
+      "exit_reason": "وقف خسارة",
       "cur_stop": 1853.4175,
-      "remaining": 1.0,
-      "pnl_usdt": -0.0885,
-      "last_price": 1877.76,
-      "events": [],
+      "remaining": 0.0,
+      "pnl_usdt": -3.3018,
+      "last_price": 1859.23,
+      "events": [
+        {
+          "ts": "2026-07-31T14:00:00",
+          "type": "stop",
+          "price": 1853.4175,
+          "pct": -3.532
+        }
+      ],
       "real_rule": "wick"
     },
     {
@@ -1333,21 +1340,28 @@
       "opened_at": "2026-07-28T15:36:30",
       "usd": 265.45,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
+      "status": "closed",
+      "closed_at": "2026-07-31T14:00:00",
+      "realized_pct": -3.403,
+      "result_pct": -3.603,
       "exec_pct": null,
-      "net_pct": -0.1,
-      "result_r": 0.0,
-      "unrealized_pct": -2.135,
-      "exit_price": null,
-      "exit_reason": null,
+      "net_pct": -3.603,
+      "result_r": -1.0,
+      "unrealized_pct": 0.0,
+      "exit_price": 1853.4175,
+      "exit_reason": "وقف خسارة",
       "cur_stop": 1853.4175,
-      "remaining": 1.0,
-      "pnl_usdt": -0.2655,
-      "last_price": 1877.76,
-      "events": [],
+      "remaining": 0.0,
+      "pnl_usdt": -9.5653,
+      "last_price": 1859.3,
+      "events": [
+        {
+          "ts": "2026-07-31T14:00:00",
+          "type": "stop",
+          "price": 1853.4175,
+          "pct": -3.403
+        }
+      ],
       "real_rule": "wick"
     },
     {
@@ -1386,11 +1400,11 @@
       "opened_at": "2026-07-28T15:33:05",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-31T14:16:19",
+      "realized_pct": -2.26,
+      "result_pct": -2.26,
+      "exec_pct": -2.26
     },
     {
       "id": "paper|ADXUSDT|2026-07-28T14:07:42",
@@ -6336,12 +6350,12 @@
   ],
   "stats": {
     "total": 269,
-    "open": 15,
-    "closed": 254,
-    "wins": 148,
-    "win_rate": 58.3,
-    "net_pct": 36.81,
-    "pf": 1.13,
+    "open": 8,
+    "closed": 261,
+    "wins": 149,
+    "win_rate": 57.1,
+    "net_pct": 19.23,
+    "pf": 1.06,
     "simulated": 2
   }
 }
