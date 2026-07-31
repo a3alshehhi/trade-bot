@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-31T10:23:25",
+  "updated_at": "2026-07-31T12:24:13",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -67,12 +67,15 @@
       "targets": [],
       "opened_at": "2026-07-31T03:49:08",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "closed_at": "2026-07-31T10:47:22",
+      "realized_pct": 7.21,
+      "result_pct": 7.21,
+      "exec_pct": 7.21
     },
     {
       "id": "paper|1000SATSUSDT|2026-07-31T02:48:39",
@@ -290,11 +293,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-31T10:32:28",
+      "realized_pct": 2.13,
+      "result_pct": 2.13,
+      "exec_pct": 2.13
     },
     {
       "id": "paper|DOTUSDT|2026-07-30T21:03:39",
@@ -356,13 +359,14 @@
       "opened_at": "2026-07-30T19:04:05",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-31T11:21:39",
+      "realized_pct": 3.15,
+      "result_pct": 3.15,
+      "exec_pct": 3.15
     },
     {
       "id": "paper|STXUSDT|2026-07-30T18:36:23",
@@ -1301,13 +1305,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -1.806,
+      "unrealized_pct": -2.265,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.0885,
-      "last_price": 1886.57,
+      "last_price": 1877.76,
       "events": [],
       "real_rule": "wick"
     },
@@ -1336,13 +1340,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -1.676,
+      "unrealized_pct": -2.135,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.2655,
-      "last_price": 1886.57,
+      "last_price": 1877.76,
       "events": [],
       "real_rule": "wick"
     },
@@ -6332,12 +6336,12 @@
   ],
   "stats": {
     "total": 269,
-    "open": 18,
-    "closed": 251,
-    "wins": 145,
-    "win_rate": 57.8,
-    "net_pct": 24.32,
-    "pf": 1.08,
+    "open": 15,
+    "closed": 254,
+    "wins": 148,
+    "win_rate": 58.3,
+    "net_pct": 36.81,
+    "pf": 1.13,
     "simulated": 2
   }
 }
