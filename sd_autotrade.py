@@ -224,7 +224,7 @@ def _recompute_avg(pos):
 
 # ── فتح مركز DCA (ساق أولى فوريّة الآن + سلّم فيبو ينتظر الارتدادات) ───────────
 def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equity,
-                   levels=None):
+                   levels=None, targets5=None, mgmt=None):
     """دخول DCA تدريجي: يشتري الساق الأولى سوقاً الآن (ضمان المشاركة)، ويجهّز باقي
     السيقان لتُملأ عند نزول السعر لمستويات فيبو في الدورات التالية. الوقف الابتدائي
     من الإشارة (تحت أعمق مستوى). يرجع True عند نجاح فتح الساق الأولى."""
@@ -274,6 +274,11 @@ def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equit
         "init_stop": stop, "stop": stop, "R": max(fill - stop, 1e-12),
         "tp1": tp1, "tp2": tp2 if tp2 and tp2 > tp1 else fill + 2 * (fill - stop),
         "qty": qty, "qty_open": qty, "tp1_done": False, "armed": False,
+        # إدارة الأهداف الخمسة (بوتا العرض/الطلب فقط — طلب بو محمد 2026-07-31)
+        "mgmt": mgmt or "5050",
+        "targets": ([round(float(x), 8) for x in targets5]
+                    if (mgmt == "5t" and targets5 and len(targets5) >= 5) else None),
+        "tp_idx": 0,
         "opened_ts": _now(),
     }
     _save(POS_PATH, positions)
@@ -282,6 +287,16 @@ def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equit
     risk_pct = ((fill - stop) / fill * 100) if fill else 0.0
     g1 = ((tp1v - fill) / fill * 100) if fill else 0.0
     g2 = ((tp2v - fill) / fill * 100) if fill else 0.0
+    _t5 = positions[sym].get("targets")
+    if _t5:
+        _tgt_lines = "\n".join(
+            f"{_n} {_fmt(_tv)}  (+{(((_tv - fill) / fill * 100) if fill else 0):.2f}%)"
+            for _n, _tv in zip(["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣"], _t5))
+        _mgmt_line = ("⚖️ جني 50% عند الهدف1 + وقف=الدخول+0.5% ← "
+                      "الوقف لكل هدف سابق ← خروج كامل عند الهدف5")
+    else:
+        _tgt_lines = f"1️⃣ {_fmt(tp1v)}  (+{g1:.2f}%)\n2️⃣ {_fmt(tp2v)}  (+{g2:.2f}%)"
+        _mgmt_line = "⚖️ إدارة 50/50: جني 50% عند الهدف1 + قفل الوقف"
     msg = (
         f"{SEP}\n🟢 <b>صفقة جديدة [{EX_NAME}] — شراء</b>\n{SEP}\n"
         f"💎 <b>{sym}</b> · ⏱️ {tf}  [{label}]\n"
@@ -291,9 +306,8 @@ def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equit
         + (f"🪜 سلّم الفيبو ({n}): {lvl_txt}\n" if n > 1 else "")
         + f"🛑 الوقف: {_fmt(stop)}  (−{risk_pct:.2f}%)\n"
         "\n🎯 الأهداف:\n"
-        f"1️⃣ {_fmt(tp1v)}  (+{g1:.2f}%)\n"
-        f"2️⃣ {_fmt(tp2v)}  (+{g2:.2f}%)\n"
-        f"⚖️ إدارة 50/50: جني 50% عند الهدف1 + قفل الوقف\n"
+        f"{_tgt_lines}\n"
+        f"{_mgmt_line}\n"
         "\n"
         f"📊 <a href=\"{DASH_URL}\">لوحة الحساب التجريبي</a>  ·  "
         f"📜 <a href=\"{TRACK_URL}\">متتبّع الصفقات</a>\n"
@@ -468,9 +482,11 @@ def execute_from_tracker():
                 print(f"autotrade[{EX_NAME}]: {sym} بانتظار النزول لمستوى الفيبو الأول "
                       f"({_fmt(live)} > {_fmt(entry)}) — تأجيل")
                 continue
+        _mgmt = tr.get("mgmt")
         if _open_position(sym, tr.get("timeframe", ""), entry, stop, tp1, tp2,
                           tr.get("prob"), label or "إشارة", positions, equity,
-                          levels=tr.get("dca_levels")):
+                          levels=tr.get("dca_levels"),
+                          targets5=(targets if _mgmt == "5t" else None), mgmt=_mgmt):
             executed.add(ekey)
             last_entry[sym] = now.isoformat(timespec="seconds")   # ابدأ التهدئة
             opened += 1
@@ -587,10 +603,129 @@ def manage_open_positions():
         _save(POS_PATH, positions)
 
 
+def _manage_five(sym, positions):
+    """إدارة الأهداف الخمسة (بوتا العرض/الطلب و BTC — طلب بو محمد 2026-07-31):
+      • الهدف1 → بيع 50% + الوقف = الدخول +0.5%.
+      • الهدف2/3/4 → الوقف ينتقل إلى الهدف السابق (2→هدف1 … 4→هدف3).
+      • الهدف5 → خروج كامل للباقي.
+      • يبقى «الخروج الفوري» للطوارئ (تحت الفيواب الأسبوعي + هيستوجرام أحمر قبل الهدف1).
+    بلا وقف متدرّج بنيوي. يرجع True إن تغيّرت الحالة."""
+    pos = positions[sym]
+    changed = False
+    try:
+        price = bx.last_price(sym)
+    except Exception as ex:
+        print(f"manage[{EX_NAME}]: تعذّر جلب سعر {sym} —", ex)
+        return False
+    if not price:
+        return False
+
+    if _fill_dca_legs(sym, pos, price):              # (0) ملء سيقان DCA
+        changed = True
+
+    entry = pos.get("avg_entry", pos.get("entry"))
+    tgts = pos.get("targets") or []
+    tp_idx = pos.get("tp_idx", 0)
+
+    # (0.5) الخروج الفوري للطوارئ — قبل الهدف1 فقط (تحت الفيواب الأسبوعي + هيستوجرام أحمر)
+    if not pos.get("tp1_done"):
+        try:
+            import staged_trail as _stg
+            if _stg.applies_to(pos.get("label")):
+                import sd_bot as _sb
+                _d = _sb.fetch_klines(sym, pos.get("tf") or "15m", 1)
+                if _d and _d.get("c") and len(_d["c"]) > 40:
+                    _d = {k: v[:-1] for k, v in _d.items()}
+                    try:
+                        _e_ms = int(dt.datetime.fromisoformat(pos["opened_ts"]).timestamp() * 1000)
+                        _e = next((i for i in range(len(_d["t"])) if _d["t"][i] >= _e_ms), 0)
+                    except Exception:
+                        _e = max(0, len(_d["c"]) - 192)
+                    _wv = _sb.vwap_weekly(_d["t"], _d["h"], _d["l"], _d["c"], _d["v"])
+                    _hx, _hn = _stg.hard_exit(
+                        list(_d["h"][_e:]), list(_d["l"][_e:]), list(_d["c"][_e:]),
+                        entry, tgts[0], _wv[-1] if _wv else None)
+                    if _hx:
+                        sold = _sell(sym, pos["qty_open"], price)
+                        pnl = _record_exit(pos, sold or pos["qty_open"], price,
+                                           "خروج فوري (تحت الفيواب+أحمر) — طوارئ")
+                        del positions[sym]
+                        _notify(f"⚠️ خروج فوري [{EX_NAME}] {sym} @ {_fmt(price)} — {_hn} "
+                                f"(≈ {_fmt(pnl)} USDT)", reply_to=pos.get("msg_id"))
+                        return True
+        except Exception as _ex:
+            print(f"[hardexit] {sym}: {_ex}")
+
+    # (1) الوقف أولاً
+    if price <= pos["stop"]:
+        sold = _sell(sym, pos["qty_open"], price)
+        reason = "تتبّع الأهداف" if pos.get("tp1_done") else "وقف خسارة"
+        pnl = _record_exit(pos, sold or pos["qty_open"], price, reason)
+        del positions[sym]
+        _notify(f"🛑 خروج [{EX_NAME}] {sym} @ {_fmt(price)} ({reason}) — "
+                f"≈ {_fmt(pnl)} USDT", reply_to=pos.get("msg_id"))
+        return True
+
+    # (2) الهدف الخامس → خروج كامل للباقي
+    if price >= tgts[4]:
+        sold = _sell(sym, pos["qty_open"], price)
+        pnl = _record_exit(pos, sold or pos["qty_open"], price, "هدف5 (خروج كامل)")
+        del positions[sym]
+        _notify(f"🏁 هدف5 [{EX_NAME}] {sym} @ {_fmt(price)} — إغلاق كامل "
+                f"(≈ {_fmt(pnl)} USDT)", reply_to=pos.get("msg_id"))
+        return True
+
+    # (3) الهدف الأول → بيع 50% + الوقف = الدخول +0.5%
+    if not pos.get("tp1_done") and price >= tgts[0]:
+        half = pos["qty_open"] * 0.5
+        _filt = bx.instrument_filters(sym)
+        _min_amt = float(_filt.get("minOrderAmt") or 5)
+        if half * price < _min_amt:                 # النصف أصغر من حد المنصّة → إغلاق كامل
+            sold = _sell(sym, pos["qty_open"], price)
+            pnl = _record_exit(pos, sold or pos["qty_open"], price,
+                               "هدف1 (إغلاق كامل — النصف أصغر من حد المنصّة)")
+            del positions[sym]
+            _notify(f"🏁 هدف1 [{EX_NAME}] {sym} @ {_fmt(price)} — إغلاق كامل "
+                    f"(≈ {_fmt(pnl)} USDT)", reply_to=pos.get("msg_id"))
+            return True
+        sold = _sell(sym, half, price)
+        if sold > 0:
+            pnl = _record_exit(pos, sold, price, "هدف1 (50%)")
+            pos["qty_open"] -= sold
+            pos["tp1_done"] = True
+            pos["tp_idx"] = 1
+            new_stop = entry * 1.005                 # الدخول +0.5%
+            if new_stop > pos["stop"]:
+                pos["stop"] = new_stop
+            changed = True
+            _notify(f"🎯 هدف1 [{EX_NAME}] {sym} @ {_fmt(price)} — جني 50% "
+                    f"(≈ {_fmt(pnl)} USDT) + الوقف عند {_fmt(pos['stop'])} (الدخول+0.5%)",
+                    reply_to=pos.get("msg_id"))
+        return changed
+
+    # (4) الأهداف 2/3/4 → نقل الوقف إلى الهدف السابق (لا ينزل أبداً)
+    if pos.get("tp1_done"):
+        for k in (1, 2, 3):                          # k=1→هدف2, k=2→هدف3, k=3→هدف4
+            if tp_idx <= k and price >= tgts[k]:
+                pos["tp_idx"] = k + 1
+                tp_idx = k + 1
+                new_stop = tgts[k - 1]               # الوقف ← الهدف السابق
+                if new_stop > pos["stop"]:
+                    pos["stop"] = new_stop
+                    changed = True
+                    _notify(f"🔒 هدف{k+1} [{EX_NAME}] {sym} @ {_fmt(price)} — "
+                            f"الوقف ينتقل إلى الهدف{k} ({_fmt(pos['stop'])})",
+                            reply_to=pos.get("msg_id"))
+    return changed
+
+
 def _manage_one(sym, positions):
     """يدير مركزاً واحداً؛ يرجع True إن تغيّرت الحالة. يرفع الاستثناءات للمنادي
     الذي يعزلها لكل رمز على حدة."""
     pos = positions[sym]
+    # إدارة الأهداف الخمسة (بوتا العرض/الطلب و BTC): مسار منفصل بلا وقف متدرّج — طلب بو محمد 2026-07-31.
+    if pos.get("mgmt") == "5t" and len(pos.get("targets") or []) >= 5:
+        return _manage_five(sym, positions)
     changed = False
     try:
         price = bx.last_price(sym)
