@@ -2183,5 +2183,49 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|1000SATSUSDT|2026-07-31 02:30:00": {
+    "symbol": "1000SATSUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6008,
+    "entry": 9.05e-06,
+    "stop": 8.68e-06,
+    "init_stop": 8.68e-06,
+    "cur_stop": 8.68e-06,
+    "legs": [
+      9.05e-06,
+      8.98e-06,
+      8.91e-06,
+      8.81e-06
+    ],
+    "last_alert_stop": 8.68e-06,
+    "armed": false,
+    "targets": [
+      9.28e-06,
+      9.44e-06
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-07-31 02:30:00",
+    "last_bar": "2026-07-31 02:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 9.05e-06,
+    "lo_seen": 9.05e-06,
+    "created": "2026-07-31T02:48:39",
+    "dca_levels": [
+      9.05e-06,
+      8.98e-06,
+      8.91e-06,
+      8.81e-06
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
