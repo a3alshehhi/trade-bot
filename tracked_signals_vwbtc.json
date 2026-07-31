@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-07-31 10:29:59.999000",
+    "last_bar": "2026-07-31 10:44:59.999000",
     "hits": [
       1
     ],
@@ -1635,7 +1635,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 16:45:00",
-    "last_bar": "2026-07-31 10:29:59.999000",
+    "last_bar": "2026-07-31 10:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0572878,
@@ -1779,7 +1779,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 18:45:00",
-    "last_bar": "2026-07-31 10:29:59.999000",
+    "last_bar": "2026-07-31 10:44:59.999000",
     "hits": [
       1
     ],
@@ -1826,7 +1826,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 20:45:00",
-    "last_bar": "2026-07-31 10:29:59.999000",
+    "last_bar": "2026-07-31 10:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.7251,
@@ -1920,7 +1920,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 20:45:00",
-    "last_bar": "2026-07-31 10:29:59.999000",
+    "last_bar": "2026-07-31 10:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.776,
@@ -2014,7 +2014,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 21:00:00",
-    "last_bar": "2026-07-31 10:29:59.999000",
+    "last_bar": "2026-07-31 10:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.693,
@@ -2108,7 +2108,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 21:30:00",
-    "last_bar": "2026-07-31 10:29:59.999000",
+    "last_bar": "2026-07-31 10:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.3309,
@@ -2152,7 +2152,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 02:00:00",
-    "last_bar": "2026-07-31 10:29:59.999000",
+    "last_bar": "2026-07-31 10:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0798,
@@ -2196,7 +2196,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 02:15:00",
-    "last_bar": "2026-07-31 10:29:59.999000",
+    "last_bar": "2026-07-31 10:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.02164,
@@ -2240,7 +2240,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 02:30:00",
-    "last_bar": "2026-07-31 10:29:59.999000",
+    "last_bar": "2026-07-31 10:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 9.2e-06,
@@ -2263,7 +2263,7 @@
     "entry": 0.0696946,
     "stop": 0.0637,
     "init_stop": 0.0637,
-    "cur_stop": 0.0637,
+    "cur_stop": 0.0696946,
     "legs": [
       0.0696946,
       0.06855,
@@ -2284,10 +2284,13 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 03:30:00",
-    "last_bar": "2026-07-31 10:29:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.0724,
+    "last_bar": "2026-07-31 10:44:59.999000",
+    "hits": [
+      1,
+      2
+    ],
+    "stopped": true,
+    "hi_seen": 0.0826,
     "lo_seen": 0.0666,
     "created": "2026-07-31T03:49:08",
     "dca_levels": [
@@ -2297,6 +2300,9 @@
       0.0657758
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.0760384,
+    "close_card_sent": true,
+    "closed_at": "2026-07-31T10:47:22"
   }
 }
