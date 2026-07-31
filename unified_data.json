@@ -1,8 +1,58 @@
 {
-  "updated_at": "2026-07-30T23:45:05",
+  "updated_at": "2026-07-31T01:20:21",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "binance|ALGOUSDT|2026-07-31T00:37:17",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "ALGOUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0806,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-07-31T00:37:17",
+      "usd": 100.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-07-31T00:37:17",
+      "realized_pct": 0.0,
+      "result_pct": -0.496,
+      "exec_pct": -0.496,
+      "exec_usdt": -1.2758,
+      "exec_reasons": [
+        "وقف خسارة"
+      ]
+    },
+    {
+      "id": "bybit|ALGOUSDT|2026-07-31T00:36:24",
+      "source": "bybit",
+      "source_ar": "بايبت تيستنت",
+      "symbol": "ALGOUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.08073001,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-07-31T00:36:24",
+      "usd": 300.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-07-31T00:36:24",
+      "realized_pct": 0.0,
+      "result_pct": -0.657,
+      "exec_pct": -0.657,
+      "exec_usdt": -4.7146,
+      "exec_reasons": [
+        "وقف خسارة"
+      ]
+    },
     {
       "id": "paper|FETUSDT|2026-07-30T21:48:55",
       "source": "paper",
@@ -101,7 +151,9 @@
       "targets": [],
       "opened_at": "2026-07-30T21:03:39",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -185,7 +237,9 @@
       "targets": [],
       "opened_at": "2026-07-30T18:36:23",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -337,11 +391,11 @@
       "opened_at": "2026-07-30T11:01:22",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-07-31T00:31:24",
+      "realized_pct": -1.57,
+      "result_pct": -1.57,
+      "exec_pct": -1.57
     },
     {
       "id": "paper|ASTRUSDT|2026-07-30T09:46:22",
@@ -1103,13 +1157,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": 0.179,
+      "unrealized_pct": 0.239,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.0885,
-      "last_price": 1924.71,
+      "last_price": 1925.86,
       "events": [],
       "real_rule": "wick"
     },
@@ -1138,13 +1192,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": 0.312,
+      "unrealized_pct": 0.36,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 1853.4175,
       "remaining": 1.0,
       "pnl_usdt": -0.2655,
-      "last_price": 1924.71,
+      "last_price": 1925.62,
       "events": [],
       "real_rule": "wick"
     },
@@ -6133,13 +6187,13 @@
     }
   ],
   "stats": {
-    "total": 261,
-    "open": 23,
-    "closed": 238,
+    "total": 263,
+    "open": 22,
+    "closed": 241,
     "wins": 139,
-    "win_rate": 58.4,
-    "net_pct": 16.87,
-    "pf": 1.06,
+    "win_rate": 57.7,
+    "net_pct": 14.14,
+    "pf": 1.05,
     "simulated": 2
   }
 }
