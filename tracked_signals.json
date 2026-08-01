@@ -5222,5 +5222,55 @@
     "exit_price": 31.66,
     "close_card_sent": true,
     "closed_at": "2026-08-01T06:46:26"
+  },
+  "العرض/الطلب|ANKRUSDT|2026-08-01 07:15:00": {
+    "symbol": "ANKRUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6046,
+    "entry": 0.00336596,
+    "stop": 0.00323,
+    "init_stop": 0.00323,
+    "cur_stop": 0.00323,
+    "legs": [
+      0.00336596,
+      0.00334,
+      0.00331404,
+      0.00327708
+    ],
+    "last_alert_stop": 0.00323,
+    "armed": false,
+    "targets": [
+      0.00345,
+      0.00350984,
+      0.00358596,
+      0.00367,
+      0.0037052
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-01 07:15:00",
+    "last_bar": "2026-08-01 07:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00336596,
+    "lo_seen": 0.00336596,
+    "created": "2026-08-01T07:31:29",
+    "dca_levels": [
+      0.00336596,
+      0.00334,
+      0.00331404,
+      0.00327708
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }

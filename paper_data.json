@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-01T07:19:36",
+  "updated_at": "2026-08-01T07:32:39",
   "stats": {
-    "open": 16,
+    "open": 17,
     "closed": 270,
     "win_rate": 61.5,
     "profit_factor": 1.25,
@@ -3995,6 +3995,20 @@
       "closed_at": "2026-08-01T06:46:26",
       "realized_pct": 3.52,
       "result_pct": 3.52
+    },
+    {
+      "id": "العرض/الطلب|ANKRUSDT|2026-08-01 07:15:00",
+      "symbol": "ANKRUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00336596,
+      "stop": 0.00323,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-01T07:31:29",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
