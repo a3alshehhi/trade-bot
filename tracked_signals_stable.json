@@ -1853,13 +1853,13 @@
     "entry": 0.1497,
     "stop": 0.147645,
     "init_stop": 0.147645,
-    "cur_stop": 0.147645,
+    "cur_stop": 0.1497,
     "legs": [
       0.1497,
       0.1494134,
       0.1487918
     ],
-    "last_alert_stop": 0.147645,
+    "last_alert_stop": 0.1497,
     "armed": false,
     "targets": [
       0.1527064,
@@ -1873,11 +1873,13 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-08-01 12:15:00",
-    "last_bar": "2026-08-01 12:15:00",
-    "hits": [],
+    "last_bar": "2026-08-01 15:29:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.1497,
-    "lo_seen": 0.1497,
+    "hi_seen": 0.1528,
+    "lo_seen": 0.1495,
     "created": "2026-08-01T12:21:02"
   }
 }
