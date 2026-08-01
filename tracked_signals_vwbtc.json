@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-08-01 10:14:59.999000",
+    "last_bar": "2026-08-01 18:59:59.999000",
     "hits": [
       1
     ],
@@ -1635,11 +1635,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 16:45:00",
-    "last_bar": "2026-08-01 10:14:59.999000",
+    "last_bar": "2026-08-01 18:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0572878,
-    "lo_seen": 0.0531,
+    "lo_seen": 0.0525,
     "created": "2026-07-30T17:06:54",
     "dca_levels": [
       0.0572878,
@@ -1648,7 +1648,10 @@
       0.0544194
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.0529,
+    "close_card_sent": true,
+    "closed_at": "2026-08-01T19:02:37"
   },
   "الفيواب الأسبوعي · BTC|RENDERUSDT|2026-07-30 17:00:00": {
     "symbol": "RENDERUSDT",
@@ -2123,10 +2126,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 21:30:00",
-    "last_bar": "2026-08-01 10:14:59.999000",
+    "last_bar": "2026-08-01 18:59:59.999000",
     "hits": [],
-    "stopped": false,
-    "hi_seen": 0.3328,
+    "stopped": true,
+    "hi_seen": 0.3329,
     "lo_seen": 0.3156,
     "created": "2026-07-30T21:48:55",
     "dca_levels": [
@@ -2137,7 +2140,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 2
+    "st_stage": 2,
+    "exit_price": 0.31969349999999996,
+    "close_card_sent": true,
+    "closed_at": "2026-08-01T19:02:39"
   },
   "الفيواب الأسبوعي · BTC|ALGOUSDT|2026-07-31 02:00:00": {
     "symbol": "ALGOUSDT",
