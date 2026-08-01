@@ -1914,11 +1914,14 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-08-01 16:30:00",
-    "last_bar": "2026-08-01 16:30:00",
+    "last_bar": "2026-08-01 17:44:59.999000",
     "hits": [],
-    "stopped": false,
-    "hi_seen": 0.001582,
-    "lo_seen": 0.001582,
-    "created": "2026-08-01T16:35:25"
+    "stopped": true,
+    "hi_seen": 0.0016,
+    "lo_seen": 0.001563,
+    "created": "2026-08-01T16:35:25",
+    "exit_price": 0.001563,
+    "close_card_sent": true,
+    "closed_at": "2026-08-01T18:03:21"
   }
 }
