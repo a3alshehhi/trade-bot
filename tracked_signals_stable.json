@@ -1,126 +1,4 @@
 {
-  "SD Stable|1000SATSUSDT|2026-07-18 00:15:00": {
-    "symbol": "1000SATSUSDT",
-    "label": "SD Stable",
-    "timeframe": "15m",
-    "message_id": 5028,
-    "entry": 9.55e-06,
-    "stop": 9.45e-06,
-    "init_stop": 9.45e-06,
-    "cur_stop": 9.45e-06,
-    "legs": [
-      9.55e-06,
-      9.53e-06,
-      9.52e-06,
-      9.51e-06,
-      9.49e-06
-    ],
-    "last_alert_stop": 9.45e-06,
-    "armed": false,
-    "targets": [
-      9.6e-06,
-      9.63e-06
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-18 00:15:00",
-    "last_bar": "2026-07-18 04:29:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 9.57e-06,
-    "lo_seen": 9.45e-06,
-    "created": "2026-07-18T00:22:41",
-    "exit_price": 9.45e-06,
-    "close_card_sent": true,
-    "closed_at": "2026-07-18T04:38:42"
-  },
-  "SD Stable|CELOUSDT|2026-07-18 07:30:00": {
-    "symbol": "CELOUSDT",
-    "label": "SD Stable",
-    "timeframe": "15m",
-    "message_id": 5034,
-    "entry": 0.07059,
-    "stop": 0.0698965,
-    "init_stop": 0.0698965,
-    "cur_stop": 0.07059,
-    "legs": [
-      0.07059,
-      0.07050368,
-      0.07029536
-    ],
-    "last_alert_stop": 0.07059,
-    "armed": false,
-    "targets": [
-      0.07160728,
-      0.07203632
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-18 07:30:00",
-    "last_bar": "2026-07-18 17:29:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.07226,
-    "lo_seen": 0.07014,
-    "created": "2026-07-18T07:37:12",
-    "exit_price": 0.07203632,
-    "close_card_sent": true,
-    "closed_at": "2026-07-18T17:38:21"
-  },
-  "SD Stable|BTCUSDT|2026-07-18 12:00:00": {
-    "symbol": "BTCUSDT",
-    "label": "SD Stable",
-    "timeframe": "15m",
-    "message_id": 5049,
-    "entry": 64026.03,
-    "stop": 63865.4557,
-    "init_stop": 63865.4557,
-    "cur_stop": 64026.03,
-    "legs": [
-      64026.03,
-      64016.70084,
-      63959.98068
-    ],
-    "last_alert_stop": 64026.03,
-    "armed": false,
-    "targets": [
-      64317.18264,
-      64433.99916
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-18 12:00:00",
-    "last_bar": "2026-07-18 17:29:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 64449.83,
-    "lo_seen": 63963.0,
-    "created": "2026-07-18T12:09:40",
-    "exit_price": 64433.99916,
-    "close_card_sent": true,
-    "closed_at": "2026-07-18T17:38:23"
-  },
   "SD Stable|CITYUSDT|2026-07-18 17:45:00": {
     "symbol": "CITYUSDT",
     "label": "SD Stable",
@@ -1966,5 +1844,40 @@
     "exit_price": 0.1637428,
     "close_card_sent": true,
     "closed_at": "2026-08-01T02:23:42"
+  },
+  "SD Stable|AGLDUSDT|2026-08-01 12:15:00": {
+    "symbol": "AGLDUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 6048,
+    "entry": 0.1497,
+    "stop": 0.147645,
+    "init_stop": 0.147645,
+    "cur_stop": 0.147645,
+    "legs": [
+      0.1497,
+      0.1494134,
+      0.1487918
+    ],
+    "last_alert_stop": 0.147645,
+    "armed": false,
+    "targets": [
+      0.1527064,
+      0.1539866
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-01 12:15:00",
+    "last_bar": "2026-08-01 12:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1497,
+    "lo_seen": 0.1497,
+    "created": "2026-08-01T12:21:02"
   }
 }

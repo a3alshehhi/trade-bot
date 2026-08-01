@@ -32,5 +32,39 @@
     "armed": false,
     "opened_ts": "2026-07-28T15:39:15",
     "msg_id": 5662
+  },
+  "AGLDUSDT": {
+    "symbol": "AGLDUSDT",
+    "tf": "15m",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.1497
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 145.69,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.15094231247409862,
+        "qty": 964.2348000000001,
+        "usd": 145.68952
+      }
+    ],
+    "avg_entry": 0.15094231247409862,
+    "entry": 0.15094231247409862,
+    "init_stop": 0.147645,
+    "stop": 0.147645,
+    "R": 0.003297312474098618,
+    "tp1": 0.1527064,
+    "tp2": 0.1539866,
+    "qty": 964.2348000000001,
+    "qty_open": 964.2348000000001,
+    "tp1_done": false,
+    "armed": false,
+    "opened_ts": "2026-08-01T12:24:37",
+    "msg_id": 6050
   }
 }
