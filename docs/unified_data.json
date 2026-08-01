@@ -1,8 +1,31 @@
 {
-  "updated_at": "2026-08-01T01:21:26",
+  "updated_at": "2026-08-01T07:21:58",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|DASHUSDT|2026-08-01T02:46:17",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "DASHUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 30.58276,
+      "stop_orig": 28.84,
+      "stop": 28.84,
+      "targets": [],
+      "opened_at": "2026-08-01T02:46:17",
+      "usd": 100.0,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-01T06:46:26",
+      "realized_pct": 3.52,
+      "result_pct": 3.52,
+      "exec_pct": 3.52
+    },
     {
       "id": "binance|AVAUSDT|2026-07-31T21:07:26",
       "source": "binance",
@@ -88,12 +111,14 @@
       "targets": [],
       "opened_at": "2026-07-31T19:01:25",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-01T01:31:20",
+      "realized_pct": 2.05,
+      "result_pct": 2.05,
+      "exec_pct": 2.05
     },
     {
       "id": "paper|CUSDT|2026-07-31T17:32:59",
@@ -135,11 +160,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-01T03:01:38",
+      "realized_pct": 0.91,
+      "result_pct": 0.91,
+      "exec_pct": 0.91
     },
     {
       "id": "binance|ACHUSDT|2026-07-31T05:41:55",
@@ -272,11 +297,11 @@
       "opened_at": "2026-07-31T02:21:12",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-01T01:32:33",
+      "realized_pct": -0.59,
+      "result_pct": -0.59,
+      "exec_pct": -0.59
     },
     {
       "id": "binance|ALGOUSDT|2026-07-31T00:37:17",
@@ -1449,7 +1474,7 @@
       "cur_stop": 1853.4175,
       "remaining": 0.0,
       "pnl_usdt": -3.3018,
-      "last_price": 1866.29,
+      "last_price": 1870.35,
       "events": [
         {
           "ts": "2026-07-31T14:00:00",
@@ -1491,7 +1516,7 @@
       "cur_stop": 1853.4175,
       "remaining": 0.0,
       "pnl_usdt": -9.5653,
-      "last_price": 1866.29,
+      "last_price": 1870.35,
       "events": [
         {
           "ts": "2026-07-31T14:00:00",
@@ -6487,13 +6512,13 @@
     }
   ],
   "stats": {
-    "total": 275,
-    "open": 11,
-    "closed": 264,
-    "wins": 150,
-    "win_rate": 56.8,
-    "net_pct": 20.61,
-    "pf": 1.07,
+    "total": 276,
+    "open": 8,
+    "closed": 268,
+    "wins": 153,
+    "win_rate": 57.1,
+    "net_pct": 26.5,
+    "pf": 1.09,
     "simulated": 2
   }
 }
