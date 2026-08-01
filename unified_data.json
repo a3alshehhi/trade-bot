@@ -1,8 +1,99 @@
 {
-  "updated_at": "2026-08-01T12:12:52",
+  "updated_at": "2026-08-01T14:04:46",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "binance|AGLDUSDT|2026-08-01T12:24:37",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "AGLDUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.15094231247409862,
+      "stop_orig": 0.147645,
+      "stop": 0.147645,
+      "targets": [
+        0.1527064,
+        0.1539866
+      ],
+      "opened_at": "2026-08-01T12:24:37",
+      "usd": 145.69,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null,
+      "net_pct": -0.1,
+      "result_r": 0.0,
+      "unrealized_pct": -0.094,
+      "exit_price": null,
+      "exit_reason": null,
+      "cur_stop": 0.147645,
+      "remaining": 1.0,
+      "pnl_usdt": -0.1457,
+      "last_price": 0.1508,
+      "events": [],
+      "real_rule": "wick"
+    },
+    {
+      "id": "bybit|AGLDUSDT|2026-08-01T12:21:40",
+      "source": "bybit",
+      "source_ar": "بايبت تيستنت",
+      "symbol": "AGLDUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.15145155262140372,
+      "stop_orig": 0.147645,
+      "stop": 0.147645,
+      "targets": [
+        0.1527064,
+        0.1539866
+      ],
+      "opened_at": "2026-08-01T12:21:40",
+      "usd": 437.08,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null,
+      "net_pct": -0.1,
+      "result_r": 0.0,
+      "unrealized_pct": -0.43,
+      "exit_price": null,
+      "exit_reason": null,
+      "cur_stop": 0.147645,
+      "remaining": 1.0,
+      "pnl_usdt": -0.4371,
+      "last_price": 0.1508,
+      "events": [],
+      "real_rule": "wick"
+    },
+    {
+      "id": "paper|AWEUSDT|2026-08-01T12:09:18",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "AWEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0559392,
+      "stop_orig": 0.05322,
+      "stop": 0.05322,
+      "targets": [],
+      "opened_at": "2026-08-01T12:09:18",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|ANKRUSDT|2026-08-01T07:31:29",
       "source": "paper",
@@ -1497,7 +1588,7 @@
       "cur_stop": 1853.4175,
       "remaining": 0.0,
       "pnl_usdt": -3.3018,
-      "last_price": 1867.94,
+      "last_price": 1870.92,
       "events": [
         {
           "ts": "2026-07-31T14:00:00",
@@ -1539,7 +1630,7 @@
       "cur_stop": 1853.4175,
       "remaining": 0.0,
       "pnl_usdt": -9.5653,
-      "last_price": 1867.94,
+      "last_price": 1870.92,
       "events": [
         {
           "ts": "2026-07-31T14:00:00",
@@ -6535,13 +6626,13 @@
     }
   ],
   "stats": {
-    "total": 277,
-    "open": 7,
+    "total": 280,
+    "open": 10,
     "closed": 270,
     "wins": 155,
     "win_rate": 57.4,
     "net_pct": 30.17,
     "pf": 1.1,
-    "simulated": 2
+    "simulated": 4
   }
 }
