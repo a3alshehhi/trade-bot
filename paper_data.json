@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-01T01:08:45",
+  "updated_at": "2026-08-01T01:16:46",
   "stats": {
     "open": 20,
     "closed": 265,
@@ -3936,11 +3936,13 @@
       "timeframe": "1h",
       "entry": 0.01712,
       "stop": 0.0164834,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-07-31T15:05:02",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.91
     },
     {
       "id": "عرض/طلب+دايفرجنس|CUSDT|2026-07-31 17:30:00",
