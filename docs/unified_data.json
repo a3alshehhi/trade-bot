@@ -1,8 +1,43 @@
 {
-  "updated_at": "2026-08-01T16:20:10",
+  "updated_at": "2026-08-01T17:26:36",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "binance|CELRUSDT|2026-08-01T16:39:08",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "CELRUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0015997151557593347,
+      "stop_orig": 0.001563,
+      "stop": 0.001563,
+      "targets": [
+        0.0016077,
+        0.00161878
+      ],
+      "opened_at": "2026-08-01T16:39:08",
+      "usd": 166.53,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null,
+      "net_pct": -0.1,
+      "result_r": 0.0,
+      "unrealized_pct": -1.858,
+      "exit_price": null,
+      "exit_reason": null,
+      "cur_stop": 0.001563,
+      "remaining": 1.0,
+      "pnl_usdt": -0.1665,
+      "last_price": 0.00157,
+      "events": [],
+      "real_rule": "wick"
+    },
     {
       "id": "binance|AGLDUSDT|2026-08-01T15:07:32",
       "source": "binance",
@@ -67,12 +102,14 @@
       "targets": [],
       "opened_at": "2026-08-01T12:09:18",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-01T16:16:23",
+      "realized_pct": 3.0,
+      "result_pct": 3.0,
+      "exec_pct": 3.0
     },
     {
       "id": "paper|ANKRUSDT|2026-08-01T07:31:29",
@@ -1568,7 +1605,7 @@
       "cur_stop": 1853.4175,
       "remaining": 0.0,
       "pnl_usdt": -3.3018,
-      "last_price": 1868.88,
+      "last_price": 1862.97,
       "events": [
         {
           "ts": "2026-07-31T14:00:00",
@@ -1610,7 +1647,7 @@
       "cur_stop": 1853.4175,
       "remaining": 0.0,
       "pnl_usdt": -9.5653,
-      "last_price": 1868.86,
+      "last_price": 1862.98,
       "events": [
         {
           "ts": "2026-07-31T14:00:00",
@@ -6606,13 +6643,13 @@
     }
   ],
   "stats": {
-    "total": 280,
+    "total": 281,
     "open": 7,
-    "closed": 273,
-    "wins": 156,
-    "win_rate": 57.1,
-    "net_pct": 30.83,
-    "pf": 1.1,
-    "simulated": 2
+    "closed": 274,
+    "wins": 157,
+    "win_rate": 57.3,
+    "net_pct": 33.83,
+    "pf": 1.11,
+    "simulated": 3
   }
 }
