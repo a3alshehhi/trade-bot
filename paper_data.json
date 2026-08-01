@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-01T15:53:30",
+  "updated_at": "2026-08-01T16:01:21",
   "stats": {
-    "open": 16,
-    "closed": 273,
-    "win_rate": 61.9,
-    "profit_factor": 1.27,
-    "total_pct": 88.85,
-    "avg_pct": 0.29,
+    "open": 15,
+    "closed": 274,
+    "win_rate": 62.0,
+    "profit_factor": 1.28,
+    "total_pct": 93.46,
+    "avg_pct": 0.3,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-01",
-        "trades": 8,
-        "win_rate": 87.5,
-        "return_pct": 14.46,
+        "trades": 9,
+        "win_rate": 88.9,
+        "return_pct": 17.26,
         "week": "2026-W31",
         "month": "2026-08"
       },
@@ -231,9 +231,9 @@
     "weekly": [
       {
         "key": "2026-W31",
-        "trades": 82,
-        "win_rate": 59.8,
-        "return_pct": 27.56,
+        "trades": 83,
+        "win_rate": 60.2,
+        "return_pct": 30.68,
         "month": "2026-08"
       },
       {
@@ -261,9 +261,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 8,
-        "win_rate": 87.5,
-        "return_pct": 14.46
+        "trades": 9,
+        "win_rate": 88.9,
+        "return_pct": 17.26
       },
       {
         "key": "2026-07",
@@ -1062,12 +1062,14 @@
       "entry": 0.1497,
       "stop": 0.147645,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-01T12:21:02",
-      "closed_at": null,
-      "realized_pct": 1.0
+      "closed_at": "2026-08-01T16:01:20",
+      "realized_pct": 2.44,
+      "result_pct": 2.44
     },
     {
       "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
