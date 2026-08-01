@@ -1885,5 +1885,40 @@
     "exit_price": 0.1539866,
     "close_card_sent": true,
     "closed_at": "2026-08-01T16:05:32"
+  },
+  "SD Stable|CELRUSDT|2026-08-01 16:30:00": {
+    "symbol": "CELRUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 6053,
+    "entry": 0.001582,
+    "stop": 0.001563,
+    "init_stop": 0.001563,
+    "cur_stop": 0.001563,
+    "legs": [
+      0.001582,
+      0.00157922,
+      0.00157385
+    ],
+    "last_alert_stop": 0.001563,
+    "armed": false,
+    "targets": [
+      0.0016077,
+      0.00161878
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-01 16:30:00",
+    "last_bar": "2026-08-01 16:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.001582,
+    "lo_seen": 0.001582,
+    "created": "2026-08-01T16:35:25"
   }
 }
