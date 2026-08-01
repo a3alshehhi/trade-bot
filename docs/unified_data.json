@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-01T07:21:58",
+  "updated_at": "2026-08-01T09:27:48",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|ANKRUSDT|2026-08-01T07:31:29",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ANKRUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00336596,
+      "stop_orig": 0.00323,
+      "stop": 0.00323,
+      "targets": [],
+      "opened_at": "2026-08-01T07:31:29",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|DASHUSDT|2026-08-01T02:46:17",
       "source": "paper",
@@ -1474,7 +1495,7 @@
       "cur_stop": 1853.4175,
       "remaining": 0.0,
       "pnl_usdt": -3.3018,
-      "last_price": 1870.35,
+      "last_price": 1869.93,
       "events": [
         {
           "ts": "2026-07-31T14:00:00",
@@ -1516,7 +1537,7 @@
       "cur_stop": 1853.4175,
       "remaining": 0.0,
       "pnl_usdt": -9.5653,
-      "last_price": 1870.35,
+      "last_price": 1869.93,
       "events": [
         {
           "ts": "2026-07-31T14:00:00",
@@ -6512,8 +6533,8 @@
     }
   ],
   "stats": {
-    "total": 276,
-    "open": 8,
+    "total": 277,
+    "open": 9,
     "closed": 268,
     "wins": 153,
     "win_rate": 57.1,
