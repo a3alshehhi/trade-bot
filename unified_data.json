@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-01T09:27:48",
+  "updated_at": "2026-08-01T11:04:49",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -17,12 +17,14 @@
       "targets": [],
       "opened_at": "2026-08-01T07:31:29",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-01T09:31:26",
+      "realized_pct": 2.5,
+      "result_pct": 2.5,
+      "exec_pct": 2.5
     },
     {
       "id": "paper|DASHUSDT|2026-08-01T02:46:17",
@@ -454,11 +456,11 @@
       "opened_at": "2026-07-30T21:03:39",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-01T10:17:30",
+      "realized_pct": 1.17,
+      "result_pct": 1.17,
+      "exec_pct": 1.17
     },
     {
       "id": "paper|IOUSDT|2026-07-30T21:03:39",
@@ -1495,7 +1497,7 @@
       "cur_stop": 1853.4175,
       "remaining": 0.0,
       "pnl_usdt": -3.3018,
-      "last_price": 1869.93,
+      "last_price": 1866.94,
       "events": [
         {
           "ts": "2026-07-31T14:00:00",
@@ -1537,7 +1539,7 @@
       "cur_stop": 1853.4175,
       "remaining": 0.0,
       "pnl_usdt": -9.5653,
-      "last_price": 1869.93,
+      "last_price": 1866.94,
       "events": [
         {
           "ts": "2026-07-31T14:00:00",
@@ -6534,12 +6536,12 @@
   ],
   "stats": {
     "total": 277,
-    "open": 9,
-    "closed": 268,
-    "wins": 153,
-    "win_rate": 57.1,
-    "net_pct": 26.5,
-    "pf": 1.09,
+    "open": 7,
+    "closed": 270,
+    "wins": 155,
+    "win_rate": 57.4,
+    "net_pct": 30.17,
+    "pf": 1.1,
     "simulated": 2
   }
 }
