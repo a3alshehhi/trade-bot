@@ -1,77 +1,57 @@
 {
-  "updated_at": "2026-08-01T14:04:46",
+  "updated_at": "2026-08-01T15:11:01",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
     {
-      "id": "binance|AGLDUSDT|2026-08-01T12:24:37",
+      "id": "binance|AGLDUSDT|2026-08-01T15:07:32",
       "source": "binance",
       "source_ar": "بايننس ديمو",
       "symbol": "AGLDUSDT",
       "label": "SD Stable",
       "side": "buy",
       "timeframe": "15m",
-      "entry": 0.15094231247409862,
-      "stop_orig": 0.147645,
-      "stop": 0.147645,
-      "targets": [
-        0.1527064,
-        0.1539866
-      ],
-      "opened_at": "2026-08-01T12:24:37",
-      "usd": 145.69,
+      "entry": 0.15094231,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-08-01T15:07:32",
+      "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
+      "status": "closed",
+      "closed_at": "2026-08-01T15:07:32",
       "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null,
-      "net_pct": -0.1,
-      "result_r": 0.0,
-      "unrealized_pct": -0.094,
-      "exit_price": null,
-      "exit_reason": null,
-      "cur_stop": 0.147645,
-      "remaining": 1.0,
-      "pnl_usdt": -0.1457,
-      "last_price": 0.1508,
-      "events": [],
-      "real_rule": "wick"
+      "result_pct": -0.161,
+      "exec_pct": -0.161,
+      "exec_usdt": -0.5245,
+      "exec_reasons": [
+        "وقف خسارة"
+      ]
     },
     {
-      "id": "bybit|AGLDUSDT|2026-08-01T12:21:40",
+      "id": "bybit|AGLDUSDT|2026-08-01T15:06:38",
       "source": "bybit",
       "source_ar": "بايبت تيستنت",
       "symbol": "AGLDUSDT",
       "label": "SD Stable",
       "side": "buy",
       "timeframe": "15m",
-      "entry": 0.15145155262140372,
-      "stop_orig": 0.147645,
-      "stop": 0.147645,
-      "targets": [
-        0.1527064,
-        0.1539866
-      ],
-      "opened_at": "2026-08-01T12:21:40",
-      "usd": 437.08,
+      "entry": 0.15145155,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-08-01T15:06:38",
+      "usd": 300.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
+      "status": "closed",
+      "closed_at": "2026-08-01T15:06:38",
       "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null,
-      "net_pct": -0.1,
-      "result_r": 0.0,
-      "unrealized_pct": -0.43,
-      "exit_price": null,
-      "exit_reason": null,
-      "cur_stop": 0.147645,
-      "remaining": 1.0,
-      "pnl_usdt": -0.4371,
-      "last_price": 0.1508,
-      "events": [],
-      "real_rule": "wick"
+      "result_pct": -0.562,
+      "exec_pct": -0.562,
+      "exec_usdt": -3.3292,
+      "exec_reasons": [
+        "وقف خسارة"
+      ]
     },
     {
       "id": "paper|AWEUSDT|2026-08-01T12:09:18",
@@ -1588,7 +1568,7 @@
       "cur_stop": 1853.4175,
       "remaining": 0.0,
       "pnl_usdt": -3.3018,
-      "last_price": 1870.92,
+      "last_price": 1874.34,
       "events": [
         {
           "ts": "2026-07-31T14:00:00",
@@ -1630,7 +1610,7 @@
       "cur_stop": 1853.4175,
       "remaining": 0.0,
       "pnl_usdt": -9.5653,
-      "last_price": 1870.92,
+      "last_price": 1874.34,
       "events": [
         {
           "ts": "2026-07-31T14:00:00",
@@ -6627,12 +6607,12 @@
   ],
   "stats": {
     "total": 280,
-    "open": 10,
-    "closed": 270,
+    "open": 8,
+    "closed": 272,
     "wins": 155,
-    "win_rate": 57.4,
-    "net_pct": 30.17,
+    "win_rate": 57.0,
+    "net_pct": 29.45,
     "pf": 1.1,
-    "simulated": 4
+    "simulated": 2
   }
 }
