@@ -32,42 +32,5 @@
     "armed": false,
     "opened_ts": "2026-07-28T17:18:47",
     "msg_id": 5672
-  },
-  "AIXBTUSDT": {
-    "symbol": "AIXBTUSDT",
-    "tf": "1h",
-    "label": "عرض/طلب+دايفرجنس",
-    "prob": null,
-    "levels": [
-      0.01712
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 300.0,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.017237237237246142,
-        "qty": 17404.18118466,
-        "usd": 300.0
-      }
-    ],
-    "avg_entry": 0.017237237237246142,
-    "entry": 0.017237237237246142,
-    "init_stop": 0.0164834,
-    "stop": 0.01731098,
-    "R": 0.0007538372372461431,
-    "tp1": 0.01743224,
-    "tp2": 0.01766406,
-    "qty": 17404.18118466,
-    "qty_open": 8702.18118466,
-    "tp1_done": true,
-    "armed": true,
-    "mgmt": "5050",
-    "targets": null,
-    "tp_idx": 0,
-    "opened_ts": "2026-07-31T15:05:40",
-    "msg_id": 6025
   }
 }
