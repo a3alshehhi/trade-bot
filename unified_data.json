@@ -1,8 +1,58 @@
 {
-  "updated_at": "2026-08-01T17:26:36",
+  "updated_at": "2026-08-01T18:35:52",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "binance|ETHUSDT|2026-08-01T18:21:41",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "ETHUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1921.2706506,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-08-01T18:21:41",
+      "usd": 100.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-08-01T18:21:41",
+      "realized_pct": 0.0,
+      "result_pct": -3.537,
+      "exec_pct": -3.537,
+      "exec_usdt": -3.2994,
+      "exec_reasons": [
+        "وقف خسارة"
+      ]
+    },
+    {
+      "id": "bybit|ETHUSDT|2026-08-01T18:20:55",
+      "source": "bybit",
+      "source_ar": "بايبت تيستنت",
+      "symbol": "ETHUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1918.72007307,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-08-01T18:20:55",
+      "usd": 300.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-08-01T18:20:55",
+      "realized_pct": 0.0,
+      "result_pct": -3.425,
+      "exec_pct": -3.425,
+      "exec_usdt": -9.6135,
+      "exec_reasons": [
+        "وقف خسارة"
+      ]
+    },
     {
       "id": "binance|CELRUSDT|2026-08-01T16:39:08",
       "source": "binance",
@@ -21,21 +71,28 @@
       "opened_at": "2026-08-01T16:39:08",
       "usd": 166.53,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
+      "status": "closed",
+      "closed_at": "2026-08-01T17:30:00",
+      "realized_pct": -2.295,
+      "result_pct": -2.495,
       "exec_pct": null,
-      "net_pct": -0.1,
-      "result_r": 0.0,
-      "unrealized_pct": -1.858,
-      "exit_price": null,
-      "exit_reason": null,
+      "net_pct": -2.495,
+      "result_r": -1.0,
+      "unrealized_pct": 0.0,
+      "exit_price": 0.001563,
+      "exit_reason": "وقف خسارة",
       "cur_stop": 0.001563,
-      "remaining": 1.0,
-      "pnl_usdt": -0.1665,
-      "last_price": 0.00157,
-      "events": [],
+      "remaining": 0.0,
+      "pnl_usdt": -4.1551,
+      "last_price": 0.001549,
+      "events": [
+        {
+          "ts": "2026-08-01T17:30:00",
+          "type": "stop",
+          "price": 0.001563,
+          "pct": -2.295
+        }
+      ],
       "real_rule": "wick"
     },
     {
@@ -1573,90 +1630,6 @@
       "realized_pct": 1.42,
       "result_pct": 1.42,
       "exec_pct": 1.42
-    },
-    {
-      "id": "binance|ETHUSDT|2026-07-28T15:39:15",
-      "source": "binance",
-      "source_ar": "بايننس ديمو",
-      "symbol": "ETHUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 1921.2706506042869,
-      "stop_orig": 1853.4175,
-      "stop": 1853.4175,
-      "targets": [
-        1942.77816,
-        1966.14354
-      ],
-      "opened_at": "2026-07-28T15:39:15",
-      "usd": 88.48,
-      "hits": [],
-      "status": "closed",
-      "closed_at": "2026-07-31T14:00:00",
-      "realized_pct": -3.532,
-      "result_pct": -3.732,
-      "exec_pct": null,
-      "net_pct": -3.732,
-      "result_r": -1.0,
-      "unrealized_pct": 0.0,
-      "exit_price": 1853.4175,
-      "exit_reason": "وقف خسارة",
-      "cur_stop": 1853.4175,
-      "remaining": 0.0,
-      "pnl_usdt": -3.3018,
-      "last_price": 1862.97,
-      "events": [
-        {
-          "ts": "2026-07-31T14:00:00",
-          "type": "stop",
-          "price": 1853.4175,
-          "pct": -3.532
-        }
-      ],
-      "real_rule": "wick"
-    },
-    {
-      "id": "bybit|ETHUSDT|2026-07-28T15:36:30",
-      "source": "bybit",
-      "source_ar": "بايبت تيستنت",
-      "symbol": "ETHUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 1918.720073066378,
-      "stop_orig": 1853.4175,
-      "stop": 1853.4175,
-      "targets": [
-        1942.77816,
-        1966.14354
-      ],
-      "opened_at": "2026-07-28T15:36:30",
-      "usd": 265.45,
-      "hits": [],
-      "status": "closed",
-      "closed_at": "2026-07-31T14:00:00",
-      "realized_pct": -3.403,
-      "result_pct": -3.603,
-      "exec_pct": null,
-      "net_pct": -3.603,
-      "result_r": -1.0,
-      "unrealized_pct": 0.0,
-      "exit_price": 1853.4175,
-      "exit_reason": "وقف خسارة",
-      "cur_stop": 1853.4175,
-      "remaining": 0.0,
-      "pnl_usdt": -9.5653,
-      "last_price": 1862.98,
-      "events": [
-        {
-          "ts": "2026-07-31T14:00:00",
-          "type": "stop",
-          "price": 1853.4175,
-          "pct": -3.403
-        }
-      ],
-      "real_rule": "wick"
     },
     {
       "id": "paper|AGLDUSDT|2026-07-28T15:33:05",
@@ -6644,12 +6617,12 @@
   ],
   "stats": {
     "total": 281,
-    "open": 7,
-    "closed": 274,
+    "open": 6,
+    "closed": 275,
     "wins": 157,
-    "win_rate": 57.3,
-    "net_pct": 33.83,
-    "pf": 1.11,
-    "simulated": 3
+    "win_rate": 57.1,
+    "net_pct": 31.71,
+    "pf": 1.1,
+    "simulated": 1
   }
 }
