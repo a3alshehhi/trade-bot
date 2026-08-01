@@ -1954,13 +1954,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 20:15:00",
-    "last_bar": "2026-08-01 01:29:59.999000",
+    "last_bar": "2026-08-01 02:14:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.1624,
+    "stopped": true,
+    "hi_seen": 0.1639,
     "lo_seen": 0.1586,
-    "created": "2026-07-31T20:23:26"
+    "created": "2026-07-31T20:23:26",
+    "exit_price": 0.1637428,
+    "close_card_sent": true,
+    "closed_at": "2026-08-01T02:23:42"
   }
 }
