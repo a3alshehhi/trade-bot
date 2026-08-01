@@ -607,12 +607,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-07-31 16:59:59.999000",
+    "last_bar": "2026-08-01 01:29:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 1.1539,
+    "hi_seen": 1.1548,
     "lo_seen": 1.126835,
     "created": "2026-07-27T03:03:31",
     "dca_levels": [
@@ -1635,7 +1635,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 16:45:00",
-    "last_bar": "2026-07-31 16:59:59.999000",
+    "last_bar": "2026-08-01 01:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0572878,
@@ -1830,10 +1830,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 20:45:00",
-    "last_bar": "2026-07-31 16:59:59.999000",
+    "last_bar": "2026-08-01 01:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.7251,
+    "hi_seen": 0.7274,
     "lo_seen": 0.700768,
     "created": "2026-07-30T21:03:39",
     "dca_levels": [
@@ -2120,7 +2120,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 21:30:00",
-    "last_bar": "2026-07-31 16:59:59.999000",
+    "last_bar": "2026-08-01 01:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.3309,
@@ -2143,14 +2143,14 @@
     "entry": 0.0789754,
     "stop": 0.0757,
     "init_stop": 0.0757,
-    "cur_stop": 0.0757,
+    "cur_stop": 0.07850549999999999,
     "legs": [
       0.0789754,
       0.07835,
       0.0777246,
       0.0768342
     ],
-    "last_alert_stop": 0.0757,
+    "last_alert_stop": 0.07850549999999999,
     "armed": false,
     "targets": [
       0.081,
@@ -2164,9 +2164,9 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 02:00:00",
-    "last_bar": "2026-07-31 16:59:59.999000",
+    "last_bar": "2026-07-31 19:14:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0798,
     "lo_seen": 0.0777,
     "created": "2026-07-31T02:21:12",
@@ -2177,7 +2177,11 @@
       0.0768342
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2,
+    "exit_price": 0.07850549999999999,
+    "close_card_sent": true,
+    "closed_at": "2026-08-01T01:32:33"
   },
   "الفيواب الأسبوعي · BTC|SUSDT|2026-07-31 02:15:00": {
     "symbol": "SUSDT",

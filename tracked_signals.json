@@ -4591,7 +4591,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 08:00:00",
-    "last_bar": "2026-08-01 00:59:59.999000",
+    "last_bar": "2026-08-01 01:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.001651,
@@ -4875,7 +4875,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 16:45:00",
-    "last_bar": "2026-08-01 00:59:59.999000",
+    "last_bar": "2026-08-01 01:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0572878,
@@ -4999,14 +4999,14 @@
     "entry": 0.0789754,
     "stop": 0.0757,
     "init_stop": 0.0757,
-    "cur_stop": 0.0757,
+    "cur_stop": 0.07850549999999999,
     "legs": [
       0.0789754,
       0.07835,
       0.0777246,
       0.0768342
     ],
-    "last_alert_stop": 0.0757,
+    "last_alert_stop": 0.07850549999999999,
     "armed": false,
     "targets": [
       0.081,
@@ -5020,7 +5020,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 02:00:00",
-    "last_bar": "2026-08-01 00:59:59.999000",
+    "last_bar": "2026-08-01 01:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0798,
@@ -5033,7 +5033,8 @@
       0.0768342
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2
   },
   "العرض/الطلب|1000SATSUSDT|2026-07-31 02:30:00": {
     "symbol": "1000SATSUSDT",
@@ -5146,7 +5147,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 17:30:00",
-    "last_bar": "2026-08-01 00:59:59.999000",
+    "last_bar": "2026-08-01 01:29:59.999000",
     "hits": [
       1
     ],
@@ -5190,10 +5191,12 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 18:45:00",
-    "last_bar": "2026-08-01 00:59:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.00588,
+    "last_bar": "2026-08-01 01:29:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": true,
+    "hi_seen": 0.0059,
     "lo_seen": 0.00577158,
     "created": "2026-07-31T19:01:25",
     "dca_levels": [
@@ -5203,7 +5206,10 @@
       0.00564634
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.00589,
+    "close_card_sent": true,
+    "closed_at": "2026-08-01T01:31:20"
   },
   "العرض/الطلب|CYBERUSDT|2026-07-31 19:30:00": {
     "symbol": "CYBERUSDT",
@@ -5240,7 +5246,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 19:30:00",
-    "last_bar": "2026-08-01 00:59:59.999000",
+    "last_bar": "2026-08-01 01:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.306,
