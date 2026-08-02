@@ -1,8 +1,58 @@
 {
-  "updated_at": "2026-08-01T23:34:53",
+  "updated_at": "2026-08-02T01:10:01",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "binance|ALTUSDT|2026-08-02T00:37:31",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "ALTUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00594,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-08-02T00:37:31",
+      "usd": 100.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-08-02T00:37:31",
+      "realized_pct": 0.0,
+      "result_pct": -1.684,
+      "exec_pct": -1.684,
+      "exec_usdt": -5.5631,
+      "exec_reasons": [
+        "وقف خسارة"
+      ]
+    },
+    {
+      "id": "bybit|ALTUSDT|2026-08-02T00:36:41",
+      "source": "bybit",
+      "source_ar": "بايبت تيستنت",
+      "symbol": "ALTUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0059309,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-08-02T00:36:41",
+      "usd": 300.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-08-02T00:36:41",
+      "realized_pct": 0.0,
+      "result_pct": -1.617,
+      "exec_pct": -1.617,
+      "exec_usdt": -16.1155,
+      "exec_reasons": [
+        "وقف خسارة"
+      ]
+    },
     {
       "id": "binance|CELRUSDT|2026-08-01T19:07:34",
       "source": "binance",
@@ -6599,13 +6649,13 @@
     }
   ],
   "stats": {
-    "total": 281,
+    "total": 283,
     "open": 4,
-    "closed": 277,
+    "closed": 279,
     "wins": 157,
-    "win_rate": 56.7,
-    "net_pct": 21.7,
-    "pf": 1.07,
+    "win_rate": 56.3,
+    "net_pct": 18.4,
+    "pf": 1.06,
     "simulated": 0
   }
 }
