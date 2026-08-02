@@ -109,104 +109,6 @@
     "close_card_sent": true,
     "closed_at": "2026-07-18T12:01:26"
   },
-  "العرض/الطلب|ALICEUSDT|2026-07-19 09:15:00": {
-    "symbol": "ALICEUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5096,
-    "entry": 0.1179204,
-    "stop": 0.1131,
-    "init_stop": 0.1131,
-    "cur_stop": 0.1179204,
-    "legs": [
-      0.1179204,
-      0.117,
-      0.1160796,
-      0.1147692
-    ],
-    "last_alert_stop": 0.1179204,
-    "armed": false,
-    "targets": [
-      0.1209,
-      0.1230216
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-19 09:15:00",
-    "last_bar": "2026-07-20 05:14:59.999000",
-    "hits": [
-      1
-    ],
-    "stopped": true,
-    "hi_seen": 0.1227,
-    "lo_seen": 0.117,
-    "created": "2026-07-19T09:31:14",
-    "dca_levels": [
-      0.1179204,
-      0.117,
-      0.1160796,
-      0.1147692
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 0.1179204,
-    "close_card_sent": true,
-    "closed_at": "2026-07-20T05:16:09"
-  },
-  "العرض/الطلب|AEURUSDT|2026-07-19 13:00:00": {
-    "symbol": "AEURUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5109,
-    "entry": 1.1428664,
-    "stop": 1.1399,
-    "init_stop": 1.1399,
-    "cur_stop": 1.1428664,
-    "legs": [
-      1.1428664,
-      1.1423,
-      1.1417336,
-      1.1409272
-    ],
-    "last_alert_stop": 1.1428664,
-    "armed": false,
-    "targets": [
-      1.1447,
-      1.1460056
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-19 13:00:00",
-    "last_bar": "2026-07-20 20:59:59.999000",
-    "hits": [
-      1
-    ],
-    "stopped": true,
-    "hi_seen": 1.1451,
-    "lo_seen": 1.1426,
-    "created": "2026-07-19T13:16:02",
-    "dca_levels": [
-      1.1428664,
-      1.1423,
-      1.1417336,
-      1.1409272
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 1.1428664,
-    "close_card_sent": true,
-    "closed_at": "2026-07-20T21:01:26"
-  },
   "عرض/طلب+دايفرجنس|CELRUSDT|2026-07-19 15:00:00": {
     "symbol": "CELRUSDT",
     "label": "عرض/طلب+دايفرجنس",
@@ -4950,6 +4852,56 @@
       6.3635,
       6.287154,
       6.178458
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|CELRUSDT|2026-08-02 16:30:00": {
+    "symbol": "CELRUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6084,
+    "entry": 0.00161999,
+    "stop": 0.001531,
+    "init_stop": 0.001531,
+    "cur_stop": 0.001531,
+    "legs": [
+      0.00161999,
+      0.001603,
+      0.00158601,
+      0.00156182
+    ],
+    "last_alert_stop": 0.001531,
+    "armed": false,
+    "targets": [
+      0.001675,
+      0.00171417,
+      0.00176399,
+      0.001819,
+      0.00184204
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-02 16:30:00",
+    "last_bar": "2026-08-02 16:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00161999,
+    "lo_seen": 0.00161999,
+    "created": "2026-08-02T16:46:12",
+    "dca_levels": [
+      0.00161999,
+      0.001603,
+      0.00158601,
+      0.00156182
     ],
     "wait_entry": true,
     "max_age_h": 48.0

@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-02T16:33:35",
+  "updated_at": "2026-08-02T16:47:25",
   "stats": {
-    "open": 11,
+    "open": 12,
     "closed": 285,
     "win_rate": 61.4,
     "profit_factor": 1.23,
@@ -2243,40 +2243,6 @@
       "result_pct": 1.39
     },
     {
-      "id": "العرض/الطلب|ALICEUSDT|2026-07-19 09:15:00",
-      "symbol": "ALICEUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.1179204,
-      "stop": 0.1131,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-19T09:31:14",
-      "closed_at": "2026-07-20T05:16:09",
-      "realized_pct": 1.26,
-      "result_pct": 1.26
-    },
-    {
-      "id": "العرض/الطلب|AEURUSDT|2026-07-19 13:00:00",
-      "symbol": "AEURUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 1.1428664,
-      "stop": 1.1399,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-19T13:16:02",
-      "closed_at": "2026-07-20T21:01:26",
-      "realized_pct": 0.08,
-      "result_pct": 0.08
-    },
-    {
       "id": "عرض/طلب+دايفرجنس|CELRUSDT|2026-07-19 15:00:00",
       "symbol": "CELRUSDT",
       "label": "عرض/طلب+دايفرجنس",
@@ -3900,6 +3866,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|CELRUSDT|2026-08-02 16:30:00",
+      "symbol": "CELRUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00161999,
+      "stop": 0.001531,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-02T16:46:12",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -3974,6 +3954,40 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|ALICEUSDT|2026-07-19 09:15:00",
+      "symbol": "ALICEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1179204,
+      "stop": 0.1131,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-19T09:31:14",
+      "closed_at": "2026-07-20T05:16:09",
+      "realized_pct": 1.26,
+      "result_pct": 1.26
+    },
+    {
+      "id": "العرض/الطلب|AEURUSDT|2026-07-19 13:00:00",
+      "symbol": "AEURUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.1428664,
+      "stop": 1.1399,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-19T13:16:02",
+      "closed_at": "2026-07-20T21:01:26",
+      "realized_pct": 0.08,
+      "result_pct": 0.08
     },
     {
       "id": "SD Stable|CGPTUSDT|2026-07-19 10:45:00",
