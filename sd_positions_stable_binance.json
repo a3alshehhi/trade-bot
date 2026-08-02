@@ -66,39 +66,5 @@
     "armed": true,
     "opened_ts": "2026-08-02T07:38:48",
     "msg_id": 6071
-  },
-  "COOKIEUSDT": {
-    "symbol": "COOKIEUSDT",
-    "tf": "15m",
-    "label": "SD Stable",
-    "prob": null,
-    "levels": [
-      0.0078
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 120.93,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.007899999999999999,
-        "qty": 15292.1925,
-        "usd": 120.92925
-      }
-    ],
-    "avg_entry": 0.007899999999999999,
-    "entry": 0.007899999999999999,
-    "init_stop": 0.007671,
-    "stop": 0.00792768953953954,
-    "R": 0.00022899999999999917,
-    "tp1": 0.0079544,
-    "tp2": 0.0080236,
-    "qty": 15292.1925,
-    "qty_open": 7646.192499999999,
-    "tp1_done": true,
-    "armed": true,
-    "opened_ts": "2026-08-02T08:24:34",
-    "msg_id": 6075
   }
 }
