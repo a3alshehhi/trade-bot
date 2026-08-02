@@ -1874,5 +1874,38 @@
     "hi_seen": 0.0058,
     "lo_seen": 0.0058,
     "created": "2026-08-02T00:23:11"
+  },
+  "SD Stable|AVAXUSDT|2026-08-02 05:00:00": {
+    "symbol": "AVAXUSDT",
+    "label": "SD Stable",
+    "timeframe": "1h",
+    "message_id": 6067,
+    "entry": 6.388,
+    "stop": 6.01331,
+    "init_stop": 6.01331,
+    "cur_stop": 6.01331,
+    "legs": [
+      6.388
+    ],
+    "last_alert_stop": 6.01331,
+    "armed": false,
+    "targets": [
+      6.748504,
+      6.941226
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-02 05:00:00",
+    "last_bar": "2026-08-02 05:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 6.388,
+    "lo_seen": 6.388,
+    "created": "2026-08-02T05:21:13"
   }
 }
