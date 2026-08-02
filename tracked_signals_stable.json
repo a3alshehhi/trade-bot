@@ -1,47 +1,4 @@
 {
-  "SD Stable|CGPTUSDT|2026-07-19 10:45:00": {
-    "symbol": "CGPTUSDT",
-    "label": "SD Stable",
-    "timeframe": "15m",
-    "message_id": 5103,
-    "entry": 0.0187,
-    "stop": 0.0184184,
-    "init_stop": 0.0184184,
-    "cur_stop": 0.0187,
-    "legs": [
-      0.0187,
-      0.01861304,
-      0.01858,
-      0.01854696,
-      0.01849992
-    ],
-    "last_alert_stop": 0.0187,
-    "armed": false,
-    "targets": [
-      0.01879616,
-      0.01889304
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-19 10:45:00",
-    "last_bar": "2026-07-19 11:29:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.01904,
-    "lo_seen": 0.01854,
-    "created": "2026-07-19T10:59:19",
-    "exit_price": 0.01889304,
-    "close_card_sent": true,
-    "closed_at": "2026-07-19T11:38:25"
-  },
   "SD Stable|CFXUSDT|2026-07-19 14:45:00": {
     "symbol": "CFXUSDT",
     "label": "SD Stable",
@@ -1948,5 +1905,38 @@
     "exit_price": 0.0078,
     "close_card_sent": true,
     "closed_at": "2026-08-02T10:23:10"
+  },
+  "SD Stable|CELRUSDT|2026-08-02 11:00:00": {
+    "symbol": "CELRUSDT",
+    "label": "SD Stable",
+    "timeframe": "1h",
+    "message_id": 6081,
+    "entry": 0.001591,
+    "stop": 0.0015423,
+    "init_stop": 0.0015423,
+    "cur_stop": 0.0015423,
+    "legs": [
+      0.001591
+    ],
+    "last_alert_stop": 0.0015423,
+    "armed": false,
+    "targets": [
+      0.00163877,
+      0.00166264
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-02 11:00:00",
+    "last_bar": "2026-08-02 11:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.001591,
+    "lo_seen": 0.001591,
+    "created": "2026-08-02T11:31:48"
   }
 }
