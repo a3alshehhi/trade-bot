@@ -1,8 +1,31 @@
 {
-  "updated_at": "2026-08-02T16:19:57",
+  "updated_at": "2026-08-02T17:27:14",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|CELRUSDT|2026-08-02T16:46:12",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "CELRUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00161999,
+      "stop_orig": 0.001531,
+      "stop": 0.001531,
+      "targets": [],
+      "opened_at": "2026-08-02T16:46:12",
+      "usd": 100.0,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-02T17:01:23",
+      "realized_pct": 3.4,
+      "result_pct": 3.4,
+      "exec_pct": 3.4
+    },
     {
       "id": "binance|CELRUSDT|2026-08-02T12:47:21",
       "source": "binance",
@@ -151,13 +174,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -0.8,
+      "unrealized_pct": -0.242,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.0341,
-      "last_price": 6.568,
+      "last_price": 6.605,
       "events": [],
       "real_rule": "wick"
     },
@@ -186,13 +209,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -0.692,
+      "unrealized_pct": -0.133,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.1023,
-      "last_price": 6.568,
+      "last_price": 6.605,
       "events": [],
       "real_rule": "wick"
     },
@@ -6842,13 +6865,13 @@
     }
   ],
   "stats": {
-    "total": 290,
+    "total": 291,
     "open": 6,
-    "closed": 284,
-    "wins": 161,
-    "win_rate": 56.7,
-    "net_pct": 20.62,
-    "pf": 1.06,
+    "closed": 285,
+    "wins": 162,
+    "win_rate": 56.8,
+    "net_pct": 24.02,
+    "pf": 1.07,
     "simulated": 2
   }
 }
