@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-02T12:12:00",
+  "updated_at": "2026-08-02T14:04:49",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
     {
-      "id": "binance|CELRUSDT|2026-08-02T11:34:50",
+      "id": "binance|CELRUSDT|2026-08-02T12:47:21",
       "source": "binance",
       "source_ar": "بايننس ديمو",
       "symbol": "CELRUSDT",
@@ -12,31 +12,21 @@
       "side": "buy",
       "timeframe": "1h",
       "entry": 0.001617,
-      "stop_orig": 0.0015423,
-      "stop": 0.0015423,
-      "targets": [
-        0.00163877,
-        0.00166264
-      ],
-      "opened_at": "2026-08-02T11:34:50",
-      "usd": 65.34,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-08-02T12:47:21",
+      "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
+      "status": "closed",
+      "closed_at": "2026-08-02T12:47:21",
       "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null,
-      "net_pct": -0.1,
-      "result_r": 0.0,
-      "unrealized_pct": 0.742,
-      "exit_price": null,
-      "exit_reason": null,
-      "cur_stop": 0.0015423,
-      "remaining": 1.0,
-      "pnl_usdt": -0.0653,
-      "last_price": 0.001629,
-      "events": [],
-      "real_rule": "wick"
+      "result_pct": -0.495,
+      "exec_pct": -0.495,
+      "exec_usdt": -0.4532,
+      "exec_reasons": [
+        "وقف خسارة"
+      ]
     },
     {
       "id": "bybit|COOKIEUSDT|2026-08-02T10:21:15",
@@ -161,13 +151,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -0.347,
+      "unrealized_pct": -0.498,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.0341,
-      "last_price": 6.598,
+      "last_price": 6.588,
       "events": [],
       "real_rule": "wick"
     },
@@ -196,13 +186,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -0.239,
+      "unrealized_pct": -0.39,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.1023,
-      "last_price": 6.598,
+      "last_price": 6.588,
       "events": [],
       "real_rule": "wick"
     },
@@ -6853,12 +6843,12 @@
   ],
   "stats": {
     "total": 290,
-    "open": 8,
-    "closed": 282,
+    "open": 7,
+    "closed": 283,
     "wins": 160,
-    "win_rate": 56.7,
-    "net_pct": 20.19,
+    "win_rate": 56.5,
+    "net_pct": 19.69,
     "pf": 1.06,
-    "simulated": 3
+    "simulated": 2
   }
 }
