@@ -1,8 +1,54 @@
 {
-  "updated_at": "2026-08-02T21:43:18",
+  "updated_at": "2026-08-02T22:41:44",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "binance|AVAUSDT|2026-08-02T22:11:02",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "AVAUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.16920000000000002,
+      "stop_orig": 0.162938,
+      "stop": 0.162938,
+      "targets": [
+        0.1710416,
+        0.1728754
+      ],
+      "opened_at": "2026-08-02T22:11:02",
+      "usd": 84.25,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null
+    },
+    {
+      "id": "bybit|AVAUSDT|2026-08-02T22:07:57",
+      "source": "bybit",
+      "source_ar": "بايبت تيستنت",
+      "symbol": "AVAUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.16947023102033618,
+      "stop_orig": 0.162938,
+      "stop": 0.162938,
+      "targets": [
+        0.1710416,
+        0.1728754
+      ],
+      "opened_at": "2026-08-02T22:07:57",
+      "usd": 252.75,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null
+    },
     {
       "id": "paper|IOTXUSDT|2026-08-02T21:18:22",
       "source": "paper",
@@ -260,13 +306,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": 0.604,
+      "unrealized_pct": -0.544,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.0341,
-      "last_price": 6.661,
+      "last_price": 6.585,
       "events": [],
       "real_rule": "wick"
     },
@@ -295,13 +341,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": 0.714,
+      "unrealized_pct": -0.435,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.1023,
-      "last_price": 6.661,
+      "last_price": 6.585,
       "events": [],
       "real_rule": "wick"
     },
@@ -6951,8 +6997,8 @@
     }
   ],
   "stats": {
-    "total": 295,
-    "open": 9,
+    "total": 297,
+    "open": 11,
     "closed": 286,
     "wins": 163,
     "win_rate": 57.0,
