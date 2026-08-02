@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-08-02 22:59:59.999000",
+    "last_bar": "2026-08-02 23:29:59.999000",
     "hits": [
       1
     ],
@@ -2428,7 +2428,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-02 18:15:00",
-    "last_bar": "2026-08-02 22:59:59.999000",
+    "last_bar": "2026-08-02 23:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0858,
@@ -2533,7 +2533,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-02 21:00:00",
-    "last_bar": "2026-08-02 22:59:59.999000",
+    "last_bar": "2026-08-02 23:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00235,
@@ -2583,10 +2583,12 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-02 22:30:00",
-    "last_bar": "2026-08-02 22:59:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.0401,
+    "last_bar": "2026-08-02 23:29:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": true,
+    "hi_seen": 0.0403,
     "lo_seen": 0.0395506,
     "created": "2026-08-02T22:49:08",
     "dca_levels": [
@@ -2596,7 +2598,10 @@
       0.0388638
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.0402,
+    "close_card_sent": true,
+    "closed_at": "2026-08-02T23:33:30"
   },
   "الفيواب الأسبوعي · BTC|GRAMUSDT|2026-08-02 22:30:00": {
     "symbol": "GRAMUSDT",
@@ -2633,7 +2638,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-02 22:30:00",
-    "last_bar": "2026-08-02 22:59:59.999000",
+    "last_bar": "2026-08-02 23:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.427,
@@ -2683,7 +2688,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-02 22:45:00",
-    "last_bar": "2026-08-02 22:59:59.999000",
+    "last_bar": "2026-08-02 23:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 73.86,
