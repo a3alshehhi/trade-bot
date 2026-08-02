@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-08-01 18:59:59.999000",
+    "last_bar": "2026-08-02 19:29:59.999000",
     "hits": [
       1
     ],
@@ -2373,10 +2373,12 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-02 18:00:00",
-    "last_bar": "2026-08-02 18:00:00",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 210.6856,
+    "last_bar": "2026-08-02 19:29:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": true,
+    "hi_seen": 214.4,
     "lo_seen": 210.6856,
     "created": "2026-08-02T18:18:40",
     "dca_levels": [
@@ -2386,7 +2388,10 @@
       206.9688
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 214.2,
+    "close_card_sent": true,
+    "closed_at": "2026-08-02T19:34:20"
   },
   "الفيواب الأسبوعي · BTC|ALGOUSDT|2026-08-02 18:15:00": {
     "symbol": "ALGOUSDT",
@@ -2423,10 +2428,10 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-02 18:15:00",
-    "last_bar": "2026-08-02 18:15:00",
+    "last_bar": "2026-08-02 19:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.082944,
+    "hi_seen": 0.0858,
     "lo_seen": 0.082944,
     "created": "2026-08-02T18:33:45",
     "dca_levels": [
