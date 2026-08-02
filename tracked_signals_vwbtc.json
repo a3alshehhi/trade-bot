@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-08-02 23:29:59.999000",
+    "last_bar": "2026-08-02 23:44:59.999000",
     "hits": [
       1
     ],
@@ -2428,10 +2428,12 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-02 18:15:00",
-    "last_bar": "2026-08-02 23:29:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.0858,
+    "last_bar": "2026-08-02 23:44:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": true,
+    "hi_seen": 0.0872,
     "lo_seen": 0.082944,
     "created": "2026-08-02T18:33:45",
     "dca_levels": [
@@ -2441,7 +2443,10 @@
       0.079712
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.086,
+    "close_card_sent": true,
+    "closed_at": "2026-08-02T23:48:22"
   },
   "الفيواب الأسبوعي · BTC|DUSKUSDT|2026-08-02 20:45:00": {
     "symbol": "DUSKUSDT",
@@ -2533,7 +2538,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-02 21:00:00",
-    "last_bar": "2026-08-02 23:29:59.999000",
+    "last_bar": "2026-08-02 23:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00235,
@@ -2638,7 +2643,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-02 22:30:00",
-    "last_bar": "2026-08-02 23:29:59.999000",
+    "last_bar": "2026-08-02 23:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.427,
@@ -2688,7 +2693,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-02 22:45:00",
-    "last_bar": "2026-08-02 23:29:59.999000",
+    "last_bar": "2026-08-02 23:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 73.86,
