@@ -1820,7 +1820,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-08-02 05:00:00",
-    "last_bar": "2026-08-02 12:59:59.999000",
+    "last_bar": "2026-08-02 14:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 6.687,
@@ -1932,13 +1932,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-08-02 11:00:00",
-    "last_bar": "2026-08-02 12:59:59.999000",
+    "last_bar": "2026-08-02 14:59:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
-    "stopped": false,
-    "hi_seen": 0.00164,
+    "stopped": true,
+    "hi_seen": 0.001668,
     "lo_seen": 0.00159,
-    "created": "2026-08-02T11:31:48"
+    "created": "2026-08-02T11:31:48",
+    "exit_price": 0.00166264,
+    "close_card_sent": true,
+    "closed_at": "2026-08-02T15:08:08"
   }
 }
