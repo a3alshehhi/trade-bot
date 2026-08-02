@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02T14:04:49",
+  "updated_at": "2026-08-02T15:12:16",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -151,13 +151,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -0.498,
+      "unrealized_pct": -0.378,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.0341,
-      "last_price": 6.588,
+      "last_price": 6.596,
       "events": [],
       "real_rule": "wick"
     },
@@ -186,13 +186,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -0.39,
+      "unrealized_pct": -0.269,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.1023,
-      "last_price": 6.588,
+      "last_price": 6.596,
       "events": [],
       "real_rule": "wick"
     },
@@ -1200,11 +1200,11 @@
       "opened_at": "2026-07-30T08:20:03",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-02T14:35:23",
+      "realized_pct": 0.93,
+      "result_pct": 0.93,
+      "exec_pct": 0.93
     },
     {
       "id": "paper|BREVUSDT|2026-07-30T07:50:32",
@@ -6843,11 +6843,11 @@
   ],
   "stats": {
     "total": 290,
-    "open": 7,
-    "closed": 283,
-    "wins": 160,
-    "win_rate": 56.5,
-    "net_pct": 19.69,
+    "open": 6,
+    "closed": 284,
+    "wins": 161,
+    "win_rate": 56.7,
+    "net_pct": 20.62,
     "pf": 1.06,
     "simulated": 2
   }
