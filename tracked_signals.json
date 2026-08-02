@@ -109,399 +109,6 @@
     "close_card_sent": true,
     "closed_at": "2026-07-18T12:01:26"
   },
-  "العرض/الطلب|CKBUSDT|2026-07-18 14:45:00": {
-    "symbol": "CKBUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5057,
-    "entry": 0.00090463,
-    "stop": 0.000883,
-    "init_stop": 0.000883,
-    "cur_stop": 0.00090463,
-    "legs": [
-      0.00090463,
-      0.0009005,
-      0.00089637,
-      0.00089049
-    ],
-    "last_alert_stop": 0.00090463,
-    "armed": false,
-    "targets": [
-      0.000918,
-      0.00092752
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-18 14:45:00",
-    "last_bar": "2026-07-18 15:44:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.000932,
-    "lo_seen": 0.00090463,
-    "created": "2026-07-18T15:08:20",
-    "dca_levels": [
-      0.00090463,
-      0.0009005,
-      0.00089637,
-      0.00089049
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 0.00092752,
-    "close_card_sent": true,
-    "closed_at": "2026-07-18T15:46:05"
-  },
-  "العرض/الطلب|CELOUSDT|2026-07-18 19:45:00": {
-    "symbol": "CELOUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5069,
-    "entry": 0.07141432,
-    "stop": 0.07003,
-    "init_stop": 0.07003,
-    "cur_stop": 0.07141432,
-    "legs": [
-      0.07141432,
-      0.07115,
-      0.07088568,
-      0.07050936
-    ],
-    "last_alert_stop": 0.07141432,
-    "armed": false,
-    "targets": [
-      0.07227,
-      0.07287928
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-18 19:45:00",
-    "last_bar": "2026-07-19 01:14:59.999000",
-    "hits": [
-      1
-    ],
-    "stopped": true,
-    "hi_seen": 0.0724,
-    "lo_seen": 0.07133,
-    "created": "2026-07-18T20:01:16",
-    "dca_levels": [
-      0.07141432,
-      0.07115,
-      0.07088568,
-      0.07050936
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 0.07141432,
-    "close_card_sent": true,
-    "closed_at": "2026-07-19T01:31:07"
-  },
-  "العرض/الطلب|ETHUSDT|2026-07-18 21:30:00": {
-    "symbol": "ETHUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5073,
-    "entry": 1842.92954,
-    "stop": 1803.05,
-    "init_stop": 1803.05,
-    "cur_stop": 1842.92954,
-    "legs": [
-      1842.92954,
-      1835.315,
-      1827.70046,
-      1816.85942
-    ],
-    "last_alert_stop": 1842.92954,
-    "armed": false,
-    "targets": [
-      1867.58,
-      1885.13216
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-18 21:30:00",
-    "last_bar": "2026-07-20 00:14:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 1890.29,
-    "lo_seen": 1842.92954,
-    "created": "2026-07-18T21:46:09",
-    "dca_levels": [
-      1842.92954,
-      1835.315,
-      1827.70046,
-      1816.85942
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 1885.13216,
-    "close_card_sent": true,
-    "closed_at": "2026-07-20T01:08:50"
-  },
-  "العرض/الطلب|AWEUSDT|2026-07-18 23:00:00": {
-    "symbol": "AWEUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5078,
-    "entry": 0.05851702,
-    "stop": 0.05395,
-    "init_stop": 0.05395,
-    "cur_stop": 0.05851702,
-    "legs": [
-      0.05851702,
-      0.057645,
-      0.05677298,
-      0.05553146
-    ],
-    "last_alert_stop": 0.05851702,
-    "armed": false,
-    "targets": [
-      0.06134,
-      0.06335008
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-18 23:00:00",
-    "last_bar": "2026-07-26 07:29:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.06056,
-    "lo_seen": 0.05487,
-    "created": "2026-07-18T23:16:10",
-    "dca_levels": [
-      0.05851702,
-      0.057645,
-      0.05677298,
-      0.05553146
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "st_stage": 2,
-    "exit_price": 0.05851702,
-    "close_card_sent": true,
-    "closed_at": "2026-07-26T15:01:25"
-  },
-  "العرض/الطلب|DASHUSDT|2026-07-19 00:15:00": {
-    "symbol": "DASHUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5080,
-    "entry": 34.02732,
-    "stop": 33.57,
-    "init_stop": 33.57,
-    "cur_stop": 34.02732,
-    "legs": [
-      34.02732,
-      33.94,
-      33.85268,
-      33.72836
-    ],
-    "last_alert_stop": 33.57,
-    "armed": false,
-    "targets": [
-      34.31,
-      34.51128
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-19 00:15:00",
-    "last_bar": "2026-07-19 02:14:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 34.57,
-    "lo_seen": 34.02732,
-    "created": "2026-07-19T00:31:06",
-    "dca_levels": [
-      34.02732,
-      33.94,
-      33.85268,
-      33.72836
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 34.51128,
-    "close_card_sent": true,
-    "closed_at": "2026-07-19T02:16:10"
-  },
-  "العرض/الطلب|BICOUSDT|2026-07-19 03:00:00": {
-    "symbol": "BICOUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5082,
-    "entry": 0.0136708,
-    "stop": 0.0133,
-    "init_stop": 0.0133,
-    "cur_stop": 0.0136708,
-    "legs": [
-      0.0136708,
-      0.0136,
-      0.0135292,
-      0.0134284
-    ],
-    "last_alert_stop": 0.0136708,
-    "armed": false,
-    "targets": [
-      0.0139,
-      0.0140632
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-19 03:00:00",
-    "last_bar": "2026-07-19 06:59:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.01411,
-    "lo_seen": 0.0136708,
-    "created": "2026-07-19T03:16:13",
-    "dca_levels": [
-      0.0136708,
-      0.0136,
-      0.0135292,
-      0.0134284
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 0.0140632,
-    "close_card_sent": true,
-    "closed_at": "2026-07-19T07:01:23"
-  },
-  "العرض/الطلب|BNTUSDT|2026-07-19 03:15:00": {
-    "symbol": "BNTUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5083,
-    "entry": 0.2728114,
-    "stop": 0.2683,
-    "init_stop": 0.2683,
-    "cur_stop": 0.2728114,
-    "legs": [
-      0.2728114,
-      0.27195,
-      0.2710886,
-      0.2698622
-    ],
-    "last_alert_stop": 0.2728114,
-    "armed": false,
-    "targets": [
-      0.2756,
-      0.2775856
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-19 03:15:00",
-    "last_bar": "2026-07-19 17:14:59.999000",
-    "hits": [
-      1
-    ],
-    "stopped": true,
-    "hi_seen": 0.2772,
-    "lo_seen": 0.2718,
-    "created": "2026-07-19T03:31:09",
-    "dca_levels": [
-      0.2728114,
-      0.27195,
-      0.2710886,
-      0.2698622
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 0.2728114,
-    "close_card_sent": true,
-    "closed_at": "2026-07-19T17:16:08"
-  },
-  "العرض/الطلب|1000SATSUSDT|2026-07-19 05:00:00": {
-    "symbol": "1000SATSUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5084,
-    "entry": 9.62e-06,
-    "stop": 9.25e-06,
-    "init_stop": 9.25e-06,
-    "cur_stop": 9.25e-06,
-    "legs": [
-      9.62e-06,
-      9.55e-06,
-      9.48e-06,
-      9.38e-06
-    ],
-    "last_alert_stop": 9.25e-06,
-    "armed": false,
-    "targets": [
-      9.85e-06,
-      1.001e-05
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-19 05:00:00",
-    "last_bar": "2026-07-24 11:29:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 9.74e-06,
-    "lo_seen": 9.21e-06,
-    "created": "2026-07-19T05:16:09",
-    "dca_levels": [
-      9.62e-06,
-      9.55e-06,
-      9.48e-06,
-      9.38e-06
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 9.25e-06,
-    "close_card_sent": true,
-    "closed_at": "2026-07-24T11:46:08"
-  },
   "العرض/الطلب|ALICEUSDT|2026-07-19 09:15:00": {
     "symbol": "ALICEUSDT",
     "label": "العرض/الطلب",
@@ -5292,5 +4899,55 @@
     "exit_price": 0.05762,
     "close_card_sent": true,
     "closed_at": "2026-08-01T16:16:23"
+  },
+  "العرض/الطلب|AVAXUSDT|2026-08-02 08:00:00": {
+    "symbol": "AVAXUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6072,
+    "entry": 6.439846,
+    "stop": 6.04,
+    "init_stop": 6.04,
+    "cur_stop": 6.04,
+    "legs": [
+      6.439846,
+      6.3635,
+      6.287154,
+      6.178458
+    ],
+    "last_alert_stop": 6.04,
+    "armed": false,
+    "targets": [
+      6.687,
+      6.862984,
+      7.086846,
+      7.334,
+      7.43752
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-02 08:00:00",
+    "last_bar": "2026-08-02 08:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 6.439846,
+    "lo_seen": 6.439846,
+    "created": "2026-08-02T08:16:25",
+    "dca_levels": [
+      6.439846,
+      6.3635,
+      6.287154,
+      6.178458
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
