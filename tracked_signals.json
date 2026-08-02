@@ -4864,5 +4864,55 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|ALGOUSDT|2026-08-02 18:15:00": {
+    "symbol": "ALGOUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6088,
+    "entry": 0.082944,
+    "stop": 0.078,
+    "init_stop": 0.078,
+    "cur_stop": 0.078,
+    "legs": [
+      0.082944,
+      0.082,
+      0.081056,
+      0.079712
+    ],
+    "last_alert_stop": 0.078,
+    "armed": false,
+    "targets": [
+      0.086,
+      0.088176,
+      0.090944,
+      0.094,
+      0.09528
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-02 18:15:00",
+    "last_bar": "2026-08-02 18:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.082944,
+    "lo_seen": 0.082944,
+    "created": "2026-08-02T18:31:21",
+    "dca_levels": [
+      0.082944,
+      0.082,
+      0.081056,
+      0.079712
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
