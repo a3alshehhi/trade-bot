@@ -1,8 +1,78 @@
 {
-  "updated_at": "2026-08-02T04:45:09",
+  "updated_at": "2026-08-02T07:24:24",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "binance|AVAXUSDT|2026-08-02T05:24:16",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "AVAXUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 6.620999999999999,
+      "stop_orig": 6.01331,
+      "stop": 6.01331,
+      "targets": [
+        6.748504,
+        6.941226
+      ],
+      "opened_at": "2026-08-02T05:24:16",
+      "usd": 34.1,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null,
+      "net_pct": -0.1,
+      "result_r": 0.0,
+      "unrealized_pct": -0.106,
+      "exit_price": null,
+      "exit_reason": null,
+      "cur_stop": 6.01331,
+      "remaining": 1.0,
+      "pnl_usdt": -0.0341,
+      "last_price": 6.614,
+      "events": [],
+      "real_rule": "wick"
+    },
+    {
+      "id": "bybit|AVAXUSDT|2026-08-02T05:21:18",
+      "source": "bybit",
+      "source_ar": "بايبت تيستنت",
+      "symbol": "AVAXUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 6.613779252551127,
+      "stop_orig": 6.01331,
+      "stop": 6.01331,
+      "targets": [
+        6.748504,
+        6.941226
+      ],
+      "opened_at": "2026-08-02T05:21:18",
+      "usd": 102.29,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null,
+      "net_pct": -0.1,
+      "result_r": 0.0,
+      "unrealized_pct": 0.003,
+      "exit_price": null,
+      "exit_reason": null,
+      "cur_stop": 6.01331,
+      "remaining": 1.0,
+      "pnl_usdt": -0.1023,
+      "last_price": 6.614,
+      "events": [],
+      "real_rule": "wick"
+    },
     {
       "id": "binance|ALTUSDT|2026-08-02T00:37:31",
       "source": "binance",
@@ -6649,13 +6719,13 @@
     }
   ],
   "stats": {
-    "total": 283,
-    "open": 4,
+    "total": 285,
+    "open": 6,
     "closed": 279,
     "wins": 157,
     "win_rate": 56.3,
     "net_pct": 18.4,
     "pf": 1.06,
-    "simulated": 0
+    "simulated": 2
   }
 }
