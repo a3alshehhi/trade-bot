@@ -1,8 +1,138 @@
 {
-  "updated_at": "2026-08-03T01:20:33",
+  "updated_at": "2026-08-03T04:55:17",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|BICOUSDT|2026-08-03T03:16:16",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "BICOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01598006,
+      "stop_orig": 0.01124,
+      "stop": 0.01124,
+      "targets": [],
+      "opened_at": "2026-08-03T03:16:16",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "binance|CGPTUSDT|2026-08-03T02:30:58",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "CGPTUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.01869,
+      "stop_orig": 0.0179254,
+      "stop": 0.0179254,
+      "targets": [
+        0.01888496,
+        0.01912024
+      ],
+      "opened_at": "2026-08-03T02:30:58",
+      "usd": 67.83,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.522,
+      "result_pct": null,
+      "exec_pct": null,
+      "net_pct": 0.372,
+      "result_r": 0.127,
+      "unrealized_pct": 0.856,
+      "exit_price": null,
+      "exit_reason": null,
+      "cur_stop": 0.01869,
+      "remaining": 0.5,
+      "pnl_usdt": 0.252,
+      "last_price": 0.01901,
+      "events": [
+        {
+          "ts": "2026-08-03T04:00:00",
+          "type": "tp1",
+          "price": 0.01888496,
+          "pct": 1.043
+        }
+      ],
+      "real_rule": "wick"
+    },
+    {
+      "id": "bybit|CGPTUSDT|2026-08-03T02:27:43",
+      "source": "bybit",
+      "source_ar": "بايبت تيستنت",
+      "symbol": "CGPTUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.01864853859501963,
+      "stop_orig": 0.0179254,
+      "stop": 0.0179254,
+      "targets": [
+        0.01888496,
+        0.01912024
+      ],
+      "opened_at": "2026-08-03T02:27:43",
+      "usd": 203.49,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.634,
+      "result_pct": null,
+      "exec_pct": null,
+      "net_pct": 0.484,
+      "result_r": 0.163,
+      "unrealized_pct": 0.969,
+      "exit_price": null,
+      "exit_reason": null,
+      "cur_stop": 0.018865480173525517,
+      "remaining": 0.5,
+      "pnl_usdt": 0.9847,
+      "last_price": 0.01901,
+      "events": [
+        {
+          "ts": "2026-08-03T04:00:00",
+          "type": "tp1",
+          "price": 0.01888496,
+          "pct": 1.268
+        }
+      ],
+      "real_rule": "wick"
+    },
+    {
+      "id": "paper|AVAUSDT|2026-08-03T01:36:28",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "AVAUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1758566,
+      "stop_orig": 0.1643,
+      "stop": 0.1643,
+      "targets": [],
+      "opened_at": "2026-08-03T01:36:28",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|SOLUSDT|2026-08-02T23:03:34",
       "source": "paper",
@@ -380,13 +510,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -1.556,
+      "unrealized_pct": -3.036,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.0341,
-      "last_price": 6.518,
+      "last_price": 6.42,
       "events": [],
       "real_rule": "wick"
     },
@@ -415,13 +545,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -1.448,
+      "unrealized_pct": -2.93,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.1023,
-      "last_price": 6.518,
+      "last_price": 6.42,
       "events": [],
       "real_rule": "wick"
     },
@@ -7071,13 +7201,13 @@
     }
   ],
   "stats": {
-    "total": 300,
-    "open": 9,
+    "total": 304,
+    "open": 13,
     "closed": 291,
     "wins": 167,
     "win_rate": 57.4,
     "net_pct": 37.14,
     "pf": 1.11,
-    "simulated": 2
+    "simulated": 4
   }
 }
