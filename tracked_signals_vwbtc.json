@@ -3482,5 +3482,55 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|PHAUSDT|2026-08-03 22:45:00": {
+    "symbol": "PHAUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6151,
+    "entry": 0.0206214,
+    "stop": 0.0192,
+    "init_stop": 0.0192,
+    "cur_stop": 0.0192,
+    "legs": [
+      0.0206214,
+      0.02035,
+      0.0200786,
+      0.0196922
+    ],
+    "last_alert_stop": 0.0192,
+    "armed": false,
+    "targets": [
+      0.0215,
+      0.0221256,
+      0.0229214,
+      0.0238,
+      0.024168
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-03 22:45:00",
+    "last_bar": "2026-08-03 22:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0206214,
+    "lo_seen": 0.0206214,
+    "created": "2026-08-03T23:03:46",
+    "dca_levels": [
+      0.0206214,
+      0.02035,
+      0.0200786,
+      0.0196922
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
