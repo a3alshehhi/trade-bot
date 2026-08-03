@@ -66,39 +66,5 @@
     "armed": true,
     "opened_ts": "2026-08-03T02:30:58",
     "msg_id": 6111
-  },
-  "AMPUSDT": {
-    "symbol": "AMPUSDT",
-    "tf": "15m",
-    "label": "SD Stable",
-    "prob": null,
-    "levels": [
-      0.000394
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 137.04,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.000398,
-        "qty": 343976.679,
-        "usd": 137.039758
-      }
-    ],
-    "avg_entry": 0.000398,
-    "entry": 0.000398,
-    "init_stop": 0.00038825,
-    "stop": 0.00038825,
-    "R": 9.750000000000047e-06,
-    "tp1": 0.00039918,
-    "tp2": 0.00040194,
-    "qty": 343976.679,
-    "qty_open": 343976.679,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-08-03T06:09:45",
-    "msg_id": 6123
   }
 }
