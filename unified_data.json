@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02T23:44:40",
+  "updated_at": "2026-08-03T01:20:33",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -177,12 +177,14 @@
       "targets": [],
       "opened_at": "2026-08-02T18:33:45",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-02T23:48:22",
+      "realized_pct": 3.68,
+      "result_pct": 3.68,
+      "exec_pct": 3.68
     },
     {
       "id": "paper|BCHUSDT|2026-08-02T18:18:40",
@@ -378,13 +380,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -1.238,
+      "unrealized_pct": -1.556,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.0341,
-      "last_price": 6.539,
+      "last_price": 6.518,
       "events": [],
       "real_rule": "wick"
     },
@@ -413,13 +415,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -1.131,
+      "unrealized_pct": -1.448,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.1023,
-      "last_price": 6.539,
+      "last_price": 6.518,
       "events": [],
       "real_rule": "wick"
     },
@@ -7070,12 +7072,12 @@
   ],
   "stats": {
     "total": 300,
-    "open": 10,
-    "closed": 290,
-    "wins": 166,
-    "win_rate": 57.2,
-    "net_pct": 33.46,
-    "pf": 1.1,
+    "open": 9,
+    "closed": 291,
+    "wins": 167,
+    "win_rate": 57.4,
+    "net_pct": 37.14,
+    "pf": 1.11,
     "simulated": 2
   }
 }
