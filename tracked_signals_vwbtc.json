@@ -3262,5 +3262,55 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|TFUELUSDT|2026-08-03 20:15:00": {
+    "symbol": "TFUELUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6147,
+    "entry": 0.00734012,
+    "stop": 0.00713,
+    "init_stop": 0.00713,
+    "cur_stop": 0.00713,
+    "legs": [
+      0.00734012,
+      0.0073,
+      0.00725988,
+      0.00720276
+    ],
+    "last_alert_stop": 0.00713,
+    "armed": false,
+    "targets": [
+      0.00747,
+      0.00756248,
+      0.00768012,
+      0.00781,
+      0.0078644
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-03 20:15:00",
+    "last_bar": "2026-08-03 20:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00734012,
+    "lo_seen": 0.00734012,
+    "created": "2026-08-03T20:34:00",
+    "dca_levels": [
+      0.00734012,
+      0.0073,
+      0.00725988,
+      0.00720276
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
