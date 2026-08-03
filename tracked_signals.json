@@ -4974,5 +4974,55 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|BICOUSDT|2026-08-03 03:00:00": {
+    "symbol": "BICOUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6112,
+    "entry": 0.01598006,
+    "stop": 0.01124,
+    "init_stop": 0.01124,
+    "cur_stop": 0.01124,
+    "legs": [
+      0.01598006,
+      0.015075,
+      0.01416994,
+      0.01288138
+    ],
+    "last_alert_stop": 0.01124,
+    "armed": false,
+    "targets": [
+      0.01891,
+      0.02099624,
+      0.02365006,
+      0.02658,
+      0.0278072
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-03 03:00:00",
+    "last_bar": "2026-08-03 03:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01598006,
+    "lo_seen": 0.01598006,
+    "created": "2026-08-03T03:16:16",
+    "dca_levels": [
+      0.01598006,
+      0.015075,
+      0.01416994,
+      0.01288138
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
