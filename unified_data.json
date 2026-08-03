@@ -1,8 +1,52 @@
 {
-  "updated_at": "2026-08-03T20:21:50",
+  "updated_at": "2026-08-03T21:37:18",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|NILUSDT|2026-08-03T21:04:10",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "NILUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0315642,
+      "stop_orig": 0.0273,
+      "stop": 0.0273,
+      "targets": [],
+      "opened_at": "2026-08-03T21:04:10",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|TFUELUSDT|2026-08-03T20:34:00",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "TFUELUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00734012,
+      "stop_orig": 0.00713,
+      "stop": 0.00713,
+      "targets": [],
+      "opened_at": "2026-08-03T20:34:00",
+      "usd": 100.0,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-03T20:49:15",
+      "realized_pct": 1.77,
+      "result_pct": 1.77,
+      "exec_pct": 1.77
+    },
     {
       "id": "paper|WUSDT|2026-08-03T19:48:43",
       "source": "paper",
@@ -17,12 +61,14 @@
       "targets": [],
       "opened_at": "2026-08-03T19:48:43",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-03T21:25:27",
+      "realized_pct": 2.9,
+      "result_pct": 2.9,
+      "exec_pct": 2.9
     },
     {
       "id": "paper|HBARUSDT|2026-08-03T19:34:25",
@@ -38,12 +84,14 @@
       "targets": [],
       "opened_at": "2026-08-03T19:34:25",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-03T21:25:26",
+      "realized_pct": 1.33,
+      "result_pct": 1.33,
+      "exec_pct": 1.33
     },
     {
       "id": "paper|ZKUSDT|2026-08-03T18:04:12",
@@ -248,7 +296,7 @@
       "cur_stop": 0.11739999999999999,
       "remaining": 0.0,
       "pnl_usdt": 0.2182,
-      "last_price": 0.1144,
+      "last_price": 0.1138,
       "events": [
         {
           "ts": "2026-08-03T12:15:00",
@@ -764,13 +812,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -0.514,
+      "unrealized_pct": -0.695,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.0341,
-      "last_price": 6.587,
+      "last_price": 6.575,
       "events": [],
       "real_rule": "wick"
     },
@@ -799,13 +847,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -0.405,
+      "unrealized_pct": -0.586,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.1023,
-      "last_price": 6.587,
+      "last_price": 6.575,
       "events": [],
       "real_rule": "wick"
     },
@@ -7455,13 +7503,13 @@
     }
   ],
   "stats": {
-    "total": 316,
-    "open": 19,
-    "closed": 297,
-    "wins": 173,
-    "win_rate": 58.2,
-    "net_pct": 60.49,
-    "pf": 1.19,
+    "total": 318,
+    "open": 18,
+    "closed": 300,
+    "wins": 176,
+    "win_rate": 58.7,
+    "net_pct": 66.49,
+    "pf": 1.2,
     "simulated": 3
   }
 }
