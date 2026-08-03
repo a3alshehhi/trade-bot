@@ -3480,7 +3480,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 00:00:00",
-    "last_bar": "2026-08-02 22:59:59.999000",
+    "last_bar": "2026-08-03 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2016,
@@ -4530,11 +4530,11 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 19:30:00",
-    "last_bar": "2026-08-02 23:44:59.999000",
+    "last_bar": "2026-08-03 13:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.308,
-    "lo_seen": 0.298,
+    "lo_seen": 0.297,
     "created": "2026-07-31T19:50:44",
     "dca_levels": [
       0.303124,
@@ -4745,11 +4745,11 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-02 08:00:00",
-    "last_bar": "2026-08-02 23:44:59.999000",
+    "last_bar": "2026-08-03 13:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 6.674,
-    "lo_seen": 6.439846,
+    "lo_seen": 6.369,
     "created": "2026-08-02T08:16:25",
     "dca_levels": [
       6.439846,
@@ -4960,11 +4960,11 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 01:15:00",
-    "last_bar": "2026-08-03 01:15:00",
+    "last_bar": "2026-08-03 13:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.1758566,
-    "lo_seen": 0.1758566,
+    "hi_seen": 0.1805,
+    "lo_seen": 0.1692,
     "created": "2026-08-03T01:31:18",
     "dca_levels": [
       0.1758566,
@@ -5010,11 +5010,13 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 03:00:00",
-    "last_bar": "2026-08-03 03:00:00",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.01598006,
-    "lo_seen": 0.01598006,
+    "last_bar": "2026-08-03 13:29:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": true,
+    "hi_seen": 0.01939,
+    "lo_seen": 0.01426,
     "created": "2026-08-03T03:16:16",
     "dca_levels": [
       0.01598006,
@@ -5023,6 +5025,9 @@
       0.01288138
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.01891,
+    "close_card_sent": true,
+    "closed_at": "2026-08-03T13:31:23"
   }
 }
