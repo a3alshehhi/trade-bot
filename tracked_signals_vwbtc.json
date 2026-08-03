@@ -3057,5 +3057,105 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|ZKUSDT|2026-08-03 17:45:00": {
+    "symbol": "ZKUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6142,
+    "entry": 0.00802518,
+    "stop": 0.00771,
+    "init_stop": 0.00771,
+    "cur_stop": 0.00771,
+    "legs": [
+      0.00802518,
+      0.007965,
+      0.00790482,
+      0.00781914
+    ],
+    "last_alert_stop": 0.00771,
+    "armed": false,
+    "targets": [
+      0.00822,
+      0.00835872,
+      0.00853518,
+      0.00873,
+      0.0088116
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-03 17:45:00",
+    "last_bar": "2026-08-03 17:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00802518,
+    "lo_seen": 0.00802518,
+    "created": "2026-08-03T18:04:12",
+    "dca_levels": [
+      0.00802518,
+      0.007965,
+      0.00790482,
+      0.00781914
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|OPUSDT|2026-08-03 17:45:00": {
+    "symbol": "OPUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6142,
+    "entry": 0.0859406,
+    "stop": 0.0818,
+    "init_stop": 0.0818,
+    "cur_stop": 0.0818,
+    "legs": [
+      0.0859406,
+      0.08515,
+      0.0843594,
+      0.0832338
+    ],
+    "last_alert_stop": 0.0818,
+    "armed": false,
+    "targets": [
+      0.0885,
+      0.0903224,
+      0.0926406,
+      0.0952,
+      0.096272
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-03 17:45:00",
+    "last_bar": "2026-08-03 17:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0859406,
+    "lo_seen": 0.0859406,
+    "created": "2026-08-03T18:04:12",
+    "dca_levels": [
+      0.0859406,
+      0.08515,
+      0.0843594,
+      0.0832338
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
