@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-03T21:34:31",
+  "updated_at": "2026-08-03T21:49:32",
   "stats": {
-    "open": 26,
-    "closed": 301,
-    "win_rate": 63.5,
-    "profit_factor": 1.4,
-    "total_pct": 195.05,
-    "avg_pct": 0.42,
+    "open": 25,
+    "closed": 302,
+    "win_rate": 63.6,
+    "profit_factor": 1.41,
+    "total_pct": 201.8,
+    "avg_pct": 0.43,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-03",
-        "trades": 9,
+        "trades": 10,
         "win_rate": 100.0,
-        "return_pct": 38.87,
+        "return_pct": 42.05,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -247,9 +247,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 9,
+        "trades": 10,
         "win_rate": 100.0,
-        "return_pct": 38.87,
+        "return_pct": 42.05,
         "month": "2026-08"
       },
       {
@@ -284,9 +284,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 36,
-        "win_rate": 80.6,
-        "return_pct": 78.83
+        "trades": 37,
+        "win_rate": 81.1,
+        "return_pct": 82.93
       },
       {
         "key": "2026-07",
@@ -1216,11 +1216,14 @@
       "timeframe": "15m",
       "entry": 0.125235,
       "stop": 0.1206,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-08-03T16:48:53",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-03T21:49:27",
+      "realized_pct": 2.29,
+      "result_pct": 2.29
     },
     {
       "id": "الفيواب الأسبوعي · BTC|ADAUSDT|2026-08-03 16:45:00",
