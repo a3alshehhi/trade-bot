@@ -1,8 +1,43 @@
 {
-  "updated_at": "2026-08-03T08:22:33",
+  "updated_at": "2026-08-03T11:50:17",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "binance|DIAUSDT|2026-08-03T11:24:42",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "DIAUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.11739999999999999,
+      "stop_orig": 0.110206,
+      "stop": 0.110206,
+      "targets": [
+        0.1192952,
+        0.1215788
+      ],
+      "opened_at": "2026-08-03T11:24:42",
+      "usd": 35.94,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null,
+      "net_pct": -0.1,
+      "result_r": 0.0,
+      "unrealized_pct": -1.193,
+      "exit_price": null,
+      "exit_reason": null,
+      "cur_stop": 0.110206,
+      "remaining": 1.0,
+      "pnl_usdt": -0.0359,
+      "last_price": 0.116,
+      "events": [],
+      "real_rule": "wick"
+    },
     {
       "id": "binance|AMPUSDT|2026-08-03T06:21:53",
       "source": "binance",
@@ -500,13 +535,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -3.595,
+      "unrealized_pct": -2.658,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.0341,
-      "last_price": 6.383,
+      "last_price": 6.445,
       "events": [],
       "real_rule": "wick"
     },
@@ -535,13 +570,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -3.489,
+      "unrealized_pct": -2.552,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.1023,
-      "last_price": 6.383,
+      "last_price": 6.445,
       "events": [],
       "real_rule": "wick"
     },
@@ -7191,13 +7226,13 @@
     }
   ],
   "stats": {
-    "total": 305,
-    "open": 11,
+    "total": 306,
+    "open": 12,
     "closed": 294,
     "wins": 170,
     "win_rate": 57.8,
     "net_pct": 40.04,
     "pf": 1.12,
-    "simulated": 2
+    "simulated": 3
   }
 }
