@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-03T14:10:08",
+  "updated_at": "2026-08-03T16:42:23",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|LSKUSDT|2026-08-03T16:33:45",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "LSKUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0751822,
+      "stop_orig": 0.0703,
+      "stop": 0.0703,
+      "targets": [],
+      "opened_at": "2026-08-03T16:33:45",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "binance|DIAUSDT|2026-08-03T11:24:42",
       "source": "binance",
@@ -36,7 +57,7 @@
       "cur_stop": 0.11739999999999999,
       "remaining": 0.0,
       "pnl_usdt": 0.2182,
-      "last_price": 0.1163,
+      "last_price": 0.1148,
       "events": [
         {
           "ts": "2026-08-03T12:15:00",
@@ -552,13 +573,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -1.269,
+      "unrealized_pct": -1.495,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.0341,
-      "last_price": 6.537,
+      "last_price": 6.522,
       "events": [],
       "real_rule": "wick"
     },
@@ -587,13 +608,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -1.161,
+      "unrealized_pct": -1.403,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.1023,
-      "last_price": 6.537,
+      "last_price": 6.521,
       "events": [],
       "real_rule": "wick"
     },
@@ -7243,8 +7264,8 @@
     }
   ],
   "stats": {
-    "total": 306,
-    "open": 10,
+    "total": 307,
+    "open": 11,
     "closed": 296,
     "wins": 172,
     "win_rate": 58.1,
