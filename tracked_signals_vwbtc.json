@@ -2757,5 +2757,55 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|LSKUSDT|2026-08-03 16:15:00": {
+    "symbol": "LSKUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6136,
+    "entry": 0.0751822,
+    "stop": 0.0703,
+    "init_stop": 0.0703,
+    "cur_stop": 0.0703,
+    "legs": [
+      0.0751822,
+      0.07425,
+      0.0733178,
+      0.0719906
+    ],
+    "last_alert_stop": 0.0703,
+    "armed": false,
+    "targets": [
+      0.0782,
+      0.0803488,
+      0.0830822,
+      0.0861,
+      0.087364
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-03 16:15:00",
+    "last_bar": "2026-08-03 16:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0751822,
+    "lo_seen": 0.0751822,
+    "created": "2026-08-03T16:33:45",
+    "dca_levels": [
+      0.0751822,
+      0.07425,
+      0.0733178,
+      0.0719906
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
