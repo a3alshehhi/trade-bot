@@ -1,8 +1,86 @@
 {
-  "updated_at": "2026-08-03T04:55:17",
+  "updated_at": "2026-08-03T08:22:33",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "binance|AMPUSDT|2026-08-03T06:21:53",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "AMPUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.000398,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-08-03T06:21:53",
+      "usd": 100.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-08-03T06:24:27",
+      "realized_pct": 0.0,
+      "result_pct": 0.879,
+      "exec_pct": 0.879,
+      "exec_usdt": 0.9289,
+      "exec_reasons": [
+        "هدف1 (50%)",
+        "هدف2"
+      ]
+    },
+    {
+      "id": "binance|CGPTUSDT|2026-08-03T04:52:33",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "CGPTUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.01869,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-08-03T04:52:33",
+      "usd": 100.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-08-03T08:09:20",
+      "realized_pct": 0.0,
+      "result_pct": 0.776,
+      "exec_pct": 0.776,
+      "exec_usdt": 0.3897,
+      "exec_reasons": [
+        "هدف1 (50%)",
+        "تعادل/تتبّع"
+      ]
+    },
+    {
+      "id": "bybit|CGPTUSDT|2026-08-03T04:51:41",
+      "source": "bybit",
+      "source_ar": "بايبت تيستنت",
+      "symbol": "CGPTUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.01864854,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-08-03T04:51:41",
+      "usd": 300.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-08-03T05:22:53",
+      "realized_pct": 0.0,
+      "result_pct": 1.241,
+      "exec_pct": 1.241,
+      "exec_usdt": 2.1162,
+      "exec_reasons": [
+        "هدف1 (50%)",
+        "تعادل/تتبّع"
+      ]
+    },
     {
       "id": "paper|BICOUSDT|2026-08-03T03:16:16",
       "source": "paper",
@@ -23,94 +101,6 @@
       "realized_pct": 0.0,
       "result_pct": null,
       "exec_pct": null
-    },
-    {
-      "id": "binance|CGPTUSDT|2026-08-03T02:30:58",
-      "source": "binance",
-      "source_ar": "بايننس ديمو",
-      "symbol": "CGPTUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.01869,
-      "stop_orig": 0.0179254,
-      "stop": 0.0179254,
-      "targets": [
-        0.01888496,
-        0.01912024
-      ],
-      "opened_at": "2026-08-03T02:30:58",
-      "usd": 67.83,
-      "hits": [
-        1
-      ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.522,
-      "result_pct": null,
-      "exec_pct": null,
-      "net_pct": 0.372,
-      "result_r": 0.127,
-      "unrealized_pct": 0.856,
-      "exit_price": null,
-      "exit_reason": null,
-      "cur_stop": 0.01869,
-      "remaining": 0.5,
-      "pnl_usdt": 0.252,
-      "last_price": 0.01901,
-      "events": [
-        {
-          "ts": "2026-08-03T04:00:00",
-          "type": "tp1",
-          "price": 0.01888496,
-          "pct": 1.043
-        }
-      ],
-      "real_rule": "wick"
-    },
-    {
-      "id": "bybit|CGPTUSDT|2026-08-03T02:27:43",
-      "source": "bybit",
-      "source_ar": "بايبت تيستنت",
-      "symbol": "CGPTUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "1h",
-      "entry": 0.01864853859501963,
-      "stop_orig": 0.0179254,
-      "stop": 0.0179254,
-      "targets": [
-        0.01888496,
-        0.01912024
-      ],
-      "opened_at": "2026-08-03T02:27:43",
-      "usd": 203.49,
-      "hits": [
-        1
-      ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.634,
-      "result_pct": null,
-      "exec_pct": null,
-      "net_pct": 0.484,
-      "result_r": 0.163,
-      "unrealized_pct": 0.969,
-      "exit_price": null,
-      "exit_reason": null,
-      "cur_stop": 0.018865480173525517,
-      "remaining": 0.5,
-      "pnl_usdt": 0.9847,
-      "last_price": 0.01901,
-      "events": [
-        {
-          "ts": "2026-08-03T04:00:00",
-          "type": "tp1",
-          "price": 0.01888496,
-          "pct": 1.268
-        }
-      ],
-      "real_rule": "wick"
     },
     {
       "id": "paper|AVAUSDT|2026-08-03T01:36:28",
@@ -510,13 +500,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -3.036,
+      "unrealized_pct": -3.595,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.0341,
-      "last_price": 6.42,
+      "last_price": 6.383,
       "events": [],
       "real_rule": "wick"
     },
@@ -545,13 +535,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -2.93,
+      "unrealized_pct": -3.489,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.1023,
-      "last_price": 6.42,
+      "last_price": 6.383,
       "events": [],
       "real_rule": "wick"
     },
@@ -7201,13 +7191,13 @@
     }
   ],
   "stats": {
-    "total": 304,
-    "open": 13,
-    "closed": 291,
-    "wins": 167,
-    "win_rate": 57.4,
-    "net_pct": 37.14,
-    "pf": 1.11,
-    "simulated": 4
+    "total": 305,
+    "open": 11,
+    "closed": 294,
+    "wins": 170,
+    "win_rate": 57.8,
+    "net_pct": 40.04,
+    "pf": 1.12,
+    "simulated": 2
   }
 }
