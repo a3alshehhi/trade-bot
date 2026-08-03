@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03T11:50:17",
+  "updated_at": "2026-08-03T14:10:08",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -20,22 +20,37 @@
       ],
       "opened_at": "2026-08-03T11:24:42",
       "usd": 35.94,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-03T12:30:00",
+      "realized_pct": 0.807,
+      "result_pct": 0.607,
       "exec_pct": null,
-      "net_pct": -0.1,
-      "result_r": 0.0,
-      "unrealized_pct": -1.193,
-      "exit_price": null,
-      "exit_reason": null,
-      "cur_stop": 0.110206,
-      "remaining": 1.0,
-      "pnl_usdt": -0.0359,
-      "last_price": 0.116,
-      "events": [],
+      "net_pct": 0.607,
+      "result_r": 0.132,
+      "unrealized_pct": 0.0,
+      "exit_price": 0.11739999999999999,
+      "exit_reason": "تعادل",
+      "cur_stop": 0.11739999999999999,
+      "remaining": 0.0,
+      "pnl_usdt": 0.2182,
+      "last_price": 0.1163,
+      "events": [
+        {
+          "ts": "2026-08-03T12:15:00",
+          "type": "tp1",
+          "price": 0.1192952,
+          "pct": 1.614
+        },
+        {
+          "ts": "2026-08-03T12:30:00",
+          "type": "stop",
+          "price": 0.11739999999999999,
+          "pct": 0.0
+        }
+      ],
       "real_rule": "wick"
     },
     {
@@ -130,12 +145,14 @@
       "targets": [],
       "opened_at": "2026-08-03T03:16:16",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-03T13:31:23",
+      "realized_pct": 18.33,
+      "result_pct": 18.33,
+      "exec_pct": 18.33
     },
     {
       "id": "paper|AVAUSDT|2026-08-03T01:36:28",
@@ -535,13 +552,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -2.658,
+      "unrealized_pct": -1.269,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.0341,
-      "last_price": 6.445,
+      "last_price": 6.537,
       "events": [],
       "real_rule": "wick"
     },
@@ -570,13 +587,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -2.552,
+      "unrealized_pct": -1.161,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 6.01331,
       "remaining": 1.0,
       "pnl_usdt": -0.1023,
-      "last_price": 6.445,
+      "last_price": 6.537,
       "events": [],
       "real_rule": "wick"
     },
@@ -7227,12 +7244,12 @@
   ],
   "stats": {
     "total": 306,
-    "open": 12,
-    "closed": 294,
-    "wins": 170,
-    "win_rate": 57.8,
-    "net_pct": 40.04,
-    "pf": 1.12,
+    "open": 10,
+    "closed": 296,
+    "wins": 172,
+    "win_rate": 58.1,
+    "net_pct": 58.98,
+    "pf": 1.18,
     "simulated": 3
   }
 }
