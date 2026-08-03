@@ -3382,5 +3382,55 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|FETUSDT|2026-08-03 22:15:00": {
+    "symbol": "FETUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6149,
+    "entry": 0.1433586,
+    "stop": 0.1386,
+    "init_stop": 0.1386,
+    "cur_stop": 0.1386,
+    "legs": [
+      0.1433586,
+      0.14245,
+      0.1415414,
+      0.1402478
+    ],
+    "last_alert_stop": 0.1386,
+    "armed": false,
+    "targets": [
+      0.1463,
+      0.1483944,
+      0.1510586,
+      0.154,
+      0.155232
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-03 22:15:00",
+    "last_bar": "2026-08-03 22:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1433586,
+    "lo_seen": 0.1433586,
+    "created": "2026-08-03T22:32:20",
+    "dca_levels": [
+      0.1433586,
+      0.14245,
+      0.1415414,
+      0.1402478
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
