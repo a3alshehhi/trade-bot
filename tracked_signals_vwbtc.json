@@ -3212,5 +3212,55 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|WUSDT|2026-08-03 19:30:00": {
+    "symbol": "WUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6146,
+    "entry": 0.00817316,
+    "stop": 0.00779,
+    "init_stop": 0.00779,
+    "cur_stop": 0.00779,
+    "legs": [
+      0.00817316,
+      0.0081,
+      0.00802684,
+      0.00792268
+    ],
+    "last_alert_stop": 0.00779,
+    "armed": false,
+    "targets": [
+      0.00841,
+      0.00857864,
+      0.00879316,
+      0.00903,
+      0.0091292
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-03 19:30:00",
+    "last_bar": "2026-08-03 19:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00817316,
+    "lo_seen": 0.00817316,
+    "created": "2026-08-03T19:48:43",
+    "dca_levels": [
+      0.00817316,
+      0.0081,
+      0.00802684,
+      0.00792268
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
