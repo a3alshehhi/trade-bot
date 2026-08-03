@@ -2807,5 +2807,55 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|THETAUSDT|2026-08-03 16:30:00": {
+    "symbol": "THETAUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6138,
+    "entry": 0.125235,
+    "stop": 0.1206,
+    "init_stop": 0.1206,
+    "cur_stop": 0.1206,
+    "legs": [
+      0.125235,
+      0.12435,
+      0.123465,
+      0.122205
+    ],
+    "last_alert_stop": 0.1206,
+    "armed": false,
+    "targets": [
+      0.1281,
+      0.13014,
+      0.132735,
+      0.1356,
+      0.1368
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-03 16:30:00",
+    "last_bar": "2026-08-03 16:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.125235,
+    "lo_seen": 0.125235,
+    "created": "2026-08-03T16:48:53",
+    "dca_levels": [
+      0.125235,
+      0.12435,
+      0.123465,
+      0.122205
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
