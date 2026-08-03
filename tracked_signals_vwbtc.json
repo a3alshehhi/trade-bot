@@ -3432,5 +3432,55 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|GRTUSDT|2026-08-03 22:30:00": {
+    "symbol": "GRTUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6150,
+    "entry": 0.0146053,
+    "stop": 0.01408,
+    "init_stop": 0.01408,
+    "cur_stop": 0.01408,
+    "legs": [
+      0.0146053,
+      0.014505,
+      0.0144047,
+      0.0142619
+    ],
+    "last_alert_stop": 0.01408,
+    "armed": false,
+    "targets": [
+      0.01493,
+      0.0151612,
+      0.0154553,
+      0.01578,
+      0.015916
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-03 22:30:00",
+    "last_bar": "2026-08-03 22:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0146053,
+    "lo_seen": 0.0146053,
+    "created": "2026-08-03T22:48:39",
+    "dca_levels": [
+      0.0146053,
+      0.014505,
+      0.0144047,
+      0.0142619
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
