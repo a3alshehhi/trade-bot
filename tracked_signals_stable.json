@@ -1858,5 +1858,42 @@
     "hi_seen": 0.01901,
     "lo_seen": 0.0184,
     "created": "2026-08-03T02:27:37"
+  },
+  "SD Stable|AMPUSDT|2026-08-03 06:00:00": {
+    "symbol": "AMPUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 6122,
+    "entry": 0.000394,
+    "stop": 0.00038825,
+    "init_stop": 0.00038825,
+    "cur_stop": 0.00038825,
+    "legs": [
+      0.000394,
+      0.00039394,
+      0.000393,
+      0.00039206,
+      0.00039071
+    ],
+    "last_alert_stop": 0.00038825,
+    "armed": false,
+    "targets": [
+      0.00039918,
+      0.00040194
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-03 06:00:00",
+    "last_bar": "2026-08-03 06:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.000394,
+    "lo_seen": 0.000394,
+    "created": "2026-08-03T06:06:18"
   }
 }
