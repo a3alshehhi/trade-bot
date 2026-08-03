@@ -4924,5 +4924,55 @@
     "exit_price": 0.086,
     "close_card_sent": true,
     "closed_at": "2026-08-02T23:46:08"
+  },
+  "العرض/الطلب|AVAUSDT|2026-08-03 01:15:00": {
+    "symbol": "AVAUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6101,
+    "entry": 0.1758566,
+    "stop": 0.1643,
+    "init_stop": 0.1643,
+    "cur_stop": 0.1643,
+    "legs": [
+      0.1758566,
+      0.17365,
+      0.1714434,
+      0.1683018
+    ],
+    "last_alert_stop": 0.1643,
+    "armed": false,
+    "targets": [
+      0.183,
+      0.1880864,
+      0.1945566,
+      0.2017,
+      0.204692
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-03 01:15:00",
+    "last_bar": "2026-08-03 01:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1758566,
+    "lo_seen": 0.1758566,
+    "created": "2026-08-03T01:31:18",
+    "dca_levels": [
+      0.1758566,
+      0.17365,
+      0.1714434,
+      0.1683018
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
