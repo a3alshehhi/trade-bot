@@ -1515,11 +1515,14 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-08-04 07:30:00",
-    "last_bar": "2026-08-04 07:30:00",
+    "last_bar": "2026-08-04 12:14:59.999000",
     "hits": [],
-    "stopped": false,
-    "hi_seen": 0.0564,
-    "lo_seen": 0.0564,
-    "created": "2026-08-04T07:37:40"
+    "stopped": true,
+    "hi_seen": 0.0572,
+    "lo_seen": 0.0537,
+    "created": "2026-08-04T07:37:40",
+    "exit_price": 0.054422,
+    "close_card_sent": true,
+    "closed_at": "2026-08-04T12:40:26"
   }
 }
