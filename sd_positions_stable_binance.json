@@ -66,5 +66,39 @@
     "armed": false,
     "opened_ts": "2026-08-03T11:24:42",
     "msg_id": 6133
+  },
+  "BANDUSDT": {
+    "symbol": "BANDUSDT",
+    "tf": "15m",
+    "label": "SD Stable",
+    "prob": null,
+    "levels": [
+      0.1537
+    ],
+    "filled": [
+      true
+    ],
+    "leg_usd": 300.0,
+    "n_legs": 1,
+    "fills": [
+      {
+        "price": 0.1555647168637212,
+        "qty": 1926.4716,
+        "usd": 299.991
+      }
+    ],
+    "avg_entry": 0.1555647168637212,
+    "entry": 0.1555647168637212,
+    "init_stop": 0.152701,
+    "stop": 0.1561099719749307,
+    "R": 0.002863716863721194,
+    "tp1": 0.1564616,
+    "tp2": 0.1574304,
+    "qty": 1926.4716,
+    "qty_open": 1926.4716,
+    "tp1_done": false,
+    "armed": true,
+    "opened_ts": "2026-08-04T01:57:44",
+    "msg_id": 6157
   }
 }
