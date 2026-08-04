@@ -1,8 +1,68 @@
 {
-  "updated_at": "2026-08-04T07:22:16",
+  "updated_at": "2026-08-04T10:05:12",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "binance|DIAUSDT|2026-08-04T07:53:20",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "DIAUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1174,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-08-04T07:53:20",
+      "usd": 100.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-08-04T07:53:20",
+      "realized_pct": 0.0,
+      "result_pct": -6.644,
+      "exec_pct": -6.644,
+      "exec_usdt": -2.4539,
+      "exec_reasons": [
+        "وقف خسارة"
+      ]
+    },
+    {
+      "id": "binance|CUSDT|2026-08-04T07:41:43",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "CUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.057,
+      "stop_orig": 0.054422,
+      "stop": 0.054422,
+      "targets": [
+        0.0581344,
+        0.0590686
+      ],
+      "opened_at": "2026-08-04T07:41:43",
+      "usd": 57.03,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null,
+      "net_pct": -0.1,
+      "result_r": 0.0,
+      "unrealized_pct": -2.456,
+      "exit_price": null,
+      "exit_reason": null,
+      "cur_stop": 0.054422,
+      "remaining": 1.0,
+      "pnl_usdt": -0.057,
+      "last_price": 0.0556,
+      "events": [],
+      "real_rule": "wick"
+    },
     {
       "id": "paper|MOVEUSDT|2026-08-04T06:49:11",
       "source": "paper",
@@ -435,56 +495,6 @@
       "realized_pct": 0.0,
       "result_pct": null,
       "exec_pct": null
-    },
-    {
-      "id": "binance|DIAUSDT|2026-08-03T11:24:42",
-      "source": "binance",
-      "source_ar": "بايننس ديمو",
-      "symbol": "DIAUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.11739999999999999,
-      "stop_orig": 0.110206,
-      "stop": 0.110206,
-      "targets": [
-        0.1192952,
-        0.1215788
-      ],
-      "opened_at": "2026-08-03T11:24:42",
-      "usd": 35.94,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "closed_at": "2026-08-03T12:30:00",
-      "realized_pct": 0.807,
-      "result_pct": 0.607,
-      "exec_pct": null,
-      "net_pct": 0.607,
-      "result_r": 0.132,
-      "unrealized_pct": 0.0,
-      "exit_price": 0.11739999999999999,
-      "exit_reason": "تعادل",
-      "cur_stop": 0.11739999999999999,
-      "remaining": 0.0,
-      "pnl_usdt": 0.2182,
-      "last_price": 0.1104,
-      "events": [
-        {
-          "ts": "2026-08-03T12:15:00",
-          "type": "tp1",
-          "price": 0.1192952,
-          "pct": 1.614
-        },
-        {
-          "ts": "2026-08-03T12:30:00",
-          "type": "stop",
-          "price": 0.11739999999999999,
-          "pct": 0.0
-        }
-      ],
-      "real_rule": "wick"
     },
     {
       "id": "binance|AMPUSDT|2026-08-03T06:21:53",
@@ -7608,13 +7618,13 @@
     }
   ],
   "stats": {
-    "total": 323,
-    "open": 12,
+    "total": 324,
+    "open": 13,
     "closed": 311,
-    "wins": 185,
-    "win_rate": 59.5,
-    "net_pct": 98.75,
-    "pf": 1.3,
+    "wins": 184,
+    "win_rate": 59.2,
+    "net_pct": 91.5,
+    "pf": 1.27,
     "simulated": 1
   }
 }
