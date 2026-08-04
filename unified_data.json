@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-04T04:37:10",
+  "updated_at": "2026-08-04T07:22:16",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|MOVEUSDT|2026-08-04T06:49:11",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "MOVEUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0076326,
+      "stop_orig": 0.0072,
+      "stop": 0.0072,
+      "targets": [],
+      "opened_at": "2026-08-04T06:49:11",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "binance|BANDUSDT|2026-08-04T02:08:42",
       "source": "binance",
@@ -448,7 +469,7 @@
       "cur_stop": 0.11739999999999999,
       "remaining": 0.0,
       "pnl_usdt": 0.2182,
-      "last_price": 0.1135,
+      "last_price": 0.1104,
       "events": [
         {
           "ts": "2026-08-03T12:15:00",
@@ -7587,8 +7608,8 @@
     }
   ],
   "stats": {
-    "total": 322,
-    "open": 11,
+    "total": 323,
+    "open": 12,
     "closed": 311,
     "wins": 185,
     "win_rate": 59.5,
