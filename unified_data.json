@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-04T22:43:47",
+  "updated_at": "2026-08-04T23:51:14",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|SXTUSDT|2026-08-04T23:39:19",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "SXTUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00728788,
+      "stop_orig": 0.00688,
+      "stop": 0.00688,
+      "targets": [],
+      "opened_at": "2026-08-04T23:39:19",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|EPICUSDT|2026-08-04T18:16:57",
       "source": "paper",
@@ -7698,8 +7719,8 @@
     }
   ],
   "stats": {
-    "total": 328,
-    "open": 13,
+    "total": 329,
+    "open": 14,
     "closed": 315,
     "wins": 187,
     "win_rate": 59.4,
