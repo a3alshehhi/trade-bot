@@ -3665,5 +3665,55 @@
     "exit_price": 0.000409,
     "close_card_sent": true,
     "closed_at": "2026-08-04T14:09:17"
+  },
+  "الفيواب الأسبوعي · BTC|SENTUSDT|2026-08-04 15:00:00": {
+    "symbol": "SENTUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6179,
+    "entry": 0.01389384,
+    "stop": 0.01335,
+    "init_stop": 0.01335,
+    "cur_stop": 0.01335,
+    "legs": [
+      0.01389384,
+      0.01379,
+      0.01368616,
+      0.01353832
+    ],
+    "last_alert_stop": 0.01335,
+    "armed": false,
+    "targets": [
+      0.01423,
+      0.01446936,
+      0.01477384,
+      0.01511,
+      0.0152508
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-04 15:00:00",
+    "last_bar": "2026-08-04 15:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01389384,
+    "lo_seen": 0.01389384,
+    "created": "2026-08-04T15:18:59",
+    "dca_levels": [
+      0.01389384,
+      0.01379,
+      0.01368616,
+      0.01353832
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
