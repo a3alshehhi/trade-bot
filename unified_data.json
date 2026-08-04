@@ -1,8 +1,31 @@
 {
-  "updated_at": "2026-08-04T16:43:05",
+  "updated_at": "2026-08-04T18:23:34",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|AVAUSDT|2026-08-04T16:53:24",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "AVAUSDT",
+      "label": "عرض/طلب+دايفرجنس",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1687,
+      "stop_orig": 0.166084,
+      "stop": 0.166084,
+      "targets": [],
+      "opened_at": "2026-08-04T16:53:24",
+      "usd": 100.0,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|SENTUSDT|2026-08-04T15:18:59",
       "source": "paper",
@@ -7652,8 +7675,8 @@
     }
   ],
   "stats": {
-    "total": 326,
-    "open": 13,
+    "total": 327,
+    "open": 14,
     "closed": 313,
     "wins": 185,
     "win_rate": 59.1,
