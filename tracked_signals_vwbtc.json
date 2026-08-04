@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-08-04 00:59:59.999000",
+    "last_bar": "2026-08-04 02:29:59.999000",
     "hits": [
       1
     ],
@@ -2538,7 +2538,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-02 21:00:00",
-    "last_bar": "2026-08-04 00:59:59.999000",
+    "last_bar": "2026-08-04 02:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00235,
@@ -2696,7 +2696,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-02 22:45:00",
-    "last_bar": "2026-08-04 00:59:59.999000",
+    "last_bar": "2026-08-04 02:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 74.28,
@@ -2746,7 +2746,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 01:15:00",
-    "last_bar": "2026-08-04 00:59:59.999000",
+    "last_bar": "2026-08-04 02:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1805,
@@ -2796,11 +2796,11 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 16:15:00",
-    "last_bar": "2026-08-04 00:59:59.999000",
+    "last_bar": "2026-08-04 02:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0754,
-    "lo_seen": 0.0735,
+    "lo_seen": 0.0729,
     "created": "2026-08-03T16:39:44",
     "dca_levels": [
       0.0751822,
@@ -2901,7 +2901,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 16:45:00",
-    "last_bar": "2026-08-04 00:59:59.999000",
+    "last_bar": "2026-08-04 02:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1961,
@@ -2951,10 +2951,12 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 16:45:00",
-    "last_bar": "2026-08-04 00:59:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.02156,
+    "last_bar": "2026-08-04 02:29:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": true,
+    "hi_seen": 0.02165,
     "lo_seen": 0.02074612,
     "created": "2026-08-03T17:04:34",
     "dca_levels": [
@@ -2964,7 +2966,10 @@
       0.01980076
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.02164,
+    "close_card_sent": true,
+    "closed_at": "2026-08-04T02:33:43"
   },
   "الفيواب الأسبوعي · BTC|NEOUSDT|2026-08-03 17:00:00": {
     "symbol": "NEOUSDT",
@@ -3001,7 +3006,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 17:00:00",
-    "last_bar": "2026-08-04 00:59:59.999000",
+    "last_bar": "2026-08-04 02:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.884,
@@ -3106,7 +3111,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 17:45:00",
-    "last_bar": "2026-08-04 00:59:59.999000",
+    "last_bar": "2026-08-04 02:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00819,
@@ -3431,10 +3436,12 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 22:15:00",
-    "last_bar": "2026-08-04 00:59:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.146,
+    "last_bar": "2026-08-04 02:29:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": true,
+    "hi_seen": 0.1463,
     "lo_seen": 0.1433586,
     "created": "2026-08-03T22:32:20",
     "dca_levels": [
@@ -3444,7 +3451,10 @@
       0.1402478
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.1463,
+    "close_card_sent": true,
+    "closed_at": "2026-08-04T02:33:45"
   },
   "الفيواب الأسبوعي · BTC|GRTUSDT|2026-08-03 22:30:00": {
     "symbol": "GRTUSDT",
@@ -3481,10 +3491,10 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 22:30:00",
-    "last_bar": "2026-08-04 00:59:59.999000",
+    "last_bar": "2026-08-04 02:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.01483,
+    "hi_seen": 0.01487,
     "lo_seen": 0.0146053,
     "created": "2026-08-03T22:48:39",
     "dca_levels": [
@@ -3531,7 +3541,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 22:45:00",
-    "last_bar": "2026-08-04 00:59:59.999000",
+    "last_bar": "2026-08-04 02:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0211,
