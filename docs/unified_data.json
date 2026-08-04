@@ -1,8 +1,77 @@
 {
-  "updated_at": "2026-08-04T10:05:12",
+  "updated_at": "2026-08-04T16:43:05",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|SENTUSDT|2026-08-04T15:18:59",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "SENTUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01389384,
+      "stop_orig": 0.01335,
+      "stop": 0.01335,
+      "targets": [],
+      "opened_at": "2026-08-04T15:18:59",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "binance|CUSDT|2026-08-04T12:38:50",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "CUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.057,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-08-04T12:38:50",
+      "usd": 100.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-08-04T12:38:50",
+      "realized_pct": 0.0,
+      "result_pct": -5.439,
+      "exec_pct": -5.439,
+      "exec_usdt": -3.209,
+      "exec_reasons": [
+        "وقف خسارة"
+      ]
+    },
+    {
+      "id": "paper|AMPUSDT|2026-08-04T12:15:23",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "AMPUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0004006,
+      "stop_orig": 0.000387,
+      "stop": 0.000387,
+      "targets": [],
+      "opened_at": "2026-08-04T12:15:23",
+      "usd": 100.0,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-04T14:09:17",
+      "realized_pct": 2.1,
+      "result_pct": 2.1,
+      "exec_pct": 2.1
+    },
     {
       "id": "binance|DIAUSDT|2026-08-04T07:53:20",
       "source": "binance",
@@ -27,41 +96,6 @@
       "exec_reasons": [
         "وقف خسارة"
       ]
-    },
-    {
-      "id": "binance|CUSDT|2026-08-04T07:41:43",
-      "source": "binance",
-      "source_ar": "بايننس ديمو",
-      "symbol": "CUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.057,
-      "stop_orig": 0.054422,
-      "stop": 0.054422,
-      "targets": [
-        0.0581344,
-        0.0590686
-      ],
-      "opened_at": "2026-08-04T07:41:43",
-      "usd": 57.03,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null,
-      "net_pct": -0.1,
-      "result_r": 0.0,
-      "unrealized_pct": -2.456,
-      "exit_price": null,
-      "exit_reason": null,
-      "cur_stop": 0.054422,
-      "remaining": 1.0,
-      "pnl_usdt": -0.057,
-      "last_price": 0.0556,
-      "events": [],
-      "real_rule": "wick"
     },
     {
       "id": "paper|MOVEUSDT|2026-08-04T06:49:11",
@@ -7618,13 +7652,13 @@
     }
   ],
   "stats": {
-    "total": 324,
+    "total": 326,
     "open": 13,
-    "closed": 311,
-    "wins": 184,
-    "win_rate": 59.2,
-    "net_pct": 91.5,
-    "pf": 1.27,
-    "simulated": 1
+    "closed": 313,
+    "wins": 185,
+    "win_rate": 59.1,
+    "net_pct": 88.16,
+    "pf": 1.26,
+    "simulated": 0
   }
 }
