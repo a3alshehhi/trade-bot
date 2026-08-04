@@ -3770,5 +3770,55 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|SXTUSDT|2026-08-04 23:15:00": {
+    "symbol": "SXTUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6188,
+    "entry": 0.00728788,
+    "stop": 0.00688,
+    "init_stop": 0.00688,
+    "cur_stop": 0.00688,
+    "legs": [
+      0.00728788,
+      0.00721,
+      0.00713212,
+      0.00702124
+    ],
+    "last_alert_stop": 0.00688,
+    "armed": false,
+    "targets": [
+      0.00754,
+      0.00771952,
+      0.00794788,
+      0.0082,
+      0.0083056
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-04 23:15:00",
+    "last_bar": "2026-08-04 23:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00728788,
+    "lo_seen": 0.00728788,
+    "created": "2026-08-04T23:33:35",
+    "dca_levels": [
+      0.00728788,
+      0.00721,
+      0.00713212,
+      0.00702124
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
