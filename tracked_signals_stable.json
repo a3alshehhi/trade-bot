@@ -1,198 +1,4 @@
 {
-  "SD Stable|CELOUSDT|2026-07-21 02:15:00": {
-    "symbol": "CELOUSDT",
-    "label": "SD Stable",
-    "timeframe": "15m",
-    "message_id": 5275,
-    "entry": 0.06994,
-    "stop": 0.0691501,
-    "init_stop": 0.0691501,
-    "cur_stop": 0.06994,
-    "legs": [
-      0.06994,
-      0.06992508,
-      0.0698,
-      0.06967492,
-      0.06949684
-    ],
-    "last_alert_stop": 0.0691501,
-    "armed": false,
-    "targets": [
-      0.07061832,
-      0.07098508
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-21 02:15:00",
-    "last_bar": "2026-07-21 02:44:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.07163,
-    "lo_seen": 0.0699,
-    "created": "2026-07-21T02:25:37",
-    "exit_price": 0.07098508,
-    "close_card_sent": true,
-    "closed_at": "2026-07-21T02:53:34"
-  },
-  "SD Stable|CELOUSDT|2026-07-21 03:00:00": {
-    "symbol": "CELOUSDT",
-    "label": "SD Stable",
-    "timeframe": "1h",
-    "message_id": 5282,
-    "entry": 0.06992,
-    "stop": 0.0686609,
-    "init_stop": 0.0686609,
-    "cur_stop": 0.06992,
-    "legs": [
-      0.06992
-    ],
-    "last_alert_stop": 0.06992,
-    "armed": false,
-    "targets": [
-      0.07263608,
-      0.07363602
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-21 03:00:00",
-    "last_bar": "2026-07-22 20:59:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.07448,
-    "lo_seen": 0.06917,
-    "created": "2026-07-21T03:10:06",
-    "exit_price": 0.07363602,
-    "close_card_sent": true,
-    "closed_at": "2026-07-22T21:07:02"
-  },
-  "SD Stable|AWEUSDT|2026-07-21 03:45:00": {
-    "symbol": "AWEUSDT",
-    "label": "SD Stable",
-    "timeframe": "15m",
-    "message_id": 5286,
-    "entry": 0.05831,
-    "stop": 0.0577394,
-    "init_stop": 0.0577394,
-    "cur_stop": 0.0577394,
-    "legs": [
-      0.05831,
-      0.05824346,
-      0.05807042
-    ],
-    "last_alert_stop": 0.0577394,
-    "armed": false,
-    "targets": [
-      0.05916016,
-      0.05951654
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-21 03:45:00",
-    "last_bar": "2026-07-21 17:59:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.05905,
-    "lo_seen": 0.05773,
-    "created": "2026-07-21T03:53:26",
-    "exit_price": 0.0577394,
-    "close_card_sent": true,
-    "closed_at": "2026-07-21T18:02:51"
-  },
-  "SD Stable|ASTRUSDT|2026-07-21 05:00:00": {
-    "symbol": "ASTRUSDT",
-    "label": "SD Stable",
-    "timeframe": "1h",
-    "message_id": 5290,
-    "entry": 0.005196,
-    "stop": 0.00510377,
-    "init_stop": 0.00510377,
-    "cur_stop": 0.00510377,
-    "legs": [
-      0.005196
-    ],
-    "last_alert_stop": 0.00510377,
-    "armed": false,
-    "targets": [
-      0.00537767,
-      0.00544722
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-21 05:00:00",
-    "last_bar": "2026-07-24 13:59:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.005294,
-    "lo_seen": 0.005059,
-    "created": "2026-07-21T05:08:44",
-    "exit_price": 0.00510377,
-    "close_card_sent": true,
-    "closed_at": "2026-07-24T14:08:08"
-  },
-  "SD Stable|BLURUSDT|2026-07-21 05:45:00": {
-    "symbol": "BLURUSDT",
-    "label": "SD Stable",
-    "timeframe": "15m",
-    "message_id": 5295,
-    "entry": 0.01577,
-    "stop": 0.0156529,
-    "init_stop": 0.0156529,
-    "cur_stop": 0.0156529,
-    "legs": [
-      0.01577,
-      0.0157564,
-      0.0157228
-    ],
-    "last_alert_stop": 0.0156529,
-    "armed": false,
-    "targets": [
-      0.0159344,
-      0.0160036
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-21 05:45:00",
-    "last_bar": "2026-07-21 09:14:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.01588,
-    "lo_seen": 0.01564,
-    "created": "2026-07-21T05:53:28",
-    "exit_price": 0.0156529,
-    "close_card_sent": true,
-    "closed_at": "2026-07-21T09:25:00"
-  },
   "SD Stable|DIAUSDT|2026-07-21 14:00:00": {
     "symbol": "DIAUSDT",
     "label": "SD Stable",
@@ -1678,5 +1484,42 @@
     "exit_price": 0.1546,
     "close_card_sent": true,
     "closed_at": "2026-08-04T04:09:54"
+  },
+  "SD Stable|CUSDT|2026-08-04 07:30:00": {
+    "symbol": "CUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 6165,
+    "entry": 0.0564,
+    "stop": 0.054422,
+    "init_stop": 0.054422,
+    "cur_stop": 0.054422,
+    "legs": [
+      0.0564,
+      0.0563686,
+      0.05605,
+      0.0557314,
+      0.0552778
+    ],
+    "last_alert_stop": 0.054422,
+    "armed": false,
+    "targets": [
+      0.0581344,
+      0.0590686
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-04 07:30:00",
+    "last_bar": "2026-08-04 07:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0564,
+    "lo_seen": 0.0564,
+    "created": "2026-08-04T07:37:40"
   }
 }
