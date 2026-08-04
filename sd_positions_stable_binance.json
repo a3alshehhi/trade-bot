@@ -1,38 +1,4 @@
 {
-  "DIAUSDT": {
-    "symbol": "DIAUSDT",
-    "tf": "15m",
-    "label": "SD Stable",
-    "prob": null,
-    "levels": [
-      0.1167
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 35.94,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.11739999999999999,
-        "qty": 305.7939,
-        "usd": 35.93614
-      }
-    ],
-    "avg_entry": 0.11739999999999999,
-    "entry": 0.11739999999999999,
-    "init_stop": 0.110206,
-    "stop": 0.110206,
-    "R": 0.007193999999999992,
-    "tp1": 0.1192952,
-    "tp2": 0.1215788,
-    "qty": 305.7939,
-    "qty_open": 305.7939,
-    "tp1_done": false,
-    "armed": false,
-    "opened_ts": "2026-08-03T11:24:42",
-    "msg_id": 6133
-  },
   "CUSDT": {
     "symbol": "CUSDT",
     "tf": "15m",
