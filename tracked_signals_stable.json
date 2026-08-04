@@ -1631,5 +1631,38 @@
     "hi_seen": 0.1557,
     "lo_seen": 0.1537,
     "created": "2026-08-04T01:53:40"
+  },
+  "SD Stable|BANDUSDT|2026-08-04 02:00:00": {
+    "symbol": "BANDUSDT",
+    "label": "SD Stable",
+    "timeframe": "1h",
+    "message_id": 6161,
+    "entry": 0.1546,
+    "stop": 0.152347,
+    "init_stop": 0.152347,
+    "cur_stop": 0.152347,
+    "legs": [
+      0.1546
+    ],
+    "last_alert_stop": 0.152347,
+    "armed": false,
+    "targets": [
+      0.1568432,
+      0.1579158
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-04 02:00:00",
+    "last_bar": "2026-08-04 02:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1546,
+    "lo_seen": 0.1546,
+    "created": "2026-08-04T02:23:22"
   }
 }
