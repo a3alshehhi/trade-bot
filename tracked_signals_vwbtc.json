@@ -3610,5 +3610,55 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|AMPUSDT|2026-08-04 11:45:00": {
+    "symbol": "AMPUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6170,
+    "entry": 0.0004006,
+    "stop": 0.000387,
+    "init_stop": 0.000387,
+    "cur_stop": 0.000387,
+    "legs": [
+      0.0004006,
+      0.000398,
+      0.0003954,
+      0.00039171
+    ],
+    "last_alert_stop": 0.000387,
+    "armed": false,
+    "targets": [
+      0.000409,
+      0.00041498,
+      0.0004226,
+      0.000431,
+      0.00043452
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-04 11:45:00",
+    "last_bar": "2026-08-04 11:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0004006,
+    "lo_seen": 0.0004006,
+    "created": "2026-08-04T12:06:44",
+    "dca_levels": [
+      0.0004006,
+      0.000398,
+      0.0003954,
+      0.00039171
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
