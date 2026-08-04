@@ -3715,5 +3715,55 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|EPICUSDT|2026-08-04 18:00:00": {
+    "symbol": "EPICUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6183,
+    "entry": 0.9922982,
+    "stop": 0.8564,
+    "init_stop": 0.8564,
+    "cur_stop": 0.8564,
+    "legs": [
+      0.9922982,
+      0.96635,
+      0.9404018,
+      0.9034586
+    ],
+    "last_alert_stop": 0.8564,
+    "armed": false,
+    "targets": [
+      1.0763,
+      1.1361128,
+      1.2121982,
+      1.2962,
+      1.331384
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-04 18:00:00",
+    "last_bar": "2026-08-04 18:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.9922982,
+    "lo_seen": 0.9922982,
+    "created": "2026-08-04T18:16:57",
+    "dca_levels": [
+      0.9922982,
+      0.96635,
+      0.9404018,
+      0.9034586
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
