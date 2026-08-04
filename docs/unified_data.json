@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-04T18:23:34",
+  "updated_at": "2026-08-04T20:07:33",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|EPICUSDT|2026-08-04T18:16:57",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "EPICUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.9922982,
+      "stop_orig": 0.8564,
+      "stop": 0.8564,
+      "targets": [],
+      "opened_at": "2026-08-04T18:16:57",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|AVAUSDT|2026-08-04T16:53:24",
       "source": "paper",
@@ -20,11 +41,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-04T18:46:26",
+      "realized_pct": 0.98,
+      "result_pct": 0.98,
+      "exec_pct": 0.98
     },
     {
       "id": "paper|SENTUSDT|2026-08-04T15:18:59",
@@ -689,12 +710,14 @@
       "targets": [],
       "opened_at": "2026-08-02T23:03:34",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-04T18:33:53",
+      "realized_pct": 1.97,
+      "result_pct": 1.97,
+      "exec_pct": 1.97
     },
     {
       "id": "binance|AVAUSDT|2026-08-02T22:54:14",
@@ -7675,13 +7698,13 @@
     }
   ],
   "stats": {
-    "total": 327,
-    "open": 14,
-    "closed": 313,
-    "wins": 185,
-    "win_rate": 59.1,
-    "net_pct": 88.16,
-    "pf": 1.26,
+    "total": 328,
+    "open": 13,
+    "closed": 315,
+    "wins": 187,
+    "win_rate": 59.4,
+    "net_pct": 91.11,
+    "pf": 1.27,
     "simulated": 0
   }
 }
