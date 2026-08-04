@@ -3091,7 +3091,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 00:00:00",
-    "last_bar": "2026-08-03 12:59:59.999000",
+    "last_bar": "2026-08-04 00:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2016,
@@ -4141,7 +4141,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 19:30:00",
-    "last_bar": "2026-08-03 13:29:59.999000",
+    "last_bar": "2026-08-04 01:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.308,
@@ -4356,10 +4356,12 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-02 08:00:00",
-    "last_bar": "2026-08-03 13:29:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 6.674,
+    "last_bar": "2026-08-04 01:44:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": true,
+    "hi_seen": 6.932,
     "lo_seen": 6.369,
     "created": "2026-08-02T08:16:25",
     "dca_levels": [
@@ -4369,7 +4371,10 @@
       6.178458
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 6.687,
+    "close_card_sent": true,
+    "closed_at": "2026-08-04T01:46:17"
   },
   "العرض/الطلب|CELRUSDT|2026-08-02 16:30:00": {
     "symbol": "CELRUSDT",
@@ -4571,7 +4576,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 01:15:00",
-    "last_bar": "2026-08-03 13:29:59.999000",
+    "last_bar": "2026-08-04 01:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1805,
@@ -4676,10 +4681,10 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 16:45:00",
-    "last_bar": "2026-08-03 16:45:00",
+    "last_bar": "2026-08-04 01:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.1906464,
+    "hi_seen": 0.1961,
     "lo_seen": 0.1906464,
     "created": "2026-08-03T17:01:26",
     "dca_levels": [
@@ -4726,10 +4731,10 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 16:45:00",
-    "last_bar": "2026-08-03 16:45:00",
+    "last_bar": "2026-08-04 01:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.02074612,
+    "hi_seen": 0.02156,
     "lo_seen": 0.02074612,
     "created": "2026-08-03T17:01:26",
     "dca_levels": [
