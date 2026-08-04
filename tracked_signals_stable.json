@@ -1629,14 +1629,17 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-08-04 01:45:00",
-    "last_bar": "2026-08-04 03:59:59.999000",
+    "last_bar": "2026-08-04 05:14:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.1573,
-    "lo_seen": 0.1537,
-    "created": "2026-08-04T01:53:40"
+    "lo_seen": 0.1536,
+    "created": "2026-08-04T01:53:40",
+    "exit_price": 0.1537,
+    "close_card_sent": true,
+    "closed_at": "2026-08-04T05:25:09"
   },
   "SD Stable|BANDUSDT|2026-08-04 02:00:00": {
     "symbol": "BANDUSDT",
