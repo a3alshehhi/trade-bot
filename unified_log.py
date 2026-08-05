@@ -442,10 +442,17 @@ def build():
     # إبقاء البوتات الفعّالة فقط (استبعاد الموقوفة: الحوت، trendwave، RSI70…)
     records = [r for r in records if _label_active(r.get("label"))]
 
-    # إزالة التكرار: نفس (المصدر، الرمز، الدخول) — نُبقي الأغنى بياناً
+    # إزالة التكرار: نفس (المصدر، الوسم، الفريم، الرمز، الدخول) — نُبقي الأغنى بياناً.
+    # ⚠️ إصلاح 2026-08-05: كان المفتاح (المصدر، الرمز، الدخول) فقط، فكان بوت
+    # «الفيواب الأسبوعي · BTC» يبتلع صفقات «العرض/الطلب» حين يفتحان الرمز نفسه
+    # على شمعة واحدة بسعر دخول واحد (22 صفقة ضاعت منذ 2026-07-26).
+    # للورقية نضيف وقت الفتح أيضاً لأن لا حاجة لدمج «مفتوحة+مغلقة» فيها.
     seen = {}
     for r in records:
-        key = (r["source"], r["symbol"], round(float(r["entry"]), 10))
+        key = (r["source"], (r.get("label") or "").strip(), r.get("timeframe"),
+               r["symbol"], round(float(r["entry"]), 10))
+        if r["source"] == "paper":
+            key = key + (str(r.get("opened_at") or ""),)
         if key not in seen or (not r.get("_exec_only") and seen[key].get("_exec_only")):
             seen[key] = r
     records = list(seen.values())
