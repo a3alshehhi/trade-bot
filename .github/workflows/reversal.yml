@@ -96,9 +96,13 @@ jobs:
           SD_EXECUTE=0 SD_TRACK=tracked_signals_vwbtc.json python trading_bot.py --mode trackmon
           unset SD_LABEL SD_TRACK
 
-          # ── بوت 2: «عرض/طلب+دايفرجنس» — SMA50 + دايفرجنس صعودي MACD يتكوّن تحت SMA50 · بلا ML · بلا MACD4C ──
+          # ── بوت 2: «عرض/طلب+دايفرجنس» — ⛔ معطّل بطلب بو محمد 2026-08-05 ──
+          # سبب الإيقاف (من تقرير الأداء): 38 صفقة تنفيذية · فوز 39.5% · ‎-14.55R · PF 0.35 —
+          # وهو ما تنبّأت به باك-تستات الدايفرجنس الثلاثة (تخفض التوقّع على 5m و15m و1h).
+          # كان معطّلاً على Railway فقط، والآن معطّل على GitHub أيضاً.
+          # لإعادة التفعيل: احذف سطر `if false; then` وسطر `fi` المقابل أدناه.
+          if false; then
           # SD_MAX_CHASE_R=0.3: حارس الملاحقة — تخطّي الدخول إن تجاوز السعر الدخول بأكثر من 0.3R
-          # (يمنع دخولات مطاردة الاختراق السيّئة مثل ANKR). مفعّل لهذا البوت فقط.
           export SD_LABEL="عرض/طلب+دايفرجنس" SD_TREND_MA=sma50 SD_REQUIRE_DIV=1 \
                  SD_REQUIRE_MACD4C=0 SD_ML_THRESHOLD=0 SD_MAX_CHASE_R=0.3
           SD_ENTRY_TF=15m SD_HTF=1h SD_MODEL=sd_model_15m.joblib SD_STATE=sd_state_div_15m.json python sd_bot.py
@@ -107,6 +111,7 @@ jobs:
           SD_LABELS="عرض/طلب+دايفرجنس" SD_POS=sd_pos_div.json SD_LEDGER=sd_ledger_div.json \
                  SD_EXECUTED=sd_exec_div.json SD_LAST_ENTRY=sd_last_div.json python sd_autotrade.py run
           unset SD_LABEL SD_TREND_MA SD_REQUIRE_DIV SD_REQUIRE_MACD4C SD_ML_THRESHOLD SD_MAX_CHASE_R
+          fi
 
           # ══ بوتات trendwave الورقية الثلاثة (2026-07-14) — غير حاسمة ══
           # الإعدادات الفائزة بالباك-تست: hl_gate + rsi60 (+vwap على 4h، +volz على 1h)
