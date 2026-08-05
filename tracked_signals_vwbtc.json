@@ -4093,5 +4093,105 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|FLUXUSDT|2026-08-05 07:45:00": {
+    "symbol": "FLUXUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6213,
+    "entry": 0.0399978,
+    "stop": 0.0387,
+    "init_stop": 0.0387,
+    "cur_stop": 0.0387,
+    "legs": [
+      0.0399978,
+      0.03975,
+      0.0395022,
+      0.0391494
+    ],
+    "last_alert_stop": 0.0387,
+    "armed": false,
+    "targets": [
+      0.0408,
+      0.0413712,
+      0.0420978,
+      0.0429,
+      0.043236
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 07:45:00",
+    "last_bar": "2026-08-05 07:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0399978,
+    "lo_seen": 0.0399978,
+    "created": "2026-08-05T08:06:33",
+    "dca_levels": [
+      0.0399978,
+      0.03975,
+      0.0395022,
+      0.0391494
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|BATUSDT|2026-08-05 07:45:00": {
+    "symbol": "BATUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6213,
+    "entry": 0.067817,
+    "stop": 0.0638,
+    "init_stop": 0.0638,
+    "cur_stop": 0.0638,
+    "legs": [
+      0.067817,
+      0.06705,
+      0.066283,
+      0.065191
+    ],
+    "last_alert_stop": 0.0638,
+    "armed": false,
+    "targets": [
+      0.0703,
+      0.072068,
+      0.074317,
+      0.0768,
+      0.07784
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 07:45:00",
+    "last_bar": "2026-08-05 07:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.067817,
+    "lo_seen": 0.067817,
+    "created": "2026-08-05T08:06:33",
+    "dca_levels": [
+      0.067817,
+      0.06705,
+      0.066283,
+      0.065191
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
