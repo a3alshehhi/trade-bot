@@ -4613,5 +4613,55 @@
     "exit_price": 0.00853,
     "close_card_sent": true,
     "closed_at": "2026-08-05T15:04:09"
+  },
+  "الفيواب الأسبوعي · BTC|VANRYUSDT|2026-08-05 15:00:00": {
+    "symbol": "VANRYUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6225,
+    "entry": 0.00382001,
+    "stop": 0.003181,
+    "init_stop": 0.003181,
+    "cur_stop": 0.003181,
+    "legs": [
+      0.00382001,
+      0.003698,
+      0.00357599,
+      0.00340228
+    ],
+    "last_alert_stop": 0.003181,
+    "armed": false,
+    "targets": [
+      0.004215,
+      0.00449625,
+      0.00485401,
+      0.005249,
+      0.00541444
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 15:00:00",
+    "last_bar": "2026-08-05 15:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00382001,
+    "lo_seen": 0.00382001,
+    "created": "2026-08-05T15:19:11",
+    "dca_levels": [
+      0.00382001,
+      0.003698,
+      0.00357599,
+      0.00340228
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
