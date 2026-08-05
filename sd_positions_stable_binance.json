@@ -32,39 +32,5 @@
     "armed": false,
     "opened_ts": "2026-08-05T01:56:12",
     "msg_id": 6191
-  },
-  "CELRUSDT": {
-    "symbol": "CELRUSDT",
-    "tf": "1h",
-    "label": "SD Stable",
-    "prob": null,
-    "levels": [
-      0.001634
-    ],
-    "filled": [
-      true
-    ],
-    "leg_usd": 99.12,
-    "n_legs": 1,
-    "fills": [
-      {
-        "price": 0.0016676760919308164,
-        "qty": 59376.564,
-        "usd": 99.1199962
-      }
-    ],
-    "avg_entry": 0.0016676760919308164,
-    "entry": 0.0016676760919308164,
-    "init_stop": 0.00160103,
-    "stop": 0.001673521304979761,
-    "R": 6.664609193081632e-05,
-    "tp1": 0.00168478,
-    "tp2": 0.00170484,
-    "qty": 59376.564,
-    "qty_open": 59376.564,
-    "tp1_done": false,
-    "armed": true,
-    "opened_ts": "2026-08-05T02:27:36",
-    "msg_id": 6196
   }
 }
