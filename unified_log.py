@@ -280,17 +280,30 @@ def simulate_real(symbol, tf, entry, stop, targets, start_ms, usd, label=None):
                 closed_ms = ts
                 break
 
-        # (3) الهدف الثاني: بيع الباقي
-        if tp2 is not None and 1 in hits and 2 not in hits and h >= tp2:
-            hits.append(2)
-            realized += _pct(entry, tp2) * remaining
-            events.append({"ts": _iso(ts), "type": "tp2",
-                           "price": tp2, "pct": round(_pct(entry, tp2), 3)})
-            exit_price = tp2
-            exit_reason = "هدف 2"
-            remaining = 0.0
-            status = "closed"
-            closed_ms = ts
+        # (3) سلّم الأهداف المفتوح (2026-08-05): الأهداف الوسطى ترفع الوقف فقط،
+        #     والهدف الأخير يبيع الباقي. يعمل مع أي عدد أهداف (2 أو 8 أو غيره).
+        _n = len(targets)
+        _done = False
+        for _k in range(2, _n + 1):
+            _tg = targets[_k - 1]
+            if 1 not in hits or _k in hits or h < _tg:
+                continue
+            hits.append(_k)
+            if _k == _n:                          # الهدف الأخير → إغلاق كامل
+                realized += _pct(entry, _tg) * remaining
+                events.append({"ts": _iso(ts), "type": f"tp{_k}",
+                               "price": _tg, "pct": round(_pct(entry, _tg), 3)})
+                exit_price = _tg
+                exit_reason = f"هدف {_k}"
+                remaining = 0.0
+                status = "closed"
+                closed_ms = ts
+                _done = True
+                break
+            cur_stop = max(cur_stop, targets[_k - 2])   # الوقف ← الهدف السابق
+            events.append({"ts": _iso(ts), "type": f"tp{_k}",
+                           "price": _tg, "pct": 0.0})
+        if _done:
             break
 
     # العمولة: دخول (كامل) + خروج (بحسب ما بيع)

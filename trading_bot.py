@@ -3662,8 +3662,10 @@ def track_signal(sig, label, cfg, message_id, path=TRACK_FILE):
 def _is_5050(tr):
     """هل تُدار الصفقة بنظام 50/50 (جني 50% + تعادل عند الهدف1، ثم 50% وإغلاق عند الهدف2)؟
     الافتراضي نعم لكل الإشارات المُتابَعة (trendwave و RSI70/الانعكاس). الصفقات القديمة
-    بلا حقل mgmt تُعامَل أيضاً كـ 50/50 (متوافق رجعياً: الحساب مطابق لإغلاق الهدف1 الكامل)."""
-    return tr.get("mgmt", "5050") == "5050" or bool(tr.get("is_trendwave"))
+    بلا حقل mgmt تُعامَل أيضاً كـ 50/50 (متوافق رجعياً: الحساب مطابق لإغلاق الهدف1 الكامل).
+    2026-08-05: يشمل أيضاً «ladder»/«5t» — سلّم الأهداف المفتوح يستخدم نفس المسار،
+    وداخله حلقة تتعامل مع أي عدد أهداف وترفع الوقف مع كل قيمة فيبو."""
+    return tr.get("mgmt", "5050") in ("5050", "ladder", "5t") or bool(tr.get("is_trendwave"))
 
 
 def _advance_trade(df, tr):
@@ -3732,8 +3734,15 @@ def _advance_trade(df, tr):
         for j in idxs:
             # (أ) ضرب الوقف أولاً — بالمستوى الجاري (الابتدائي قبل الهدف1، التعادل بعده)
             if low[j] <= cur_stop:
-                if cur_stop >= entry:              # بعد الهدف1: خروج بلا خسارة على المتبقّي
-                    events.append(f"➖ {sym} — خروج عند التعادل على المتبقّي (بعد جني 50%)\n"
+                _g = ((cur_stop - entry) / entry * 100) if entry else 0.0
+                if cur_stop > entry:               # الوقف صعد فوق الدخول → خروج بربح محجوز
+                    _lvl = max((i for i, t in enumerate(targets, 1)
+                                if abs(cur_stop - t) <= abs(cur_stop) * 1e-9), default=0)
+                    _at = f" عند الهدف {_lvl}" if _lvl else ""
+                    events.append(f"✅ {sym} — خروج بالوقف المتحرك{_at} (تأمين ربح)\n"
+                                  f"السعر: {fmt(cur_stop)}  (+{_g:.2f}%)")
+                elif cur_stop >= entry:            # بعد الهدف1 مباشرة: خروج بلا خسارة
+                    events.append(f"➖ {sym} — خروج عند التعادل على المتبقّي (بعد الجني الجزئي)\n"
                                   f"السعر: {fmt(cur_stop)}  (0.00%)")
                 else:                              # قبل الهدف1: وقف خسارة كامل
                     events.append(f"🛑 {sym} — ضرب وقف الخسارة\n"
@@ -3746,40 +3755,49 @@ def _advance_trade(df, tr):
                 tr["lo_seen"] = min(tr.get("lo_seen", entry), float(low[j]))
                 return events
 
-            # (ب) الهدف الأول → جني 50% + رفع الوقف لمتوسط الدخول (تعادل)
-            if 1 not in tr["hits"] and high[j] >= targets[0]:
-                tr["hits"].append(1)
-                gain = ((targets[0] - entry) / entry * 100) if entry else 0.0
-                cur_stop = max(cur_stop, entry)    # الوقف = متوسط الدخول (لا ينزل عن وقف متدرّج أعلى)
-                events.append(f"🎯 {sym} — تحقق الهدف الأول ✅ — جني 50% ورفع الوقف "
-                              f"لمتوسط الدخول (تعادل)\n"
-                              f"السعر: {fmt(targets[0])}  (+{gain:.2f}%)")
-
-            # (ج) الهدف الثاني → جني الـ50% المتبقية وإغلاق الصفقة
-            if len(targets) > 1 and 1 in tr["hits"] and 2 not in tr["hits"] \
-                    and high[j] >= targets[1]:
-                tr["hits"].append(2)
-                gain2 = ((targets[1] - entry) / entry * 100) if entry else 0.0
-                events.append(f"🏁 {sym} — تحقق الهدف الثاني ✅✅ — جني 50% وإغلاق الصفقة\n"
-                              f"السعر: {fmt(targets[1])}  (+{gain2:.2f}%)")
-                tr["stopped"] = True
-                tr["exit_price"] = targets[1]
-                tr["cur_stop"] = cur_stop
-                tr["last_bar"] = str(dates.iloc[j])
-                tr["hi_seen"] = max(tr.get("hi_seen", entry), float(high[j]))
-                tr["lo_seen"] = min(tr.get("lo_seen", entry), float(low[j]))
-                return events
+            # (ب) سلّم الأهداف المفتوح (2026-08-05) — عدد الأهداف غير محدّد:
+            #     • الهدف الأول  → جني جزئي + رفع الوقف لمتوسط الدخول (تعادل)
+            #     • كل هدف لاحق → الوقف يقفز إلى الهدف السابق (هدف متحرك، لا ينزل أبداً)
+            #     • الهدف الأخير → جني المتبقّي وإغلاق الصفقة
+            _split = tr.get("tp_split") or []
+            _closed_here = False
+            for _k in range(1, len(targets) + 1):
+                if _k in tr["hits"] or high[j] < targets[_k - 1]:
+                    continue
+                tr["hits"].append(_k)
+                _gain = ((targets[_k - 1] - entry) / entry * 100) if entry else 0.0
+                _pct = _split[_k - 1] if _k - 1 < len(_split) else 0
+                if _k == 1:
+                    cur_stop = max(cur_stop, entry)          # تعادل (لا ينزل عن وقف متدرّج أعلى)
+                    _where = "لمتوسط الدخول (تعادل)"
+                else:
+                    cur_stop = max(cur_stop, targets[_k - 2])  # الوقف ← الهدف السابق
+                    _where = f"للهدف {_k - 1} ({fmt(targets[_k - 2])})"
+                if _k == len(targets):                        # الهدف الأخير → إغلاق كامل
+                    events.append(f"🏁 {sym} — تحقق الهدف {_k} {'✅' * min(_k, 5)} — "
+                                  f"جني المتبقّي وإغلاق الصفقة\n"
+                                  f"السعر: {fmt(targets[_k - 1])}  (+{_gain:.2f}%)")
+                    tr["stopped"] = True
+                    tr["exit_price"] = targets[_k - 1]
+                    _closed_here = True
+                    break
+                _take = f"جني {_pct}% و" if _pct else ""
+                events.append(f"🎯 {sym} — تحقق الهدف {_k} ✅ — {_take}رفع الوقف {_where}\n"
+                              f"السعر: {fmt(targets[_k - 1])}  (+{_gain:.2f}%)")
 
             tr["hi_seen"] = max(tr.get("hi_seen", entry), float(high[j]))
             tr["lo_seen"] = min(tr.get("lo_seen", entry), float(low[j]))
+            if _closed_here:
+                tr["cur_stop"] = cur_stop
+                tr["last_bar"] = str(dates.iloc[j])
+                return events
 
         tr["cur_stop"] = cur_stop
         tr["last_bar"] = str(dates.iloc[idxs[-1]])
-        # أبلغ مرّة واحدة عن رفع الوقف للتعادل بعد الهدف الأول
+        # أبلغ مرّة واحدة عن أي رفع للوقف لم يُبلَّغ عنه أعلاه (الوقف المتدرّج البنيوي)
         eps = abs(cur_stop) * 1e-6
         if cur_stop > tr.get("last_alert_stop", init_stop) + eps:
-            events.append(f"📈 {sym} — رُفع الوقف لمتوسط الدخول (تعادل)\n"
-                          f"الوقف الجديد: {fmt(cur_stop)}")
+            events.append(f"📈 {sym} — رُفع الوقف\nالوقف الجديد: {fmt(cur_stop)}")
             tr["last_alert_stop"] = cur_stop
         return events
 
@@ -4113,7 +4131,7 @@ def format_reversal_card(sig, cfg, label):
         avg_entry = sum(all_entries) / len(all_entries) if all_entries else entry
         risk_ref = avg_entry if levels else entry
     risk_pct = ((risk_ref - stop) / risk_ref * 100) if risk_ref else 0.0
-    nums = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣"]
+    nums = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟"]
 
     head = ("🌟 إشارة trendwave" if cfg.get("trendwave")
             else "🟢 اختراق RSI صعودي" if cfg.get("rsi_cross") else "🟢 انعكاس صعودي")

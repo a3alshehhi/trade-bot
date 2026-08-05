@@ -274,10 +274,10 @@ def _open_position(sym, tf, entry, stop, tp1, tp2, prob, label, positions, equit
         "init_stop": stop, "stop": stop, "R": max(fill - stop, 1e-12),
         "tp1": tp1, "tp2": tp2 if tp2 and tp2 > tp1 else fill + 2 * (fill - stop),
         "qty": qty, "qty_open": qty, "tp1_done": False, "armed": False,
-        # إدارة الأهداف الخمسة (بوتا العرض/الطلب فقط — طلب بو محمد 2026-07-31)
+        # سلّم الأهداف المفتوح (كل البوتات — طلب بو محمد 2026-08-05): أي عدد أهداف ≥ 2
         "mgmt": mgmt or "5050",
         "targets": ([round(float(x), 8) for x in targets5]
-                    if (mgmt == "5t" and targets5 and len(targets5) >= 5) else None),
+                    if (mgmt in ("ladder", "5t") and targets5 and len(targets5) >= 2) else None),
         "tp_idx": 0,
         "opened_ts": _now(),
     }
@@ -486,7 +486,7 @@ def execute_from_tracker():
         if _open_position(sym, tr.get("timeframe", ""), entry, stop, tp1, tp2,
                           tr.get("prob"), label or "إشارة", positions, equity,
                           levels=tr.get("dca_levels"),
-                          targets5=(targets if _mgmt == "5t" else None), mgmt=_mgmt):
+                          targets5=(targets if _mgmt in ("ladder", "5t") else None), mgmt=_mgmt):
             executed.add(ekey)
             last_entry[sym] = now.isoformat(timespec="seconds")   # ابدأ التهدئة
             opened += 1
@@ -604,12 +604,13 @@ def manage_open_positions():
 
 
 def _manage_five(sym, positions):
-    """إدارة الأهداف الخمسة (بوتا العرض/الطلب و BTC — طلب بو محمد 2026-07-31):
+    """سلّم الأهداف المفتوح — عدد الأهداف غير محدّد (طلب بو محمد 2026-08-05):
       • الهدف1 → بيع 50% + الوقف = الدخول +0.5%.
-      • الهدف2/3/4 → الوقف ينتقل إلى الهدف السابق (2→هدف1 … 4→هدف3).
-      • الهدف5 → خروج كامل للباقي.
+      • كل هدف لاحق (2,3,…,N-1) → الوقف ينتقل إلى الهدف السابق ولا ينزل أبداً.
+      • الهدف الأخير (N) → خروج كامل للباقي.
       • يبقى «الخروج الفوري» للطوارئ (تحت الفيواب الأسبوعي + هيستوجرام أحمر قبل الهدف1).
-    بلا وقف متدرّج بنيوي. يرجع True إن تغيّرت الحالة."""
+    بلا وقف متدرّج بنيوي. يرجع True إن تغيّرت الحالة.
+    (الاسم القديم محفوظ للتوافق؛ لم يعد مقصوراً على خمسة أهداف.)"""
     pos = positions[sym]
     changed = False
     try:
@@ -666,12 +667,13 @@ def _manage_five(sym, positions):
                 f"≈ {_fmt(pnl)} USDT", reply_to=pos.get("msg_id"))
         return True
 
-    # (2) الهدف الخامس → خروج كامل للباقي
-    if price >= tgts[4]:
+    # (2) الهدف الأخير (أياً كان عددها) → خروج كامل للباقي
+    _n = len(tgts)
+    if price >= tgts[_n - 1]:
         sold = _sell(sym, pos["qty_open"], price)
-        pnl = _record_exit(pos, sold or pos["qty_open"], price, "هدف5 (خروج كامل)")
+        pnl = _record_exit(pos, sold or pos["qty_open"], price, f"هدف{_n} (خروج كامل)")
         del positions[sym]
-        _notify(f"🏁 هدف5 [{EX_NAME}] {sym} @ {_fmt(price)} — إغلاق كامل "
+        _notify(f"🏁 هدف{_n} [{EX_NAME}] {sym} @ {_fmt(price)} — إغلاق كامل "
                 f"(≈ {_fmt(pnl)} USDT)", reply_to=pos.get("msg_id"))
         return True
 
@@ -703,9 +705,10 @@ def _manage_five(sym, positions):
                     reply_to=pos.get("msg_id"))
         return changed
 
-    # (4) الأهداف 2/3/4 → نقل الوقف إلى الهدف السابق (لا ينزل أبداً)
+    # (4) الأهداف الوسطى (2 … N-1) → نقل الوقف إلى الهدف السابق (لا ينزل أبداً)
+    #     الحلقة مفتوحة على أي عدد أهداف — كل قيمة فيبو ترفع الوقف درجة.
     if pos.get("tp1_done"):
-        for k in (1, 2, 3):                          # k=1→هدف2, k=2→هدف3, k=3→هدف4
+        for k in range(1, _n - 1):                   # k=1→هدف2 … k=N-2→هدف N-1
             if tp_idx <= k and price >= tgts[k]:
                 pos["tp_idx"] = k + 1
                 tp_idx = k + 1
@@ -723,8 +726,8 @@ def _manage_one(sym, positions):
     """يدير مركزاً واحداً؛ يرجع True إن تغيّرت الحالة. يرفع الاستثناءات للمنادي
     الذي يعزلها لكل رمز على حدة."""
     pos = positions[sym]
-    # إدارة الأهداف الخمسة (بوتا العرض/الطلب و BTC): مسار منفصل بلا وقف متدرّج — طلب بو محمد 2026-07-31.
-    if pos.get("mgmt") == "5t" and len(pos.get("targets") or []) >= 5:
+    # سلّم الأهداف المفتوح: مسار منفصل بلا وقف متدرّج — أي عدد أهداف ≥ 2 (2026-08-05).
+    if pos.get("mgmt") in ("ladder", "5t") and len(pos.get("targets") or []) >= 2:
         return _manage_five(sym, positions)
     changed = False
     try:

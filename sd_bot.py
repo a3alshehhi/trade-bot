@@ -99,6 +99,9 @@ CFG["tp1_frac"]      = float(os.environ.get("SD_TP1_FRAC", CFG["tp1_frac"]))
 CFG["require_ob_after_os"] = int(os.environ.get("SD_REQUIRE_OBOS", CFG["require_ob_after_os"]))
 CFG["min_touchvolz"] = float(os.environ.get("SD_MIN_TOUCHVOLZ", CFG["min_touchvolz"]))  # بوابة الحجم
 CFG["os_lookback"]   = int(os.environ.get("SD_OS_LOOKBACK", CFG["os_lookback"]))
+# 2026-08-05: صار النطاق كامل القائمة (223 عملة بدل 60)، فعدد الإشارات في الدورة
+# قد يتجاوز top_n. رفعتُ الافتراضي إلى 20 حتى لا يعود القصّ الأبجدي من باب الاختيار.
+CFG["top_n"]         = int(os.environ.get("SD_TOP_N", "20"))
 CFG["rsi_entry_len"] = int(os.environ.get("SD_RSI_ENTRY_LEN", CFG["rsi_entry_len"]))
 CFG["rsi_entry_ob"]  = float(os.environ.get("SD_RSI_ENTRY_OB", CFG["rsi_entry_ob"]))
 CFG["require_hh"]     = int(os.environ.get("SD_REQUIRE_HH", CFG["require_hh"]))
@@ -174,14 +177,32 @@ def tp1_too_close(entry, tp1):
 TRACK_FILE = os.environ.get("SD_TRACK", "tracked_signals.json")  # ملف التتبّع (قابل للعزل لكل بوت عبر SD_TRACK)
 DASH_LABEL = os.environ.get("SD_LABEL", "العرض/الطلب")   # اسم/وسم البوت (لتمييز الإشارات والتنفيذ)
 
-# ── إدارة الأهداف الخمسة + فلتر قمة التشبّع (طلب بو محمد 2026-07-31) ───────────
-# مقيّدة بهذين الوسمين فقط: «العرض/الطلب» و«الفيواب الأسبوعي · BTC». بقية البوتات
-# تبقى على الهدفين وإدارة 50/50 القديمة دون أي تغيير.
-_FIVE_TGT_LABELS = ("العرض/الطلب", "الفيواب الأسبوعي · BTC")
-_USE_FIVE = DASH_LABEL in _FIVE_TGT_LABELS
-# مضاعفات فيبو للأهداف الخمسة، تُقاس من قاع الموجة: target = wave_low + m·span.
-TP5_FIBS = tuple(float(x) for x in os.environ.get(
-    "SD_TP5_FIBS", "1.0,1.272,1.618,2.0,2.16").split(","))
+# ── سلّم الأهداف المفتوح + وقف يرتفع مع كل قيمة فيبو (طلب بو محمد 2026-08-05) ──
+# سابقاً: خمسة أهداف لوسمين فقط. الآن: عدد الأهداف غير محدّد ويُطبَّق على البوتات الأربعة.
+# الإدارة تبقى «هدف متحرك» كما هي: جني جزئي عند الهدف الأول، ثم مع كل هدف لاحق
+# يرتفع الوقف إلى الهدف السابق ولا ينزل أبداً — والخروج الكامل عند الهدف الأخير.
+# SD_LADDER_LABELS: الوسوم المشمولة. "*" (الافتراضي) = كل البوتات.
+_LADDER_LABELS_RAW = os.environ.get("SD_LADDER_LABELS", "*").strip()
+_LADDER_LABELS = ("*",) if _LADDER_LABELS_RAW == "*" else tuple(
+    x.strip() for x in _LADDER_LABELS_RAW.split(",") if x.strip())
+
+
+def _uses_ladder(label):
+    """هل يستخدم هذا الوسم سلّم الأهداف المفتوح؟"""
+    return "*" in _LADDER_LABELS or label in _LADDER_LABELS
+
+
+_USE_FIVE = _uses_ladder(DASH_LABEL)      # اسم قديم محفوظ للتوافق الرجعي
+_FIVE_TGT_LABELS = _LADDER_LABELS         # اسم قديم محفوظ للتوافق الرجعي
+
+# مضاعفات فيبو للأهداف، تُقاس من قاع الموجة: target = wave_low + m·span.
+# العدد مفتوح — زِد أو أنقص القيم عبر SD_TP_FIBS بلا أي تعديل في الكود.
+# الافتراضي (2026-08-05): سلّم ممتد بثمانية أهداف بدل خمسة، والوقف يرتفع مع كل واحد.
+TP_FIBS = tuple(float(x) for x in os.environ.get(
+    "SD_TP_FIBS",
+    os.environ.get("SD_TP5_FIBS", "1.0,1.272,1.414,1.618,2.0,2.618,3.618,4.236")
+).split(",") if x.strip())
+TP5_FIBS = TP_FIBS                        # اسم قديم محفوظ للتوافق الرجعي
 
 _TF_MS = {"1m": 60000, "3m": 180000, "5m": 300000, "15m": 900000, "30m": 1800000,
           "1h": 3600000, "2h": 7200000, "4h": 14400000, "1d": 86400000}
@@ -577,6 +598,19 @@ def parse_watchlist_crypto(path):
                 seen.add(sym); uniq.append(sym)
     return uniq
 
+
+# ── نطاق المسح (2026-08-05) ──────────────────────────────────────────────────
+# كان المسح الحيّ مقصوصاً عند أول 60 عملة أبجدياً (0G → DOT)، فحُبس البوت في
+# ربع القائمة ولم يرَ أي عملة بعد حرف D. الآن يمسح القائمة كاملة افتراضياً.
+# SD_SCAN_LIMIT = 0 (الافتراضي) → بلا قصّ · أي رقم > 0 → يقصّ عند هذا العدد.
+SCAN_LIMIT = int(os.environ.get("SD_SCAN_LIMIT", "0"))
+
+
+def _scan_basket(path=None):
+    """قائمة العملات للمسح الحيّ — كاملة ما لم يُضبط SD_SCAN_LIMIT."""
+    syms = parse_watchlist_crypto(path or WATCHLIST)
+    return syms[:SCAN_LIMIT] if SCAN_LIMIT > 0 else syms
+
 # ----------------------- تدريب النموذج -----------------------
 def train(basket=None):
     from sklearn.linear_model import LogisticRegression
@@ -657,7 +691,7 @@ def scan(basket=None):
     if not bundle:
         print("no model; run train first"); return []
     model = bundle["model"]
-    basket = basket or parse_watchlist_crypto(WATCHLIST)[:60]
+    basket = basket or _scan_basket()        # 2026-08-05: أُزيل القصّ الأبجدي [:60]
     state = load_state(); sent = set(state.get("sent", []))
     signals = []
     # جلب بيانات كل الرموز بالتوازي (شبكة I/O) ثم معالجة تسلسلية بنفس المنطق تماماً.
@@ -778,7 +812,7 @@ def _fmt(v):
 def format_message(signals):
     """بطاقة تيليجرام بنفس نسق بقية البوتات (انعكاس/RSI70/trendwave):
     رمز·فريم، ثقة الفلتر، أسباب، دخول، وقف بنسبة −%، أهداف بنسبة +%، مخاطرة، وقت."""
-    nums = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣"]
+    nums = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟"]
     now = dt.datetime.now().strftime("%H:%M:%S")
     tf = CFG["entry_tf"]
     sep = "\n➖➖➖➖➖➖➖➖➖\n"
@@ -869,10 +903,16 @@ def track_for_dashboard(signals, message_id, tf=None, path=TRACK_FILE):
         key = f"{DASH_LABEL}|{s['sym']}|{bar_ts}"
         if key in data:
             continue
-        # أهداف/تقسيم/إدارة: خمسة أهداف للبوتين الجديدين (mgmt="5t")، وإلا الهدفان القديمان.
+        # أهداف/تقسيم/إدارة: سلّم أهداف مفتوح العدد (mgmt="ladder") لكل البوتات المشمولة.
+        # التقسيم: جني TP1_FRAC% عند الهدف الأول، والباقي كله عند الهدف الأخير —
+        # الأهداف الوسطى لا تُغلق شيئاً، وظيفتها رفع الوقف فقط (هدف متحرك).
         _t5 = s.get("targets5")
-        if _t5 and DASH_LABEL in _FIVE_TGT_LABELS:
-            _targets, _split, _mgmt = _t5, [50, 0, 0, 0, 50], "5t"
+        if _t5 and _uses_ladder(DASH_LABEL):
+            _targets = list(_t5)
+            _first = int(round(CFG["tp1_frac"] * 100))
+            _split = [_first] + [0] * (len(_targets) - 2) + [100 - _first] \
+                if len(_targets) > 1 else [100]
+            _mgmt = "ladder"
         else:
             _targets, _split, _mgmt = [tp1, tp2], [50, 50], "5050"
         data[key] = {
@@ -1334,7 +1374,8 @@ def format_message_whale(signals):
             if not tgt:
                 continue
             gain = ((tgt - entry) / entry * 100) if entry else 0.0
-            lines.append(f"{nums[k]} {_fmt(tgt)}  (+{gain:.2f}%)")
+            _n = nums[k] if k < len(nums) else f"{k+1})"
+            lines.append(f"{_n} {_fmt(tgt)}  (+{gain:.2f}%)")
         lines += [
             "",
             "⚖️ إدارة 50/50: جني 50% عند الهدف الأول + تعادل + قفل 0.3R",
@@ -1516,7 +1557,7 @@ def vwave_signal(d1):
 
 def format_message_vwave(signals):
     """بطاقة تيليجرام لاستراتيجية الفيواب الأسبوعي (دخول بانتظار مستويات الفيبو)."""
-    nums = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣"]
+    nums = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟"]
     now = dt.datetime.now().strftime("%H:%M:%S")
     sep = "\n➖➖➖➖➖➖➖➖➖\n"
     blocks = []
@@ -1546,9 +1587,11 @@ def format_message_vwave(signals):
             if not tgt:
                 continue
             gain = ((tgt - entry) / entry * 100) if entry else 0.0
-            lines.append(f"{nums[k]} {_fmt(tgt)}  (+{gain:.2f}% من المستوى الأول)")
-        _mgmt_txt = ("⚖️ الإدارة: جني 50% عند الهدف1 + وقف=الدخول+0.5% ← "
-                     "الوقف ينتقل لكل هدف سابق ← خروج كامل عند الهدف5"
+            _n = nums[k] if k < len(nums) else f"{k+1})"
+            lines.append(f"{_n} {_fmt(tgt)}  (+{gain:.2f}% من المستوى الأول)")
+        _ntg = len(_tgts)
+        _mgmt_txt = (f"⚖️ الإدارة: جني 50% عند الهدف1 + وقف=الدخول+0.5% ← "
+                     f"الوقف يرتفع مع كل هدف تالٍ ← خروج كامل عند الهدف{_ntg}"
                      if s.get("targets5") else
                      "⚖️ إدارة 50/50: جني 50% عند الهدف الأول + تعادل + قفل 0.3R")
         lines += [
@@ -1565,7 +1608,9 @@ def format_message_vwave(signals):
 
 def scan_vwave(basket=None):
     """المسح الحيّ لاستراتيجية الفيواب الأسبوعي — بلا نموذج ML وبلا مناطق عرض/طلب."""
-    basket = basket or parse_watchlist_crypto(WATCHLIST)[:60]
+    # 2026-08-05: أُزيل القصّ الأبجدي [:60] الذي كان يحبس البوت في العملات من 0G إلى DOT.
+    # الآن يمسح القائمة كاملة. SD_SCAN_LIMIT>0 يعيد القصّ عند الحاجة فقط.
+    basket = basket or _scan_basket()
     state = load_state(); sent = set(state.get("sent", []))
     signals = []
 
