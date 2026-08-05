@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-05T05:55:05",
+  "updated_at": "2026-08-05T06:03:43",
   "stats": {
-    "open": 23,
-    "closed": 322,
-    "win_rate": 64.9,
-    "profit_factor": 1.53,
-    "total_pct": 366.4,
-    "avg_pct": 0.54,
+    "open": 22,
+    "closed": 324,
+    "win_rate": 65.1,
+    "profit_factor": 1.55,
+    "total_pct": 397.01,
+    "avg_pct": 0.56,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-05",
-        "trades": 3,
-        "win_rate": 66.7,
-        "return_pct": 2.69,
+        "trades": 5,
+        "win_rate": 80.0,
+        "return_pct": 9.43,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -263,9 +263,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 30,
-        "win_rate": 90.0,
-        "return_pct": 119.53,
+        "trades": 32,
+        "win_rate": 90.6,
+        "return_pct": 133.93,
         "month": "2026-08"
       },
       {
@@ -300,9 +300,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 57,
-        "win_rate": 82.5,
-        "return_pct": 182.69
+        "trades": 59,
+        "win_rate": 83.1,
+        "return_pct": 201.24
       },
       {
         "key": "2026-07",
@@ -937,12 +937,14 @@
       "entry": 0.001634,
       "stop": 0.00160103,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-05T02:23:21",
-      "closed_at": null,
-      "realized_pct": 1.55
+      "closed_at": "2026-08-05T06:03:42",
+      "realized_pct": 3.72,
+      "result_pct": 3.72
     },
     {
       "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
@@ -2505,6 +2507,23 @@
       "opened_at": "2026-08-05T05:18:41",
       "closed_at": null,
       "realized_pct": 0.0
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|KITEUSDT|2026-08-05 05:30:00",
+      "symbol": "KITEUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0963642,
+      "stop": 0.0921,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-05T05:49:02",
+      "closed_at": "2026-08-05T05:49:13",
+      "realized_pct": 2.74,
+      "result_pct": 2.74
     },
     {
       "id": "صيد الارتفاعات|ASTRUSDT|2026-07-11 11:00:00",
