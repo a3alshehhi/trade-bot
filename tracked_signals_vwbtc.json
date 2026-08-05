@@ -3828,5 +3828,55 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|MASKUSDT|2026-08-05 04:15:00": {
+    "symbol": "MASKUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6198,
+    "entry": 0.357068,
+    "stop": 0.341,
+    "init_stop": 0.341,
+    "cur_stop": 0.341,
+    "legs": [
+      0.357068,
+      0.354,
+      0.350932,
+      0.346564
+    ],
+    "last_alert_stop": 0.341,
+    "armed": false,
+    "targets": [
+      0.367,
+      0.374072,
+      0.383068,
+      0.393,
+      0.39716
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 04:15:00",
+    "last_bar": "2026-08-05 04:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.357068,
+    "lo_seen": 0.357068,
+    "created": "2026-08-05T04:34:04",
+    "dca_levels": [
+      0.357068,
+      0.354,
+      0.350932,
+      0.346564
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
