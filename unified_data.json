@@ -1,8 +1,93 @@
 {
-  "updated_at": "2026-08-05T01:10:25",
+  "updated_at": "2026-08-05T04:36:58",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "binance|CELRUSDT|2026-08-05T02:38:26",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "CELRUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "1h",
+      "entry": 0.00166768,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-08-05T02:38:26",
+      "usd": 100.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-08-05T02:38:26",
+      "realized_pct": 0.0,
+      "result_pct": 0.199,
+      "exec_pct": 0.199,
+      "exec_usdt": -0.0009,
+      "exec_reasons": [
+        "وقف خسارة"
+      ]
+    },
+    {
+      "id": "binance|ADXUSDT|2026-08-05T02:24:16",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "ADXUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.056,
+      "stop_orig": 0.0,
+      "stop": 0.0,
+      "targets": [],
+      "opened_at": "2026-08-05T02:24:16",
+      "usd": 100.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-08-05T02:24:16",
+      "realized_pct": 0.0,
+      "result_pct": 0.0,
+      "exec_pct": 0.0,
+      "exec_usdt": -0.5855,
+      "exec_reasons": [
+        "وقف خسارة"
+      ]
+    },
+    {
+      "id": "binance|DEXEUSDT|2026-08-05T01:56:12",
+      "source": "binance",
+      "source_ar": "بايننس ديمو",
+      "symbol": "DEXEUSDT",
+      "label": "SD Stable",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 2.481,
+      "stop_orig": 2.23185,
+      "stop": 2.23185,
+      "targets": [
+        2.532656,
+        2.609814
+      ],
+      "opened_at": "2026-08-05T01:56:12",
+      "usd": 27.49,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null,
+      "net_pct": -0.1,
+      "result_r": 0.0,
+      "unrealized_pct": -5.482,
+      "exit_price": null,
+      "exit_reason": null,
+      "cur_stop": 2.23185,
+      "remaining": 1.0,
+      "pnl_usdt": -0.0275,
+      "last_price": 2.345,
+      "events": [],
+      "real_rule": "wick"
+    },
     {
       "id": "paper|SXTUSDT|2026-08-04T23:39:19",
       "source": "paper",
@@ -38,12 +123,14 @@
       "targets": [],
       "opened_at": "2026-08-04T18:16:57",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-05T02:48:42",
+      "realized_pct": 8.47,
+      "result_pct": 8.47,
+      "exec_pct": 8.47
     },
     {
       "id": "paper|AVAUSDT|2026-08-04T16:53:24",
@@ -7719,13 +7806,13 @@
     }
   ],
   "stats": {
-    "total": 329,
+    "total": 332,
     "open": 13,
-    "closed": 316,
-    "wins": 187,
+    "closed": 319,
+    "wins": 189,
     "win_rate": 59.2,
-    "net_pct": 84.1,
-    "pf": 1.24,
-    "simulated": 0
+    "net_pct": 92.77,
+    "pf": 1.27,
+    "simulated": 1
   }
 }
