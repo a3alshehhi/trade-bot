@@ -4849,5 +4849,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|BCHUSDT|2026-08-05 21:30:00": {
+    "symbol": "BCHUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6237,
+    "entry": 214.5732,
+    "stop": 210.0,
+    "init_stop": 210.0,
+    "cur_stop": 210.0,
+    "legs": [
+      214.5732,
+      213.7,
+      212.8268,
+      211.5836
+    ],
+    "last_alert_stop": 210.0,
+    "armed": false,
+    "targets": [
+      217.4,
+      219.4128,
+      220.4636,
+      221.9732,
+      224.8,
+      229.3732,
+      236.7732,
+      241.3464
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 21:30:00",
+    "last_bar": "2026-08-05 21:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 214.5732,
+    "lo_seen": 214.5732,
+    "created": "2026-08-05T21:50:03",
+    "dca_levels": [
+      214.5732,
+      213.7,
+      212.8268,
+      211.5836
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
