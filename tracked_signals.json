@@ -1911,7 +1911,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 00:00:00",
-    "last_bar": "2026-08-05 17:59:59.999000",
+    "last_bar": "2026-08-05 18:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2016,
@@ -3717,7 +3717,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 06:45:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0572,
@@ -3795,14 +3795,14 @@
     "entry": 0.067817,
     "stop": 0.0638,
     "init_stop": 0.0638,
-    "cur_stop": 0.0638,
+    "cur_stop": 0.066068,
     "legs": [
       0.067817,
       0.06705,
       0.066283,
       0.065191
     ],
-    "last_alert_stop": 0.0638,
+    "last_alert_stop": 0.066068,
     "armed": false,
     "targets": [
       0.0703,
@@ -3822,7 +3822,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0682,
@@ -3835,7 +3835,8 @@
       0.065191
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2
   },
   "العرض/الطلب|CELRUSDT|2026-08-05 08:00:00": {
     "symbol": "CELRUSDT",

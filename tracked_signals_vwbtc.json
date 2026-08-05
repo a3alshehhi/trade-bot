@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [
       1
     ],
@@ -2782,14 +2782,14 @@
     "entry": 0.0751822,
     "stop": 0.0703,
     "init_stop": 0.0703,
-    "cur_stop": 0.0703,
+    "cur_stop": 0.0741275,
     "legs": [
       0.0751822,
       0.07425,
       0.0733178,
       0.0719906
     ],
-    "last_alert_stop": 0.0703,
+    "last_alert_stop": 0.0741275,
     "armed": false,
     "targets": [
       0.0782,
@@ -2809,7 +2809,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 16:15:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.076,
@@ -2822,7 +2822,8 @@
       0.0719906
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2
   },
   "الفيواب الأسبوعي · BTC|THETAUSDT|2026-08-03 16:30:00": {
     "symbol": "THETAUSDT",
@@ -2997,14 +2998,14 @@
     "entry": 1.856452,
     "stop": 1.786,
     "init_stop": 1.786,
-    "cur_stop": 1.786,
+    "cur_stop": 1.8526900000000002,
     "legs": [
       1.856452,
       1.843,
       1.829548,
       1.810396
     ],
-    "last_alert_stop": 1.786,
+    "last_alert_stop": 1.8526900000000002,
     "armed": false,
     "targets": [
       1.9,
@@ -3024,7 +3025,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 17:00:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.886,
@@ -3037,7 +3038,8 @@
       1.810396
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2
   },
   "الفيواب الأسبوعي · BTC|VETUSDT|2026-08-03 17:00:00": {
     "symbol": "VETUSDT",
@@ -3129,7 +3131,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 17:45:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00819,
@@ -3482,14 +3484,14 @@
     "entry": 0.0146053,
     "stop": 0.01408,
     "init_stop": 0.01408,
-    "cur_stop": 0.01408,
+    "cur_stop": 0.0147061,
     "legs": [
       0.0146053,
       0.014505,
       0.0144047,
       0.0142619
     ],
-    "last_alert_stop": 0.01408,
+    "last_alert_stop": 0.0147061,
     "armed": false,
     "targets": [
       0.01493,
@@ -3509,9 +3511,9 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 22:30:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 18:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.01489,
     "lo_seen": 0.01418,
     "created": "2026-08-03T22:48:39",
@@ -3522,7 +3524,11 @@
       0.0142619
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2,
+    "exit_price": 0.0147061,
+    "close_card_sent": true,
+    "closed_at": "2026-08-05T19:19:25"
   },
   "الفيواب الأسبوعي · BTC|PHAUSDT|2026-08-03 22:45:00": {
     "symbol": "PHAUSDT",
@@ -3559,7 +3565,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 22:45:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0211,
@@ -3609,7 +3615,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-04 06:30:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0077,
@@ -3714,7 +3720,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-04 15:00:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01418,
@@ -3847,14 +3853,14 @@
     "entry": 0.357068,
     "stop": 0.341,
     "init_stop": 0.341,
-    "cur_stop": 0.341,
+    "cur_stop": 0.35322499999999996,
     "legs": [
       0.357068,
       0.354,
       0.350932,
       0.346564
     ],
-    "last_alert_stop": 0.341,
+    "last_alert_stop": 0.35322499999999996,
     "armed": false,
     "targets": [
       0.367,
@@ -3874,7 +3880,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 04:15:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.361,
@@ -3887,7 +3893,8 @@
       0.346564
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2
   },
   "الفيواب الأسبوعي · BTC|PROMUSDT|2026-08-05 05:00:00": {
     "symbol": "PROMUSDT",
@@ -4034,7 +4041,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 06:45:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0572,
@@ -4112,14 +4119,14 @@
     "entry": 0.0399978,
     "stop": 0.0387,
     "init_stop": 0.0387,
-    "cur_stop": 0.0387,
+    "cur_stop": 0.0393025,
     "legs": [
       0.0399978,
       0.03975,
       0.0395022,
       0.0391494
     ],
-    "last_alert_stop": 0.0387,
+    "last_alert_stop": 0.0393025,
     "armed": false,
     "targets": [
       0.0408,
@@ -4139,7 +4146,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0403,
@@ -4152,7 +4159,8 @@
       0.0391494
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2
   },
   "الفيواب الأسبوعي · BTC|BATUSDT|2026-08-05 07:45:00": {
     "symbol": "BATUSDT",
@@ -4162,14 +4170,14 @@
     "entry": 0.067817,
     "stop": 0.0638,
     "init_stop": 0.0638,
-    "cur_stop": 0.0638,
+    "cur_stop": 0.066068,
     "legs": [
       0.067817,
       0.06705,
       0.066283,
       0.065191
     ],
-    "last_alert_stop": 0.0638,
+    "last_alert_stop": 0.066068,
     "armed": false,
     "targets": [
       0.0703,
@@ -4189,7 +4197,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0682,
@@ -4202,7 +4210,8 @@
       0.065191
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2
   },
   "الفيواب الأسبوعي · BTC|DUSKUSDT|2026-08-05 08:00:00": {
     "symbol": "DUSKUSDT",
@@ -4239,7 +4248,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 08:00:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0615,
@@ -4344,7 +4353,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 08:15:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00774,
@@ -4394,7 +4403,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 08:15:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0186,
@@ -4444,7 +4453,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 09:00:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00952,
@@ -4494,7 +4503,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 11:00:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.301,
@@ -4654,7 +4663,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 15:00:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00383,
@@ -4704,7 +4713,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 17:00:00",
-    "last_bar": "2026-08-05 18:44:59.999000",
+    "last_bar": "2026-08-05 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.04,
