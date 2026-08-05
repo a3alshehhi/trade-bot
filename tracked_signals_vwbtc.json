@@ -3988,5 +3988,55 @@
     "exit_price": 0.099,
     "close_card_sent": true,
     "closed_at": "2026-08-05T05:49:13"
+  },
+  "الفيواب الأسبوعي · BTC|ADXUSDT|2026-08-05 06:45:00": {
+    "symbol": "ADXUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6207,
+    "entry": 0.0570338,
+    "stop": 0.0545,
+    "init_stop": 0.0545,
+    "cur_stop": 0.0545,
+    "legs": [
+      0.0570338,
+      0.05655,
+      0.0560662,
+      0.0553774
+    ],
+    "last_alert_stop": 0.0545,
+    "armed": false,
+    "targets": [
+      0.0586,
+      0.0597152,
+      0.0611338,
+      0.0627,
+      0.063356
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 06:45:00",
+    "last_bar": "2026-08-05 06:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0570338,
+    "lo_seen": 0.0570338,
+    "created": "2026-08-05T07:06:19",
+    "dca_levels": [
+      0.0570338,
+      0.05655,
+      0.0560662,
+      0.0553774
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }

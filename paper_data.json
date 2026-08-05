@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-05T06:55:58",
+  "updated_at": "2026-08-05T07:06:26",
   "stats": {
-    "open": 21,
+    "open": 23,
     "closed": 325,
     "win_rate": 65.2,
     "profit_factor": 1.56,
@@ -1580,6 +1580,20 @@
       "result_pct": 2.74
     },
     {
+      "id": "الفيواب الأسبوعي · BTC|ADXUSDT|2026-08-05 06:45:00",
+      "symbol": "ADXUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0570338,
+      "stop": 0.0545,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-05T07:06:19",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "SD Stable|ARBUSDT|2026-07-22 05:00:00",
       "symbol": "ARBUSDT",
       "label": "SD Stable",
@@ -2542,59 +2556,6 @@
       "closed_at": "2026-07-12T00:45:11",
       "realized_pct": -3.59,
       "result_pct": -3.59
-    },
-    {
-      "id": "العرض/الطلب|AGLDUSDT|2026-07-21 14:00:00",
-      "symbol": "AGLDUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.150735,
-      "stop": 0.1461,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-21T14:16:09",
-      "closed_at": "2026-07-21T18:04:39",
-      "realized_pct": 2.58,
-      "result_pct": 2.58
-    },
-    {
-      "id": "العرض/الطلب|APEUSDT|2026-07-21 20:15:00",
-      "symbol": "APEUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.1453812,
-      "stop": 0.1371,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-21T20:34:10",
-      "closed_at": "2026-07-22T18:00:28",
-      "realized_pct": 1.76,
-      "result_pct": 1.76
-    },
-    {
-      "id": "العرض/الطلب|BLURUSDT|2026-07-22 06:15:00",
-      "symbol": "BLURUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.01571024,
-      "stop": 0.01529,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-22T06:31:17",
-      "closed_at": "2026-07-22T10:46:21",
-      "realized_pct": 2.24,
-      "result_pct": 2.24
     },
     {
       "id": "العرض/الطلب|API3USDT|2026-07-22 16:00:00",
@@ -3810,6 +3771,20 @@
       "result_pct": 0.98
     },
     {
+      "id": "العرض/الطلب|ADXUSDT|2026-08-05 06:45:00",
+      "symbol": "ADXUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0570338,
+      "stop": 0.0545,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-05T07:01:22",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -3884,6 +3859,59 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|AGLDUSDT|2026-07-21 14:00:00",
+      "symbol": "AGLDUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.150735,
+      "stop": 0.1461,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-21T14:16:09",
+      "closed_at": "2026-07-21T18:04:39",
+      "realized_pct": 2.58,
+      "result_pct": 2.58
+    },
+    {
+      "id": "العرض/الطلب|APEUSDT|2026-07-21 20:15:00",
+      "symbol": "APEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1453812,
+      "stop": 0.1371,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-21T20:34:10",
+      "closed_at": "2026-07-22T18:00:28",
+      "realized_pct": 1.76,
+      "result_pct": 1.76
+    },
+    {
+      "id": "العرض/الطلب|BLURUSDT|2026-07-22 06:15:00",
+      "symbol": "BLURUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01571024,
+      "stop": 0.01529,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-22T06:31:17",
+      "closed_at": "2026-07-22T10:46:21",
+      "realized_pct": 2.24,
+      "result_pct": 2.24
     },
     {
       "id": "SD Stable|DIAUSDT|2026-07-21 14:00:00",

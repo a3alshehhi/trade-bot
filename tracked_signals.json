@@ -32,155 +32,6 @@
     "close_card_sent": true,
     "closed_at": "2026-07-12T00:45:11"
   },
-  "العرض/الطلب|AGLDUSDT|2026-07-21 14:00:00": {
-    "symbol": "AGLDUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5326,
-    "entry": 0.150735,
-    "stop": 0.1461,
-    "init_stop": 0.1461,
-    "cur_stop": 0.150735,
-    "legs": [
-      0.150735,
-      0.14985,
-      0.148965,
-      0.147705
-    ],
-    "last_alert_stop": 0.150735,
-    "armed": false,
-    "targets": [
-      0.1536,
-      0.15564
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-21 14:00:00",
-    "last_bar": "2026-07-21 17:59:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.1564,
-    "lo_seen": 0.1495,
-    "created": "2026-07-21T14:16:09",
-    "dca_levels": [
-      0.150735,
-      0.14985,
-      0.148965,
-      0.147705
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 0.15564,
-    "close_card_sent": true,
-    "closed_at": "2026-07-21T18:04:39"
-  },
-  "العرض/الطلب|APEUSDT|2026-07-21 20:15:00": {
-    "symbol": "APEUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5354,
-    "entry": 0.1453812,
-    "stop": 0.1371,
-    "init_stop": 0.1371,
-    "cur_stop": 0.1453812,
-    "legs": [
-      0.1453812,
-      0.1438,
-      0.1422188,
-      0.1399676
-    ],
-    "last_alert_stop": 0.1453812,
-    "armed": false,
-    "targets": [
-      0.1505,
-      0.1541448
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-21 20:15:00",
-    "last_bar": "2026-07-22 17:59:59.999000",
-    "hits": [
-      1
-    ],
-    "stopped": true,
-    "hi_seen": 0.153,
-    "lo_seen": 0.1452,
-    "created": "2026-07-21T20:34:10",
-    "dca_levels": [
-      0.1453812,
-      0.1438,
-      0.1422188,
-      0.1399676
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 0.1453812,
-    "close_card_sent": true,
-    "closed_at": "2026-07-22T18:00:28"
-  },
-  "العرض/الطلب|BLURUSDT|2026-07-22 06:15:00": {
-    "symbol": "BLURUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5387,
-    "entry": 0.01571024,
-    "stop": 0.01529,
-    "init_stop": 0.01529,
-    "cur_stop": 0.01571024,
-    "legs": [
-      0.01571024,
-      0.01563,
-      0.01554976,
-      0.01543552
-    ],
-    "last_alert_stop": 0.01571024,
-    "armed": false,
-    "targets": [
-      0.01597,
-      0.01615496
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-22 06:15:00",
-    "last_bar": "2026-07-22 10:44:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.01616,
-    "lo_seen": 0.01562,
-    "created": "2026-07-22T06:31:17",
-    "dca_levels": [
-      0.01571024,
-      0.01563,
-      0.01554976,
-      0.01543552
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 0.01615496,
-    "close_card_sent": true,
-    "closed_at": "2026-07-22T10:46:21"
-  },
   "العرض/الطلب|API3USDT|2026-07-22 16:00:00": {
     "symbol": "API3USDT",
     "label": "العرض/الطلب",
@@ -3820,5 +3671,55 @@
     "exit_price": 0.1687,
     "close_card_sent": true,
     "closed_at": "2026-08-04T18:46:26"
+  },
+  "العرض/الطلب|ADXUSDT|2026-08-05 06:45:00": {
+    "symbol": "ADXUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6205,
+    "entry": 0.0570338,
+    "stop": 0.0545,
+    "init_stop": 0.0545,
+    "cur_stop": 0.0545,
+    "legs": [
+      0.0570338,
+      0.05655,
+      0.0560662,
+      0.0553774
+    ],
+    "last_alert_stop": 0.0545,
+    "armed": false,
+    "targets": [
+      0.0586,
+      0.0597152,
+      0.0611338,
+      0.0627,
+      0.063356
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 06:45:00",
+    "last_bar": "2026-08-05 06:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0570338,
+    "lo_seen": 0.0570338,
+    "created": "2026-08-05T07:01:22",
+    "dca_levels": [
+      0.0570338,
+      0.05655,
+      0.0560662,
+      0.0553774
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
