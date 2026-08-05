@@ -1,8 +1,75 @@
 {
-  "updated_at": "2026-08-05T04:36:58",
+  "updated_at": "2026-08-05T07:21:49",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|KITEUSDT|2026-08-05T05:49:02",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "KITEUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0963642,
+      "stop_orig": 0.0921,
+      "stop": 0.0921,
+      "targets": [],
+      "opened_at": "2026-08-05T05:49:02",
+      "usd": 100.0,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-05T05:49:13",
+      "realized_pct": 2.74,
+      "result_pct": 2.74,
+      "exec_pct": 2.74
+    },
+    {
+      "id": "paper|PROMUSDT|2026-08-05T05:18:41",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "PROMUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.91933,
+      "stop_orig": 1.805,
+      "stop": 1.805,
+      "targets": [],
+      "opened_at": "2026-08-05T05:18:41",
+      "usd": 100.0,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-05T06:08:14",
+      "realized_pct": 3.68,
+      "result_pct": 3.68,
+      "exec_pct": 3.68
+    },
+    {
+      "id": "paper|MASKUSDT|2026-08-05T04:34:04",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "MASKUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.357068,
+      "stop_orig": 0.341,
+      "stop": 0.341,
+      "targets": [],
+      "opened_at": "2026-08-05T04:34:04",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "binance|CELRUSDT|2026-08-05T02:38:26",
       "source": "binance",
@@ -78,13 +145,13 @@
       "exec_pct": null,
       "net_pct": -0.1,
       "result_r": 0.0,
-      "unrealized_pct": -5.482,
+      "unrealized_pct": -7.457,
       "exit_price": null,
       "exit_reason": null,
       "cur_stop": 2.23185,
       "remaining": 1.0,
       "pnl_usdt": -0.0275,
-      "last_price": 2.345,
+      "last_price": 2.296,
       "events": [],
       "real_rule": "wick"
     },
@@ -7806,13 +7873,13 @@
     }
   ],
   "stats": {
-    "total": 332,
-    "open": 13,
-    "closed": 319,
-    "wins": 189,
-    "win_rate": 59.2,
-    "net_pct": 92.77,
-    "pf": 1.27,
+    "total": 335,
+    "open": 14,
+    "closed": 321,
+    "wins": 191,
+    "win_rate": 59.5,
+    "net_pct": 99.19,
+    "pf": 1.29,
     "simulated": 1
   }
 }
