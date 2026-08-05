@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-05T21:04:54",
+  "updated_at": "2026-08-05T21:19:44",
   "stats": {
-    "open": 31,
-    "closed": 338,
-    "win_rate": 66.0,
-    "profit_factor": 1.64,
-    "total_pct": 586.03,
+    "open": 30,
+    "closed": 339,
+    "win_rate": 65.8,
+    "profit_factor": 1.63,
+    "total_pct": 576.43,
     "avg_pct": 0.63,
     "max_drawdown_pct": -49.22
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-05",
-        "trades": 19,
-        "win_rate": 84.2,
-        "return_pct": 51.05,
+        "trades": 20,
+        "win_rate": 80.0,
+        "return_pct": 48.94,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -263,9 +263,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 46,
-        "win_rate": 89.1,
-        "return_pct": 222.9,
+        "trades": 47,
+        "win_rate": 87.2,
+        "return_pct": 218.38,
         "month": "2026-08"
       },
       {
@@ -300,9 +300,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 73,
-        "win_rate": 83.6,
-        "return_pct": 315.81
+        "trades": 74,
+        "win_rate": 82.4,
+        "return_pct": 309.99
       },
       {
         "key": "2026-07",
@@ -1227,10 +1227,11 @@
       "entry": 0.0751822,
       "stop": 0.0703,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-03T16:39:44",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-05T21:19:34",
+      "realized_pct": -1.4,
+      "result_pct": -1.4
     },
     {
       "id": "الفيواب الأسبوعي · BTC|THETAUSDT|2026-08-03 16:30:00",
