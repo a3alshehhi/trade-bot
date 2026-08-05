@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04T23:51:14",
+  "updated_at": "2026-08-05T01:10:25",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -850,11 +850,11 @@
       "opened_at": "2026-08-02T21:18:22",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-05T01:03:08",
+      "realized_pct": -7.01,
+      "result_pct": -7.01,
+      "exec_pct": -7.01
     },
     {
       "id": "paper|DUSKUSDT|2026-08-02T21:04:24",
@@ -7720,12 +7720,12 @@
   ],
   "stats": {
     "total": 329,
-    "open": 14,
-    "closed": 315,
+    "open": 13,
+    "closed": 316,
     "wins": 187,
-    "win_rate": 59.4,
-    "net_pct": 91.11,
-    "pf": 1.27,
+    "win_rate": 59.2,
+    "net_pct": 84.1,
+    "pf": 1.24,
     "simulated": 0
   }
 }
