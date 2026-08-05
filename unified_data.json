@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-05T21:21:10",
+  "updated_at": "2026-08-05T22:41:07",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|BCHUSDT|2026-08-05T21:50:03",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "BCHUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 214.5732,
+      "stop_orig": 210.0,
+      "stop": 210.0,
+      "targets": [],
+      "opened_at": "2026-08-05T21:50:03",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|BCHUSDT|2026-08-05T21:47:11",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "BCHUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 214.5732,
+      "stop_orig": 210.0,
+      "stop": 210.0,
+      "targets": [],
+      "opened_at": "2026-08-05T21:47:11",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|ETHUSDT|2026-08-05T21:04:43",
       "source": "paper",
@@ -650,7 +692,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.243,
+      "last_price": 2.277,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -8787,8 +8829,8 @@
     }
   ],
   "stats": {
-    "total": 376,
-    "open": 23,
+    "total": 378,
+    "open": 25,
     "closed": 353,
     "wins": 213,
     "win_rate": 60.3,
