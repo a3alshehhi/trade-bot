@@ -3721,5 +3721,55 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|COOKIEUSDT|2026-08-05 07:15:00": {
+    "symbol": "COOKIEUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6208,
+    "entry": 0.008018,
+    "stop": 0.0074,
+    "init_stop": 0.0074,
+    "cur_stop": 0.0074,
+    "legs": [
+      0.008018,
+      0.0079,
+      0.007782,
+      0.007614
+    ],
+    "last_alert_stop": 0.0074,
+    "armed": false,
+    "targets": [
+      0.0084,
+      0.008672,
+      0.009018,
+      0.0094,
+      0.00956
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 07:15:00",
+    "last_bar": "2026-08-05 07:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.008018,
+    "lo_seen": 0.008018,
+    "created": "2026-08-05T07:31:23",
+    "dca_levels": [
+      0.008018,
+      0.0079,
+      0.007782,
+      0.007614
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
