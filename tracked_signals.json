@@ -1911,7 +1911,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 00:00:00",
-    "last_bar": "2026-08-05 15:59:59.999000",
+    "last_bar": "2026-08-05 17:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2016,
@@ -3401,10 +3401,12 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 01:15:00",
-    "last_bar": "2026-08-05 16:14:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.1828,
+    "last_bar": "2026-08-05 18:44:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": true,
+    "hi_seen": 0.1836,
     "lo_seen": 0.1664,
     "created": "2026-08-03T01:31:18",
     "dca_levels": [
@@ -3414,7 +3416,10 @@
       0.1683018
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.183,
+    "close_card_sent": true,
+    "closed_at": "2026-08-05T18:46:06"
   },
   "العرض/الطلب|BICOUSDT|2026-08-03 03:00:00": {
     "symbol": "BICOUSDT",
@@ -3712,11 +3717,11 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 06:45:00",
-    "last_bar": "2026-08-05 16:14:59.999000",
+    "last_bar": "2026-08-05 18:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0572,
-    "lo_seen": 0.0562,
+    "lo_seen": 0.0557,
     "created": "2026-08-05T07:01:22",
     "dca_levels": [
       0.0570338,
@@ -3817,10 +3822,10 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-05 16:14:59.999000",
+    "last_bar": "2026-08-05 18:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.068,
+    "hi_seen": 0.0682,
     "lo_seen": 0.0664,
     "created": "2026-08-05T08:01:24",
     "dca_levels": [
