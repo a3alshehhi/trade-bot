@@ -1394,11 +1394,11 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 01:45:00",
-    "last_bar": "2026-08-05 01:45:00",
+    "last_bar": "2026-08-05 03:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 2.407,
-    "lo_seen": 2.407,
+    "hi_seen": 2.498,
+    "lo_seen": 2.37,
     "created": "2026-08-05T01:52:20"
   },
   "SD Stable|ADXUSDT|2026-08-05 02:00:00": {
@@ -1409,7 +1409,7 @@
     "entry": 0.0554,
     "stop": 0.055022,
     "init_stop": 0.055022,
-    "cur_stop": 0.055022,
+    "cur_stop": 0.0554,
     "legs": [
       0.0554,
       0.0552926
@@ -1428,12 +1428,18 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 02:00:00",
-    "last_bar": "2026-08-05 02:00:00",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.0554,
+    "last_bar": "2026-08-05 03:44:59.999000",
+    "hits": [
+      1,
+      2
+    ],
+    "stopped": true,
+    "hi_seen": 0.0567,
     "lo_seen": 0.0554,
-    "created": "2026-08-05T02:07:02"
+    "created": "2026-08-05T02:07:02",
+    "exit_price": 0.0565562,
+    "close_card_sent": true,
+    "closed_at": "2026-08-05T03:55:12"
   },
   "SD Stable|CELRUSDT|2026-08-05 02:00:00": {
     "symbol": "CELRUSDT",
@@ -1461,10 +1467,10 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 02:00:00",
-    "last_bar": "2026-08-05 02:00:00",
+    "last_bar": "2026-08-05 02:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.001634,
+    "hi_seen": 0.001674,
     "lo_seen": 0.001634,
     "created": "2026-08-05T02:23:21"
   }
