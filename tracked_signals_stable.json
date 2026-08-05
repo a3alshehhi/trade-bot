@@ -1394,12 +1394,15 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 01:45:00",
-    "last_bar": "2026-08-05 05:59:59.999000",
+    "last_bar": "2026-08-05 15:14:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 2.498,
-    "lo_seen": 2.314,
-    "created": "2026-08-05T01:52:20"
+    "lo_seen": 2.226,
+    "created": "2026-08-05T01:52:20",
+    "exit_price": 2.23185,
+    "close_card_sent": true,
+    "closed_at": "2026-08-05T15:25:15"
   },
   "SD Stable|ADXUSDT|2026-08-05 02:00:00": {
     "symbol": "ADXUSDT",
