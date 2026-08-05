@@ -4961,5 +4961,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|BANDUSDT|2026-08-05 22:30:00": {
+    "symbol": "BANDUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6245,
+    "entry": 0.1574362,
+    "stop": 0.1507,
+    "init_stop": 0.1507,
+    "cur_stop": 0.1507,
+    "legs": [
+      0.1574362,
+      0.15615,
+      0.1548638,
+      0.1530326
+    ],
+    "last_alert_stop": 0.1507,
+    "armed": false,
+    "targets": [
+      0.1616,
+      0.1645648,
+      0.1661126,
+      0.1683362,
+      0.1725,
+      0.1792362,
+      0.1901362,
+      0.1968724
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 22:30:00",
+    "last_bar": "2026-08-05 22:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1574362,
+    "lo_seen": 0.1574362,
+    "created": "2026-08-05T22:50:15",
+    "dca_levels": [
+      0.1574362,
+      0.15615,
+      0.1548638,
+      0.1530326
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
