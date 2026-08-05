@@ -3878,5 +3878,55 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|PROMUSDT|2026-08-05 05:00:00": {
+    "symbol": "PROMUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6199,
+    "entry": 1.91933,
+    "stop": 1.805,
+    "init_stop": 1.805,
+    "cur_stop": 1.805,
+    "legs": [
+      1.91933,
+      1.8975,
+      1.87567,
+      1.84459
+    ],
+    "last_alert_stop": 1.805,
+    "armed": false,
+    "targets": [
+      1.99,
+      2.04032,
+      2.10433,
+      2.175,
+      2.2046
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 05:00:00",
+    "last_bar": "2026-08-05 05:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1.91933,
+    "lo_seen": 1.91933,
+    "created": "2026-08-05T05:18:41",
+    "dca_levels": [
+      1.91933,
+      1.8975,
+      1.87567,
+      1.84459
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
