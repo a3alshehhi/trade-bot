@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-05T20:04:50",
+  "updated_at": "2026-08-05T20:20:41",
   "stats": {
-    "open": 28,
-    "closed": 337,
-    "win_rate": 66.2,
+    "open": 27,
+    "closed": 338,
+    "win_rate": 66.0,
     "profit_factor": 1.64,
-    "total_pct": 593.52,
-    "avg_pct": 0.64,
+    "total_pct": 586.03,
+    "avg_pct": 0.63,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-05",
-        "trades": 18,
-        "win_rate": 88.9,
-        "return_pct": 52.7,
+        "trades": 19,
+        "win_rate": 84.2,
+        "return_pct": 51.05,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -263,9 +263,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 45,
-        "win_rate": 91.1,
-        "return_pct": 226.43,
+        "trades": 46,
+        "win_rate": 89.1,
+        "return_pct": 222.9,
         "month": "2026-08"
       },
       {
@@ -300,9 +300,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 72,
-        "win_rate": 84.7,
-        "return_pct": 320.35
+        "trades": 73,
+        "win_rate": 83.6,
+        "return_pct": 315.81
       },
       {
         "key": "2026-07",
@@ -1547,10 +1547,11 @@
       "entry": 0.357068,
       "stop": 0.341,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-05T04:34:04",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-05T20:20:33",
+      "realized_pct": -1.08,
+      "result_pct": -1.08
     },
     {
       "id": "الفيواب الأسبوعي · BTC|PROMUSDT|2026-08-05 05:00:00",
