@@ -32,53 +32,6 @@
     "close_card_sent": true,
     "closed_at": "2026-07-12T00:45:11"
   },
-  "العرض/الطلب|API3USDT|2026-07-22 16:00:00": {
-    "symbol": "API3USDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5424,
-    "entry": 0.2286532,
-    "stop": 0.2179,
-    "init_stop": 0.2179,
-    "cur_stop": 0.2179,
-    "legs": [
-      0.2286532,
-      0.2266,
-      0.2245468,
-      0.2216236
-    ],
-    "last_alert_stop": 0.2179,
-    "armed": false,
-    "targets": [
-      0.2353,
-      0.2400328
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-22 16:00:00",
-    "last_bar": "2026-07-25 07:44:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.2326,
-    "lo_seen": 0.2012,
-    "created": "2026-07-22T16:16:08",
-    "dca_levels": [
-      0.2286532,
-      0.2266,
-      0.2245468,
-      0.2216236
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 0.2179,
-    "close_card_sent": true,
-    "closed_at": "2026-07-25T07:46:11"
-  },
   "عرض/طلب+دايفرجنس|ALGOUSDT|2026-07-22 16:00:00": {
     "symbol": "ALGOUSDT",
     "label": "عرض/طلب+دايفرجنس",
@@ -114,100 +67,6 @@
     "exit_price": 0.082719,
     "close_card_sent": true,
     "closed_at": "2026-07-23T13:01:36"
-  },
-  "العرض/الطلب|ARBUSDT|2026-07-22 17:45:00": {
-    "symbol": "ARBUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5444,
-    "entry": 0.0904866,
-    "stop": 0.0882,
-    "init_stop": 0.0882,
-    "cur_stop": 0.0882,
-    "legs": [
-      0.0904866,
-      0.09005,
-      0.0896134,
-      0.0889918
-    ],
-    "last_alert_stop": 0.0882,
-    "armed": false,
-    "targets": [
-      0.0919,
-      0.0929064
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-22 17:45:00",
-    "last_bar": "2026-07-23 11:44:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.0913,
-    "lo_seen": 0.088,
-    "created": "2026-07-22T18:00:20",
-    "dca_levels": [
-      0.0904866,
-      0.09005,
-      0.0896134,
-      0.0889918
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 0.0882,
-    "close_card_sent": true,
-    "closed_at": "2026-07-23T11:46:12"
-  },
-  "العرض/الطلب|CKBUSDT|2026-07-22 19:00:00": {
-    "symbol": "CKBUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5454,
-    "entry": 0.00093296,
-    "stop": 0.000907,
-    "init_stop": 0.000907,
-    "cur_stop": 0.000907,
-    "legs": [
-      0.00093296,
-      0.000928,
-      0.00092304,
-      0.00091599
-    ],
-    "last_alert_stop": 0.000907,
-    "armed": false,
-    "targets": [
-      0.000949,
-      0.00096042
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-22 19:00:00",
-    "last_bar": "2026-07-23 12:44:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.000936,
-    "lo_seen": 0.000906,
-    "created": "2026-07-22T19:19:08",
-    "dca_levels": [
-      0.00093296,
-      0.000928,
-      0.00092304,
-      0.00091599
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 0.000907,
-    "close_card_sent": true,
-    "closed_at": "2026-07-23T12:46:25"
   },
   "العرض/الطلب|CFXUSDT|2026-07-22 23:30:00": {
     "symbol": "CFXUSDT",
@@ -3892,5 +3751,117 @@
     "exit_price": 0.001765,
     "close_card_sent": true,
     "closed_at": "2026-08-05T09:46:19"
+  },
+  "العرض/الطلب|BTCUSDT|2026-08-05 20:45:00": {
+    "symbol": "BTCUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6234,
+    "entry": 63974.63596,
+    "stop": 62275.0,
+    "init_stop": 62275.0,
+    "cur_stop": 62275.0,
+    "legs": [
+      63974.63596,
+      63650.11,
+      63325.58404,
+      62863.54708
+    ],
+    "last_alert_stop": 62275.0,
+    "armed": false,
+    "targets": [
+      65025.22,
+      65773.27984,
+      66163.81108,
+      66724.85596,
+      67775.44,
+      69475.07596,
+      72225.29596,
+      73924.93192
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 20:45:00",
+    "last_bar": "2026-08-05 20:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 63974.63596,
+    "lo_seen": 63974.63596,
+    "created": "2026-08-05T21:02:15",
+    "dca_levels": [
+      63974.63596,
+      63650.11,
+      63325.58404,
+      62863.54708
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|ETHUSDT|2026-08-05 20:45:00": {
+    "symbol": "ETHUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6234,
+    "entry": 1887.53092,
+    "stop": 1822.06,
+    "init_stop": 1822.06,
+    "cur_stop": 1822.06,
+    "legs": [
+      1887.53092,
+      1875.03,
+      1862.52908,
+      1844.73116
+    ],
+    "last_alert_stop": 1822.06,
+    "armed": false,
+    "targets": [
+      1928.0,
+      1956.81568,
+      1971.85916,
+      1993.47092,
+      2033.94,
+      2099.41092,
+      2205.35092,
+      2270.82184
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 20:45:00",
+    "last_bar": "2026-08-05 20:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1887.53092,
+    "lo_seen": 1887.53092,
+    "created": "2026-08-05T21:02:15",
+    "dca_levels": [
+      1887.53092,
+      1875.03,
+      1862.52908,
+      1844.73116
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }

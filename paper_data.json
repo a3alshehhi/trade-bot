@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-05T20:50:25",
+  "updated_at": "2026-08-05T21:04:54",
   "stats": {
-    "open": 27,
+    "open": 31,
     "closed": 338,
     "win_rate": 66.0,
     "profit_factor": 1.64,
@@ -1453,11 +1453,13 @@
       "timeframe": "15m",
       "entry": 0.0206214,
       "stop": 0.0192,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-03T23:03:46",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 2.13
     },
     {
       "id": "الفيواب الأسبوعي · BTC|MOVEUSDT|2026-08-04 06:30:00",
@@ -1792,6 +1794,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-05T17:20:39",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|ETHUSDT|2026-08-05 20:45:00",
+      "symbol": "ETHUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1887.53092,
+      "stop": 1822.06,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-05T21:04:43",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|BTCUSDT|2026-08-05 20:45:00",
+      "symbol": "BTCUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 63974.63596,
+      "stop": 62275.0,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-05T21:04:43",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -2614,21 +2644,6 @@
       "result_pct": -3.59
     },
     {
-      "id": "العرض/الطلب|API3USDT|2026-07-22 16:00:00",
-      "symbol": "API3USDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.2286532,
-      "stop": 0.2179,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-22T16:16:08",
-      "closed_at": "2026-07-25T07:46:11",
-      "realized_pct": -4.7,
-      "result_pct": -4.7
-    },
-    {
       "id": "عرض/طلب+دايفرجنس|ALGOUSDT|2026-07-22 16:00:00",
       "symbol": "ALGOUSDT",
       "label": "عرض/طلب+دايفرجنس",
@@ -2642,36 +2657,6 @@
       "closed_at": "2026-07-23T13:01:36",
       "realized_pct": -1.41,
       "result_pct": -1.41
-    },
-    {
-      "id": "العرض/الطلب|ARBUSDT|2026-07-22 17:45:00",
-      "symbol": "ARBUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0904866,
-      "stop": 0.0882,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-22T18:00:20",
-      "closed_at": "2026-07-23T11:46:12",
-      "realized_pct": -2.53,
-      "result_pct": -2.53
-    },
-    {
-      "id": "العرض/الطلب|CKBUSDT|2026-07-22 19:00:00",
-      "symbol": "CKBUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.00093296,
-      "stop": 0.000907,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-22T19:19:08",
-      "closed_at": "2026-07-23T12:46:25",
-      "realized_pct": -2.78,
-      "result_pct": -2.78
     },
     {
       "id": "العرض/الطلب|CFXUSDT|2026-07-22 23:30:00",
@@ -3895,6 +3880,34 @@
       "result_pct": 3.59
     },
     {
+      "id": "العرض/الطلب|BTCUSDT|2026-08-05 20:45:00",
+      "symbol": "BTCUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 63974.63596,
+      "stop": 62275.0,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-05T21:02:15",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ETHUSDT|2026-08-05 20:45:00",
+      "symbol": "ETHUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1887.53092,
+      "stop": 1822.06,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-05T21:02:15",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -3969,6 +3982,51 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|API3USDT|2026-07-22 16:00:00",
+      "symbol": "API3USDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2286532,
+      "stop": 0.2179,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-22T16:16:08",
+      "closed_at": "2026-07-25T07:46:11",
+      "realized_pct": -4.7,
+      "result_pct": -4.7
+    },
+    {
+      "id": "العرض/الطلب|ARBUSDT|2026-07-22 17:45:00",
+      "symbol": "ARBUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0904866,
+      "stop": 0.0882,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-22T18:00:20",
+      "closed_at": "2026-07-23T11:46:12",
+      "realized_pct": -2.53,
+      "result_pct": -2.53
+    },
+    {
+      "id": "العرض/الطلب|CKBUSDT|2026-07-22 19:00:00",
+      "symbol": "CKBUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00093296,
+      "stop": 0.000907,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-22T19:19:08",
+      "closed_at": "2026-07-23T12:46:25",
+      "realized_pct": -2.78,
+      "result_pct": -2.78
     },
     {
       "id": "SD Stable|ARBUSDT|2026-07-22 05:00:00",
