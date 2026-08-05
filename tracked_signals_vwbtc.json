@@ -4663,5 +4663,55 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|POWRUSDT|2026-08-05 17:00:00": {
+    "symbol": "POWRUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6228,
+    "entry": 0.0398596,
+    "stop": 0.0385,
+    "init_stop": 0.0385,
+    "cur_stop": 0.0385,
+    "legs": [
+      0.0398596,
+      0.0396,
+      0.0393404,
+      0.0389708
+    ],
+    "last_alert_stop": 0.0385,
+    "armed": false,
+    "targets": [
+      0.0407,
+      0.0412984,
+      0.0420596,
+      0.0429,
+      0.043252
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 17:00:00",
+    "last_bar": "2026-08-05 17:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0398596,
+    "lo_seen": 0.0398596,
+    "created": "2026-08-05T17:20:39",
+    "dca_levels": [
+      0.0398596,
+      0.0396,
+      0.0393404,
+      0.0389708
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
