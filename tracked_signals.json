@@ -1911,7 +1911,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 00:00:00",
-    "last_bar": "2026-08-05 10:59:59.999000",
+    "last_bar": "2026-08-05 15:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2016,
@@ -2961,10 +2961,12 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-07-31 19:30:00",
-    "last_bar": "2026-08-05 11:29:59.999000",
-    "hits": [],
-    "stopped": false,
-    "hi_seen": 0.308,
+    "last_bar": "2026-08-05 16:14:59.999000",
+    "hits": [
+      1
+    ],
+    "stopped": true,
+    "hi_seen": 0.31,
     "lo_seen": 0.297,
     "created": "2026-07-31T19:50:44",
     "dca_levels": [
@@ -2974,7 +2976,10 @@
       0.295852
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.31,
+    "close_card_sent": true,
+    "closed_at": "2026-08-05T16:16:17"
   },
   "العرض/الطلب|DASHUSDT|2026-08-01 02:30:00": {
     "symbol": "DASHUSDT",
@@ -3396,10 +3401,10 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 01:15:00",
-    "last_bar": "2026-08-05 11:29:59.999000",
+    "last_bar": "2026-08-05 16:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.1825,
+    "hi_seen": 0.1828,
     "lo_seen": 0.1664,
     "created": "2026-08-03T01:31:18",
     "dca_levels": [
@@ -3707,11 +3712,11 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 06:45:00",
-    "last_bar": "2026-08-05 11:29:59.999000",
+    "last_bar": "2026-08-05 16:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0572,
-    "lo_seen": 0.0565,
+    "lo_seen": 0.0562,
     "created": "2026-08-05T07:01:22",
     "dca_levels": [
       0.0570338,
@@ -3812,11 +3817,11 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-05 11:29:59.999000",
+    "last_bar": "2026-08-05 16:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.068,
-    "lo_seen": 0.0665,
+    "lo_seen": 0.0664,
     "created": "2026-08-05T08:01:24",
     "dca_levels": [
       0.067817,
