@@ -1,165 +1,4 @@
 {
-  "SD Stable|DIAUSDT|2026-07-21 14:00:00": {
-    "symbol": "DIAUSDT",
-    "label": "SD Stable",
-    "timeframe": "15m",
-    "message_id": 5324,
-    "entry": 0.1039,
-    "stop": 0.102875,
-    "init_stop": 0.102875,
-    "cur_stop": 0.1039,
-    "legs": [
-      0.1039,
-      0.1038,
-      0.1036112,
-      0.1033424
-    ],
-    "last_alert_stop": 0.1039,
-    "armed": false,
-    "targets": [
-      0.1050352,
-      0.1055888
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-21 14:00:00",
-    "last_bar": "2026-07-21 17:14:59.999000",
-    "hits": [
-      1
-    ],
-    "stopped": true,
-    "hi_seen": 0.1052,
-    "lo_seen": 0.1037,
-    "created": "2026-07-21T14:08:56",
-    "exit_price": 0.1039,
-    "close_card_sent": true,
-    "closed_at": "2026-07-21T17:24:47"
-  },
-  "SD Stable|AIXBTUSDT|2026-07-21 15:45:00": {
-    "symbol": "AIXBTUSDT",
-    "label": "SD Stable",
-    "timeframe": "15m",
-    "message_id": 5334,
-    "entry": 0.01917,
-    "stop": 0.0189563,
-    "init_stop": 0.0189563,
-    "cur_stop": 0.0189563,
-    "legs": [
-      0.01917,
-      0.01915662,
-      0.01908774
-    ],
-    "last_alert_stop": 0.0189563,
-    "armed": false,
-    "targets": [
-      0.01952152,
-      0.01966338
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-21 15:45:00",
-    "last_bar": "2026-07-21 17:59:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.01941,
-    "lo_seen": 0.01895,
-    "created": "2026-07-21T15:53:39",
-    "exit_price": 0.0189563,
-    "close_card_sent": true,
-    "closed_at": "2026-07-21T18:02:53"
-  },
-  "SD Stable|BIOUSDT|2026-07-21 21:15:00": {
-    "symbol": "BIOUSDT",
-    "label": "SD Stable",
-    "timeframe": "15m",
-    "message_id": 5357,
-    "entry": 0.02641,
-    "stop": 0.0259233,
-    "init_stop": 0.0259233,
-    "cur_stop": 0.02641,
-    "legs": [
-      0.02641,
-      0.02636698,
-      0.026295,
-      0.02622302,
-      0.02612054
-    ],
-    "last_alert_stop": 0.02641,
-    "armed": false,
-    "targets": [
-      0.02676592,
-      0.02697698
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-21 21:15:00",
-    "last_bar": "2026-07-21 21:44:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.02729,
-    "lo_seen": 0.02635,
-    "created": "2026-07-21T21:22:31",
-    "exit_price": 0.02697698,
-    "close_card_sent": true,
-    "closed_at": "2026-07-21T22:09:29"
-  },
-  "SD Stable|BREVUSDT|2026-07-22 00:15:00": {
-    "symbol": "BREVUSDT",
-    "label": "SD Stable",
-    "timeframe": "15m",
-    "message_id": 5364,
-    "entry": 0.0754,
-    "stop": 0.074877,
-    "init_stop": 0.074877,
-    "cur_stop": 0.0754,
-    "legs": [
-      0.0754,
-      0.0752996
-    ],
-    "last_alert_stop": 0.0754,
-    "armed": false,
-    "targets": [
-      0.0767808,
-      0.0772652
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-22 00:15:00",
-    "last_bar": "2026-07-22 05:29:59.999000",
-    "hits": [
-      1
-    ],
-    "stopped": true,
-    "hi_seen": 0.0772,
-    "lo_seen": 0.0752,
-    "created": "2026-07-22T00:25:16",
-    "exit_price": 0.0754,
-    "close_card_sent": true,
-    "closed_at": "2026-07-22T05:43:21"
-  },
   "SD Stable|ARBUSDT|2026-07-22 05:00:00": {
     "symbol": "ARBUSDT",
     "label": "SD Stable",
@@ -1524,5 +1363,42 @@
     "exit_price": 0.054422,
     "close_card_sent": true,
     "closed_at": "2026-08-04T12:40:26"
+  },
+  "SD Stable|DEXEUSDT|2026-08-05 01:45:00": {
+    "symbol": "DEXEUSDT",
+    "label": "SD Stable",
+    "timeframe": "15m",
+    "message_id": 6190,
+    "entry": 2.407,
+    "stop": 2.23185,
+    "init_stop": 2.23185,
+    "cur_stop": 2.23185,
+    "legs": [
+      2.407,
+      2.386814,
+      2.3605,
+      2.334186,
+      2.296722
+    ],
+    "last_alert_stop": 2.23185,
+    "armed": false,
+    "targets": [
+      2.532656,
+      2.609814
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 01:45:00",
+    "last_bar": "2026-08-05 01:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 2.407,
+    "lo_seen": 2.407,
+    "created": "2026-08-05T01:52:20"
   }
 }
