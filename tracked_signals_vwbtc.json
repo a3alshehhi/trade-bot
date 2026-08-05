@@ -4503,5 +4503,105 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|SOMIUSDT|2026-08-05 13:00:00": {
+    "symbol": "SOMIUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6224,
+    "entry": 0.0869698,
+    "stop": 0.0832,
+    "init_stop": 0.0832,
+    "cur_stop": 0.0832,
+    "legs": [
+      0.0869698,
+      0.08625,
+      0.0855302,
+      0.0845054
+    ],
+    "last_alert_stop": 0.0832,
+    "armed": false,
+    "targets": [
+      0.0893,
+      0.0909592,
+      0.0930698,
+      0.0954,
+      0.096376
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 13:00:00",
+    "last_bar": "2026-08-05 13:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0869698,
+    "lo_seen": 0.0869698,
+    "created": "2026-08-05T13:19:54",
+    "dca_levels": [
+      0.0869698,
+      0.08625,
+      0.0855302,
+      0.0845054
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|SAHARAUSDT|2026-08-05 13:00:00": {
+    "symbol": "SAHARAUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6224,
+    "entry": 0.00819766,
+    "stop": 0.00766,
+    "init_stop": 0.00766,
+    "cur_stop": 0.00766,
+    "legs": [
+      0.00819766,
+      0.008095,
+      0.00799234,
+      0.00784618
+    ],
+    "last_alert_stop": 0.00766,
+    "armed": false,
+    "targets": [
+      0.00853,
+      0.00876664,
+      0.00906766,
+      0.0094,
+      0.0095392
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 13:00:00",
+    "last_bar": "2026-08-05 13:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00819766,
+    "lo_seen": 0.00819766,
+    "created": "2026-08-05T13:19:54",
+    "dca_levels": [
+      0.00819766,
+      0.008095,
+      0.00799234,
+      0.00784618
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
