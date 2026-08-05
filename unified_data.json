@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-05T16:24:39",
+  "updated_at": "2026-08-05T18:10:45",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|POWRUSDT|2026-08-05T17:20:39",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "POWRUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0398596,
+      "stop_orig": 0.0385,
+      "stop": 0.0385,
+      "targets": [],
+      "opened_at": "2026-08-05T17:20:39",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|VANRYUSDT|2026-08-05T15:19:11",
       "source": "paper",
@@ -520,7 +541,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.272,
+      "last_price": 2.257,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -8651,8 +8672,8 @@
     }
   ],
   "stats": {
-    "total": 370,
-    "open": 23,
+    "total": 371,
+    "open": 24,
     "closed": 347,
     "wins": 210,
     "win_rate": 60.5,
