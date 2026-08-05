@@ -4293,5 +4293,105 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|GLMRUSDT|2026-08-05 08:15:00": {
+    "symbol": "GLMRUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6216,
+    "entry": 0.00758911,
+    "stop": 0.00729,
+    "init_stop": 0.00729,
+    "cur_stop": 0.00729,
+    "legs": [
+      0.00758911,
+      0.007532,
+      0.00747489,
+      0.00739358
+    ],
+    "last_alert_stop": 0.00729,
+    "armed": false,
+    "targets": [
+      0.007774,
+      0.00790565,
+      0.00807311,
+      0.008258,
+      0.00833544
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 08:15:00",
+    "last_bar": "2026-08-05 08:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00758911,
+    "lo_seen": 0.00758911,
+    "created": "2026-08-05T08:34:23",
+    "dca_levels": [
+      0.00758911,
+      0.007532,
+      0.00747489,
+      0.00739358
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|SHELLUSDT|2026-08-05 08:15:00": {
+    "symbol": "SHELLUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6216,
+    "entry": 0.018327,
+    "stop": 0.0174,
+    "init_stop": 0.0174,
+    "cur_stop": 0.0174,
+    "legs": [
+      0.018327,
+      0.01815,
+      0.017973,
+      0.017721
+    ],
+    "last_alert_stop": 0.0174,
+    "armed": false,
+    "targets": [
+      0.0189,
+      0.019308,
+      0.019827,
+      0.0204,
+      0.02064
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 08:15:00",
+    "last_bar": "2026-08-05 08:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.018327,
+    "lo_seen": 0.018327,
+    "created": "2026-08-05T08:34:23",
+    "dca_levels": [
+      0.018327,
+      0.01815,
+      0.017973,
+      0.017721
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
