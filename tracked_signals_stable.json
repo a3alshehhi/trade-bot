@@ -1434,5 +1434,38 @@
     "hi_seen": 0.0554,
     "lo_seen": 0.0554,
     "created": "2026-08-05T02:07:02"
+  },
+  "SD Stable|CELRUSDT|2026-08-05 02:00:00": {
+    "symbol": "CELRUSDT",
+    "label": "SD Stable",
+    "timeframe": "1h",
+    "message_id": 6194,
+    "entry": 0.001634,
+    "stop": 0.00160103,
+    "init_stop": 0.00160103,
+    "cur_stop": 0.00160103,
+    "legs": [
+      0.001634
+    ],
+    "last_alert_stop": 0.00160103,
+    "armed": false,
+    "targets": [
+      0.00168478,
+      0.00170484
+    ],
+    "tp_split": [
+      50,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5050",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 02:00:00",
+    "last_bar": "2026-08-05 02:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.001634,
+    "lo_seen": 0.001634,
+    "created": "2026-08-05T02:23:21"
   }
 }
