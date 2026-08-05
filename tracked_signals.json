@@ -3821,5 +3821,55 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|CELRUSDT|2026-08-05 08:00:00": {
+    "symbol": "CELRUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6214,
+    "entry": 0.00170388,
+    "stop": 0.001605,
+    "init_stop": 0.001605,
+    "cur_stop": 0.001605,
+    "legs": [
+      0.00170388,
+      0.001685,
+      0.00166612,
+      0.00163924
+    ],
+    "last_alert_stop": 0.001605,
+    "armed": false,
+    "targets": [
+      0.001765,
+      0.00180852,
+      0.00186388,
+      0.001925,
+      0.0019506
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "5t",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-05 08:00:00",
+    "last_bar": "2026-08-05 08:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00170388,
+    "lo_seen": 0.00170388,
+    "created": "2026-08-05T08:16:23",
+    "dca_levels": [
+      0.00170388,
+      0.001685,
+      0.00166612,
+      0.00163924
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
