@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-05T14:08:02",
+  "updated_at": "2026-08-05T14:19:26",
   "stats": {
-    "open": 32,
-    "closed": 330,
-    "win_rate": 65.8,
-    "profit_factor": 1.62,
-    "total_pct": 527.85,
-    "avg_pct": 0.62,
+    "open": 31,
+    "closed": 331,
+    "win_rate": 65.9,
+    "profit_factor": 1.63,
+    "total_pct": 544.68,
+    "avg_pct": 0.63,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-05",
-        "trades": 11,
-        "win_rate": 90.9,
-        "return_pct": 38.24,
+        "trades": 12,
+        "win_rate": 91.7,
+        "return_pct": 41.94,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -263,9 +263,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 38,
-        "win_rate": 92.1,
-        "return_pct": 195.52,
+        "trades": 39,
+        "win_rate": 92.3,
+        "return_pct": 203.44,
         "month": "2026-08"
       },
       {
@@ -300,9 +300,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 65,
-        "win_rate": 84.6,
-        "return_pct": 280.55
+        "trades": 66,
+        "win_rate": 84.8,
+        "return_pct": 290.75
       },
       {
         "key": "2026-07",
@@ -1736,11 +1736,14 @@
       "timeframe": "15m",
       "entry": 0.0869698,
       "stop": 0.0832,
-      "hits": [],
-      "status": "open",
+      "hits": [
+        1
+      ],
+      "status": "closed",
       "opened_at": "2026-08-05T13:19:54",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-05T14:19:25",
+      "realized_pct": 2.68,
+      "result_pct": 2.68
     },
     {
       "id": "الفيواب الأسبوعي · BTC|SAHARAUSDT|2026-08-05 13:00:00",
