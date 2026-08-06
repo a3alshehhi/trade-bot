@@ -5045,5 +5045,61 @@
     "wait_entry": true,
     "max_age_h": 48.0,
     "st_stage": 2
+  },
+  "الفيواب الأسبوعي · BTC|STEEMUSDT|2026-08-06 08:00:00": {
+    "symbol": "STEEMUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6267,
+    "entry": 0.03771692,
+    "stop": 0.0359,
+    "init_stop": 0.0359,
+    "cur_stop": 0.0359,
+    "legs": [
+      0.03771692,
+      0.03737,
+      0.03702308,
+      0.03652916
+    ],
+    "last_alert_stop": 0.0359,
+    "armed": false,
+    "targets": [
+      0.03884,
+      0.03963968,
+      0.04005716,
+      0.04065692,
+      0.04178,
+      0.04359692,
+      0.04653692,
+      0.04835384
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-06 08:00:00",
+    "last_bar": "2026-08-06 08:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.03771692,
+    "lo_seen": 0.03771692,
+    "created": "2026-08-06T08:23:05",
+    "dca_levels": [
+      0.03771692,
+      0.03737,
+      0.03702308,
+      0.03652916
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
