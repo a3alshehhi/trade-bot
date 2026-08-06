@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-08-05T23:50:19",
+  "updated_at": "2026-08-06T00:04:12",
   "stats": {
-    "open": 36,
-    "closed": 339,
-    "win_rate": 65.8,
-    "profit_factor": 1.63,
-    "total_pct": 576.43,
-    "avg_pct": 0.63,
+    "open": 35,
+    "closed": 340,
+    "win_rate": 65.6,
+    "profit_factor": 1.62,
+    "total_pct": 564.66,
+    "avg_pct": 0.62,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-08-06",
+        "trades": 1,
+        "win_rate": 0.0,
+        "return_pct": -1.74,
+        "week": "2026-W32",
+        "month": "2026-08"
+      },
       {
         "key": "2026-08-05",
         "trades": 20,
@@ -263,9 +271,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 47,
-        "win_rate": 87.2,
-        "return_pct": 218.38,
+        "trades": 48,
+        "win_rate": 85.4,
+        "return_pct": 212.84,
         "month": "2026-08"
       },
       {
@@ -300,9 +308,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 74,
-        "win_rate": 82.4,
-        "return_pct": 309.99
+        "trades": 75,
+        "win_rate": 81.3,
+        "return_pct": 302.86
       },
       {
         "key": "2026-07",
@@ -1630,10 +1638,11 @@
       "entry": 0.0399978,
       "stop": 0.0387,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-05T08:06:33",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-06T00:04:03",
+      "realized_pct": -1.74,
+      "result_pct": -1.74
     },
     {
       "id": "الفيواب الأسبوعي · BTC|BATUSDT|2026-08-05 07:45:00",
