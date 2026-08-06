@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-06T10:06:12",
+  "updated_at": "2026-08-06T14:44:17",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|ADXUSDT|2026-08-06T13:20:19",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ADXUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0574574,
+      "stop_orig": 0.0548,
+      "stop": 0.0548,
+      "targets": [],
+      "opened_at": "2026-08-06T13:20:19",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|ADXUSDT|2026-08-06T13:17:14",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ADXUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0574574,
+      "stop_orig": 0.0548,
+      "stop": 0.0548,
+      "targets": [],
+      "opened_at": "2026-08-06T13:17:14",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|RAREUSDT|2026-08-06T09:37:52",
       "source": "paper",
@@ -17,12 +59,16 @@
       "targets": [],
       "opened_at": "2026-08-06T09:37:52",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1,
+        2,
+        3
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-06T12:05:03",
+      "realized_pct": 2.03,
+      "result_pct": 2.03,
+      "exec_pct": 2.03
     },
     {
       "id": "paper|RAREUSDT|2026-08-06T09:32:11",
@@ -38,12 +84,16 @@
       "targets": [],
       "opened_at": "2026-08-06T09:32:11",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1,
+        2,
+        3
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-06T12:02:23",
+      "realized_pct": 2.03,
+      "result_pct": 2.03,
+      "exec_pct": 2.03
     },
     {
       "id": "paper|CRVUSDT|2026-08-06T09:20:52",
@@ -59,7 +109,9 @@
       "targets": [],
       "opened_at": "2026-08-06T09:20:52",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -80,7 +132,9 @@
       "targets": [],
       "opened_at": "2026-08-06T09:17:03",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -185,7 +239,9 @@
       "targets": [],
       "opened_at": "2026-08-06T00:47:16",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -206,7 +262,9 @@
       "targets": [],
       "opened_at": "2026-08-05T22:54:59",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -227,7 +285,9 @@
       "targets": [],
       "opened_at": "2026-08-05T22:52:23",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -333,11 +393,11 @@
       "opened_at": "2026-08-05T21:04:43",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-06T13:20:25",
+      "realized_pct": 0.39,
+      "result_pct": 0.39,
+      "exec_pct": 0.39
     },
     {
       "id": "paper|BTCUSDT|2026-08-05T21:04:43",
@@ -396,11 +456,11 @@
       "opened_at": "2026-08-05T21:02:15",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-06T13:17:19",
+      "realized_pct": 0.39,
+      "result_pct": 0.39,
+      "exec_pct": 0.39
     },
     {
       "id": "binance|BANDUSDT|2026-08-05T19:06:36",
@@ -789,7 +849,9 @@
       "targets": [],
       "opened_at": "2026-08-05T07:06:19",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -810,7 +872,9 @@
       "targets": [],
       "opened_at": "2026-08-05T07:01:22",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -965,7 +1029,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.203,
+      "last_price": 2.252,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -1275,7 +1339,8 @@
       "opened_at": "2026-08-03T23:03:46",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -1478,11 +1543,11 @@
       "opened_at": "2026-08-03T17:19:09",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-06T11:20:53",
+      "realized_pct": -0.2,
+      "result_pct": -0.2,
+      "exec_pct": -0.2
     },
     {
       "id": "paper|VETUSDT|2026-08-03T17:19:09",
@@ -9102,13 +9167,13 @@
     }
   ],
   "stats": {
-    "total": 391,
-    "open": 29,
-    "closed": 362,
-    "wins": 216,
-    "win_rate": 59.7,
-    "net_pct": 119.64,
-    "pf": 1.31,
+    "total": 393,
+    "open": 26,
+    "closed": 367,
+    "wins": 220,
+    "win_rate": 59.9,
+    "net_pct": 124.28,
+    "pf": 1.32,
     "simulated": 1
   }
 }
