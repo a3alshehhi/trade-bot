@@ -4102,5 +4102,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|LSKUSDT|2026-08-06 08:15:00": {
+    "symbol": "LSKUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6268,
+    "entry": 0.0744282,
+    "stop": 0.0714,
+    "init_stop": 0.0714,
+    "cur_stop": 0.0714,
+    "legs": [
+      0.0744282,
+      0.07385,
+      0.0732718,
+      0.0724486
+    ],
+    "last_alert_stop": 0.0714,
+    "armed": false,
+    "targets": [
+      0.0763,
+      0.0776328,
+      0.0783286,
+      0.0793282,
+      0.0812,
+      0.0842282,
+      0.0891282,
+      0.0921564
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-06 08:15:00",
+    "last_bar": "2026-08-06 08:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0744282,
+    "lo_seen": 0.0744282,
+    "created": "2026-08-06T08:32:38",
+    "dca_levels": [
+      0.0744282,
+      0.07385,
+      0.0732718,
+      0.0724486
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
