@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-06T03:19:09",
+  "updated_at": "2026-08-06T03:33:36",
   "stats": {
-    "open": 33,
-    "closed": 343,
-    "win_rate": 65.3,
+    "open": 32,
+    "closed": 344,
+    "win_rate": 65.4,
     "profit_factor": 1.6,
-    "total_pct": 532.15,
+    "total_pct": 535.31,
     "avg_pct": 0.6,
     "max_drawdown_pct": -49.22
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-06",
-        "trades": 4,
-        "win_rate": 25.0,
-        "return_pct": -6.55,
+        "trades": 5,
+        "win_rate": 40.0,
+        "return_pct": -6.08,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -271,9 +271,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 51,
-        "win_rate": 82.4,
-        "return_pct": 197.54,
+        "trades": 52,
+        "win_rate": 82.7,
+        "return_pct": 199.03,
         "month": "2026-08"
       },
       {
@@ -308,9 +308,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 78,
-        "win_rate": 79.5,
-        "return_pct": 283.15
+        "trades": 79,
+        "win_rate": 79.7,
+        "return_pct": 285.07
       },
       {
         "key": "2026-07",
@@ -1805,10 +1805,11 @@
       "entry": 0.0398596,
       "stop": 0.0385,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-05T17:20:39",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-06T03:33:33",
+      "realized_pct": 0.5,
+      "result_pct": 0.5
     },
     {
       "id": "الفيواب الأسبوعي · BTC|ETHUSDT|2026-08-05 20:45:00",
