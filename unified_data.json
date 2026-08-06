@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-05T23:35:53",
+  "updated_at": "2026-08-06T00:57:25",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|HYPERUSDT|2026-08-06T00:47:16",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "HYPERUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.059599,
+      "stop_orig": 0.0562,
+      "stop": 0.0562,
+      "targets": [],
+      "opened_at": "2026-08-06T00:47:16",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|BANDUSDT|2026-08-05T22:54:59",
       "source": "paper",
@@ -492,11 +513,11 @@
       "opened_at": "2026-08-05T08:06:33",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-06T00:04:03",
+      "realized_pct": -1.74,
+      "result_pct": -1.74,
+      "exec_pct": -1.74
     },
     {
       "id": "paper|BATUSDT|2026-08-05T08:06:33",
@@ -776,7 +797,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.237,
+      "last_price": 2.25,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -8913,12 +8934,12 @@
     }
   ],
   "stats": {
-    "total": 382,
+    "total": 383,
     "open": 29,
-    "closed": 353,
+    "closed": 354,
     "wins": 213,
-    "win_rate": 60.3,
-    "net_pct": 127.09,
+    "win_rate": 60.2,
+    "net_pct": 125.35,
     "pf": 1.33,
     "simulated": 1
   }
