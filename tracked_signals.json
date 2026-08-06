@@ -3543,7 +3543,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-06 21:59:59.999000",
+    "last_bar": "2026-08-06 22:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0682,
@@ -3655,7 +3655,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 20:45:00",
-    "last_bar": "2026-08-06 21:59:59.999000",
+    "last_bar": "2026-08-06 22:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 64999.0,
@@ -3772,7 +3772,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 21:30:00",
-    "last_bar": "2026-08-06 21:59:59.999000",
+    "last_bar": "2026-08-06 22:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 215.7,
@@ -3888,7 +3888,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 22:30:00",
-    "last_bar": "2026-08-06 21:59:59.999000",
+    "last_bar": "2026-08-06 22:44:59.999000",
     "hits": [
       1
     ],
@@ -3947,7 +3947,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-06 00:30:00",
-    "last_bar": "2026-08-06 21:59:59.999000",
+    "last_bar": "2026-08-06 22:44:59.999000",
     "hits": [
       1,
       2
@@ -4254,7 +4254,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-06 13:00:00",
-    "last_bar": "2026-08-06 21:59:59.999000",
+    "last_bar": "2026-08-06 22:44:59.999000",
     "hits": [
       1
     ],
@@ -4313,12 +4313,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-06 17:15:00",
-    "last_bar": "2026-08-06 21:59:59.999000",
+    "last_bar": "2026-08-06 22:44:59.999000",
     "hits": [
       1,
       2
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.04031,
     "lo_seen": 0.03883432,
     "created": "2026-08-06T17:33:04",
@@ -4329,6 +4329,9 @@
       0.03792936
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.03969,
+    "close_card_sent": true,
+    "closed_at": "2026-08-06T22:47:24"
   }
 }
