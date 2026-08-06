@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06T11:35:46",
+  "updated_at": "2026-08-06T11:51:17",
   "stats": {
     "open": 35,
     "closed": 349,
@@ -1879,11 +1879,13 @@
       "timeframe": "15m",
       "entry": 0.1574362,
       "stop": 0.1507,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-05T22:54:59",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.32
     },
     {
       "id": "الفيواب الأسبوعي · BTC|STEEMUSDT|2026-08-06 08:00:00",
@@ -1936,7 +1938,9 @@
       "entry": 0.01199046,
       "stop": 0.0117,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-06T09:37:52",
@@ -4047,11 +4051,13 @@
       "timeframe": "15m",
       "entry": 0.1574362,
       "stop": 0.1507,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-05T22:52:23",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.32
     },
     {
       "id": "العرض/الطلب|HYPERUSDT|2026-08-06 00:30:00",
@@ -4120,7 +4126,9 @@
       "entry": 0.01199046,
       "stop": 0.0117,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-06T09:32:11",
