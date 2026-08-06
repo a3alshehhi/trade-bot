@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-06T05:21:13",
+  "updated_at": "2026-08-06T05:37:37",
   "stats": {
-    "open": 32,
-    "closed": 344,
-    "win_rate": 65.4,
+    "open": 31,
+    "closed": 345,
+    "win_rate": 65.2,
     "profit_factor": 1.6,
-    "total_pct": 535.31,
+    "total_pct": 534.1,
     "avg_pct": 0.6,
     "max_drawdown_pct": -49.22
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-06",
-        "trades": 5,
-        "win_rate": 40.0,
-        "return_pct": -6.08,
+        "trades": 6,
+        "win_rate": 33.3,
+        "return_pct": -6.26,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -271,9 +271,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 52,
-        "win_rate": 82.7,
-        "return_pct": 199.03,
+        "trades": 53,
+        "win_rate": 81.1,
+        "return_pct": 198.46,
         "month": "2026-08"
       },
       {
@@ -308,9 +308,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 79,
-        "win_rate": 79.7,
-        "return_pct": 285.07
+        "trades": 80,
+        "win_rate": 78.8,
+        "return_pct": 284.33
       },
       {
         "key": "2026-07",
@@ -1668,10 +1668,11 @@
       "entry": 0.0609102,
       "stop": 0.0585,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-05T08:19:22",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-06T05:37:32",
+      "realized_pct": -0.19,
+      "result_pct": -0.19
     },
     {
       "id": "الفيواب الأسبوعي · BTC|CELRUSDT|2026-08-05 08:00:00",
