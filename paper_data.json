@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-06T02:06:48",
+  "updated_at": "2026-08-06T02:19:03",
   "stats": {
-    "open": 35,
-    "closed": 341,
-    "win_rate": 65.7,
-    "profit_factor": 1.62,
-    "total_pct": 569.18,
-    "avg_pct": 0.62,
+    "open": 34,
+    "closed": 342,
+    "win_rate": 65.5,
+    "profit_factor": 1.6,
+    "total_pct": 543.01,
+    "avg_pct": 0.61,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-06",
-        "trades": 2,
-        "win_rate": 50.0,
-        "return_pct": -1.07,
+        "trades": 3,
+        "win_rate": 33.3,
+        "return_pct": -4.94,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -271,9 +271,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 49,
-        "win_rate": 85.7,
-        "return_pct": 214.97,
+        "trades": 50,
+        "win_rate": 84.0,
+        "return_pct": 202.65,
         "month": "2026-08"
       },
       {
@@ -308,9 +308,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 76,
-        "win_rate": 81.6,
-        "return_pct": 305.59
+        "trades": 77,
+        "win_rate": 80.5,
+        "return_pct": 289.74
       },
       {
         "key": "2026-07",
@@ -1510,10 +1510,11 @@
       "entry": 0.01389384,
       "stop": 0.01335,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-04T15:18:59",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-06T02:18:55",
+      "realized_pct": -3.91,
+      "result_pct": -3.91
     },
     {
       "id": "الفيواب الأسبوعي · BTC|EPICUSDT|2026-08-04 18:00:00",
