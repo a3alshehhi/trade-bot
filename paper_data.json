@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-06T09:38:02",
+  "updated_at": "2026-08-06T09:50:03",
   "stats": {
-    "open": 37,
-    "closed": 347,
-    "win_rate": 64.8,
+    "open": 36,
+    "closed": 348,
+    "win_rate": 64.9,
     "profit_factor": 1.59,
-    "total_pct": 520.98,
+    "total_pct": 527.07,
     "avg_pct": 0.59,
     "max_drawdown_pct": -49.22
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-06",
-        "trades": 8,
-        "win_rate": 25.0,
-        "return_pct": -8.2,
+        "trades": 9,
+        "win_rate": 33.3,
+        "return_pct": -7.3,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -271,9 +271,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 55,
-        "win_rate": 78.2,
-        "return_pct": 192.28,
+        "trades": 56,
+        "win_rate": 78.6,
+        "return_pct": 195.15,
         "month": "2026-08"
       },
       {
@@ -308,9 +308,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 82,
-        "win_rate": 76.8,
-        "return_pct": 276.38
+        "trades": 83,
+        "win_rate": 77.1,
+        "return_pct": 280.07
       },
       {
         "key": "2026-07",
@@ -1700,10 +1700,11 @@
       "entry": 0.00758911,
       "stop": 0.00729,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-05T08:34:23",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-06T09:49:56",
+      "realized_pct": 0.98,
+      "result_pct": 0.98
     },
     {
       "id": "الفيواب الأسبوعي · BTC|SHELLUSDT|2026-08-05 08:15:00",
