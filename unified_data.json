@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06T00:57:25",
+  "updated_at": "2026-08-06T04:22:43",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -274,11 +274,11 @@
       "opened_at": "2026-08-05T17:20:39",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-06T03:33:33",
+      "realized_pct": 0.5,
+      "result_pct": 0.5,
+      "exec_pct": 0.5
     },
     {
       "id": "paper|VANRYUSDT|2026-08-05T15:19:11",
@@ -362,11 +362,11 @@
       "opened_at": "2026-08-05T11:19:23",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-06T02:36:33",
+      "realized_pct": -1.69,
+      "result_pct": -1.69,
+      "exec_pct": -1.69
     },
     {
       "id": "paper|GPSUSDT|2026-08-05T09:19:19",
@@ -383,11 +383,11 @@
       "opened_at": "2026-08-05T09:19:19",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-06T01:34:05",
+      "realized_pct": 0.68,
+      "result_pct": 0.68,
+      "exec_pct": 0.68
     },
     {
       "id": "paper|GLMRUSDT|2026-08-05T08:34:23",
@@ -797,7 +797,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.25,
+      "last_price": 2.217,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -892,11 +892,11 @@
       "opened_at": "2026-08-04T15:18:59",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-06T02:18:55",
+      "realized_pct": -3.91,
+      "result_pct": -3.91,
+      "exec_pct": -3.91
     },
     {
       "id": "binance|CUSDT|2026-08-04T12:38:50",
@@ -8935,12 +8935,12 @@
   ],
   "stats": {
     "total": 383,
-    "open": 29,
-    "closed": 354,
-    "wins": 213,
-    "win_rate": 60.2,
-    "net_pct": 125.35,
-    "pf": 1.33,
+    "open": 25,
+    "closed": 358,
+    "wins": 215,
+    "win_rate": 60.1,
+    "net_pct": 120.93,
+    "pf": 1.31,
     "simulated": 1
   }
 }
