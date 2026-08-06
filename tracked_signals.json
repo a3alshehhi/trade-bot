@@ -4217,5 +4217,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|RAREUSDT|2026-08-06 09:15:00": {
+    "symbol": "RAREUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6276,
+    "entry": 0.01199046,
+    "stop": 0.0117,
+    "init_stop": 0.0117,
+    "cur_stop": 0.0117,
+    "legs": [
+      0.01199046,
+      0.011935,
+      0.01187954,
+      0.01180058
+    ],
+    "last_alert_stop": 0.0117,
+    "armed": false,
+    "targets": [
+      0.01217,
+      0.01229784,
+      0.01236458,
+      0.01246046,
+      0.01264,
+      0.01293046,
+      0.01340046,
+      0.01369092
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-06 09:15:00",
+    "last_bar": "2026-08-06 09:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01199046,
+    "lo_seen": 0.01199046,
+    "created": "2026-08-06T09:32:11",
+    "dca_levels": [
+      0.01199046,
+      0.011935,
+      0.01187954,
+      0.01180058
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
