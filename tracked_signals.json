@@ -1625,7 +1625,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 00:00:00",
-    "last_bar": "2026-08-06 18:59:59.999000",
+    "last_bar": "2026-08-06 20:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2016,
@@ -3543,7 +3543,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-06 19:14:59.999000",
+    "last_bar": "2026-08-06 21:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0682,
@@ -3655,7 +3655,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 20:45:00",
-    "last_bar": "2026-08-06 19:14:59.999000",
+    "last_bar": "2026-08-06 21:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 64999.0,
@@ -3772,7 +3772,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 21:30:00",
-    "last_bar": "2026-08-06 19:14:59.999000",
+    "last_bar": "2026-08-06 21:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 215.7,
@@ -3888,7 +3888,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 22:30:00",
-    "last_bar": "2026-08-06 19:14:59.999000",
+    "last_bar": "2026-08-06 21:44:59.999000",
     "hits": [
       1
     ],
@@ -3947,7 +3947,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-06 00:30:00",
-    "last_bar": "2026-08-06 19:14:59.999000",
+    "last_bar": "2026-08-06 21:44:59.999000",
     "hits": [
       1,
       2
@@ -4221,14 +4221,14 @@
     "entry": 0.0574574,
     "stop": 0.0548,
     "init_stop": 0.0548,
-    "cur_stop": 0.0574574,
+    "cur_stop": 0.057744686999999996,
     "legs": [
       0.0574574,
       0.05695,
       0.0564426,
       0.0557202
     ],
-    "last_alert_stop": 0.0574574,
+    "last_alert_stop": 0.057744686999999996,
     "armed": false,
     "targets": [
       0.0591,
@@ -4254,7 +4254,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-06 13:00:00",
-    "last_bar": "2026-08-06 19:14:59.999000",
+    "last_bar": "2026-08-06 21:44:59.999000",
     "hits": [
       1
     ],
@@ -4269,7 +4269,8 @@
       0.0557202
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 3
   },
   "العرض/الطلب|CFXUSDT|2026-08-06 17:15:00": {
     "symbol": "CFXUSDT",
@@ -4312,12 +4313,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-06 17:15:00",
-    "last_bar": "2026-08-06 19:14:59.999000",
+    "last_bar": "2026-08-06 21:44:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.0399,
+    "hi_seen": 0.04029,
     "lo_seen": 0.03883432,
     "created": "2026-08-06T17:33:04",
     "dca_levels": [
