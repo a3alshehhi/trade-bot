@@ -1625,7 +1625,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 00:00:00",
-    "last_bar": "2026-08-06 16:59:59.999000",
+    "last_bar": "2026-08-06 18:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2016,
@@ -3431,12 +3431,12 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 06:45:00",
-    "last_bar": "2026-08-06 17:29:59.999000",
+    "last_bar": "2026-08-06 17:59:59.999000",
     "hits": [
       1,
       2
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.06,
     "lo_seen": 0.0548,
     "created": "2026-08-05T07:01:22",
@@ -3448,7 +3448,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 3
+    "st_stage": 3,
+    "exit_price": 0.0586,
+    "close_card_sent": true,
+    "closed_at": "2026-08-06T19:24:42"
   },
   "العرض/الطلب|COOKIEUSDT|2026-08-05 07:15:00": {
     "symbol": "COOKIEUSDT",
@@ -3540,7 +3543,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-06 17:29:59.999000",
+    "last_bar": "2026-08-06 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0682,
@@ -3652,7 +3655,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 20:45:00",
-    "last_bar": "2026-08-06 17:29:59.999000",
+    "last_bar": "2026-08-06 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 64999.0,
@@ -3769,7 +3772,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 21:30:00",
-    "last_bar": "2026-08-06 17:29:59.999000",
+    "last_bar": "2026-08-06 19:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 215.7,
@@ -3885,7 +3888,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 22:30:00",
-    "last_bar": "2026-08-06 17:29:59.999000",
+    "last_bar": "2026-08-06 19:14:59.999000",
     "hits": [
       1
     ],
@@ -3944,7 +3947,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-06 00:30:00",
-    "last_bar": "2026-08-06 17:29:59.999000",
+    "last_bar": "2026-08-06 19:14:59.999000",
     "hits": [
       1,
       2
@@ -4124,14 +4127,14 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-06 09:00:00",
-    "last_bar": "2026-08-06 17:29:59.999000",
+    "last_bar": "2026-08-06 17:44:59.999000",
     "hits": [
       1,
       2,
       3,
       4
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.2216,
     "lo_seen": 0.2079654,
     "created": "2026-08-06T09:17:03",
@@ -4142,7 +4145,10 @@
       0.2038042
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.2161642,
+    "close_card_sent": true,
+    "closed_at": "2026-08-06T19:24:47"
   },
   "العرض/الطلب|RAREUSDT|2026-08-06 09:15:00": {
     "symbol": "RAREUSDT",
@@ -4248,7 +4254,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-06 13:00:00",
-    "last_bar": "2026-08-06 17:29:59.999000",
+    "last_bar": "2026-08-06 19:14:59.999000",
     "hits": [
       1
     ],
@@ -4273,14 +4279,14 @@
     "entry": 0.03883432,
     "stop": 0.03745,
     "init_stop": 0.03745,
-    "cur_stop": 0.03745,
+    "cur_stop": 0.03883432,
     "legs": [
       0.03883432,
       0.03857,
       0.03830568,
       0.03792936
     ],
-    "last_alert_stop": 0.03745,
+    "last_alert_stop": 0.03883432,
     "armed": false,
     "targets": [
       0.03969,
@@ -4306,10 +4312,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-06 17:15:00",
-    "last_bar": "2026-08-06 17:29:59.999000",
-    "hits": [],
+    "last_bar": "2026-08-06 19:14:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.03942,
+    "hi_seen": 0.0399,
     "lo_seen": 0.03883432,
     "created": "2026-08-06T17:33:04",
     "dca_levels": [
