@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-06T22:49:00",
+  "updated_at": "2026-08-06T23:03:42",
   "stats": {
-    "open": 23,
-    "closed": 365,
-    "win_rate": 65.8,
-    "profit_factor": 1.66,
-    "total_pct": 726.77,
-    "avg_pct": 0.64,
+    "open": 22,
+    "closed": 366,
+    "win_rate": 65.6,
+    "profit_factor": 1.64,
+    "total_pct": 697.59,
+    "avg_pct": 0.63,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-06",
-        "trades": 26,
-        "win_rate": 65.4,
-        "return_pct": 22.23,
+        "trades": 27,
+        "win_rate": 63.0,
+        "return_pct": 17.91,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -271,9 +271,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 73,
-        "win_rate": 79.5,
-        "return_pct": 289.14,
+        "trades": 74,
+        "win_rate": 78.4,
+        "return_pct": 275.41,
         "month": "2026-08"
       },
       {
@@ -308,9 +308,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 100,
-        "win_rate": 78.0,
-        "return_pct": 401.11
+        "trades": 101,
+        "win_rate": 77.2,
+        "return_pct": 383.43
       },
       {
         "key": "2026-07",
@@ -1482,10 +1482,11 @@
       "entry": 0.0076326,
       "stop": 0.0072,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-04T06:49:11",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-06T23:03:38",
+      "realized_pct": -3.53,
+      "result_pct": -3.53
     },
     {
       "id": "الفيواب الأسبوعي · BTC|AMPUSDT|2026-08-04 11:45:00",
