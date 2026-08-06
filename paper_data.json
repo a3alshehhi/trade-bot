@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-06T11:06:20",
+  "updated_at": "2026-08-06T11:21:05",
   "stats": {
-    "open": 36,
-    "closed": 348,
-    "win_rate": 64.9,
+    "open": 35,
+    "closed": 349,
+    "win_rate": 64.8,
     "profit_factor": 1.59,
-    "total_pct": 527.07,
+    "total_pct": 525.81,
     "avg_pct": 0.59,
     "max_drawdown_pct": -49.22
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-06",
-        "trades": 9,
-        "win_rate": 33.3,
-        "return_pct": -7.3,
+        "trades": 10,
+        "win_rate": 30.0,
+        "return_pct": -7.48,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -271,9 +271,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 56,
-        "win_rate": 78.6,
-        "return_pct": 195.15,
+        "trades": 57,
+        "win_rate": 77.2,
+        "return_pct": 194.56,
         "month": "2026-08"
       },
       {
@@ -308,9 +308,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 83,
-        "win_rate": 77.1,
-        "return_pct": 280.07
+        "trades": 84,
+        "win_rate": 76.2,
+        "return_pct": 279.31
       },
       {
         "key": "2026-07",
@@ -1301,10 +1301,11 @@
       "entry": 1.856452,
       "stop": 1.786,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-03T17:19:09",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-06T11:20:53",
+      "realized_pct": -0.2,
+      "result_pct": -0.2
     },
     {
       "id": "الفيواب الأسبوعي · BTC|VETUSDT|2026-08-03 17:00:00",
