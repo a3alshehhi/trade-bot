@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07T19:38:28",
+  "updated_at": "2026-08-07T20:18:51",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -39,11 +39,11 @@
       "opened_at": "2026-08-07T18:35:07",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-07T19:47:06",
+      "realized_pct": -2.74,
+      "result_pct": -2.74,
+      "exec_pct": -2.74
     },
     {
       "id": "paper|NILUSDT|2026-08-07T17:47:34",
@@ -1370,7 +1370,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.214,
+      "last_price": 2.219,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -9509,12 +9509,12 @@
   ],
   "stats": {
     "total": 407,
-    "open": 18,
-    "closed": 389,
+    "open": 17,
+    "closed": 390,
     "wins": 238,
-    "win_rate": 61.2,
-    "net_pct": 159.76,
-    "pf": 1.38,
+    "win_rate": 61.0,
+    "net_pct": 157.02,
+    "pf": 1.37,
     "simulated": 1
   }
 }
