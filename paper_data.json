@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-07T17:35:39",
+  "updated_at": "2026-08-07T17:49:12",
   "stats": {
-    "open": 25,
+    "open": 26,
     "closed": 372,
     "win_rate": 65.9,
     "profit_factor": 1.61,
@@ -4275,6 +4275,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-07T14:32:37",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|NILUSDT|2026-08-07 17:30:00",
+      "symbol": "NILUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03740444,
+      "stop": 0.03272,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-07T17:47:34",
       "closed_at": null,
       "realized_pct": 0.0
     },
