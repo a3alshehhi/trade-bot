@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-07T19:06:56",
+  "updated_at": "2026-08-07T19:18:39",
   "stats": {
     "open": 27,
-    "closed": 372,
-    "win_rate": 65.9,
-    "profit_factor": 1.61,
-    "total_pct": 664.68,
-    "avg_pct": 0.61,
+    "closed": 373,
+    "win_rate": 66.0,
+    "profit_factor": 1.64,
+    "total_pct": 744.97,
+    "avg_pct": 0.64,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-07",
-        "trades": 6,
-        "win_rate": 83.3,
-        "return_pct": -4.13,
+        "trades": 7,
+        "win_rate": 85.7,
+        "return_pct": 5.94,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -279,9 +279,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 80,
-        "win_rate": 78.8,
-        "return_pct": 259.92,
+        "trades": 81,
+        "win_rate": 79.0,
+        "return_pct": 297.71,
         "month": "2026-08"
       },
       {
@@ -316,9 +316,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 107,
-        "win_rate": 77.6,
-        "return_pct": 363.48
+        "trades": 108,
+        "win_rate": 77.8,
+        "return_pct": 412.14
       },
       {
         "key": "2026-07",
@@ -4295,10 +4295,11 @@
         2,
         3
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-07T17:47:34",
-      "closed_at": null,
-      "realized_pct": 3.87
+      "closed_at": "2026-08-07T19:17:08",
+      "realized_pct": 10.5,
+      "result_pct": 10.5
     },
     {
       "id": "العرض/الطلب|2ZUSDT|2026-08-07 18:15:00",
@@ -4311,6 +4312,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-07T18:35:07",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|GPSUSDT|2026-08-07 19:00:00",
+      "symbol": "GPSUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0096362,
+      "stop": 0.00908,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-07T19:17:00",
       "closed_at": null,
       "realized_pct": 0.0
     },
