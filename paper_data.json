@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-07T02:03:33",
+  "updated_at": "2026-08-07T02:21:36",
   "stats": {
-    "open": 20,
+    "open": 21,
     "closed": 368,
     "win_rate": 65.5,
     "profit_factor": 1.58,
@@ -4218,6 +4218,20 @@
       "closed_at": "2026-08-06T22:47:24",
       "realized_pct": 2.99,
       "result_pct": 2.99
+    },
+    {
+      "id": "العرض/الطلب|HYPERUSDT|2026-08-07 02:00:00",
+      "symbol": "HYPERUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.065407,
+      "stop": 0.0583,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-07T02:17:15",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
