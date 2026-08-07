@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-07T12:34:05",
+  "updated_at": "2026-08-07T12:48:57",
   "stats": {
-    "open": 25,
+    "open": 26,
     "closed": 368,
     "win_rate": 65.5,
     "profit_factor": 1.58,
@@ -1991,7 +1991,8 @@
       "stop": 0.0548,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-06T13:20:19",
@@ -2894,21 +2895,6 @@
       "closed_at": "2026-07-23T16:04:27",
       "realized_pct": 1.88,
       "result_pct": 1.88
-    },
-    {
-      "id": "العرض/الطلب|AVAUSDT|2026-07-24 11:45:00",
-      "symbol": "AVAUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.1590946,
-      "stop": 0.1531,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-24T12:04:17",
-      "closed_at": "2026-07-25T06:31:14",
-      "realized_pct": -3.77,
-      "result_pct": -3.77
     },
     {
       "id": "العرض/الطلب|DEXEUSDT|2026-07-25 06:00:00",
@@ -4162,7 +4148,8 @@
       "stop": 0.0548,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-06T13:17:14",
@@ -4226,6 +4213,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-07T11:02:35",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|EPICUSDT|2026-08-07 12:30:00",
+      "symbol": "EPICUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.023327,
+      "stop": 0.7443,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-07T12:47:25",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -4304,6 +4305,21 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|AVAUSDT|2026-07-24 11:45:00",
+      "symbol": "AVAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1590946,
+      "stop": 0.1531,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-24T12:04:17",
+      "closed_at": "2026-07-25T06:31:14",
+      "realized_pct": -3.77,
+      "result_pct": -3.77
     },
     {
       "id": "العرض/الطلب|BIOUSDT|2026-07-24 04:00:00",

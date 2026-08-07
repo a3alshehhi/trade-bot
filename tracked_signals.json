@@ -107,53 +107,6 @@
     "close_card_sent": true,
     "closed_at": "2026-07-23T16:04:27"
   },
-  "العرض/الطلب|AVAUSDT|2026-07-24 11:45:00": {
-    "symbol": "AVAUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5527,
-    "entry": 0.1590946,
-    "stop": 0.1531,
-    "init_stop": 0.1531,
-    "cur_stop": 0.1531,
-    "legs": [
-      0.1590946,
-      0.15795,
-      0.1568054,
-      0.1551758
-    ],
-    "last_alert_stop": 0.1531,
-    "armed": false,
-    "targets": [
-      0.1628,
-      0.1654384
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-24 11:45:00",
-    "last_bar": "2026-07-25 06:29:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.1607,
-    "lo_seen": 0.1525,
-    "created": "2026-07-24T12:04:17",
-    "dca_levels": [
-      0.1590946,
-      0.15795,
-      0.1568054,
-      0.1551758
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 0.1531,
-    "close_card_sent": true,
-    "closed_at": "2026-07-25T06:31:14"
-  },
   "العرض/الطلب|DEXEUSDT|2026-07-25 06:00:00": {
     "symbol": "DEXEUSDT",
     "label": "العرض/الطلب",
@@ -3345,7 +3298,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-07 12:29:59.999000",
+    "last_bar": "2026-08-07 12:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0682,
@@ -3457,12 +3410,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 20:45:00",
-    "last_bar": "2026-08-07 12:29:59.999000",
+    "last_bar": "2026-08-07 12:44:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 65280.6,
+    "hi_seen": 65365.6,
     "lo_seen": 63974.63596,
     "created": "2026-08-05T21:02:15",
     "dca_levels": [
@@ -3576,7 +3529,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 21:30:00",
-    "last_bar": "2026-08-07 12:29:59.999000",
+    "last_bar": "2026-08-07 12:44:59.999000",
     "hits": [
       1
     ],
@@ -3695,7 +3648,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 22:30:00",
-    "last_bar": "2026-08-07 12:29:59.999000",
+    "last_bar": "2026-08-07 12:44:59.999000",
     "hits": [
       1
     ],
@@ -4034,14 +3987,14 @@
     "entry": 0.0574574,
     "stop": 0.0548,
     "init_stop": 0.0548,
-    "cur_stop": 0.0591,
+    "cur_stop": 0.0602696,
     "legs": [
       0.0574574,
       0.05695,
       0.0564426,
       0.0557202
     ],
-    "last_alert_stop": 0.0591,
+    "last_alert_stop": 0.0602696,
     "armed": false,
     "targets": [
       0.0591,
@@ -4067,13 +4020,14 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-06 13:00:00",
-    "last_bar": "2026-08-07 12:29:59.999000",
+    "last_bar": "2026-08-07 12:44:59.999000",
     "hits": [
       1,
-      2
+      2,
+      3
     ],
     "stopped": false,
-    "hi_seen": 0.0605,
+    "hi_seen": 0.0609,
     "lo_seen": 0.0574574,
     "created": "2026-08-06T13:17:14",
     "dca_levels": [
@@ -4189,7 +4143,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-07 02:00:00",
-    "last_bar": "2026-08-07 12:29:59.999000",
+    "last_bar": "2026-08-07 12:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.065407,
@@ -4246,7 +4200,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-07 02:45:00",
-    "last_bar": "2026-08-07 12:29:59.999000",
+    "last_bar": "2026-08-07 12:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0433934,
@@ -4303,7 +4257,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-07 10:45:00",
-    "last_bar": "2026-08-07 12:29:59.999000",
+    "last_bar": "2026-08-07 12:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00366,
@@ -4314,6 +4268,62 @@
       0.00358,
       0.00355876,
       0.00352852
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|EPICUSDT|2026-08-07 12:30:00": {
+    "symbol": "EPICUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6325,
+    "entry": 1.023327,
+    "stop": 0.7443,
+    "init_stop": 0.7443,
+    "cur_stop": 0.7443,
+    "legs": [
+      1.023327,
+      0.97005,
+      0.916773,
+      0.840921
+    ],
+    "last_alert_stop": 0.7443,
+    "armed": false,
+    "targets": [
+      1.1958,
+      1.318608,
+      1.382721,
+      1.474827,
+      1.6473,
+      1.926327,
+      2.377827,
+      2.656854
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-07 12:30:00",
+    "last_bar": "2026-08-07 12:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1.0791,
+    "lo_seen": 0.9553,
+    "created": "2026-08-07T12:47:25",
+    "dca_levels": [
+      1.023327,
+      0.97005,
+      0.916773,
+      0.840921
     ],
     "wait_entry": true,
     "max_age_h": 48.0
