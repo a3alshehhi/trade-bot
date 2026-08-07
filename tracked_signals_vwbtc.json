@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-08-07 07:14:59.999000",
+    "last_bar": "2026-08-07 11:29:59.999000",
     "hits": [
       1
     ],
@@ -3137,7 +3137,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 17:45:00",
-    "last_bar": "2026-08-07 07:14:59.999000",
+    "last_bar": "2026-08-07 11:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00819,
@@ -4230,7 +4230,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-07 07:14:59.999000",
+    "last_bar": "2026-08-07 11:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0682,
@@ -4859,14 +4859,14 @@
     "entry": 63974.63596,
     "stop": 62275.0,
     "init_stop": 62275.0,
-    "cur_stop": 64117.143299999996,
+    "cur_stop": 64294.50913979999,
     "legs": [
       63974.63596,
       63650.11,
       63325.58404,
       62863.54708
     ],
-    "last_alert_stop": 64117.143299999996,
+    "last_alert_stop": 64294.50913979999,
     "armed": false,
     "targets": [
       65025.22,
@@ -4892,10 +4892,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 20:45:00",
-    "last_bar": "2026-08-07 07:14:59.999000",
-    "hits": [],
+    "last_bar": "2026-08-07 11:29:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 64999.0,
+    "hi_seen": 65213.33,
     "lo_seen": 63974.63596,
     "created": "2026-08-05T21:04:43",
     "dca_levels": [
@@ -4906,7 +4908,7 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 2
+    "st_stage": 3
   },
   "الفيواب الأسبوعي · BTC|BCHUSDT|2026-08-05 21:30:00": {
     "symbol": "BCHUSDT",
@@ -4949,10 +4951,10 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 21:30:00",
-    "last_bar": "2026-08-07 07:14:59.999000",
+    "last_bar": "2026-08-07 11:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 215.8,
+    "hi_seen": 216.7,
     "lo_seen": 210.8,
     "created": "2026-08-05T21:50:03",
     "dca_levels": [
@@ -5066,7 +5068,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 22:30:00",
-    "last_bar": "2026-08-07 07:14:59.999000",
+    "last_bar": "2026-08-07 11:29:59.999000",
     "hits": [
       1
     ],
@@ -5372,7 +5374,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-06 13:00:00",
-    "last_bar": "2026-08-07 07:14:59.999000",
+    "last_bar": "2026-08-07 11:29:59.999000",
     "hits": [
       1
     ],
@@ -5460,14 +5462,14 @@
     "entry": 0.0433934,
     "stop": 0.0395,
     "init_stop": 0.0395,
-    "cur_stop": 0.0395,
+    "cur_stop": 0.041093500000000005,
     "legs": [
       0.0433934,
       0.04265,
       0.0419066,
       0.0408482
     ],
-    "last_alert_stop": 0.0395,
+    "last_alert_stop": 0.041093500000000005,
     "armed": false,
     "targets": [
       0.0458,
@@ -5493,7 +5495,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-07 02:45:00",
-    "last_bar": "2026-08-07 07:14:59.999000",
+    "last_bar": "2026-08-07 11:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0433934,
@@ -5506,7 +5508,8 @@
       0.0408482
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2
   },
   "الفيواب الأسبوعي · BTC|SKLUSDT|2026-08-07 10:45:00": {
     "symbol": "SKLUSDT",
@@ -5549,10 +5552,10 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-07 10:45:00",
-    "last_bar": "2026-08-07 10:45:00",
+    "last_bar": "2026-08-07 11:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.00360124,
+    "hi_seen": 0.00363,
     "lo_seen": 0.00360124,
     "created": "2026-08-07T11:05:34",
     "dca_levels": [
