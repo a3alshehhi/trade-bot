@@ -1,8 +1,56 @@
 {
-  "updated_at": "2026-08-06T14:44:17",
+  "updated_at": "2026-08-07T00:22:35",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|CFXUSDT|2026-08-06T17:36:31",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "CFXUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03883432,
+      "stop_orig": 0.03745,
+      "stop": 0.03745,
+      "targets": [],
+      "opened_at": "2026-08-06T17:36:31",
+      "usd": 100.0,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-06T22:49:00",
+      "realized_pct": 2.99,
+      "result_pct": 2.99,
+      "exec_pct": 2.99
+    },
+    {
+      "id": "paper|CFXUSDT|2026-08-06T17:33:04",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "CFXUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03883432,
+      "stop_orig": 0.03745,
+      "stop": 0.03745,
+      "targets": [],
+      "opened_at": "2026-08-06T17:33:04",
+      "usd": 100.0,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-06T22:47:24",
+      "realized_pct": 2.99,
+      "result_pct": 2.99,
+      "exec_pct": 2.99
+    },
     {
       "id": "paper|ADXUSDT|2026-08-06T13:20:19",
       "source": "paper",
@@ -17,7 +65,9 @@
       "targets": [],
       "opened_at": "2026-08-06T13:20:19",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -38,7 +88,9 @@
       "targets": [],
       "opened_at": "2026-08-06T13:17:14",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -110,13 +162,16 @@
       "opened_at": "2026-08-06T09:20:52",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3,
+        4
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-06T19:28:57",
+      "realized_pct": 2.57,
+      "result_pct": 2.57,
+      "exec_pct": 2.57
     },
     {
       "id": "paper|CRVUSDT|2026-08-06T09:17:03",
@@ -133,13 +188,16 @@
       "opened_at": "2026-08-06T09:17:03",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3,
+        4
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-06T19:24:47",
+      "realized_pct": 2.57,
+      "result_pct": 2.57,
+      "exec_pct": 2.57
     },
     {
       "id": "paper|LSKUSDT|2026-08-06T08:40:34",
@@ -156,11 +214,11 @@
       "opened_at": "2026-08-06T08:40:34",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-06T17:36:47",
+      "realized_pct": 0.8,
+      "result_pct": 0.8,
+      "exec_pct": 0.8
     },
     {
       "id": "paper|LSKUSDT|2026-08-06T08:32:38",
@@ -177,11 +235,11 @@
       "opened_at": "2026-08-06T08:32:38",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-06T17:33:15",
+      "realized_pct": 0.8,
+      "result_pct": 0.8,
+      "exec_pct": 0.8
     },
     {
       "id": "paper|STEEMUSDT|2026-08-06T08:23:05",
@@ -198,11 +256,11 @@
       "opened_at": "2026-08-06T08:23:05",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-06T17:36:45",
+      "realized_pct": -3.24,
+      "result_pct": -3.24,
+      "exec_pct": -3.24
     },
     {
       "id": "paper|STEEMUSDT|2026-08-06T08:17:34",
@@ -219,11 +277,11 @@
       "opened_at": "2026-08-06T08:17:34",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-06T17:33:13",
+      "realized_pct": -3.24,
+      "result_pct": -3.24,
+      "exec_pct": -3.24
     },
     {
       "id": "paper|HYPERUSDT|2026-08-06T00:47:16",
@@ -240,7 +298,11 @@
       "opened_at": "2026-08-06T00:47:16",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3,
+        4,
+        5
       ],
       "status": "open",
       "closed_at": null,
@@ -652,12 +714,15 @@
       "targets": [],
       "opened_at": "2026-08-05T08:34:23",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-06T17:36:40",
+      "realized_pct": 4.24,
+      "result_pct": 4.24,
+      "exec_pct": 4.24
     },
     {
       "id": "paper|DUSKUSDT|2026-08-05T08:19:22",
@@ -850,13 +915,14 @@
       "opened_at": "2026-08-05T07:06:19",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-06T19:28:53",
+      "realized_pct": 3.72,
+      "result_pct": 3.72,
+      "exec_pct": 3.72
     },
     {
       "id": "paper|ADXUSDT|2026-08-05T07:01:22",
@@ -873,13 +939,14 @@
       "opened_at": "2026-08-05T07:01:22",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-06T19:24:42",
+      "realized_pct": 3.72,
+      "result_pct": 3.72,
+      "exec_pct": 3.72
     },
     {
       "id": "paper|KITEUSDT|2026-08-05T05:49:02",
@@ -1029,7 +1096,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.252,
+      "last_price": 2.254,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -1241,11 +1308,11 @@
       "opened_at": "2026-08-04T06:49:11",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-06T23:03:38",
+      "realized_pct": -3.53,
+      "result_pct": -3.53,
+      "exec_pct": -3.53
     },
     {
       "id": "binance|BANDUSDT|2026-08-04T02:08:42",
@@ -1342,11 +1409,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-06T19:28:51",
+      "realized_pct": 5.78,
+      "result_pct": 5.78,
+      "exec_pct": 5.78
     },
     {
       "id": "paper|GRTUSDT|2026-08-03T22:48:39",
@@ -9167,13 +9234,13 @@
     }
   ],
   "stats": {
-    "total": 393,
-    "open": 26,
-    "closed": 367,
-    "wins": 220,
-    "win_rate": 59.9,
-    "net_pct": 124.28,
-    "pf": 1.32,
+    "total": 395,
+    "open": 15,
+    "closed": 380,
+    "wins": 230,
+    "win_rate": 60.5,
+    "net_pct": 144.45,
+    "pf": 1.36,
     "simulated": 1
   }
 }
