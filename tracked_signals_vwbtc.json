@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-08-07 11:29:59.999000",
+    "last_bar": "2026-08-07 12:14:59.999000",
     "hits": [
       1
     ],
@@ -3137,7 +3137,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 17:45:00",
-    "last_bar": "2026-08-07 11:29:59.999000",
+    "last_bar": "2026-08-07 12:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00819,
@@ -4230,7 +4230,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-07 11:29:59.999000",
+    "last_bar": "2026-08-07 12:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0682,
@@ -4892,12 +4892,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 20:45:00",
-    "last_bar": "2026-08-07 11:29:59.999000",
+    "last_bar": "2026-08-07 12:14:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 65213.33,
+    "hi_seen": 65280.6,
     "lo_seen": 63974.63596,
     "created": "2026-08-05T21:04:43",
     "dca_levels": [
@@ -4918,14 +4918,14 @@
     "entry": 214.5732,
     "stop": 210.0,
     "init_stop": 210.0,
-    "cur_stop": 211.338,
+    "cur_stop": 215.646066,
     "legs": [
       214.5732,
       213.7,
       212.8268,
       211.5836
     ],
-    "last_alert_stop": 211.338,
+    "last_alert_stop": 215.646066,
     "armed": false,
     "targets": [
       217.4,
@@ -4951,10 +4951,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 21:30:00",
-    "last_bar": "2026-08-07 11:29:59.999000",
-    "hits": [],
+    "last_bar": "2026-08-07 12:14:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 216.7,
+    "hi_seen": 218.2,
     "lo_seen": 210.8,
     "created": "2026-08-05T21:50:03",
     "dca_levels": [
@@ -4965,7 +4967,7 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 2
+    "st_stage": 3
   },
   "الفيواب الأسبوعي · BTC|ERAUSDT|2026-08-05 22:15:00": {
     "symbol": "ERAUSDT",
@@ -5068,7 +5070,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 22:30:00",
-    "last_bar": "2026-08-07 11:29:59.999000",
+    "last_bar": "2026-08-07 12:14:59.999000",
     "hits": [
       1
     ],
@@ -5374,7 +5376,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-06 13:00:00",
-    "last_bar": "2026-08-07 11:29:59.999000",
+    "last_bar": "2026-08-07 12:14:59.999000",
     "hits": [
       1
     ],
@@ -5495,7 +5497,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-07 02:45:00",
-    "last_bar": "2026-08-07 11:29:59.999000",
+    "last_bar": "2026-08-07 12:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0433934,
@@ -5552,10 +5554,10 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-07 10:45:00",
-    "last_bar": "2026-08-07 11:29:59.999000",
+    "last_bar": "2026-08-07 12:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.00363,
+    "hi_seen": 0.00366,
     "lo_seen": 0.00360124,
     "created": "2026-08-07T11:05:34",
     "dca_levels": [

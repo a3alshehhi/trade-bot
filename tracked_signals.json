@@ -1427,7 +1427,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 00:00:00",
-    "last_bar": "2026-08-07 10:59:59.999000",
+    "last_bar": "2026-08-07 11:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2016,
@@ -3345,7 +3345,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-07 11:29:59.999000",
+    "last_bar": "2026-08-07 12:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0682,
@@ -3457,12 +3457,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 20:45:00",
-    "last_bar": "2026-08-07 11:29:59.999000",
+    "last_bar": "2026-08-07 12:14:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 65213.33,
+    "hi_seen": 65280.6,
     "lo_seen": 63974.63596,
     "created": "2026-08-05T21:02:15",
     "dca_levels": [
@@ -3543,14 +3543,14 @@
     "entry": 214.5732,
     "stop": 210.0,
     "init_stop": 210.0,
-    "cur_stop": 211.338,
+    "cur_stop": 215.646066,
     "legs": [
       214.5732,
       213.7,
       212.8268,
       211.5836
     ],
-    "last_alert_stop": 211.338,
+    "last_alert_stop": 215.646066,
     "armed": false,
     "targets": [
       217.4,
@@ -3576,10 +3576,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 21:30:00",
-    "last_bar": "2026-08-07 11:29:59.999000",
-    "hits": [],
+    "last_bar": "2026-08-07 12:14:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 216.7,
+    "hi_seen": 218.2,
     "lo_seen": 210.8,
     "created": "2026-08-05T21:47:11",
     "dca_levels": [
@@ -3590,7 +3592,7 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 2
+    "st_stage": 3
   },
   "العرض/الطلب|ERAUSDT|2026-08-05 22:15:00": {
     "symbol": "ERAUSDT",
@@ -3693,7 +3695,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 22:30:00",
-    "last_bar": "2026-08-07 11:29:59.999000",
+    "last_bar": "2026-08-07 12:14:59.999000",
     "hits": [
       1
     ],
@@ -4065,7 +4067,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-06 13:00:00",
-    "last_bar": "2026-08-07 11:29:59.999000",
+    "last_bar": "2026-08-07 12:14:59.999000",
     "hits": [
       1
     ],
@@ -4153,14 +4155,14 @@
     "entry": 0.065407,
     "stop": 0.0583,
     "init_stop": 0.0583,
-    "cur_stop": 0.0583,
+    "cur_stop": 0.060098,
     "legs": [
       0.065407,
       0.06405,
       0.062693,
       0.060761
     ],
-    "last_alert_stop": 0.0583,
+    "last_alert_stop": 0.060098,
     "armed": false,
     "targets": [
       0.0698,
@@ -4186,7 +4188,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-07 02:00:00",
-    "last_bar": "2026-08-07 11:29:59.999000",
+    "last_bar": "2026-08-07 12:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.065407,
@@ -4199,7 +4201,8 @@
       0.060761
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2
   },
   "العرض/الطلب|MIRAUSDT|2026-08-07 02:45:00": {
     "symbol": "MIRAUSDT",
@@ -4242,7 +4245,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-07 02:45:00",
-    "last_bar": "2026-08-07 11:29:59.999000",
+    "last_bar": "2026-08-07 12:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0433934,
@@ -4299,10 +4302,10 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-07 10:45:00",
-    "last_bar": "2026-08-07 11:29:59.999000",
+    "last_bar": "2026-08-07 12:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.00363,
+    "hi_seen": 0.00366,
     "lo_seen": 0.00360124,
     "created": "2026-08-07T11:02:35",
     "dca_levels": [
