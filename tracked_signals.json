@@ -4563,5 +4563,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|2ZUSDT|2026-08-07 18:15:00": {
+    "symbol": "2ZUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6339,
+    "entry": 0.056405,
+    "stop": 0.05486,
+    "init_stop": 0.05486,
+    "cur_stop": 0.05486,
+    "legs": [
+      0.056405,
+      0.05611,
+      0.055815,
+      0.055395
+    ],
+    "last_alert_stop": 0.05486,
+    "armed": false,
+    "targets": [
+      0.05736,
+      0.05804,
+      0.058395,
+      0.058905,
+      0.05986,
+      0.061405,
+      0.063905,
+      0.06545
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-07 18:15:00",
+    "last_bar": "2026-08-07 18:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.056405,
+    "lo_seen": 0.056405,
+    "created": "2026-08-07T18:35:07",
+    "dca_levels": [
+      0.056405,
+      0.05611,
+      0.055815,
+      0.055395
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
