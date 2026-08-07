@@ -607,12 +607,12 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-08-07 12:44:59.999000",
+    "last_bar": "2026-08-07 13:29:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 1.1579,
+    "hi_seen": 1.1584,
     "lo_seen": 1.126835,
     "created": "2026-07-27T03:03:31",
     "dca_levels": [
@@ -3137,7 +3137,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 17:45:00",
-    "last_bar": "2026-08-07 12:44:59.999000",
+    "last_bar": "2026-08-07 13:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00819,
@@ -4230,7 +4230,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-07 12:44:59.999000",
+    "last_bar": "2026-08-07 13:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0682,
@@ -4892,12 +4892,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 20:45:00",
-    "last_bar": "2026-08-07 12:44:59.999000",
+    "last_bar": "2026-08-07 13:29:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 65365.6,
+    "hi_seen": 65390.99,
     "lo_seen": 63974.63596,
     "created": "2026-08-05T21:04:43",
     "dca_levels": [
@@ -4951,11 +4951,11 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 21:30:00",
-    "last_bar": "2026-08-07 12:44:59.999000",
+    "last_bar": "2026-08-07 13:29:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 218.2,
     "lo_seen": 210.8,
     "created": "2026-08-05T21:50:03",
@@ -4967,7 +4967,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 3
+    "st_stage": 3,
+    "exit_price": 215.646066,
+    "close_card_sent": true,
+    "closed_at": "2026-08-07T13:37:07"
   },
   "الفيواب الأسبوعي · BTC|ERAUSDT|2026-08-05 22:15:00": {
     "symbol": "ERAUSDT",
@@ -5070,7 +5073,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 22:30:00",
-    "last_bar": "2026-08-07 12:44:59.999000",
+    "last_bar": "2026-08-07 13:29:59.999000",
     "hits": [
       1
     ],
@@ -5376,7 +5379,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-06 13:00:00",
-    "last_bar": "2026-08-07 12:44:59.999000",
+    "last_bar": "2026-08-07 13:29:59.999000",
     "hits": [
       1,
       2,
@@ -5499,7 +5502,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-07 02:45:00",
-    "last_bar": "2026-08-07 12:44:59.999000",
+    "last_bar": "2026-08-07 13:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0433934,
@@ -5556,11 +5559,11 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-07 10:45:00",
-    "last_bar": "2026-08-07 12:44:59.999000",
+    "last_bar": "2026-08-07 13:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00366,
-    "lo_seen": 0.00360124,
+    "lo_seen": 0.0036,
     "created": "2026-08-07T11:05:34",
     "dca_levels": [
       0.00360124,
