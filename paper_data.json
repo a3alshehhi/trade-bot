@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-07T14:18:55",
+  "updated_at": "2026-08-07T14:34:10",
   "stats": {
-    "open": 24,
+    "open": 25,
     "closed": 372,
     "win_rate": 65.9,
     "profit_factor": 1.61,
@@ -4259,6 +4259,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-07T14:17:17",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|CUSDT|2026-08-07 14:15:00",
+      "symbol": "CUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0561642,
+      "stop": 0.0519,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-07T14:32:37",
       "closed_at": null,
       "realized_pct": 0.0
     },
