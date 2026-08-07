@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07T18:04:23",
+  "updated_at": "2026-08-07T18:21:52",
   "stats": {
     "open": 26,
     "closed": 372,
@@ -4290,11 +4290,13 @@
       "timeframe": "15m",
       "entry": 0.03740444,
       "stop": 0.03272,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-07T17:47:34",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 3.87
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
