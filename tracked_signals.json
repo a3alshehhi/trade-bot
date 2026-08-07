@@ -4327,5 +4327,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|ZECUSDT|2026-08-07 13:00:00": {
+    "symbol": "ZECUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6326,
+    "entry": 504.94194,
+    "stop": 488.67,
+    "init_stop": 488.67,
+    "cur_stop": 488.67,
+    "legs": [
+      504.94194,
+      501.835,
+      498.72806,
+      494.30462
+    ],
+    "last_alert_stop": 488.67,
+    "armed": false,
+    "targets": [
+      515.0,
+      522.16176,
+      525.90062,
+      531.27194,
+      541.33,
+      557.60194,
+      583.93194,
+      600.20388
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-07 13:00:00",
+    "last_bar": "2026-08-07 13:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 504.94194,
+    "lo_seen": 504.94194,
+    "created": "2026-08-07T13:17:20",
+    "dca_levels": [
+      504.94194,
+      501.835,
+      498.72806,
+      494.30462
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }

@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-07T13:03:41",
+  "updated_at": "2026-08-07T13:19:01",
   "stats": {
-    "open": 26,
+    "open": 27,
     "closed": 368,
     "win_rate": 65.5,
     "profit_factor": 1.58,
@@ -4227,6 +4227,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-07T12:47:25",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ZECUSDT|2026-08-07 13:00:00",
+      "symbol": "ZECUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 504.94194,
+      "stop": 488.67,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-07T13:17:20",
       "closed_at": null,
       "realized_pct": 0.0
     },
