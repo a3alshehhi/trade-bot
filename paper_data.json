@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-07T14:04:10",
+  "updated_at": "2026-08-07T14:18:55",
   "stats": {
-    "open": 25,
-    "closed": 370,
-    "win_rate": 65.7,
-    "profit_factor": 1.59,
-    "total_pct": 608.62,
-    "avg_pct": 0.59,
+    "open": 24,
+    "closed": 372,
+    "win_rate": 65.9,
+    "profit_factor": 1.61,
+    "total_pct": 664.68,
+    "avg_pct": 0.61,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-07",
-        "trades": 4,
-        "win_rate": 75.0,
-        "return_pct": -11.15,
+        "trades": 6,
+        "win_rate": 83.3,
+        "return_pct": -4.13,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -279,9 +279,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 78,
-        "win_rate": 78.2,
-        "return_pct": 233.53,
+        "trades": 80,
+        "win_rate": 78.8,
+        "return_pct": 259.92,
         "month": "2026-08"
       },
       {
@@ -316,9 +316,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 105,
-        "win_rate": 77.1,
-        "return_pct": 329.5
+        "trades": 107,
+        "win_rate": 77.6,
+        "return_pct": 363.48
       },
       {
         "key": "2026-07",
@@ -1995,10 +1995,11 @@
         2,
         3
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-06T13:20:19",
-      "closed_at": null,
-      "realized_pct": 1.43
+      "closed_at": "2026-08-07T14:18:53",
+      "realized_pct": 3.88,
+      "result_pct": 3.88
     },
     {
       "id": "الفيواب الأسبوعي · BTC|CFXUSDT|2026-08-06 17:15:00",
@@ -4153,10 +4154,11 @@
         2,
         3
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-06T13:17:14",
-      "closed_at": null,
-      "realized_pct": 1.43
+      "closed_at": "2026-08-07T14:17:21",
+      "realized_pct": 3.88,
+      "result_pct": 3.88
     },
     {
       "id": "العرض/الطلب|CFXUSDT|2026-08-06 17:15:00",
@@ -4243,6 +4245,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-07T13:17:20",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|SOLUSDT|2026-08-07 14:00:00",
+      "symbol": "SOLUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 73.7413,
+      "stop": 71.98,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-07T14:17:17",
       "closed_at": null,
       "realized_pct": 0.0
     },
