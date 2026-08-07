@@ -3345,7 +3345,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-07 11:14:59.999000",
+    "last_bar": "2026-08-07 11:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0682,
@@ -3424,14 +3424,14 @@
     "entry": 63974.63596,
     "stop": 62275.0,
     "init_stop": 62275.0,
-    "cur_stop": 64117.143299999996,
+    "cur_stop": 64294.50913979999,
     "legs": [
       63974.63596,
       63650.11,
       63325.58404,
       62863.54708
     ],
-    "last_alert_stop": 64117.143299999996,
+    "last_alert_stop": 64294.50913979999,
     "armed": false,
     "targets": [
       65025.22,
@@ -3457,10 +3457,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 20:45:00",
-    "last_bar": "2026-08-07 11:14:59.999000",
-    "hits": [],
+    "last_bar": "2026-08-07 11:29:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 64999.0,
+    "hi_seen": 65213.33,
     "lo_seen": 63974.63596,
     "created": "2026-08-05T21:02:15",
     "dca_levels": [
@@ -3471,7 +3473,7 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 2
+    "st_stage": 3
   },
   "العرض/الطلب|ETHUSDT|2026-08-05 20:45:00": {
     "symbol": "ETHUSDT",
