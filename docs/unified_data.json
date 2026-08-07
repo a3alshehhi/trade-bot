@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-07T12:05:34",
+  "updated_at": "2026-08-07T13:23:42",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|ZECUSDT|2026-08-07T13:17:20",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ZECUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 504.94194,
+      "stop_orig": 488.67,
+      "stop": 488.67,
+      "targets": [],
+      "opened_at": "2026-08-07T13:17:20",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|EPICUSDT|2026-08-07T12:47:25",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "EPICUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.023327,
+      "stop_orig": 0.7443,
+      "stop": 0.7443,
+      "targets": [],
+      "opened_at": "2026-08-07T12:47:25",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|SKLUSDT|2026-08-07T11:05:34",
       "source": "paper",
@@ -171,7 +213,9 @@
       "opened_at": "2026-08-06T13:20:19",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -194,7 +238,9 @@
       "opened_at": "2026-08-06T13:17:14",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -517,7 +563,9 @@
       "targets": [],
       "opened_at": "2026-08-05T21:50:03",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -538,7 +586,9 @@
       "targets": [],
       "opened_at": "2026-08-05T21:47:11",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -1205,7 +1255,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.216,
+      "last_price": 2.208,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -9343,8 +9393,8 @@
     }
   ],
   "stats": {
-    "total": 400,
-    "open": 18,
+    "total": 402,
+    "open": 20,
     "closed": 382,
     "wins": 231,
     "win_rate": 60.5,
