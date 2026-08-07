@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-08-07 19:29:59.999000",
+    "last_bar": "2026-08-07 22:29:59.999000",
     "hits": [
       1
     ],
@@ -3110,14 +3110,14 @@
     "entry": 0.00802518,
     "stop": 0.00771,
     "init_stop": 0.00771,
-    "cur_stop": 0.00771,
+    "cur_stop": 0.008039600000000001,
     "legs": [
       0.00802518,
       0.007965,
       0.00790482,
       0.00781914
     ],
-    "last_alert_stop": 0.00771,
+    "last_alert_stop": 0.008039600000000001,
     "armed": false,
     "targets": [
       0.00822,
@@ -3137,9 +3137,9 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-03 17:45:00",
-    "last_bar": "2026-08-07 19:29:59.999000",
+    "last_bar": "2026-08-07 19:44:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.00819,
     "lo_seen": 0.00773,
     "created": "2026-08-03T18:04:12",
@@ -3150,7 +3150,11 @@
       0.00781914
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2,
+    "exit_price": 0.008039600000000001,
+    "close_card_sent": true,
+    "closed_at": "2026-08-07T22:36:42"
   },
   "الفيواب الأسبوعي · BTC|OPUSDT|2026-08-03 17:45:00": {
     "symbol": "OPUSDT",
@@ -4230,7 +4234,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-07 19:29:59.999000",
+    "last_bar": "2026-08-07 22:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0682,
@@ -4892,7 +4896,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 20:45:00",
-    "last_bar": "2026-08-07 19:29:59.999000",
+    "last_bar": "2026-08-07 22:29:59.999000",
     "hits": [
       1
     ],
@@ -5510,7 +5514,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-07 02:45:00",
-    "last_bar": "2026-08-07 19:29:59.999000",
+    "last_bar": "2026-08-07 22:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.044,
@@ -5567,11 +5571,11 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-07 10:45:00",
-    "last_bar": "2026-08-07 19:29:59.999000",
+    "last_bar": "2026-08-07 22:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00366,
-    "lo_seen": 0.00356,
+    "lo_seen": 0.00353,
     "created": "2026-08-07T11:05:34",
     "dca_levels": [
       0.00360124,
