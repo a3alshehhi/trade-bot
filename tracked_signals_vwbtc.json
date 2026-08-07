@@ -5450,5 +5450,61 @@
     "exit_price": 0.03969,
     "close_card_sent": true,
     "closed_at": "2026-08-06T22:49:00"
+  },
+  "الفيواب الأسبوعي · BTC|MIRAUSDT|2026-08-07 02:45:00": {
+    "symbol": "MIRAUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6317,
+    "entry": 0.0433934,
+    "stop": 0.0395,
+    "init_stop": 0.0395,
+    "cur_stop": 0.0395,
+    "legs": [
+      0.0433934,
+      0.04265,
+      0.0419066,
+      0.0408482
+    ],
+    "last_alert_stop": 0.0395,
+    "armed": false,
+    "targets": [
+      0.0458,
+      0.0475136,
+      0.0484082,
+      0.0496934,
+      0.0521,
+      0.0559934,
+      0.0622934,
+      0.0661868
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-07 02:45:00",
+    "last_bar": "2026-08-07 02:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0433934,
+    "lo_seen": 0.0433934,
+    "created": "2026-08-07T03:07:35",
+    "dca_levels": [
+      0.0433934,
+      0.04265,
+      0.0419066,
+      0.0408482
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }

@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-07T02:48:32",
+  "updated_at": "2026-08-07T03:07:40",
   "stats": {
-    "open": 21,
+    "open": 23,
     "closed": 368,
     "win_rate": 65.5,
     "profit_factor": 1.58,
@@ -2010,6 +2010,20 @@
       "closed_at": "2026-08-06T22:49:00",
       "realized_pct": 2.99,
       "result_pct": 2.99
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|MIRAUSDT|2026-08-07 02:45:00",
+      "symbol": "MIRAUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0433934,
+      "stop": 0.0395,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-07T03:07:35",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "SD Stable|ALICEUSDT|2026-07-23 04:30:00",
@@ -4230,6 +4244,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-07T02:17:15",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|MIRAUSDT|2026-08-07 02:45:00",
+      "symbol": "MIRAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0433934,
+      "stop": 0.0395,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-07T03:02:13",
       "closed_at": null,
       "realized_pct": 0.0
     },
