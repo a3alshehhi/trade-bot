@@ -1625,7 +1625,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 00:00:00",
-    "last_bar": "2026-08-06 23:59:59.999000",
+    "last_bar": "2026-08-07 00:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2016,
@@ -3543,7 +3543,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-07 00:14:59.999000",
+    "last_bar": "2026-08-07 01:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0682,
@@ -3655,7 +3655,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 20:45:00",
-    "last_bar": "2026-08-07 00:14:59.999000",
+    "last_bar": "2026-08-07 01:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 64999.0,
@@ -3772,7 +3772,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 21:30:00",
-    "last_bar": "2026-08-07 00:14:59.999000",
+    "last_bar": "2026-08-07 01:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 215.7,
@@ -3888,7 +3888,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 22:30:00",
-    "last_bar": "2026-08-07 00:14:59.999000",
+    "last_bar": "2026-08-07 01:29:59.999000",
     "hits": [
       1
     ],
@@ -3947,7 +3947,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-06 00:30:00",
-    "last_bar": "2026-08-07 00:14:59.999000",
+    "last_bar": "2026-08-07 01:29:59.999000",
     "hits": [
       1,
       2,
@@ -3955,8 +3955,8 @@
       4,
       5
     ],
-    "stopped": false,
-    "hi_seen": 0.0688,
+    "stopped": true,
+    "hi_seen": 0.0698,
     "lo_seen": 0.0583,
     "created": "2026-08-06T00:47:16",
     "dca_levels": [
@@ -3967,7 +3967,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 3
+    "st_stage": 3,
+    "exit_price": 0.065099,
+    "close_card_sent": true,
+    "closed_at": "2026-08-07T01:32:39"
   },
   "العرض/الطلب|STEEMUSDT|2026-08-06 08:00:00": {
     "symbol": "STEEMUSDT",
@@ -4257,7 +4260,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-06 13:00:00",
-    "last_bar": "2026-08-07 00:14:59.999000",
+    "last_bar": "2026-08-07 01:29:59.999000",
     "hits": [
       1
     ],

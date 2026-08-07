@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-07T01:18:43",
+  "updated_at": "2026-08-07T01:34:48",
   "stats": {
-    "open": 21,
-    "closed": 367,
-    "win_rate": 65.4,
-    "profit_factor": 1.57,
-    "total_pct": 564.15,
-    "avg_pct": 0.58,
+    "open": 20,
+    "closed": 368,
+    "win_rate": 65.5,
+    "profit_factor": 1.58,
+    "total_pct": 595.9,
+    "avg_pct": 0.59,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-07",
-        "trades": 1,
-        "win_rate": 0.0,
-        "return_pct": -16.73,
+        "trades": 2,
+        "win_rate": 50.0,
+        "return_pct": -12.75,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -279,9 +279,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 75,
-        "win_rate": 77.3,
-        "return_pct": 212.6,
+        "trades": 76,
+        "win_rate": 77.6,
+        "return_pct": 227.54,
         "month": "2026-08"
       },
       {
@@ -316,9 +316,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 102,
-        "win_rate": 76.5,
-        "return_pct": 302.55
+        "trades": 103,
+        "win_rate": 76.7,
+        "return_pct": 321.79
       },
       {
         "key": "2026-07",
@@ -4110,10 +4110,11 @@
         4,
         5
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-06T00:47:16",
-      "closed_at": null,
-      "realized_pct": 1.76
+      "closed_at": "2026-08-07T01:32:39",
+      "realized_pct": 4.78,
+      "result_pct": 4.78
     },
     {
       "id": "العرض/الطلب|STEEMUSDT|2026-08-06 08:00:00",
