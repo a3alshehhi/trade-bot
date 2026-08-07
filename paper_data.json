@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-07T19:18:39",
+  "updated_at": "2026-08-07T19:34:08",
   "stats": {
-    "open": 27,
-    "closed": 373,
-    "win_rate": 66.0,
-    "profit_factor": 1.64,
-    "total_pct": 744.97,
-    "avg_pct": 0.64,
+    "open": 25,
+    "closed": 375,
+    "win_rate": 66.1,
+    "profit_factor": 1.66,
+    "total_pct": 806.73,
+    "avg_pct": 0.65,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-07",
-        "trades": 7,
-        "win_rate": 85.7,
-        "return_pct": 5.94,
+        "trades": 9,
+        "win_rate": 88.9,
+        "return_pct": 13.68,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -279,9 +279,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 81,
-        "win_rate": 79.0,
-        "return_pct": 297.71,
+        "trades": 83,
+        "win_rate": 79.5,
+        "return_pct": 326.78,
         "month": "2026-08"
       },
       {
@@ -316,9 +316,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 108,
-        "win_rate": 77.8,
-        "return_pct": 412.14
+        "trades": 110,
+        "win_rate": 78.2,
+        "return_pct": 449.57
       },
       {
         "key": "2026-07",
@@ -1910,10 +1910,11 @@
         2,
         3
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-05T22:54:59",
-      "closed_at": null,
-      "realized_pct": 1.32
+      "closed_at": "2026-08-07T19:34:06",
+      "realized_pct": 3.59,
+      "result_pct": 3.59
     },
     {
       "id": "الفيواب الأسبوعي · BTC|STEEMUSDT|2026-08-06 08:00:00",
@@ -4050,10 +4051,11 @@
         2,
         3
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-05T22:52:23",
-      "closed_at": null,
-      "realized_pct": 1.32
+      "closed_at": "2026-08-07T19:32:25",
+      "realized_pct": 3.59,
+      "result_pct": 3.59
     },
     {
       "id": "العرض/الطلب|HYPERUSDT|2026-08-06 00:30:00",
