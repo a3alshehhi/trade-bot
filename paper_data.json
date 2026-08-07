@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-08-07T00:48:27",
+  "updated_at": "2026-08-07T01:03:59",
   "stats": {
-    "open": 22,
-    "closed": 366,
-    "win_rate": 65.6,
-    "profit_factor": 1.64,
-    "total_pct": 697.59,
-    "avg_pct": 0.63,
+    "open": 21,
+    "closed": 367,
+    "win_rate": 65.4,
+    "profit_factor": 1.57,
+    "total_pct": 564.15,
+    "avg_pct": 0.58,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-08-07",
+        "trades": 1,
+        "win_rate": 0.0,
+        "return_pct": -16.73,
+        "week": "2026-W32",
+        "month": "2026-08"
+      },
       {
         "key": "2026-08-06",
         "trades": 27,
@@ -271,9 +279,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 74,
-        "win_rate": 78.4,
-        "return_pct": 275.41,
+        "trades": 75,
+        "win_rate": 77.3,
+        "return_pct": 212.6,
         "month": "2026-08"
       },
       {
@@ -308,9 +316,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 101,
-        "win_rate": 77.2,
-        "return_pct": 383.43
+        "trades": 102,
+        "win_rate": 76.5,
+        "return_pct": 302.55
       },
       {
         "key": "2026-07",
@@ -1805,10 +1813,11 @@
       "entry": 0.00382001,
       "stop": 0.003181,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-05T15:19:11",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-07T01:03:56",
+      "realized_pct": -16.73,
+      "result_pct": -16.73
     },
     {
       "id": "الفيواب الأسبوعي · BTC|POWRUSDT|2026-08-05 17:00:00",
