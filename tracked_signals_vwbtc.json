@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-08-08 15:44:59.999000",
+    "last_bar": "2026-08-08 19:44:59.999000",
     "hits": [
       1
     ],
@@ -4234,7 +4234,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-08 15:44:59.999000",
+    "last_bar": "2026-08-08 19:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0682,
@@ -4896,7 +4896,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 20:45:00",
-    "last_bar": "2026-08-08 15:44:59.999000",
+    "last_bar": "2026-08-08 19:44:59.999000",
     "hits": [
       1
     ],
@@ -5514,7 +5514,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-07 02:45:00",
-    "last_bar": "2026-08-08 15:44:59.999000",
+    "last_bar": "2026-08-08 19:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0444,
@@ -5538,14 +5538,14 @@
     "entry": 0.00360124,
     "stop": 0.00349,
     "init_stop": 0.00349,
-    "cur_stop": 0.00349,
+    "cur_stop": 0.0036192461999999996,
     "legs": [
       0.00360124,
       0.00358,
       0.00355876,
       0.00352852
     ],
-    "last_alert_stop": 0.00349,
+    "last_alert_stop": 0.0036192461999999996,
     "armed": false,
     "targets": [
       0.00367,
@@ -5571,9 +5571,9 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-07 10:45:00",
-    "last_bar": "2026-08-08 15:44:59.999000",
+    "last_bar": "2026-08-08 15:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.00366,
     "lo_seen": 0.00353,
     "created": "2026-08-07T11:05:34",
@@ -5584,7 +5584,11 @@
       0.00352852
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 3,
+    "exit_price": 0.0036192461999999996,
+    "close_card_sent": true,
+    "closed_at": "2026-08-08T19:49:01"
   },
   "الفيواب الأسبوعي · BTC|ENSUSDT|2026-08-08 05:45:00": {
     "symbol": "ENSUSDT",
@@ -5627,7 +5631,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-08 05:45:00",
-    "last_bar": "2026-08-08 15:44:59.999000",
+    "last_bar": "2026-08-08 19:44:59.999000",
     "hits": [
       1
     ],
@@ -5746,7 +5750,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-08 07:00:00",
-    "last_bar": "2026-08-08 15:44:59.999000",
+    "last_bar": "2026-08-08 19:44:59.999000",
     "hits": [
       1
     ],
