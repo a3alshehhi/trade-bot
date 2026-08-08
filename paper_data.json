@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-08T04:06:58",
+  "updated_at": "2026-08-08T04:20:45",
   "stats": {
-    "open": 22,
-    "closed": 379,
-    "win_rate": 66.2,
-    "profit_factor": 1.65,
-    "total_pct": 813.48,
-    "avg_pct": 0.65,
+    "open": 21,
+    "closed": 380,
+    "win_rate": 66.3,
+    "profit_factor": 1.68,
+    "total_pct": 892.77,
+    "avg_pct": 0.67,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-08",
-        "trades": 2,
+        "trades": 3,
         "win_rate": 100.0,
-        "return_pct": 3.4,
+        "return_pct": 12.37,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -287,9 +287,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 87,
-        "win_rate": 79.3,
-        "return_pct": 329.95,
+        "trades": 88,
+        "win_rate": 79.5,
+        "return_pct": 367.27,
         "month": "2026-08"
       },
       {
@@ -324,9 +324,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 114,
-        "win_rate": 78.1,
-        "return_pct": 453.67
+        "trades": 115,
+        "win_rate": 78.3,
+        "return_pct": 501.72
       },
       {
         "key": "2026-07",
@@ -4246,10 +4246,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-07T12:47:25",
-      "closed_at": null,
-      "realized_pct": 8.43
+      "closed_at": "2026-08-08T04:17:40",
+      "realized_pct": 8.68,
+      "result_pct": 8.68
     },
     {
       "id": "العرض/الطلب|ZECUSDT|2026-08-07 13:00:00",
