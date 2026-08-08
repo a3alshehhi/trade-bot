@@ -107,55 +107,6 @@
     "close_card_sent": true,
     "closed_at": "2026-07-23T16:04:27"
   },
-  "العرض/الطلب|APTUSDT|2026-07-25 17:00:00": {
-    "symbol": "APTUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5568,
-    "entry": 0.607214,
-    "stop": 0.593,
-    "init_stop": 0.593,
-    "cur_stop": 0.607214,
-    "legs": [
-      0.607214,
-      0.6045,
-      0.601786,
-      0.597922
-    ],
-    "last_alert_stop": 0.607214,
-    "armed": false,
-    "targets": [
-      0.616,
-      0.622256
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-25 17:00:00",
-    "last_bar": "2026-07-26 01:14:59.999000",
-    "hits": [
-      1
-    ],
-    "stopped": true,
-    "hi_seen": 0.617,
-    "lo_seen": 0.607,
-    "created": "2026-07-25T17:16:08",
-    "dca_levels": [
-      0.607214,
-      0.6045,
-      0.601786,
-      0.597922
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 0.607214,
-    "close_card_sent": true,
-    "closed_at": "2026-07-26T01:16:20"
-  },
   "العرض/الطلب|ADXUSDT|2026-07-25 17:15:00": {
     "symbol": "ADXUSDT",
     "label": "العرض/الطلب",
@@ -5395,6 +5346,62 @@
       0.16285,
       0.1619414,
       0.1606478
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|PYTHUSDT|2026-08-08 17:00:00": {
+    "symbol": "PYTHUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6408,
+    "entry": 0.03905218,
+    "stop": 0.03781,
+    "init_stop": 0.03781,
+    "cur_stop": 0.03781,
+    "legs": [
+      0.03905218,
+      0.038815,
+      0.03857782,
+      0.03824014
+    ],
+    "last_alert_stop": 0.03781,
+    "armed": false,
+    "targets": [
+      0.03982,
+      0.04036672,
+      0.04065214,
+      0.04106218,
+      0.04183,
+      0.04307218,
+      0.04508218,
+      0.04632436
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-08 17:00:00",
+    "last_bar": "2026-08-08 17:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.03905218,
+    "lo_seen": 0.03905218,
+    "created": "2026-08-08T17:17:05",
+    "dca_levels": [
+      0.03905218,
+      0.038815,
+      0.03857782,
+      0.03824014
     ],
     "wait_entry": true,
     "max_age_h": 48.0
