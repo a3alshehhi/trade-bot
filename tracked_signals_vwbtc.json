@@ -5697,5 +5697,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|IDUSDT|2026-08-08 07:00:00": {
+    "symbol": "IDUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6364,
+    "entry": 0.027627,
+    "stop": 0.0267,
+    "init_stop": 0.0267,
+    "cur_stop": 0.0267,
+    "legs": [
+      0.027627,
+      0.02745,
+      0.027273,
+      0.027021
+    ],
+    "last_alert_stop": 0.0267,
+    "armed": false,
+    "targets": [
+      0.0282,
+      0.028608,
+      0.028821,
+      0.029127,
+      0.0297,
+      0.030627,
+      0.032127,
+      0.033054
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-08 07:00:00",
+    "last_bar": "2026-08-08 07:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.027627,
+    "lo_seen": 0.027627,
+    "created": "2026-08-08T07:20:37",
+    "dca_levels": [
+      0.027627,
+      0.02745,
+      0.027273,
+      0.027021
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
