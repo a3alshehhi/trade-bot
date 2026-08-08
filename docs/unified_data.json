@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08T19:41:41",
+  "updated_at": "2026-08-08T20:13:10",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -164,7 +164,9 @@
       "targets": [],
       "opened_at": "2026-08-08T17:21:24",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -320,11 +322,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-08T19:47:05",
+      "realized_pct": 2.09,
+      "result_pct": 2.09,
+      "exec_pct": 2.09
     },
     {
       "id": "paper|VTHOUSDT|2026-08-08T10:46:59",
@@ -774,11 +776,11 @@
       "opened_at": "2026-08-07T11:05:34",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-08T19:49:01",
+      "realized_pct": 0.5,
+      "result_pct": 0.5,
+      "exec_pct": 0.5
     },
     {
       "id": "paper|SKLUSDT|2026-08-07T11:02:35",
@@ -794,7 +796,9 @@
       "targets": [],
       "opened_at": "2026-08-07T11:02:35",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -1973,7 +1977,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.285,
+      "last_price": 2.311,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -10112,12 +10116,12 @@
   ],
   "stats": {
     "total": 434,
-    "open": 35,
-    "closed": 399,
-    "wins": 247,
-    "win_rate": 61.9,
-    "net_pct": 181.45,
-    "pf": 1.43,
+    "open": 33,
+    "closed": 401,
+    "wins": 249,
+    "win_rate": 62.1,
+    "net_pct": 184.04,
+    "pf": 1.44,
     "simulated": 1
   }
 }
