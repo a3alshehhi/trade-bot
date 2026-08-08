@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-08T16:14:52",
+  "updated_at": "2026-08-08T16:56:29",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|XLMUSDT|2026-08-08T16:32:11",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "XLMUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1637586,
+      "stop_orig": 0.159,
+      "stop": 0.159,
+      "targets": [],
+      "opened_at": "2026-08-08T16:32:11",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|WUSDT|2026-08-08T16:17:17",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "WUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00849372,
+      "stop_orig": 0.00816,
+      "stop": 0.00816,
+      "targets": [],
+      "opened_at": "2026-08-08T16:17:17",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|CELRUSDT|2026-08-08T14:02:37",
       "source": "paper",
@@ -38,7 +80,9 @@
       "targets": [],
       "opened_at": "2026-08-08T13:47:01",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -1761,7 +1805,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.275,
+      "last_price": 2.291,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -9899,8 +9943,8 @@
     }
   ],
   "stats": {
-    "total": 424,
-    "open": 26,
+    "total": 426,
+    "open": 28,
     "closed": 398,
     "wins": 246,
     "win_rate": 61.8,
