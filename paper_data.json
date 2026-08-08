@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-08T16:07:41",
+  "updated_at": "2026-08-08T16:19:18",
   "stats": {
-    "open": 33,
+    "open": 34,
     "closed": 384,
     "win_rate": 66.7,
     "profit_factor": 1.7,
@@ -2958,21 +2958,6 @@
       "result_pct": 1.88
     },
     {
-      "id": "العرض/الطلب|ALPINEUSDT|2026-07-25 14:30:00",
-      "symbol": "ALPINEUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.326248,
-      "stop": 0.304,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-25T14:46:08",
-      "closed_at": "2026-07-26T15:01:31",
-      "realized_pct": 0.0,
-      "result_pct": 0.0
-    },
-    {
       "id": "العرض/الطلب|APTUSDT|2026-07-25 17:00:00",
       "symbol": "APTUSDT",
       "label": "العرض/الطلب",
@@ -4533,11 +4518,13 @@
       "timeframe": "15m",
       "entry": 0.087972,
       "stop": 0.0855,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-08T13:47:01",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.87
     },
     {
       "id": "العرض/الطلب|CELRUSDT|2026-08-08 13:45:00",
@@ -4550,6 +4537,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-08T14:02:37",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|WUSDT|2026-08-08 16:00:00",
+      "symbol": "WUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00849372,
+      "stop": 0.00816,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-08T16:17:17",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -4628,6 +4629,21 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|ALPINEUSDT|2026-07-25 14:30:00",
+      "symbol": "ALPINEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.326248,
+      "stop": 0.304,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-25T14:46:08",
+      "closed_at": "2026-07-26T15:01:31",
+      "realized_pct": 0.0,
+      "result_pct": 0.0
     },
     {
       "id": "العرض/الطلب|ACTUSDT|2026-07-25 13:15:00",
