@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-08T13:10:00",
+  "updated_at": "2026-08-08T13:57:07",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|OPUSDT|2026-08-08T13:47:01",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "OPUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.087972,
+      "stop_orig": 0.0855,
+      "stop": 0.0855,
+      "targets": [],
+      "opened_at": "2026-08-08T13:47:01",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|ATOMUSDT|2026-08-08T12:47:33",
       "source": "paper",
@@ -17,7 +38,9 @@
       "targets": [],
       "opened_at": "2026-08-08T12:47:33",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -327,7 +350,9 @@
       "targets": [],
       "opened_at": "2026-08-08T01:47:01",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -1713,7 +1738,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.263,
+      "last_price": 2.308,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -9851,8 +9876,8 @@
     }
   ],
   "stats": {
-    "total": 422,
-    "open": 27,
+    "total": 423,
+    "open": 28,
     "closed": 395,
     "wins": 243,
     "win_rate": 61.5,
