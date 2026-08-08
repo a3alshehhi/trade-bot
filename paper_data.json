@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-08T10:06:42",
+  "updated_at": "2026-08-08T10:18:37",
   "stats": {
-    "open": 29,
+    "open": 30,
     "closed": 381,
     "win_rate": 66.4,
     "profit_factor": 1.69,
@@ -4448,6 +4448,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-08T10:02:35",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|SAHARAUSDT|2026-08-08 10:00:00",
+      "symbol": "SAHARAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00852226,
+      "stop": 0.00817,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-08T10:16:56",
       "closed_at": null,
       "realized_pct": 0.0
     },

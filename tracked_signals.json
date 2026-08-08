@@ -4963,5 +4963,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|SAHARAUSDT|2026-08-08 10:00:00": {
+    "symbol": "SAHARAUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6374,
+    "entry": 0.00852226,
+    "stop": 0.00817,
+    "init_stop": 0.00817,
+    "cur_stop": 0.00817,
+    "legs": [
+      0.00852226,
+      0.008455,
+      0.00838774,
+      0.00829198
+    ],
+    "last_alert_stop": 0.00817,
+    "armed": false,
+    "targets": [
+      0.00874,
+      0.00889504,
+      0.00897598,
+      0.00909226,
+      0.00931,
+      0.00966226,
+      0.01023226,
+      0.01058452
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-08 10:00:00",
+    "last_bar": "2026-08-08 10:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00852226,
+    "lo_seen": 0.00852226,
+    "created": "2026-08-08T10:16:56",
+    "dca_levels": [
+      0.00852226,
+      0.008455,
+      0.00838774,
+      0.00829198
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
