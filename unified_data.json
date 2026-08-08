@@ -1,8 +1,94 @@
 {
-  "updated_at": "2026-08-08T10:18:53",
+  "updated_at": "2026-08-08T11:38:20",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|APTUSDT|2026-08-08T11:17:19",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "APTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.59254,
+      "stop_orig": 0.574,
+      "stop": 0.574,
+      "targets": [],
+      "opened_at": "2026-08-08T11:17:19",
+      "usd": 100.0,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|ORDIUSDT|2026-08-08T11:02:56",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ORDIUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 3.428558,
+      "stop_orig": 3.224,
+      "stop": 3.224,
+      "targets": [],
+      "opened_at": "2026-08-08T11:02:56",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|VTHOUSDT|2026-08-08T10:46:59",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "VTHOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00034221,
+      "stop_orig": 0.000328,
+      "stop": 0.000328,
+      "targets": [],
+      "opened_at": "2026-08-08T10:46:59",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|SAHARAUSDT|2026-08-08T10:16:56",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "SAHARAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00852226,
+      "stop_orig": 0.00817,
+      "stop": 0.00817,
+      "targets": [],
+      "opened_at": "2026-08-08T10:16:56",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|AIXBTUSDT|2026-08-08T10:02:35",
       "source": "paper",
@@ -38,7 +124,9 @@
       "targets": [],
       "opened_at": "2026-08-08T09:50:58",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -59,7 +147,9 @@
       "targets": [],
       "opened_at": "2026-08-08T09:02:42",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -327,7 +417,8 @@
       "opened_at": "2026-08-07T14:17:17",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -1595,7 +1686,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.214,
+      "last_price": 2.237,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -9733,8 +9824,8 @@
     }
   ],
   "stats": {
-    "total": 417,
-    "open": 22,
+    "total": 421,
+    "open": 26,
     "closed": 395,
     "wins": 243,
     "win_rate": 61.5,
