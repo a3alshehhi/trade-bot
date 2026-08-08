@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-08T11:04:49",
+  "updated_at": "2026-08-08T11:19:16",
   "stats": {
-    "open": 32,
+    "open": 33,
     "closed": 381,
     "win_rate": 66.4,
     "profit_factor": 1.69,
@@ -4273,7 +4273,8 @@
       "entry": 73.7413,
       "stop": 71.98,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "opened_at": "2026-08-07T14:17:17",
@@ -4417,11 +4418,13 @@
       "timeframe": "15m",
       "entry": 0.2203824,
       "stop": 0.21,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-08T09:02:42",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.46
     },
     {
       "id": "العرض/الطلب|FLUXUSDT|2026-08-08 09:30:00",
@@ -4431,11 +4434,13 @@
       "timeframe": "15m",
       "entry": 0.0399214,
       "stop": 0.0385,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-08T09:50:58",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.1
     },
     {
       "id": "العرض/الطلب|AIXBTUSDT|2026-08-08 09:45:00",
@@ -4492,6 +4497,22 @@
       "opened_at": "2026-08-08T11:02:56",
       "closed_at": null,
       "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|APTUSDT|2026-08-08 11:00:00",
+      "symbol": "APTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.59254,
+      "stop": 0.574,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "opened_at": "2026-08-08T11:17:19",
+      "closed_at": null,
+      "realized_pct": 0.97
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
