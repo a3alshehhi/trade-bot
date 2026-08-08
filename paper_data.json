@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08T13:18:42",
+  "updated_at": "2026-08-08T13:34:19",
   "stats": {
     "open": 34,
     "closed": 381,
@@ -4362,11 +4362,13 @@
       "timeframe": "15m",
       "entry": 0.00674282,
       "stop": 0.00644,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-08T01:47:01",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.39
     },
     {
       "id": "العرض/الطلب|AWEUSDT|2026-08-08 05:45:00",
@@ -4528,11 +4530,13 @@
       "timeframe": "15m",
       "entry": 1.37617,
       "stop": 1.336,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-08T12:47:33",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 0.9
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
