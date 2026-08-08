@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-08T19:04:48",
+  "updated_at": "2026-08-08T19:18:59",
   "stats": {
-    "open": 40,
+    "open": 43,
     "closed": 384,
     "win_rate": 66.7,
     "profit_factor": 1.7,
@@ -4586,6 +4586,48 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-08T19:02:45",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|IOTAUSDT|2026-08-08 19:00:00",
+      "symbol": "IOTAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.035463,
+      "stop": 0.0333,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-08T19:16:59",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|SAGAUSDT|2026-08-08 19:00:00",
+      "symbol": "SAGAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01458376,
+      "stop": 0.01315,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-08T19:16:59",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|TAOUSDT|2026-08-08 19:00:00",
+      "symbol": "TAOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 196.38,
+      "stop": 190.2,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-08T19:16:59",
       "closed_at": null,
       "realized_pct": 0.0
     },

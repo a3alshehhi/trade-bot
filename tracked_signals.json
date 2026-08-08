@@ -5533,5 +5533,173 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|IOTAUSDT|2026-08-08 19:00:00": {
+    "symbol": "IOTAUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6416,
+    "entry": 0.035463,
+    "stop": 0.0333,
+    "init_stop": 0.0333,
+    "cur_stop": 0.0333,
+    "legs": [
+      0.035463,
+      0.03505,
+      0.034637,
+      0.034049
+    ],
+    "last_alert_stop": 0.0333,
+    "armed": false,
+    "targets": [
+      0.0368,
+      0.037752,
+      0.038249,
+      0.038963,
+      0.0403,
+      0.042463,
+      0.045963,
+      0.048126
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-08 19:00:00",
+    "last_bar": "2026-08-08 19:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.035463,
+    "lo_seen": 0.035463,
+    "created": "2026-08-08T19:16:59",
+    "dca_levels": [
+      0.035463,
+      0.03505,
+      0.034637,
+      0.034049
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|SAGAUSDT|2026-08-08 19:00:00": {
+    "symbol": "SAGAUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6416,
+    "entry": 0.01458376,
+    "stop": 0.01315,
+    "init_stop": 0.01315,
+    "cur_stop": 0.01315,
+    "legs": [
+      0.01458376,
+      0.01431,
+      0.01403624,
+      0.01364648
+    ],
+    "last_alert_stop": 0.01315,
+    "armed": false,
+    "targets": [
+      0.01547,
+      0.01610104,
+      0.01643048,
+      0.01690376,
+      0.01779,
+      0.01922376,
+      0.02154376,
+      0.02297752
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-08 19:00:00",
+    "last_bar": "2026-08-08 19:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01458376,
+    "lo_seen": 0.01458376,
+    "created": "2026-08-08T19:16:59",
+    "dca_levels": [
+      0.01458376,
+      0.01431,
+      0.01403624,
+      0.01364648
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|TAOUSDT|2026-08-08 19:00:00": {
+    "symbol": "TAOUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6416,
+    "entry": 196.38,
+    "stop": 190.2,
+    "init_stop": 190.2,
+    "cur_stop": 190.2,
+    "legs": [
+      196.38,
+      195.2,
+      194.02,
+      192.34
+    ],
+    "last_alert_stop": 190.2,
+    "armed": false,
+    "targets": [
+      200.2,
+      202.92,
+      204.34,
+      206.38,
+      210.2,
+      216.38,
+      226.38,
+      232.56
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-08 19:00:00",
+    "last_bar": "2026-08-08 19:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 196.38,
+    "lo_seen": 196.38,
+    "created": "2026-08-08T19:16:59",
+    "dca_levels": [
+      196.38,
+      195.2,
+      194.02,
+      192.34
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
