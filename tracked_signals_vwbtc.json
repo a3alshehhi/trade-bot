@@ -607,7 +607,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-27 02:45:00",
-    "last_bar": "2026-08-08 11:59:59.999000",
+    "last_bar": "2026-08-08 14:29:59.999000",
     "hits": [
       1
     ],
@@ -4234,7 +4234,7 @@
     "mgmt": "5t",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-08 11:59:59.999000",
+    "last_bar": "2026-08-08 14:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0682,
@@ -4896,7 +4896,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-05 20:45:00",
-    "last_bar": "2026-08-08 11:59:59.999000",
+    "last_bar": "2026-08-08 14:29:59.999000",
     "hits": [
       1
     ],
@@ -5514,7 +5514,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-07 02:45:00",
-    "last_bar": "2026-08-08 11:59:59.999000",
+    "last_bar": "2026-08-08 14:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0444,
@@ -5571,7 +5571,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-07 10:45:00",
-    "last_bar": "2026-08-08 11:59:59.999000",
+    "last_bar": "2026-08-08 14:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00366,
@@ -5594,14 +5594,14 @@
     "entry": 4.2745,
     "stop": 4.12,
     "init_stop": 4.12,
-    "cur_stop": 4.2745,
+    "cur_stop": 4.295872499999999,
     "legs": [
       4.2745,
       4.245,
       4.2155,
       4.1735
     ],
-    "last_alert_stop": 4.2745,
+    "last_alert_stop": 4.295872499999999,
     "armed": false,
     "targets": [
       4.37,
@@ -5627,7 +5627,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-08 05:45:00",
-    "last_bar": "2026-08-08 11:59:59.999000",
+    "last_bar": "2026-08-08 14:29:59.999000",
     "hits": [
       1
     ],
@@ -5642,7 +5642,8 @@
       4.1735
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 3
   },
   "الفيواب الأسبوعي · BTC|AWEUSDT|2026-08-08 05:45:00": {
     "symbol": "AWEUSDT",
@@ -5652,14 +5653,14 @@
     "entry": 0.05778336,
     "stop": 0.05499,
     "init_stop": 0.05499,
-    "cur_stop": 0.05499,
+    "cur_stop": 0.05857565,
     "legs": [
       0.05778336,
       0.05725,
       0.05671664,
       0.05595728
     ],
-    "last_alert_stop": 0.05499,
+    "last_alert_stop": 0.05857565,
     "armed": false,
     "targets": [
       0.05951,
@@ -5685,9 +5686,9 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-08 05:45:00",
-    "last_bar": "2026-08-08 11:59:59.999000",
+    "last_bar": "2026-08-08 12:14:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.05919,
     "lo_seen": 0.05778,
     "created": "2026-08-08T06:05:34",
@@ -5698,7 +5699,11 @@
       0.05595728
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2,
+    "exit_price": 0.05857565,
+    "close_card_sent": true,
+    "closed_at": "2026-08-08T14:39:04"
   },
   "الفيواب الأسبوعي · BTC|IDUSDT|2026-08-08 07:00:00": {
     "symbol": "IDUSDT",
@@ -5741,12 +5746,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-08 07:00:00",
-    "last_bar": "2026-08-08 11:59:59.999000",
+    "last_bar": "2026-08-08 14:29:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.0282,
+    "hi_seen": 0.0283,
     "lo_seen": 0.0275,
     "created": "2026-08-08T07:20:37",
     "dca_levels": [

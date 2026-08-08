@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-08T14:24:18",
+  "updated_at": "2026-08-08T14:39:05",
   "stats": {
-    "open": 36,
-    "closed": 381,
-    "win_rate": 66.4,
-    "profit_factor": 1.69,
-    "total_pct": 955.91,
+    "open": 34,
+    "closed": 383,
+    "win_rate": 66.6,
+    "profit_factor": 1.7,
+    "total_pct": 985.04,
     "avg_pct": 0.69,
     "max_drawdown_pct": -49.22
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-08",
-        "trades": 4,
+        "trades": 6,
         "win_rate": 100.0,
-        "return_pct": 19.52,
+        "return_pct": 22.82,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -287,9 +287,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 89,
-        "win_rate": 79.8,
-        "return_pct": 396.99,
+        "trades": 91,
+        "win_rate": 80.2,
+        "return_pct": 410.7,
         "month": "2026-08"
       },
       {
@@ -324,9 +324,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 116,
-        "win_rate": 78.4,
-        "return_pct": 539.99
+        "trades": 118,
+        "win_rate": 78.8,
+        "return_pct": 557.65
       },
       {
         "key": "2026-07",
@@ -2084,10 +2084,11 @@
       "entry": 0.05778336,
       "stop": 0.05499,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-08T06:05:34",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-08T14:39:04",
+      "realized_pct": 1.37,
+      "result_pct": 1.37
     },
     {
       "id": "الفيواب الأسبوعي · BTC|IDUSDT|2026-08-08 07:00:00",
@@ -4361,10 +4362,11 @@
       "entry": 0.05778336,
       "stop": 0.05499,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-08T06:02:34",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-08T14:32:50",
+      "realized_pct": 1.37,
+      "result_pct": 1.37
     },
     {
       "id": "العرض/الطلب|ENSUSDT|2026-08-08 05:45:00",
