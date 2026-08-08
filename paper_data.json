@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-08T09:52:48",
+  "updated_at": "2026-08-08T10:06:42",
   "stats": {
-    "open": 28,
+    "open": 29,
     "closed": 381,
     "win_rate": 66.4,
     "profit_factor": 1.69,
@@ -4434,6 +4434,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-08T09:50:58",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|AIXBTUSDT|2026-08-08 09:45:00",
+      "symbol": "AIXBTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01796104,
+      "stop": 0.01717,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-08T10:02:35",
       "closed_at": null,
       "realized_pct": 0.0
     },
