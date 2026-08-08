@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-08T18:18:57",
+  "updated_at": "2026-08-08T18:34:02",
   "stats": {
-    "open": 38,
+    "open": 39,
     "closed": 384,
     "win_rate": 66.7,
     "profit_factor": 1.7,
@@ -4558,6 +4558,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-08T18:17:03",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|API3USDT|2026-08-08 18:15:00",
+      "symbol": "API3USDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.191298,
+      "stop": 0.1845,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-08T18:32:07",
       "closed_at": null,
       "realized_pct": 0.0
     },
