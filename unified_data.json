@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-08T07:07:40",
+  "updated_at": "2026-08-08T08:57:21",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|IDUSDT|2026-08-08T07:20:37",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "IDUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.027627,
+      "stop_orig": 0.0267,
+      "stop": 0.0267,
+      "targets": [],
+      "opened_at": "2026-08-08T07:20:37",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|IDUSDT|2026-08-08T07:17:31",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "IDUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.027627,
+      "stop_orig": 0.0267,
+      "stop": 0.0267,
+      "targets": [],
+      "opened_at": "2026-08-08T07:17:31",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|ENSUSDT|2026-08-08T06:05:34",
       "source": "paper",
@@ -17,7 +59,9 @@
       "targets": [],
       "opened_at": "2026-08-08T06:05:34",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -80,7 +124,9 @@
       "targets": [],
       "opened_at": "2026-08-08T06:02:34",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -192,7 +238,8 @@
       "opened_at": "2026-08-07T14:32:37",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -1483,7 +1530,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.222,
+      "last_price": 2.212,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -9621,8 +9668,8 @@
     }
   ],
   "stats": {
-    "total": 412,
-    "open": 18,
+    "total": 414,
+    "open": 20,
     "closed": 394,
     "wins": 242,
     "win_rate": 61.4,
