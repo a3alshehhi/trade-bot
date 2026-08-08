@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-08T22:34:21",
+  "updated_at": "2026-08-08T22:49:37",
   "stats": {
-    "open": 39,
-    "closed": 390,
-    "win_rate": 67.2,
-    "profit_factor": 1.75,
-    "total_pct": 1190.07,
-    "avg_pct": 0.72,
+    "open": 37,
+    "closed": 392,
+    "win_rate": 67.3,
+    "profit_factor": 1.77,
+    "total_pct": 1292.89,
+    "avg_pct": 0.74,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-08",
-        "trades": 13,
+        "trades": 15,
         "win_rate": 100.0,
-        "return_pct": 46.02,
+        "return_pct": 57.66,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -287,9 +287,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 98,
-        "win_rate": 81.6,
-        "return_pct": 507.21,
+        "trades": 100,
+        "win_rate": 82.0,
+        "return_pct": 555.6,
         "month": "2026-08"
       },
       {
@@ -324,9 +324,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 125,
-        "win_rate": 80.0,
-        "return_pct": 681.92
+        "trades": 127,
+        "win_rate": 80.3,
+        "return_pct": 744.24
       },
       {
         "key": "2026-07",
@@ -4134,10 +4134,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-07T11:02:35",
-      "closed_at": null,
-      "realized_pct": 0.95
+      "closed_at": "2026-08-08T22:47:36",
+      "realized_pct": 1.2,
+      "result_pct": 1.2
     },
     {
       "id": "العرض/الطلب|EPICUSDT|2026-08-07 12:30:00",
@@ -4650,10 +4651,11 @@
         1,
         2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-08T20:32:22",
-      "closed_at": null,
-      "realized_pct": 2.47
+      "closed_at": "2026-08-08T22:47:53",
+      "realized_pct": 6.69,
+      "result_pct": 6.69
     },
     {
       "id": "العرض/الطلب|COOKIEUSDT|2026-08-08 21:00:00",
