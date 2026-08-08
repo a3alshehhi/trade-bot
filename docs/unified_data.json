@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08T22:54:43",
+  "updated_at": "2026-08-08T23:49:12",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -557,11 +557,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-08T23:33:59",
+      "realized_pct": 1.37,
+      "result_pct": 1.37,
+      "exec_pct": 1.37
     },
     {
       "id": "paper|AWEUSDT|2026-08-08T06:05:34",
@@ -622,11 +622,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-08T23:32:05",
+      "realized_pct": 1.37,
+      "result_pct": 1.37,
+      "exec_pct": 1.37
     },
     {
       "id": "paper|SIGNUSDT|2026-08-08T01:47:01",
@@ -2034,7 +2034,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.307,
+      "last_price": 2.292,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -10173,11 +10173,11 @@
   ],
   "stats": {
     "total": 436,
-    "open": 30,
-    "closed": 406,
-    "wins": 254,
-    "win_rate": 62.6,
-    "net_pct": 203.96,
+    "open": 28,
+    "closed": 408,
+    "wins": 256,
+    "win_rate": 62.7,
+    "net_pct": 206.7,
     "pf": 1.49,
     "simulated": 1
   }
