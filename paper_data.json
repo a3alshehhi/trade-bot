@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-08T18:04:33",
+  "updated_at": "2026-08-08T18:18:57",
   "stats": {
-    "open": 37,
+    "open": 38,
     "closed": 384,
     "win_rate": 66.7,
     "profit_factor": 1.7,
@@ -297,7 +297,7 @@
         "trades": 101,
         "win_rate": 61.4,
         "return_pct": 43.51,
-        "month": "2026-08"
+        "month": "2026-07"
       },
       {
         "key": "2026-W30",
@@ -2958,23 +2958,6 @@
       "result_pct": 1.88
     },
     {
-      "id": "العرض/الطلب|AVAXUSDT|2026-07-25 18:00:00",
-      "symbol": "AVAXUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 6.506564,
-      "stop": 6.137,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-25T18:16:06",
-      "closed_at": "2026-07-27T14:49:39",
-      "realized_pct": 2.4,
-      "result_pct": 2.4
-    },
-    {
       "id": "العرض/الطلب|AWEUSDT|2026-07-25 19:30:00",
       "symbol": "AWEUSDT",
       "label": "العرض/الطلب",
@@ -4565,6 +4548,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|HBARUSDT|2026-08-08 18:00:00",
+      "symbol": "HBARUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06890276,
+      "stop": 0.06716,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-08T18:17:03",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -4639,6 +4636,23 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|AVAXUSDT|2026-07-25 18:00:00",
+      "symbol": "AVAXUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 6.506564,
+      "stop": 6.137,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-25T18:16:06",
+      "closed_at": "2026-07-27T14:49:39",
+      "realized_pct": 2.4,
+      "result_pct": 2.4
     },
     {
       "id": "العرض/الطلب|ADXUSDT|2026-07-25 17:15:00",
