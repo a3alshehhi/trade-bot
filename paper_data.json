@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-08T13:56:55",
+  "updated_at": "2026-08-08T14:09:34",
   "stats": {
-    "open": 35,
+    "open": 36,
     "closed": 381,
     "win_rate": 66.4,
     "profit_factor": 1.69,
@@ -4531,6 +4531,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-08T13:47:01",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|CELRUSDT|2026-08-08 13:45:00",
+      "symbol": "CELRUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00185068,
+      "stop": 0.001745,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-08T14:02:37",
       "closed_at": null,
       "realized_pct": 0.0
     },
