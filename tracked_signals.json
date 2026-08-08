@@ -5342,5 +5342,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|XLMUSDT|2026-08-08 16:15:00": {
+    "symbol": "XLMUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6407,
+    "entry": 0.1637586,
+    "stop": 0.159,
+    "init_stop": 0.159,
+    "cur_stop": 0.159,
+    "legs": [
+      0.1637586,
+      0.16285,
+      0.1619414,
+      0.1606478
+    ],
+    "last_alert_stop": 0.159,
+    "armed": false,
+    "targets": [
+      0.1667,
+      0.1687944,
+      0.1698878,
+      0.1714586,
+      0.1744,
+      0.1791586,
+      0.1868586,
+      0.1916172
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-08 16:15:00",
+    "last_bar": "2026-08-08 16:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1637586,
+    "lo_seen": 0.1637586,
+    "created": "2026-08-08T16:32:11",
+    "dca_levels": [
+      0.1637586,
+      0.16285,
+      0.1619414,
+      0.1606478
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }

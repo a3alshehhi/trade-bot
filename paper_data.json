@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-08T16:19:18",
+  "updated_at": "2026-08-08T16:34:18",
   "stats": {
-    "open": 34,
+    "open": 35,
     "closed": 384,
     "win_rate": 66.7,
     "profit_factor": 1.7,
@@ -4551,6 +4551,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-08T16:17:17",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|XLMUSDT|2026-08-08 16:15:00",
+      "symbol": "XLMUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1637586,
+      "stop": 0.159,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-08T16:32:11",
       "closed_at": null,
       "realized_pct": 0.0
     },
