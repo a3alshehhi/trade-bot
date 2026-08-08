@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-08T21:04:46",
+  "updated_at": "2026-08-08T21:18:33",
   "stats": {
-    "open": 40,
+    "open": 41,
     "closed": 388,
     "win_rate": 67.0,
     "profit_factor": 1.72,
@@ -4635,9 +4635,25 @@
       "timeframe": "15m",
       "entry": 0.00712856,
       "stop": 0.00656,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-08T20:32:22",
+      "closed_at": null,
+      "realized_pct": 2.47
+    },
+    {
+      "id": "العرض/الطلب|COOKIEUSDT|2026-08-08 21:00:00",
+      "symbol": "COOKIEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0116574,
+      "stop": 0.009,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-08T21:16:28",
       "closed_at": null,
       "realized_pct": 0.0
     },
