@@ -4762,5 +4762,117 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|AWEUSDT|2026-08-08 05:45:00": {
+    "symbol": "AWEUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6361,
+    "entry": 0.05778336,
+    "stop": 0.05499,
+    "init_stop": 0.05499,
+    "cur_stop": 0.05499,
+    "legs": [
+      0.05778336,
+      0.05725,
+      0.05671664,
+      0.05595728
+    ],
+    "last_alert_stop": 0.05499,
+    "armed": false,
+    "targets": [
+      0.05951,
+      0.06073944,
+      0.06138128,
+      0.06230336,
+      0.06403,
+      0.06682336,
+      0.07134336,
+      0.07413672
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-08 05:45:00",
+    "last_bar": "2026-08-08 05:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.05778336,
+    "lo_seen": 0.05778336,
+    "created": "2026-08-08T06:02:34",
+    "dca_levels": [
+      0.05778336,
+      0.05725,
+      0.05671664,
+      0.05595728
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|ENSUSDT|2026-08-08 05:45:00": {
+    "symbol": "ENSUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6361,
+    "entry": 4.2745,
+    "stop": 4.12,
+    "init_stop": 4.12,
+    "cur_stop": 4.12,
+    "legs": [
+      4.2745,
+      4.245,
+      4.2155,
+      4.1735
+    ],
+    "last_alert_stop": 4.12,
+    "armed": false,
+    "targets": [
+      4.37,
+      4.438,
+      4.4735,
+      4.5245,
+      4.62,
+      4.7745,
+      5.0245,
+      5.179
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-08 05:45:00",
+    "last_bar": "2026-08-08 05:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 4.2745,
+    "lo_seen": 4.2745,
+    "created": "2026-08-08T06:02:34",
+    "dca_levels": [
+      4.2745,
+      4.245,
+      4.2155,
+      4.1735
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
