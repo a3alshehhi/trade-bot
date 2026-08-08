@@ -5199,5 +5199,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|ATOMUSDT|2026-08-08 12:30:00": {
+    "symbol": "ATOMUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6389,
+    "entry": 1.37617,
+    "stop": 1.336,
+    "init_stop": 1.336,
+    "cur_stop": 1.336,
+    "legs": [
+      1.37617,
+      1.3685,
+      1.36083,
+      1.34991
+    ],
+    "last_alert_stop": 1.336,
+    "armed": false,
+    "targets": [
+      1.401,
+      1.41868,
+      1.42791,
+      1.44117,
+      1.466,
+      1.50617,
+      1.57117,
+      1.61134
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-08 12:30:00",
+    "last_bar": "2026-08-08 12:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1.37617,
+    "lo_seen": 1.37617,
+    "created": "2026-08-08T12:47:33",
+    "dca_levels": [
+      1.37617,
+      1.3685,
+      1.36083,
+      1.34991
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
