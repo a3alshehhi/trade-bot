@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-08T16:56:29",
+  "updated_at": "2026-08-08T17:39:33",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|PYTHUSDT|2026-08-08T17:21:24",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "PYTHUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03905218,
+      "stop_orig": 0.03781,
+      "stop": 0.03781,
+      "targets": [],
+      "opened_at": "2026-08-08T17:21:24",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|XLMUSDT|2026-08-08T16:32:11",
       "source": "paper",
@@ -1805,7 +1826,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.291,
+      "last_price": 2.27,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -9943,8 +9964,8 @@
     }
   ],
   "stats": {
-    "total": 426,
-    "open": 28,
+    "total": 427,
+    "open": 29,
     "closed": 398,
     "wins": 246,
     "win_rate": 61.8,
