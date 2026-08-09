@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09T12:19:15",
+  "updated_at": "2026-08-09T13:24:12",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -125,13 +125,14 @@
       "opened_at": "2026-08-09T01:17:31",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-09T13:17:24",
+      "realized_pct": 3.31,
+      "result_pct": 3.31,
+      "exec_pct": 3.31
     },
     {
       "id": "paper|KSMUSDT|2026-08-09T00:47:29",
@@ -818,7 +819,8 @@
       "opened_at": "2026-08-08T01:47:01",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -2209,7 +2211,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.196,
+      "last_price": 2.194,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -10348,12 +10350,12 @@
   ],
   "stats": {
     "total": 443,
-    "open": 21,
-    "closed": 422,
-    "wins": 267,
-    "win_rate": 63.3,
-    "net_pct": 229.67,
-    "pf": 1.54,
+    "open": 20,
+    "closed": 423,
+    "wins": 268,
+    "win_rate": 63.4,
+    "net_pct": 232.98,
+    "pf": 1.55,
     "simulated": 1
   }
 }
