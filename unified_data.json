@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09T02:49:48",
+  "updated_at": "2026-08-09T04:08:28",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -107,11 +107,11 @@
       "opened_at": "2026-08-08T19:16:59",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-09T03:47:22",
+      "realized_pct": -1.24,
+      "result_pct": -1.24,
+      "exec_pct": -1.24
     },
     {
       "id": "paper|SAGAUSDT|2026-08-08T19:16:59",
@@ -159,11 +159,11 @@
         3,
         4
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-09T02:47:45",
+      "realized_pct": 2.64,
+      "result_pct": 2.64,
+      "exec_pct": 2.64
     },
     {
       "id": "paper|BLURUSDT|2026-08-08T19:02:45",
@@ -200,7 +200,9 @@
       "targets": [],
       "opened_at": "2026-08-08T18:32:07",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -243,7 +245,8 @@
       "opened_at": "2026-08-08T17:47:29",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -403,13 +406,14 @@
       "opened_at": "2026-08-08T11:17:19",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-09T04:02:22",
+      "realized_pct": 2.62,
+      "result_pct": 2.62,
+      "exec_pct": 2.62
     },
     {
       "id": "paper|ORDIUSDT|2026-08-08T11:02:56",
@@ -2087,7 +2091,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.219,
+      "last_price": 2.213,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -10226,12 +10230,12 @@
   ],
   "stats": {
     "total": 438,
-    "open": 26,
-    "closed": 412,
-    "wins": 260,
+    "open": 23,
+    "closed": 415,
+    "wins": 262,
     "win_rate": 63.1,
-    "net_pct": 220.52,
-    "pf": 1.52,
+    "net_pct": 224.54,
+    "pf": 1.53,
     "simulated": 1
   }
 }
