@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-09T02:41:21",
+  "updated_at": "2026-08-09T02:49:33",
   "stats": {
-    "open": 33,
-    "closed": 398,
-    "win_rate": 67.8,
-    "profit_factor": 1.81,
-    "total_pct": 1538.17,
+    "open": 32,
+    "closed": 399,
+    "win_rate": 67.9,
+    "profit_factor": 1.82,
+    "total_pct": 1581.42,
     "avg_pct": 0.77,
     "max_drawdown_pct": -49.22
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-09",
-        "trades": 4,
+        "trades": 5,
         "win_rate": 100.0,
-        "return_pct": 14.45,
+        "return_pct": 17.47,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -295,9 +295,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 106,
-        "win_rate": 83.0,
-        "return_pct": 671.05,
+        "trades": 107,
+        "win_rate": 83.2,
+        "return_pct": 691.41,
         "month": "2026-08"
       },
       {
@@ -332,9 +332,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 133,
-        "win_rate": 81.2,
-        "return_pct": 892.91
+        "trades": 134,
+        "win_rate": 81.3,
+        "return_pct": 919.12
       },
       {
         "key": "2026-07",
@@ -4570,11 +4570,13 @@
       "timeframe": "15m",
       "entry": 0.191298,
       "stop": 0.1845,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-08T18:32:07",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.1
     },
     {
       "id": "العرض/الطلب|BLURUSDT|2026-08-08 18:45:00",
@@ -4638,10 +4640,11 @@
         3,
         4
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-08T19:16:59",
-      "closed_at": null,
-      "realized_pct": 0.97
+      "closed_at": "2026-08-09T02:47:45",
+      "realized_pct": 2.64,
+      "result_pct": 2.64
     },
     {
       "id": "العرض/الطلب|XAIUSDT|2026-08-08 20:15:00",
