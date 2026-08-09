@@ -5995,5 +5995,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|PROVEUSDT|2026-08-09 07:45:00": {
+    "symbol": "PROVEUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6472,
+    "entry": 0.1630038,
+    "stop": 0.1512,
+    "init_stop": 0.1512,
+    "cur_stop": 0.1512,
+    "legs": [
+      0.1630038,
+      0.16075,
+      0.1584962,
+      0.1552874
+    ],
+    "last_alert_stop": 0.1512,
+    "armed": false,
+    "targets": [
+      0.1703,
+      0.1754952,
+      0.1782074,
+      0.1821038,
+      0.1894,
+      0.2012038,
+      0.2203038,
+      0.2321076
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-09 07:45:00",
+    "last_bar": "2026-08-09 07:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1630038,
+    "lo_seen": 0.1630038,
+    "created": "2026-08-09T08:02:22",
+    "dca_levels": [
+      0.1630038,
+      0.16075,
+      0.1584962,
+      0.1552874
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
