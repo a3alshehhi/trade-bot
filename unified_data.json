@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-09T10:19:16",
+  "updated_at": "2026-08-09T10:59:22",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|IOUSDT|2026-08-09T10:47:06",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "IOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1249924,
+      "stop_orig": 0.1177,
+      "stop": 0.1177,
+      "targets": [],
+      "opened_at": "2026-08-09T10:47:06",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|BIOUSDT|2026-08-09T08:17:13",
       "source": "paper",
@@ -292,11 +313,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-09T10:47:14",
+      "realized_pct": 2.98,
+      "result_pct": 2.98,
+      "exec_pct": 2.98
     },
     {
       "id": "paper|HBARUSDT|2026-08-08T18:17:03",
@@ -633,7 +654,8 @@
       "opened_at": "2026-08-08T09:02:42",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -2185,7 +2207,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.172,
+      "last_price": 2.16,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -10323,13 +10345,13 @@
     }
   ],
   "stats": {
-    "total": 442,
+    "total": 443,
     "open": 21,
-    "closed": 421,
-    "wins": 266,
-    "win_rate": 63.2,
-    "net_pct": 226.69,
-    "pf": 1.53,
+    "closed": 422,
+    "wins": 267,
+    "win_rate": 63.3,
+    "net_pct": 229.67,
+    "pf": 1.54,
     "simulated": 1
   }
 }
