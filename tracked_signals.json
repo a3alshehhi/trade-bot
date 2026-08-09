@@ -6194,5 +6194,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|PROMUSDT|2026-08-09 14:15:00": {
+    "symbol": "PROMUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6499,
+    "entry": 2.111254,
+    "stop": 1.924,
+    "init_stop": 1.924,
+    "cur_stop": 1.924,
+    "legs": [
+      2.111254,
+      2.0755,
+      2.039746,
+      1.988842
+    ],
+    "last_alert_stop": 1.924,
+    "armed": false,
+    "targets": [
+      2.227,
+      2.309416,
+      2.352442,
+      2.414254,
+      2.53,
+      2.717254,
+      3.020254,
+      3.207508
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-09 14:15:00",
+    "last_bar": "2026-08-09 14:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 2.111254,
+    "lo_seen": 2.111254,
+    "created": "2026-08-09T14:32:19",
+    "dca_levels": [
+      2.111254,
+      2.0755,
+      2.039746,
+      1.988842
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }

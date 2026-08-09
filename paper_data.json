@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-09T14:19:21",
+  "updated_at": "2026-08-09T14:34:30",
   "stats": {
-    "open": 28,
+    "open": 29,
     "closed": 409,
     "win_rate": 68.0,
     "profit_factor": 1.83,
@@ -4785,6 +4785,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-09T13:47:27",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|PROMUSDT|2026-08-09 14:15:00",
+      "symbol": "PROMUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 2.111254,
+      "stop": 1.924,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-09T14:32:19",
       "closed_at": null,
       "realized_pct": 0.0
     },
