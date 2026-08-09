@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-09T21:48:07",
+  "updated_at": "2026-08-09T21:55:54",
   "stats": {
-    "open": 30,
+    "open": 31,
     "closed": 410,
     "win_rate": 68.0,
     "profit_factor": 1.84,
@@ -4822,6 +4822,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-09T21:02:37",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|THETAUSDT|2026-08-09 21:30:00",
+      "symbol": "THETAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1396766,
+      "stop": 0.1343,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-09T21:50:07",
       "closed_at": null,
       "realized_pct": 0.0
     },

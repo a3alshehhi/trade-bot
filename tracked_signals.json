@@ -6329,5 +6329,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|THETAUSDT|2026-08-09 21:30:00": {
+    "symbol": "THETAUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6521,
+    "entry": 0.1396766,
+    "stop": 0.1343,
+    "init_stop": 0.1343,
+    "cur_stop": 0.1343,
+    "legs": [
+      0.1396766,
+      0.13865,
+      0.1376234,
+      0.1361618
+    ],
+    "last_alert_stop": 0.1343,
+    "armed": false,
+    "targets": [
+      0.143,
+      0.1453664,
+      0.1466018,
+      0.1483766,
+      0.1517,
+      0.1570766,
+      0.1657766,
+      0.1711532
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-09 21:30:00",
+    "last_bar": "2026-08-09 21:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1396766,
+    "lo_seen": 0.1396766,
+    "created": "2026-08-09T21:50:07",
+    "dca_levels": [
+      0.1396766,
+      0.13865,
+      0.1376234,
+      0.1361618
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
