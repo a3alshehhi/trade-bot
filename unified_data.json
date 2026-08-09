@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-09T14:10:08",
+  "updated_at": "2026-08-09T14:55:53",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|PROMUSDT|2026-08-09T14:32:19",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "PROMUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 2.111254,
+      "stop_orig": 1.924,
+      "stop": 1.924,
+      "targets": [],
+      "opened_at": "2026-08-09T14:32:19",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|SSVUSDT|2026-08-09T13:47:27",
       "source": "paper",
@@ -38,7 +59,9 @@
       "targets": [],
       "opened_at": "2026-08-09T10:47:06",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -2233,7 +2256,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.201,
+      "last_price": 2.182,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -10371,8 +10394,8 @@
     }
   ],
   "stats": {
-    "total": 444,
-    "open": 21,
+    "total": 445,
+    "open": 22,
     "closed": 423,
     "wins": 268,
     "win_rate": 63.4,
