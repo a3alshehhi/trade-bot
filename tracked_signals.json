@@ -107,56 +107,6 @@
     "close_card_sent": true,
     "closed_at": "2026-07-23T16:04:27"
   },
-  "العرض/الطلب|DIAUSDT|2026-07-26 00:30:00": {
-    "symbol": "DIAUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 5575,
-    "entry": 0.11325,
-    "stop": 0.0978,
-    "init_stop": 0.0978,
-    "cur_stop": 0.11325,
-    "legs": [
-      0.11325,
-      0.1103,
-      0.10735,
-      0.10315
-    ],
-    "last_alert_stop": 0.11325,
-    "armed": false,
-    "targets": [
-      0.1228,
-      0.1296
-    ],
-    "tp_split": [
-      50,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5050",
-    "breakeven_done": false,
-    "bar_ts": "2026-07-26 00:30:00",
-    "last_bar": "2026-07-26 04:59:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.1426,
-    "lo_seen": 0.1078,
-    "created": "2026-07-26T00:46:14",
-    "dca_levels": [
-      0.11325,
-      0.1103,
-      0.10735,
-      0.10315
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 0.1296,
-    "close_card_sent": true,
-    "closed_at": "2026-07-26T05:01:32"
-  },
   "العرض/الطلب|AIXBTUSDT|2026-07-26 04:30:00": {
     "symbol": "AIXBTUSDT",
     "label": "العرض/الطلب",
@@ -5821,6 +5771,62 @@
       0.01115,
       0.0106426,
       0.0099202
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|KSMUSDT|2026-08-09 00:30:00": {
+    "symbol": "KSMUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6437,
+    "entry": 3.12652,
+    "stop": 3.04,
+    "init_stop": 3.04,
+    "cur_stop": 3.04,
+    "legs": [
+      3.12652,
+      3.11,
+      3.09348,
+      3.06996
+    ],
+    "last_alert_stop": 3.04,
+    "armed": false,
+    "targets": [
+      3.18,
+      3.21808,
+      3.23796,
+      3.26652,
+      3.32,
+      3.40652,
+      3.54652,
+      3.63304
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-09 00:30:00",
+    "last_bar": "2026-08-09 00:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 3.12652,
+    "lo_seen": 3.12652,
+    "created": "2026-08-09T00:47:29",
+    "dca_levels": [
+      3.12652,
+      3.11,
+      3.09348,
+      3.06996
     ],
     "wait_entry": true,
     "max_age_h": 48.0

@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-09T00:41:56",
+  "updated_at": "2026-08-09T00:49:34",
   "stats": {
-    "open": 34,
+    "open": 35,
     "closed": 395,
     "win_rate": 67.6,
     "profit_factor": 1.78,
@@ -2968,24 +2968,6 @@
       "result_pct": 1.88
     },
     {
-      "id": "العرض/الطلب|DIAUSDT|2026-07-26 00:30:00",
-      "symbol": "DIAUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.11325,
-      "stop": 0.0978,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-26T00:46:14",
-      "closed_at": "2026-07-26T05:01:32",
-      "realized_pct": 11.43,
-      "result_pct": 11.43
-    },
-    {
       "id": "العرض/الطلب|AIXBTUSDT|2026-07-26 04:30:00",
       "symbol": "AIXBTUSDT",
       "label": "العرض/الطلب",
@@ -4690,6 +4672,20 @@
       "realized_pct": 7.05
     },
     {
+      "id": "العرض/الطلب|KSMUSDT|2026-08-09 00:30:00",
+      "symbol": "KSMUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 3.12652,
+      "stop": 3.04,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-09T00:47:29",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -4764,6 +4760,24 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|DIAUSDT|2026-07-26 00:30:00",
+      "symbol": "DIAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.11325,
+      "stop": 0.0978,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-26T00:46:14",
+      "closed_at": "2026-07-26T05:01:32",
+      "realized_pct": 11.43,
+      "result_pct": 11.43
     },
     {
       "id": "العرض/الطلب|AWEUSDT|2026-07-25 19:30:00",
