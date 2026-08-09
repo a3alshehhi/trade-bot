@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-09T20:59:19",
+  "updated_at": "2026-08-09T21:04:31",
   "stats": {
-    "open": 29,
+    "open": 30,
     "closed": 410,
     "win_rate": 68.0,
     "profit_factor": 1.84,
@@ -4807,6 +4807,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-09T17:47:01",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|SXTUSDT|2026-08-09 20:45:00",
+      "symbol": "SXTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00755586,
+      "stop": 0.00708,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-09T21:02:37",
       "closed_at": null,
       "realized_pct": 0.0
     },
