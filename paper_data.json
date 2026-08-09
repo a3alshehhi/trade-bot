@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08T23:48:57",
+  "updated_at": "2026-08-09T00:04:39",
   "stats": {
     "open": 35,
     "closed": 394,
@@ -4634,7 +4634,9 @@
       "entry": 196.38,
       "stop": 190.2,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-08T19:16:59",
@@ -4667,11 +4669,13 @@
       "timeframe": "15m",
       "entry": 0.0116574,
       "stop": 0.009,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-08T21:20:42",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 7.05
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
