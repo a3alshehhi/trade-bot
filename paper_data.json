@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-09T05:21:30",
+  "updated_at": "2026-08-09T05:38:11",
   "stats": {
-    "open": 30,
-    "closed": 401,
-    "win_rate": 67.8,
-    "profit_factor": 1.82,
-    "total_pct": 1604.08,
-    "avg_pct": 0.77,
+    "open": 29,
+    "closed": 403,
+    "win_rate": 68.0,
+    "profit_factor": 1.83,
+    "total_pct": 1662.43,
+    "avg_pct": 0.78,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-09",
-        "trades": 7,
-        "win_rate": 85.7,
-        "return_pct": 19.06,
+        "trades": 9,
+        "win_rate": 88.9,
+        "return_pct": 23.13,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -295,9 +295,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 109,
-        "win_rate": 82.6,
-        "return_pct": 702.07,
+        "trades": 111,
+        "win_rate": 82.9,
+        "return_pct": 729.54,
         "month": "2026-08"
       },
       {
@@ -332,9 +332,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 136,
-        "win_rate": 80.9,
-        "return_pct": 932.86
+        "trades": 138,
+        "win_rate": 81.2,
+        "return_pct": 968.22
       },
       {
         "key": "2026-07",
@@ -2971,24 +2971,6 @@
       "result_pct": 1.88
     },
     {
-      "id": "العرض/الطلب|AIXBTUSDT|2026-07-26 04:30:00",
-      "symbol": "AIXBTUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.01820216,
-      "stop": 0.01751,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-26T04:46:12",
-      "closed_at": "2026-07-26T07:16:22",
-      "realized_pct": 3.19,
-      "result_pct": 3.19
-    },
-    {
       "id": "العرض/الطلب|CYBERUSDT|2026-07-26 12:15:00",
       "symbol": "CYBERUSDT",
       "label": "العرض/الطلب",
@@ -4547,10 +4529,11 @@
         2,
         3
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-08T17:47:29",
-      "closed_at": null,
-      "realized_pct": 0.87
+      "closed_at": "2026-08-09T05:32:45",
+      "realized_pct": 2.37,
+      "result_pct": 2.37
     },
     {
       "id": "العرض/الطلب|HBARUSDT|2026-08-08 18:00:00",
@@ -4563,10 +4546,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-08T18:17:03",
-      "closed_at": null,
-      "realized_pct": 0.78
+      "closed_at": "2026-08-09T05:32:46",
+      "realized_pct": 1.03,
+      "result_pct": 1.03
     },
     {
       "id": "العرض/الطلب|API3USDT|2026-08-08 18:15:00",
@@ -4719,6 +4703,20 @@
       "realized_pct": 1.22
     },
     {
+      "id": "العرض/الطلب|STEEMUSDT|2026-08-09 05:15:00",
+      "symbol": "STEEMUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03660992,
+      "stop": 0.03572,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-09T05:32:32",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -4793,6 +4791,24 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|AIXBTUSDT|2026-07-26 04:30:00",
+      "symbol": "AIXBTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01820216,
+      "stop": 0.01751,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-26T04:46:12",
+      "closed_at": "2026-07-26T07:16:22",
+      "realized_pct": 3.19,
+      "result_pct": 3.19
     },
     {
       "id": "العرض/الطلب|DIAUSDT|2026-07-26 00:30:00",
