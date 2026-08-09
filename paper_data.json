@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-09T22:57:38",
+  "updated_at": "2026-08-09T23:07:31",
   "stats": {
     "open": 31,
-    "closed": 410,
-    "win_rate": 68.0,
-    "profit_factor": 1.84,
-    "total_pct": 1820.16,
+    "closed": 411,
+    "win_rate": 68.1,
+    "profit_factor": 1.85,
+    "total_pct": 1896.01,
     "avg_pct": 0.79,
     "max_drawdown_pct": -49.22
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-09",
-        "trades": 16,
-        "win_rate": 81.2,
-        "return_pct": 34.15,
+        "trades": 17,
+        "win_rate": 82.4,
+        "return_pct": 39.45,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -295,9 +295,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 118,
-        "win_rate": 82.2,
-        "return_pct": 803.78,
+        "trades": 119,
+        "win_rate": 82.4,
+        "return_pct": 839.48,
         "month": "2026-08"
       },
       {
@@ -332,9 +332,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 145,
-        "win_rate": 80.7,
-        "return_pct": 1063.82
+        "trades": 146,
+        "win_rate": 80.8,
+        "return_pct": 1109.8
       },
       {
         "key": "2026-07",
@@ -4295,10 +4295,11 @@
         4,
         5
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-08T09:02:42",
-      "closed_at": null,
-      "realized_pct": 1.46
+      "closed_at": "2026-08-09T23:02:51",
+      "realized_pct": 3.95,
+      "result_pct": 3.95
     },
     {
       "id": "العرض/الطلب|FLUXUSDT|2026-08-08 09:30:00",
@@ -4836,6 +4837,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-09T21:50:07",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ARBUSDT|2026-08-09 22:45:00",
+      "symbol": "ARBUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0792484,
+      "stop": 0.0769,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-09T23:02:45",
       "closed_at": null,
       "realized_pct": 0.0
     },
