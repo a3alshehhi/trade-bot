@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-09T03:34:18",
+  "updated_at": "2026-08-09T03:53:00",
   "stats": {
-    "open": 32,
-    "closed": 399,
-    "win_rate": 67.9,
-    "profit_factor": 1.82,
-    "total_pct": 1581.42,
+    "open": 31,
+    "closed": 400,
+    "win_rate": 67.8,
+    "profit_factor": 1.81,
+    "total_pct": 1560.57,
     "avg_pct": 0.77,
     "max_drawdown_pct": -49.22
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-09",
-        "trades": 5,
-        "win_rate": 100.0,
-        "return_pct": 17.47,
+        "trades": 6,
+        "win_rate": 83.3,
+        "return_pct": 16.02,
         "week": "2026-W32",
         "month": "2026-08"
       },
@@ -295,9 +295,9 @@
     "weekly": [
       {
         "key": "2026-W32",
-        "trades": 107,
-        "win_rate": 83.2,
-        "return_pct": 691.41,
+        "trades": 108,
+        "win_rate": 82.4,
+        "return_pct": 681.59,
         "month": "2026-08"
       },
       {
@@ -332,9 +332,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 134,
-        "win_rate": 81.3,
-        "return_pct": 919.12
+        "trades": 135,
+        "win_rate": 80.7,
+        "return_pct": 906.49
       },
       {
         "key": "2026-07",
@@ -4603,10 +4603,11 @@
       "entry": 0.035463,
       "stop": 0.0333,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-08T19:16:59",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-09T03:47:22",
+      "realized_pct": -1.24,
+      "result_pct": -1.24
     },
     {
       "id": "العرض/الطلب|SAGAUSDT|2026-08-08 19:00:00",
