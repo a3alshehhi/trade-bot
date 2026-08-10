@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-10T22:33:48",
+  "updated_at": "2026-08-10T22:48:45",
   "stats": {
-    "open": 22,
-    "closed": 427,
-    "win_rate": 68.1,
-    "profit_factor": 1.9,
-    "total_pct": 2357.43,
-    "avg_pct": 0.81,
+    "open": 20,
+    "closed": 429,
+    "win_rate": 67.8,
+    "profit_factor": 1.87,
+    "total_pct": 2202.67,
+    "avg_pct": 0.8,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-10",
-        "trades": 11,
-        "win_rate": 72.7,
-        "return_pct": 20.2,
+        "trades": 13,
+        "win_rate": 61.5,
+        "return_pct": 12.63,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -303,9 +303,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 11,
-        "win_rate": 72.7,
-        "return_pct": 20.2,
+        "trades": 13,
+        "win_rate": 61.5,
+        "return_pct": 12.63,
         "month": "2026-08"
       },
       {
@@ -347,9 +347,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 162,
-        "win_rate": 79.6,
-        "return_pct": 1389.47
+        "trades": 164,
+        "win_rate": 78.7,
+        "return_pct": 1295.67
       },
       {
         "key": "2026-07",
@@ -1972,10 +1972,11 @@
       "entry": 0.00405978,
       "stop": 0.00393,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-10T10:38:04",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-10T22:48:45",
+      "realized_pct": -3.2,
+      "result_pct": -3.2
     },
     {
       "id": "SD Stable|ALICEUSDT|2026-07-23 04:30:00",
@@ -4788,10 +4789,11 @@
       "entry": 0.00405978,
       "stop": 0.00393,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-10T10:32:06",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-10T22:47:07",
+      "realized_pct": -3.2,
+      "result_pct": -3.2
     },
     {
       "id": "العرض/الطلب|EGLDUSDT|2026-08-10 21:15:00",
