@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10T23:21:33",
+  "updated_at": "2026-08-10T23:56:14",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -897,11 +897,11 @@
       "opened_at": "2026-08-08T10:16:56",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-10T23:32:03",
+      "realized_pct": -4.13,
+      "result_pct": -4.13,
+      "exec_pct": -4.13
     },
     {
       "id": "paper|AIXBTUSDT|2026-08-08T10:02:35",
@@ -2526,7 +2526,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.124,
+      "last_price": 2.139,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -10642,12 +10642,12 @@
   ],
   "stats": {
     "total": 456,
-    "open": 12,
-    "closed": 444,
+    "open": 11,
+    "closed": 445,
     "wins": 282,
-    "win_rate": 63.5,
-    "net_pct": 258.75,
-    "pf": 1.59,
+    "win_rate": 63.4,
+    "net_pct": 254.62,
+    "pf": 1.58,
     "simulated": 1
   }
 }
