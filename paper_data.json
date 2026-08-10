@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-10T02:04:37",
+  "updated_at": "2026-08-10T02:18:47",
   "stats": {
-    "open": 26,
-    "closed": 417,
+    "open": 25,
+    "closed": 418,
     "win_rate": 67.9,
     "profit_factor": 1.86,
-    "total_pct": 1935.75,
+    "total_pct": 2010.87,
     "avg_pct": 0.79,
     "max_drawdown_pct": -49.22
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-10",
-        "trades": 1,
-        "win_rate": 0.0,
-        "return_pct": -0.43,
+        "trades": 2,
+        "win_rate": 50.0,
+        "return_pct": 3.24,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -303,9 +303,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 1,
-        "win_rate": 0.0,
-        "return_pct": -0.43,
+        "trades": 2,
+        "win_rate": 50.0,
+        "return_pct": 3.24,
         "month": "2026-08"
       },
       {
@@ -347,9 +347,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 152,
-        "win_rate": 79.6,
-        "return_pct": 1133.88
+        "trades": 153,
+        "win_rate": 79.7,
+        "return_pct": 1179.41
       },
       {
         "key": "2026-07",
@@ -4351,10 +4351,11 @@
         5,
         6
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-08T10:02:35",
-      "closed_at": null,
-      "realized_pct": 1.36
+      "closed_at": "2026-08-10T02:17:04",
+      "realized_pct": 3.69,
+      "result_pct": 3.69
     },
     {
       "id": "العرض/الطلب|SAHARAUSDT|2026-08-08 10:00:00",
