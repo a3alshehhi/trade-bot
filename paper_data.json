@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-10T13:50:57",
+  "updated_at": "2026-08-10T14:04:24",
   "stats": {
-    "open": 24,
-    "closed": 424,
-    "win_rate": 68.2,
-    "profit_factor": 1.89,
-    "total_pct": 2316.73,
+    "open": 22,
+    "closed": 426,
+    "win_rate": 68.3,
+    "profit_factor": 1.9,
+    "total_pct": 2378.5,
     "avg_pct": 0.82,
     "max_drawdown_pct": -49.22
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-10",
-        "trades": 8,
-        "win_rate": 75.0,
-        "return_pct": 18.2,
+        "trades": 10,
+        "win_rate": 80.0,
+        "return_pct": 21.23,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -303,9 +303,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 8,
-        "win_rate": 75.0,
-        "return_pct": 18.2,
+        "trades": 10,
+        "win_rate": 80.0,
+        "return_pct": 21.23,
         "month": "2026-08"
       },
       {
@@ -347,9 +347,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 159,
-        "win_rate": 79.9,
-        "return_pct": 1364.8
+        "trades": 161,
+        "win_rate": 80.1,
+        "return_pct": 1402.24
       },
       {
         "key": "2026-07",
@@ -1692,10 +1692,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-05T21:04:43",
-      "closed_at": null,
-      "realized_pct": 0.82
+      "closed_at": "2026-08-10T14:04:21",
+      "realized_pct": 1.27,
+      "result_pct": 1.27
     },
     {
       "id": "الفيواب الأسبوعي · BTC|BCHUSDT|2026-08-05 21:30:00",
@@ -3701,10 +3702,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-05T21:02:15",
-      "closed_at": null,
-      "realized_pct": 0.82
+      "closed_at": "2026-08-10T14:01:21",
+      "realized_pct": 1.27,
+      "result_pct": 1.27
     },
     {
       "id": "العرض/الطلب|ETHUSDT|2026-08-05 20:45:00",
