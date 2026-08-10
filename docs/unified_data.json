@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10T22:50:30",
+  "updated_at": "2026-08-10T23:21:33",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -280,11 +280,11 @@
       "opened_at": "2026-08-09T14:32:19",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-10T23:06:05",
+      "realized_pct": 2.88,
+      "result_pct": 2.88,
+      "exec_pct": 2.88
     },
     {
       "id": "paper|SSVUSDT|2026-08-09T13:47:27",
@@ -2526,7 +2526,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.132,
+      "last_price": 2.124,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -10642,12 +10642,12 @@
   ],
   "stats": {
     "total": 456,
-    "open": 13,
-    "closed": 443,
-    "wins": 281,
-    "win_rate": 63.4,
-    "net_pct": 255.87,
-    "pf": 1.58,
+    "open": 12,
+    "closed": 444,
+    "wins": 282,
+    "win_rate": 63.5,
+    "net_pct": 258.75,
+    "pf": 1.59,
     "simulated": 1
   }
 }
