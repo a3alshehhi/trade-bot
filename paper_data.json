@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-08-10T00:52:11",
+  "updated_at": "2026-08-10T01:04:02",
   "stats": {
-    "open": 27,
-    "closed": 416,
-    "win_rate": 68.0,
+    "open": 26,
+    "closed": 417,
+    "win_rate": 67.9,
     "profit_factor": 1.86,
-    "total_pct": 1944.54,
+    "total_pct": 1935.75,
     "avg_pct": 0.79,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-08-10",
+        "trades": 1,
+        "win_rate": 0.0,
+        "return_pct": -0.43,
+        "week": "2026-W33",
+        "month": "2026-08"
+      },
       {
         "key": "2026-08-09",
         "trades": 22,
@@ -294,6 +302,13 @@
     ],
     "weekly": [
       {
+        "key": "2026-W33",
+        "trades": 1,
+        "win_rate": 0.0,
+        "return_pct": -0.43,
+        "month": "2026-08"
+      },
+      {
         "key": "2026-W32",
         "trades": 124,
         "win_rate": 81.5,
@@ -332,9 +347,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 151,
-        "win_rate": 80.1,
-        "return_pct": 1139.21
+        "trades": 152,
+        "win_rate": 79.6,
+        "return_pct": 1133.88
       },
       {
         "key": "2026-07",
@@ -4754,10 +4769,11 @@
       "entry": 0.02576162,
       "stop": 0.02447,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-09T08:17:13",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-10T01:02:20",
+      "realized_pct": -0.43,
+      "result_pct": -0.43
     },
     {
       "id": "العرض/الطلب|IOUSDT|2026-08-09 10:30:00",
