@@ -6595,5 +6595,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|RIFUSDT|2026-08-10 07:30:00": {
+    "symbol": "RIFUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6572,
+    "entry": 0.0703002,
+    "stop": 0.0648,
+    "init_stop": 0.0648,
+    "cur_stop": 0.0648,
+    "legs": [
+      0.0703002,
+      0.06925,
+      0.0681998,
+      0.0667046
+    ],
+    "last_alert_stop": 0.0648,
+    "armed": false,
+    "targets": [
+      0.0737,
+      0.0761208,
+      0.0773846,
+      0.0792002,
+      0.0826,
+      0.0881002,
+      0.0970002,
+      0.1025004
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-10 07:30:00",
+    "last_bar": "2026-08-10 07:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0703002,
+    "lo_seen": 0.0703002,
+    "created": "2026-08-10T07:47:29",
+    "dca_levels": [
+      0.0703002,
+      0.06925,
+      0.0681998,
+      0.0667046
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
