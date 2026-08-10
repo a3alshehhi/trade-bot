@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10T12:41:11",
+  "updated_at": "2026-08-10T14:04:48",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -168,11 +168,11 @@
       "opened_at": "2026-08-09T23:02:45",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-10T13:17:20",
+      "realized_pct": 0.5,
+      "result_pct": 0.5,
+      "exec_pct": 0.5
     },
     {
       "id": "paper|THETAUSDT|2026-08-09T21:50:07",
@@ -2505,7 +2505,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.139,
+      "last_price": 2.159,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -10621,12 +10621,12 @@
   ],
   "stats": {
     "total": 455,
-    "open": 18,
-    "closed": 437,
-    "wins": 278,
-    "win_rate": 63.6,
-    "net_pct": 260.08,
-    "pf": 1.6,
+    "open": 17,
+    "closed": 438,
+    "wins": 279,
+    "win_rate": 63.7,
+    "net_pct": 260.58,
+    "pf": 1.61,
     "simulated": 1
   }
 }
