@@ -6791,5 +6791,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|EGLDUSDT|2026-08-10 21:15:00": {
+    "symbol": "EGLDUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6611,
+    "entry": 2.72978,
+    "stop": 2.6,
+    "init_stop": 2.6,
+    "cur_stop": 2.6,
+    "legs": [
+      2.72978,
+      2.705,
+      2.68022,
+      2.64494
+    ],
+    "last_alert_stop": 2.6,
+    "armed": false,
+    "targets": [
+      2.81,
+      2.86712,
+      2.89694,
+      2.93978,
+      3.02,
+      3.14978,
+      3.35978,
+      3.48956
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-10 21:15:00",
+    "last_bar": "2026-08-10 21:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 2.72978,
+    "lo_seen": 2.72978,
+    "created": "2026-08-10T21:32:37",
+    "dca_levels": [
+      2.72978,
+      2.705,
+      2.68022,
+      2.64494
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }

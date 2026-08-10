@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-10T21:18:52",
+  "updated_at": "2026-08-10T21:34:19",
   "stats": {
-    "open": 21,
+    "open": 22,
     "closed": 427,
     "win_rate": 68.1,
     "profit_factor": 1.9,
@@ -4790,6 +4790,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-10T10:32:06",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|EGLDUSDT|2026-08-10 21:15:00",
+      "symbol": "EGLDUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 2.72978,
+      "stop": 2.6,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-10T21:32:37",
       "closed_at": null,
       "realized_pct": 0.0
     },
