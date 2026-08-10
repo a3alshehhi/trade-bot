@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-10T22:48:45",
+  "updated_at": "2026-08-10T23:03:38",
   "stats": {
-    "open": 20,
-    "closed": 429,
-    "win_rate": 67.8,
+    "open": 19,
+    "closed": 430,
+    "win_rate": 67.9,
     "profit_factor": 1.87,
-    "total_pct": 2202.67,
+    "total_pct": 2268.99,
     "avg_pct": 0.8,
     "max_drawdown_pct": -49.22
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-10",
-        "trades": 13,
-        "win_rate": 61.5,
-        "return_pct": 12.63,
+        "trades": 14,
+        "win_rate": 64.3,
+        "return_pct": 15.87,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -303,9 +303,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 13,
-        "win_rate": 61.5,
-        "return_pct": 12.63,
+        "trades": 14,
+        "win_rate": 64.3,
+        "return_pct": 15.87,
         "month": "2026-08"
       },
       {
@@ -347,9 +347,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 164,
-        "win_rate": 78.7,
-        "return_pct": 1295.67
+        "trades": 165,
+        "win_rate": 78.8,
+        "return_pct": 1335.87
       },
       {
         "key": "2026-07",
@@ -4664,10 +4664,11 @@
       "entry": 2.111254,
       "stop": 1.924,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-09T14:32:19",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-10T23:02:08",
+      "realized_pct": 2.88,
+      "result_pct": 2.88
     },
     {
       "id": "العرض/الطلب|WLDUSDT|2026-08-09 17:30:00",
