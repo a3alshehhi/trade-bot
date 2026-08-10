@@ -1,8 +1,134 @@
 {
-  "updated_at": "2026-08-10T04:50:46",
+  "updated_at": "2026-08-10T10:56:19",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|JASMYUSDT|2026-08-10T10:38:04",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "JASMYUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00405978,
+      "stop_orig": 0.00393,
+      "stop": 0.00393,
+      "targets": [],
+      "opened_at": "2026-08-10T10:38:04",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|JASMYUSDT|2026-08-10T10:32:06",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "JASMYUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00405978,
+      "stop_orig": 0.00393,
+      "stop": 0.00393,
+      "targets": [],
+      "opened_at": "2026-08-10T10:32:06",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|NEARUSDT|2026-08-10T08:50:03",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "NEARUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.633002,
+      "stop_orig": 1.578,
+      "stop": 1.578,
+      "targets": [],
+      "opened_at": "2026-08-10T08:50:03",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|NEARUSDT|2026-08-10T08:47:04",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "NEARUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.633002,
+      "stop_orig": 1.578,
+      "stop": 1.578,
+      "targets": [],
+      "opened_at": "2026-08-10T08:47:04",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|EDUUSDT|2026-08-10T06:08:54",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "EDUUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0389754,
+      "stop_orig": 0.0357,
+      "stop": 0.0357,
+      "targets": [],
+      "opened_at": "2026-08-10T06:08:54",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|EDUUSDT|2026-08-10T06:02:26",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "EDUUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0389754,
+      "stop_orig": 0.0357,
+      "stop": 0.0357,
+      "targets": [],
+      "opened_at": "2026-08-10T06:02:26",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|ACTUSDT|2026-08-10T00:46:54",
       "source": "paper",
@@ -107,13 +233,16 @@
       "opened_at": "2026-08-09T17:47:01",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3,
+        4
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-10T10:47:04",
+      "realized_pct": 5.4,
+      "result_pct": 5.4,
+      "exec_pct": 5.4
     },
     {
       "id": "paper|PROMUSDT|2026-08-09T14:32:19",
@@ -174,11 +303,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-10T10:17:31",
+      "realized_pct": 2.05,
+      "result_pct": 2.05,
+      "exec_pct": 2.05
     },
     {
       "id": "paper|BIOUSDT|2026-08-09T08:17:13",
@@ -216,11 +345,11 @@
       "opened_at": "2026-08-09T08:02:22",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-10T10:02:59",
+      "realized_pct": -3.49,
+      "result_pct": -3.49,
+      "exec_pct": -3.49
     },
     {
       "id": "paper|LINEAUSDT|2026-08-09T07:47:18",
@@ -568,11 +697,11 @@
       "opened_at": "2026-08-08T16:32:11",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-10T09:49:47",
+      "realized_pct": 0.13,
+      "result_pct": 0.13,
+      "exec_pct": 0.13
     },
     {
       "id": "paper|WUSDT|2026-08-08T16:17:17",
@@ -2376,7 +2505,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.156,
+      "last_price": 2.139,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -5726,29 +5855,6 @@
       "exec_reasons": [
         "وقف خسارة"
       ]
-    },
-    {
-      "id": "paper|EURIUSDT|2026-07-27T03:03:31",
-      "source": "paper",
-      "source_ar": "ورقية",
-      "symbol": "EURIUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 1.126835,
-      "stop_orig": 1.0913,
-      "stop": 1.0913,
-      "targets": [],
-      "opened_at": "2026-07-27T03:03:31",
-      "usd": 100.0,
-      "hits": [
-        1
-      ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
     },
     {
       "id": "paper|PAXGUSDT|2026-07-27T02:48:11",
@@ -10514,12 +10620,12 @@
     }
   ],
   "stats": {
-    "total": 450,
-    "open": 17,
-    "closed": 433,
-    "wins": 275,
-    "win_rate": 63.5,
-    "net_pct": 255.99,
+    "total": 455,
+    "open": 18,
+    "closed": 437,
+    "wins": 278,
+    "win_rate": 63.6,
+    "net_pct": 260.08,
     "pf": 1.6,
     "simulated": 1
   }
