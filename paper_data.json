@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-10T00:41:58",
+  "updated_at": "2026-08-10T00:52:11",
   "stats": {
-    "open": 26,
+    "open": 27,
     "closed": 416,
     "win_rate": 68.0,
     "profit_factor": 1.86,
@@ -4857,6 +4857,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-09T23:02:45",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ACTUSDT|2026-08-10 00:30:00",
+      "symbol": "ACTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01057128,
+      "stop": 0.00936,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-10T00:46:54",
       "closed_at": null,
       "realized_pct": 0.0
     },
