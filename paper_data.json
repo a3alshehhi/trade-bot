@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-10T23:20:52",
+  "updated_at": "2026-08-10T23:34:45",
   "stats": {
-    "open": 19,
-    "closed": 430,
-    "win_rate": 67.9,
-    "profit_factor": 1.87,
-    "total_pct": 2268.99,
-    "avg_pct": 0.8,
+    "open": 18,
+    "closed": 431,
+    "win_rate": 67.7,
+    "profit_factor": 1.85,
+    "total_pct": 2171.15,
+    "avg_pct": 0.79,
     "max_drawdown_pct": -49.22
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-10",
-        "trades": 14,
-        "win_rate": 64.3,
-        "return_pct": 15.87,
+        "trades": 15,
+        "win_rate": 60.0,
+        "return_pct": 11.08,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -303,9 +303,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 14,
-        "win_rate": 64.3,
-        "return_pct": 15.87,
+        "trades": 15,
+        "win_rate": 60.0,
+        "return_pct": 11.08,
         "month": "2026-08"
       },
       {
@@ -347,9 +347,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 165,
-        "win_rate": 78.8,
-        "return_pct": 1335.87
+        "trades": 166,
+        "win_rate": 78.3,
+        "return_pct": 1276.56
       },
       {
         "key": "2026-07",
@@ -4210,10 +4210,11 @@
       "entry": 0.00852226,
       "stop": 0.00817,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-08T10:16:56",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-10T23:32:03",
+      "realized_pct": -4.13,
+      "result_pct": -4.13
     },
     {
       "id": "العرض/الطلب|VTHOUSDT|2026-08-08 10:30:00",
