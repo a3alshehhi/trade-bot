@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-11T13:04:21",
+  "updated_at": "2026-08-11T13:19:17",
   "stats": {
-    "open": 16,
+    "open": 17,
     "closed": 442,
     "win_rate": 67.0,
     "profit_factor": 1.66,
@@ -2887,23 +2887,6 @@
       "result_pct": 1.88
     },
     {
-      "id": "العرض/الطلب|ALICEUSDT|2026-07-28 10:00:00",
-      "symbol": "ALICEUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.1178496,
-      "stop": 0.1134,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-28T10:16:14",
-      "closed_at": "2026-07-28T18:59:40",
-      "realized_pct": 1.42,
-      "result_pct": 1.42
-    },
-    {
       "id": "العرض/الطلب|ADXUSDT|2026-07-28 13:45:00",
       "symbol": "ADXUSDT",
       "label": "العرض/الطلب",
@@ -4970,6 +4953,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|IDUSDT|2026-08-11 13:00:00",
+      "symbol": "IDUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0289124,
+      "stop": 0.0278,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-11T13:17:33",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -5044,6 +5041,23 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|ALICEUSDT|2026-07-28 10:00:00",
+      "symbol": "ALICEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1178496,
+      "stop": 0.1134,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-28T10:16:14",
+      "closed_at": "2026-07-28T18:59:40",
+      "realized_pct": 1.42,
+      "result_pct": 1.42
     },
     {
       "id": "الفيواب الأسبوعي · BTC|WUSDT|2026-07-26 08:45:00",
