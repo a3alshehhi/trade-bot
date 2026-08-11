@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-11T14:04:22",
+  "updated_at": "2026-08-11T15:13:12",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|SFPUSDT|2026-08-11T14:02:12",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "SFPUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2444072,
+      "stop_orig": 0.2318,
+      "stop": 0.2318,
+      "targets": [],
+      "opened_at": "2026-08-11T14:02:12",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|IDUSDT|2026-08-11T13:17:33",
       "source": "paper",
@@ -86,11 +107,11 @@
         3,
         4
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-11T14:47:09",
+      "realized_pct": 1.87,
+      "result_pct": 1.87,
+      "exec_pct": 1.87
     },
     {
       "id": "paper|PROMUSDT|2026-08-11T02:58:27",
@@ -304,11 +325,11 @@
       "opened_at": "2026-08-10T08:50:03",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-11T14:48:50",
+      "realized_pct": -3.37,
+      "result_pct": -3.37,
+      "exec_pct": -3.37
     },
     {
       "id": "paper|NEARUSDT|2026-08-10T08:47:04",
@@ -325,11 +346,11 @@
       "opened_at": "2026-08-10T08:47:04",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-11T14:47:08",
+      "realized_pct": -3.37,
+      "result_pct": -3.37,
+      "exec_pct": -3.37
     },
     {
       "id": "paper|EDUUSDT|2026-08-10T06:08:54",
@@ -2749,7 +2770,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.045,
+      "last_price": 1.999,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -10864,13 +10885,13 @@
     }
   ],
   "stats": {
-    "total": 466,
-    "open": 10,
-    "closed": 456,
-    "wins": 286,
-    "win_rate": 62.7,
-    "net_pct": 224.28,
-    "pf": 1.44,
+    "total": 467,
+    "open": 8,
+    "closed": 459,
+    "wins": 287,
+    "win_rate": 62.5,
+    "net_pct": 219.41,
+    "pf": 1.42,
     "simulated": 1
   }
 }
