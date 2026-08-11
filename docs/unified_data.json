@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-11T23:07:09",
+  "updated_at": "2026-08-11T23:55:54",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|XRPUSDT|2026-08-11T23:17:04",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "XRPUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.0132536,
+      "stop_orig": 0.9915,
+      "stop": 0.9915,
+      "targets": [],
+      "opened_at": "2026-08-11T23:17:04",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|SFPUSDT|2026-08-11T14:02:12",
       "source": "paper",
@@ -2775,7 +2796,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 1.968,
+      "last_price": 1.958,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -10890,8 +10911,8 @@
     }
   ],
   "stats": {
-    "total": 467,
-    "open": 5,
+    "total": 468,
+    "open": 6,
     "closed": 462,
     "wins": 288,
     "win_rate": 62.3,
