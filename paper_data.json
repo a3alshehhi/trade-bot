@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-11T15:12:56",
+  "updated_at": "2026-08-11T15:18:47",
   "stats": {
-    "open": 15,
-    "closed": 445,
-    "win_rate": 66.7,
-    "profit_factor": 1.64,
-    "total_pct": 1333.01,
-    "avg_pct": 0.69,
+    "open": 14,
+    "closed": 446,
+    "win_rate": 66.6,
+    "profit_factor": 1.63,
+    "total_pct": 1284.58,
+    "avg_pct": 0.68,
     "max_drawdown_pct": -54.73
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-11",
-        "trades": 14,
-        "win_rate": 35.7,
-        "return_pct": -36.9,
+        "trades": 15,
+        "win_rate": 33.3,
+        "return_pct": -39.04,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -311,9 +311,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 29,
-        "win_rate": 48.3,
-        "return_pct": -29.91,
+        "trades": 30,
+        "win_rate": 46.7,
+        "return_pct": -32.28,
         "month": "2026-08"
       },
       {
@@ -355,9 +355,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 180,
-        "win_rate": 75.0,
-        "return_pct": 768.56
+        "trades": 181,
+        "win_rate": 74.6,
+        "return_pct": 739.2
       },
       {
         "key": "2026-07",
@@ -4950,10 +4950,11 @@
       "entry": 0.02396958,
       "stop": 0.02316,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-11T05:32:00",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-11T15:17:12",
+      "realized_pct": -3.38,
+      "result_pct": -3.38
     },
     {
       "id": "العرض/الطلب|IDUSDT|2026-08-11 13:00:00",
@@ -4963,11 +4964,16 @@
       "timeframe": "15m",
       "entry": 0.0289124,
       "stop": 0.0278,
-      "hits": [],
+      "hits": [
+        1,
+        2,
+        3,
+        4
+      ],
       "status": "open",
       "opened_at": "2026-08-11T13:17:33",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.19
     },
     {
       "id": "العرض/الطلب|SFPUSDT|2026-08-11 13:45:00",
