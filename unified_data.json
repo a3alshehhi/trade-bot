@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-11T02:21:04",
+  "updated_at": "2026-08-11T03:57:42",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|PROMUSDT|2026-08-11T02:58:27",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "PROMUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 2.608068,
+      "stop_orig": 1.974,
+      "stop": 1.974,
+      "targets": [],
+      "opened_at": "2026-08-11T02:58:27",
+      "usd": 100.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-08-11T03:52:54",
+      "realized_pct": -24.31,
+      "result_pct": -24.31,
+      "exec_pct": -24.31
+    },
+    {
+      "id": "paper|PROMUSDT|2026-08-11T02:52:11",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "PROMUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 2.608068,
+      "stop_orig": 1.974,
+      "stop": 1.974,
+      "targets": [],
+      "opened_at": "2026-08-11T02:52:11",
+      "usd": 100.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-08-11T03:47:21",
+      "realized_pct": -24.31,
+      "result_pct": -24.31,
+      "exec_pct": -24.31
+    },
     {
       "id": "paper|UMAUSDT|2026-08-11T01:09:05",
       "source": "paper",
@@ -2612,7 +2654,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.131,
+      "last_price": 2.13,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -10727,13 +10769,13 @@
     }
   ],
   "stats": {
-    "total": 460,
+    "total": 462,
     "open": 14,
-    "closed": 446,
+    "closed": 448,
     "wins": 283,
-    "win_rate": 63.5,
-    "net_pct": 256.82,
-    "pf": 1.58,
+    "win_rate": 63.2,
+    "net_pct": 208.2,
+    "pf": 1.42,
     "simulated": 1
   }
 }
