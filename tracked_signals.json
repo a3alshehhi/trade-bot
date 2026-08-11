@@ -7033,5 +7033,61 @@
     "exit_price": 1.974,
     "close_card_sent": true,
     "closed_at": "2026-08-11T03:47:21"
+  },
+  "العرض/الطلب|LINKUSDT|2026-08-11 03:45:00": {
+    "symbol": "LINKUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6642,
+    "entry": 8.351018,
+    "stop": 8.165,
+    "init_stop": 8.165,
+    "cur_stop": 8.165,
+    "legs": [
+      8.351018,
+      8.3155,
+      8.279982,
+      8.229414
+    ],
+    "last_alert_stop": 8.165,
+    "armed": false,
+    "targets": [
+      8.466,
+      8.547872,
+      8.590614,
+      8.652018,
+      8.767,
+      8.953018,
+      9.254018,
+      9.440036
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-11 03:45:00",
+    "last_bar": "2026-08-11 03:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 8.351018,
+    "lo_seen": 8.351018,
+    "created": "2026-08-11T04:02:23",
+    "dca_levels": [
+      8.351018,
+      8.3155,
+      8.279982,
+      8.229414
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
