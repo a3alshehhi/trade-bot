@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-11T09:55:16",
+  "updated_at": "2026-08-11T10:05:45",
   "stats": {
-    "open": 16,
+    "open": 17,
     "closed": 442,
     "win_rate": 67.0,
     "profit_factor": 1.66,
@@ -4966,6 +4966,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-11T05:32:00",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|DGBUSDT|2026-08-11 09:30:00",
+      "symbol": "DGBUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00393822,
+      "stop": 0.00345,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-11T09:57:33",
       "closed_at": null,
       "realized_pct": 0.0
     },
