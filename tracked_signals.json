@@ -7231,5 +7231,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|SFPUSDT|2026-08-11 13:45:00": {
+    "symbol": "SFPUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6678,
+    "entry": 0.2444072,
+    "stop": 0.2318,
+    "init_stop": 0.2318,
+    "cur_stop": 0.2318,
+    "legs": [
+      0.2444072,
+      0.242,
+      0.2395928,
+      0.2361656
+    ],
+    "last_alert_stop": 0.2318,
+    "armed": false,
+    "targets": [
+      0.2522,
+      0.2577488,
+      0.2606456,
+      0.2648072,
+      0.2726,
+      0.2852072,
+      0.3056072,
+      0.3182144
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-11 13:45:00",
+    "last_bar": "2026-08-11 13:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.2444072,
+    "lo_seen": 0.2444072,
+    "created": "2026-08-11T14:02:12",
+    "dca_levels": [
+      0.2444072,
+      0.242,
+      0.2395928,
+      0.2361656
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
