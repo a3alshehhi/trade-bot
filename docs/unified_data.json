@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-11T15:13:12",
+  "updated_at": "2026-08-11T17:19:27",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -38,12 +38,17 @@
       "targets": [],
       "opened_at": "2026-08-11T13:17:33",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-11T15:32:40",
+      "realized_pct": 3.22,
+      "result_pct": 3.22,
+      "exec_pct": 3.22
     },
     {
       "id": "paper|SUSDT|2026-08-11T05:32:00",
@@ -60,11 +65,11 @@
       "opened_at": "2026-08-11T05:32:00",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-11T15:17:12",
+      "realized_pct": -3.38,
+      "result_pct": -3.38,
+      "exec_pct": -3.38
     },
     {
       "id": "paper|DIAUSDT|2026-08-11T04:17:29",
@@ -1655,11 +1660,11 @@
       "opened_at": "2026-08-07T02:17:15",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-11T15:47:05",
+      "realized_pct": -5.23,
+      "result_pct": -5.23,
+      "exec_pct": -5.23
     },
     {
       "id": "paper|CFXUSDT|2026-08-06T17:36:31",
@@ -2770,7 +2775,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 1.999,
+      "last_price": 2.001,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -10886,12 +10891,12 @@
   ],
   "stats": {
     "total": 467,
-    "open": 8,
-    "closed": 459,
-    "wins": 287,
-    "win_rate": 62.5,
-    "net_pct": 219.41,
-    "pf": 1.42,
+    "open": 5,
+    "closed": 462,
+    "wins": 288,
+    "win_rate": 62.3,
+    "net_pct": 214.02,
+    "pf": 1.41,
     "simulated": 1
   }
 }
