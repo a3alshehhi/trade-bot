@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-11T00:41:02",
+  "updated_at": "2026-08-11T00:53:50",
   "stats": {
-    "open": 18,
+    "open": 20,
     "closed": 431,
     "win_rate": 67.7,
     "profit_factor": 1.85,
@@ -1977,6 +1977,20 @@
       "closed_at": "2026-08-10T22:48:45",
       "realized_pct": -3.2,
       "result_pct": -3.2
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|RADUSDT|2026-08-11 00:30:00",
+      "symbol": "RADUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.25562,
+      "stop": 0.2,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-11T00:53:46",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "SD Stable|ALICEUSDT|2026-07-23 04:30:00",
@@ -4808,6 +4822,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-10T21:32:37",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|RADUSDT|2026-08-11 00:30:00",
+      "symbol": "RADUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.25562,
+      "stop": 0.2,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-11T00:47:30",
       "closed_at": null,
       "realized_pct": 0.0
     },

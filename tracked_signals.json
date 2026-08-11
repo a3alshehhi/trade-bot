@@ -6857,5 +6857,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|RADUSDT|2026-08-11 00:30:00": {
+    "symbol": "RADUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6613,
+    "entry": 0.25562,
+    "stop": 0.2,
+    "init_stop": 0.2,
+    "cur_stop": 0.2,
+    "legs": [
+      0.25562,
+      0.245,
+      0.23438,
+      0.21926
+    ],
+    "last_alert_stop": 0.2,
+    "armed": false,
+    "targets": [
+      0.29,
+      0.31448,
+      0.32726,
+      0.34562,
+      0.38,
+      0.43562,
+      0.52562,
+      0.58124
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-11 00:30:00",
+    "last_bar": "2026-08-11 00:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.25562,
+    "lo_seen": 0.25562,
+    "created": "2026-08-11T00:47:30",
+    "dca_levels": [
+      0.25562,
+      0.245,
+      0.23438,
+      0.21926
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
