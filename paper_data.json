@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-11T01:26:44",
+  "updated_at": "2026-08-11T01:34:59",
   "stats": {
     "open": 22,
     "closed": 431,
@@ -4833,11 +4833,13 @@
       "timeframe": "15m",
       "entry": 2.72978,
       "stop": 2.6,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-10T21:32:37",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.47
     },
     {
       "id": "العرض/الطلب|RADUSDT|2026-08-11 00:30:00",
