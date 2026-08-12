@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-12T07:53:32",
+  "updated_at": "2026-08-12T08:54:11",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|HYPERUSDT|2026-08-12T08:32:36",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "HYPERUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0633664,
+      "stop_orig": 0.0604,
+      "stop": 0.0604,
+      "targets": [],
+      "opened_at": "2026-08-12T08:32:36",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|SCUSDT|2026-08-12T07:47:23",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "SCUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00049601,
+      "stop_orig": 0.000475,
+      "stop": 0.000475,
+      "targets": [],
+      "opened_at": "2026-08-12T07:47:23",
+      "usd": 100.0,
+      "hits": [],
+      "status": "closed",
+      "closed_at": "2026-08-12T08:47:34",
+      "realized_pct": -4.24,
+      "result_pct": -4.24,
+      "exec_pct": -4.24
+    },
     {
       "id": "paper|PROMUSDT|2026-08-12T04:47:03",
       "source": "paper",
@@ -2842,7 +2884,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 1.931,
+      "last_price": 1.911,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -10957,13 +10999,13 @@
     }
   ],
   "stats": {
-    "total": 470,
-    "open": 7,
-    "closed": 463,
+    "total": 472,
+    "open": 8,
+    "closed": 464,
     "wins": 289,
-    "win_rate": 62.4,
-    "net_pct": 214.52,
-    "pf": 1.41,
+    "win_rate": 62.3,
+    "net_pct": 210.28,
+    "pf": 1.4,
     "simulated": 1
   }
 }
