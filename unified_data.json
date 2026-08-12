@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-12T18:40:32",
+  "updated_at": "2026-08-12T19:51:48",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|ZILUSDT|2026-08-12T19:23:54",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ZILUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00238361,
+      "stop_orig": 0.002294,
+      "stop": 0.002294,
+      "targets": [],
+      "opened_at": "2026-08-12T19:23:54",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|ZILUSDT|2026-08-12T19:16:38",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ZILUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00238361,
+      "stop_orig": 0.002294,
+      "stop": 0.002294,
+      "targets": [],
+      "opened_at": "2026-08-12T19:16:38",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|QNTUSDT|2026-08-12T16:56:33",
       "source": "paper",
@@ -167,11 +209,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-12T19:35:19",
+      "realized_pct": 1.7,
+      "result_pct": 1.7,
+      "exec_pct": 1.7
     },
     {
       "id": "paper|SCUSDT|2026-08-12T07:47:23",
@@ -3035,7 +3077,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.016,
+      "last_price": 2.023,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -11150,13 +11192,13 @@
     }
   ],
   "stats": {
-    "total": 479,
-    "open": 8,
-    "closed": 471,
-    "wins": 293,
-    "win_rate": 62.2,
-    "net_pct": 210.74,
-    "pf": 1.38,
+    "total": 481,
+    "open": 9,
+    "closed": 472,
+    "wins": 294,
+    "win_rate": 62.3,
+    "net_pct": 212.44,
+    "pf": 1.39,
     "simulated": 1
   }
 }
