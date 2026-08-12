@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-12T06:04:13",
+  "updated_at": "2026-08-12T07:53:32",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -437,11 +437,11 @@
       "opened_at": "2026-08-10T06:08:54",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-12T06:52:47",
+      "realized_pct": 0.5,
+      "result_pct": 0.5,
+      "exec_pct": 0.5
     },
     {
       "id": "paper|EDUUSDT|2026-08-10T06:02:26",
@@ -457,7 +457,9 @@
       "targets": [],
       "opened_at": "2026-08-10T06:02:26",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -10956,11 +10958,11 @@
   ],
   "stats": {
     "total": 470,
-    "open": 8,
-    "closed": 462,
-    "wins": 288,
-    "win_rate": 62.3,
-    "net_pct": 214.02,
+    "open": 7,
+    "closed": 463,
+    "wins": 289,
+    "win_rate": 62.4,
+    "net_pct": 214.52,
     "pf": 1.41,
     "simulated": 1
   }
