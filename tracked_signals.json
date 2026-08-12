@@ -7259,5 +7259,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|STORJUSDT|2026-08-12 09:45:00": {
+    "symbol": "STORJUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6721,
+    "entry": 0.056541,
+    "stop": 0.0414,
+    "init_stop": 0.0414,
+    "cur_stop": 0.0414,
+    "legs": [
+      0.056541,
+      0.05365,
+      0.050759,
+      0.046643
+    ],
+    "last_alert_stop": 0.0414,
+    "armed": false,
+    "targets": [
+      0.0659,
+      0.072564,
+      0.076043,
+      0.081041,
+      0.0904,
+      0.105541,
+      0.130041,
+      0.145182
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-12 09:45:00",
+    "last_bar": "2026-08-12 09:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.056541,
+    "lo_seen": 0.056541,
+    "created": "2026-08-12T10:02:16",
+    "dca_levels": [
+      0.056541,
+      0.05365,
+      0.050759,
+      0.046643
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
