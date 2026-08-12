@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-12T19:05:00",
+  "updated_at": "2026-08-12T19:23:56",
   "stats": {
-    "open": 15,
+    "open": 17,
     "closed": 457,
     "win_rate": 66.3,
     "profit_factor": 1.59,
@@ -1780,6 +1780,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "الفيواب الأسبوعي · BTC|ZILUSDT|2026-08-12 19:00:00",
+      "symbol": "ZILUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00238361,
+      "stop": 0.002294,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-12T19:23:54",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "SD Stable|ALICEUSDT|2026-07-23 04:30:00",
       "symbol": "ALICEUSDT",
       "label": "SD Stable",
@@ -2659,23 +2673,6 @@
       "closed_at": "2026-07-31T14:16:19",
       "realized_pct": -2.26,
       "result_pct": -2.26
-    },
-    {
-      "id": "العرض/الطلب|CELOUSDT|2026-07-29 17:45:00",
-      "symbol": "CELOUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.06439134,
-      "stop": 0.06153,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-29T18:01:26",
-      "closed_at": "2026-07-29T20:31:22",
-      "realized_pct": 1.37,
-      "result_pct": 1.37
     },
     {
       "id": "عرض/طلب+دايفرجنس|API3USDT|2026-07-30 00:00:00",
@@ -4746,6 +4743,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|ZILUSDT|2026-08-12 19:00:00",
+      "symbol": "ZILUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00238361,
+      "stop": 0.002294,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-12T19:16:38",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -4820,6 +4831,23 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|CELOUSDT|2026-07-29 17:45:00",
+      "symbol": "CELOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.06439134,
+      "stop": 0.06153,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-29T18:01:26",
+      "closed_at": "2026-07-29T20:31:22",
+      "realized_pct": 1.37,
+      "result_pct": 1.37
     },
     {
       "id": "الفيواب الأسبوعي · BTC|ALICEUSDT|2026-07-28 10:00:00",
