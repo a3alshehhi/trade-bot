@@ -357,7 +357,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 00:00:00",
-    "last_bar": "2026-08-12 11:59:59.999000",
+    "last_bar": "2026-08-12 12:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2041,
@@ -6780,7 +6780,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-11 04:00:00",
-    "last_bar": "2026-08-12 12:44:59.999000",
+    "last_bar": "2026-08-12 13:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1287,
@@ -6959,7 +6959,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-11 13:45:00",
-    "last_bar": "2026-08-12 12:44:59.999000",
+    "last_bar": "2026-08-12 13:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2488,
@@ -7015,7 +7015,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-11 23:00:00",
-    "last_bar": "2026-08-12 12:44:59.999000",
+    "last_bar": "2026-08-12 13:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.0262,
@@ -7072,7 +7072,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-12 04:00:00",
-    "last_bar": "2026-08-12 12:44:59.999000",
+    "last_bar": "2026-08-12 13:14:59.999000",
     "hits": [
       1
     ],
@@ -7098,14 +7098,14 @@
     "entry": 2.879364,
     "stop": 1.83,
     "init_stop": 1.83,
-    "cur_stop": 2.879364,
+    "cur_stop": 2.8937608199999993,
     "legs": [
       2.879364,
       2.679,
       2.478636,
       2.193372
     ],
-    "last_alert_stop": 2.879364,
+    "last_alert_stop": 2.8937608199999993,
     "armed": false,
     "targets": [
       3.528,
@@ -7131,7 +7131,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-12 04:30:00",
-    "last_bar": "2026-08-12 12:44:59.999000",
+    "last_bar": "2026-08-12 13:14:59.999000",
     "hits": [
       1
     ],
@@ -7146,7 +7146,8 @@
       2.193372
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 3
   },
   "العرض/الطلب|SCUSDT|2026-08-12 07:30:00": {
     "symbol": "SCUSDT",
@@ -7248,7 +7249,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-12 08:15:00",
-    "last_bar": "2026-08-12 12:44:59.999000",
+    "last_bar": "2026-08-12 13:14:59.999000",
     "hits": [
       1
     ],
@@ -7306,7 +7307,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-12 09:45:00",
-    "last_bar": "2026-08-12 12:44:59.999000",
+    "last_bar": "2026-08-12 13:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.056541,
