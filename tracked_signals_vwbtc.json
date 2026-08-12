@@ -4757,5 +4757,61 @@
     "exit_price": 0.2,
     "close_card_sent": true,
     "closed_at": "2026-08-12T16:05:19"
+  },
+  "الفيواب الأسبوعي · BTC|QNTUSDT|2026-08-12 16:30:00": {
+    "symbol": "QNTUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 6753,
+    "entry": 58.83244,
+    "stop": 56.62,
+    "init_stop": 56.62,
+    "cur_stop": 56.62,
+    "legs": [
+      58.83244,
+      58.41,
+      57.98756,
+      57.38612
+    ],
+    "last_alert_stop": 56.62,
+    "armed": false,
+    "targets": [
+      60.2,
+      61.17376,
+      61.68212,
+      62.41244,
+      63.78,
+      65.99244,
+      69.57244,
+      71.78488
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-12 16:30:00",
+    "last_bar": "2026-08-12 16:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 58.83244,
+    "lo_seen": 58.83244,
+    "created": "2026-08-12T16:56:33",
+    "dca_levels": [
+      58.83244,
+      58.41,
+      57.98756,
+      57.38612
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
