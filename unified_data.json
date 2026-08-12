@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-12T10:22:12",
+  "updated_at": "2026-08-12T11:12:34",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -38,7 +38,9 @@
       "targets": [],
       "opened_at": "2026-08-12T08:32:36",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -2905,7 +2907,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 1.942,
+      "last_price": 1.914,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
