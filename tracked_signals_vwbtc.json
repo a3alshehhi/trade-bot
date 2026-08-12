@@ -4740,11 +4740,11 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-12 15:00:00",
-    "last_bar": "2026-08-12 15:00:00",
+    "last_bar": "2026-08-12 15:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.212978,
-    "lo_seen": 0.212978,
+    "lo_seen": 0.2,
     "created": "2026-08-12T15:27:12",
     "dca_levels": [
       0.212978,
@@ -4753,6 +4753,9 @@
       0.204494
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.2,
+    "close_card_sent": true,
+    "closed_at": "2026-08-12T16:05:19"
   }
 }
