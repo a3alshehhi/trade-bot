@@ -357,7 +357,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 00:00:00",
-    "last_bar": "2026-08-12 05:59:59.999000",
+    "last_bar": "2026-08-12 06:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2041,
@@ -6232,12 +6232,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-10 05:45:00",
-    "last_bar": "2026-08-12 06:44:59.999000",
+    "last_bar": "2026-08-12 07:44:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.0411,
+    "hi_seen": 0.0413,
     "lo_seen": 0.0367,
     "created": "2026-08-10T06:02:26",
     "dca_levels": [
@@ -6777,7 +6777,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-11 04:00:00",
-    "last_bar": "2026-08-12 06:44:59.999000",
+    "last_bar": "2026-08-12 07:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1287,
@@ -6956,7 +6956,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-11 13:45:00",
-    "last_bar": "2026-08-12 06:44:59.999000",
+    "last_bar": "2026-08-12 07:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2488,
@@ -6979,14 +6979,14 @@
     "entry": 1.0132536,
     "stop": 0.9915,
     "init_stop": 0.9915,
-    "cur_stop": 0.9915,
+    "cur_stop": 1.0136064999999999,
     "legs": [
       1.0132536,
       1.0091,
       1.0049464,
       0.9990328
     ],
-    "last_alert_stop": 0.9915,
+    "last_alert_stop": 1.0136064999999999,
     "armed": false,
     "targets": [
       1.0267,
@@ -7012,7 +7012,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-11 23:00:00",
-    "last_bar": "2026-08-12 06:44:59.999000",
+    "last_bar": "2026-08-12 07:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 1.0253,
@@ -7025,7 +7025,8 @@
       0.9990328
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2
   },
   "العرض/الطلب|NEARUSDT|2026-08-12 04:00:00": {
     "symbol": "NEARUSDT",
@@ -7068,7 +7069,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-12 04:00:00",
-    "last_bar": "2026-08-12 06:44:59.999000",
+    "last_bar": "2026-08-12 07:44:59.999000",
     "hits": [
       1
     ],
@@ -7126,7 +7127,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-12 04:30:00",
-    "last_bar": "2026-08-12 06:44:59.999000",
+    "last_bar": "2026-08-12 07:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.879364,
@@ -7137,6 +7138,62 @@
       2.679,
       2.478636,
       2.193372
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|SCUSDT|2026-08-12 07:30:00": {
+    "symbol": "SCUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6704,
+    "entry": 0.00049601,
+    "stop": 0.000475,
+    "init_stop": 0.000475,
+    "cur_stop": 0.000475,
+    "legs": [
+      0.00049601,
+      0.000492,
+      0.00048799,
+      0.00048228
+    ],
+    "last_alert_stop": 0.000475,
+    "armed": false,
+    "targets": [
+      0.000509,
+      0.00051825,
+      0.00052308,
+      0.00053001,
+      0.000543,
+      0.00056401,
+      0.00059801,
+      0.00061902
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-12 07:30:00",
+    "last_bar": "2026-08-12 07:44:59.999000",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00049601,
+    "lo_seen": 0.000481,
+    "created": "2026-08-12T07:47:23",
+    "dca_levels": [
+      0.00049601,
+      0.000492,
+      0.00048799,
+      0.00048228
     ],
     "wait_entry": true,
     "max_age_h": 48.0
