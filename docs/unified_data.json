@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-12T16:40:10",
+  "updated_at": "2026-08-12T17:45:02",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|QNTUSDT|2026-08-12T16:56:33",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "QNTUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 58.83244,
+      "stop_orig": 56.62,
+      "stop": 56.62,
+      "targets": [],
+      "opened_at": "2026-08-12T16:56:33",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|QNTUSDT|2026-08-12T16:47:10",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "QNTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 58.83244,
+      "stop_orig": 56.62,
+      "stop": 56.62,
+      "targets": [],
+      "opened_at": "2026-08-12T16:47:10",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|MTLUSDT|2026-08-12T15:27:12",
       "source": "paper",
@@ -60,11 +102,11 @@
       "opened_at": "2026-08-12T13:32:17",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-12T17:12:33",
+      "realized_pct": -3.56,
+      "result_pct": -3.56,
+      "exec_pct": -3.56
     },
     {
       "id": "paper|RAREUSDT|2026-08-12T13:32:17",
@@ -169,11 +211,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-12T16:47:14",
+      "realized_pct": 11.51,
+      "result_pct": 11.51,
+      "exec_pct": 11.51
     },
     {
       "id": "paper|NEARUSDT|2026-08-12T04:17:02",
@@ -2993,7 +3035,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 1.935,
+      "last_price": 1.957,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -11108,13 +11150,13 @@
     }
   ],
   "stats": {
-    "total": 477,
+    "total": 479,
     "open": 8,
-    "closed": 469,
-    "wins": 292,
-    "win_rate": 62.3,
-    "net_pct": 202.79,
-    "pf": 1.37,
+    "closed": 471,
+    "wins": 293,
+    "win_rate": 62.2,
+    "net_pct": 210.74,
+    "pf": 1.38,
     "simulated": 1
   }
 }
