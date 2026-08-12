@@ -7197,5 +7197,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|HYPERUSDT|2026-08-12 08:15:00": {
+    "symbol": "HYPERUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6719,
+    "entry": 0.0633664,
+    "stop": 0.0604,
+    "init_stop": 0.0604,
+    "cur_stop": 0.0604,
+    "legs": [
+      0.0633664,
+      0.0628,
+      0.0622336,
+      0.0614272
+    ],
+    "last_alert_stop": 0.0604,
+    "armed": false,
+    "targets": [
+      0.0652,
+      0.0665056,
+      0.0671872,
+      0.0681664,
+      0.07,
+      0.0729664,
+      0.0777664,
+      0.0807328
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-12 08:15:00",
+    "last_bar": "2026-08-12 08:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0633664,
+    "lo_seen": 0.0633664,
+    "created": "2026-08-12T08:32:36",
+    "dca_levels": [
+      0.0633664,
+      0.0628,
+      0.0622336,
+      0.0614272
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
