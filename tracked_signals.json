@@ -357,7 +357,7 @@
     "mgmt": "5050",
     "breakeven_done": false,
     "bar_ts": "2026-07-30 00:00:00",
-    "last_bar": "2026-08-12 10:59:59.999000",
+    "last_bar": "2026-08-12 11:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2041,
@@ -6780,7 +6780,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-11 04:00:00",
-    "last_bar": "2026-08-12 11:44:59.999000",
+    "last_bar": "2026-08-12 12:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1287,
@@ -6959,7 +6959,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-11 13:45:00",
-    "last_bar": "2026-08-12 11:44:59.999000",
+    "last_bar": "2026-08-12 12:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2488,
@@ -7015,10 +7015,10 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-11 23:00:00",
-    "last_bar": "2026-08-12 11:44:59.999000",
+    "last_bar": "2026-08-12 12:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 1.0257,
+    "hi_seen": 1.0262,
     "lo_seen": 1.0132536,
     "created": "2026-08-11T23:17:04",
     "dca_levels": [
@@ -7039,14 +7039,14 @@
     "entry": 1.619576,
     "stop": 1.538,
     "init_stop": 1.538,
-    "cur_stop": 1.619576,
+    "cur_stop": 1.6276738799999997,
     "legs": [
       1.619576,
       1.604,
       1.588424,
       1.566248
     ],
-    "last_alert_stop": 1.619576,
+    "last_alert_stop": 1.6276738799999997,
     "armed": false,
     "targets": [
       1.67,
@@ -7072,7 +7072,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-12 04:00:00",
-    "last_bar": "2026-08-12 11:44:59.999000",
+    "last_bar": "2026-08-12 12:44:59.999000",
     "hits": [
       1
     ],
@@ -7087,7 +7087,8 @@
       1.566248
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 3
   },
   "العرض/الطلب|PROMUSDT|2026-08-12 04:30:00": {
     "symbol": "PROMUSDT",
@@ -7130,12 +7131,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-12 04:30:00",
-    "last_bar": "2026-08-12 11:44:59.999000",
+    "last_bar": "2026-08-12 12:44:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 3.558,
+    "hi_seen": 3.627,
     "lo_seen": 2.448,
     "created": "2026-08-12T04:47:03",
     "dca_levels": [
@@ -7247,12 +7248,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-12 08:15:00",
-    "last_bar": "2026-08-12 11:44:59.999000",
+    "last_bar": "2026-08-12 12:44:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.0654,
+    "hi_seen": 0.0658,
     "lo_seen": 0.0631,
     "created": "2026-08-12T08:32:36",
     "dca_levels": [
@@ -7305,11 +7306,11 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-12 09:45:00",
-    "last_bar": "2026-08-12 11:44:59.999000",
+    "last_bar": "2026-08-12 12:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.056541,
-    "lo_seen": 0.0468,
+    "lo_seen": 0.0454,
     "created": "2026-08-12T10:02:16",
     "dca_levels": [
       0.056541,
