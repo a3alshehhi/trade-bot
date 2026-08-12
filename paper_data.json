@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-12T09:34:21",
+  "updated_at": "2026-08-12T09:49:09",
   "stats": {
-    "open": 15,
-    "closed": 450,
-    "win_rate": 66.4,
-    "profit_factor": 1.6,
-    "total_pct": 1203.47,
+    "open": 14,
+    "closed": 451,
+    "win_rate": 66.5,
+    "profit_factor": 1.61,
+    "total_pct": 1240.62,
     "avg_pct": 0.66,
     "max_drawdown_pct": -54.73
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-12",
-        "trades": 2,
-        "win_rate": 50.0,
-        "return_pct": -3.76,
+        "trades": 3,
+        "win_rate": 66.7,
+        "return_pct": -1.02,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -319,9 +319,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 34,
-        "win_rate": 47.1,
-        "return_pct": -36.25,
+        "trades": 35,
+        "win_rate": 48.6,
+        "return_pct": -34.43,
         "month": "2026-08"
       },
       {
@@ -363,9 +363,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 185,
-        "win_rate": 74.1,
-        "return_pct": 690.04
+        "trades": 186,
+        "win_rate": 74.2,
+        "return_pct": 712.56
       },
       {
         "key": "2026-07",
@@ -4707,10 +4707,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-10T06:02:26",
-      "closed_at": null,
-      "realized_pct": 2.6
+      "closed_at": "2026-08-12T09:47:24",
+      "realized_pct": 2.85,
+      "result_pct": 2.85
     },
     {
       "id": "العرض/الطلب|NEARUSDT|2026-08-10 08:30:00",
