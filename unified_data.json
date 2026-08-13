@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-13T07:51:01",
+  "updated_at": "2026-08-13T08:56:55",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|FETUSDT|2026-08-13T08:12:10",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "FETUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1366766,
+      "stop_orig": 0.1313,
+      "stop": 0.1313,
+      "targets": [],
+      "opened_at": "2026-08-13T08:12:10",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|FETUSDT|2026-08-13T08:09:51",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "FETUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1366766,
+      "stop_orig": 0.1313,
+      "stop": 0.1313,
+      "targets": [],
+      "opened_at": "2026-08-13T08:09:51",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|SEIUSDT|2026-08-13T07:19:55",
       "source": "paper",
@@ -3203,7 +3245,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.005,
+      "last_price": 2.002,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -11318,8 +11360,8 @@
     }
   ],
   "stats": {
-    "total": 487,
-    "open": 12,
+    "total": 489,
+    "open": 14,
     "closed": 475,
     "wins": 294,
     "win_rate": 61.9,
