@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-13T06:48:47",
+  "updated_at": "2026-08-13T07:07:26",
   "stats": {
-    "open": 16,
+    "open": 17,
     "closed": 461,
     "win_rate": 65.9,
     "profit_factor": 1.5,
@@ -4759,6 +4759,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-13T05:32:14",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|QKCUSDT|2026-08-13 06:45:00",
+      "symbol": "QKCUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00198549,
+      "stop": 0.001907,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-13T07:02:22",
       "closed_at": null,
       "realized_pct": 0.0
     },
