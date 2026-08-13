@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-13T15:43:03",
+  "updated_at": "2026-08-13T16:39:28",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|ATOMUSDT|2026-08-13T16:20:07",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ATOMUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.478902,
+      "stop_orig": 1.393,
+      "stop": 1.393,
+      "targets": [],
+      "opened_at": "2026-08-13T16:20:07",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|ATOMUSDT|2026-08-13T16:17:06",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ATOMUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.478902,
+      "stop_orig": 1.393,
+      "stop": 1.393,
+      "targets": [],
+      "opened_at": "2026-08-13T16:17:06",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|FETUSDT|2026-08-13T08:12:10",
       "source": "paper",
@@ -62,11 +104,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-13T15:49:53",
+      "realized_pct": 1.63,
+      "result_pct": 1.63,
+      "exec_pct": 1.63
     },
     {
       "id": "paper|SEIUSDT|2026-08-13T07:17:00",
@@ -85,11 +127,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-13T15:47:07",
+      "realized_pct": 1.63,
+      "result_pct": 1.63,
+      "exec_pct": 1.63
     },
     {
       "id": "paper|QKCUSDT|2026-08-13T07:02:22",
@@ -3253,7 +3295,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 1.967,
+      "last_price": 2.01,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -11368,13 +11410,13 @@
     }
   ],
   "stats": {
-    "total": 489,
+    "total": 491,
     "open": 12,
-    "closed": 477,
-    "wins": 295,
-    "win_rate": 61.8,
-    "net_pct": 164.6,
-    "pf": 1.27,
+    "closed": 479,
+    "wins": 297,
+    "win_rate": 62.0,
+    "net_pct": 167.86,
+    "pf": 1.28,
     "simulated": 1
   }
 }
