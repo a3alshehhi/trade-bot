@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13T10:19:41",
+  "updated_at": "2026-08-13T11:13:45",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -59,7 +59,9 @@
       "targets": [],
       "opened_at": "2026-08-13T07:19:55",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -80,7 +82,9 @@
       "targets": [],
       "opened_at": "2026-08-13T07:17:00",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -144,13 +148,15 @@
       "opened_at": "2026-08-13T04:32:35",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-13T11:02:46",
+      "realized_pct": 4.91,
+      "result_pct": 4.91,
+      "exec_pct": 4.91
     },
     {
       "id": "paper|DEXEUSDT|2026-08-13T03:17:07",
@@ -3247,7 +3253,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 1.996,
+      "last_price": 2.007,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -11363,11 +11369,11 @@
   ],
   "stats": {
     "total": 489,
-    "open": 13,
-    "closed": 476,
-    "wins": 294,
+    "open": 12,
+    "closed": 477,
+    "wins": 295,
     "win_rate": 61.8,
-    "net_pct": 159.69,
+    "net_pct": 164.6,
     "pf": 1.27,
     "simulated": 1
   }
