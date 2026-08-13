@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-13T09:35:12",
+  "updated_at": "2026-08-13T09:54:49",
   "stats": {
-    "open": 21,
-    "closed": 461,
-    "win_rate": 65.9,
-    "profit_factor": 1.5,
-    "total_pct": 816.04,
-    "avg_pct": 0.58,
-    "max_drawdown_pct": -63.04
+    "open": 20,
+    "closed": 462,
+    "win_rate": 65.8,
+    "profit_factor": 1.44,
+    "total_pct": 624.49,
+    "avg_pct": 0.53,
+    "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-13",
-        "trades": 3,
+        "trades": 4,
         "win_rate": 0.0,
-        "return_pct": -30.44,
+        "return_pct": -44.98,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -327,9 +327,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 45,
-        "win_rate": 46.7,
-        "return_pct": -55.2,
+        "trades": 46,
+        "win_rate": 45.7,
+        "return_pct": -64.56,
         "month": "2026-08"
       },
       {
@@ -371,9 +371,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 196,
-        "win_rate": 72.4,
-        "return_pct": 455.22
+        "trades": 197,
+        "win_rate": 72.1,
+        "return_pct": 339.12
       },
       {
         "key": "2026-07",
@@ -4648,10 +4648,11 @@
       "entry": 0.01504562,
       "stop": 0.0119,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-12T13:32:17",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-13T09:47:14",
+      "realized_pct": -20.91,
+      "result_pct": -20.91
     },
     {
       "id": "العرض/الطلب|MTLUSDT|2026-08-12 15:00:00",
