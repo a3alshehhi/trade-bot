@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-13T04:34:25",
+  "updated_at": "2026-08-13T06:04:21",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|IDUSDT|2026-08-13T05:32:14",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "IDUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0300102,
+      "stop_orig": 0.0276,
+      "stop": 0.0276,
+      "targets": [],
+      "opened_at": "2026-08-13T05:32:14",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|ESPUSDT|2026-08-13T04:32:35",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ESPUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.07286038,
+      "stop_orig": 0.06859,
+      "stop": 0.06859,
+      "targets": [],
+      "opened_at": "2026-08-13T04:32:35",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|DEXEUSDT|2026-08-13T03:17:07",
       "source": "paper",
@@ -3098,7 +3140,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.03,
+      "last_price": 2.008,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -11213,8 +11255,8 @@
     }
   ],
   "stats": {
-    "total": 482,
-    "open": 7,
+    "total": 484,
+    "open": 9,
     "closed": 475,
     "wins": 294,
     "win_rate": 61.9,
