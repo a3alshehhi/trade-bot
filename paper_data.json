@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-13T04:20:06",
+  "updated_at": "2026-08-13T04:34:09",
   "stats": {
-    "open": 14,
+    "open": 15,
     "closed": 461,
     "win_rate": 65.9,
     "profit_factor": 1.5,
@@ -4746,6 +4746,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-13T03:17:07",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ESPUSDT|2026-08-13 04:15:00",
+      "symbol": "ESPUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.07286038,
+      "stop": 0.06859,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-13T04:32:35",
       "closed_at": null,
       "realized_pct": 0.0
     },
