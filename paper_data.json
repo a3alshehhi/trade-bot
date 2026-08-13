@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-13T03:07:41",
+  "updated_at": "2026-08-13T03:18:46",
   "stats": {
-    "open": 15,
+    "open": 16,
     "closed": 459,
     "win_rate": 66.2,
     "profit_factor": 1.51,
@@ -2697,39 +2697,6 @@
       "realized_pct": 0.0
     },
     {
-      "id": "العرض/الطلب|ARBUSDT|2026-07-30 03:00:00",
-      "symbol": "ARBUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0787866,
-      "stop": 0.0765,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-07-30T03:16:13",
-      "closed_at": "2026-07-30T11:46:17",
-      "realized_pct": -0.61,
-      "result_pct": -0.61
-    },
-    {
-      "id": "العرض/الطلب|CGPTUSDT|2026-07-30 03:00:00",
-      "symbol": "CGPTUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.01807924,
-      "stop": 0.01735,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-30T03:16:13",
-      "closed_at": "2026-07-30T05:01:22",
-      "realized_pct": 3.38,
-      "result_pct": 3.38
-    },
-    {
       "id": "العرض/الطلب|ALPINEUSDT|2026-07-30 04:30:00",
       "symbol": "ALPINEUSDT",
       "label": "العرض/الطلب",
@@ -4767,6 +4734,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|DEXEUSDT|2026-08-13 03:00:00",
+      "symbol": "DEXEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 2.016218,
+      "stop": 1.892,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-13T03:17:07",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -4841,6 +4822,39 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|ARBUSDT|2026-07-30 03:00:00",
+      "symbol": "ARBUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0787866,
+      "stop": 0.0765,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-07-30T03:16:13",
+      "closed_at": "2026-07-30T11:46:17",
+      "realized_pct": -0.61,
+      "result_pct": -0.61
+    },
+    {
+      "id": "العرض/الطلب|CGPTUSDT|2026-07-30 03:00:00",
+      "symbol": "CGPTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01807924,
+      "stop": 0.01735,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-30T03:16:13",
+      "closed_at": "2026-07-30T05:01:22",
+      "realized_pct": 3.38,
+      "result_pct": 3.38
     },
     {
       "id": "العرض/الطلب|CELOUSDT|2026-07-29 17:45:00",
