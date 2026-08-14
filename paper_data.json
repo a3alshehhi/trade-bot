@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-14T16:37:11",
+  "updated_at": "2026-08-14T16:48:05",
   "stats": {
-    "open": 19,
-    "closed": 473,
-    "win_rate": 66.2,
-    "profit_factor": 1.49,
-    "total_pct": 863.45,
-    "avg_pct": 0.58,
+    "open": 18,
+    "closed": 474,
+    "win_rate": 66.0,
+    "profit_factor": 1.48,
+    "total_pct": 830.31,
+    "avg_pct": 0.57,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-14",
-        "trades": 7,
-        "win_rate": 85.7,
-        "return_pct": 24.15,
+        "trades": 8,
+        "win_rate": 75.0,
+        "return_pct": 19.88,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -335,9 +335,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 57,
-        "win_rate": 52.6,
-        "return_pct": -52.88,
+        "trades": 58,
+        "win_rate": 51.7,
+        "return_pct": -54.5,
         "month": "2026-08"
       },
       {
@@ -379,9 +379,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 208,
-        "win_rate": 72.6,
-        "return_pct": 483.96
+        "trades": 209,
+        "win_rate": 72.2,
+        "return_pct": 463.87
       },
       {
         "key": "2026-07",
@@ -4712,10 +4712,11 @@
       "entry": 0.0556439,
       "stop": 0.04727,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-14T08:10:57",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-14T16:39:37",
+      "realized_pct": -3.44,
+      "result_pct": -3.44
     },
     {
       "id": "العرض/الطلب|XAIUSDT|2026-08-14 12:00:00",
