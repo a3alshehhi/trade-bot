@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-14T08:21:03",
+  "updated_at": "2026-08-14T08:34:09",
   "stats": {
-    "open": 20,
-    "closed": 469,
-    "win_rate": 65.9,
-    "profit_factor": 1.45,
-    "total_pct": 706.26,
-    "avg_pct": 0.55,
+    "open": 18,
+    "closed": 471,
+    "win_rate": 66.0,
+    "profit_factor": 1.47,
+    "total_pct": 786.7,
+    "avg_pct": 0.57,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-14",
-        "trades": 3,
-        "win_rate": 66.7,
-        "return_pct": 3.9,
+        "trades": 5,
+        "win_rate": 80.0,
+        "return_pct": 14.26,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -335,9 +335,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 53,
-        "win_rate": 49.1,
-        "return_pct": -60.57,
+        "trades": 55,
+        "win_rate": 50.9,
+        "return_pct": -56.63,
         "month": "2026-08"
       },
       {
@@ -379,9 +379,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 204,
-        "win_rate": 72.1,
-        "return_pct": 388.68
+        "trades": 206,
+        "win_rate": 72.3,
+        "return_pct": 437.44
       },
       {
         "key": "2026-07",
@@ -1836,10 +1836,11 @@
         1,
         2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-13T16:20:07",
-      "closed_at": null,
-      "realized_pct": 1.8
+      "closed_at": "2026-08-14T08:34:09",
+      "realized_pct": 4.87,
+      "result_pct": 4.87
     },
     {
       "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
@@ -4634,10 +4635,11 @@
         1,
         2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-13T16:17:06",
-      "closed_at": null,
-      "realized_pct": 1.8
+      "closed_at": "2026-08-14T08:32:22",
+      "realized_pct": 4.87,
+      "result_pct": 4.87
     },
     {
       "id": "العرض/الطلب|SCRTUSDT|2026-08-13 21:00:00",
@@ -4710,7 +4712,7 @@
       "stop": 0.04727,
       "hits": [],
       "status": "open",
-      "opened_at": "2026-08-14T08:02:43",
+      "opened_at": "2026-08-14T08:10:57",
       "closed_at": null,
       "realized_pct": 0.0
     },
