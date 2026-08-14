@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-14T03:49:09",
+  "updated_at": "2026-08-14T04:04:23",
   "stats": {
-    "open": 18,
+    "open": 19,
     "closed": 468,
     "win_rate": 66.0,
     "profit_factor": 1.47,
@@ -4664,6 +4664,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-14T02:47:05",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|LAYERUSDT|2026-08-14 03:45:00",
+      "symbol": "LAYERUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0598248,
+      "stop": 0.0576,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-14T04:02:44",
       "closed_at": null,
       "realized_pct": 0.0
     },
