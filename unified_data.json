@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-14T09:49:20",
+  "updated_at": "2026-08-14T10:43:06",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -62,11 +62,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-14T09:47:25",
+      "realized_pct": 1.15,
+      "result_pct": 1.15,
+      "exec_pct": 1.15
     },
     {
       "id": "paper|STORJUSDT|2026-08-14T02:47:05",
@@ -3414,7 +3414,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 1.947,
+      "last_price": 1.932,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -11530,11 +11530,11 @@
   ],
   "stats": {
     "total": 496,
-    "open": 11,
-    "closed": 485,
-    "wins": 301,
+    "open": 10,
+    "closed": 486,
+    "wins": 302,
     "win_rate": 62.1,
-    "net_pct": 180.64,
+    "net_pct": 181.79,
     "pf": 1.3,
     "simulated": 1
   }
