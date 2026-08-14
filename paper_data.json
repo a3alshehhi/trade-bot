@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-14T15:27:45",
+  "updated_at": "2026-08-14T15:37:52",
   "stats": {
     "open": 19,
-    "closed": 472,
-    "win_rate": 66.1,
-    "profit_factor": 1.47,
-    "total_pct": 796.9,
-    "avg_pct": 0.57,
+    "closed": 473,
+    "win_rate": 66.2,
+    "profit_factor": 1.49,
+    "total_pct": 863.45,
+    "avg_pct": 0.58,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-14",
-        "trades": 6,
-        "win_rate": 83.3,
-        "return_pct": 15.58,
+        "trades": 7,
+        "win_rate": 85.7,
+        "return_pct": 24.15,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -335,9 +335,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 56,
-        "win_rate": 51.8,
-        "return_pct": -56.13,
+        "trades": 57,
+        "win_rate": 52.6,
+        "return_pct": -52.88,
         "month": "2026-08"
       },
       {
@@ -379,9 +379,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 207,
-        "win_rate": 72.5,
-        "return_pct": 443.62
+        "trades": 208,
+        "win_rate": 72.6,
+        "return_pct": 483.96
       },
       {
         "key": "2026-07",
@@ -4744,10 +4744,25 @@
         2,
         3
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-14T13:47:34",
+      "closed_at": "2026-08-14T15:32:36",
+      "realized_pct": 7.42,
+      "result_pct": 7.42
+    },
+    {
+      "id": "العرض/الطلب|HEIUSDT|2026-08-14 15:15:00",
+      "symbol": "HEIUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1538372,
+      "stop": 0.1196,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-14T15:32:27",
       "closed_at": null,
-      "realized_pct": 2.74
+      "realized_pct": 0.0
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
