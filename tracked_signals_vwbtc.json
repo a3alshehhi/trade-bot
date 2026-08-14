@@ -4749,7 +4749,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-12 16:30:00",
-    "last_bar": "2026-08-14 08:29:59.999000",
+    "last_bar": "2026-08-14 08:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 59.27,
@@ -4895,14 +4895,14 @@
     "entry": 0.1366766,
     "stop": 0.1313,
     "init_stop": 0.1313,
-    "cur_stop": 0.1313,
+    "cur_stop": 0.13372799999999999,
     "legs": [
       0.1366766,
       0.13565,
       0.1346234,
       0.1331618
     ],
-    "last_alert_stop": 0.1313,
+    "last_alert_stop": 0.13372799999999999,
     "armed": false,
     "targets": [
       0.14,
@@ -4928,10 +4928,10 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-13 07:45:00",
-    "last_bar": "2026-08-14 08:29:59.999000",
+    "last_bar": "2026-08-14 08:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.1376,
+    "hi_seen": 0.1383,
     "lo_seen": 0.1337,
     "created": "2026-08-13T08:09:51",
     "dca_levels": [
@@ -4941,7 +4941,8 @@
       0.1331618
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2
   },
   "الفيواب الأسبوعي · BTC|ATOMUSDT|2026-08-13 16:00:00": {
     "symbol": "ATOMUSDT",
