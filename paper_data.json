@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-14T21:19:23",
+  "updated_at": "2026-08-14T21:34:30",
   "stats": {
-    "open": 20,
+    "open": 21,
     "closed": 476,
     "win_rate": 65.8,
     "profit_factor": 1.47,
@@ -4786,6 +4786,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-14T20:09:48",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|GUSDT|2026-08-14 21:15:00",
+      "symbol": "GUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00365068,
+      "stop": 0.00349,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-14T21:32:29",
       "closed_at": null,
       "realized_pct": 0.0
     },
