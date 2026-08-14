@@ -7210,5 +7210,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|SOMIUSDT|2026-08-14 07:15:00": {
+    "symbol": "SOMIUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6836,
+    "entry": 0.0902114,
+    "stop": 0.0857,
+    "init_stop": 0.0857,
+    "cur_stop": 0.0857,
+    "legs": [
+      0.0902114,
+      0.08935,
+      0.0884886,
+      0.0872622
+    ],
+    "last_alert_stop": 0.0857,
+    "armed": false,
+    "targets": [
+      0.093,
+      0.0949856,
+      0.0960222,
+      0.0975114,
+      0.1003,
+      0.1048114,
+      0.1121114,
+      0.1166228
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-14 07:15:00",
+    "last_bar": "2026-08-14 07:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0902114,
+    "lo_seen": 0.0902114,
+    "created": "2026-08-14T07:32:06",
+    "dca_levels": [
+      0.0902114,
+      0.08935,
+      0.0884886,
+      0.0872622
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
