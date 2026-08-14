@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-14T19:06:47",
+  "updated_at": "2026-08-14T19:53:18",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -305,11 +305,11 @@
       "opened_at": "2026-08-13T08:12:10",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-14T19:17:04",
+      "realized_pct": -2.16,
+      "result_pct": -2.16,
+      "exec_pct": -2.16
     },
     {
       "id": "paper|FETUSDT|2026-08-13T08:09:51",
@@ -326,11 +326,11 @@
       "opened_at": "2026-08-13T08:09:51",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-14T19:22:59",
+      "realized_pct": -2.16,
+      "result_pct": -2.16,
+      "exec_pct": -2.16
     },
     {
       "id": "paper|SEIUSDT|2026-08-13T07:19:55",
@@ -3544,7 +3544,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 1.918,
+      "last_price": 1.925,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -11660,11 +11660,11 @@
   ],
   "stats": {
     "total": 502,
-    "open": 14,
-    "closed": 488,
+    "open": 12,
+    "closed": 490,
     "wins": 303,
-    "win_rate": 62.1,
-    "net_pct": 185.77,
+    "win_rate": 61.8,
+    "net_pct": 181.45,
     "pf": 1.3,
     "simulated": 1
   }
