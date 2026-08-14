@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-14T02:37:14",
+  "updated_at": "2026-08-14T04:30:22",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|LAYERUSDT|2026-08-14T04:02:44",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "LAYERUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0598248,
+      "stop_orig": 0.0576,
+      "stop": 0.0576,
+      "targets": [],
+      "opened_at": "2026-08-14T04:02:44",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|STORJUSDT|2026-08-14T02:47:05",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "STORJUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0479048,
+      "stop_orig": 0.0395,
+      "stop": 0.0395,
+      "targets": [],
+      "opened_at": "2026-08-14T02:47:05",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|SCRTUSDT|2026-08-13T21:17:09",
       "source": "paper",
@@ -3326,7 +3368,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 2.014,
+      "last_price": 1.999,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -11441,8 +11483,8 @@
     }
   ],
   "stats": {
-    "total": 492,
-    "open": 10,
+    "total": 494,
+    "open": 12,
     "closed": 482,
     "wins": 299,
     "win_rate": 62.0,
