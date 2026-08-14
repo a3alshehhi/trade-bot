@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-14T18:53:10",
+  "updated_at": "2026-08-14T19:04:37",
   "stats": {
-    "open": 20,
+    "open": 21,
     "closed": 474,
     "win_rate": 66.0,
     "profit_factor": 1.48,
@@ -2772,23 +2772,6 @@
       "result_pct": 1.38
     },
     {
-      "id": "العرض/الطلب|ALTUSDT|2026-07-31 18:45:00",
-      "symbol": "ALTUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.00577158,
-      "stop": 0.00558,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-07-31T19:01:25",
-      "closed_at": "2026-08-01T01:31:20",
-      "realized_pct": 2.05,
-      "result_pct": 2.05
-    },
-    {
       "id": "العرض/الطلب|CYBERUSDT|2026-07-31 19:30:00",
       "symbol": "CYBERUSDT",
       "label": "العرض/الطلب",
@@ -4794,6 +4777,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|AGLDUSDT|2026-08-14 18:45:00",
+      "symbol": "AGLDUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1615676,
+      "stop": 0.1565,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-14T19:02:39",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -4868,6 +4865,23 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|ALTUSDT|2026-07-31 18:45:00",
+      "symbol": "ALTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00577158,
+      "stop": 0.00558,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-07-31T19:01:25",
+      "closed_at": "2026-08-01T01:31:20",
+      "realized_pct": 2.05,
+      "result_pct": 2.05
     },
     {
       "id": "العرض/الطلب|ALGOUSDT|2026-07-31 02:00:00",
