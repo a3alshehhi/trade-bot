@@ -7508,5 +7508,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|COOKIEUSDT|2026-08-14 16:45:00": {
+    "symbol": "COOKIEUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6878,
+    "entry": 0.0129068,
+    "stop": 0.0113,
+    "init_stop": 0.0113,
+    "cur_stop": 0.0113,
+    "legs": [
+      0.0129068,
+      0.0126,
+      0.0122932,
+      0.0118564
+    ],
+    "last_alert_stop": 0.0113,
+    "armed": false,
+    "targets": [
+      0.0139,
+      0.0146072,
+      0.0149764,
+      0.0155068,
+      0.0165,
+      0.0181068,
+      0.0207068,
+      0.0223136
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-14 16:45:00",
+    "last_bar": "2026-08-14 16:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0129068,
+    "lo_seen": 0.0129068,
+    "created": "2026-08-14T17:02:08",
+    "dca_levels": [
+      0.0129068,
+      0.0126,
+      0.0122932,
+      0.0118564
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
