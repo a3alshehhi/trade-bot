@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-14T19:04:37",
+  "updated_at": "2026-08-14T19:23:00",
   "stats": {
-    "open": 21,
-    "closed": 474,
-    "win_rate": 66.0,
-    "profit_factor": 1.48,
-    "total_pct": 830.31,
-    "avg_pct": 0.57,
+    "open": 19,
+    "closed": 476,
+    "win_rate": 65.8,
+    "profit_factor": 1.47,
+    "total_pct": 790.55,
+    "avg_pct": 0.56,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-14",
-        "trades": 8,
-        "win_rate": 75.0,
-        "return_pct": 19.88,
+        "trades": 10,
+        "win_rate": 60.0,
+        "return_pct": 14.76,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -335,9 +335,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 58,
-        "win_rate": 51.7,
-        "return_pct": -54.5,
+        "trades": 60,
+        "win_rate": 50.0,
+        "return_pct": -56.44,
         "month": "2026-08"
       },
       {
@@ -379,9 +379,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 209,
-        "win_rate": 72.2,
-        "return_pct": 463.87
+        "trades": 211,
+        "win_rate": 71.6,
+        "return_pct": 439.77
       },
       {
         "key": "2026-07",
@@ -1819,10 +1819,11 @@
       "entry": 0.1366766,
       "stop": 0.1313,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-13T08:09:51",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-14T19:22:59",
+      "realized_pct": -2.16,
+      "result_pct": -2.16
     },
     {
       "id": "الفيواب الأسبوعي · BTC|ATOMUSDT|2026-08-13 16:00:00",
@@ -4601,10 +4602,11 @@
       "entry": 0.1366766,
       "stop": 0.1313,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-13T08:12:10",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-14T19:17:04",
+      "realized_pct": -2.16,
+      "result_pct": -2.16
     },
     {
       "id": "العرض/الطلب|ATOMUSDT|2026-08-13 16:00:00",
