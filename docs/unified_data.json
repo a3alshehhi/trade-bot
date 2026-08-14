@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-14T19:53:18",
+  "updated_at": "2026-08-14T20:38:40",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|RLCUSDT|2026-08-14T20:09:48",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "RLCUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2826726,
+      "stop_orig": 0.2637,
+      "stop": 0.2637,
+      "targets": [],
+      "opened_at": "2026-08-14T20:09:48",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|AGLDUSDT|2026-08-14T19:02:39",
       "source": "paper",
@@ -3544,7 +3565,7 @@
       "cur_stop": 2.23185,
       "remaining": 0.0,
       "pnl_usdt": -2.8156,
-      "last_price": 1.925,
+      "last_price": 1.942,
       "events": [
         {
           "ts": "2026-08-05T15:00:00",
@@ -11659,8 +11680,8 @@
     }
   ],
   "stats": {
-    "total": 502,
-    "open": 12,
+    "total": 503,
+    "open": 13,
     "closed": 490,
     "wins": 303,
     "win_rate": 61.8,
