@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-15T03:20:23",
+  "updated_at": "2026-08-15T03:34:00",
   "stats": {
-    "open": 21,
+    "open": 23,
     "closed": 478,
     "win_rate": 65.7,
     "profit_factor": 1.47,
@@ -2781,23 +2781,6 @@
       "result_pct": 1.38
     },
     {
-      "id": "العرض/الطلب|DASHUSDT|2026-08-01 02:30:00",
-      "symbol": "DASHUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 30.58276,
-      "stop": 28.84,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-01T02:46:17",
-      "closed_at": "2026-08-01T06:46:26",
-      "realized_pct": 3.52,
-      "result_pct": 3.52
-    },
-    {
       "id": "العرض/الطلب|ANKRUSDT|2026-08-01 07:15:00",
       "symbol": "ANKRUSDT",
       "label": "العرض/الطلب",
@@ -4856,6 +4839,34 @@
       "realized_pct": 0.84
     },
     {
+      "id": "العرض/الطلب|ICPUSDT|2026-08-15 03:15:00",
+      "symbol": "ICPUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 2.252656,
+      "stop": 2.134,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-15T03:32:10",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|WUSDT|2026-08-15 03:15:00",
+      "symbol": "WUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00818338,
+      "stop": 0.00793,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-15T03:32:10",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -4930,6 +4941,23 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|DASHUSDT|2026-08-01 02:30:00",
+      "symbol": "DASHUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 30.58276,
+      "stop": 28.84,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-01T02:46:17",
+      "closed_at": "2026-08-01T06:46:26",
+      "realized_pct": 3.52,
+      "result_pct": 3.52
     },
     {
       "id": "العرض/الطلب|CYBERUSDT|2026-07-31 19:30:00",
