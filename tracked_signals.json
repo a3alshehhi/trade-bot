@@ -8431,5 +8431,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|VTHOUSDT|2026-08-15 16:45:00": {
+    "symbol": "VTHOUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6961,
+    "entry": 0.00032065,
+    "stop": 0.000312,
+    "init_stop": 0.000312,
+    "cur_stop": 0.000312,
+    "legs": [
+      0.00032065,
+      0.000319,
+      0.00031735,
+      0.000315
+    ],
+    "last_alert_stop": 0.000312,
+    "armed": false,
+    "targets": [
+      0.000326,
+      0.00032981,
+      0.0003318,
+      0.00033465,
+      0.00034,
+      0.00034865,
+      0.00036265,
+      0.0003713
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-15 16:45:00",
+    "last_bar": "2026-08-15 16:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00032065,
+    "lo_seen": 0.00032065,
+    "created": "2026-08-15T17:02:41",
+    "dca_levels": [
+      0.00032065,
+      0.000319,
+      0.00031735,
+      0.000315
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }

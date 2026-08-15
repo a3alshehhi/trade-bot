@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-15T16:59:20",
+  "updated_at": "2026-08-15T17:04:46",
   "stats": {
-    "open": 25,
+    "open": 26,
     "closed": 487,
     "win_rate": 65.7,
     "profit_factor": 1.45,
@@ -5008,6 +5008,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-15T16:47:27",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|VTHOUSDT|2026-08-15 16:45:00",
+      "symbol": "VTHOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00032065,
+      "stop": 0.000312,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-15T17:02:41",
       "closed_at": null,
       "realized_pct": 0.0
     },
