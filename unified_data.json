@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T14:04:54",
+  "updated_at": "2026-08-15T14:34:29",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -144,11 +144,11 @@
       "opened_at": "2026-08-15T05:32:37",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-15T14:02:39",
+      "realized_pct": -0.5,
+      "result_pct": -0.5,
+      "exec_pct": -0.5
     },
     {
       "id": "paper|RENDERUSDT|2026-08-15T05:17:20",
@@ -12001,11 +12001,11 @@
   ],
   "stats": {
     "total": 517,
-    "open": 18,
-    "closed": 499,
+    "open": 17,
+    "closed": 500,
     "wins": 310,
-    "win_rate": 62.1,
-    "net_pct": 183.84,
+    "win_rate": 62.0,
+    "net_pct": 183.34,
     "pf": 1.29,
     "simulated": 1
   }
