@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-15T13:01:21",
+  "updated_at": "2026-08-15T13:05:38",
   "stats": {
-    "open": 22,
+    "open": 23,
     "closed": 485,
     "win_rate": 66.0,
     "profit_factor": 1.46,
@@ -4932,6 +4932,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-15T12:47:01",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|BREVUSDT|2026-08-15 12:45:00",
+      "symbol": "BREVUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.068072,
+      "stop": 0.0656,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-15T13:03:42",
       "closed_at": null,
       "realized_pct": 0.0
     },
