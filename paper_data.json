@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T00:28:53",
+  "updated_at": "2026-08-15T00:34:15",
   "stats": {
     "open": 21,
     "closed": 477,
@@ -4808,11 +4808,13 @@
       "timeframe": "15m",
       "entry": 0.00365068,
       "stop": 0.00349,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-14T21:32:29",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.36
     },
     {
       "id": "العرض/الطلب|THETAUSDT|2026-08-14 22:00:00",
