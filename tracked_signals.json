@@ -7987,5 +7987,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|1000SATSUSDT|2026-08-15 05:15:00": {
+    "symbol": "1000SATSUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6932,
+    "entry": 1.04e-05,
+    "stop": 9.89e-06,
+    "init_stop": 9.89e-06,
+    "cur_stop": 9.89e-06,
+    "legs": [
+      1.04e-05,
+      1.03e-05,
+      1.02e-05,
+      1.007e-05
+    ],
+    "last_alert_stop": 9.89e-06,
+    "armed": false,
+    "targets": [
+      1.071e-05,
+      1.093e-05,
+      1.105e-05,
+      1.122e-05,
+      1.153e-05,
+      1.204e-05,
+      1.286e-05,
+      1.336e-05
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-15 05:15:00",
+    "last_bar": "2026-08-15 05:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1.04e-05,
+    "lo_seen": 1.04e-05,
+    "created": "2026-08-15T05:32:37",
+    "dca_levels": [
+      1.04e-05,
+      1.03e-05,
+      1.02e-05,
+      1.007e-05
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
