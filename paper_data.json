@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-15T05:15:23",
+  "updated_at": "2026-08-15T05:19:21",
   "stats": {
-    "open": 24,
+    "open": 25,
     "closed": 478,
     "win_rate": 65.7,
     "profit_factor": 1.47,
@@ -4878,6 +4878,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-15T03:51:14",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|RENDERUSDT|2026-08-15 05:00:00",
+      "symbol": "RENDERUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.267192,
+      "stop": 1.24,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-15T05:17:20",
       "closed_at": null,
       "realized_pct": 0.0
     },
