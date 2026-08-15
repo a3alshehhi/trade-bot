@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-15T21:39:04",
+  "updated_at": "2026-08-15T21:49:36",
   "stats": {
-    "open": 30,
-    "closed": 487,
-    "win_rate": 65.7,
+    "open": 29,
+    "closed": 488,
+    "win_rate": 65.6,
     "profit_factor": 1.45,
-    "total_pct": 776.42,
+    "total_pct": 771.07,
     "avg_pct": 0.55,
     "max_drawdown_pct": -70.77
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-15",
-        "trades": 11,
-        "win_rate": 63.6,
-        "return_pct": -1.59,
+        "trades": 12,
+        "win_rate": 58.3,
+        "return_pct": -2.19,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -343,9 +343,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 71,
-        "win_rate": 52.1,
-        "return_pct": -57.13,
+        "trades": 72,
+        "win_rate": 51.4,
+        "return_pct": -57.4,
         "month": "2026-08"
       },
       {
@@ -387,9 +387,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 222,
-        "win_rate": 71.2,
-        "return_pct": 431.2
+        "trades": 223,
+        "win_rate": 70.9,
+        "return_pct": 427.96
       },
       {
         "key": "2026-07",
@@ -4946,10 +4946,11 @@
       "entry": 0.068072,
       "stop": 0.0656,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-15T13:03:42",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-15T21:47:26",
+      "realized_pct": -0.61,
+      "result_pct": -0.61
     },
     {
       "id": "العرض/الطلب|WALUSDT|2026-08-15 13:15:00",
