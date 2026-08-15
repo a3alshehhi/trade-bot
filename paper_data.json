@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-08-15T00:00:33",
+  "updated_at": "2026-08-15T00:05:58",
   "stats": {
-    "open": 22,
-    "closed": 476,
+    "open": 21,
+    "closed": 477,
     "win_rate": 65.8,
-    "profit_factor": 1.47,
-    "total_pct": 790.55,
-    "avg_pct": 0.56,
+    "profit_factor": 1.48,
+    "total_pct": 854.05,
+    "avg_pct": 0.57,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-08-15",
+        "trades": 1,
+        "win_rate": 100.0,
+        "return_pct": 7.13,
+        "week": "2026-W33",
+        "month": "2026-08"
+      },
       {
         "key": "2026-08-14",
         "trades": 10,
@@ -335,9 +343,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 60,
-        "win_rate": 50.0,
-        "return_pct": -56.44,
+        "trades": 61,
+        "win_rate": 50.8,
+        "return_pct": -53.34,
         "month": "2026-08"
       },
       {
@@ -379,9 +387,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 211,
-        "win_rate": 71.6,
-        "return_pct": 439.77
+        "trades": 212,
+        "win_rate": 71.7,
+        "return_pct": 478.26
       },
       {
         "key": "2026-07",
@@ -4730,10 +4738,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-14T15:32:27",
-      "closed_at": null,
-      "realized_pct": 6.88
+      "closed_at": "2026-08-15T00:03:03",
+      "realized_pct": 7.13,
+      "result_pct": 7.13
     },
     {
       "id": "العرض/الطلب|COOKIEUSDT|2026-08-14 16:45:00",
