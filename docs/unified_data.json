@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-15T20:34:16",
+  "updated_at": "2026-08-15T20:57:16",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|ORDIUSDT|2026-08-15T20:47:34",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ORDIUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 3.456778,
+      "stop_orig": 3.382,
+      "stop": 3.382,
+      "targets": [],
+      "opened_at": "2026-08-15T20:47:34",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|ACHUSDT|2026-08-15T20:05:09",
       "source": "paper",
@@ -12109,8 +12130,8 @@
     }
   ],
   "stats": {
-    "total": 522,
-    "open": 21,
+    "total": 523,
+    "open": 22,
     "closed": 501,
     "wins": 310,
     "win_rate": 61.9,
