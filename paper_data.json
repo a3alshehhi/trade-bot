@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-15T13:59:58",
+  "updated_at": "2026-08-15T14:04:39",
   "stats": {
-    "open": 25,
-    "closed": 485,
-    "win_rate": 66.0,
+    "open": 24,
+    "closed": 486,
+    "win_rate": 65.8,
     "profit_factor": 1.46,
-    "total_pct": 799.44,
-    "avg_pct": 0.56,
+    "total_pct": 794.94,
+    "avg_pct": 0.55,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-15",
-        "trades": 9,
-        "win_rate": 77.8,
-        "return_pct": 1.0,
+        "trades": 10,
+        "win_rate": 70.0,
+        "return_pct": 0.49,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -343,9 +343,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 69,
-        "win_rate": 53.6,
-        "return_pct": -56.01,
+        "trades": 70,
+        "win_rate": 52.9,
+        "return_pct": -56.23,
         "month": "2026-08"
       },
       {
@@ -387,9 +387,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 220,
-        "win_rate": 71.8,
-        "return_pct": 445.16
+        "trades": 221,
+        "win_rate": 71.5,
+        "return_pct": 442.43
       },
       {
         "key": "2026-07",
@@ -4888,10 +4888,11 @@
       "entry": 1.04e-05,
       "stop": 9.89e-06,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-15T05:32:37",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-15T14:02:39",
+      "realized_pct": -0.5,
+      "result_pct": -0.5
     },
     {
       "id": "العرض/الطلب|GASUSDT|2026-08-15 08:00:00",
