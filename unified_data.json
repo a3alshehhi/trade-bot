@@ -1,8 +1,31 @@
 {
-  "updated_at": "2026-08-15T14:34:29",
+  "updated_at": "2026-08-15T15:30:25",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|ARUSDT|2026-08-15T14:32:03",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ARUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.767092,
+      "stop_orig": 1.709,
+      "stop": 1.709,
+      "targets": [],
+      "opened_at": "2026-08-15T14:32:03",
+      "usd": 100.0,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|CKBUSDT|2026-08-15T13:47:33",
       "source": "paper",
@@ -17,7 +40,9 @@
       "targets": [],
       "opened_at": "2026-08-15T13:47:33",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -327,11 +352,11 @@
       "opened_at": "2026-08-14T20:09:48",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-15T14:54:51",
+      "realized_pct": -2.07,
+      "result_pct": -2.07,
+      "exec_pct": -2.07
     },
     {
       "id": "paper|AGLDUSDT|2026-08-14T19:02:39",
@@ -12000,12 +12025,12 @@
     }
   ],
   "stats": {
-    "total": 517,
+    "total": 518,
     "open": 17,
-    "closed": 500,
+    "closed": 501,
     "wins": 310,
-    "win_rate": 62.0,
-    "net_pct": 183.34,
+    "win_rate": 61.9,
+    "net_pct": 181.27,
     "pf": 1.29,
     "simulated": 1
   }
