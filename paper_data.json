@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-15T08:42:12",
+  "updated_at": "2026-08-15T08:52:38",
   "stats": {
-    "open": 25,
+    "open": 26,
     "closed": 480,
     "win_rate": 65.8,
     "profit_factor": 1.47,
@@ -4909,6 +4909,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-15T08:16:59",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|HOTUSDT|2026-08-15 08:30:00",
+      "symbol": "HOTUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00034614,
+      "stop": 0.000314,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-15T08:47:27",
       "closed_at": null,
       "realized_pct": 0.0
     },
