@@ -8488,5 +8488,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|XAIUSDT|2026-08-15 19:45:00": {
+    "symbol": "XAIUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6974,
+    "entry": 0.0066999,
+    "stop": 0.00636,
+    "init_stop": 0.00636,
+    "cur_stop": 0.00636,
+    "legs": [
+      0.0066999,
+      0.006635,
+      0.0065701,
+      0.0064777
+    ],
+    "last_alert_stop": 0.00636,
+    "armed": false,
+    "targets": [
+      0.00691,
+      0.0070596,
+      0.0071377,
+      0.0072499,
+      0.00746,
+      0.0077999,
+      0.0083499,
+      0.0086898
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-15 19:45:00",
+    "last_bar": "2026-08-15 19:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0066999,
+    "lo_seen": 0.0066999,
+    "created": "2026-08-15T20:00:59",
+    "dca_levels": [
+      0.0066999,
+      0.006635,
+      0.0065701,
+      0.0064777
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }

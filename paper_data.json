@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-15T19:50:41",
+  "updated_at": "2026-08-15T20:03:02",
   "stats": {
-    "open": 26,
+    "open": 27,
     "closed": 487,
     "win_rate": 65.7,
     "profit_factor": 1.45,
@@ -5022,6 +5022,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-15T17:02:41",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|XAIUSDT|2026-08-15 19:45:00",
+      "symbol": "XAIUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0066999,
+      "stop": 0.00636,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-15T20:00:59",
       "closed_at": null,
       "realized_pct": 0.0
     },
