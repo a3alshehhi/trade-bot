@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T15:01:26",
+  "updated_at": "2026-08-15T15:05:49",
   "stats": {
     "open": 24,
     "closed": 487,
@@ -4760,7 +4760,7 @@
       "hits": [],
       "status": "closed",
       "opened_at": "2026-08-14T20:09:48",
-      "closed_at": "2026-08-15T14:54:51",
+      "closed_at": "2026-08-15T14:47:31",
       "realized_pct": -2.07,
       "result_pct": -2.07
     },
@@ -4973,11 +4973,13 @@
       "timeframe": "15m",
       "entry": 0.00082319,
       "stop": 0.000796,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-15T13:47:33",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.02
     },
     {
       "id": "العرض/الطلب|ARUSDT|2026-08-15 14:15:00",
