@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-15T22:53:02",
+  "updated_at": "2026-08-15T23:28:51",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|LINEAUSDT|2026-08-15T23:17:41",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "LINEAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00219553,
+      "stop_orig": 0.002088,
+      "stop": 0.002088,
+      "targets": [],
+      "opened_at": "2026-08-15T23:17:41",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|WLDUSDT|2026-08-15T21:02:09",
       "source": "paper",
@@ -275,7 +296,9 @@
       "targets": [],
       "opened_at": "2026-08-15T08:16:59",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -12153,8 +12176,8 @@
     }
   ],
   "stats": {
-    "total": 524,
-    "open": 22,
+    "total": 525,
+    "open": 23,
     "closed": 502,
     "wins": 310,
     "win_rate": 61.8,
