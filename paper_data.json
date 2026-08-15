@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-15T08:20:12",
+  "updated_at": "2026-08-15T08:42:12",
   "stats": {
-    "open": 26,
-    "closed": 479,
+    "open": 25,
+    "closed": 480,
     "win_rate": 65.8,
     "profit_factor": 1.47,
-    "total_pct": 823.91,
+    "total_pct": 847.93,
     "avg_pct": 0.57,
     "max_drawdown_pct": -70.77
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-15",
-        "trades": 3,
-        "win_rate": 66.7,
-        "return_pct": 3.75,
+        "trades": 4,
+        "win_rate": 75.0,
+        "return_pct": 6.44,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -343,9 +343,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 63,
-        "win_rate": 50.8,
-        "return_pct": -54.81,
+        "trades": 64,
+        "win_rate": 51.6,
+        "return_pct": -53.64,
         "month": "2026-08"
       },
       {
@@ -387,9 +387,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 214,
-        "win_rate": 71.5,
-        "return_pct": 459.99
+        "trades": 215,
+        "win_rate": 71.6,
+        "return_pct": 474.55
       },
       {
         "key": "2026-07",
@@ -4850,10 +4850,11 @@
         2,
         3
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-15T03:32:10",
-      "closed_at": null,
-      "realized_pct": 0.96
+      "closed_at": "2026-08-15T08:32:35",
+      "realized_pct": 2.6,
+      "result_pct": 2.6
     },
     {
       "id": "العرض/الطلب|CHZUSDT|2026-08-15 03:30:00",
