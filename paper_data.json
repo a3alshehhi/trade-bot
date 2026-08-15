@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-15T20:03:02",
+  "updated_at": "2026-08-15T20:07:25",
   "stats": {
-    "open": 27,
+    "open": 28,
     "closed": 487,
     "win_rate": 65.7,
     "profit_factor": 1.45,
@@ -5026,6 +5026,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|ACHUSDT|2026-08-15 19:45:00",
+      "symbol": "ACHUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00420158,
+      "stop": 0.00401,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-15T20:05:09",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "العرض/الطلب|XAIUSDT|2026-08-15 19:45:00",
       "symbol": "XAIUSDT",
       "label": "العرض/الطلب",
@@ -5035,7 +5049,7 @@
       "stop": 0.00636,
       "hits": [],
       "status": "open",
-      "opened_at": "2026-08-15T20:00:59",
+      "opened_at": "2026-08-15T20:05:09",
       "closed_at": null,
       "realized_pct": 0.0
     },
