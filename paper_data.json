@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-15T20:56:59",
+  "updated_at": "2026-08-15T21:04:20",
   "stats": {
-    "open": 29,
+    "open": 30,
     "closed": 487,
     "win_rate": 65.7,
     "profit_factor": 1.45,
@@ -5066,6 +5066,22 @@
       "opened_at": "2026-08-15T20:54:46",
       "closed_at": null,
       "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|WLDUSDT|2026-08-15 20:45:00",
+      "symbol": "WLDUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.3465252,
+      "stop": 0.3333,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "opened_at": "2026-08-15T21:02:09",
+      "closed_at": null,
+      "realized_pct": 1.18
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
