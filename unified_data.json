@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-15T12:04:18",
+  "updated_at": "2026-08-15T13:38:25",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|BREVUSDT|2026-08-15T13:03:42",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "BREVUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.068072,
+      "stop_orig": 0.0656,
+      "stop": 0.0656,
+      "targets": [],
+      "opened_at": "2026-08-15T13:03:42",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|API3USDT|2026-08-15T12:47:01",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "API3USDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1977522,
+      "stop_orig": 0.1836,
+      "stop": 0.1836,
+      "targets": [],
+      "opened_at": "2026-08-15T12:47:01",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|HOTUSDT|2026-08-15T08:47:27",
       "source": "paper",
@@ -123,11 +165,11 @@
       "opened_at": "2026-08-15T03:32:10",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-15T12:02:22",
+      "realized_pct": 0.62,
+      "result_pct": 0.62,
+      "exec_pct": 0.62
     },
     {
       "id": "paper|WUSDT|2026-08-15T03:32:10",
@@ -6302,11 +6344,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-15T12:02:13",
+      "realized_pct": 1.58,
+      "result_pct": 1.58,
+      "exec_pct": 1.58
     },
     {
       "id": "binance|DIAUSDT|2026-07-29T18:08:39",
@@ -11916,12 +11958,12 @@
     }
   ],
   "stats": {
-    "total": 513,
+    "total": 515,
     "open": 16,
-    "closed": 497,
-    "wins": 308,
-    "win_rate": 62.0,
-    "net_pct": 181.64,
+    "closed": 499,
+    "wins": 310,
+    "win_rate": 62.1,
+    "net_pct": 183.84,
     "pf": 1.29,
     "simulated": 1
   }
