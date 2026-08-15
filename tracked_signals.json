@@ -8600,5 +8600,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|ORDIUSDT|2026-08-15 20:30:00": {
+    "symbol": "ORDIUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6976,
+    "entry": 3.456778,
+    "stop": 3.382,
+    "init_stop": 3.382,
+    "cur_stop": 3.382,
+    "legs": [
+      3.456778,
+      3.4425,
+      3.428222,
+      3.407894
+    ],
+    "last_alert_stop": 3.382,
+    "armed": false,
+    "targets": [
+      3.503,
+      3.535912,
+      3.553094,
+      3.577778,
+      3.624,
+      3.698778,
+      3.819778,
+      3.894556
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-15 20:30:00",
+    "last_bar": "2026-08-15 20:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 3.456778,
+    "lo_seen": 3.456778,
+    "created": "2026-08-15T20:47:34",
+    "dca_levels": [
+      3.456778,
+      3.4425,
+      3.428222,
+      3.407894
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }

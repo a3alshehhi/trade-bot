@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-15T20:34:01",
+  "updated_at": "2026-08-15T20:52:54",
   "stats": {
-    "open": 28,
+    "open": 29,
     "closed": 487,
     "win_rate": 65.7,
     "profit_factor": 1.45,
@@ -5050,6 +5050,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-15T20:05:09",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ORDIUSDT|2026-08-15 20:30:00",
+      "symbol": "ORDIUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 3.456778,
+      "stop": 3.382,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-15T20:47:34",
       "closed_at": null,
       "realized_pct": 0.0
     },
