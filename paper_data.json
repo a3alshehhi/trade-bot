@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-15T09:59:05",
+  "updated_at": "2026-08-15T10:04:36",
   "stats": {
-    "open": 25,
-    "closed": 481,
-    "win_rate": 65.9,
+    "open": 24,
+    "closed": 482,
+    "win_rate": 66.0,
     "profit_factor": 1.48,
-    "total_pct": 864.71,
-    "avg_pct": 0.57,
+    "total_pct": 905.13,
+    "avg_pct": 0.58,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-15",
-        "trades": 5,
-        "win_rate": 80.0,
-        "return_pct": 8.33,
+        "trades": 6,
+        "win_rate": 83.3,
+        "return_pct": 12.87,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -343,9 +343,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 65,
-        "win_rate": 52.3,
-        "return_pct": -52.82,
+        "trades": 66,
+        "win_rate": 53.0,
+        "return_pct": -50.84,
         "month": "2026-08"
       },
       {
@@ -387,9 +387,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 216,
-        "win_rate": 71.8,
-        "return_pct": 484.72
+        "trades": 217,
+        "win_rate": 71.9,
+        "return_pct": 509.22
       },
       {
         "key": "2026-07",
@@ -4648,10 +4648,11 @@
         3,
         4
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-14T07:32:06",
-      "closed_at": null,
-      "realized_pct": 1.55
+      "closed_at": "2026-08-15T10:02:47",
+      "realized_pct": 4.19,
+      "result_pct": 4.19
     },
     {
       "id": "العرض/الطلب|2ZUSDT|2026-08-14 07:45:00",
