@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T01:03:58",
+  "updated_at": "2026-08-15T01:22:36",
   "stats": {
     "open": 21,
     "closed": 477,
@@ -4274,11 +4274,13 @@
       "timeframe": "15m",
       "entry": 0.12568,
       "stop": 0.1195,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-11T04:17:29",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.52
     },
     {
       "id": "العرض/الطلب|SUSDT|2026-08-11 05:15:00",
@@ -4826,7 +4828,8 @@
       "stop": 0.1314,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-14T22:17:28",
