@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-15T13:19:27",
+  "updated_at": "2026-08-15T13:38:09",
   "stats": {
-    "open": 23,
+    "open": 24,
     "closed": 485,
     "win_rate": 66.0,
     "profit_factor": 1.46,
@@ -4946,6 +4946,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-15T13:03:42",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|WALUSDT|2026-08-15 13:15:00",
+      "symbol": "WALUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0266126,
+      "stop": 0.02,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-15T13:32:06",
       "closed_at": null,
       "realized_pct": 0.0
     },
