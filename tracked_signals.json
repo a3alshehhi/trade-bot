@@ -8310,5 +8310,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|ARUSDT|2026-08-15 14:15:00": {
+    "symbol": "ARUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 6954,
+    "entry": 1.767092,
+    "stop": 1.709,
+    "init_stop": 1.709,
+    "cur_stop": 1.709,
+    "legs": [
+      1.767092,
+      1.756,
+      1.744908,
+      1.729116
+    ],
+    "last_alert_stop": 1.709,
+    "armed": false,
+    "targets": [
+      1.803,
+      1.828568,
+      1.841916,
+      1.861092,
+      1.897,
+      1.955092,
+      2.049092,
+      2.107184
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-15 14:15:00",
+    "last_bar": "2026-08-15 14:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1.767092,
+    "lo_seen": 1.767092,
+    "created": "2026-08-15T14:32:03",
+    "dca_levels": [
+      1.767092,
+      1.756,
+      1.744908,
+      1.729116
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }

@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-15T14:19:25",
+  "updated_at": "2026-08-15T14:34:13",
   "stats": {
-    "open": 24,
+    "open": 25,
     "closed": 486,
     "win_rate": 65.8,
     "profit_factor": 1.46,
@@ -4975,6 +4975,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-15T13:47:33",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ARUSDT|2026-08-15 14:15:00",
+      "symbol": "ARUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.767092,
+      "stop": 1.709,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-15T14:32:03",
       "closed_at": null,
       "realized_pct": 0.0
     },
