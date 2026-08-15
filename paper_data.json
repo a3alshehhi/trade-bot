@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-15T08:04:00",
+  "updated_at": "2026-08-15T08:20:12",
   "stats": {
-    "open": 25,
+    "open": 26,
     "closed": 479,
     "win_rate": 65.8,
     "profit_factor": 1.47,
@@ -2781,23 +2781,6 @@
       "result_pct": 1.38
     },
     {
-      "id": "العرض/الطلب|ANKRUSDT|2026-08-01 07:15:00",
-      "symbol": "ANKRUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.00336596,
-      "stop": 0.00323,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-01T07:31:29",
-      "closed_at": "2026-08-01T09:31:26",
-      "realized_pct": 2.5,
-      "result_pct": 2.5
-    },
-    {
       "id": "العرض/الطلب|AWEUSDT|2026-08-01 11:45:00",
       "symbol": "AWEUSDT",
       "label": "العرض/الطلب",
@@ -4863,7 +4846,9 @@
       "entry": 0.00818338,
       "stop": 0.00793,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-15T03:32:10",
@@ -4909,6 +4894,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-15T05:32:37",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|GASUSDT|2026-08-15 08:00:00",
+      "symbol": "GASUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.9419,
+      "stop": 0.911,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-15T08:16:59",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -4987,6 +4986,23 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|ANKRUSDT|2026-08-01 07:15:00",
+      "symbol": "ANKRUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00336596,
+      "stop": 0.00323,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-01T07:31:29",
+      "closed_at": "2026-08-01T09:31:26",
+      "realized_pct": 2.5,
+      "result_pct": 2.5
     },
     {
       "id": "العرض/الطلب|DASHUSDT|2026-08-01 02:30:00",
