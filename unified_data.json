@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-15T16:44:58",
+  "updated_at": "2026-08-15T17:05:00",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|SSVUSDT|2026-08-15T16:47:27",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "SSVUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 2.124442,
+      "stop_orig": 2.02,
+      "stop": 2.02,
+      "targets": [],
+      "opened_at": "2026-08-15T16:47:27",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|ARUSDT|2026-08-15T14:32:03",
       "source": "paper",
@@ -12025,8 +12046,8 @@
     }
   ],
   "stats": {
-    "total": 518,
-    "open": 17,
+    "total": 519,
+    "open": 18,
     "closed": 501,
     "wins": 310,
     "win_rate": 61.9,
