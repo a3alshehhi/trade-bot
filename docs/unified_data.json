@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-15T17:05:00",
+  "updated_at": "2026-08-15T17:34:43",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|VTHOUSDT|2026-08-15T17:02:41",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "VTHOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00032065,
+      "stop_orig": 0.000312,
+      "stop": 0.000312,
+      "targets": [],
+      "opened_at": "2026-08-15T17:02:41",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|SSVUSDT|2026-08-15T16:47:27",
       "source": "paper",
@@ -12046,8 +12067,8 @@
     }
   ],
   "stats": {
-    "total": 519,
-    "open": 18,
+    "total": 520,
+    "open": 19,
     "closed": 501,
     "wins": 310,
     "win_rate": 61.9,
