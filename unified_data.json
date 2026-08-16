@@ -1,8 +1,54 @@
 {
-  "updated_at": "2026-08-16T15:36:02",
+  "updated_at": "2026-08-16T15:51:40",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|WUSDT|2026-08-16T15:51:10",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "WUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00854956,
+      "stop_orig": 0.00829,
+      "stop": 0.00829,
+      "targets": [],
+      "opened_at": "2026-08-16T15:51:10",
+      "usd": 100.0,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|WUSDT|2026-08-16T15:47:34",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "WUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00854956,
+      "stop_orig": 0.00829,
+      "stop": 0.00829,
+      "targets": [],
+      "opened_at": "2026-08-16T15:47:34",
+      "usd": 100.0,
+      "hits": [
+        1
+      ],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|PORTALUSDT|2026-08-16T15:23:49",
       "source": "paper",
@@ -12370,8 +12416,8 @@
     }
   ],
   "stats": {
-    "total": 534,
-    "open": 16,
+    "total": 536,
+    "open": 18,
     "closed": 518,
     "wins": 320,
     "win_rate": 61.8,
