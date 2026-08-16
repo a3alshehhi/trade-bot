@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-16T09:19:37",
+  "updated_at": "2026-08-16T09:34:18",
   "stats": {
-    "open": 17,
+    "open": 18,
     "closed": 502,
     "win_rate": 65.3,
     "profit_factor": 1.43,
@@ -2793,23 +2793,6 @@
       "result_pct": 1.38
     },
     {
-      "id": "العرض/الطلب|AVAXUSDT|2026-08-02 08:00:00",
-      "symbol": "AVAXUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 6.439846,
-      "stop": 6.04,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-02T08:16:25",
-      "closed_at": "2026-08-04T01:46:17",
-      "realized_pct": 3.84,
-      "result_pct": 3.84
-    },
-    {
       "id": "العرض/الطلب|CELRUSDT|2026-08-02 16:30:00",
       "symbol": "CELRUSDT",
       "label": "العرض/الطلب",
@@ -5142,6 +5125,20 @@
       "realized_pct": 2.0
     },
     {
+      "id": "العرض/الطلب|VANAUSDT|2026-08-16 09:15:00",
+      "symbol": "VANAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.874058,
+      "stop": 0.824,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-16T09:32:35",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -5216,6 +5213,23 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|AVAXUSDT|2026-08-02 08:00:00",
+      "symbol": "AVAXUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 6.439846,
+      "stop": 6.04,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-02T08:16:25",
+      "closed_at": "2026-08-04T01:46:17",
+      "realized_pct": 3.84,
+      "result_pct": 3.84
     },
     {
       "id": "العرض/الطلب|AWEUSDT|2026-08-01 11:45:00",

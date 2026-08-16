@@ -301,61 +301,6 @@
     "close_card_sent": true,
     "closed_at": "2026-08-01T15:31:28"
   },
-  "العرض/الطلب|AVAXUSDT|2026-08-02 08:00:00": {
-    "symbol": "AVAXUSDT",
-    "label": "العرض/الطلب",
-    "timeframe": "15m",
-    "message_id": 6072,
-    "entry": 6.439846,
-    "stop": 6.04,
-    "init_stop": 6.04,
-    "cur_stop": 6.04,
-    "legs": [
-      6.439846,
-      6.3635,
-      6.287154,
-      6.178458
-    ],
-    "last_alert_stop": 6.04,
-    "armed": false,
-    "targets": [
-      6.687,
-      6.862984,
-      7.086846,
-      7.334,
-      7.43752
-    ],
-    "tp_split": [
-      50,
-      0,
-      0,
-      0,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5t",
-    "breakeven_done": false,
-    "bar_ts": "2026-08-02 08:00:00",
-    "last_bar": "2026-08-04 01:44:59.999000",
-    "hits": [
-      1
-    ],
-    "stopped": true,
-    "hi_seen": 6.932,
-    "lo_seen": 6.369,
-    "created": "2026-08-02T08:16:25",
-    "dca_levels": [
-      6.439846,
-      6.3635,
-      6.287154,
-      6.178458
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 6.687,
-    "close_card_sent": true,
-    "closed_at": "2026-08-04T01:46:17"
-  },
   "العرض/الطلب|CELRUSDT|2026-08-02 16:30:00": {
     "symbol": "CELRUSDT",
     "label": "العرض/الطلب",
@@ -8879,6 +8824,62 @@
       0.007435,
       0.00734178,
       0.00720906
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "العرض/الطلب|VANAUSDT|2026-08-16 09:15:00": {
+    "symbol": "VANAUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 7030,
+    "entry": 0.874058,
+    "stop": 0.824,
+    "init_stop": 0.824,
+    "cur_stop": 0.824,
+    "legs": [
+      0.874058,
+      0.8645,
+      0.854942,
+      0.841334
+    ],
+    "last_alert_stop": 0.824,
+    "armed": false,
+    "targets": [
+      0.905,
+      0.927032,
+      0.938534,
+      0.955058,
+      0.986,
+      1.036058,
+      1.117058,
+      1.167116
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-16 09:15:00",
+    "last_bar": "2026-08-16 09:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.874058,
+    "lo_seen": 0.874058,
+    "created": "2026-08-16T09:32:35",
+    "dca_levels": [
+      0.874058,
+      0.8645,
+      0.854942,
+      0.841334
     ],
     "wait_entry": true,
     "max_age_h": 48.0
