@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-16T21:44:36",
+  "updated_at": "2026-08-16T21:50:01",
   "stats": {
-    "open": 21,
-    "closed": 510,
+    "open": 18,
+    "closed": 513,
     "win_rate": 65.5,
-    "profit_factor": 1.5,
-    "total_pct": 1137.97,
-    "avg_pct": 0.6,
+    "profit_factor": 1.49,
+    "total_pct": 1115.41,
+    "avg_pct": 0.59,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-16",
-        "trades": 21,
-        "win_rate": 61.9,
-        "return_pct": 41.58,
+        "trades": 24,
+        "win_rate": 62.5,
+        "return_pct": 39.0,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -351,9 +351,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 94,
-        "win_rate": 54.3,
-        "return_pct": -39.45,
+        "trades": 97,
+        "win_rate": 54.6,
+        "return_pct": -40.55,
         "month": "2026-08"
       },
       {
@@ -395,9 +395,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 245,
+        "trades": 248,
         "win_rate": 70.2,
-        "return_pct": 650.35
+        "return_pct": 636.67
       },
       {
         "key": "2026-07",
@@ -1558,10 +1558,11 @@
       "entry": 0.00662642,
       "stop": 0.0062,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-16T13:21:01",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-16T21:49:59",
+      "realized_pct": 0.45,
+      "result_pct": 0.45
     },
     {
       "id": "الفيواب الأسبوعي · BTC|TOWNSUSDT|2026-08-16 14:15:00",
@@ -4746,10 +4747,11 @@
       "entry": 0.00032065,
       "stop": 0.000312,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-15T17:02:41",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-16T21:47:00",
+      "realized_pct": -2.7,
+      "result_pct": -2.7
     },
     {
       "id": "العرض/الطلب|ACHUSDT|2026-08-15 19:45:00",
@@ -4880,10 +4882,11 @@
       "entry": 0.00662642,
       "stop": 0.0062,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-16T13:17:29",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-16T21:47:04",
+      "realized_pct": 0.45,
+      "result_pct": 0.45
     },
     {
       "id": "العرض/الطلب|TOWNSUSDT|2026-08-16 14:15:00",

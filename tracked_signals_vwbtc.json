@@ -4073,14 +4073,14 @@
     "entry": 0.00662642,
     "stop": 0.0062,
     "init_stop": 0.0062,
-    "cur_stop": 0.0062,
+    "cur_stop": 0.00665655,
     "legs": [
       0.00662642,
       0.006545,
       0.00646358,
       0.00634766
     ],
-    "last_alert_stop": 0.0062,
+    "last_alert_stop": 0.00665655,
     "armed": false,
     "targets": [
       0.00689,
@@ -4106,9 +4106,9 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-16 13:00:00",
-    "last_bar": "2026-08-16 18:59:59.999000",
+    "last_bar": "2026-08-16 21:44:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.00687,
     "lo_seen": 0.00662642,
     "created": "2026-08-16T13:21:01",
@@ -4119,7 +4119,11 @@
       0.00634766
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2,
+    "exit_price": 0.00665655,
+    "close_card_sent": true,
+    "closed_at": "2026-08-16T21:49:59"
   },
   "الفيواب الأسبوعي · BTC|TOWNSUSDT|2026-08-16 14:15:00": {
     "symbol": "TOWNSUSDT",
@@ -4162,7 +4166,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-16 14:15:00",
-    "last_bar": "2026-08-16 18:59:59.999000",
+    "last_bar": "2026-08-16 21:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0024,
@@ -4341,11 +4345,11 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-16 20:45:00",
-    "last_bar": "2026-08-16 20:45:00",
+    "last_bar": "2026-08-16 21:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.1976026,
-    "lo_seen": 0.1976026,
+    "hi_seen": 0.1979,
+    "lo_seen": 0.1937,
     "created": "2026-08-16T21:09:55",
     "dca_levels": [
       0.1976026,
