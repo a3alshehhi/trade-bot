@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-16T18:50:01",
+  "updated_at": "2026-08-16T19:06:27",
   "stats": {
-    "open": 22,
-    "closed": 507,
-    "win_rate": 65.5,
-    "profit_factor": 1.43,
-    "total_pct": 740.44,
-    "avg_pct": 0.52,
+    "open": 20,
+    "closed": 509,
+    "win_rate": 65.6,
+    "profit_factor": 1.5,
+    "total_pct": 1165.3,
+    "avg_pct": 0.61,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-16",
-        "trades": 18,
-        "win_rate": 61.1,
-        "return_pct": -3.88,
+        "trades": 20,
+        "win_rate": 65.0,
+        "return_pct": 44.71,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -351,9 +351,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 91,
-        "win_rate": 53.8,
-        "return_pct": -58.89,
+        "trades": 93,
+        "win_rate": 54.8,
+        "return_pct": -38.11,
         "month": "2026-08"
       },
       {
@@ -395,9 +395,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 242,
-        "win_rate": 70.2,
-        "return_pct": 409.4
+        "trades": 244,
+        "win_rate": 70.5,
+        "return_pct": 666.91
       },
       {
         "key": "2026-07",
@@ -1640,10 +1640,11 @@
         1,
         2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-16T15:23:49",
-      "closed_at": null,
-      "realized_pct": 8.37
+      "closed_at": "2026-08-16T19:06:27",
+      "realized_pct": 22.7,
+      "result_pct": 22.7
     },
     {
       "id": "الفيواب الأسبوعي · BTC|WUSDT|2026-08-16 15:30:00",
@@ -4997,10 +4998,11 @@
         1,
         2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-16T15:17:06",
-      "closed_at": null,
-      "realized_pct": 8.37
+      "closed_at": "2026-08-16T19:02:13",
+      "realized_pct": 22.7,
+      "result_pct": 22.7
     },
     {
       "id": "العرض/الطلب|WUSDT|2026-08-16 15:30:00",

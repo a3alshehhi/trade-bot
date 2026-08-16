@@ -4271,7 +4271,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-16 13:00:00",
-    "last_bar": "2026-08-16 18:44:59.999000",
+    "last_bar": "2026-08-16 18:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00687,
@@ -4327,7 +4327,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-16 14:15:00",
-    "last_bar": "2026-08-16 18:44:59.999000",
+    "last_bar": "2026-08-16 18:59:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0024,
@@ -4383,12 +4383,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-16 15:00:00",
-    "last_bar": "2026-08-16 18:44:59.999000",
+    "last_bar": "2026-08-16 18:59:59.999000",
     "hits": [
       1,
       2
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0183,
     "lo_seen": 0.013,
     "created": "2026-08-16T15:23:49",
@@ -4399,7 +4399,10 @@
       0.01165894
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.01654,
+    "close_card_sent": true,
+    "closed_at": "2026-08-16T19:06:27"
   },
   "الفيواب الأسبوعي · BTC|WUSDT|2026-08-16 15:30:00": {
     "symbol": "WUSDT",
