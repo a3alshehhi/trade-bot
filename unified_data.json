@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T10:56:28",
+  "updated_at": "2026-08-16T11:29:23",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -529,11 +529,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-16T11:02:39",
+      "realized_pct": 1.92,
+      "result_pct": 1.92,
+      "exec_pct": 1.92
     },
     {
       "id": "paper|RLCUSDT|2026-08-14T20:09:48",
@@ -12224,11 +12224,11 @@
   ],
   "stats": {
     "total": 527,
-    "open": 11,
-    "closed": 516,
-    "wins": 318,
-    "win_rate": 61.6,
-    "net_pct": 175.59,
+    "open": 10,
+    "closed": 517,
+    "wins": 319,
+    "win_rate": 61.7,
+    "net_pct": 177.51,
     "pf": 1.27,
     "simulated": 1
   }
