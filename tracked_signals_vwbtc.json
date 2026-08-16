@@ -4749,11 +4749,11 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-12 16:30:00",
-    "last_bar": "2026-08-14 19:14:59.999000",
+    "last_bar": "2026-08-16 05:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 59.27,
-    "lo_seen": 57.56,
+    "lo_seen": 57.35,
     "created": "2026-08-12T16:56:33",
     "dca_levels": [
       58.83244,
@@ -4763,7 +4763,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 2
+    "st_stage": 2,
+    "exit_price": 57.48115,
+    "close_card_sent": true,
+    "closed_at": "2026-08-16T05:34:24"
   },
   "الفيواب الأسبوعي · BTC|ZILUSDT|2026-08-12 19:00:00": {
     "symbol": "ZILUSDT",
