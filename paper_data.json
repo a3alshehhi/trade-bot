@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-16T21:19:51",
+  "updated_at": "2026-08-16T21:24:41",
   "stats": {
-    "open": 20,
+    "open": 21,
     "closed": 510,
     "win_rate": 65.5,
     "profit_factor": 1.5,
@@ -408,57 +408,6 @@
     ]
   },
   "trades": [
-    {
-      "id": "الفيواب الأسبوعي · BTC|BCHUSDT|2026-08-02 18:00:00",
-      "symbol": "BCHUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 210.6856,
-      "stop": 205.0,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-02T18:18:40",
-      "closed_at": "2026-08-02T19:34:20",
-      "realized_pct": 1.67,
-      "result_pct": 1.67
-    },
-    {
-      "id": "الفيواب الأسبوعي · BTC|ALGOUSDT|2026-08-02 18:15:00",
-      "symbol": "ALGOUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.082944,
-      "stop": 0.078,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-02T18:33:45",
-      "closed_at": "2026-08-02T23:48:22",
-      "realized_pct": 3.68,
-      "result_pct": 3.68
-    },
-    {
-      "id": "الفيواب الأسبوعي · BTC|DUSKUSDT|2026-08-02 20:45:00",
-      "symbol": "DUSKUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.059299,
-      "stop": 0.0559,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-02T21:04:24",
-      "closed_at": "2026-08-02T22:49:12",
-      "realized_pct": 3.54,
-      "result_pct": 3.54
-    },
     {
       "id": "الفيواب الأسبوعي · BTC|IOTXUSDT|2026-08-02 21:00:00",
       "symbol": "IOTXUSDT",
@@ -1662,6 +1611,20 @@
       "closed_at": "2026-08-16T18:20:06",
       "realized_pct": 0.94,
       "result_pct": 0.94
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|API3USDT|2026-08-16 20:45:00",
+      "symbol": "API3USDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1976026,
+      "stop": 0.1879,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-16T21:09:55",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
@@ -4828,7 +4791,7 @@
       "hits": [],
       "status": "closed",
       "opened_at": "2026-08-15T20:54:46",
-      "closed_at": "2026-08-16T21:12:03",
+      "closed_at": "2026-08-16T21:02:21",
       "realized_pct": -2.16,
       "result_pct": -2.16
     },
@@ -4981,7 +4944,7 @@
       "stop": 0.1879,
       "hits": [],
       "status": "open",
-      "opened_at": "2026-08-16T21:11:58",
+      "opened_at": "2026-08-16T21:02:16",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -5060,6 +5023,57 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|BCHUSDT|2026-08-02 18:00:00",
+      "symbol": "BCHUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 210.6856,
+      "stop": 205.0,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-02T18:18:40",
+      "closed_at": "2026-08-02T19:34:20",
+      "realized_pct": 1.67,
+      "result_pct": 1.67
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|ALGOUSDT|2026-08-02 18:15:00",
+      "symbol": "ALGOUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.082944,
+      "stop": 0.078,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-02T18:33:45",
+      "closed_at": "2026-08-02T23:48:22",
+      "realized_pct": 3.68,
+      "result_pct": 3.68
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|DUSKUSDT|2026-08-02 20:45:00",
+      "symbol": "DUSKUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.059299,
+      "stop": 0.0559,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-02T21:04:24",
+      "closed_at": "2026-08-02T22:49:12",
+      "realized_pct": 3.54,
+      "result_pct": 3.54
     },
     {
       "id": "العرض/الطلب|CELRUSDT|2026-08-02 16:30:00",
