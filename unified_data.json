@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T07:04:41",
+  "updated_at": "2026-08-16T07:42:19",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -567,11 +567,11 @@
       "opened_at": "2026-08-14T18:16:57",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-16T07:17:19",
+      "realized_pct": -2.78,
+      "result_pct": -2.78,
+      "exec_pct": -2.78
     },
     {
       "id": "paper|COOKIEUSDT|2026-08-14T17:02:08",
@@ -12199,11 +12199,11 @@
   ],
   "stats": {
     "total": 526,
-    "open": 12,
-    "closed": 514,
+    "open": 11,
+    "closed": 515,
     "wins": 317,
-    "win_rate": 61.7,
-    "net_pct": 175.61,
+    "win_rate": 61.6,
+    "net_pct": 172.83,
     "pf": 1.27,
     "simulated": 1
   }
