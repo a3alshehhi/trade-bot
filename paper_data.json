@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-16T06:08:25",
+  "updated_at": "2026-08-16T06:19:29",
   "stats": {
-    "open": 18,
+    "open": 19,
     "closed": 500,
     "win_rate": 65.4,
     "profit_factor": 1.43,
@@ -5118,6 +5118,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-15T23:17:41",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ZKUSDT|2026-08-16 06:00:00",
+      "symbol": "ZKUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00752822,
+      "stop": 0.00704,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-16T06:17:37",
       "closed_at": null,
       "realized_pct": 0.0
     },
