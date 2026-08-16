@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-16T11:29:23",
+  "updated_at": "2026-08-16T12:11:35",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|ALICEUSDT|2026-08-16T11:32:37",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ALICEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1375388,
+      "stop_orig": 0.1211,
+      "stop": 0.1211,
+      "targets": [],
+      "opened_at": "2026-08-16T11:32:37",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|VANAUSDT|2026-08-16T09:32:35",
       "source": "paper",
@@ -12223,8 +12244,8 @@
     }
   ],
   "stats": {
-    "total": 527,
-    "open": 10,
+    "total": 528,
+    "open": 11,
     "closed": 517,
     "wins": 319,
     "win_rate": 61.7,
