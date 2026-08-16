@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-16T12:11:19",
+  "updated_at": "2026-08-16T12:19:09",
   "stats": {
-    "open": 18,
-    "closed": 503,
-    "win_rate": 65.4,
-    "profit_factor": 1.43,
-    "total_pct": 740.63,
-    "avg_pct": 0.52,
+    "open": 17,
+    "closed": 504,
+    "win_rate": 65.5,
+    "profit_factor": 1.44,
+    "total_pct": 757.44,
+    "avg_pct": 0.53,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-16",
-        "trades": 14,
-        "win_rate": 57.1,
-        "return_pct": -3.86,
+        "trades": 15,
+        "win_rate": 60.0,
+        "return_pct": -1.94,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -351,9 +351,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 87,
-        "win_rate": 52.9,
-        "return_pct": -58.88,
+        "trades": 88,
+        "win_rate": 53.4,
+        "return_pct": -58.06,
         "month": "2026-08"
       },
       {
@@ -395,9 +395,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 238,
-        "win_rate": 70.2,
-        "return_pct": 409.51
+        "trades": 239,
+        "win_rate": 70.3,
+        "return_pct": 419.7
       },
       {
         "key": "2026-07",
@@ -5120,10 +5120,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-16T06:17:37",
-      "closed_at": null,
-      "realized_pct": 2.0
+      "closed_at": "2026-08-16T12:17:13",
+      "realized_pct": 2.0,
+      "result_pct": 2.0
     },
     {
       "id": "العرض/الطلب|VANAUSDT|2026-08-16 09:15:00",
