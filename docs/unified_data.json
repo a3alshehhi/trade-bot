@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-16T06:15:20",
+  "updated_at": "2026-08-16T07:04:41",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|ZKUSDT|2026-08-16T06:17:37",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ZKUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00752822,
+      "stop_orig": 0.00704,
+      "stop": 0.00704,
+      "targets": [],
+      "opened_at": "2026-08-16T06:17:37",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|LINEAUSDT|2026-08-15T23:17:41",
       "source": "paper",
@@ -12177,8 +12198,8 @@
     }
   ],
   "stats": {
-    "total": 525,
-    "open": 11,
+    "total": 526,
+    "open": 12,
     "closed": 514,
     "wins": 317,
     "win_rate": 61.7,
