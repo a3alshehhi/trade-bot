@@ -8945,5 +8945,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|SIGNUSDT|2026-08-16 13:00:00": {
+    "symbol": "SIGNUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 7049,
+    "entry": 0.00662642,
+    "stop": 0.0062,
+    "init_stop": 0.0062,
+    "cur_stop": 0.0062,
+    "legs": [
+      0.00662642,
+      0.006545,
+      0.00646358,
+      0.00634766
+    ],
+    "last_alert_stop": 0.0062,
+    "armed": false,
+    "targets": [
+      0.00689,
+      0.00707768,
+      0.00717566,
+      0.00731642,
+      0.00758,
+      0.00800642,
+      0.00869642,
+      0.00912284
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-16 13:00:00",
+    "last_bar": "2026-08-16 13:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00662642,
+    "lo_seen": 0.00662642,
+    "created": "2026-08-16T13:17:29",
+    "dca_levels": [
+      0.00662642,
+      0.006545,
+      0.00646358,
+      0.00634766
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
