@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-16T04:30:16",
+  "updated_at": "2026-08-16T04:34:25",
   "stats": {
-    "open": 21,
-    "closed": 497,
-    "win_rate": 65.6,
+    "open": 20,
+    "closed": 498,
+    "win_rate": 65.7,
     "profit_factor": 1.44,
-    "total_pct": 756.44,
+    "total_pct": 764.92,
     "avg_pct": 0.53,
     "max_drawdown_pct": -70.77
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-16",
-        "trades": 8,
-        "win_rate": 62.5,
-        "return_pct": -2.05,
+        "trades": 9,
+        "win_rate": 66.7,
+        "return_pct": -1.08,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -351,9 +351,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 81,
-        "win_rate": 53.1,
-        "return_pct": -58.11,
+        "trades": 82,
+        "win_rate": 53.7,
+        "return_pct": -57.7,
         "month": "2026-08"
       },
       {
@@ -395,9 +395,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 232,
-        "win_rate": 70.7,
-        "return_pct": 419.1
+        "trades": 233,
+        "win_rate": 70.8,
+        "return_pct": 424.23
       },
       {
         "key": "2026-07",
@@ -5068,10 +5068,11 @@
       "entry": 0.0066999,
       "stop": 0.00636,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-15T20:05:09",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-16T04:32:22",
+      "realized_pct": 0.99,
+      "result_pct": 0.99
     },
     {
       "id": "العرض/الطلب|ORDIUSDT|2026-08-15 20:30:00",
