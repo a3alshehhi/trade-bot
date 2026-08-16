@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-16T11:18:47",
+  "updated_at": "2026-08-16T11:38:46",
   "stats": {
-    "open": 17,
+    "open": 18,
     "closed": 503,
     "win_rate": 65.4,
     "profit_factor": 1.43,
@@ -5136,6 +5136,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-16T09:32:35",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ALICEUSDT|2026-08-16 11:15:00",
+      "symbol": "ALICEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1375388,
+      "stop": 0.1211,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-16T11:32:37",
       "closed_at": null,
       "realized_pct": 0.0
     },
