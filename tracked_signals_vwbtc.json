@@ -4133,14 +4133,14 @@
     "entry": 0.00227574,
     "stop": 0.00201,
     "init_stop": 0.00201,
-    "cur_stop": 0.00201,
+    "cur_stop": 0.0023681,
     "legs": [
       0.00227574,
       0.002225,
       0.00217426,
       0.00210202
     ],
-    "last_alert_stop": 0.00201,
+    "last_alert_stop": 0.0023681,
     "armed": false,
     "targets": [
       0.00244,
@@ -4166,9 +4166,9 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-16 14:15:00",
-    "last_bar": "2026-08-16 21:44:59.999000",
+    "last_bar": "2026-08-16 21:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0024,
     "lo_seen": 0.00227574,
     "created": "2026-08-16T14:36:04",
@@ -4179,7 +4179,11 @@
       0.00210202
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2,
+    "exit_price": 0.0023681,
+    "close_card_sent": true,
+    "closed_at": "2026-08-16T23:04:00"
   },
   "الفيواب الأسبوعي · BTC|PORTALUSDT|2026-08-16 15:00:00": {
     "symbol": "PORTALUSDT",
@@ -4345,11 +4349,11 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-16 20:45:00",
-    "last_bar": "2026-08-16 21:44:59.999000",
+    "last_bar": "2026-08-16 22:59:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.1979,
-    "lo_seen": 0.1937,
+    "hi_seen": 0.1983,
+    "lo_seen": 0.1931,
     "created": "2026-08-16T21:09:55",
     "dca_levels": [
       0.1976026,
