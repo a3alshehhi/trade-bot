@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T05:13:46",
+  "updated_at": "2026-08-16T05:49:03",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -1041,11 +1041,11 @@
       "opened_at": "2026-08-12T16:56:33",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-16T05:34:24",
+      "realized_pct": -2.3,
+      "result_pct": -2.3,
+      "exec_pct": -2.3
     },
     {
       "id": "paper|QNTUSDT|2026-08-12T16:47:10",
@@ -1062,11 +1062,11 @@
       "opened_at": "2026-08-12T16:47:10",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-16T05:32:35",
+      "realized_pct": -2.3,
+      "result_pct": -2.3,
+      "exec_pct": -2.3
     },
     {
       "id": "paper|MTLUSDT|2026-08-12T15:27:12",
@@ -12178,12 +12178,12 @@
   ],
   "stats": {
     "total": 525,
-    "open": 13,
-    "closed": 512,
+    "open": 11,
+    "closed": 514,
     "wins": 317,
-    "win_rate": 61.9,
-    "net_pct": 180.21,
-    "pf": 1.28,
+    "win_rate": 61.7,
+    "net_pct": 175.61,
+    "pf": 1.27,
     "simulated": 1
   }
 }
