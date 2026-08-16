@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T18:50:18",
+  "updated_at": "2026-08-16T19:12:12",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -64,13 +64,14 @@
       "opened_at": "2026-08-16T15:23:49",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-16T19:06:27",
+      "realized_pct": 22.7,
+      "result_pct": 22.7,
+      "exec_pct": 22.7
     },
     {
       "id": "paper|PORTALUSDT|2026-08-16T15:17:06",
@@ -87,13 +88,14 @@
       "opened_at": "2026-08-16T15:17:06",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-16T19:02:13",
+      "realized_pct": 22.7,
+      "result_pct": 22.7,
+      "exec_pct": 22.7
     },
     {
       "id": "paper|TOWNSUSDT|2026-08-16T14:36:04",
@@ -12421,12 +12423,12 @@
   ],
   "stats": {
     "total": 536,
-    "open": 15,
-    "closed": 521,
-    "wins": 322,
-    "win_rate": 61.8,
-    "net_pct": 177.59,
-    "pf": 1.27,
+    "open": 13,
+    "closed": 523,
+    "wins": 324,
+    "win_rate": 62.0,
+    "net_pct": 222.99,
+    "pf": 1.34,
     "simulated": 1
   }
 }
