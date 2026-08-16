@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-16T08:49:18",
+  "updated_at": "2026-08-16T09:03:53",
   "stats": {
-    "open": 18,
-    "closed": 501,
+    "open": 17,
+    "closed": 502,
     "win_rate": 65.3,
-    "profit_factor": 1.42,
-    "total_pct": 702.64,
+    "profit_factor": 1.43,
+    "total_pct": 724.79,
     "avg_pct": 0.52,
     "max_drawdown_pct": -70.77
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-16",
-        "trades": 12,
-        "win_rate": 50.0,
-        "return_pct": -8.21,
+        "trades": 13,
+        "win_rate": 53.8,
+        "return_pct": -5.67,
         "week": "2026-W33",
         "month": "2026-08"
       },
@@ -351,9 +351,9 @@
     "weekly": [
       {
         "key": "2026-W33",
-        "trades": 85,
-        "win_rate": 51.8,
-        "return_pct": -60.74,
+        "trades": 86,
+        "win_rate": 52.3,
+        "return_pct": -59.66,
         "month": "2026-08"
       },
       {
@@ -395,9 +395,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 236,
-        "win_rate": 69.9,
-        "return_pct": 386.49
+        "trades": 237,
+        "win_rate": 70.0,
+        "return_pct": 399.91
       },
       {
         "key": "2026-07",
@@ -5016,10 +5016,11 @@
         2,
         3
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-15T14:32:03",
-      "closed_at": null,
-      "realized_pct": 1.02
+      "closed_at": "2026-08-16T09:02:13",
+      "realized_pct": 2.76,
+      "result_pct": 2.76
     },
     {
       "id": "العرض/الطلب|SSVUSDT|2026-08-15 16:30:00",
