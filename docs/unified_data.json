@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-16T12:11:35",
+  "updated_at": "2026-08-16T13:06:12",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
     {
-      "id": "paper|ALICEUSDT|2026-08-16T11:32:37",
+      "id": "paper|ALICEUSDT|2026-08-16T11:40:36",
       "source": "paper",
       "source_ar": "ورقية",
       "symbol": "ALICEUSDT",
@@ -15,7 +15,7 @@
       "stop_orig": 0.1211,
       "stop": 0.1211,
       "targets": [],
-      "opened_at": "2026-08-16T11:32:37",
+      "opened_at": "2026-08-16T11:40:36",
       "usd": 100.0,
       "hits": [],
       "status": "open",
@@ -62,11 +62,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-16T12:17:13",
+      "realized_pct": 2.0,
+      "result_pct": 2.0,
+      "exec_pct": 2.0
     },
     {
       "id": "paper|LINEAUSDT|2026-08-15T23:17:41",
@@ -12245,12 +12245,12 @@
   ],
   "stats": {
     "total": 528,
-    "open": 11,
-    "closed": 517,
-    "wins": 319,
-    "win_rate": 61.7,
-    "net_pct": 177.51,
-    "pf": 1.27,
+    "open": 10,
+    "closed": 518,
+    "wins": 320,
+    "win_rate": 61.8,
+    "net_pct": 179.51,
+    "pf": 1.28,
     "simulated": 1
   }
 }
