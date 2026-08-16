@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T00:07:03",
+  "updated_at": "2026-08-16T03:08:46",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -41,11 +41,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-16T00:17:27",
+      "realized_pct": 1.18,
+      "result_pct": 1.18,
+      "exec_pct": 1.18
     },
     {
       "id": "paper|ORDIUSDT|2026-08-15T20:54:46",
@@ -146,11 +146,11 @@
       "opened_at": "2026-08-15T16:47:27",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-16T01:17:43",
+      "realized_pct": 0.88,
+      "result_pct": 0.88,
+      "exec_pct": 0.88
     },
     {
       "id": "paper|ARUSDT|2026-08-15T14:32:03",
@@ -192,11 +192,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-16T02:17:30",
+      "realized_pct": 1.27,
+      "result_pct": 1.27,
+      "exec_pct": 1.27
     },
     {
       "id": "paper|WALUSDT|2026-08-15T13:32:06",
@@ -297,13 +297,14 @@
       "opened_at": "2026-08-15T08:16:59",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-16T02:03:53",
+      "realized_pct": 2.75,
+      "result_pct": 2.75,
+      "exec_pct": 2.75
     },
     {
       "id": "paper|1000SATSUSDT|2026-08-15T05:32:37",
@@ -341,11 +342,11 @@
       "opened_at": "2026-08-15T05:17:20",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-16T01:32:45",
+      "realized_pct": -0.67,
+      "result_pct": -0.67,
+      "exec_pct": -0.67
     },
     {
       "id": "paper|CHZUSDT|2026-08-15T03:51:14",
@@ -431,11 +432,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-16T02:17:26",
+      "realized_pct": 1.09,
+      "result_pct": 1.09,
+      "exec_pct": 1.09
     },
     {
       "id": "paper|THETAUSDT|2026-08-14T22:17:28",
@@ -524,11 +525,11 @@
       "opened_at": "2026-08-14T19:02:39",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-16T03:02:38",
+      "realized_pct": -3.14,
+      "result_pct": -3.14,
+      "exec_pct": -3.14
     },
     {
       "id": "paper|SANDUSDT|2026-08-14T18:16:57",
@@ -931,11 +932,11 @@
       "opened_at": "2026-08-13T05:32:14",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-16T02:51:13",
+      "realized_pct": -5.18,
+      "result_pct": -5.18,
+      "exec_pct": -5.18
     },
     {
       "id": "paper|ESPUSDT|2026-08-13T04:32:35",
@@ -12177,11 +12178,11 @@
   ],
   "stats": {
     "total": 525,
-    "open": 22,
-    "closed": 503,
-    "wins": 311,
+    "open": 14,
+    "closed": 511,
+    "wins": 316,
     "win_rate": 61.8,
-    "net_pct": 181.04,
+    "net_pct": 179.22,
     "pf": 1.28,
     "simulated": 1
   }
