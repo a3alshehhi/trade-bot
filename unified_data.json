@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T07:42:19",
+  "updated_at": "2026-08-16T08:10:35",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -17,7 +17,9 @@
       "targets": [],
       "opened_at": "2026-08-16T06:17:37",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
