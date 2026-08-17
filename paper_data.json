@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-08-17T09:36:04",
+  "updated_at": "2026-08-17T09:51:11",
   "stats": {
-    "open": 32,
-    "closed": 515,
-    "win_rate": 65.6,
-    "profit_factor": 1.51,
-    "total_pct": 1216.11,
-    "avg_pct": 0.61,
+    "open": 31,
+    "closed": 516,
+    "win_rate": 65.5,
+    "profit_factor": 1.49,
+    "total_pct": 1142.54,
+    "avg_pct": 0.6,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-08-17",
+        "trades": 1,
+        "win_rate": 0.0,
+        "return_pct": -5.59,
+        "week": "2026-W34",
+        "month": "2026-08"
+      },
       {
         "key": "2026-08-16",
         "trades": 26,
@@ -350,6 +358,13 @@
     ],
     "weekly": [
       {
+        "key": "2026-W34",
+        "trades": 1,
+        "win_rate": 0.0,
+        "return_pct": -5.59,
+        "month": "2026-08"
+      },
+      {
         "key": "2026-W33",
         "trades": 99,
         "win_rate": 55.6,
@@ -395,9 +410,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 250,
-        "win_rate": 70.4,
-        "return_pct": 697.7
+        "trades": 251,
+        "win_rate": 70.1,
+        "return_pct": 653.11
       },
       {
         "key": "2026-07",
@@ -4872,10 +4887,11 @@
       "entry": 0.1375388,
       "stop": 0.1211,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-16T11:40:36",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-17T09:47:33",
+      "realized_pct": -5.59,
+      "result_pct": -5.59
     },
     {
       "id": "العرض/الطلب|SIGNUSDT|2026-08-16 13:00:00",
