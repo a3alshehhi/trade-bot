@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-17T17:10:36",
+  "updated_at": "2026-08-17T17:37:47",
   "stats": {
-    "open": 30,
-    "closed": 522,
-    "win_rate": 65.9,
+    "open": 28,
+    "closed": 524,
+    "win_rate": 65.6,
     "profit_factor": 1.58,
-    "total_pct": 1956.47,
+    "total_pct": 1931.46,
     "avg_pct": 0.69,
     "max_drawdown_pct": -70.77
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-17",
-        "trades": 7,
-        "win_rate": 85.7,
-        "return_pct": 56.25,
+        "trades": 9,
+        "win_rate": 66.7,
+        "return_pct": 54.35,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -359,9 +359,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 7,
-        "win_rate": 85.7,
-        "return_pct": 56.25,
+        "trades": 9,
+        "win_rate": 66.7,
+        "return_pct": 54.35,
         "month": "2026-08"
       },
       {
@@ -410,9 +410,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 257,
-        "win_rate": 70.8,
-        "return_pct": 1146.44
+        "trades": 259,
+        "win_rate": 70.3,
+        "return_pct": 1131.28
       },
       {
         "key": "2026-07",
@@ -1665,10 +1665,11 @@
       "entry": 1.628878,
       "stop": 1.585,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-17T08:20:07",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-17T17:37:43",
+      "realized_pct": -0.61,
+      "result_pct": -0.61
     },
     {
       "id": "الفيواب الأسبوعي · BTC|XPLUSDT|2026-08-17 09:15:00",
@@ -5121,10 +5122,11 @@
       "entry": 1.628878,
       "stop": 1.585,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-17T08:17:02",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-17T17:32:53",
+      "realized_pct": -0.61,
+      "result_pct": -0.61
     },
     {
       "id": "العرض/الطلب|XPLUSDT|2026-08-17 09:15:00",
