@@ -4372,5 +4372,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|DIAUSDT|2026-08-17 07:15:00": {
+    "symbol": "DIAUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 7098,
+    "entry": 0.1356106,
+    "stop": 0.1222,
+    "init_stop": 0.1222,
+    "cur_stop": 0.1222,
+    "legs": [
+      0.1356106,
+      0.13305,
+      0.1304894,
+      0.1268438
+    ],
+    "last_alert_stop": 0.1222,
+    "armed": false,
+    "targets": [
+      0.1439,
+      0.1498024,
+      0.1528838,
+      0.1573106,
+      0.1656,
+      0.1790106,
+      0.2007106,
+      0.2141212
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-17 07:15:00",
+    "last_bar": "2026-08-17 07:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1356106,
+    "lo_seen": 0.1356106,
+    "created": "2026-08-17T07:32:44",
+    "dca_levels": [
+      0.1356106,
+      0.13305,
+      0.1304894,
+      0.1268438
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
