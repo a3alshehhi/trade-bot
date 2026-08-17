@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-17T00:49:51",
+  "updated_at": "2026-08-17T01:04:56",
   "stats": {
     "open": 16,
     "closed": 515,
@@ -408,70 +408,6 @@
     ]
   },
   "trades": [
-    {
-      "id": "الفيواب الأسبوعي · BTC|IOTXUSDT|2026-08-02 21:00:00",
-      "symbol": "IOTXUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.00229068,
-      "stop": 0.00213,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-08-02T21:18:22",
-      "closed_at": "2026-08-05T01:03:08",
-      "realized_pct": -7.01,
-      "result_pct": -7.01
-    },
-    {
-      "id": "الفيواب الأسبوعي · BTC|FLUXUSDT|2026-08-02 22:30:00",
-      "symbol": "FLUXUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0395506,
-      "stop": 0.0385,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-02T22:49:08",
-      "closed_at": "2026-08-02T23:38:58",
-      "realized_pct": 1.64,
-      "result_pct": 1.64
-    },
-    {
-      "id": "الفيواب الأسبوعي · BTC|GRAMUSDT|2026-08-02 22:30:00",
-      "symbol": "GRAMUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 1.4109,
-      "stop": 1.38,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-08-02T22:49:08",
-      "closed_at": "2026-08-04T01:04:02",
-      "realized_pct": -2.19,
-      "result_pct": -2.19
-    },
-    {
-      "id": "الفيواب الأسبوعي · BTC|SOLUSDT|2026-08-02 22:45:00",
-      "symbol": "SOLUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 72.8975,
-      "stop": 70.58,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-02T23:03:34",
-      "closed_at": "2026-08-04T18:33:53",
-      "realized_pct": 1.97,
-      "result_pct": 1.97
-    },
     {
       "id": "الفيواب الأسبوعي · BTC|AVAUSDT|2026-08-03 01:15:00",
       "symbol": "AVAUSDT",
@@ -5028,6 +4964,70 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|IOTXUSDT|2026-08-02 21:00:00",
+      "symbol": "IOTXUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00229068,
+      "stop": 0.00213,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-08-02T21:18:22",
+      "closed_at": "2026-08-05T01:03:08",
+      "realized_pct": -7.01,
+      "result_pct": -7.01
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|FLUXUSDT|2026-08-02 22:30:00",
+      "symbol": "FLUXUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0395506,
+      "stop": 0.0385,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-02T22:49:08",
+      "closed_at": "2026-08-02T23:38:58",
+      "realized_pct": 1.64,
+      "result_pct": 1.64
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|GRAMUSDT|2026-08-02 22:30:00",
+      "symbol": "GRAMUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.4109,
+      "stop": 1.38,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-08-02T22:49:08",
+      "closed_at": "2026-08-04T01:04:02",
+      "realized_pct": -2.19,
+      "result_pct": -2.19
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|SOLUSDT|2026-08-02 22:45:00",
+      "symbol": "SOLUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 72.8975,
+      "stop": 70.58,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-02T23:03:34",
+      "closed_at": "2026-08-04T18:33:53",
+      "realized_pct": 1.97,
+      "result_pct": 1.97
     },
     {
       "id": "الفيواب الأسبوعي · BTC|BCHUSDT|2026-08-02 18:00:00",
