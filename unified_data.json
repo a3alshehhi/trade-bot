@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-17T14:53:55",
+  "updated_at": "2026-08-17T16:06:51",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|ZKUSDT|2026-08-17T14:53:33",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ZKUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00784822,
+      "stop_orig": 0.00736,
+      "stop": 0.00736,
+      "targets": [],
+      "opened_at": "2026-08-17T14:53:33",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|SAGAUSDT|2026-08-17T10:26:38",
       "source": "paper",
@@ -276,11 +297,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-17T15:56:08",
+      "realized_pct": 1.15,
+      "result_pct": 1.15,
+      "exec_pct": 1.15
     },
     {
       "id": "paper|ARBUSDT|2026-08-17T07:16:56",
@@ -299,11 +320,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-17T15:52:31",
+      "realized_pct": 1.15,
+      "result_pct": 1.15,
+      "exec_pct": 1.15
     },
     {
       "id": "paper|GPSUSDT|2026-08-17T06:50:57",
@@ -12898,13 +12919,13 @@
     }
   ],
   "stats": {
-    "total": 558,
-    "open": 24,
-    "closed": 534,
-    "wins": 332,
-    "win_rate": 62.2,
-    "net_pct": 274.5,
-    "pf": 1.41,
+    "total": 559,
+    "open": 23,
+    "closed": 536,
+    "wins": 334,
+    "win_rate": 62.3,
+    "net_pct": 276.8,
+    "pf": 1.42,
     "simulated": 1
   }
 }
