@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-17T03:50:50",
+  "updated_at": "2026-08-17T04:09:36",
   "stats": {
-    "open": 16,
+    "open": 18,
     "closed": 515,
     "win_rate": 65.6,
     "profit_factor": 1.51,
@@ -408,23 +408,6 @@
     ]
   },
   "trades": [
-    {
-      "id": "الفيواب الأسبوعي · BTC|AVAUSDT|2026-08-03 01:15:00",
-      "symbol": "AVAUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.1758566,
-      "stop": 0.1643,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-03T01:36:28",
-      "closed_at": "2026-08-05T18:48:35",
-      "realized_pct": 4.06,
-      "result_pct": 4.06
-    },
     {
       "id": "الفيواب الأسبوعي · BTC|LSKUSDT|2026-08-03 16:15:00",
       "symbol": "LSKUSDT",
@@ -1565,6 +1548,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "الفيواب الأسبوعي · BTC|STEEMUSDT|2026-08-17 03:45:00",
+      "symbol": "STEEMUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03607466,
+      "stop": 0.03461,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-17T04:09:33",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
       "symbol": "ETHUSDT",
       "label": "زخم سيولة الحيتان",
@@ -2495,40 +2492,6 @@
       "closed_at": "2026-08-01T15:31:28",
       "realized_pct": 1.38,
       "result_pct": 1.38
-    },
-    {
-      "id": "العرض/الطلب|AVAUSDT|2026-08-03 01:15:00",
-      "symbol": "AVAUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.1758566,
-      "stop": 0.1643,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-03T01:31:18",
-      "closed_at": "2026-08-05T18:46:06",
-      "realized_pct": 4.06,
-      "result_pct": 4.06
-    },
-    {
-      "id": "العرض/الطلب|BICOUSDT|2026-08-03 03:00:00",
-      "symbol": "BICOUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.01598006,
-      "stop": 0.01124,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-03T03:16:16",
-      "closed_at": "2026-08-03T13:31:23",
-      "realized_pct": 18.33,
-      "result_pct": 18.33
     },
     {
       "id": "العرض/الطلب|ADAUSDT|2026-08-03 16:45:00",
@@ -4890,6 +4853,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|STEEMUSDT|2026-08-17 03:45:00",
+      "symbol": "STEEMUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03607466,
+      "stop": 0.03461,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-17T04:02:45",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -4964,6 +4941,57 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|AVAUSDT|2026-08-03 01:15:00",
+      "symbol": "AVAUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1758566,
+      "stop": 0.1643,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-03T01:36:28",
+      "closed_at": "2026-08-05T18:48:35",
+      "realized_pct": 4.06,
+      "result_pct": 4.06
+    },
+    {
+      "id": "العرض/الطلب|AVAUSDT|2026-08-03 01:15:00",
+      "symbol": "AVAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1758566,
+      "stop": 0.1643,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-03T01:31:18",
+      "closed_at": "2026-08-05T18:46:06",
+      "realized_pct": 4.06,
+      "result_pct": 4.06
+    },
+    {
+      "id": "العرض/الطلب|BICOUSDT|2026-08-03 03:00:00",
+      "symbol": "BICOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01598006,
+      "stop": 0.01124,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-03T03:16:16",
+      "closed_at": "2026-08-03T13:31:23",
+      "realized_pct": 18.33,
+      "result_pct": 18.33
     },
     {
       "id": "الفيواب الأسبوعي · BTC|IOTXUSDT|2026-08-02 21:00:00",
