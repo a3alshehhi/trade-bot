@@ -4662,5 +4662,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|SAGAUSDT|2026-08-17 10:00:00": {
+    "symbol": "SAGAUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 7114,
+    "entry": 0.01311688,
+    "stop": 0.0124,
+    "init_stop": 0.0124,
+    "cur_stop": 0.0124,
+    "legs": [
+      0.01311688,
+      0.01298,
+      0.01284312,
+      0.01264824
+    ],
+    "last_alert_stop": 0.0124,
+    "armed": false,
+    "targets": [
+      0.01356,
+      0.01387552,
+      0.01404024,
+      0.01427688,
+      0.01472,
+      0.01543688,
+      0.01659688,
+      0.01731376
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-17 10:00:00",
+    "last_bar": "2026-08-17 10:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01311688,
+    "lo_seen": 0.01311688,
+    "created": "2026-08-17T10:20:38",
+    "dca_levels": [
+      0.01311688,
+      0.01298,
+      0.01284312,
+      0.01264824
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
