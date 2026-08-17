@@ -9093,5 +9093,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|SANDUSDT|2026-08-17 06:00:00": {
+    "symbol": "SANDUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 7088,
+    "entry": 0.03999264,
+    "stop": 0.03846,
+    "init_stop": 0.03846,
+    "cur_stop": 0.03846,
+    "legs": [
+      0.03999264,
+      0.0397,
+      0.03940736,
+      0.03899072
+    ],
+    "last_alert_stop": 0.03846,
+    "armed": false,
+    "targets": [
+      0.04094,
+      0.04161456,
+      0.04196672,
+      0.04247264,
+      0.04342,
+      0.04495264,
+      0.04743264,
+      0.04896528
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-17 06:00:00",
+    "last_bar": "2026-08-17 06:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.03999264,
+    "lo_seen": 0.03999264,
+    "created": "2026-08-17T06:17:11",
+    "dca_levels": [
+      0.03999264,
+      0.0397,
+      0.03940736,
+      0.03899072
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
