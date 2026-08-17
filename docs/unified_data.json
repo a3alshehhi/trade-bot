@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-17T17:12:05",
+  "updated_at": "2026-08-17T17:48:50",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -186,11 +186,11 @@
       "opened_at": "2026-08-17T08:20:07",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-17T17:45:02",
+      "realized_pct": -0.61,
+      "result_pct": -0.61,
+      "exec_pct": -0.61
     },
     {
       "id": "paper|DASHUSDT|2026-08-17T08:17:02",
@@ -228,11 +228,11 @@
       "opened_at": "2026-08-17T08:17:02",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-17T17:40:19",
+      "realized_pct": -0.61,
+      "result_pct": -0.61,
+      "exec_pct": -0.61
     },
     {
       "id": "paper|DIAUSDT|2026-08-17T07:38:44",
@@ -12920,12 +12920,12 @@
   ],
   "stats": {
     "total": 559,
-    "open": 23,
-    "closed": 536,
+    "open": 21,
+    "closed": 538,
     "wins": 334,
-    "win_rate": 62.3,
-    "net_pct": 276.8,
-    "pf": 1.42,
+    "win_rate": 62.1,
+    "net_pct": 275.58,
+    "pf": 1.41,
     "simulated": 1
   }
 }
