@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-17T12:06:37",
+  "updated_at": "2026-08-17T13:10:06",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -230,11 +230,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-17T12:21:15",
+      "realized_pct": 3.06,
+      "result_pct": 3.06,
+      "exec_pct": 3.06
     },
     {
       "id": "paper|DIAUSDT|2026-08-17T07:35:10",
@@ -253,11 +253,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-17T12:17:41",
+      "realized_pct": 3.06,
+      "result_pct": 3.06,
+      "exec_pct": 3.06
     },
     {
       "id": "paper|ARBUSDT|2026-08-17T07:19:54",
@@ -320,13 +320,14 @@
       "opened_at": "2026-08-17T06:50:57",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-17T12:54:01",
+      "realized_pct": 23.41,
+      "result_pct": 23.41,
+      "exec_pct": 23.41
     },
     {
       "id": "paper|GPSUSDT|2026-08-17T06:47:28",
@@ -343,13 +344,14 @@
       "opened_at": "2026-08-17T06:47:28",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-17T12:46:59",
+      "realized_pct": 23.41,
+      "result_pct": 23.41,
+      "exec_pct": 23.41
     },
     {
       "id": "paper|SANDUSDT|2026-08-17T06:29:01",
@@ -12897,12 +12899,12 @@
   ],
   "stats": {
     "total": 558,
-    "open": 28,
-    "closed": 530,
-    "wins": 328,
-    "win_rate": 61.9,
-    "net_pct": 221.56,
-    "pf": 1.33,
+    "open": 24,
+    "closed": 534,
+    "wins": 332,
+    "win_rate": 62.2,
+    "net_pct": 274.5,
+    "pf": 1.41,
     "simulated": 1
   }
 }
