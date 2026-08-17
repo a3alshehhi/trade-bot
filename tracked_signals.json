@@ -9205,5 +9205,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|ARBUSDT|2026-08-17 07:00:00": {
+    "symbol": "ARBUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 7096,
+    "entry": 0.074363,
+    "stop": 0.0722,
+    "init_stop": 0.0722,
+    "cur_stop": 0.0722,
+    "legs": [
+      0.074363,
+      0.07395,
+      0.073537,
+      0.072949
+    ],
+    "last_alert_stop": 0.0722,
+    "armed": false,
+    "targets": [
+      0.0757,
+      0.076652,
+      0.077149,
+      0.077863,
+      0.0792,
+      0.081363,
+      0.084863,
+      0.087026
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-17 07:00:00",
+    "last_bar": "2026-08-17 07:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.074363,
+    "lo_seen": 0.074363,
+    "created": "2026-08-17T07:16:56",
+    "dca_levels": [
+      0.074363,
+      0.07395,
+      0.073537,
+      0.072949
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
