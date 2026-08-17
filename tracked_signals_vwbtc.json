@@ -4260,5 +4260,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|GPSUSDT|2026-08-17 06:30:00": {
+    "symbol": "GPSUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 7095,
+    "entry": 0.01347362,
+    "stop": 0.00971,
+    "init_stop": 0.00971,
+    "cur_stop": 0.00971,
+    "legs": [
+      0.01347362,
+      0.012755,
+      0.01203638,
+      0.01101326
+    ],
+    "last_alert_stop": 0.00971,
+    "armed": false,
+    "targets": [
+      0.0158,
+      0.01745648,
+      0.01832126,
+      0.01956362,
+      0.02189,
+      0.02565362,
+      0.03174362,
+      0.03550724
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-17 06:30:00",
+    "last_bar": "2026-08-17 06:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01347362,
+    "lo_seen": 0.01347362,
+    "created": "2026-08-17T06:50:57",
+    "dca_levels": [
+      0.01347362,
+      0.012755,
+      0.01203638,
+      0.01101326
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
