@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-18T20:02:05",
+  "updated_at": "2026-08-18T20:55:16",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|THETAUSDT|2026-08-18T20:51:07",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "THETAUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1403912,
+      "stop_orig": 0.1352,
+      "stop": 0.1352,
+      "targets": [],
+      "opened_at": "2026-08-18T20:51:07",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|THETAUSDT|2026-08-18T20:47:29",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "THETAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1403912,
+      "stop_orig": 0.1352,
+      "stop": 0.1352,
+      "targets": [],
+      "opened_at": "2026-08-18T20:47:29",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|ALPINEUSDT|2026-08-18T18:47:09",
       "source": "paper",
@@ -189,7 +231,9 @@
       "targets": [],
       "opened_at": "2026-08-18T15:49:51",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -210,7 +254,9 @@
       "targets": [],
       "opened_at": "2026-08-18T15:46:52",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -13317,8 +13363,8 @@
     }
   ],
   "stats": {
-    "total": 577,
-    "open": 19,
+    "total": 579,
+    "open": 21,
     "closed": 558,
     "wins": 340,
     "win_rate": 60.9,
