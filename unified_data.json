@@ -1,8 +1,29 @@
 {
-  "updated_at": "2026-08-18T06:21:03",
+  "updated_at": "2026-08-18T07:12:46",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|IOUSDT|2026-08-18T07:02:52",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "IOUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1146238,
+      "stop_orig": 0.109,
+      "stop": 0.109,
+      "targets": [],
+      "opened_at": "2026-08-18T07:02:52",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|ADXUSDT|2026-08-18T00:36:12",
       "source": "paper",
@@ -12965,8 +12986,8 @@
     }
   ],
   "stats": {
-    "total": 561,
-    "open": 11,
+    "total": 562,
+    "open": 12,
     "closed": 550,
     "wins": 336,
     "win_rate": 61.1,
