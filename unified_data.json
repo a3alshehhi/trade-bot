@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-18T19:44:46",
+  "updated_at": "2026-08-18T20:02:05",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -104,11 +104,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-18T19:48:58",
+      "realized_pct": 0.77,
+      "result_pct": 0.77,
+      "exec_pct": 0.77
     },
     {
       "id": "paper|HEIUSDT|2026-08-18T16:10:04",
@@ -148,11 +148,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-18T19:47:02",
+      "realized_pct": 0.77,
+      "result_pct": 0.77,
+      "exec_pct": 0.77
     },
     {
       "id": "paper|HEIUSDT|2026-08-18T16:02:22",
@@ -13318,11 +13318,11 @@
   ],
   "stats": {
     "total": 577,
-    "open": 21,
-    "closed": 556,
-    "wins": 338,
-    "win_rate": 60.8,
-    "net_pct": 239.14,
+    "open": 19,
+    "closed": 558,
+    "wins": 340,
+    "win_rate": 60.9,
+    "net_pct": 240.68,
     "pf": 1.34,
     "simulated": 1
   }
