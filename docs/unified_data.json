@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-18T15:21:12",
+  "updated_at": "2026-08-18T15:50:18",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|ACEUSDT|2026-08-18T15:49:51",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ACEUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2036784,
+      "stop_orig": 0.1488,
+      "stop": 0.1488,
+      "targets": [],
+      "opened_at": "2026-08-18T15:49:51",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|ACEUSDT|2026-08-18T15:46:52",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ACEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2036784,
+      "stop_orig": 0.1488,
+      "stop": 0.1488,
+      "targets": [],
+      "opened_at": "2026-08-18T15:46:52",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|MINAUSDT|2026-08-18T14:10:59",
       "source": "paper",
@@ -17,7 +59,9 @@
       "targets": [],
       "opened_at": "2026-08-18T14:10:59",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -38,7 +82,9 @@
       "targets": [],
       "opened_at": "2026-08-18T14:07:29",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -110,11 +156,11 @@
       "opened_at": "2026-08-18T07:12:27",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-18T15:36:55",
+      "realized_pct": -0.87,
+      "result_pct": -0.87,
+      "exec_pct": -0.87
     },
     {
       "id": "paper|IOUSDT|2026-08-18T07:05:08",
@@ -131,11 +177,11 @@
       "opened_at": "2026-08-18T07:05:08",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-18T15:32:20",
+      "realized_pct": -0.87,
+      "result_pct": -0.87,
+      "exec_pct": -0.87
     },
     {
       "id": "paper|ADXUSDT|2026-08-18T00:36:12",
@@ -13099,12 +13145,12 @@
     }
   ],
   "stats": {
-    "total": 567,
+    "total": 569,
     "open": 14,
-    "closed": 553,
+    "closed": 555,
     "wins": 338,
-    "win_rate": 61.1,
-    "net_pct": 247.17,
+    "win_rate": 60.9,
+    "net_pct": 245.43,
     "pf": 1.35,
     "simulated": 1
   }
