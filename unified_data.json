@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-18T04:44:59",
+  "updated_at": "2026-08-18T05:15:24",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -83,11 +83,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-18T04:55:23",
+      "realized_pct": 1.94,
+      "result_pct": 1.94,
+      "exec_pct": 1.94
     },
     {
       "id": "paper|SAGAUSDT|2026-08-17T10:22:57",
@@ -106,11 +106,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-18T04:47:23",
+      "realized_pct": 1.94,
+      "result_pct": 1.94,
+      "exec_pct": 1.94
     },
     {
       "id": "paper|ZROUSDT|2026-08-17T10:05:53",
@@ -12966,12 +12966,12 @@
   ],
   "stats": {
     "total": 561,
-    "open": 13,
-    "closed": 548,
-    "wins": 334,
-    "win_rate": 60.9,
-    "net_pct": 249.41,
-    "pf": 1.36,
+    "open": 11,
+    "closed": 550,
+    "wins": 336,
+    "win_rate": 61.1,
+    "net_pct": 253.29,
+    "pf": 1.37,
     "simulated": 1
   }
 }
