@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-18T13:51:00",
+  "updated_at": "2026-08-18T14:05:04",
   "stats": {
-    "open": 19,
+    "open": 21,
     "closed": 539,
     "win_rate": 64.6,
     "profit_factor": 1.5,
@@ -431,23 +431,6 @@
     ]
   },
   "trades": [
-    {
-      "id": "الفيواب الأسبوعي · BTC|AMPUSDT|2026-08-04 11:45:00",
-      "symbol": "AMPUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0004006,
-      "stop": 0.000387,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-04T12:15:23",
-      "closed_at": "2026-08-04T14:09:17",
-      "realized_pct": 2.1,
-      "result_pct": 2.1
-    },
     {
       "id": "الفيواب الأسبوعي · BTC|SENTUSDT|2026-08-04 15:00:00",
       "symbol": "SENTUSDT",
@@ -1527,6 +1510,20 @@
       "result_pct": 2.18
     },
     {
+      "id": "الفيواب الأسبوعي · BTC|MINAUSDT|2026-08-18 13:45:00",
+      "symbol": "MINAUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0397888,
+      "stop": 0.0388,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-18T14:04:59",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
       "symbol": "ETHUSDT",
       "label": "زخم سيولة الحيتان",
@@ -2457,23 +2454,6 @@
       "closed_at": "2026-08-01T15:31:28",
       "realized_pct": 1.38,
       "result_pct": 1.38
-    },
-    {
-      "id": "العرض/الطلب|AMPUSDT|2026-08-04 11:45:00",
-      "symbol": "AMPUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0004006,
-      "stop": 0.000387,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-04T12:10:23",
-      "closed_at": "2026-08-04T14:05:32",
-      "realized_pct": 2.1,
-      "result_pct": 2.1
     },
     {
       "id": "عرض/طلب+دايفرجنس|AVAUSDT|2026-08-04 16:45:00",
@@ -4993,6 +4973,20 @@
       "result_pct": 2.18
     },
     {
+      "id": "العرض/الطلب|MINAUSDT|2026-08-18 13:45:00",
+      "symbol": "MINAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0397888,
+      "stop": 0.0388,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-18T14:01:47",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -5067,6 +5061,40 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|AMPUSDT|2026-08-04 11:45:00",
+      "symbol": "AMPUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0004006,
+      "stop": 0.000387,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-04T12:15:23",
+      "closed_at": "2026-08-04T14:09:17",
+      "realized_pct": 2.1,
+      "result_pct": 2.1
+    },
+    {
+      "id": "العرض/الطلب|AMPUSDT|2026-08-04 11:45:00",
+      "symbol": "AMPUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0004006,
+      "stop": 0.000387,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-04T12:10:23",
+      "closed_at": "2026-08-04T14:05:32",
+      "realized_pct": 2.1,
+      "result_pct": 2.1
     },
     {
       "id": "الفيواب الأسبوعي · BTC|MOVEUSDT|2026-08-04 06:30:00",

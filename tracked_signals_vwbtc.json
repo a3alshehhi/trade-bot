@@ -1,59 +1,4 @@
 {
-  "الفيواب الأسبوعي · BTC|AMPUSDT|2026-08-04 11:45:00": {
-    "symbol": "AMPUSDT",
-    "label": "الفيواب الأسبوعي · BTC",
-    "timeframe": "15m",
-    "message_id": 6173,
-    "entry": 0.0004006,
-    "stop": 0.000387,
-    "init_stop": 0.000387,
-    "cur_stop": 0.000387,
-    "legs": [
-      0.0004006,
-      0.000398,
-      0.0003954,
-      0.00039171
-    ],
-    "last_alert_stop": 0.000387,
-    "armed": false,
-    "targets": [
-      0.000409,
-      0.00041498,
-      0.0004226,
-      0.000431,
-      0.00043452
-    ],
-    "tp_split": [
-      50,
-      0,
-      0,
-      0,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5t",
-    "breakeven_done": false,
-    "bar_ts": "2026-08-04 11:45:00",
-    "last_bar": "2026-08-04 13:59:59.999000",
-    "hits": [
-      1
-    ],
-    "stopped": true,
-    "hi_seen": 0.000416,
-    "lo_seen": 0.000394,
-    "created": "2026-08-04T12:15:23",
-    "dca_levels": [
-      0.0004006,
-      0.000398,
-      0.0003954,
-      0.00039171
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 0.000409,
-    "close_card_sent": true,
-    "closed_at": "2026-08-04T14:09:17"
-  },
   "الفيواب الأسبوعي · BTC|SENTUSDT|2026-08-04 15:00:00": {
     "symbol": "SENTUSDT",
     "label": "الفيواب الأسبوعي · BTC",
@@ -4108,5 +4053,61 @@
     "exit_price": 2.218752,
     "close_card_sent": true,
     "closed_at": "2026-08-18T12:36:13"
+  },
+  "الفيواب الأسبوعي · BTC|MINAUSDT|2026-08-18 13:45:00": {
+    "symbol": "MINAUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 7173,
+    "entry": 0.0397888,
+    "stop": 0.0388,
+    "init_stop": 0.0388,
+    "cur_stop": 0.0388,
+    "legs": [
+      0.0397888,
+      0.0396,
+      0.0394112,
+      0.0391424
+    ],
+    "last_alert_stop": 0.0388,
+    "armed": false,
+    "targets": [
+      0.0404,
+      0.0408352,
+      0.0410624,
+      0.0413888,
+      0.042,
+      0.0429888,
+      0.0445888,
+      0.0455776
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-18 13:45:00",
+    "last_bar": "2026-08-18 13:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.0397888,
+    "lo_seen": 0.0397888,
+    "created": "2026-08-18T14:04:59",
+    "dca_levels": [
+      0.0397888,
+      0.0396,
+      0.0394112,
+      0.0391424
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
