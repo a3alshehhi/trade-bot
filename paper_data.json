@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-18T18:21:53",
+  "updated_at": "2026-08-18T18:38:03",
   "stats": {
-    "open": 27,
+    "open": 28,
     "closed": 541,
     "win_rate": 64.3,
     "profit_factor": 1.5,
@@ -5090,6 +5090,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-18T17:19:50",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|OGUSDT|2026-08-18 18:15:00",
+      "symbol": "OGUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 2.5367,
+      "stop": 2.444,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-18T18:32:36",
       "closed_at": null,
       "realized_pct": 0.0
     },

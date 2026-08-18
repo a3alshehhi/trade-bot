@@ -10010,5 +10010,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|OGUSDT|2026-08-18 18:15:00": {
+    "symbol": "OGUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 7188,
+    "entry": 2.5367,
+    "stop": 2.444,
+    "init_stop": 2.444,
+    "cur_stop": 2.444,
+    "legs": [
+      2.5367,
+      2.519,
+      2.5013,
+      2.4761
+    ],
+    "last_alert_stop": 2.444,
+    "armed": false,
+    "targets": [
+      2.594,
+      2.6348,
+      2.6561,
+      2.6867,
+      2.744,
+      2.8367,
+      2.9867,
+      3.0794
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-18 18:15:00",
+    "last_bar": "2026-08-18 18:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 2.5367,
+    "lo_seen": 2.5367,
+    "created": "2026-08-18T18:32:36",
+    "dca_levels": [
+      2.5367,
+      2.519,
+      2.5013,
+      2.4761
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
