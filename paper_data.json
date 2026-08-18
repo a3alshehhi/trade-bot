@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-18T06:49:49",
+  "updated_at": "2026-08-18T07:02:55",
   "stats": {
-    "open": 18,
+    "open": 19,
     "closed": 536,
     "win_rate": 64.6,
     "profit_factor": 1.52,
@@ -431,21 +431,6 @@
     ]
   },
   "trades": [
-    {
-      "id": "الفيواب الأسبوعي · BTC|MOVEUSDT|2026-08-04 06:30:00",
-      "symbol": "MOVEUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0076326,
-      "stop": 0.0072,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-08-04T06:49:11",
-      "closed_at": "2026-08-06T23:03:38",
-      "realized_pct": -3.53,
-      "result_pct": -3.53
-    },
     {
       "id": "الفيواب الأسبوعي · BTC|AMPUSDT|2026-08-04 11:45:00",
       "symbol": "AMPUSDT",
@@ -1505,6 +1490,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-18T00:36:12",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|IOUSDT|2026-08-18 06:45:00",
+      "symbol": "IOUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1146238,
+      "stop": 0.109,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-18T07:02:52",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -5015,6 +5014,21 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|MOVEUSDT|2026-08-04 06:30:00",
+      "symbol": "MOVEUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0076326,
+      "stop": 0.0072,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-08-04T06:49:11",
+      "closed_at": "2026-08-06T23:03:38",
+      "realized_pct": -3.53,
+      "result_pct": -3.53
     },
     {
       "id": "الفيواب الأسبوعي · BTC|LSKUSDT|2026-08-03 16:15:00",
