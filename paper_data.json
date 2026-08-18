@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-18T18:38:03",
+  "updated_at": "2026-08-18T18:49:27",
   "stats": {
     "open": 28,
-    "closed": 541,
-    "win_rate": 64.3,
-    "profit_factor": 1.5,
-    "total_pct": 1385.34,
-    "avg_pct": 0.61,
+    "closed": 542,
+    "win_rate": 64.2,
+    "profit_factor": 1.49,
+    "total_pct": 1291.91,
+    "avg_pct": 0.6,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-18",
-        "trades": 16,
-        "win_rate": 25.0,
-        "return_pct": -25.49,
+        "trades": 17,
+        "win_rate": 23.5,
+        "return_pct": -30.18,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -367,9 +367,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 26,
-        "win_rate": 38.5,
-        "return_pct": 12.86,
+        "trades": 27,
+        "win_rate": 37.0,
+        "return_pct": 5.76,
         "month": "2026-08"
       },
       {
@@ -418,9 +418,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 276,
-        "win_rate": 67.4,
-        "return_pct": 800.27
+        "trades": 277,
+        "win_rate": 67.1,
+        "return_pct": 743.65
       },
       {
         "key": "2026-07",
@@ -4482,10 +4482,11 @@
       "entry": 0.00034614,
       "stop": 0.000314,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-15T08:47:27",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-18T18:47:11",
+      "realized_pct": -6.29,
+      "result_pct": -6.29
     },
     {
       "id": "العرض/الطلب|API3USDT|2026-08-15 12:30:00",
@@ -5104,6 +5105,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-18T18:32:36",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|ALPINEUSDT|2026-08-18 18:30:00",
+      "symbol": "ALPINEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.384868,
+      "stop": 0.307,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-18T18:47:09",
       "closed_at": null,
       "realized_pct": 0.0
     },
