@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-18T15:36:56",
+  "updated_at": "2026-08-18T15:49:56",
   "stats": {
-    "open": 19,
+    "open": 21,
     "closed": 541,
     "win_rate": 64.3,
     "profit_factor": 1.5,
@@ -431,21 +431,6 @@
     ]
   },
   "trades": [
-    {
-      "id": "الفيواب الأسبوعي · BTC|SENTUSDT|2026-08-04 15:00:00",
-      "symbol": "SENTUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.01389384,
-      "stop": 0.01335,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-08-04T15:18:59",
-      "closed_at": "2026-08-06T02:18:55",
-      "realized_pct": -3.91,
-      "result_pct": -3.91
-    },
     {
       "id": "الفيواب الأسبوعي · BTC|EPICUSDT|2026-08-04 18:00:00",
       "symbol": "EPICUSDT",
@@ -1518,9 +1503,25 @@
       "timeframe": "15m",
       "entry": 0.0397888,
       "stop": 0.0388,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-18T14:10:59",
+      "closed_at": null,
+      "realized_pct": 0.77
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|ACEUSDT|2026-08-18 15:30:00",
+      "symbol": "ACEUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2036784,
+      "stop": 0.1488,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-18T15:49:51",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -4982,9 +4983,25 @@
       "timeframe": "15m",
       "entry": 0.0397888,
       "stop": 0.0388,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-18T14:07:29",
+      "closed_at": null,
+      "realized_pct": 0.77
+    },
+    {
+      "id": "العرض/الطلب|ACEUSDT|2026-08-18 15:30:00",
+      "symbol": "ACEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2036784,
+      "stop": 0.1488,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-18T15:46:52",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -5063,6 +5080,21 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|SENTUSDT|2026-08-04 15:00:00",
+      "symbol": "SENTUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01389384,
+      "stop": 0.01335,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-08-04T15:18:59",
+      "closed_at": "2026-08-06T02:18:55",
+      "realized_pct": -3.91,
+      "result_pct": -3.91
     },
     {
       "id": "الفيواب الأسبوعي · BTC|AMPUSDT|2026-08-04 11:45:00",
