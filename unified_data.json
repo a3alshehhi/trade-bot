@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-18T17:58:58",
+  "updated_at": "2026-08-18T18:51:25",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|ALPINEUSDT|2026-08-18T18:47:09",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ALPINEUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.384868,
+      "stop_orig": 0.307,
+      "stop": 0.307,
+      "targets": [],
+      "opened_at": "2026-08-18T18:47:09",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|OGUSDT|2026-08-18T18:32:36",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "OGUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 2.5367,
+      "stop_orig": 2.444,
+      "stop": 2.444,
+      "targets": [],
+      "opened_at": "2026-08-18T18:32:36",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|1000SATSUSDT|2026-08-18T17:19:50",
       "source": "paper",
@@ -1374,11 +1416,11 @@
       "opened_at": "2026-08-15T08:47:27",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-18T18:47:11",
+      "realized_pct": -6.29,
+      "result_pct": -6.29,
+      "exec_pct": -6.29
     },
     {
       "id": "paper|GASUSDT|2026-08-15T08:16:59",
@@ -13275,13 +13317,13 @@
     }
   ],
   "stats": {
-    "total": 575,
-    "open": 20,
-    "closed": 555,
+    "total": 577,
+    "open": 21,
+    "closed": 556,
     "wins": 338,
-    "win_rate": 60.9,
-    "net_pct": 245.43,
-    "pf": 1.35,
+    "win_rate": 60.8,
+    "net_pct": 239.14,
+    "pf": 1.34,
     "simulated": 1
   }
 }
