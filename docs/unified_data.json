@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-18T07:12:46",
+  "updated_at": "2026-08-18T07:57:04",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
     {
-      "id": "paper|IOUSDT|2026-08-18T07:02:52",
+      "id": "paper|IOUSDT|2026-08-18T07:12:27",
       "source": "paper",
       "source_ar": "ورقية",
       "symbol": "IOUSDT",
@@ -15,7 +15,28 @@
       "stop_orig": 0.109,
       "stop": 0.109,
       "targets": [],
-      "opened_at": "2026-08-18T07:02:52",
+      "opened_at": "2026-08-18T07:12:27",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|IOUSDT|2026-08-18T07:05:08",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "IOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1146238,
+      "stop_orig": 0.109,
+      "stop": 0.109,
+      "targets": [],
+      "opened_at": "2026-08-18T07:05:08",
       "usd": 100.0,
       "hits": [],
       "status": "open",
@@ -12986,8 +13007,8 @@
     }
   ],
   "stats": {
-    "total": 562,
-    "open": 12,
+    "total": 563,
+    "open": 13,
     "closed": 550,
     "wins": 336,
     "win_rate": 61.1,
