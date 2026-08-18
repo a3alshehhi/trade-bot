@@ -3093,7 +3093,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-16 20:45:00",
-    "last_bar": "2026-08-18 16:44:59.999000",
+    "last_bar": "2026-08-18 19:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1986,
@@ -3692,7 +3692,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-17 09:45:00",
-    "last_bar": "2026-08-18 16:44:59.999000",
+    "last_bar": "2026-08-18 19:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.798,
@@ -3810,7 +3810,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-17 14:30:00",
-    "last_bar": "2026-08-18 16:44:59.999000",
+    "last_bar": "2026-08-18 19:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00793,
@@ -3866,7 +3866,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-18 00:15:00",
-    "last_bar": "2026-08-18 16:44:59.999000",
+    "last_bar": "2026-08-18 19:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0628,
@@ -4046,7 +4046,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-18 13:45:00",
-    "last_bar": "2026-08-18 16:44:59.999000",
+    "last_bar": "2026-08-18 19:44:59.999000",
     "hits": [
       1
     ],
@@ -4104,7 +4104,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-18 15:30:00",
-    "last_bar": "2026-08-18 16:44:59.999000",
+    "last_bar": "2026-08-18 19:44:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.2365,
@@ -4160,13 +4160,13 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-18 15:45:00",
-    "last_bar": "2026-08-18 16:44:59.999000",
+    "last_bar": "2026-08-18 19:44:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.157,
-    "lo_seen": 0.1545316,
+    "lo_seen": 0.1544,
     "created": "2026-08-18T16:10:04",
     "dca_levels": [
       0.1545316,
@@ -4175,7 +4175,10 @@
       0.1520268
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.1545316,
+    "close_card_sent": true,
+    "closed_at": "2026-08-18T19:48:58"
   },
   "الفيواب الأسبوعي · BTC|HEIUSDT|2026-08-18 15:45:00": {
     "symbol": "HEIUSDT",
@@ -4218,11 +4221,11 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-18 15:45:00",
-    "last_bar": "2026-08-18 16:44:59.999000",
+    "last_bar": "2026-08-18 19:44:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.1388354,
-    "lo_seen": 0.1345,
+    "hi_seen": 0.141,
+    "lo_seen": 0.1335,
     "created": "2026-08-18T16:10:04",
     "dca_levels": [
       0.1388354,
