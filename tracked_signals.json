@@ -9657,5 +9657,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|SSVUSDT|2026-08-18 09:45:00": {
+    "symbol": "SSVUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 7168,
+    "entry": 2.159238,
+    "stop": 2.103,
+    "init_stop": 2.103,
+    "cur_stop": 2.103,
+    "legs": [
+      2.159238,
+      2.1485,
+      2.137762,
+      2.122474
+    ],
+    "last_alert_stop": 2.103,
+    "armed": false,
+    "targets": [
+      2.194,
+      2.218752,
+      2.231674,
+      2.250238,
+      2.285,
+      2.341238,
+      2.432238,
+      2.488476
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-18 09:45:00",
+    "last_bar": "2026-08-18 09:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 2.159238,
+    "lo_seen": 2.159238,
+    "created": "2026-08-18T10:02:45",
+    "dca_levels": [
+      2.159238,
+      2.1485,
+      2.137762,
+      2.122474
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
