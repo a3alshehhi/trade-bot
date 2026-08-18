@@ -9597,5 +9597,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|IOUSDT|2026-08-18 06:45:00": {
+    "symbol": "IOUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 7160,
+    "entry": 0.1146238,
+    "stop": 0.109,
+    "init_stop": 0.109,
+    "cur_stop": 0.109,
+    "legs": [
+      0.1146238,
+      0.11355,
+      0.1124762,
+      0.1109474
+    ],
+    "last_alert_stop": 0.109,
+    "armed": false,
+    "targets": [
+      0.1181,
+      0.1205752,
+      0.1218674,
+      0.1237238,
+      0.1272,
+      0.1328238,
+      0.1419238,
+      0.1475476
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-18 06:45:00",
+    "last_bar": "2026-08-18 06:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.1146238,
+    "lo_seen": 0.1146238,
+    "created": "2026-08-18T07:05:08",
+    "dca_levels": [
+      0.1146238,
+      0.11355,
+      0.1124762,
+      0.1109474
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
