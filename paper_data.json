@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-19T15:26:33",
+  "updated_at": "2026-08-19T15:37:39",
   "stats": {
-    "open": 34,
-    "closed": 554,
-    "win_rate": 64.4,
-    "profit_factor": 1.52,
-    "total_pct": 1651.78,
+    "open": 32,
+    "closed": 556,
+    "win_rate": 64.2,
+    "profit_factor": 1.51,
+    "total_pct": 1628.72,
     "avg_pct": 0.63,
     "max_drawdown_pct": -70.77
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-19",
-        "trades": 8,
-        "win_rate": 62.5,
-        "return_pct": 21.45,
+        "trades": 10,
+        "win_rate": 50.0,
+        "return_pct": 19.85,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -375,9 +375,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 39,
-        "win_rate": 48.7,
-        "return_pct": 33.1,
+        "trades": 41,
+        "win_rate": 46.3,
+        "return_pct": 31.35,
         "month": "2026-08"
       },
       {
@@ -426,9 +426,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 289,
-        "win_rate": 67.5,
-        "return_pct": 961.77
+        "trades": 291,
+        "win_rate": 67.0,
+        "return_pct": 947.79
       },
       {
         "key": "2026-07",
@@ -1179,10 +1179,11 @@
       "entry": 0.00784822,
       "stop": 0.00736,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-17T14:53:33",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-19T15:37:27",
+      "realized_pct": -0.35,
+      "result_pct": -0.35
     },
     {
       "id": "الفيواب الأسبوعي · BTC|ADXUSDT|2026-08-18 00:15:00",
@@ -1193,7 +1194,8 @@
       "entry": 0.0616282,
       "stop": 0.0586,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "opened_at": "2026-08-18T00:36:12",
@@ -1340,7 +1342,9 @@
       "entry": 0.0328978,
       "stop": 0.0316,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-19T06:20:49",
@@ -1416,7 +1420,9 @@
       "entry": 0.3025172,
       "stop": 0.293,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-19T13:36:23",
@@ -1433,7 +1439,8 @@
       "stop": 1.64,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-19T14:05:35",
@@ -4424,11 +4431,13 @@
       "timeframe": "15m",
       "entry": 0.00420158,
       "stop": 0.00401,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-15T20:05:09",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.41
     },
     {
       "id": "العرض/الطلب|XAIUSDT|2026-08-15 19:45:00",
@@ -4791,7 +4800,8 @@
       "entry": 0.0616282,
       "stop": 0.0586,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "opened_at": "2026-08-18T00:32:34",
@@ -4907,10 +4917,11 @@
       "entry": 1.064e-05,
       "stop": 1.005e-05,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-18T17:19:50",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-19T15:32:42",
+      "realized_pct": -0.97,
+      "result_pct": -0.97
     },
     {
       "id": "العرض/الطلب|BIOUSDT|2026-08-18 17:00:00",
@@ -4998,7 +5009,9 @@
       "entry": 0.0328978,
       "stop": 0.0316,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-19T06:17:19",
@@ -5074,7 +5087,9 @@
       "entry": 0.3025172,
       "stop": 0.293,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-19T13:32:49",
@@ -5091,7 +5106,8 @@
       "stop": 1.64,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-19T14:02:06",

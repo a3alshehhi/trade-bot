@@ -7576,7 +7576,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-15 13:15:00",
-    "last_bar": "2026-08-19 15:14:59.999000",
+    "last_bar": "2026-08-19 15:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0293,
@@ -7844,14 +7844,14 @@
     "entry": 0.00420158,
     "stop": 0.00401,
     "init_stop": 0.00401,
-    "cur_stop": 0.004119299999999999,
+    "cur_stop": 0.0042225879,
     "legs": [
       0.00420158,
       0.004165,
       0.00412842,
       0.00407634
     ],
-    "last_alert_stop": 0.004119299999999999,
+    "last_alert_stop": 0.0042225879,
     "armed": false,
     "targets": [
       0.00432,
@@ -7877,10 +7877,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-15 19:45:00",
-    "last_bar": "2026-08-19 15:14:59.999000",
-    "hits": [],
+    "last_bar": "2026-08-19 15:29:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.0043,
+    "hi_seen": 0.00435,
     "lo_seen": 0.00412,
     "created": "2026-08-15T20:05:09",
     "dca_levels": [
@@ -7891,7 +7893,7 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 2
+    "st_stage": 3
   },
   "العرض/الطلب|XAIUSDT|2026-08-15 19:45:00": {
     "symbol": "XAIUSDT",
@@ -8597,10 +8599,10 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-16 20:45:00",
-    "last_bar": "2026-08-19 15:14:59.999000",
+    "last_bar": "2026-08-19 15:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.201,
+    "hi_seen": 0.2024,
     "lo_seen": 0.1897,
     "created": "2026-08-16T21:11:58",
     "dca_levels": [
@@ -9197,7 +9199,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-17 09:45:00",
-    "last_bar": "2026-08-19 15:14:59.999000",
+    "last_bar": "2026-08-19 15:29:59.999000",
     "hits": [
       1,
       2,
@@ -9206,7 +9208,7 @@
       5
     ],
     "stopped": false,
-    "hi_seen": 0.873,
+    "hi_seen": 0.875,
     "lo_seen": 0.76,
     "created": "2026-08-17T10:02:27",
     "dca_levels": [
@@ -9289,14 +9291,14 @@
     "entry": 0.0616282,
     "stop": 0.0586,
     "init_stop": 0.0586,
-    "cur_stop": 0.06193634099999999,
+    "cur_stop": 0.0635,
     "legs": [
       0.0616282,
       0.06105,
       0.0604718,
       0.0596486
     ],
-    "last_alert_stop": 0.06193634099999999,
+    "last_alert_stop": 0.0635,
     "armed": false,
     "targets": [
       0.0635,
@@ -9322,12 +9324,13 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-18 00:15:00",
-    "last_bar": "2026-08-19 15:14:59.999000",
+    "last_bar": "2026-08-19 15:29:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
     "stopped": false,
-    "hi_seen": 0.064,
+    "hi_seen": 0.065,
     "lo_seen": 0.06,
     "created": "2026-08-18T00:32:34",
     "dca_levels": [
@@ -9716,14 +9719,14 @@
     "entry": 1.064e-05,
     "stop": 1.005e-05,
     "init_stop": 1.005e-05,
-    "cur_stop": 1.005e-05,
+    "cur_stop": 1.0537050000000001e-05,
     "legs": [
       1.064e-05,
       1.053e-05,
       1.041e-05,
       1.025e-05
     ],
-    "last_alert_stop": 1.005e-05,
+    "last_alert_stop": 1.0537050000000001e-05,
     "armed": false,
     "targets": [
       1.1e-05,
@@ -9749,10 +9752,10 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-18 17:00:00",
-    "last_bar": "2026-08-19 15:14:59.999000",
+    "last_bar": "2026-08-19 15:29:59.999000",
     "hits": [],
-    "stopped": false,
-    "hi_seen": 1.068e-05,
+    "stopped": true,
+    "hi_seen": 1.075e-05,
     "lo_seen": 1.024e-05,
     "created": "2026-08-18T17:19:50",
     "dca_levels": [
@@ -9762,7 +9765,11 @@
       1.025e-05
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2,
+    "exit_price": 1.0537050000000001e-05,
+    "close_card_sent": true,
+    "closed_at": "2026-08-19T15:32:42"
   },
   "العرض/الطلب|BIOUSDT|2026-08-18 17:00:00": {
     "symbol": "BIOUSDT",
@@ -9927,7 +9934,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-18 18:30:00",
-    "last_bar": "2026-08-19 15:14:59.999000",
+    "last_bar": "2026-08-19 15:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.408,
@@ -10045,7 +10052,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 04:00:00",
-    "last_bar": "2026-08-19 15:14:59.999000",
+    "last_bar": "2026-08-19 15:29:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.3877686,
@@ -10068,14 +10075,14 @@
     "entry": 0.0328978,
     "stop": 0.0316,
     "init_stop": 0.0316,
-    "cur_stop": 0.0331335,
+    "cur_stop": 0.0342712,
     "legs": [
       0.0328978,
       0.03265,
       0.0324022,
       0.0320494
     ],
-    "last_alert_stop": 0.0331335,
+    "last_alert_stop": 0.0342712,
     "armed": false,
     "targets": [
       0.0337,
@@ -10101,12 +10108,14 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 06:00:00",
-    "last_bar": "2026-08-19 15:14:59.999000",
+    "last_bar": "2026-08-19 15:29:59.999000",
     "hits": [
-      1
+      1,
+      2,
+      3
     ],
     "stopped": false,
-    "hi_seen": 0.0341,
+    "hi_seen": 0.0348,
     "lo_seen": 0.0328978,
     "created": "2026-08-19T06:17:19",
     "dca_levels": [
@@ -10160,7 +10169,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 08:15:00",
-    "last_bar": "2026-08-19 15:14:59.999000",
+    "last_bar": "2026-08-19 15:29:59.999000",
     "hits": [
       1
     ],
@@ -10218,10 +10227,10 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 09:00:00",
-    "last_bar": "2026-08-19 15:14:59.999000",
+    "last_bar": "2026-08-19 15:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.301158,
+    "hi_seen": 0.302,
     "lo_seen": 0.283,
     "created": "2026-08-19T09:17:01",
     "dca_levels": [
@@ -10274,7 +10283,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 11:45:00",
-    "last_bar": "2026-08-19 15:14:59.999000",
+    "last_bar": "2026-08-19 15:29:59.999000",
     "hits": [
       1
     ],
@@ -10332,10 +10341,10 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 12:30:00",
-    "last_bar": "2026-08-19 15:14:59.999000",
+    "last_bar": "2026-08-19 15:29:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.00711,
+    "hi_seen": 0.00714,
     "lo_seen": 0.0068,
     "created": "2026-08-19T12:47:32",
     "dca_levels": [
@@ -10355,14 +10364,14 @@
     "entry": 0.3025172,
     "stop": 0.293,
     "init_stop": 0.293,
-    "cur_stop": 0.3025172,
+    "cur_stop": 0.3125888,
     "legs": [
       0.3025172,
       0.3007,
       0.2988828,
       0.2962956
     ],
-    "last_alert_stop": 0.3025172,
+    "last_alert_stop": 0.3125888,
     "armed": false,
     "targets": [
       0.3084,
@@ -10388,12 +10397,14 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 13:15:00",
-    "last_bar": "2026-08-19 15:14:59.999000",
+    "last_bar": "2026-08-19 15:29:59.999000",
     "hits": [
-      1
+      1,
+      2,
+      3
     ],
     "stopped": false,
-    "hi_seen": 0.3109,
+    "hi_seen": 0.3178,
     "lo_seen": 0.3025172,
     "created": "2026-08-19T13:32:49",
     "dca_levels": [
@@ -10413,14 +10424,14 @@
     "entry": 1.69562,
     "stop": 1.64,
     "init_stop": 1.64,
-    "cur_stop": 1.73,
+    "cur_stop": 1.75448,
     "legs": [
       1.69562,
       1.685,
       1.67438,
       1.65926
     ],
-    "last_alert_stop": 1.73,
+    "last_alert_stop": 1.75448,
     "armed": false,
     "targets": [
       1.73,
@@ -10446,13 +10457,14 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 13:45:00",
-    "last_bar": "2026-08-19 15:14:59.999000",
+    "last_bar": "2026-08-19 15:29:59.999000",
     "hits": [
       1,
-      2
+      2,
+      3
     ],
     "stopped": false,
-    "hi_seen": 1.757,
+    "hi_seen": 1.781,
     "lo_seen": 1.69562,
     "created": "2026-08-19T14:02:06",
     "dca_levels": [
