@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-19T23:49:24",
+  "updated_at": "2026-08-19T23:56:00",
   "stats": {
-    "open": 67,
+    "open": 68,
     "closed": 588,
     "win_rate": 65.6,
     "profit_factor": 1.62,
@@ -1885,7 +1885,7 @@
       "stop": 6.22,
       "hits": [],
       "status": "open",
-      "opened_at": "2026-08-19T23:49:09",
+      "opened_at": "2026-08-19T23:55:37",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -2837,25 +2837,6 @@
       "closed_at": "2026-08-04T18:46:26",
       "realized_pct": 0.98,
       "result_pct": 0.98
-    },
-    {
-      "id": "العرض/الطلب|BANDUSDT|2026-08-05 22:30:00",
-      "symbol": "BANDUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.1574362,
-      "stop": 0.1507,
-      "hits": [
-        1,
-        2,
-        3
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-05T22:52:23",
-      "closed_at": "2026-08-07T19:32:25",
-      "realized_pct": 3.59,
-      "result_pct": 3.59
     },
     {
       "id": "العرض/الطلب|HYPERUSDT|2026-08-06 00:30:00",
@@ -6067,6 +6048,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|AVAXUSDT|2026-08-19 23:30:00",
+      "symbol": "AVAXUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 6.627262,
+      "stop": 6.22,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-19T23:51:45",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -6158,6 +6153,25 @@
       "status": "closed",
       "opened_at": "2026-08-05T22:54:59",
       "closed_at": "2026-08-07T19:34:06",
+      "realized_pct": 3.59,
+      "result_pct": 3.59
+    },
+    {
+      "id": "العرض/الطلب|BANDUSDT|2026-08-05 22:30:00",
+      "symbol": "BANDUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1574362,
+      "stop": 0.1507,
+      "hits": [
+        1,
+        2,
+        3
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-05T22:52:23",
+      "closed_at": "2026-08-07T19:32:25",
       "realized_pct": 3.59,
       "result_pct": 3.59
     },
