@@ -1,444 +1,4 @@
 {
-  "الفيواب الأسبوعي · BTC|ADXUSDT|2026-08-05 06:45:00": {
-    "symbol": "ADXUSDT",
-    "label": "الفيواب الأسبوعي · BTC",
-    "timeframe": "15m",
-    "message_id": 6207,
-    "entry": 0.0570338,
-    "stop": 0.0545,
-    "init_stop": 0.0545,
-    "cur_stop": 0.0586,
-    "legs": [
-      0.0570338,
-      0.05655,
-      0.0560662,
-      0.0553774
-    ],
-    "last_alert_stop": 0.0586,
-    "armed": false,
-    "targets": [
-      0.0586,
-      0.0597152,
-      0.0611338,
-      0.0627,
-      0.063356
-    ],
-    "tp_split": [
-      50,
-      0,
-      0,
-      0,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5t",
-    "breakeven_done": false,
-    "bar_ts": "2026-08-05 06:45:00",
-    "last_bar": "2026-08-06 17:59:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.06,
-    "lo_seen": 0.0548,
-    "created": "2026-08-05T07:06:19",
-    "dca_levels": [
-      0.0570338,
-      0.05655,
-      0.0560662,
-      0.0553774
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "st_stage": 3,
-    "exit_price": 0.0586,
-    "close_card_sent": true,
-    "closed_at": "2026-08-06T19:28:53"
-  },
-  "الفيواب الأسبوعي · BTC|COOKIEUSDT|2026-08-05 07:15:00": {
-    "symbol": "COOKIEUSDT",
-    "label": "الفيواب الأسبوعي · BTC",
-    "timeframe": "15m",
-    "message_id": 6209,
-    "entry": 0.008018,
-    "stop": 0.0074,
-    "init_stop": 0.0074,
-    "cur_stop": 0.0074,
-    "legs": [
-      0.008018,
-      0.0079,
-      0.007782,
-      0.007614
-    ],
-    "last_alert_stop": 0.0074,
-    "armed": false,
-    "targets": [
-      0.0084,
-      0.008672,
-      0.009018,
-      0.0094,
-      0.00956
-    ],
-    "tp_split": [
-      50,
-      0,
-      0,
-      0,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5t",
-    "breakeven_done": false,
-    "bar_ts": "2026-08-05 07:15:00",
-    "last_bar": "2026-08-05 11:29:59.999000",
-    "hits": [
-      1
-    ],
-    "stopped": true,
-    "hi_seen": 0.0085,
-    "lo_seen": 0.008,
-    "created": "2026-08-05T07:34:16",
-    "dca_levels": [
-      0.008018,
-      0.0079,
-      0.007782,
-      0.007614
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 0.0084,
-    "close_card_sent": true,
-    "closed_at": "2026-08-05T11:42:19"
-  },
-  "الفيواب الأسبوعي · BTC|FLUXUSDT|2026-08-05 07:45:00": {
-    "symbol": "FLUXUSDT",
-    "label": "الفيواب الأسبوعي · BTC",
-    "timeframe": "15m",
-    "message_id": 6213,
-    "entry": 0.0399978,
-    "stop": 0.0387,
-    "init_stop": 0.0387,
-    "cur_stop": 0.0393025,
-    "legs": [
-      0.0399978,
-      0.03975,
-      0.0395022,
-      0.0391494
-    ],
-    "last_alert_stop": 0.0393025,
-    "armed": false,
-    "targets": [
-      0.0408,
-      0.0413712,
-      0.0420978,
-      0.0429,
-      0.043236
-    ],
-    "tp_split": [
-      50,
-      0,
-      0,
-      0,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5t",
-    "breakeven_done": false,
-    "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-05 23:59:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.0403,
-    "lo_seen": 0.0393,
-    "created": "2026-08-05T08:06:33",
-    "dca_levels": [
-      0.0399978,
-      0.03975,
-      0.0395022,
-      0.0391494
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "st_stage": 2,
-    "exit_price": 0.0393025,
-    "close_card_sent": true,
-    "closed_at": "2026-08-06T00:04:03"
-  },
-  "الفيواب الأسبوعي · BTC|BATUSDT|2026-08-05 07:45:00": {
-    "symbol": "BATUSDT",
-    "label": "الفيواب الأسبوعي · BTC",
-    "timeframe": "15m",
-    "message_id": 6213,
-    "entry": 0.067817,
-    "stop": 0.0638,
-    "init_stop": 0.0638,
-    "cur_stop": 0.06726199999999999,
-    "legs": [
-      0.067817,
-      0.06705,
-      0.066283,
-      0.065191
-    ],
-    "last_alert_stop": 0.06726199999999999,
-    "armed": false,
-    "targets": [
-      0.0703,
-      0.072068,
-      0.074317,
-      0.0768,
-      0.07784
-    ],
-    "tp_split": [
-      50,
-      0,
-      0,
-      0,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5t",
-    "breakeven_done": false,
-    "bar_ts": "2026-08-05 07:45:00",
-    "last_bar": "2026-08-09 23:44:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.0692,
-    "lo_seen": 0.0663,
-    "created": "2026-08-05T08:06:33",
-    "dca_levels": [
-      0.067817,
-      0.06705,
-      0.066283,
-      0.065191
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "st_stage": 2,
-    "exit_price": 0.06726199999999999,
-    "close_card_sent": true,
-    "closed_at": "2026-08-09T23:49:58"
-  },
-  "الفيواب الأسبوعي · BTC|DUSKUSDT|2026-08-05 08:00:00": {
-    "symbol": "DUSKUSDT",
-    "label": "الفيواب الأسبوعي · BTC",
-    "timeframe": "15m",
-    "message_id": 6215,
-    "entry": 0.0609102,
-    "stop": 0.0585,
-    "init_stop": 0.0585,
-    "cur_stop": 0.0607945,
-    "legs": [
-      0.0609102,
-      0.06045,
-      0.0599898,
-      0.0593346
-    ],
-    "last_alert_stop": 0.0607945,
-    "armed": false,
-    "targets": [
-      0.0624,
-      0.0634608,
-      0.0648102,
-      0.0663,
-      0.066924
-    ],
-    "tp_split": [
-      50,
-      0,
-      0,
-      0,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5t",
-    "breakeven_done": false,
-    "bar_ts": "2026-08-05 08:00:00",
-    "last_bar": "2026-08-06 05:29:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.0615,
-    "lo_seen": 0.0589,
-    "created": "2026-08-05T08:19:22",
-    "dca_levels": [
-      0.0609102,
-      0.06045,
-      0.0599898,
-      0.0593346
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "st_stage": 2,
-    "exit_price": 0.0607945,
-    "close_card_sent": true,
-    "closed_at": "2026-08-06T05:37:32"
-  },
-  "الفيواب الأسبوعي · BTC|CELRUSDT|2026-08-05 08:00:00": {
-    "symbol": "CELRUSDT",
-    "label": "الفيواب الأسبوعي · BTC",
-    "timeframe": "15m",
-    "message_id": 6215,
-    "entry": 0.00170388,
-    "stop": 0.001605,
-    "init_stop": 0.001605,
-    "cur_stop": 0.001605,
-    "legs": [
-      0.00170388,
-      0.001685,
-      0.00166612,
-      0.00163924
-    ],
-    "last_alert_stop": 0.001605,
-    "armed": false,
-    "targets": [
-      0.001765,
-      0.00180852,
-      0.00186388,
-      0.001925,
-      0.0019506
-    ],
-    "tp_split": [
-      50,
-      0,
-      0,
-      0,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5t",
-    "breakeven_done": false,
-    "bar_ts": "2026-08-05 08:00:00",
-    "last_bar": "2026-08-05 09:44:59.999000",
-    "hits": [
-      1
-    ],
-    "stopped": true,
-    "hi_seen": 0.001765,
-    "lo_seen": 0.00170388,
-    "created": "2026-08-05T08:19:22",
-    "dca_levels": [
-      0.00170388,
-      0.001685,
-      0.00166612,
-      0.00163924
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "exit_price": 0.001765,
-    "close_card_sent": true,
-    "closed_at": "2026-08-05T09:49:04"
-  },
-  "الفيواب الأسبوعي · BTC|GLMRUSDT|2026-08-05 08:15:00": {
-    "symbol": "GLMRUSDT",
-    "label": "الفيواب الأسبوعي · BTC",
-    "timeframe": "15m",
-    "message_id": 6216,
-    "entry": 0.00758911,
-    "stop": 0.00729,
-    "init_stop": 0.00729,
-    "cur_stop": 0.007663489999999999,
-    "legs": [
-      0.00758911,
-      0.007532,
-      0.00747489,
-      0.00739358
-    ],
-    "last_alert_stop": 0.007663489999999999,
-    "armed": false,
-    "targets": [
-      0.007774,
-      0.00790565,
-      0.00807311,
-      0.008258,
-      0.00833544
-    ],
-    "tp_split": [
-      50,
-      0,
-      0,
-      0,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5t",
-    "breakeven_done": false,
-    "bar_ts": "2026-08-05 08:15:00",
-    "last_bar": "2026-08-06 09:44:59.999000",
-    "hits": [],
-    "stopped": true,
-    "hi_seen": 0.007741,
-    "lo_seen": 0.007532,
-    "created": "2026-08-05T08:34:23",
-    "dca_levels": [
-      0.00758911,
-      0.007532,
-      0.00747489,
-      0.00739358
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "st_stage": 2,
-    "exit_price": 0.007663489999999999,
-    "close_card_sent": true,
-    "closed_at": "2026-08-06T09:49:56"
-  },
-  "الفيواب الأسبوعي · BTC|SHELLUSDT|2026-08-05 08:15:00": {
-    "symbol": "SHELLUSDT",
-    "label": "الفيواب الأسبوعي · BTC",
-    "timeframe": "15m",
-    "message_id": 6216,
-    "entry": 0.018327,
-    "stop": 0.0174,
-    "init_stop": 0.0174,
-    "cur_stop": 0.0189,
-    "legs": [
-      0.018327,
-      0.01815,
-      0.017973,
-      0.017721
-    ],
-    "last_alert_stop": 0.018418635,
-    "armed": false,
-    "targets": [
-      0.0189,
-      0.019308,
-      0.019827,
-      0.0204,
-      0.02064
-    ],
-    "tp_split": [
-      50,
-      0,
-      0,
-      0,
-      50
-    ],
-    "is_trendwave": false,
-    "mgmt": "5t",
-    "breakeven_done": false,
-    "bar_ts": "2026-08-05 08:15:00",
-    "last_bar": "2026-08-06 17:14:59.999000",
-    "hits": [
-      1,
-      2
-    ],
-    "stopped": true,
-    "hi_seen": 0.0194,
-    "lo_seen": 0.018,
-    "created": "2026-08-05T08:34:23",
-    "dca_levels": [
-      0.018327,
-      0.01815,
-      0.017973,
-      0.017721
-    ],
-    "wait_entry": true,
-    "max_age_h": 48.0,
-    "st_stage": 3,
-    "exit_price": 0.0189,
-    "close_card_sent": true,
-    "closed_at": "2026-08-06T17:36:40"
-  },
   "الفيواب الأسبوعي · BTC|GPSUSDT|2026-08-05 09:00:00": {
     "symbol": "GPSUSDT",
     "label": "الفيواب الأسبوعي · BTC",
@@ -4154,6 +3714,62 @@
       0.03265,
       0.0324022,
       0.0320494
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|ONGUSDT|2026-08-19 08:15:00": {
+    "symbol": "ONGUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 7221,
+    "entry": 0.05872092,
+    "stop": 0.05196,
+    "init_stop": 0.05196,
+    "cur_stop": 0.05196,
+    "legs": [
+      0.05872092,
+      0.05743,
+      0.05613908,
+      0.05430116
+    ],
+    "last_alert_stop": 0.05196,
+    "armed": false,
+    "targets": [
+      0.0629,
+      0.06587568,
+      0.06742916,
+      0.06966092,
+      0.07384,
+      0.08060092,
+      0.09154092,
+      0.09830184
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-19 08:15:00",
+    "last_bar": "2026-08-19 08:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.05872092,
+    "lo_seen": 0.05872092,
+    "created": "2026-08-19T08:35:16",
+    "dca_levels": [
+      0.05872092,
+      0.05743,
+      0.05613908,
+      0.05430116
     ],
     "wait_entry": true,
     "max_age_h": 48.0
