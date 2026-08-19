@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-19T15:06:26",
+  "updated_at": "2026-08-19T15:20:44",
   "stats": {
     "open": 34,
     "closed": 554,
@@ -1192,11 +1192,13 @@
       "timeframe": "15m",
       "entry": 0.0616282,
       "stop": 0.0586,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-18T00:36:12",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.52
     },
     {
       "id": "الفيواب الأسبوعي · BTC|IOUSDT|2026-08-18 06:45:00",
@@ -1430,7 +1432,8 @@
       "entry": 1.69562,
       "stop": 1.64,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "opened_at": "2026-08-19T14:05:35",
@@ -4787,11 +4790,13 @@
       "timeframe": "15m",
       "entry": 0.0616282,
       "stop": 0.0586,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-18T00:32:34",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.52
     },
     {
       "id": "العرض/الطلب|IOUSDT|2026-08-18 06:45:00",
@@ -5085,7 +5090,8 @@
       "entry": 1.69562,
       "stop": 1.64,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "opened_at": "2026-08-19T14:02:06",
