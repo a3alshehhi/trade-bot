@@ -2983,7 +2983,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-16 20:45:00",
-    "last_bar": "2026-08-19 03:14:59.999000",
+    "last_bar": "2026-08-19 05:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1986,
@@ -3582,12 +3582,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-17 09:45:00",
-    "last_bar": "2026-08-19 03:14:59.999000",
+    "last_bar": "2026-08-19 05:14:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.804,
+    "hi_seen": 0.813,
     "lo_seen": 0.76,
     "created": "2026-08-17T10:05:53",
     "dca_levels": [
@@ -3703,11 +3703,11 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-17 14:30:00",
-    "last_bar": "2026-08-19 03:14:59.999000",
+    "last_bar": "2026-08-19 05:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00793,
-    "lo_seen": 0.00748,
+    "lo_seen": 0.00741,
     "created": "2026-08-17T14:53:33",
     "dca_levels": [
       0.00784822,
@@ -3759,7 +3759,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-18 00:15:00",
-    "last_bar": "2026-08-19 03:14:59.999000",
+    "last_bar": "2026-08-19 05:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0628,
@@ -4151,14 +4151,14 @@
     "entry": 0.1403912,
     "stop": 0.1352,
     "init_stop": 0.1352,
-    "cur_stop": 0.1403912,
+    "cur_stop": 0.14109315599999997,
     "legs": [
       0.1403912,
       0.1394,
       0.1384088,
       0.1369976
     ],
-    "last_alert_stop": 0.1403912,
+    "last_alert_stop": 0.14109315599999997,
     "armed": false,
     "targets": [
       0.1436,
@@ -4184,7 +4184,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-18 20:30:00",
-    "last_bar": "2026-08-19 03:14:59.999000",
+    "last_bar": "2026-08-19 05:14:59.999000",
     "hits": [
       1
     ],
@@ -4199,7 +4199,8 @@
       0.1369976
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 3
   },
   "الفيواب الأسبوعي · BTC|EPICUSDT|2026-08-19 04:00:00": {
     "symbol": "EPICUSDT",
@@ -4242,11 +4243,11 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 04:00:00",
-    "last_bar": "2026-08-19 04:00:00",
+    "last_bar": "2026-08-19 05:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.3877686,
-    "lo_seen": 0.3877686,
+    "lo_seen": 0.3542,
     "created": "2026-08-19T04:24:25",
     "dca_levels": [
       0.3877686,
