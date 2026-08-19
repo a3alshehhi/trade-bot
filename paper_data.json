@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-19T09:05:56",
+  "updated_at": "2026-08-19T09:24:10",
   "stats": {
-    "open": 25,
+    "open": 27,
     "closed": 553,
     "win_rate": 64.6,
     "profit_factor": 1.52,
@@ -439,21 +439,6 @@
     ]
   },
   "trades": [
-    {
-      "id": "الفيواب الأسبوعي · BTC|GPSUSDT|2026-08-05 09:00:00",
-      "symbol": "GPSUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.00931004,
-      "stop": 0.00821,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-08-05T09:19:19",
-      "closed_at": "2026-08-06T01:34:05",
-      "realized_pct": 0.68,
-      "result_pct": 0.68
-    },
     {
       "id": "الفيواب الأسبوعي · BTC|LPTUSDT|2026-08-05 11:00:00",
       "symbol": "LPTUSDT",
@@ -1419,6 +1404,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-19T08:35:16",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|CYBERUSDT|2026-08-19 09:00:00",
+      "symbol": "CYBERUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.301158,
+      "stop": 0.282,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-19T09:24:05",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -4998,6 +4997,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|CYBERUSDT|2026-08-19 09:00:00",
+      "symbol": "CYBERUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.301158,
+      "stop": 0.282,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-19T09:17:01",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -5072,6 +5085,21 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|GPSUSDT|2026-08-05 09:00:00",
+      "symbol": "GPSUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00931004,
+      "stop": 0.00821,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-08-05T09:19:19",
+      "closed_at": "2026-08-06T01:34:05",
+      "realized_pct": 0.68,
+      "result_pct": 0.68
     },
     {
       "id": "الفيواب الأسبوعي · BTC|ADXUSDT|2026-08-05 06:45:00",
