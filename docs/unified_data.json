@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-19T06:21:11",
+  "updated_at": "2026-08-19T07:14:01",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|IOTAUSDT|2026-08-19T06:20:49",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "IOTAUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0328978,
+      "stop_orig": 0.0316,
+      "stop": 0.0316,
+      "targets": [],
+      "opened_at": "2026-08-19T06:20:49",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|IOTAUSDT|2026-08-19T06:17:19",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "IOTAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0328978,
+      "stop_orig": 0.0316,
+      "stop": 0.0316,
+      "targets": [],
+      "opened_at": "2026-08-19T06:17:19",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|EPICUSDT|2026-08-19T04:24:25",
       "source": "paper",
@@ -62,11 +104,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T06:50:08",
+      "realized_pct": 1.39,
+      "result_pct": 1.39,
+      "exec_pct": 1.39
     },
     {
       "id": "paper|THETAUSDT|2026-08-18T20:47:29",
@@ -85,11 +127,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T06:47:05",
+      "realized_pct": 1.39,
+      "result_pct": 1.39,
+      "exec_pct": 1.39
     },
     {
       "id": "paper|ALPINEUSDT|2026-08-18T18:47:09",
@@ -573,7 +615,9 @@
       "opened_at": "2026-08-17T10:05:53",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -596,7 +640,9 @@
       "opened_at": "2026-08-17T10:02:27",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -13415,13 +13461,13 @@
     }
   ],
   "stats": {
-    "total": 581,
+    "total": 583,
     "open": 16,
-    "closed": 565,
-    "wins": 345,
-    "win_rate": 61.1,
-    "net_pct": 261.81,
-    "pf": 1.36,
+    "closed": 567,
+    "wins": 347,
+    "win_rate": 61.2,
+    "net_pct": 264.59,
+    "pf": 1.37,
     "simulated": 1
   }
 }
