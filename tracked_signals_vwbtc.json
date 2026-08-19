@@ -5171,5 +5171,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|TRBUSDT|2026-08-19 18:45:00": {
+    "symbol": "TRBUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 7285,
+    "entry": 13.30834,
+    "stop": 12.61,
+    "init_stop": 12.61,
+    "cur_stop": 12.61,
+    "legs": [
+      13.30834,
+      13.175,
+      13.04166,
+      12.85182
+    ],
+    "last_alert_stop": 12.61,
+    "armed": false,
+    "targets": [
+      13.74,
+      14.04736,
+      14.20782,
+      14.43834,
+      14.87,
+      15.56834,
+      16.69834,
+      17.39668
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-19 18:45:00",
+    "last_bar": "2026-08-19 18:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 13.30834,
+    "lo_seen": 13.30834,
+    "created": "2026-08-19T19:05:48",
+    "dca_levels": [
+      13.30834,
+      13.175,
+      13.04166,
+      12.85182
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
