@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-19T04:06:24",
+  "updated_at": "2026-08-19T04:24:30",
   "stats": {
-    "open": 22,
+    "open": 24,
     "closed": 550,
     "win_rate": 64.4,
     "profit_factor": 1.51,
@@ -439,23 +439,6 @@
     ]
   },
   "trades": [
-    {
-      "id": "الفيواب الأسبوعي · BTC|SXTUSDT|2026-08-04 23:15:00",
-      "symbol": "SXTUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.00728788,
-      "stop": 0.00688,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-04T23:39:19",
-      "closed_at": "2026-08-05T07:19:01",
-      "realized_pct": 3.46,
-      "result_pct": 3.46
-    },
     {
       "id": "الفيواب الأسبوعي · BTC|MASKUSDT|2026-08-05 04:15:00",
       "symbol": "MASKUSDT",
@@ -1569,6 +1552,20 @@
       "opened_at": "2026-08-18T20:51:07",
       "closed_at": null,
       "realized_pct": 1.14
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|EPICUSDT|2026-08-19 04:00:00",
+      "symbol": "EPICUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.3877686,
+      "stop": 0.3243,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-19T04:24:25",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
@@ -5162,6 +5159,20 @@
       "realized_pct": 1.14
     },
     {
+      "id": "العرض/الطلب|EPICUSDT|2026-08-19 04:00:00",
+      "symbol": "EPICUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.3877686,
+      "stop": 0.3243,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-19T04:17:27",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -5236,6 +5247,23 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|SXTUSDT|2026-08-04 23:15:00",
+      "symbol": "SXTUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00728788,
+      "stop": 0.00688,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-04T23:39:19",
+      "closed_at": "2026-08-05T07:19:01",
+      "realized_pct": 3.46,
+      "result_pct": 3.46
     },
     {
       "id": "الفيواب الأسبوعي · BTC|EPICUSDT|2026-08-04 18:00:00",
