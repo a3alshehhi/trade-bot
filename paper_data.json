@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-19T19:32:12",
+  "updated_at": "2026-08-19T19:38:48",
   "stats": {
     "open": 77,
     "closed": 567,
@@ -1786,6 +1786,34 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-19T19:05:48",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|NEARUSDT|2026-08-19 19:00:00",
+      "symbol": "NEARUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.654846,
+      "stop": 1.564,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-19T19:24:58",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|SUSDT|2026-08-19 19:00:00",
+      "symbol": "SUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.02252208,
+      "stop": 0.02094,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-19T19:24:58",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -5585,11 +5613,13 @@
       "timeframe": "15m",
       "entry": 0.0784934,
       "stop": 0.0746,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-19T17:32:40",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.53
     },
     {
       "id": "العرض/الطلب|ACHUSDT|2026-08-19 17:45:00",
@@ -5854,34 +5884,6 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-19T19:02:08",
-      "closed_at": null,
-      "realized_pct": 0.0
-    },
-    {
-      "id": "العرض/الطلب|NEARUSDT|2026-08-19 19:00:00",
-      "symbol": "NEARUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 1.654846,
-      "stop": 1.564,
-      "hits": [],
-      "status": "open",
-      "opened_at": "2026-08-19T19:27:33",
-      "closed_at": null,
-      "realized_pct": 0.0
-    },
-    {
-      "id": "العرض/الطلب|SUSDT|2026-08-19 19:00:00",
-      "symbol": "SUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.02252208,
-      "stop": 0.02094,
-      "hits": [],
-      "status": "open",
-      "opened_at": "2026-08-19T19:27:33",
       "closed_at": null,
       "realized_pct": 0.0
     },
