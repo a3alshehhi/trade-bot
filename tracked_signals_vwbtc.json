@@ -3038,7 +3038,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-16 20:45:00",
-    "last_bar": "2026-08-19 01:44:59.999000",
+    "last_bar": "2026-08-19 02:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1986,
@@ -3637,10 +3637,10 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-17 09:45:00",
-    "last_bar": "2026-08-19 01:44:59.999000",
+    "last_bar": "2026-08-19 02:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 0.799,
+    "hi_seen": 0.801,
     "lo_seen": 0.76,
     "created": "2026-08-17T10:05:53",
     "dca_levels": [
@@ -3756,7 +3756,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-17 14:30:00",
-    "last_bar": "2026-08-19 01:44:59.999000",
+    "last_bar": "2026-08-19 02:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00793,
@@ -3812,7 +3812,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-18 00:15:00",
-    "last_bar": "2026-08-19 01:44:59.999000",
+    "last_bar": "2026-08-19 02:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.0628,
@@ -4054,11 +4054,11 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-18 15:30:00",
-    "last_bar": "2026-08-19 01:44:59.999000",
+    "last_bar": "2026-08-19 02:14:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.2516,
     "lo_seen": 0.2036784,
     "created": "2026-08-18T15:49:51",
@@ -4070,7 +4070,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 3
+    "st_stage": 3,
+    "exit_price": 0.22128799999999998,
+    "close_card_sent": true,
+    "closed_at": "2026-08-19T02:20:38"
   },
   "الفيواب الأسبوعي · BTC|AGLDUSDT|2026-08-18 15:45:00": {
     "symbol": "AGLDUSDT",
@@ -4234,7 +4237,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-18 20:30:00",
-    "last_bar": "2026-08-19 01:44:59.999000",
+    "last_bar": "2026-08-19 02:14:59.999000",
     "hits": [
       1
     ],
