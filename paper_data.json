@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-19T11:06:50",
+  "updated_at": "2026-08-19T12:04:42",
   "stats": {
-    "open": 26,
+    "open": 28,
     "closed": 554,
     "win_rate": 64.4,
     "profit_factor": 1.52,
@@ -439,21 +439,6 @@
     ]
   },
   "trades": [
-    {
-      "id": "الفيواب الأسبوعي · BTC|LPTUSDT|2026-08-05 11:00:00",
-      "symbol": "LPTUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 1.296452,
-      "stop": 1.226,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-08-05T11:19:23",
-      "closed_at": "2026-08-06T02:36:33",
-      "realized_pct": -1.69,
-      "result_pct": -1.69
-    },
     {
       "id": "الفيواب الأسبوعي · BTC|SOMIUSDT|2026-08-05 13:00:00",
       "symbol": "SOMIUSDT",
@@ -1420,6 +1405,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-19T09:24:05",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|ESPUSDT|2026-08-19 11:45:00",
+      "symbol": "ESPUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.07517918,
+      "stop": 0.06992,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-19T12:04:36",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -5016,6 +5015,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|ESPUSDT|2026-08-19 11:45:00",
+      "symbol": "ESPUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.07517918,
+      "stop": 0.06992,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-19T12:01:25",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -5090,6 +5103,21 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|LPTUSDT|2026-08-05 11:00:00",
+      "symbol": "LPTUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.296452,
+      "stop": 1.226,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-08-05T11:19:23",
+      "closed_at": "2026-08-06T02:36:33",
+      "realized_pct": -1.69,
+      "result_pct": -1.69
     },
     {
       "id": "الفيواب الأسبوعي · BTC|GPSUSDT|2026-08-05 09:00:00",
