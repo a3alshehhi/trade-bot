@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-19T21:44:51",
+  "updated_at": "2026-08-19T22:07:09",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -155,7 +155,8 @@
       "usd": 100.0,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -179,7 +180,8 @@
       "usd": 100.0,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -748,7 +750,8 @@
       "hits": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "status": "open",
       "closed_at": null,
@@ -985,7 +988,8 @@
       "hits": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "status": "open",
       "closed_at": null,
@@ -1107,11 +1111,11 @@
         2,
         3
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T21:50:22",
+      "realized_pct": 3.27,
+      "result_pct": 3.27,
+      "exec_pct": 3.27
     },
     {
       "id": "paper|BCHUSDT|2026-08-19T17:32:40",
@@ -1176,7 +1180,8 @@
       "usd": 100.0,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -1243,7 +1248,8 @@
       "opened_at": "2026-08-19T17:32:40",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -15129,11 +15135,11 @@
   ],
   "stats": {
     "total": 653,
-    "open": 69,
-    "closed": 584,
-    "wins": 360,
-    "win_rate": 61.6,
-    "net_pct": 306.01,
+    "open": 68,
+    "closed": 585,
+    "wins": 361,
+    "win_rate": 61.7,
+    "net_pct": 309.28,
     "pf": 1.42,
     "simulated": 1
   }
