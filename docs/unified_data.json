@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-19T00:30:19",
+  "updated_at": "2026-08-19T02:05:26",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -171,11 +171,11 @@
       "opened_at": "2026-08-18T16:10:04",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T01:50:24",
+      "realized_pct": -3.61,
+      "result_pct": -3.61,
+      "exec_pct": -3.61
     },
     {
       "id": "paper|AGLDUSDT|2026-08-18T16:02:22",
@@ -215,11 +215,11 @@
       "opened_at": "2026-08-18T16:02:22",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T01:47:11",
+      "realized_pct": -3.61,
+      "result_pct": -3.61,
+      "exec_pct": -3.61
     },
     {
       "id": "paper|ACEUSDT|2026-08-18T15:49:51",
@@ -13368,12 +13368,12 @@
   ],
   "stats": {
     "total": 579,
-    "open": 19,
-    "closed": 560,
+    "open": 17,
+    "closed": 562,
     "wins": 342,
-    "win_rate": 61.1,
-    "net_pct": 242.72,
-    "pf": 1.34,
+    "win_rate": 60.9,
+    "net_pct": 235.5,
+    "pf": 1.33,
     "simulated": 1
   }
 }
