@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-19T13:20:07",
+  "updated_at": "2026-08-19T13:36:33",
   "stats": {
-    "open": 30,
+    "open": 32,
     "closed": 554,
     "win_rate": 64.4,
     "profit_factor": 1.52,
@@ -439,40 +439,6 @@
     ]
   },
   "trades": [
-    {
-      "id": "الفيواب الأسبوعي · BTC|SOMIUSDT|2026-08-05 13:00:00",
-      "symbol": "SOMIUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0869698,
-      "stop": 0.0832,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-05T13:19:54",
-      "closed_at": "2026-08-05T14:19:25",
-      "realized_pct": 2.68,
-      "result_pct": 2.68
-    },
-    {
-      "id": "الفيواب الأسبوعي · BTC|SAHARAUSDT|2026-08-05 13:00:00",
-      "symbol": "SAHARAUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.00819766,
-      "stop": 0.00766,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-05T13:19:54",
-      "closed_at": "2026-08-05T15:04:09",
-      "realized_pct": 4.05,
-      "result_pct": 4.05
-    },
     {
       "id": "الفيواب الأسبوعي · BTC|VANRYUSDT|2026-08-05 15:00:00",
       "symbol": "VANRYUSDT",
@@ -1435,6 +1401,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-19T12:54:26",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|TIAUSDT|2026-08-19 13:15:00",
+      "symbol": "TIAUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.3025172,
+      "stop": 0.293,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-19T13:36:23",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -5061,6 +5041,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|TIAUSDT|2026-08-19 13:15:00",
+      "symbol": "TIAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.3025172,
+      "stop": 0.293,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-19T13:32:49",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -5135,6 +5129,40 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|SOMIUSDT|2026-08-05 13:00:00",
+      "symbol": "SOMIUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0869698,
+      "stop": 0.0832,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-05T13:19:54",
+      "closed_at": "2026-08-05T14:19:25",
+      "realized_pct": 2.68,
+      "result_pct": 2.68
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|SAHARAUSDT|2026-08-05 13:00:00",
+      "symbol": "SAHARAUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00819766,
+      "stop": 0.00766,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-05T13:19:54",
+      "closed_at": "2026-08-05T15:04:09",
+      "realized_pct": 4.05,
+      "result_pct": 4.05
     },
     {
       "id": "الفيواب الأسبوعي · BTC|LPTUSDT|2026-08-05 11:00:00",
