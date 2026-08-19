@@ -10398,5 +10398,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|NEOUSDT|2026-08-19 13:45:00": {
+    "symbol": "NEOUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 7259,
+    "entry": 1.69562,
+    "stop": 1.64,
+    "init_stop": 1.64,
+    "cur_stop": 1.64,
+    "legs": [
+      1.69562,
+      1.685,
+      1.67438,
+      1.65926
+    ],
+    "last_alert_stop": 1.64,
+    "armed": false,
+    "targets": [
+      1.73,
+      1.75448,
+      1.76726,
+      1.78562,
+      1.82,
+      1.87562,
+      1.96562,
+      2.02124
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-19 13:45:00",
+    "last_bar": "2026-08-19 13:45:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 1.69562,
+    "lo_seen": 1.69562,
+    "created": "2026-08-19T14:02:06",
+    "dca_levels": [
+      1.69562,
+      1.685,
+      1.67438,
+      1.65926
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
