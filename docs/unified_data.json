@@ -1,8 +1,58 @@
 {
-  "updated_at": "2026-08-19T14:06:00",
+  "updated_at": "2026-08-19T15:50:30",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|NEOUSDT|2026-08-19T14:05:35",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "NEOUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.69562,
+      "stop_orig": 1.64,
+      "stop": 1.64,
+      "targets": [],
+      "opened_at": "2026-08-19T14:05:35",
+      "usd": 100.0,
+      "hits": [
+        1,
+        2,
+        3
+      ],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|NEOUSDT|2026-08-19T14:02:06",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "NEOUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.69562,
+      "stop_orig": 1.64,
+      "stop": 1.64,
+      "targets": [],
+      "opened_at": "2026-08-19T14:02:06",
+      "usd": 100.0,
+      "hits": [
+        1,
+        2,
+        3
+      ],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|TIAUSDT|2026-08-19T13:36:23",
       "source": "paper",
@@ -17,7 +67,11 @@
       "targets": [],
       "opened_at": "2026-08-19T13:36:23",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2,
+        3
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -38,7 +92,11 @@
       "targets": [],
       "opened_at": "2026-08-19T13:32:49",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2,
+        3
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -236,7 +294,9 @@
       "opened_at": "2026-08-19T06:20:49",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -259,7 +319,9 @@
       "opened_at": "2026-08-19T06:17:19",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -412,11 +474,11 @@
       "opened_at": "2026-08-18T17:19:50",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T15:32:42",
+      "realized_pct": -0.97,
+      "result_pct": -0.97,
+      "exec_pct": -0.97
     },
     {
       "id": "paper|BIOUSDT|2026-08-18T17:19:50",
@@ -727,7 +789,10 @@
       "targets": [],
       "opened_at": "2026-08-18T00:36:12",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -748,7 +813,10 @@
       "targets": [],
       "opened_at": "2026-08-18T00:32:34",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -770,11 +838,11 @@
       "opened_at": "2026-08-17T14:53:33",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T15:37:27",
+      "realized_pct": -0.35,
+      "result_pct": -0.35,
+      "exec_pct": -0.35
     },
     {
       "id": "paper|SAGAUSDT|2026-08-17T10:26:38",
@@ -1590,7 +1658,9 @@
       "targets": [],
       "opened_at": "2026-08-15T20:05:09",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -13687,13 +13757,13 @@
     }
   ],
   "stats": {
-    "total": 593,
+    "total": 595,
     "open": 25,
-    "closed": 568,
+    "closed": 570,
     "wins": 347,
-    "win_rate": 61.1,
-    "net_pct": 263.79,
-    "pf": 1.37,
+    "win_rate": 60.9,
+    "net_pct": 262.47,
+    "pf": 1.36,
     "simulated": 1
   }
 }
