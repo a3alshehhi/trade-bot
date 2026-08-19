@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-19T07:14:01",
+  "updated_at": "2026-08-19T07:56:47",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -17,7 +17,9 @@
       "targets": [],
       "opened_at": "2026-08-19T06:20:49",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -38,7 +40,9 @@
       "targets": [],
       "opened_at": "2026-08-19T06:17:19",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -617,7 +621,8 @@
       "hits": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "status": "open",
       "closed_at": null,
@@ -642,7 +647,8 @@
       "hits": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "status": "open",
       "closed_at": null,
