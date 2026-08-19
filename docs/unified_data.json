@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-19T15:50:30",
+  "updated_at": "2026-08-19T16:55:00",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -22,11 +22,11 @@
         2,
         3
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T16:06:22",
+      "realized_pct": 2.75,
+      "result_pct": 2.75,
+      "exec_pct": 2.75
     },
     {
       "id": "paper|NEOUSDT|2026-08-19T14:02:06",
@@ -47,11 +47,11 @@
         2,
         3
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T16:02:52",
+      "realized_pct": 2.75,
+      "result_pct": 2.75,
+      "exec_pct": 2.75
     },
     {
       "id": "paper|TIAUSDT|2026-08-19T13:36:23",
@@ -72,11 +72,11 @@
         2,
         3
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T16:06:20",
+      "realized_pct": 2.64,
+      "result_pct": 2.64,
+      "exec_pct": 2.64
     },
     {
       "id": "paper|TIAUSDT|2026-08-19T13:32:49",
@@ -97,11 +97,11 @@
         2,
         3
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T16:02:50",
+      "realized_pct": 2.64,
+      "result_pct": 2.64,
+      "exec_pct": 2.64
     },
     {
       "id": "paper|SIGNUSDT|2026-08-19T12:54:26",
@@ -298,11 +298,11 @@
         2,
         3
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T16:06:15",
+      "realized_pct": 3.31,
+      "result_pct": 3.31,
+      "exec_pct": 3.31
     },
     {
       "id": "paper|IOTAUSDT|2026-08-19T06:17:19",
@@ -323,11 +323,11 @@
         2,
         3
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T16:02:46",
+      "realized_pct": 3.31,
+      "result_pct": 3.31,
+      "exec_pct": 3.31
     },
     {
       "id": "paper|EPICUSDT|2026-08-19T04:24:25",
@@ -13758,12 +13758,12 @@
   ],
   "stats": {
     "total": 595,
-    "open": 25,
-    "closed": 570,
-    "wins": 347,
-    "win_rate": 60.9,
-    "net_pct": 262.47,
-    "pf": 1.36,
+    "open": 19,
+    "closed": 576,
+    "wins": 353,
+    "win_rate": 61.3,
+    "net_pct": 279.87,
+    "pf": 1.39,
     "simulated": 1
   }
 }
