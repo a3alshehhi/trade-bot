@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-19T07:21:05",
+  "updated_at": "2026-08-19T07:35:44",
   "stats": {
     "open": 23,
     "closed": 553,
@@ -1338,7 +1338,8 @@
       "hits": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "status": "open",
       "opened_at": "2026-08-17T10:05:53",
@@ -1529,11 +1530,13 @@
       "timeframe": "15m",
       "entry": 0.0328978,
       "stop": 0.0316,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-19T06:20:49",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.22
     },
     {
       "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
@@ -4918,7 +4921,8 @@
       "hits": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "status": "open",
       "opened_at": "2026-08-17T10:02:27",
@@ -5154,11 +5158,13 @@
       "timeframe": "15m",
       "entry": 0.0328978,
       "stop": 0.0316,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-19T06:17:19",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.22
     },
     {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
