@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-19T10:38:49",
+  "updated_at": "2026-08-19T11:10:29",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -261,11 +261,11 @@
       "opened_at": "2026-08-18T18:32:36",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T11:02:15",
+      "realized_pct": -0.8,
+      "result_pct": -0.8,
+      "exec_pct": -0.8
     },
     {
       "id": "paper|1000SATSUSDT|2026-08-18T17:19:50",
@@ -13556,11 +13556,11 @@
   ],
   "stats": {
     "total": 587,
-    "open": 20,
-    "closed": 567,
+    "open": 19,
+    "closed": 568,
     "wins": 347,
-    "win_rate": 61.2,
-    "net_pct": 264.59,
+    "win_rate": 61.1,
+    "net_pct": 263.79,
     "pf": 1.37,
     "simulated": 1
   }
