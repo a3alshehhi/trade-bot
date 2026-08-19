@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-19T22:37:43",
+  "updated_at": "2026-08-19T23:08:27",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|SAGAUSDT|2026-08-19T22:50:17",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "SAGAUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01361766,
+      "stop_orig": 0.01308,
+      "stop": 0.01308,
+      "targets": [],
+      "opened_at": "2026-08-19T22:50:17",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|SAGAUSDT|2026-08-19T22:46:55",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "SAGAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01361766,
+      "stop_orig": 0.01308,
+      "stop": 0.01308,
+      "targets": [],
+      "opened_at": "2026-08-19T22:46:55",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|ACTUSDT|2026-08-19T22:37:05",
       "source": "paper",
@@ -359,11 +401,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T22:50:32",
+      "realized_pct": 5.02,
+      "result_pct": 5.02,
+      "exec_pct": 5.02
     },
     {
       "id": "paper|GASUSDT|2026-08-19T18:36:46",
@@ -455,11 +497,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T22:47:13",
+      "realized_pct": 5.02,
+      "result_pct": 5.02,
+      "exec_pct": 5.02
     },
     {
       "id": "paper|ARUSDT|2026-08-19T18:25:00",
@@ -479,11 +521,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T23:05:47",
+      "realized_pct": 3.7,
+      "result_pct": 3.7,
+      "exec_pct": 3.7
     },
     {
       "id": "paper|BTCUSDT|2026-08-19T18:25:00",
@@ -526,11 +568,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T23:05:49",
+      "realized_pct": 5.78,
+      "result_pct": 5.78,
+      "exec_pct": 5.78
     },
     {
       "id": "paper|CKBUSDT|2026-08-19T18:25:00",
@@ -689,11 +731,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T23:02:20",
+      "realized_pct": 3.7,
+      "result_pct": 3.7,
+      "exec_pct": 3.7
     },
     {
       "id": "paper|CKBUSDT|2026-08-19T18:17:30",
@@ -829,11 +871,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T23:02:24",
+      "realized_pct": 5.78,
+      "result_pct": 5.78,
+      "exec_pct": 5.78
     },
     {
       "id": "paper|SUIUSDT|2026-08-19T18:07:10",
@@ -879,11 +921,11 @@
         3,
         4
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T22:50:23",
+      "realized_pct": 4.39,
+      "result_pct": 4.39,
+      "exec_pct": 4.39
     },
     {
       "id": "paper|ACHUSDT|2026-08-19T18:07:10",
@@ -927,11 +969,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T22:50:25",
+      "realized_pct": 4.27,
+      "result_pct": 4.27,
+      "exec_pct": 4.27
     },
     {
       "id": "paper|LSKUSDT|2026-08-19T18:07:10",
@@ -1021,11 +1063,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T22:47:04",
+      "realized_pct": 4.27,
+      "result_pct": 4.27,
+      "exec_pct": 4.27
     },
     {
       "id": "paper|FLUXUSDT|2026-08-19T18:03:14",
@@ -1117,11 +1159,11 @@
         3,
         4
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T22:47:07",
+      "realized_pct": 4.39,
+      "result_pct": 4.39,
+      "exec_pct": 4.39
     },
     {
       "id": "paper|ADXUSDT|2026-08-19T18:00:41",
@@ -1261,11 +1303,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T22:47:00",
+      "realized_pct": 2.64,
+      "result_pct": 2.64,
+      "exec_pct": 2.64
     },
     {
       "id": "paper|CHZUSDT|2026-08-19T17:32:40",
@@ -15260,13 +15302,13 @@
     }
   ],
   "stats": {
-    "total": 659,
-    "open": 68,
-    "closed": 591,
-    "wins": 365,
-    "win_rate": 61.8,
-    "net_pct": 304.54,
-    "pf": 1.41,
+    "total": 661,
+    "open": 59,
+    "closed": 602,
+    "wins": 376,
+    "win_rate": 62.5,
+    "net_pct": 353.5,
+    "pf": 1.47,
     "simulated": 1
   }
 }
