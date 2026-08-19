@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-19T20:43:51",
+  "updated_at": "2026-08-19T21:44:51",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -106,7 +106,8 @@
       "opened_at": "2026-08-19T19:05:48",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -129,7 +130,8 @@
       "opened_at": "2026-08-19T19:02:08",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -151,7 +153,10 @@
       "targets": [],
       "opened_at": "2026-08-19T18:51:48",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -172,7 +177,10 @@
       "targets": [],
       "opened_at": "2026-08-19T18:47:30",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -194,7 +202,10 @@
       "opened_at": "2026-08-19T18:36:46",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3,
+        4
       ],
       "status": "open",
       "closed_at": null,
@@ -216,7 +227,10 @@
       "targets": [],
       "opened_at": "2026-08-19T18:36:46",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -237,7 +251,9 @@
       "targets": [],
       "opened_at": "2026-08-19T18:36:46",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -259,7 +275,10 @@
       "opened_at": "2026-08-19T18:32:33",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3,
+        4
       ],
       "status": "open",
       "closed_at": null,
@@ -281,7 +300,9 @@
       "targets": [],
       "opened_at": "2026-08-19T18:32:33",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -302,7 +323,10 @@
       "targets": [],
       "opened_at": "2026-08-19T18:32:33",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -323,7 +347,10 @@
       "targets": [],
       "opened_at": "2026-08-19T18:25:00",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -344,7 +371,9 @@
       "targets": [],
       "opened_at": "2026-08-19T18:25:00",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -365,7 +394,10 @@
       "targets": [],
       "opened_at": "2026-08-19T18:25:00",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -386,7 +418,9 @@
       "targets": [],
       "opened_at": "2026-08-19T18:25:00",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -407,7 +441,11 @@
       "targets": [],
       "opened_at": "2026-08-19T18:25:00",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2,
+        3
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -449,7 +487,9 @@
       "targets": [],
       "opened_at": "2026-08-19T18:25:00",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -470,7 +510,10 @@
       "targets": [],
       "opened_at": "2026-08-19T18:25:00",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -491,7 +534,9 @@
       "targets": [],
       "opened_at": "2026-08-19T18:17:30",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -512,7 +557,10 @@
       "targets": [],
       "opened_at": "2026-08-19T18:17:30",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -533,7 +581,9 @@
       "targets": [],
       "opened_at": "2026-08-19T18:17:30",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -575,7 +625,11 @@
       "targets": [],
       "opened_at": "2026-08-19T18:17:30",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2,
+        3
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -596,7 +650,9 @@
       "targets": [],
       "opened_at": "2026-08-19T18:17:30",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -617,7 +673,10 @@
       "targets": [],
       "opened_at": "2026-08-19T18:17:30",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -638,7 +697,10 @@
       "targets": [],
       "opened_at": "2026-08-19T18:17:30",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -659,7 +721,10 @@
       "targets": [],
       "opened_at": "2026-08-19T18:07:10",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -681,7 +746,9 @@
       "opened_at": "2026-08-19T18:07:10",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -703,7 +770,10 @@
       "targets": [],
       "opened_at": "2026-08-19T18:07:10",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -724,7 +794,10 @@
       "targets": [],
       "opened_at": "2026-08-19T18:07:10",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -745,7 +818,9 @@
       "targets": [],
       "opened_at": "2026-08-19T18:07:10",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -766,7 +841,9 @@
       "targets": [],
       "opened_at": "2026-08-19T18:07:10",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -787,7 +864,10 @@
       "targets": [],
       "opened_at": "2026-08-19T18:03:14",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -808,7 +888,10 @@
       "targets": [],
       "opened_at": "2026-08-19T18:03:14",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -829,7 +912,9 @@
       "targets": [],
       "opened_at": "2026-08-19T18:03:14",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -850,7 +935,9 @@
       "targets": [],
       "opened_at": "2026-08-19T18:03:14",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -871,7 +958,10 @@
       "targets": [],
       "opened_at": "2026-08-19T18:03:14",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -893,7 +983,9 @@
       "opened_at": "2026-08-19T18:03:14",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -915,7 +1007,9 @@
       "targets": [],
       "opened_at": "2026-08-19T18:00:41",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -936,7 +1030,9 @@
       "targets": [],
       "opened_at": "2026-08-19T18:00:41",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -957,7 +1053,10 @@
       "targets": [],
       "opened_at": "2026-08-19T18:00:41",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -979,7 +1078,9 @@
       "opened_at": "2026-08-19T18:00:41",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -1001,7 +1102,11 @@
       "targets": [],
       "opened_at": "2026-08-19T18:00:41",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2,
+        3
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -1022,7 +1127,10 @@
       "targets": [],
       "opened_at": "2026-08-19T17:32:40",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -1043,7 +1151,9 @@
       "targets": [],
       "opened_at": "2026-08-19T17:32:40",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -1064,7 +1174,10 @@
       "targets": [],
       "opened_at": "2026-08-19T17:32:40",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1,
+        2
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -1106,7 +1219,9 @@
       "targets": [],
       "opened_at": "2026-08-19T17:32:40",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -1127,7 +1242,9 @@
       "targets": [],
       "opened_at": "2026-08-19T17:32:40",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -1449,7 +1566,9 @@
       "targets": [],
       "opened_at": "2026-08-19T09:24:05",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -1470,7 +1589,9 @@
       "targets": [],
       "opened_at": "2026-08-19T09:17:01",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -2552,7 +2673,9 @@
       "targets": [],
       "opened_at": "2026-08-16T21:11:58",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -2573,7 +2696,9 @@
       "targets": [],
       "opened_at": "2026-08-16T21:09:55",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -2903,13 +3028,15 @@
       "opened_at": "2026-08-15T20:05:09",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-19T21:39:39",
+      "realized_pct": 3.82,
+      "result_pct": 3.82,
+      "exec_pct": 3.82
     },
     {
       "id": "paper|XAIUSDT|2026-08-15T20:05:09",
@@ -15002,12 +15129,12 @@
   ],
   "stats": {
     "total": 653,
-    "open": 70,
-    "closed": 583,
-    "wins": 359,
+    "open": 69,
+    "closed": 584,
+    "wins": 360,
     "win_rate": 61.6,
-    "net_pct": 302.19,
-    "pf": 1.41,
+    "net_pct": 306.01,
+    "pf": 1.42,
     "simulated": 1
   }
 }
