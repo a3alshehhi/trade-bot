@@ -5360,5 +5360,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|ACTUSDT|2026-08-19 22:15:00": {
+    "symbol": "ACTUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 7321,
+    "entry": 0.01020486,
+    "stop": 0.00942,
+    "init_stop": 0.00942,
+    "cur_stop": 0.00942,
+    "legs": [
+      0.01020486,
+      0.010055,
+      0.00990514,
+      0.00969178
+    ],
+    "last_alert_stop": 0.00942,
+    "armed": false,
+    "targets": [
+      0.01069,
+      0.01103544,
+      0.01121578,
+      0.01147486,
+      0.01196,
+      0.01274486,
+      0.01401486,
+      0.01479972
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-19 22:15:00",
+    "last_bar": "2026-08-19 22:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.01020486,
+    "lo_seen": 0.01020486,
+    "created": "2026-08-19T22:37:05",
+    "dca_levels": [
+      0.01020486,
+      0.010055,
+      0.00990514,
+      0.00969178
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
