@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-19T04:48:19",
+  "updated_at": "2026-08-19T05:21:09",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -168,12 +168,14 @@
       "targets": [],
       "opened_at": "2026-08-18T17:19:50",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-19T05:02:47",
+      "realized_pct": 1.01,
+      "result_pct": 1.01,
+      "exec_pct": 1.01
     },
     {
       "id": "paper|AGLDUSDT|2026-08-18T16:10:04",
@@ -13414,11 +13416,11 @@
   ],
   "stats": {
     "total": 581,
-    "open": 17,
-    "closed": 564,
-    "wins": 344,
-    "win_rate": 61.0,
-    "net_pct": 260.8,
+    "open": 16,
+    "closed": 565,
+    "wins": 345,
+    "win_rate": 61.1,
+    "net_pct": 261.81,
     "pf": 1.36,
     "simulated": 1
   }
