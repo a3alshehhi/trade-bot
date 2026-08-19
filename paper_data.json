@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-19T06:08:34",
+  "updated_at": "2026-08-19T06:20:56",
   "stats": {
-    "open": 23,
+    "open": 25,
     "closed": 551,
     "win_rate": 64.4,
     "profit_factor": 1.51,
@@ -439,55 +439,6 @@
     ]
   },
   "trades": [
-    {
-      "id": "الفيواب الأسبوعي · BTC|MASKUSDT|2026-08-05 04:15:00",
-      "symbol": "MASKUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.357068,
-      "stop": 0.341,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-08-05T04:34:04",
-      "closed_at": "2026-08-05T20:20:33",
-      "realized_pct": -1.08,
-      "result_pct": -1.08
-    },
-    {
-      "id": "الفيواب الأسبوعي · BTC|PROMUSDT|2026-08-05 05:00:00",
-      "symbol": "PROMUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 1.91933,
-      "stop": 1.805,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-05T05:18:41",
-      "closed_at": "2026-08-05T06:08:14",
-      "realized_pct": 3.68,
-      "result_pct": 3.68
-    },
-    {
-      "id": "الفيواب الأسبوعي · BTC|KITEUSDT|2026-08-05 05:30:00",
-      "symbol": "KITEUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0963642,
-      "stop": 0.0921,
-      "hits": [
-        1
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-05T05:49:02",
-      "closed_at": "2026-08-05T05:49:13",
-      "realized_pct": 2.74,
-      "result_pct": 2.74
-    },
     {
       "id": "الفيواب الأسبوعي · BTC|ADXUSDT|2026-08-05 06:45:00",
       "symbol": "ADXUSDT",
@@ -1385,7 +1336,8 @@
       "entry": 0.784136,
       "stop": 0.752,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "opened_at": "2026-08-17T10:05:53",
@@ -1564,6 +1516,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-19T04:24:25",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|IOTAUSDT|2026-08-19 06:00:00",
+      "symbol": "IOTAUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0328978,
+      "stop": 0.0316,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-19T06:20:49",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -4948,7 +4914,8 @@
       "entry": 0.784136,
       "stop": 0.752,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "opened_at": "2026-08-17T10:02:27",
@@ -5176,6 +5143,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|IOTAUSDT|2026-08-19 06:00:00",
+      "symbol": "IOTAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0328978,
+      "stop": 0.0316,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-19T06:17:19",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -5250,6 +5231,55 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|MASKUSDT|2026-08-05 04:15:00",
+      "symbol": "MASKUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.357068,
+      "stop": 0.341,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-08-05T04:34:04",
+      "closed_at": "2026-08-05T20:20:33",
+      "realized_pct": -1.08,
+      "result_pct": -1.08
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|PROMUSDT|2026-08-05 05:00:00",
+      "symbol": "PROMUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 1.91933,
+      "stop": 1.805,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-05T05:18:41",
+      "closed_at": "2026-08-05T06:08:14",
+      "realized_pct": 3.68,
+      "result_pct": 3.68
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|KITEUSDT|2026-08-05 05:30:00",
+      "symbol": "KITEUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0963642,
+      "stop": 0.0921,
+      "hits": [
+        1
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-05T05:49:02",
+      "closed_at": "2026-08-05T05:49:13",
+      "realized_pct": 2.74,
+      "result_pct": 2.74
     },
     {
       "id": "الفيواب الأسبوعي · BTC|SXTUSDT|2026-08-04 23:15:00",
