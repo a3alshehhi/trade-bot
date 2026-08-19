@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-19T13:15:18",
+  "updated_at": "2026-08-19T14:06:00",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|TIAUSDT|2026-08-19T13:36:23",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "TIAUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.3025172,
+      "stop_orig": 0.293,
+      "stop": 0.293,
+      "targets": [],
+      "opened_at": "2026-08-19T13:36:23",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|TIAUSDT|2026-08-19T13:32:49",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "TIAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.3025172,
+      "stop_orig": 0.293,
+      "stop": 0.293,
+      "targets": [],
+      "opened_at": "2026-08-19T13:32:49",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|SIGNUSDT|2026-08-19T12:54:26",
       "source": "paper",
@@ -59,7 +101,9 @@
       "targets": [],
       "opened_at": "2026-08-19T12:10:00",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -80,7 +124,9 @@
       "targets": [],
       "opened_at": "2026-08-19T12:06:42",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -794,7 +840,8 @@
         1,
         2,
         3,
-        4
+        4,
+        5
       ],
       "status": "open",
       "closed_at": null,
@@ -820,7 +867,8 @@
         1,
         2,
         3,
-        4
+        4,
+        5
       ],
       "status": "open",
       "closed_at": null,
@@ -13639,8 +13687,8 @@
     }
   ],
   "stats": {
-    "total": 591,
-    "open": 23,
+    "total": 593,
+    "open": 25,
     "closed": 568,
     "wins": 347,
     "win_rate": 61.1,
