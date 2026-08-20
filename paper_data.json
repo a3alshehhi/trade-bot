@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-08-19T23:56:00",
+  "updated_at": "2026-08-20T00:02:32",
   "stats": {
-    "open": 68,
-    "closed": 588,
-    "win_rate": 65.6,
-    "profit_factor": 1.62,
-    "total_pct": 4044.96,
+    "open": 67,
+    "closed": 589,
+    "win_rate": 65.7,
+    "profit_factor": 1.63,
+    "total_pct": 4258.01,
     "avg_pct": 0.75,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-08-20",
+        "trades": 1,
+        "win_rate": 100.0,
+        "return_pct": 5.14,
+        "week": "2026-W34",
+        "month": "2026-08"
+      },
       {
         "key": "2026-08-19",
         "trades": 42,
@@ -375,9 +383,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 73,
-        "win_rate": 65.8,
-        "return_pct": 214.94,
+        "trades": 74,
+        "win_rate": 66.2,
+        "return_pct": 231.13,
         "month": "2026-08"
       },
       {
@@ -426,9 +434,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 323,
-        "win_rate": 69.3,
-        "return_pct": 2412.3
+        "trades": 324,
+        "win_rate": 69.4,
+        "return_pct": 2541.43
       },
       {
         "key": "2026-07",
@@ -1475,10 +1483,11 @@
         1,
         2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T18:07:10",
-      "closed_at": null,
-      "realized_pct": 1.89
+      "closed_at": "2026-08-20T00:02:16",
+      "realized_pct": 5.14,
+      "result_pct": 5.14
     },
     {
       "id": "الفيواب الأسبوعي · BTC|XRPUSDT|2026-08-19 17:45:00",
@@ -1885,7 +1894,7 @@
       "stop": 6.22,
       "hits": [],
       "status": "open",
-      "opened_at": "2026-08-19T23:55:37",
+      "opened_at": "2026-08-19T23:49:09",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -6057,7 +6066,7 @@
       "stop": 6.22,
       "hits": [],
       "status": "open",
-      "opened_at": "2026-08-19T23:51:45",
+      "opened_at": "2026-08-19T23:58:17",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -6138,25 +6147,6 @@
       "result_pct": 1.06
     },
     {
-      "id": "الفيواب الأسبوعي · BTC|BANDUSDT|2026-08-05 22:30:00",
-      "symbol": "BANDUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.1574362,
-      "stop": 0.1507,
-      "hits": [
-        1,
-        2,
-        3
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-05T22:54:59",
-      "closed_at": "2026-08-07T19:34:06",
-      "realized_pct": 3.59,
-      "result_pct": 3.59
-    },
-    {
       "id": "العرض/الطلب|BANDUSDT|2026-08-05 22:30:00",
       "symbol": "BANDUSDT",
       "label": "العرض/الطلب",
@@ -6172,6 +6162,25 @@
       "status": "closed",
       "opened_at": "2026-08-05T22:52:23",
       "closed_at": "2026-08-07T19:32:25",
+      "realized_pct": 3.59,
+      "result_pct": 3.59
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|BANDUSDT|2026-08-05 22:30:00",
+      "symbol": "BANDUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.1574362,
+      "stop": 0.1507,
+      "hits": [
+        1,
+        2,
+        3
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-05T22:54:59",
+      "closed_at": "2026-08-07T19:34:06",
       "realized_pct": 3.59,
       "result_pct": 3.59
     },
