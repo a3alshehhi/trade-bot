@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-20T04:00:16",
+  "updated_at": "2026-08-20T04:05:44",
   "stats": {
-    "open": 61,
-    "closed": 601,
+    "open": 60,
+    "closed": 602,
     "win_rate": 66.4,
-    "profit_factor": 1.69,
-    "total_pct": 6470.5,
+    "profit_factor": 1.7,
+    "total_pct": 6759.61,
     "avg_pct": 0.81,
     "max_drawdown_pct": -70.77
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-20",
-        "trades": 13,
+        "trades": 14,
         "win_rate": 100.0,
-        "return_pct": 58.52,
+        "return_pct": 65.49,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -383,9 +383,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 86,
-        "win_rate": 70.9,
-        "return_pct": 399.24,
+        "trades": 87,
+        "win_rate": 71.3,
+        "return_pct": 421.2,
         "month": "2026-08"
       },
       {
@@ -434,9 +434,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 336,
-        "win_rate": 70.5,
-        "return_pct": 3882.44
+        "trades": 337,
+        "win_rate": 70.6,
+        "return_pct": 4057.66
       },
       {
         "key": "2026-07",
@@ -5999,10 +5999,11 @@
         1,
         2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T19:02:08",
-      "closed_at": null,
-      "realized_pct": 1.62
+      "closed_at": "2026-08-20T04:02:19",
+      "realized_pct": 4.4,
+      "result_pct": 4.4
     },
     {
       "id": "العرض/الطلب|PORTOUSDT|2026-08-19 19:30:00",
