@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-20T17:14:00",
+  "updated_at": "2026-08-20T17:51:47",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|PROMUSDT|2026-08-20T17:21:12",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "PROMUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 2.02976,
+      "stop_orig": 1.832,
+      "stop": 1.832,
+      "targets": [],
+      "opened_at": "2026-08-20T17:21:12",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|PROMUSDT|2026-08-20T17:17:29",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "PROMUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 2.02976,
+      "stop_orig": 1.832,
+      "stop": 1.832,
+      "targets": [],
+      "opened_at": "2026-08-20T17:17:29",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|ONGUSDT|2026-08-20T16:50:57",
       "source": "paper",
@@ -332,7 +374,8 @@
       "hits": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "status": "open",
       "closed_at": null,
@@ -357,7 +400,8 @@
       "hits": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "status": "open",
       "closed_at": null,
@@ -463,7 +507,9 @@
       "targets": [],
       "opened_at": "2026-08-19T22:22:33",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -530,7 +576,9 @@
       "targets": [],
       "opened_at": "2026-08-19T22:17:18",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -1018,7 +1066,9 @@
       "targets": [],
       "opened_at": "2026-08-19T18:25:00",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -1163,7 +1213,9 @@
       "targets": [],
       "opened_at": "2026-08-19T18:17:30",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -15716,8 +15768,8 @@
     }
   ],
   "stats": {
-    "total": 677,
-    "open": 40,
+    "total": 679,
+    "open": 42,
     "closed": 637,
     "wins": 407,
     "win_rate": 63.9,
