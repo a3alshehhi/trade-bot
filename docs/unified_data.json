@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T15:22:01",
+  "updated_at": "2026-08-20T15:58:06",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -288,7 +288,8 @@
       "opened_at": "2026-08-19T23:58:17",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -311,7 +312,8 @@
       "opened_at": "2026-08-19T23:55:37",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -874,7 +876,8 @@
       "hits": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "status": "open",
       "closed_at": null,
@@ -1042,7 +1045,8 @@
       "hits": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "status": "open",
       "closed_at": null,
@@ -1353,7 +1357,8 @@
       "opened_at": "2026-08-19T18:07:10",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -1424,7 +1429,8 @@
       "opened_at": "2026-08-19T18:03:14",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -1739,7 +1745,8 @@
       "usd": 100.0,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -3202,13 +3209,14 @@
       "usd": 100.0,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T15:32:44",
+      "realized_pct": 4.12,
+      "result_pct": 4.12,
+      "exec_pct": 4.12
     },
     {
       "id": "paper|API3USDT|2026-08-16T21:09:55",
@@ -3226,13 +3234,14 @@
       "usd": 100.0,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T15:37:52",
+      "realized_pct": 4.12,
+      "result_pct": 4.12,
+      "exec_pct": 4.12
     },
     {
       "id": "paper|WUSDT|2026-08-16T15:51:10",
@@ -15658,12 +15667,12 @@
   ],
   "stats": {
     "total": 675,
-    "open": 42,
-    "closed": 633,
-    "wins": 403,
-    "win_rate": 63.7,
-    "net_pct": 432.29,
-    "pf": 1.57,
+    "open": 40,
+    "closed": 635,
+    "wins": 405,
+    "win_rate": 63.8,
+    "net_pct": 440.53,
+    "pf": 1.58,
     "simulated": 1
   }
 }
