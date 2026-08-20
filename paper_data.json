@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-20T22:21:26",
+  "updated_at": "2026-08-20T22:36:37",
   "stats": {
-    "open": 41,
-    "closed": 637,
-    "win_rate": 67.7,
-    "profit_factor": 1.88,
-    "total_pct": 24999.23,
-    "avg_pct": 0.98,
+    "open": 39,
+    "closed": 639,
+    "win_rate": 67.8,
+    "profit_factor": 1.89,
+    "total_pct": 26709.05,
+    "avg_pct": 0.99,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-20",
-        "trades": 49,
-        "win_rate": 91.8,
-        "return_pct": 505.54,
+        "trades": 51,
+        "win_rate": 92.2,
+        "return_pct": 546.79,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -383,9 +383,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 122,
-        "win_rate": 76.2,
-        "return_pct": 1807.08,
+        "trades": 124,
+        "win_rate": 76.6,
+        "return_pct": 1937.0,
         "month": "2026-08"
       },
       {
@@ -434,9 +434,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 372,
-        "win_rate": 72.3,
-        "return_pct": 15112.85
+        "trades": 374,
+        "win_rate": 72.5,
+        "return_pct": 16149.19
       },
       {
         "key": "2026-07",
@@ -1913,10 +1913,11 @@
         4,
         5
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-20T10:50:42",
-      "closed_at": null,
-      "realized_pct": 1.24
+      "closed_at": "2026-08-20T22:36:32",
+      "realized_pct": 3.35,
+      "result_pct": 3.35
     },
     {
       "id": "الفيواب الأسبوعي · BTC|ARPAUSDT|2026-08-20 10:45:00",
@@ -6210,10 +6211,11 @@
         4,
         5
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-20T10:47:28",
-      "closed_at": null,
-      "realized_pct": 1.24
+      "closed_at": "2026-08-20T22:32:48",
+      "realized_pct": 3.35,
+      "result_pct": 3.35
     },
     {
       "id": "العرض/الطلب|ARPAUSDT|2026-08-20 10:45:00",
