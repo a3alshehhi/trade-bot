@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T04:36:23",
+  "updated_at": "2026-08-20T04:51:20",
   "stats": {
     "open": 60,
     "closed": 602,
@@ -1641,7 +1641,8 @@
       "entry": 0.00083499,
       "stop": 0.000801,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "opened_at": "2026-08-19T18:25:00",
@@ -5618,11 +5619,13 @@
       "timeframe": "15m",
       "entry": 0.0522754,
       "stop": 0.049,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-19T17:32:40",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.94
     },
     {
       "id": "العرض/الطلب|SANDUSDT|2026-08-19 17:15:00",
@@ -5824,7 +5827,8 @@
       "entry": 0.00083499,
       "stop": 0.000801,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "opened_at": "2026-08-19T18:17:30",
