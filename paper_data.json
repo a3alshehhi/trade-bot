@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T14:06:43",
+  "updated_at": "2026-08-20T14:22:04",
   "stats": {
     "open": 49,
     "closed": 619,
@@ -827,7 +827,8 @@
       "entry": 0.1976026,
       "stop": 0.1879,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "opened_at": "2026-08-16T21:09:55",
@@ -1295,11 +1296,13 @@
       "timeframe": "15m",
       "entry": 0.00344158,
       "stop": 0.00325,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-19T16:54:33",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.72
     },
     {
       "id": "الفيواب الأسبوعي · BTC|PAXGUSDT|2026-08-19 16:30:00",
@@ -1631,7 +1634,8 @@
       "stop": 0.0276,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-19T18:25:00",
@@ -4958,7 +4962,8 @@
       "entry": 0.1976026,
       "stop": 0.1879,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "opened_at": "2026-08-16T21:11:58",
@@ -5489,11 +5494,13 @@
       "timeframe": "15m",
       "entry": 0.00344158,
       "stop": 0.00325,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-19T16:47:28",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.72
     },
     {
       "id": "العرض/الطلب|BCHUSDT|2026-08-19 17:15:00",
@@ -5822,7 +5829,8 @@
       "stop": 0.0276,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-19T18:17:30",
