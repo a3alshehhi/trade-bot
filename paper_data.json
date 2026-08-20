@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-20T05:27:11",
+  "updated_at": "2026-08-20T05:35:55",
   "stats": {
-    "open": 60,
-    "closed": 602,
-    "win_rate": 66.4,
-    "profit_factor": 1.7,
-    "total_pct": 6759.61,
-    "avg_pct": 0.81,
+    "open": 58,
+    "closed": 604,
+    "win_rate": 66.6,
+    "profit_factor": 1.71,
+    "total_pct": 7258.13,
+    "avg_pct": 0.82,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-20",
-        "trades": 14,
+        "trades": 16,
         "win_rate": 100.0,
-        "return_pct": 65.49,
+        "return_pct": 77.52,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -383,9 +383,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 87,
-        "win_rate": 71.3,
-        "return_pct": 421.2,
+        "trades": 89,
+        "win_rate": 71.9,
+        "return_pct": 459.08,
         "month": "2026-08"
       },
       {
@@ -434,9 +434,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 337,
-        "win_rate": 70.6,
-        "return_pct": 4057.66
+        "trades": 339,
+        "win_rate": 70.8,
+        "return_pct": 4359.82
       },
       {
         "key": "2026-07",
@@ -1411,7 +1411,8 @@
       "stop": 0.2353,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-19T18:00:41",
@@ -1559,10 +1560,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T18:07:10",
-      "closed_at": null,
-      "realized_pct": 2.23
+      "closed_at": "2026-08-20T05:35:45",
+      "realized_pct": 3.57,
+      "result_pct": 3.57
     },
     {
       "id": "الفيواب الأسبوعي · BTC|FLUXUSDT|2026-08-19 17:45:00",
@@ -5743,10 +5745,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T18:03:14",
-      "closed_at": null,
-      "realized_pct": 2.23
+      "closed_at": "2026-08-20T05:32:09",
+      "realized_pct": 3.57,
+      "result_pct": 3.57
     },
     {
       "id": "العرض/الطلب|SUIUSDT|2026-08-19 17:45:00",
