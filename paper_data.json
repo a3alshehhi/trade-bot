@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-20T20:36:46",
+  "updated_at": "2026-08-20T20:51:37",
   "stats": {
-    "open": 49,
-    "closed": 629,
-    "win_rate": 67.2,
-    "profit_factor": 1.79,
-    "total_pct": 13491.31,
-    "avg_pct": 0.89,
+    "open": 47,
+    "closed": 631,
+    "win_rate": 67.4,
+    "profit_factor": 1.84,
+    "total_pct": 18792.48,
+    "avg_pct": 0.94,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-20",
-        "trades": 41,
-        "win_rate": 90.2,
-        "return_pct": 227.9,
+        "trades": 43,
+        "win_rate": 90.7,
+        "return_pct": 355.79,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -383,9 +383,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 114,
-        "win_rate": 74.6,
-        "return_pct": 932.69,
+        "trades": 116,
+        "win_rate": 75.0,
+        "return_pct": 1335.48,
         "month": "2026-08"
       },
       {
@@ -434,9 +434,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 364,
-        "win_rate": 71.7,
-        "return_pct": 8137.81
+        "trades": 366,
+        "win_rate": 71.9,
+        "return_pct": 11350.89
       },
       {
         "key": "2026-07",
@@ -1686,7 +1686,8 @@
         3,
         4,
         5,
-        6
+        6,
+        7
       ],
       "status": "open",
       "opened_at": "2026-08-19T18:36:46",
@@ -1955,12 +1956,15 @@
         3,
         4,
         5,
-        6
+        6,
+        7,
+        8
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-20T16:50:57",
-      "closed_at": null,
-      "realized_pct": 6.6
+      "closed_at": "2026-08-20T20:51:33",
+      "realized_pct": 17.9,
+      "result_pct": 17.9
     },
     {
       "id": "الفيواب الأسبوعي · BTC|PROMUSDT|2026-08-20 17:00:00",
@@ -5614,7 +5618,8 @@
       "hits": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "status": "open",
       "opened_at": "2026-08-19T17:32:40",
@@ -5945,7 +5950,8 @@
         3,
         4,
         5,
-        6
+        6,
+        7
       ],
       "status": "open",
       "opened_at": "2026-08-19T18:32:33",
@@ -6232,12 +6238,15 @@
         3,
         4,
         5,
-        6
+        6,
+        7,
+        8
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-20T16:47:18",
-      "closed_at": null,
-      "realized_pct": 6.6
+      "closed_at": "2026-08-20T20:47:46",
+      "realized_pct": 17.9,
+      "result_pct": 17.9
     },
     {
       "id": "العرض/الطلب|PROMUSDT|2026-08-20 17:00:00",
