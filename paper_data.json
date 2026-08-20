@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-20T01:06:46",
+  "updated_at": "2026-08-20T01:21:57",
   "stats": {
-    "open": 68,
+    "open": 70,
     "closed": 590,
     "win_rate": 65.8,
     "profit_factor": 1.64,
@@ -1913,6 +1913,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "الفيواب الأسبوعي · BTC|THETAUSDT|2026-08-20 01:00:00",
+      "symbol": "THETAUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.147843,
+      "stop": 0.1395,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-20T01:21:31",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
       "symbol": "ETHUSDT",
       "label": "زخم سيولة الحيتان",
@@ -2860,27 +2874,6 @@
       "closed_at": "2026-08-04T18:46:26",
       "realized_pct": 0.98,
       "result_pct": 0.98
-    },
-    {
-      "id": "العرض/الطلب|HYPERUSDT|2026-08-06 00:30:00",
-      "symbol": "HYPERUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.059599,
-      "stop": 0.0562,
-      "hits": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-06T00:47:16",
-      "closed_at": "2026-08-07T01:32:39",
-      "realized_pct": 4.78,
-      "result_pct": 4.78
     },
     {
       "id": "العرض/الطلب|STEEMUSDT|2026-08-06 08:00:00",
@@ -6100,6 +6093,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|THETAUSDT|2026-08-20 01:00:00",
+      "symbol": "THETAUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.147843,
+      "stop": 0.1395,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-20T01:17:32",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -6174,6 +6181,27 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "العرض/الطلب|HYPERUSDT|2026-08-06 00:30:00",
+      "symbol": "HYPERUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.059599,
+      "stop": 0.0562,
+      "hits": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-06T00:47:16",
+      "closed_at": "2026-08-07T01:32:39",
+      "realized_pct": 4.78,
+      "result_pct": 4.78
     },
     {
       "id": "العرض/الطلب|BANDUSDT|2026-08-05 22:30:00",
