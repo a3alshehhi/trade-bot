@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-20T16:35:32",
+  "updated_at": "2026-08-20T16:51:13",
   "stats": {
-    "open": 45,
+    "open": 47,
     "closed": 623,
     "win_rate": 66.9,
     "profit_factor": 1.75,
@@ -447,25 +447,6 @@
     ]
   },
   "trades": [
-    {
-      "id": "الفيواب الأسبوعي · BTC|ADXUSDT|2026-08-06 13:00:00",
-      "symbol": "ADXUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0574574,
-      "stop": 0.0548,
-      "hits": [
-        1,
-        2,
-        3
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-06T13:20:19",
-      "closed_at": "2026-08-07T14:18:53",
-      "realized_pct": 3.88,
-      "result_pct": 3.88
-    },
     {
       "id": "الفيواب الأسبوعي · BTC|CFXUSDT|2026-08-06 17:15:00",
       "symbol": "CFXUSDT",
@@ -1641,7 +1622,8 @@
       "hits": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "status": "open",
       "opened_at": "2026-08-19T18:25:00",
@@ -1678,7 +1660,8 @@
         1,
         2,
         3,
-        4
+        4,
+        5
       ],
       "status": "open",
       "opened_at": "2026-08-19T18:36:46",
@@ -1861,7 +1844,8 @@
       "stop": 6.22,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-19T23:55:37",
@@ -1962,6 +1946,20 @@
       "opened_at": "2026-08-20T12:36:03",
       "closed_at": null,
       "realized_pct": 1.97
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|ONGUSDT|2026-08-20 16:30:00",
+      "symbol": "ONGUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.07514946,
+      "stop": 0.0591,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-20T16:50:57",
+      "closed_at": null,
+      "realized_pct": 0.0
     },
     {
       "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
@@ -2911,25 +2909,6 @@
       "closed_at": "2026-08-04T18:46:26",
       "realized_pct": 0.98,
       "result_pct": 0.98
-    },
-    {
-      "id": "العرض/الطلب|ADXUSDT|2026-08-06 13:00:00",
-      "symbol": "ADXUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0574574,
-      "stop": 0.0548,
-      "hits": [
-        1,
-        2,
-        3
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-06T13:17:14",
-      "closed_at": "2026-08-07T14:17:21",
-      "realized_pct": 3.88,
-      "result_pct": 3.88
     },
     {
       "id": "العرض/الطلب|CFXUSDT|2026-08-06 17:15:00",
@@ -5845,7 +5824,8 @@
       "hits": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "status": "open",
       "opened_at": "2026-08-19T18:17:30",
@@ -5900,7 +5880,8 @@
         1,
         2,
         3,
-        4
+        4,
+        5
       ],
       "status": "open",
       "opened_at": "2026-08-19T18:32:33",
@@ -6083,7 +6064,8 @@
       "stop": 6.22,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-19T23:58:17",
@@ -6186,6 +6168,20 @@
       "realized_pct": 1.97
     },
     {
+      "id": "العرض/الطلب|ONGUSDT|2026-08-20 16:30:00",
+      "symbol": "ONGUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.07514946,
+      "stop": 0.0591,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-20T16:47:18",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -6260,6 +6256,44 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|ADXUSDT|2026-08-06 13:00:00",
+      "symbol": "ADXUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0574574,
+      "stop": 0.0548,
+      "hits": [
+        1,
+        2,
+        3
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-06T13:20:19",
+      "closed_at": "2026-08-07T14:18:53",
+      "realized_pct": 3.88,
+      "result_pct": 3.88
+    },
+    {
+      "id": "العرض/الطلب|ADXUSDT|2026-08-06 13:00:00",
+      "symbol": "ADXUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0574574,
+      "stop": 0.0548,
+      "hits": [
+        1,
+        2,
+        3
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-06T13:17:14",
+      "closed_at": "2026-08-07T14:17:21",
+      "realized_pct": 3.88,
+      "result_pct": 3.88
     },
     {
       "id": "الفيواب الأسبوعي · BTC|STEEMUSDT|2026-08-06 08:00:00",
