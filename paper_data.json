@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-20T00:02:32",
+  "updated_at": "2026-08-20T00:25:10",
   "stats": {
-    "open": 67,
-    "closed": 589,
-    "win_rate": 65.7,
-    "profit_factor": 1.63,
-    "total_pct": 4258.01,
-    "avg_pct": 0.75,
+    "open": 68,
+    "closed": 590,
+    "win_rate": 65.8,
+    "profit_factor": 1.64,
+    "total_pct": 4482.01,
+    "avg_pct": 0.76,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-20",
-        "trades": 1,
+        "trades": 2,
         "win_rate": 100.0,
-        "return_pct": 5.14,
+        "return_pct": 10.54,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -383,9 +383,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 74,
-        "win_rate": 66.2,
-        "return_pct": 231.13,
+        "trades": 75,
+        "win_rate": 66.7,
+        "return_pct": 248.15,
         "month": "2026-08"
       },
       {
@@ -434,9 +434,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 324,
-        "win_rate": 69.4,
-        "return_pct": 2541.43
+        "trades": 325,
+        "win_rate": 69.5,
+        "return_pct": 2677.2
       },
       {
         "key": "2026-07",
@@ -1894,7 +1894,21 @@
       "stop": 6.22,
       "hits": [],
       "status": "open",
-      "opened_at": "2026-08-19T23:49:09",
+      "opened_at": "2026-08-19T23:55:37",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|STRAXUSDT|2026-08-20 00:00:00",
+      "symbol": "STRAXUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00875834,
+      "stop": 0.00806,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-20T00:24:47",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -5723,10 +5737,11 @@
         1,
         2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T18:03:14",
-      "closed_at": null,
-      "realized_pct": 1.89
+      "closed_at": "2026-08-20T00:17:25",
+      "realized_pct": 5.14,
+      "result_pct": 5.14
     },
     {
       "id": "العرض/الطلب|XRPUSDT|2026-08-19 17:45:00",
@@ -6067,6 +6082,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-19T23:58:17",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|STRAXUSDT|2026-08-20 00:00:00",
+      "symbol": "STRAXUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00875834,
+      "stop": 0.00806,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-20T00:17:12",
       "closed_at": null,
       "realized_pct": 0.0
     },

@@ -5422,5 +5422,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|STRAXUSDT|2026-08-20 00:00:00": {
+    "symbol": "STRAXUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 7332,
+    "entry": 0.00875834,
+    "stop": 0.00806,
+    "init_stop": 0.00806,
+    "cur_stop": 0.00806,
+    "legs": [
+      0.00875834,
+      0.008625,
+      0.00849166,
+      0.00830182
+    ],
+    "last_alert_stop": 0.00806,
+    "armed": false,
+    "targets": [
+      0.00919,
+      0.00949736,
+      0.00965782,
+      0.00988834,
+      0.01032,
+      0.01101834,
+      0.01214834,
+      0.01284668
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-20 00:00:00",
+    "last_bar": "2026-08-20 00:00:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.00875834,
+    "lo_seen": 0.00875834,
+    "created": "2026-08-20T00:24:47",
+    "dca_levels": [
+      0.00875834,
+      0.008625,
+      0.00849166,
+      0.00830182
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
