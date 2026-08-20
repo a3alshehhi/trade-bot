@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T13:21:25",
+  "updated_at": "2026-08-20T14:07:03",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -17,7 +17,9 @@
       "targets": [],
       "opened_at": "2026-08-20T12:36:03",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -38,7 +40,9 @@
       "targets": [],
       "opened_at": "2026-08-20T12:32:21",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -743,7 +747,9 @@
       "usd": 100.0,
       "hits": [
         1,
-        2
+        2,
+        3,
+        4
       ],
       "status": "open",
       "closed_at": null,
@@ -793,7 +799,9 @@
       "usd": 100.0,
       "hits": [
         1,
-        2
+        2,
+        3,
+        4
       ],
       "status": "open",
       "closed_at": null,
@@ -1707,11 +1715,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T13:47:37",
+      "realized_pct": 5.25,
+      "result_pct": 5.25,
+      "exec_pct": 5.25
     },
     {
       "id": "paper|SANDUSDT|2026-08-19T17:32:40",
@@ -15641,11 +15649,11 @@
   ],
   "stats": {
     "total": 675,
-    "open": 43,
-    "closed": 632,
-    "wins": 402,
-    "win_rate": 63.6,
-    "net_pct": 427.04,
+    "open": 42,
+    "closed": 633,
+    "wins": 403,
+    "win_rate": 63.7,
+    "net_pct": 432.29,
     "pf": 1.57,
     "simulated": 1
   }
