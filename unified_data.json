@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T02:44:11",
+  "updated_at": "2026-08-20T03:35:52",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -784,11 +784,11 @@
         2,
         3
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T03:28:06",
+      "realized_pct": 4.3,
+      "result_pct": 4.3,
+      "exec_pct": 4.3
     },
     {
       "id": "paper|DCRUSDT|2026-08-19T18:25:00",
@@ -852,11 +852,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T03:28:09",
+      "realized_pct": 3.41,
+      "result_pct": 3.41,
+      "exec_pct": 3.41
     },
     {
       "id": "paper|BTCUSDT|2026-08-19T18:17:30",
@@ -968,11 +968,11 @@
         2,
         3
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T03:23:24",
+      "realized_pct": 4.3,
+      "result_pct": 4.3,
+      "exec_pct": 4.3
     },
     {
       "id": "paper|POLYXUSDT|2026-08-19T18:17:30",
@@ -1015,11 +1015,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T03:23:25",
+      "realized_pct": 3.41,
+      "result_pct": 3.41,
+      "exec_pct": 3.41
     },
     {
       "id": "paper|ZECUSDT|2026-08-19T18:17:30",
@@ -1113,11 +1113,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T03:28:03",
+      "realized_pct": 3.03,
+      "result_pct": 3.03,
+      "exec_pct": 3.03
     },
     {
       "id": "paper|AXLUSDT|2026-08-19T18:07:10",
@@ -1207,11 +1207,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T03:23:20",
+      "realized_pct": 3.03,
+      "result_pct": 3.03,
+      "exec_pct": 3.03
     },
     {
       "id": "paper|AXLUSDT|2026-08-19T18:03:14",
@@ -1587,11 +1587,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T03:23:18",
+      "realized_pct": 3.19,
+      "result_pct": 3.19,
+      "exec_pct": 3.19
     },
     {
       "id": "paper|XPLUSDT|2026-08-19T17:32:40",
@@ -1911,11 +1911,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T03:27:58",
+      "realized_pct": 2.22,
+      "result_pct": 2.22,
+      "exec_pct": 2.22
     },
     {
       "id": "paper|CYBERUSDT|2026-08-19T09:17:01",
@@ -1934,11 +1934,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T03:23:13",
+      "realized_pct": 2.22,
+      "result_pct": 2.22,
+      "exec_pct": 2.22
     },
     {
       "id": "paper|ONGUSDT|2026-08-19T08:35:16",
@@ -15471,12 +15471,12 @@
   ],
   "stats": {
     "total": 669,
-    "open": 65,
-    "closed": 604,
-    "wins": 378,
-    "win_rate": 62.6,
-    "net_pct": 363.78,
-    "pf": 1.49,
+    "open": 56,
+    "closed": 613,
+    "wins": 387,
+    "win_rate": 63.1,
+    "net_pct": 392.89,
+    "pf": 1.53,
     "simulated": 1
   }
 }
