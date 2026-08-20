@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T23:16:18",
+  "updated_at": "2026-08-20T23:22:08",
   "stats": {
     "open": 39,
     "closed": 639,
@@ -6061,7 +6061,8 @@
       "entry": 0.0034345,
       "stop": 0.00328,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "opened_at": "2026-08-19T20:17:41",
@@ -6284,11 +6285,13 @@
       "timeframe": "15m",
       "entry": 2.02976,
       "stop": 1.832,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-20T17:17:29",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 3.01
     },
     {
       "id": "العرض/الطلب|GLMRUSDT|2026-08-20 18:00:00",
