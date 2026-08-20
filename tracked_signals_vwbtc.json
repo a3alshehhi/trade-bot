@@ -1746,7 +1746,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-16 20:45:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 08:14:59.999000",
     "hits": [
       1
     ],
@@ -2348,7 +2348,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-17 09:45:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 08:14:59.999000",
     "hits": [
       1,
       2,
@@ -3337,7 +3337,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 12:30:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 08:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00719,
@@ -3520,7 +3520,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 16:30:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 08:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00354,
@@ -3577,7 +3577,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 16:30:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 08:14:59.999000",
     "hits": [
       1
     ],
@@ -3636,7 +3636,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 17:30:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 08:14:59.999000",
     "hits": [
       1
     ],
@@ -4259,7 +4259,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 17:45:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 08:14:59.999000",
     "hits": [
       1
     ],
@@ -4347,14 +4347,14 @@
     "entry": 67462.412,
     "stop": 64166.0,
     "init_stop": 64166.0,
-    "cur_stop": 67799.72406,
+    "cur_stop": 69500.0,
     "legs": [
       67462.412,
       66833.0,
       66203.588,
       65307.476
     ],
-    "last_alert_stop": 67799.72406,
+    "last_alert_stop": 69500.0,
     "armed": false,
     "targets": [
       69500.0,
@@ -4380,12 +4380,13 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:00:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 08:14:59.999000",
     "hits": [
-      1
+      1,
+      2
     ],
     "stopped": false,
-    "hi_seen": 70000.0,
+    "hi_seen": 71365.02,
     "lo_seen": 67462.412,
     "created": "2026-08-19T18:25:00",
     "dca_levels": [
@@ -4627,7 +4628,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:00:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 08:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 12.18,
@@ -4684,7 +4685,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:00:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 08:14:59.999000",
     "hits": [
       1
     ],
@@ -4805,7 +4806,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:15:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 08:14:59.999000",
     "hits": [
       1,
       2,
@@ -4928,12 +4929,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:15:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 08:14:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 1.005,
+    "hi_seen": 1.009,
     "lo_seen": 0.963496,
     "created": "2026-08-19T18:36:46",
     "dca_levels": [
@@ -5112,7 +5113,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 19:30:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 08:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.441,
@@ -5168,7 +5169,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 20:00:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 08:14:59.999000",
     "hits": [
       1
     ],
@@ -5227,7 +5228,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 22:00:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 08:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.3682,
@@ -5284,12 +5285,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 22:00:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 08:14:59.999000",
     "hits": [
       1
     ],
     "stopped": false,
-    "hi_seen": 0.05324,
+    "hi_seen": 0.05332,
     "lo_seen": 0.05043004,
     "created": "2026-08-19T22:22:33",
     "dca_levels": [
@@ -5370,14 +5371,14 @@
     "entry": 0.01361766,
     "stop": 0.01308,
     "init_stop": 0.01308,
-    "cur_stop": 0.01308,
+    "cur_stop": 0.01354195,
     "legs": [
       0.01361766,
       0.013515,
       0.01341234,
       0.01326618
     ],
-    "last_alert_stop": 0.01308,
+    "last_alert_stop": 0.01354195,
     "armed": false,
     "targets": [
       0.01395,
@@ -5403,9 +5404,9 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 22:30:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 07:29:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.01378,
     "lo_seen": 0.01348,
     "created": "2026-08-19T22:50:17",
@@ -5416,7 +5417,11 @@
       0.01326618
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 2,
+    "exit_price": 0.01354195,
+    "close_card_sent": true,
+    "closed_at": "2026-08-20T08:21:41"
   },
   "الفيواب الأسبوعي · BTC|AVAXUSDT|2026-08-19 23:30:00": {
     "symbol": "AVAXUSDT",
@@ -5426,14 +5431,14 @@
     "entry": 6.627262,
     "stop": 6.22,
     "init_stop": 6.22,
-    "cur_stop": 6.22,
+    "cur_stop": 6.71028,
     "legs": [
       6.627262,
       6.5495,
       6.471738,
       6.361026
     ],
-    "last_alert_stop": 6.22,
+    "last_alert_stop": 6.71028,
     "armed": false,
     "targets": [
       6.879,
@@ -5459,10 +5464,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 23:30:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
-    "hits": [],
+    "last_bar": "2026-08-20 08:14:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 6.823,
+    "hi_seen": 6.905,
     "lo_seen": 6.627262,
     "created": "2026-08-19T23:55:37",
     "dca_levels": [
@@ -5472,7 +5479,8 @@
       6.361026
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "st_stage": 3
   },
   "الفيواب الأسبوعي · BTC|STRAXUSDT|2026-08-20 00:00:00": {
     "symbol": "STRAXUSDT",
@@ -5515,7 +5523,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-20 00:00:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 08:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00875834,
@@ -5538,14 +5546,14 @@
     "entry": 0.147843,
     "stop": 0.1395,
     "init_stop": 0.1395,
-    "cur_stop": 0.1395,
+    "cur_stop": 0.147843,
     "legs": [
       0.147843,
       0.14625,
       0.144657,
       0.142389
     ],
-    "last_alert_stop": 0.1395,
+    "last_alert_stop": 0.147843,
     "armed": false,
     "targets": [
       0.153,
@@ -5571,10 +5579,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-20 01:00:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
-    "hits": [],
+    "last_bar": "2026-08-20 08:14:59.999000",
+    "hits": [
+      1
+    ],
     "stopped": false,
-    "hi_seen": 0.1522,
+    "hi_seen": 0.1542,
     "lo_seen": 0.147843,
     "created": "2026-08-20T01:21:31",
     "dca_levels": [
@@ -5627,10 +5637,10 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-20 01:15:00",
-    "last_bar": "2026-08-20 06:59:59.999000",
+    "last_bar": "2026-08-20 08:14:59.999000",
     "hits": [],
     "stopped": false,
-    "hi_seen": 2.335,
+    "hi_seen": 2.342,
     "lo_seen": 2.275,
     "created": "2026-08-20T01:40:28",
     "dca_levels": [

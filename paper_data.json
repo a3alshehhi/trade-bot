@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-20T08:12:29",
+  "updated_at": "2026-08-20T08:21:47",
   "stats": {
-    "open": 52,
-    "closed": 610,
-    "win_rate": 66.9,
+    "open": 50,
+    "closed": 612,
+    "win_rate": 66.7,
     "profit_factor": 1.73,
-    "total_pct": 8807.13,
-    "avg_pct": 0.85,
+    "total_pct": 8707.64,
+    "avg_pct": 0.84,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-20",
-        "trades": 22,
-        "win_rate": 100.0,
-        "return_pct": 114.89,
+        "trades": 24,
+        "win_rate": 91.7,
+        "return_pct": 112.49,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -383,9 +383,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 95,
-        "win_rate": 73.7,
-        "return_pct": 576.78,
+        "trades": 97,
+        "win_rate": 72.2,
+        "return_pct": 569.22,
         "month": "2026-08"
       },
       {
@@ -434,9 +434,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 345,
-        "win_rate": 71.3,
-        "return_pct": 5298.68
+        "trades": 347,
+        "win_rate": 70.9,
+        "return_pct": 5238.39
       },
       {
         "key": "2026-07",
@@ -1611,7 +1611,8 @@
       "entry": 67462.412,
       "stop": 64166.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "opened_at": "2026-08-19T18:25:00",
@@ -1895,10 +1896,11 @@
       "entry": 0.01361766,
       "stop": 0.01308,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T22:50:17",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-20T08:21:41",
+      "realized_pct": -0.56,
+      "result_pct": -0.56
     },
     {
       "id": "الفيواب الأسبوعي · BTC|AVAXUSDT|2026-08-19 23:30:00",
@@ -1908,11 +1910,13 @@
       "timeframe": "15m",
       "entry": 6.627262,
       "stop": 6.22,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-19T23:55:37",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.9
     },
     {
       "id": "الفيواب الأسبوعي · BTC|STRAXUSDT|2026-08-20 00:00:00",
@@ -1936,11 +1940,13 @@
       "timeframe": "15m",
       "entry": 0.147843,
       "stop": 0.1395,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-20T01:21:31",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.74
     },
     {
       "id": "الفيواب الأسبوعي · BTC|ICPUSDT|2026-08-20 01:15:00",
@@ -5804,7 +5810,8 @@
       "entry": 67462.412,
       "stop": 64166.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "opened_at": "2026-08-19T18:17:30",
@@ -6106,10 +6113,11 @@
       "entry": 0.01361766,
       "stop": 0.01308,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T22:46:55",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-20T08:17:49",
+      "realized_pct": -0.56,
+      "result_pct": -0.56
     },
     {
       "id": "العرض/الطلب|AVAXUSDT|2026-08-19 23:30:00",
@@ -6119,11 +6127,13 @@
       "timeframe": "15m",
       "entry": 6.627262,
       "stop": 6.22,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-19T23:58:17",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.9
     },
     {
       "id": "العرض/الطلب|STRAXUSDT|2026-08-20 00:00:00",
@@ -6147,11 +6157,13 @@
       "timeframe": "15m",
       "entry": 0.147843,
       "stop": 0.1395,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-20T01:17:32",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.74
     },
     {
       "id": "العرض/الطلب|ICPUSDT|2026-08-20 01:15:00",
