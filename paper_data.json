@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-20T19:11:56",
+  "updated_at": "2026-08-20T19:21:17",
   "stats": {
-    "open": 55,
-    "closed": 623,
-    "win_rate": 66.9,
-    "profit_factor": 1.75,
-    "total_pct": 10386.28,
-    "avg_pct": 0.86,
+    "open": 49,
+    "closed": 629,
+    "win_rate": 67.2,
+    "profit_factor": 1.79,
+    "total_pct": 13491.31,
+    "avg_pct": 0.89,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-20",
-        "trades": 35,
-        "win_rate": 88.6,
-        "return_pct": 152.99,
+        "trades": 41,
+        "win_rate": 90.2,
+        "return_pct": 227.9,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -383,9 +383,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 108,
-        "win_rate": 73.1,
-        "return_pct": 696.76,
+        "trades": 114,
+        "win_rate": 74.6,
+        "return_pct": 932.69,
         "month": "2026-08"
       },
       {
@@ -434,9 +434,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 358,
-        "win_rate": 71.2,
-        "return_pct": 6255.82
+        "trades": 364,
+        "win_rate": 71.7,
+        "return_pct": 8137.81
       },
       {
         "key": "2026-07",
@@ -943,10 +943,11 @@
         5,
         6
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-17T10:05:53",
-      "closed_at": null,
-      "realized_pct": 1.27
+      "closed_at": "2026-08-20T19:20:59",
+      "realized_pct": 3.44,
+      "result_pct": 3.44
     },
     {
       "id": "الفيواب الأسبوعي · BTC|SAGAUSDT|2026-08-17 10:00:00",
@@ -1265,10 +1266,11 @@
         1,
         2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T16:54:33",
-      "closed_at": null,
-      "realized_pct": 1.72
+      "closed_at": "2026-08-20T19:21:01",
+      "realized_pct": 4.67,
+      "result_pct": 4.67
     },
     {
       "id": "الفيواب الأسبوعي · BTC|PAXGUSDT|2026-08-19 16:30:00",
@@ -1834,10 +1836,11 @@
         3,
         4
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T23:55:37",
-      "closed_at": null,
-      "realized_pct": 1.9
+      "closed_at": "2026-08-20T19:21:10",
+      "realized_pct": 5.15,
+      "result_pct": 5.15
     },
     {
       "id": "الفيواب الأسبوعي · BTC|STRAXUSDT|2026-08-20 00:00:00",
@@ -1944,11 +1947,13 @@
       "timeframe": "15m",
       "entry": 0.07514946,
       "stop": 0.0591,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-20T16:50:57",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 6.6
     },
     {
       "id": "الفيواب الأسبوعي · BTC|PROMUSDT|2026-08-20 17:00:00",
@@ -5128,10 +5133,11 @@
         5,
         6
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-17T10:02:27",
-      "closed_at": null,
-      "realized_pct": 1.27
+      "closed_at": "2026-08-20T19:17:16",
+      "realized_pct": 3.44,
+      "result_pct": 3.44
     },
     {
       "id": "العرض/الطلب|SAGAUSDT|2026-08-17 10:00:00",
@@ -5513,10 +5519,11 @@
         1,
         2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T16:47:28",
-      "closed_at": null,
-      "realized_pct": 1.72
+      "closed_at": "2026-08-20T19:17:19",
+      "realized_pct": 4.67,
+      "result_pct": 4.67
     },
     {
       "id": "العرض/الطلب|BCHUSDT|2026-08-19 17:15:00",
@@ -6099,10 +6106,11 @@
         3,
         4
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T23:58:17",
-      "closed_at": null,
-      "realized_pct": 1.9
+      "closed_at": "2026-08-20T19:17:28",
+      "realized_pct": 5.15,
+      "result_pct": 5.15
     },
     {
       "id": "العرض/الطلب|STRAXUSDT|2026-08-20 00:00:00",
@@ -6209,11 +6217,13 @@
       "timeframe": "15m",
       "entry": 0.07514946,
       "stop": 0.0591,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-20T16:47:18",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 6.6
     },
     {
       "id": "العرض/الطلب|PROMUSDT|2026-08-20 17:00:00",
