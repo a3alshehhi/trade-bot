@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-20T17:07:01",
+  "updated_at": "2026-08-20T17:21:31",
   "stats": {
-    "open": 47,
+    "open": 49,
     "closed": 623,
     "win_rate": 66.9,
     "profit_factor": 1.75,
@@ -1605,11 +1605,13 @@
       "timeframe": "15m",
       "entry": 11.7798,
       "stop": 11.1,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-19T18:25:00",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.78
     },
     {
       "id": "الفيواب الأسبوعي · BTC|POLYXUSDT|2026-08-19 18:00:00",
@@ -1782,11 +1784,13 @@
       "timeframe": "15m",
       "entry": 0.350153,
       "stop": 0.314,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-19T22:22:33",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 3.19
     },
     {
       "id": "الفيواب الأسبوعي · BTC|2ZUSDT|2026-08-19 22:00:00",
@@ -1958,6 +1962,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-20T16:50:57",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|PROMUSDT|2026-08-20 17:00:00",
+      "symbol": "PROMUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 2.02976,
+      "stop": 1.832,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-20T17:21:12",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -5788,11 +5806,13 @@
       "timeframe": "15m",
       "entry": 11.7798,
       "stop": 11.1,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-19T18:17:30",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.78
     },
     {
       "id": "العرض/الطلب|ENSUSDT|2026-08-19 18:00:00",
@@ -6018,11 +6038,13 @@
       "timeframe": "15m",
       "entry": 0.350153,
       "stop": 0.314,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-19T22:17:18",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 3.19
     },
     {
       "id": "العرض/الطلب|ACTUSDT|2026-08-19 22:15:00",
@@ -6178,6 +6200,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-20T16:47:18",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|PROMUSDT|2026-08-20 17:00:00",
+      "symbol": "PROMUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 2.02976,
+      "stop": 1.832,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-20T17:17:29",
       "closed_at": null,
       "realized_pct": 0.0
     },
