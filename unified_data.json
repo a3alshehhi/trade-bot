@@ -1,8 +1,50 @@
 {
-  "updated_at": "2026-08-20T16:51:29",
+  "updated_at": "2026-08-20T17:14:00",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|ONGUSDT|2026-08-20T16:50:57",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ONGUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.07514946,
+      "stop_orig": 0.0591,
+      "stop": 0.0591,
+      "targets": [],
+      "opened_at": "2026-08-20T16:50:57",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|ONGUSDT|2026-08-20T16:47:18",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "ONGUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.07514946,
+      "stop_orig": 0.0591,
+      "stop": 0.0591,
+      "targets": [],
+      "opened_at": "2026-08-20T16:47:18",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|DIAUSDT|2026-08-20T12:36:03",
       "source": "paper",
@@ -289,7 +331,8 @@
       "usd": 100.0,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -313,7 +356,8 @@
       "usd": 100.0,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -701,7 +745,8 @@
         1,
         2,
         3,
-        4
+        4,
+        5
       ],
       "status": "open",
       "closed_at": null,
@@ -777,7 +822,8 @@
         1,
         2,
         3,
-        4
+        4,
+        5
       ],
       "status": "open",
       "closed_at": null,
@@ -996,7 +1042,8 @@
       "hits": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "status": "open",
       "closed_at": null,
@@ -1165,7 +1212,8 @@
       "hits": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "status": "open",
       "closed_at": null,
@@ -15668,8 +15716,8 @@
     }
   ],
   "stats": {
-    "total": 675,
-    "open": 38,
+    "total": 677,
+    "open": 40,
     "closed": 637,
     "wins": 407,
     "win_rate": 63.9,
