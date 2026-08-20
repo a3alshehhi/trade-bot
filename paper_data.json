@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T21:29:10",
+  "updated_at": "2026-08-20T21:35:44",
   "stats": {
     "open": 45,
     "closed": 633,
@@ -1904,7 +1904,9 @@
       "entry": 0.2905184,
       "stop": 0.2789,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-20T10:50:42",
@@ -2003,11 +2005,13 @@
       "timeframe": "15m",
       "entry": 0.362046,
       "stop": 0.333,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-20T18:39:23",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 2.48
     },
     {
       "id": "الفيواب الأسبوعي · BTC|MOVRUSDT|2026-08-20 18:15:00",
@@ -6187,7 +6191,9 @@
       "entry": 0.2905184,
       "stop": 0.2789,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-20T10:47:28",
@@ -6286,11 +6292,13 @@
       "timeframe": "15m",
       "entry": 0.362046,
       "stop": 0.333,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-20T18:32:04",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 2.48
     },
     {
       "id": "العرض/الطلب|MOVRUSDT|2026-08-20 18:15:00",
