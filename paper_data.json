@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-20T15:21:43",
+  "updated_at": "2026-08-20T15:38:08",
   "stats": {
-    "open": 49,
-    "closed": 619,
-    "win_rate": 66.7,
-    "profit_factor": 1.73,
-    "total_pct": 8863.74,
-    "avg_pct": 0.84,
+    "open": 47,
+    "closed": 621,
+    "win_rate": 66.8,
+    "profit_factor": 1.74,
+    "total_pct": 9617.56,
+    "avg_pct": 0.85,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-20",
-        "trades": 31,
-        "win_rate": 87.1,
-        "return_pct": 116.26,
+        "trades": 33,
+        "win_rate": 87.9,
+        "return_pct": 134.44,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -383,9 +383,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 104,
-        "win_rate": 72.1,
-        "return_pct": 581.08,
+        "trades": 106,
+        "win_rate": 72.6,
+        "return_pct": 638.36,
         "month": "2026-08"
       },
       {
@@ -434,9 +434,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 354,
-        "win_rate": 70.9,
-        "return_pct": 5333.0
+        "trades": 356,
+        "win_rate": 71.1,
+        "return_pct": 5789.9
       },
       {
         "key": "2026-07",
@@ -831,10 +831,11 @@
         2,
         3
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-16T21:09:55",
-      "closed_at": null,
-      "realized_pct": 1.52
+      "closed_at": "2026-08-20T15:37:52",
+      "realized_pct": 4.12,
+      "result_pct": 4.12
     },
     {
       "id": "الفيواب الأسبوعي · BTC|STEEMUSDT|2026-08-17 03:45:00",
@@ -4969,10 +4970,11 @@
         2,
         3
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-16T21:11:58",
-      "closed_at": null,
-      "realized_pct": 1.52
+      "closed_at": "2026-08-20T15:32:44",
+      "realized_pct": 4.12,
+      "result_pct": 4.12
     },
     {
       "id": "العرض/الطلب|STEEMUSDT|2026-08-17 03:45:00",
