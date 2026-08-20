@@ -1746,7 +1746,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-16 20:45:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1
     ],
@@ -2348,7 +2348,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-17 09:45:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1,
       2,
@@ -3212,11 +3212,11 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 09:00:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.315,
     "lo_seen": 0.283,
     "created": "2026-08-19T09:24:05",
@@ -3228,7 +3228,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 3
+    "st_stage": 3,
+    "exit_price": 0.30266378999999993,
+    "close_card_sent": true,
+    "closed_at": "2026-08-20T03:20:56"
   },
   "الفيواب الأسبوعي · BTC|ESPUSDT|2026-08-19 11:45:00": {
     "symbol": "ESPUSDT",
@@ -3333,7 +3336,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 12:30:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00719,
@@ -3516,7 +3519,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 16:30:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00354,
@@ -3573,7 +3576,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 16:30:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1
     ],
@@ -3632,7 +3635,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 17:30:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1
     ],
@@ -3691,7 +3694,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 17:30:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1
     ],
@@ -3750,7 +3753,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 17:30:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1,
       2
@@ -4061,12 +4064,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 17:45:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1,
       2
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.00446,
     "lo_seen": 0.0042745,
     "created": "2026-08-19T18:07:10",
@@ -4077,7 +4080,10 @@
       0.0041735
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.00437,
+    "close_card_sent": true,
+    "closed_at": "2026-08-20T03:21:03"
   },
   "الفيواب الأسبوعي · BTC|AXLUSDT|2026-08-19 17:45:00": {
     "symbol": "AXLUSDT",
@@ -4182,7 +4188,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 17:45:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1
     ],
@@ -4241,7 +4247,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 17:45:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1
     ],
@@ -4362,7 +4368,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:00:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1
     ],
@@ -4483,7 +4489,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:00:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1
     ],
@@ -4542,13 +4548,13 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:00:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1,
       2,
       3
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 4.29,
     "lo_seen": 3.97394,
     "created": "2026-08-19T18:25:00",
@@ -4559,7 +4565,10 @@
       3.84062
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 4.18976,
+    "close_card_sent": true,
+    "closed_at": "2026-08-20T03:21:07"
   },
   "الفيواب الأسبوعي · BTC|DCRUSDT|2026-08-19 18:00:00": {
     "symbol": "DCRUSDT",
@@ -4602,7 +4611,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:00:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 12.18,
@@ -4659,7 +4668,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:00:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1
     ],
@@ -4718,12 +4727,12 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:00:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1,
       2
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.000334,
     "lo_seen": 0.00031898,
     "created": "2026-08-19T18:25:00",
@@ -4734,7 +4743,10 @@
       0.00031049
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.000327,
+    "close_card_sent": true,
+    "closed_at": "2026-08-20T03:21:10"
   },
   "الفيواب الأسبوعي · BTC|ETHUSDT|2026-08-19 18:15:00": {
     "symbol": "ETHUSDT",
@@ -4777,7 +4789,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:15:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1,
       2,
@@ -4900,7 +4912,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:15:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1
     ],
@@ -5022,7 +5034,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:45:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1,
       2
@@ -5081,7 +5093,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 19:30:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.441,
@@ -5137,7 +5149,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 20:00:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [
       1
     ],
@@ -5195,7 +5207,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 22:00:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.3682,
@@ -5251,7 +5263,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 22:00:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.05229,
@@ -5307,7 +5319,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 22:15:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01057,
@@ -5363,7 +5375,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 22:30:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.01378,
@@ -5419,7 +5431,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 23:30:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 6.823,
@@ -5475,11 +5487,11 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-20 00:00:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.00875834,
-    "lo_seen": 0.00857,
+    "lo_seen": 0.00855,
     "created": "2026-08-20T00:24:47",
     "dca_levels": [
       0.00875834,
@@ -5531,7 +5543,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-20 01:00:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 0.1521,
@@ -5587,11 +5599,11 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-20 01:15:00",
-    "last_bar": "2026-08-20 02:59:59.999000",
+    "last_bar": "2026-08-20 03:14:59.999000",
     "hits": [],
     "stopped": false,
     "hi_seen": 2.335,
-    "lo_seen": 2.295,
+    "lo_seen": 2.282,
     "created": "2026-08-20T01:40:28",
     "dca_levels": [
       2.302432,
