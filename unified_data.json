@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T04:58:08",
+  "updated_at": "2026-08-20T05:39:08",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -290,7 +290,9 @@
       "targets": [],
       "opened_at": "2026-08-19T22:22:33",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -311,7 +313,9 @@
       "targets": [],
       "opened_at": "2026-08-19T22:17:18",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -1162,11 +1166,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T05:35:45",
+      "realized_pct": 3.57,
+      "result_pct": 3.57,
+      "exec_pct": 3.57
     },
     {
       "id": "paper|FLUXUSDT|2026-08-19T18:07:10",
@@ -1279,11 +1283,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T05:32:09",
+      "realized_pct": 3.57,
+      "result_pct": 3.57,
+      "exec_pct": 3.57
     },
     {
       "id": "paper|SUIUSDT|2026-08-19T18:03:14",
@@ -1374,7 +1378,8 @@
       "usd": 100.0,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -15477,12 +15482,12 @@
   ],
   "stats": {
     "total": 669,
-    "open": 53,
-    "closed": 616,
-    "wins": 390,
-    "win_rate": 63.3,
-    "net_pct": 404.85,
-    "pf": 1.54,
+    "open": 51,
+    "closed": 618,
+    "wins": 392,
+    "win_rate": 63.4,
+    "net_pct": 411.99,
+    "pf": 1.55,
     "simulated": 1
   }
 }
