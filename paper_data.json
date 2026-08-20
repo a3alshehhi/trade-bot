@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-20T16:27:51",
+  "updated_at": "2026-08-20T16:35:32",
   "stats": {
-    "open": 47,
-    "closed": 621,
-    "win_rate": 66.8,
-    "profit_factor": 1.74,
-    "total_pct": 9617.56,
-    "avg_pct": 0.85,
+    "open": 45,
+    "closed": 623,
+    "win_rate": 66.9,
+    "profit_factor": 1.75,
+    "total_pct": 10386.28,
+    "avg_pct": 0.86,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-20",
-        "trades": 33,
-        "win_rate": 87.9,
-        "return_pct": 134.44,
+        "trades": 35,
+        "win_rate": 88.6,
+        "return_pct": 152.99,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -383,9 +383,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 106,
-        "win_rate": 72.6,
-        "return_pct": 638.36,
+        "trades": 108,
+        "win_rate": 73.1,
+        "return_pct": 696.76,
         "month": "2026-08"
       },
       {
@@ -434,9 +434,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 356,
-        "win_rate": 71.1,
-        "return_pct": 5789.9
+        "trades": 358,
+        "win_rate": 71.2,
+        "return_pct": 6255.82
       },
       {
         "key": "2026-07",
@@ -1518,10 +1518,11 @@
         1,
         2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T18:07:10",
-      "closed_at": null,
-      "realized_pct": 1.43
+      "closed_at": "2026-08-20T16:35:24",
+      "realized_pct": 3.88,
+      "result_pct": 3.88
     },
     {
       "id": "الفيواب الأسبوعي · BTC|ARUSDT|2026-08-19 18:00:00",
@@ -5684,10 +5685,11 @@
         1,
         2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T18:03:14",
-      "closed_at": null,
-      "realized_pct": 1.43
+      "closed_at": "2026-08-20T16:32:06",
+      "realized_pct": 3.88,
+      "result_pct": 3.88
     },
     {
       "id": "العرض/الطلب|LSKUSDT|2026-08-19 17:45:00",
