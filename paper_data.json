@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-20T18:06:39",
+  "updated_at": "2026-08-20T18:21:15",
   "stats": {
-    "open": 49,
+    "open": 51,
     "closed": 623,
     "win_rate": 66.9,
     "profit_factor": 1.75,
@@ -447,24 +447,6 @@
     ]
   },
   "trades": [
-    {
-      "id": "الفيواب الأسبوعي · BTC|CFXUSDT|2026-08-06 17:15:00",
-      "symbol": "CFXUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.03883432,
-      "stop": 0.03745,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-06T17:36:31",
-      "closed_at": "2026-08-06T22:49:00",
-      "realized_pct": 2.99,
-      "result_pct": 2.99
-    },
     {
       "id": "الفيواب الأسبوعي · BTC|MIRAUSDT|2026-08-07 02:45:00",
       "symbol": "MIRAUSDT",
@@ -1983,6 +1965,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "الفيواب الأسبوعي · BTC|GLMRUSDT|2026-08-20 18:00:00",
+      "symbol": "GLMRUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00734654,
+      "stop": 0.007019,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-20T18:20:57",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
       "symbol": "ETHUSDT",
       "label": "زخم سيولة الحيتان",
@@ -2930,24 +2926,6 @@
       "closed_at": "2026-08-04T18:46:26",
       "realized_pct": 0.98,
       "result_pct": 0.98
-    },
-    {
-      "id": "العرض/الطلب|CFXUSDT|2026-08-06 17:15:00",
-      "symbol": "CFXUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.03883432,
-      "stop": 0.03745,
-      "hits": [
-        1,
-        2
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-06T17:33:04",
-      "closed_at": "2026-08-06T22:47:24",
-      "realized_pct": 2.99,
-      "result_pct": 2.99
     },
     {
       "id": "العرض/الطلب|HYPERUSDT|2026-08-07 02:00:00",
@@ -6224,6 +6202,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|GLMRUSDT|2026-08-20 18:00:00",
+      "symbol": "GLMRUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.00734654,
+      "stop": 0.007019,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-20T18:17:13",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -6298,6 +6290,42 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|CFXUSDT|2026-08-06 17:15:00",
+      "symbol": "CFXUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03883432,
+      "stop": 0.03745,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-06T17:36:31",
+      "closed_at": "2026-08-06T22:49:00",
+      "realized_pct": 2.99,
+      "result_pct": 2.99
+    },
+    {
+      "id": "العرض/الطلب|CFXUSDT|2026-08-06 17:15:00",
+      "symbol": "CFXUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03883432,
+      "stop": 0.03745,
+      "hits": [
+        1,
+        2
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-06T17:33:04",
+      "closed_at": "2026-08-06T22:47:24",
+      "realized_pct": 2.99,
+      "result_pct": 2.99
     },
     {
       "id": "الفيواب الأسبوعي · BTC|ADXUSDT|2026-08-06 13:00:00",
