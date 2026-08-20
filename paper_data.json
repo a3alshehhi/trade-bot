@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-20T12:05:48",
+  "updated_at": "2026-08-20T12:22:47",
   "stats": {
-    "open": 54,
-    "closed": 612,
-    "win_rate": 66.7,
-    "profit_factor": 1.73,
-    "total_pct": 8707.64,
-    "avg_pct": 0.84,
+    "open": 50,
+    "closed": 616,
+    "win_rate": 66.6,
+    "profit_factor": 1.72,
+    "total_pct": 8409.8,
+    "avg_pct": 0.83,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-20",
-        "trades": 24,
-        "win_rate": 91.7,
-        "return_pct": 112.49,
+        "trades": 28,
+        "win_rate": 85.7,
+        "return_pct": 105.3,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -383,9 +383,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 97,
-        "win_rate": 72.2,
-        "return_pct": 569.22,
+        "trades": 101,
+        "win_rate": 71.3,
+        "return_pct": 546.59,
         "month": "2026-08"
       },
       {
@@ -434,9 +434,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 347,
-        "win_rate": 70.9,
-        "return_pct": 5238.39
+        "trades": 351,
+        "win_rate": 70.7,
+        "return_pct": 5057.86
       },
       {
         "key": "2026-07",
@@ -1312,10 +1312,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T16:54:33",
-      "closed_at": null,
-      "realized_pct": 0.71
+      "closed_at": "2026-08-20T12:22:33",
+      "realized_pct": 0.96,
+      "result_pct": 0.96
     },
     {
       "id": "الفيواب الأسبوعي · BTC|ADXUSDT|2026-08-19 17:30:00",
@@ -1754,11 +1755,13 @@
       "timeframe": "15m",
       "entry": 0.429394,
       "stop": 0.409,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-19T19:54:40",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.47
     },
     {
       "id": "الفيواب الأسبوعي · BTC|SOPHUSDT|2026-08-19 20:00:00",
@@ -1861,10 +1864,11 @@
       "entry": 0.00875834,
       "stop": 0.00806,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-20T00:24:47",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-20T12:22:44",
+      "realized_pct": -2.64,
+      "result_pct": -2.64
     },
     {
       "id": "الفيواب الأسبوعي · BTC|THETAUSDT|2026-08-20 01:00:00",
@@ -5452,10 +5456,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T16:47:28",
-      "closed_at": null,
-      "realized_pct": 0.71
+      "closed_at": "2026-08-20T12:17:20",
+      "realized_pct": 0.96,
+      "result_pct": 0.96
     },
     {
       "id": "العرض/الطلب|SKLUSDT|2026-08-19 16:30:00",
@@ -5939,11 +5944,13 @@
       "timeframe": "15m",
       "entry": 0.429394,
       "stop": 0.409,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "opened_at": "2026-08-19T19:50:45",
       "closed_at": null,
-      "realized_pct": 0.0
+      "realized_pct": 1.47
     },
     {
       "id": "العرض/الطلب|SOPHUSDT|2026-08-19 20:00:00",
@@ -6046,10 +6053,11 @@
       "entry": 0.00875834,
       "stop": 0.00806,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-20T00:27:02",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-20T12:17:33",
+      "realized_pct": -2.64,
+      "result_pct": -2.64
     },
     {
       "id": "العرض/الطلب|THETAUSDT|2026-08-20 01:00:00",
