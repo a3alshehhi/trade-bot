@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-20T03:51:31",
+  "updated_at": "2026-08-20T04:00:16",
   "stats": {
-    "open": 62,
-    "closed": 600,
-    "win_rate": 66.3,
-    "profit_factor": 1.68,
-    "total_pct": 6193.59,
-    "avg_pct": 0.8,
+    "open": 61,
+    "closed": 601,
+    "win_rate": 66.4,
+    "profit_factor": 1.69,
+    "total_pct": 6470.5,
+    "avg_pct": 0.81,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-20",
-        "trades": 12,
+        "trades": 13,
         "win_rate": 100.0,
-        "return_pct": 51.84,
+        "return_pct": 58.52,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -383,9 +383,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 85,
-        "win_rate": 70.6,
-        "return_pct": 378.2,
+        "trades": 86,
+        "win_rate": 70.9,
+        "return_pct": 399.24,
         "month": "2026-08"
       },
       {
@@ -434,9 +434,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 335,
-        "win_rate": 70.4,
-        "return_pct": 3714.6
+        "trades": 336,
+        "win_rate": 70.5,
+        "return_pct": 3882.44
       },
       {
         "key": "2026-07",
@@ -1799,10 +1799,11 @@
         1,
         2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T19:05:48",
-      "closed_at": null,
-      "realized_pct": 1.62
+      "closed_at": "2026-08-20T04:00:09",
+      "realized_pct": 4.4,
+      "result_pct": 4.4
     },
     {
       "id": "الفيواب الأسبوعي · BTC|PORTOUSDT|2026-08-19 19:30:00",
