@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T15:58:06",
+  "updated_at": "2026-08-20T16:51:29",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -1360,11 +1360,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T16:35:24",
+      "realized_pct": 3.88,
+      "result_pct": 3.88,
+      "exec_pct": 3.88
     },
     {
       "id": "paper|ACHUSDT|2026-08-19T18:03:14",
@@ -1432,11 +1432,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T16:32:06",
+      "realized_pct": 3.88,
+      "result_pct": 3.88,
+      "exec_pct": 3.88
     },
     {
       "id": "paper|LSKUSDT|2026-08-19T18:03:14",
@@ -1817,7 +1817,8 @@
       "opened_at": "2026-08-19T16:54:33",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -1886,7 +1887,8 @@
       "opened_at": "2026-08-19T16:47:28",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -15667,12 +15669,12 @@
   ],
   "stats": {
     "total": 675,
-    "open": 40,
-    "closed": 635,
-    "wins": 405,
-    "win_rate": 63.8,
-    "net_pct": 440.53,
-    "pf": 1.58,
+    "open": 38,
+    "closed": 637,
+    "wins": 407,
+    "win_rate": 63.9,
+    "net_pct": 448.29,
+    "pf": 1.59,
     "simulated": 1
   }
 }
