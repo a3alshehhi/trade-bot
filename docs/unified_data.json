@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T05:39:08",
+  "updated_at": "2026-08-20T07:10:51",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -228,11 +228,11 @@
       "opened_at": "2026-08-19T22:37:05",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T07:06:45",
+      "realized_pct": 1.79,
+      "result_pct": 1.79,
+      "exec_pct": 1.79
     },
     {
       "id": "paper|ACTUSDT|2026-08-19T22:32:10",
@@ -249,11 +249,11 @@
       "opened_at": "2026-08-19T22:32:10",
       "usd": 100.0,
       "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T07:02:58",
+      "realized_pct": 1.79,
+      "result_pct": 1.79,
+      "exec_pct": 1.79
     },
     {
       "id": "paper|WLDUSDT|2026-08-19T22:22:33",
@@ -764,11 +764,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T06:09:32",
+      "realized_pct": 3.41,
+      "result_pct": 3.41,
+      "exec_pct": 3.41
     },
     {
       "id": "paper|ENSUSDT|2026-08-19T18:25:00",
@@ -928,11 +928,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T06:02:23",
+      "realized_pct": 3.41,
+      "result_pct": 3.41,
+      "exec_pct": 3.41
     },
     {
       "id": "paper|DCRUSDT|2026-08-19T18:17:30",
@@ -1381,11 +1381,11 @@
         2,
         3
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T06:26:55",
+      "realized_pct": 4.89,
+      "result_pct": 4.89,
+      "exec_pct": 4.89
     },
     {
       "id": "paper|GLMUSDT|2026-08-19T18:00:41",
@@ -1621,11 +1621,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T06:23:06",
+      "realized_pct": 4.16,
+      "result_pct": 4.16,
+      "exec_pct": 4.16
     },
     {
       "id": "paper|SKLUSDT|2026-08-19T16:54:33",
@@ -2627,7 +2627,8 @@
         2,
         3,
         4,
-        5
+        5,
+        6
       ],
       "status": "open",
       "closed_at": null,
@@ -2654,7 +2655,8 @@
         2,
         3,
         4,
-        5
+        5,
+        6
       ],
       "status": "open",
       "closed_at": null,
@@ -15482,12 +15484,12 @@
   ],
   "stats": {
     "total": 669,
-    "open": 51,
-    "closed": 618,
-    "wins": 392,
-    "win_rate": 63.4,
-    "net_pct": 411.99,
-    "pf": 1.55,
+    "open": 45,
+    "closed": 624,
+    "wins": 398,
+    "win_rate": 63.8,
+    "net_pct": 431.44,
+    "pf": 1.58,
     "simulated": 1
   }
 }
