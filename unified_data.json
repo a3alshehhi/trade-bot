@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T19:45:04",
+  "updated_at": "2026-08-20T21:50:39",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -17,7 +17,9 @@
       "targets": [],
       "opened_at": "2026-08-20T18:39:23",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -59,7 +61,9 @@
       "targets": [],
       "opened_at": "2026-08-20T18:32:04",
       "usd": 100.0,
-      "hits": [],
+      "hits": [
+        1
+      ],
       "status": "open",
       "closed_at": null,
       "realized_pct": 0.0,
@@ -186,13 +190,20 @@
       "opened_at": "2026-08-20T16:50:57",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T20:57:36",
+      "realized_pct": 17.9,
+      "result_pct": 17.9,
+      "exec_pct": 17.9
     },
     {
       "id": "paper|ONGUSDT|2026-08-20T16:47:18",
@@ -209,13 +220,20 @@
       "opened_at": "2026-08-20T16:47:18",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T20:53:56",
+      "realized_pct": 17.9,
+      "result_pct": 17.9,
+      "exec_pct": 17.9
     },
     {
       "id": "paper|DIAUSDT|2026-08-20T12:36:03",
@@ -324,7 +342,9 @@
       "opened_at": "2026-08-20T10:50:42",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -347,7 +367,9 @@
       "opened_at": "2026-08-20T10:47:28",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -978,13 +1000,16 @@
         1,
         2,
         3,
-        4
+        4,
+        5,
+        6,
+        7
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T21:29:00",
+      "realized_pct": 3.87,
+      "result_pct": 3.87,
+      "exec_pct": 3.87
     },
     {
       "id": "paper|ETHUSDT|2026-08-19T18:32:33",
@@ -1031,13 +1056,16 @@
         1,
         2,
         3,
-        4
+        4,
+        5,
+        6,
+        7
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-20T21:21:44",
+      "realized_pct": 3.87,
+      "result_pct": 3.87,
+      "exec_pct": 3.87
     },
     {
       "id": "paper|ZENUSDT|2026-08-19T18:32:33",
@@ -1980,7 +2008,8 @@
       "hits": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "status": "open",
       "closed_at": null,
@@ -15903,12 +15932,12 @@
   ],
   "stats": {
     "total": 685,
-    "open": 42,
-    "closed": 643,
-    "wins": 413,
-    "win_rate": 64.2,
-    "net_pct": 474.81,
-    "pf": 1.63,
+    "open": 38,
+    "closed": 647,
+    "wins": 417,
+    "win_rate": 64.5,
+    "net_pct": 518.35,
+    "pf": 1.69,
     "simulated": 1
   }
 }
