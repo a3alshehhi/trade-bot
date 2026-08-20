@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-20T12:50:35",
+  "updated_at": "2026-08-20T13:06:44",
   "stats": {
-    "open": 52,
-    "closed": 616,
-    "win_rate": 66.6,
+    "open": 50,
+    "closed": 618,
+    "win_rate": 66.7,
     "profit_factor": 1.72,
-    "total_pct": 8409.8,
+    "total_pct": 8416.61,
     "avg_pct": 0.83,
     "max_drawdown_pct": -70.77
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-20",
-        "trades": 28,
-        "win_rate": 85.7,
-        "return_pct": 105.3,
+        "trades": 30,
+        "win_rate": 86.7,
+        "return_pct": 105.47,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -383,9 +383,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 101,
-        "win_rate": 71.3,
-        "return_pct": 546.59,
+        "trades": 103,
+        "win_rate": 71.8,
+        "return_pct": 547.11,
         "month": "2026-08"
       },
       {
@@ -434,9 +434,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 351,
-        "win_rate": 70.7,
-        "return_pct": 5057.86
+        "trades": 353,
+        "win_rate": 70.8,
+        "return_pct": 5061.99
       },
       {
         "key": "2026-07",
@@ -1898,10 +1898,11 @@
       "entry": 2.302432,
       "stop": 2.164,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-20T01:40:28",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-20T13:06:42",
+      "realized_pct": 0.04,
+      "result_pct": 0.04
     },
     {
       "id": "الفيواب الأسبوعي · BTC|RLCUSDT|2026-08-20 10:30:00",
@@ -6101,10 +6102,11 @@
       "entry": 2.302432,
       "stop": 2.164,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-20T01:32:14",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-20T13:02:55",
+      "realized_pct": 0.04,
+      "result_pct": 0.04
     },
     {
       "id": "العرض/الطلب|RLCUSDT|2026-08-20 10:30:00",
