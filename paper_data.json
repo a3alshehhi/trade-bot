@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-20T10:45:49",
+  "updated_at": "2026-08-20T10:50:53",
   "stats": {
-    "open": 50,
+    "open": 52,
     "closed": 612,
     "win_rate": 66.7,
     "profit_factor": 1.73,
@@ -447,75 +447,6 @@
     ]
   },
   "trades": [
-    {
-      "id": "الفيواب الأسبوعي · BTC|STEEMUSDT|2026-08-06 08:00:00",
-      "symbol": "STEEMUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.03771692,
-      "stop": 0.0359,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-08-06T08:23:05",
-      "closed_at": "2026-08-06T17:36:45",
-      "realized_pct": -3.24,
-      "result_pct": -3.24
-    },
-    {
-      "id": "الفيواب الأسبوعي · BTC|LSKUSDT|2026-08-06 08:15:00",
-      "symbol": "LSKUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0744282,
-      "stop": 0.0714,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-08-06T08:40:34",
-      "closed_at": "2026-08-06T17:36:47",
-      "realized_pct": 0.8,
-      "result_pct": 0.8
-    },
-    {
-      "id": "الفيواب الأسبوعي · BTC|CRVUSDT|2026-08-06 09:00:00",
-      "symbol": "CRVUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.2079654,
-      "stop": 0.2016,
-      "hits": [
-        1,
-        2,
-        3,
-        4
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-06T09:20:52",
-      "closed_at": "2026-08-06T19:28:57",
-      "realized_pct": 2.57,
-      "result_pct": 2.57
-    },
-    {
-      "id": "الفيواب الأسبوعي · BTC|RAREUSDT|2026-08-06 09:15:00",
-      "symbol": "RAREUSDT",
-      "label": "الفيواب الأسبوعي · BTC",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.01199046,
-      "stop": 0.0117,
-      "hits": [
-        1,
-        2,
-        3
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-06T09:37:52",
-      "closed_at": "2026-08-06T12:05:03",
-      "realized_pct": 2.03,
-      "result_pct": 2.03
-    },
     {
       "id": "الفيواب الأسبوعي · BTC|ADXUSDT|2026-08-06 13:00:00",
       "symbol": "ADXUSDT",
@@ -1968,6 +1899,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "الفيواب الأسبوعي · BTC|RLCUSDT|2026-08-20 10:30:00",
+      "symbol": "RLCUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2905184,
+      "stop": 0.2789,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-20T10:50:42",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "زخم سيولة الحيتان|ETHUSDT|2026-07-20 11:30:00",
       "symbol": "ETHUSDT",
       "label": "زخم سيولة الحيتان",
@@ -2915,75 +2860,6 @@
       "closed_at": "2026-08-04T18:46:26",
       "realized_pct": 0.98,
       "result_pct": 0.98
-    },
-    {
-      "id": "العرض/الطلب|STEEMUSDT|2026-08-06 08:00:00",
-      "symbol": "STEEMUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.03771692,
-      "stop": 0.0359,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-08-06T08:17:34",
-      "closed_at": "2026-08-06T17:33:13",
-      "realized_pct": -3.24,
-      "result_pct": -3.24
-    },
-    {
-      "id": "العرض/الطلب|LSKUSDT|2026-08-06 08:15:00",
-      "symbol": "LSKUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.0744282,
-      "stop": 0.0714,
-      "hits": [],
-      "status": "closed",
-      "opened_at": "2026-08-06T08:32:38",
-      "closed_at": "2026-08-06T17:33:15",
-      "realized_pct": 0.8,
-      "result_pct": 0.8
-    },
-    {
-      "id": "العرض/الطلب|CRVUSDT|2026-08-06 09:00:00",
-      "symbol": "CRVUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.2079654,
-      "stop": 0.2016,
-      "hits": [
-        1,
-        2,
-        3,
-        4
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-06T09:17:03",
-      "closed_at": "2026-08-06T19:24:47",
-      "realized_pct": 2.57,
-      "result_pct": 2.57
-    },
-    {
-      "id": "العرض/الطلب|RAREUSDT|2026-08-06 09:15:00",
-      "symbol": "RAREUSDT",
-      "label": "العرض/الطلب",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 0.01199046,
-      "stop": 0.0117,
-      "hits": [
-        1,
-        2,
-        3
-      ],
-      "status": "closed",
-      "opened_at": "2026-08-06T09:32:11",
-      "closed_at": "2026-08-06T12:02:23",
-      "realized_pct": 2.03,
-      "result_pct": 2.03
     },
     {
       "id": "العرض/الطلب|ADXUSDT|2026-08-06 13:00:00",
@@ -6191,6 +6067,20 @@
       "realized_pct": 0.0
     },
     {
+      "id": "العرض/الطلب|RLCUSDT|2026-08-20 10:30:00",
+      "symbol": "RLCUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2905184,
+      "stop": 0.2789,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-20T10:47:28",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
       "id": "trendwave · 1h · std|GUSDT|2026-07-14 17:59:59.999000",
       "symbol": "GUSDT",
       "label": "trendwave · 1h · std",
@@ -6265,6 +6155,144 @@
       "closed_at": "2026-07-18T02:05:39",
       "realized_pct": 1.06,
       "result_pct": 1.06
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|STEEMUSDT|2026-08-06 08:00:00",
+      "symbol": "STEEMUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03771692,
+      "stop": 0.0359,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-08-06T08:23:05",
+      "closed_at": "2026-08-06T17:36:45",
+      "realized_pct": -3.24,
+      "result_pct": -3.24
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|LSKUSDT|2026-08-06 08:15:00",
+      "symbol": "LSKUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0744282,
+      "stop": 0.0714,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-08-06T08:40:34",
+      "closed_at": "2026-08-06T17:36:47",
+      "realized_pct": 0.8,
+      "result_pct": 0.8
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|CRVUSDT|2026-08-06 09:00:00",
+      "symbol": "CRVUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2079654,
+      "stop": 0.2016,
+      "hits": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-06T09:20:52",
+      "closed_at": "2026-08-06T19:28:57",
+      "realized_pct": 2.57,
+      "result_pct": 2.57
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|RAREUSDT|2026-08-06 09:15:00",
+      "symbol": "RAREUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01199046,
+      "stop": 0.0117,
+      "hits": [
+        1,
+        2,
+        3
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-06T09:37:52",
+      "closed_at": "2026-08-06T12:05:03",
+      "realized_pct": 2.03,
+      "result_pct": 2.03
+    },
+    {
+      "id": "العرض/الطلب|STEEMUSDT|2026-08-06 08:00:00",
+      "symbol": "STEEMUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.03771692,
+      "stop": 0.0359,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-08-06T08:17:34",
+      "closed_at": "2026-08-06T17:33:13",
+      "realized_pct": -3.24,
+      "result_pct": -3.24
+    },
+    {
+      "id": "العرض/الطلب|LSKUSDT|2026-08-06 08:15:00",
+      "symbol": "LSKUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.0744282,
+      "stop": 0.0714,
+      "hits": [],
+      "status": "closed",
+      "opened_at": "2026-08-06T08:32:38",
+      "closed_at": "2026-08-06T17:33:15",
+      "realized_pct": 0.8,
+      "result_pct": 0.8
+    },
+    {
+      "id": "العرض/الطلب|CRVUSDT|2026-08-06 09:00:00",
+      "symbol": "CRVUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.2079654,
+      "stop": 0.2016,
+      "hits": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-06T09:17:03",
+      "closed_at": "2026-08-06T19:24:47",
+      "realized_pct": 2.57,
+      "result_pct": 2.57
+    },
+    {
+      "id": "العرض/الطلب|RAREUSDT|2026-08-06 09:15:00",
+      "symbol": "RAREUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.01199046,
+      "stop": 0.0117,
+      "hits": [
+        1,
+        2,
+        3
+      ],
+      "status": "closed",
+      "opened_at": "2026-08-06T09:32:11",
+      "closed_at": "2026-08-06T12:02:23",
+      "realized_pct": 2.03,
+      "result_pct": 2.03
     },
     {
       "id": "العرض/الطلب|HYPERUSDT|2026-08-06 00:30:00",
