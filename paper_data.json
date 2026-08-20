@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-20T06:50:34",
+  "updated_at": "2026-08-20T07:06:50",
   "stats": {
-    "open": 54,
-    "closed": 608,
-    "win_rate": 66.8,
+    "open": 52,
+    "closed": 610,
+    "win_rate": 66.9,
     "profit_factor": 1.73,
-    "total_pct": 8496.61,
-    "avg_pct": 0.84,
+    "total_pct": 8807.13,
+    "avg_pct": 0.85,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-20",
-        "trades": 20,
+        "trades": 22,
         "win_rate": 100.0,
-        "return_pct": 107.4,
+        "return_pct": 114.89,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -383,9 +383,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 93,
-        "win_rate": 73.1,
-        "return_pct": 553.18,
+        "trades": 95,
+        "win_rate": 73.7,
+        "return_pct": 576.78,
         "month": "2026-08"
       },
       {
@@ -434,9 +434,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 343,
-        "win_rate": 71.1,
-        "return_pct": 5110.48
+        "trades": 345,
+        "win_rate": 71.3,
+        "return_pct": 5298.68
       },
       {
         "key": "2026-07",
@@ -1880,10 +1880,11 @@
       "entry": 0.01020486,
       "stop": 0.00942,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T22:37:05",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-20T07:06:45",
+      "realized_pct": 1.79,
+      "result_pct": 1.79
     },
     {
       "id": "الفيواب الأسبوعي · BTC|SAGAUSDT|2026-08-19 22:30:00",
@@ -6090,10 +6091,11 @@
       "entry": 0.01020486,
       "stop": 0.00942,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T22:32:10",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-20T07:02:58",
+      "realized_pct": 1.79,
+      "result_pct": 1.79
     },
     {
       "id": "العرض/الطلب|SAGAUSDT|2026-08-19 22:30:00",
