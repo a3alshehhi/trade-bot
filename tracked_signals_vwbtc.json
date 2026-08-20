@@ -5536,5 +5536,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "الفيواب الأسبوعي · BTC|ICPUSDT|2026-08-20 01:15:00": {
+    "symbol": "ICPUSDT",
+    "label": "الفيواب الأسبوعي · BTC",
+    "timeframe": "15m",
+    "message_id": 7339,
+    "entry": 2.302432,
+    "stop": 2.164,
+    "init_stop": 2.164,
+    "cur_stop": 2.164,
+    "legs": [
+      2.302432,
+      2.276,
+      2.249568,
+      2.211936
+    ],
+    "last_alert_stop": 2.164,
+    "armed": false,
+    "targets": [
+      2.388,
+      2.448928,
+      2.480736,
+      2.526432,
+      2.612,
+      2.750432,
+      2.974432,
+      3.112864
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-20 01:15:00",
+    "last_bar": "2026-08-20 01:15:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 2.302432,
+    "lo_seen": 2.302432,
+    "created": "2026-08-20T01:40:28",
+    "dca_levels": [
+      2.302432,
+      2.276,
+      2.249568,
+      2.211936
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
