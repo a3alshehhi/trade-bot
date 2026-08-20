@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-20T06:09:40",
+  "updated_at": "2026-08-20T06:20:37",
   "stats": {
-    "open": 56,
-    "closed": 606,
-    "win_rate": 66.7,
-    "profit_factor": 1.72,
-    "total_pct": 7768.51,
-    "avg_pct": 0.83,
+    "open": 54,
+    "closed": 608,
+    "win_rate": 66.8,
+    "profit_factor": 1.73,
+    "total_pct": 8496.61,
+    "avg_pct": 0.84,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-20",
-        "trades": 18,
+        "trades": 20,
         "win_rate": 100.0,
-        "return_pct": 89.83,
+        "return_pct": 107.4,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -383,9 +383,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 91,
-        "win_rate": 72.5,
-        "return_pct": 497.86,
+        "trades": 93,
+        "win_rate": 73.1,
+        "return_pct": 553.18,
         "month": "2026-08"
       },
       {
@@ -434,9 +434,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 341,
-        "win_rate": 71.0,
-        "return_pct": 4669.17
+        "trades": 343,
+        "win_rate": 71.1,
+        "return_pct": 5110.48
       },
       {
         "key": "2026-07",
@@ -1043,7 +1043,8 @@
         2,
         3,
         4,
-        5
+        5,
+        6
       ],
       "status": "open",
       "opened_at": "2026-08-17T10:05:53",
@@ -1414,10 +1415,11 @@
         2,
         3
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T18:00:41",
-      "closed_at": null,
-      "realized_pct": 1.8
+      "closed_at": "2026-08-20T06:20:28",
+      "realized_pct": 4.89,
+      "result_pct": 4.89
     },
     {
       "id": "الفيواب الأسبوعي · BTC|GLMUSDT|2026-08-19 17:30:00",
@@ -5175,7 +5177,8 @@
         2,
         3,
         4,
-        5
+        5,
+        6
       ],
       "status": "open",
       "opened_at": "2026-08-17T10:02:27",
@@ -5678,10 +5681,11 @@
         1,
         2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T17:32:40",
-      "closed_at": null,
-      "realized_pct": 1.53
+      "closed_at": "2026-08-20T06:17:10",
+      "realized_pct": 4.16,
+      "result_pct": 4.16
     },
     {
       "id": "العرض/الطلب|ACHUSDT|2026-08-19 17:45:00",
