@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-20T13:36:41",
+  "updated_at": "2026-08-20T13:51:37",
   "stats": {
-    "open": 50,
-    "closed": 618,
+    "open": 49,
+    "closed": 619,
     "win_rate": 66.7,
-    "profit_factor": 1.72,
-    "total_pct": 8416.61,
-    "avg_pct": 0.83,
+    "profit_factor": 1.73,
+    "total_pct": 8863.74,
+    "avg_pct": 0.84,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-20",
-        "trades": 30,
-        "win_rate": 86.7,
-        "return_pct": 105.47,
+        "trades": 31,
+        "win_rate": 87.1,
+        "return_pct": 116.26,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -383,9 +383,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 103,
-        "win_rate": 71.8,
-        "return_pct": 547.11,
+        "trades": 104,
+        "win_rate": 72.1,
+        "return_pct": 581.08,
         "month": "2026-08"
       },
       {
@@ -434,9 +434,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 353,
-        "win_rate": 70.8,
-        "return_pct": 5061.99
+        "trades": 354,
+        "win_rate": 70.9,
+        "return_pct": 5333.0
       },
       {
         "key": "2026-07",
@@ -1704,7 +1704,8 @@
       "hits": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "status": "open",
       "opened_at": "2026-08-19T18:36:46",
@@ -5559,10 +5560,11 @@
         1,
         2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T17:32:40",
-      "closed_at": null,
-      "realized_pct": 1.94
+      "closed_at": "2026-08-20T13:47:37",
+      "realized_pct": 5.25,
+      "result_pct": 5.25
     },
     {
       "id": "العرض/الطلب|SANDUSDT|2026-08-19 17:15:00",
@@ -5893,7 +5895,8 @@
       "hits": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "status": "open",
       "opened_at": "2026-08-19T18:32:33",
