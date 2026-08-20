@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-20T21:06:16",
+  "updated_at": "2026-08-20T21:19:16",
   "stats": {
-    "open": 47,
-    "closed": 631,
-    "win_rate": 67.4,
-    "profit_factor": 1.84,
-    "total_pct": 18792.48,
-    "avg_pct": 0.94,
+    "open": 45,
+    "closed": 633,
+    "win_rate": 67.5,
+    "profit_factor": 1.85,
+    "total_pct": 20283.05,
+    "avg_pct": 0.95,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-20",
-        "trades": 43,
-        "win_rate": 90.7,
-        "return_pct": 355.79,
+        "trades": 45,
+        "win_rate": 91.1,
+        "return_pct": 391.75,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -383,9 +383,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 116,
-        "win_rate": 75.0,
-        "return_pct": 1335.48,
+        "trades": 118,
+        "win_rate": 75.4,
+        "return_pct": 1448.74,
         "month": "2026-08"
       },
       {
@@ -434,9 +434,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 366,
-        "win_rate": 71.9,
-        "return_pct": 11350.89
+        "trades": 368,
+        "win_rate": 72.0,
+        "return_pct": 12254.34
       },
       {
         "key": "2026-07",
@@ -1689,10 +1689,11 @@
         6,
         7
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T18:36:46",
-      "closed_at": null,
-      "realized_pct": 1.43
+      "closed_at": "2026-08-20T21:19:06",
+      "realized_pct": 3.87,
+      "result_pct": 3.87
     },
     {
       "id": "الفيواب الأسبوعي · BTC|GMTUSDT|2026-08-19 18:30:00",
@@ -5953,10 +5954,11 @@
         6,
         7
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T18:32:33",
-      "closed_at": null,
-      "realized_pct": 1.43
+      "closed_at": "2026-08-20T21:15:21",
+      "realized_pct": 3.87,
+      "result_pct": 3.87
     },
     {
       "id": "العرض/الطلب|ZENUSDT|2026-08-19 18:15:00",
