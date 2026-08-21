@@ -68,7 +68,8 @@ jobs:
           # ══ البوت الرئيسي: استراتيجية «الفيواب الأسبوعي» (2026-07-17) — 15m فقط ══
           # تشبّع RSI21≤20 (لمسة+) → اختراق الفيواب الأسبوعي → RSI21≥80 → تحوّل MACD4C للأحمر
           # → إشارة DCA بانتظار مستويات فيبو (بلا شراء فوري) · وقف قاع الموجة · أهداف 1.272/1.618
-          SD_STRATEGY=vwap_wave SD_ENTRY_TF=15m SD_STATE=sd_state_15m.json python sd_bot.py scan
+          # ⏸️ موقوف مؤقتاً بطلب بو محمد 2026-08-21 — لإعادة التشغيل احذف # من بداية سطر المسح التالي
+          # SD_STRATEGY=vwap_wave SD_ENTRY_TF=15m SD_STATE=sd_state_15m.json python sd_bot.py scan
           # تنفيذ + متابعة الرئيسي (وسمه فقط) + لوحة المتتبّع
           SD_LABELS="العرض/الطلب" python trading_bot.py --mode trackmon
 
@@ -92,7 +93,8 @@ jobs:
           # نسخة مستقلّة (vwbtc_bot.py) لا تمسّ scan_vwave الرئيسي؛ دفتر/حالة/وسم معزول؛ بلا تنفيذ (SD_EXECUTE=0).
           python fetch_regime.py || true
           export SD_LABEL="الفيواب الأسبوعي · BTC" SD_TRACK=tracked_signals_vwbtc.json
-          SD_EXECUTE=0 SD_REGIME_MIN=2 SD_ENTRY_TF=15m SD_STATE=sd_state_vwbtc_15m.json python vwbtc_bot.py scan
+          # ⏸️ موقوف مؤقتاً بطلب بو محمد 2026-08-21 — لإعادة التشغيل احذف # من بداية سطر المسح التالي
+          # SD_EXECUTE=0 SD_REGIME_MIN=2 SD_ENTRY_TF=15m SD_STATE=sd_state_vwbtc_15m.json python vwbtc_bot.py scan
           SD_EXECUTE=0 SD_TRACK=tracked_signals_vwbtc.json python trading_bot.py --mode trackmon
           unset SD_LABEL SD_TRACK
 
