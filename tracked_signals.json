@@ -12684,5 +12684,61 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0
+  },
+  "العرض/الطلب|CYBERUSDT|2026-08-21 01:30:00": {
+    "symbol": "CYBERUSDT",
+    "label": "العرض/الطلب",
+    "timeframe": "15m",
+    "message_id": 7393,
+    "entry": 0.31081,
+    "stop": 0.283,
+    "init_stop": 0.283,
+    "cur_stop": 0.283,
+    "legs": [
+      0.31081,
+      0.3055,
+      0.30019,
+      0.29263
+    ],
+    "last_alert_stop": 0.283,
+    "armed": false,
+    "targets": [
+      0.328,
+      0.34024,
+      0.34663,
+      0.35581,
+      0.373,
+      0.40081,
+      0.44581,
+      0.47362
+    ],
+    "tp_split": [
+      50,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ],
+    "is_trendwave": false,
+    "mgmt": "ladder",
+    "breakeven_done": false,
+    "bar_ts": "2026-08-21 01:30:00",
+    "last_bar": "2026-08-21 01:30:00",
+    "hits": [],
+    "stopped": false,
+    "hi_seen": 0.31081,
+    "lo_seen": 0.31081,
+    "created": "2026-08-21T01:47:16",
+    "dca_levels": [
+      0.31081,
+      0.3055,
+      0.30019,
+      0.29263
+    ],
+    "wait_entry": true,
+    "max_age_h": 48.0
   }
 }
