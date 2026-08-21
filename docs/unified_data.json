@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-21T01:57:45",
+  "updated_at": "2026-08-21T03:11:40",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
     {
-      "id": "paper|CYBERUSDT|2026-08-21T01:50:58",
+      "id": "paper|CYBERUSDT|2026-08-21T01:57:17",
       "source": "paper",
       "source_ar": "ورقية",
       "symbol": "CYBERUSDT",
@@ -15,7 +15,7 @@
       "stop_orig": 0.283,
       "stop": 0.283,
       "targets": [],
-      "opened_at": "2026-08-21T01:50:58",
+      "opened_at": "2026-08-21T01:57:17",
       "usd": 100.0,
       "hits": [],
       "status": "open",
@@ -25,7 +25,7 @@
       "exec_pct": null
     },
     {
-      "id": "paper|CYBERUSDT|2026-08-21T01:47:16",
+      "id": "paper|CYBERUSDT|2026-08-21T01:53:18",
       "source": "paper",
       "source_ar": "ورقية",
       "symbol": "CYBERUSDT",
@@ -36,7 +36,7 @@
       "stop_orig": 0.283,
       "stop": 0.283,
       "targets": [],
-      "opened_at": "2026-08-21T01:47:16",
+      "opened_at": "2026-08-21T01:53:18",
       "usd": 100.0,
       "hits": [],
       "status": "open",
@@ -2050,7 +2050,8 @@
       "usd": 100.0,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
