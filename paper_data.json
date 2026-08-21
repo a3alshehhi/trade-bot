@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-21T04:06:46",
+  "updated_at": "2026-08-21T04:21:16",
   "stats": {
-    "open": 41,
-    "closed": 641,
-    "win_rate": 67.9,
-    "profit_factor": 1.91,
-    "total_pct": 31268.59,
+    "open": 39,
+    "closed": 643,
+    "win_rate": 68.0,
+    "profit_factor": 1.92,
+    "total_pct": 32299.54,
     "avg_pct": 1.01,
     "max_drawdown_pct": -70.77
   },
@@ -13,9 +13,9 @@
     "daily": [
       {
         "key": "2026-08-21",
-        "trades": 2,
+        "trades": 4,
         "win_rate": 100.0,
-        "return_pct": 17.01,
+        "return_pct": 20.85,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -391,9 +391,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 126,
-        "win_rate": 77.0,
-        "return_pct": 2283.44,
+        "trades": 128,
+        "win_rate": 77.3,
+        "return_pct": 2361.77,
         "month": "2026-08"
       },
       {
@@ -442,9 +442,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 376,
-        "win_rate": 72.6,
-        "return_pct": 18912.77
+        "trades": 378,
+        "win_rate": 72.8,
+        "return_pct": 19537.63
       },
       {
         "key": "2026-07",
@@ -2018,10 +2018,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-20T18:20:57",
-      "closed_at": null,
-      "realized_pct": 1.38
+      "closed_at": "2026-08-21T04:21:13",
+      "realized_pct": 1.63,
+      "result_pct": 1.63
     },
     {
       "id": "الفيواب الأسبوعي · BTC|LAZIOUSDT|2026-08-20 18:15:00",
@@ -6354,10 +6355,11 @@
       "hits": [
         1
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-20T18:17:13",
-      "closed_at": null,
-      "realized_pct": 1.38
+      "closed_at": "2026-08-21T04:17:30",
+      "realized_pct": 1.63,
+      "result_pct": 1.63
     },
     {
       "id": "العرض/الطلب|LAZIOUSDT|2026-08-20 18:15:00",
