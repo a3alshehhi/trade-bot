@@ -1,8 +1,92 @@
 {
-  "updated_at": "2026-08-20T22:50:36",
+  "updated_at": "2026-08-21T01:57:45",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
+    {
+      "id": "paper|CYBERUSDT|2026-08-21T01:50:58",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "CYBERUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.31081,
+      "stop_orig": 0.283,
+      "stop": 0.283,
+      "targets": [],
+      "opened_at": "2026-08-21T01:50:58",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|CYBERUSDT|2026-08-21T01:47:16",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "CYBERUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.31081,
+      "stop_orig": 0.283,
+      "stop": 0.283,
+      "targets": [],
+      "opened_at": "2026-08-21T01:47:16",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|EPICUSDT|2026-08-21T00:50:14",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "EPICUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.3627698,
+      "stop_orig": 0.3281,
+      "stop": 0.3281,
+      "targets": [],
+      "opened_at": "2026-08-21T00:50:14",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
+    {
+      "id": "paper|EPICUSDT|2026-08-21T00:46:59",
+      "source": "paper",
+      "source_ar": "ورقية",
+      "symbol": "EPICUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.3627698,
+      "stop_orig": 0.3281,
+      "stop": 0.3281,
+      "targets": [],
+      "opened_at": "2026-08-21T00:46:59",
+      "usd": 100.0,
+      "hits": [],
+      "status": "open",
+      "closed_at": null,
+      "realized_pct": 0.0,
+      "result_pct": null,
+      "exec_pct": null
+    },
     {
       "id": "paper|LAZIOUSDT|2026-08-20T18:39:23",
       "source": "paper",
@@ -153,12 +237,16 @@
       "targets": [],
       "opened_at": "2026-08-20T17:21:12",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1,
+        2,
+        3
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-21T00:50:22",
+      "realized_pct": 8.17,
+      "result_pct": 8.17,
+      "exec_pct": 8.17
     },
     {
       "id": "paper|PROMUSDT|2026-08-20T17:17:29",
@@ -174,12 +262,16 @@
       "targets": [],
       "opened_at": "2026-08-20T17:17:29",
       "usd": 100.0,
-      "hits": [],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "hits": [
+        1,
+        2,
+        3
+      ],
+      "status": "closed",
+      "closed_at": "2026-08-21T00:47:08",
+      "realized_pct": 8.17,
+      "result_pct": 8.17,
+      "exec_pct": 8.17
     },
     {
       "id": "paper|ONGUSDT|2026-08-20T16:50:57",
@@ -256,7 +348,8 @@
       "opened_at": "2026-08-20T12:36:03",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -279,7 +372,8 @@
       "opened_at": "2026-08-20T12:32:21",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -766,7 +860,8 @@
       "opened_at": "2026-08-19T20:22:01",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -789,7 +884,8 @@
       "opened_at": "2026-08-19T20:17:41",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -1147,7 +1243,8 @@
         1,
         2,
         3,
-        4
+        4,
+        5
       ],
       "status": "open",
       "closed_at": null,
@@ -1269,7 +1366,8 @@
         1,
         2,
         3,
-        4
+        4,
+        5
       ],
       "status": "open",
       "closed_at": null,
@@ -1319,7 +1417,8 @@
         1,
         2,
         3,
-        4
+        4,
+        5
       ],
       "status": "open",
       "closed_at": null,
@@ -1441,7 +1540,8 @@
         1,
         2,
         3,
-        4
+        4,
+        5
       ],
       "status": "open",
       "closed_at": null,
@@ -1802,7 +1902,8 @@
       "opened_at": "2026-08-19T18:00:41",
       "usd": 100.0,
       "hits": [
-        1
+        1,
+        2
       ],
       "status": "open",
       "closed_at": null,
@@ -15946,13 +16047,13 @@
     }
   ],
   "stats": {
-    "total": 685,
-    "open": 32,
-    "closed": 653,
-    "wins": 423,
-    "win_rate": 64.8,
-    "net_pct": 546.45,
-    "pf": 1.73,
+    "total": 689,
+    "open": 34,
+    "closed": 655,
+    "wins": 425,
+    "win_rate": 64.9,
+    "net_pct": 562.79,
+    "pf": 1.75,
     "simulated": 1
   }
 }
