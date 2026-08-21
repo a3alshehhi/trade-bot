@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T05:20:32",
+  "updated_at": "2026-08-21T05:52:43",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -1907,11 +1907,11 @@
         1,
         2
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-21T05:51:59",
+      "realized_pct": 4.18,
+      "result_pct": 4.18,
+      "exec_pct": 4.18
     },
     {
       "id": "paper|CRVUSDT|2026-08-19T18:00:41",
@@ -16051,12 +16051,12 @@
   ],
   "stats": {
     "total": 689,
-    "open": 32,
-    "closed": 657,
-    "wins": 427,
+    "open": 31,
+    "closed": 658,
+    "wins": 428,
     "win_rate": 65.0,
-    "net_pct": 566.05,
-    "pf": 1.75,
+    "net_pct": 570.23,
+    "pf": 1.76,
     "simulated": 1
   }
 }
