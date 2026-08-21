@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T09:04:14",
+  "updated_at": "2026-08-21T09:48:43",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -356,11 +356,11 @@
         2,
         3
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-21T09:19:18",
+      "realized_pct": 5.35,
+      "result_pct": 5.35,
+      "exec_pct": 5.35
     },
     {
       "id": "paper|DIAUSDT|2026-08-20T12:32:21",
@@ -381,11 +381,11 @@
         2,
         3
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-21T09:15:59",
+      "realized_pct": 5.35,
+      "result_pct": 5.35,
+      "exec_pct": 5.35
     },
     {
       "id": "paper|ARPAUSDT|2026-08-20T11:05:23",
@@ -407,11 +407,11 @@
         3,
         4
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-21T09:19:17",
+      "realized_pct": 4.39,
+      "result_pct": 4.39,
+      "exec_pct": 4.39
     },
     {
       "id": "paper|ARPAUSDT|2026-08-20T11:02:05",
@@ -433,11 +433,11 @@
         3,
         4
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-21T09:15:58",
+      "realized_pct": 4.39,
+      "result_pct": 4.39,
+      "exec_pct": 4.39
     },
     {
       "id": "paper|RLCUSDT|2026-08-20T10:50:42",
@@ -1369,11 +1369,11 @@
         2,
         3
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-21T09:19:10",
+      "realized_pct": 4.84,
+      "result_pct": 4.84,
+      "exec_pct": 4.84
     },
     {
       "id": "paper|POLYXUSDT|2026-08-19T18:25:00",
@@ -1522,11 +1522,11 @@
         2,
         3
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-21T09:15:51",
+      "realized_pct": 4.84,
+      "result_pct": 4.84,
+      "exec_pct": 4.84
     },
     {
       "id": "paper|ENSUSDT|2026-08-19T18:17:30",
@@ -16084,12 +16084,12 @@
   ],
   "stats": {
     "total": 689,
-    "open": 31,
-    "closed": 658,
-    "wins": 428,
-    "win_rate": 65.0,
-    "net_pct": 570.23,
-    "pf": 1.76,
+    "open": 25,
+    "closed": 664,
+    "wins": 434,
+    "win_rate": 65.4,
+    "net_pct": 599.39,
+    "pf": 1.8,
     "simulated": 1
   }
 }
