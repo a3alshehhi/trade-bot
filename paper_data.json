@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-21T05:36:32",
+  "updated_at": "2026-08-21T05:46:19",
   "stats": {
-    "open": 39,
-    "closed": 643,
+    "open": 38,
+    "closed": 644,
     "win_rate": 68.0,
     "profit_factor": 1.92,
-    "total_pct": 32299.54,
-    "avg_pct": 1.01,
+    "total_pct": 33653.85,
+    "avg_pct": 1.02,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-21",
-        "trades": 4,
+        "trades": 5,
         "win_rate": 100.0,
-        "return_pct": 20.85,
+        "return_pct": 25.9,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -391,9 +391,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 128,
-        "win_rate": 77.3,
-        "return_pct": 2361.77,
+        "trades": 129,
+        "win_rate": 77.5,
+        "return_pct": 2464.67,
         "month": "2026-08"
       },
       {
@@ -442,9 +442,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 378,
+        "trades": 379,
         "win_rate": 72.8,
-        "return_pct": 19537.63
+        "return_pct": 20358.49
       },
       {
         "key": "2026-07",
@@ -1309,10 +1309,11 @@
         1,
         2
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-19T18:00:41",
-      "closed_at": null,
-      "realized_pct": 1.54
+      "closed_at": "2026-08-21T05:46:10",
+      "realized_pct": 4.18,
+      "result_pct": 4.18
     },
     {
       "id": "الفيواب الأسبوعي · BTC|CRVUSDT|2026-08-19 17:30:00",
