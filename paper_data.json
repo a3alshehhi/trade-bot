@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-08-21T00:36:35",
+  "updated_at": "2026-08-21T00:50:24",
   "stats": {
     "open": 39,
-    "closed": 639,
-    "win_rate": 67.8,
-    "profit_factor": 1.89,
-    "total_pct": 26709.05,
-    "avg_pct": 0.99,
+    "closed": 641,
+    "win_rate": 67.9,
+    "profit_factor": 1.91,
+    "total_pct": 31268.59,
+    "avg_pct": 1.01,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-08-21",
+        "trades": 2,
+        "win_rate": 100.0,
+        "return_pct": 17.01,
+        "week": "2026-W34",
+        "month": "2026-08"
+      },
       {
         "key": "2026-08-20",
         "trades": 51,
@@ -383,9 +391,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 124,
-        "win_rate": 76.6,
-        "return_pct": 1937.0,
+        "trades": 126,
+        "win_rate": 77.0,
+        "return_pct": 2283.44,
         "month": "2026-08"
       },
       {
@@ -434,9 +442,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 374,
-        "win_rate": 72.5,
-        "return_pct": 16149.19
+        "trades": 376,
+        "win_rate": 72.6,
+        "return_pct": 18912.77
       },
       {
         "key": "2026-07",
@@ -1992,10 +2000,11 @@
         2,
         3
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-20T17:21:12",
-      "closed_at": null,
-      "realized_pct": 3.01
+      "closed_at": "2026-08-21T00:50:22",
+      "realized_pct": 8.17,
+      "result_pct": 8.17
     },
     {
       "id": "الفيواب الأسبوعي · BTC|GLMRUSDT|2026-08-20 18:00:00",
@@ -2042,6 +2051,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-20T18:39:23",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "الفيواب الأسبوعي · BTC|EPICUSDT|2026-08-21 00:30:00",
+      "symbol": "EPICUSDT",
+      "label": "الفيواب الأسبوعي · BTC",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.3627698,
+      "stop": 0.3281,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-21T00:50:14",
       "closed_at": null,
       "realized_pct": 0.0
     },
@@ -6297,10 +6320,11 @@
         2,
         3
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-20T17:17:29",
-      "closed_at": null,
-      "realized_pct": 3.01
+      "closed_at": "2026-08-21T00:47:08",
+      "realized_pct": 8.17,
+      "result_pct": 8.17
     },
     {
       "id": "العرض/الطلب|GLMRUSDT|2026-08-20 18:00:00",
@@ -6347,6 +6371,20 @@
       "hits": [],
       "status": "open",
       "opened_at": "2026-08-20T18:32:04",
+      "closed_at": null,
+      "realized_pct": 0.0
+    },
+    {
+      "id": "العرض/الطلب|EPICUSDT|2026-08-21 00:30:00",
+      "symbol": "EPICUSDT",
+      "label": "العرض/الطلب",
+      "side": "buy",
+      "timeframe": "15m",
+      "entry": 0.3627698,
+      "stop": 0.3281,
+      "hits": [],
+      "status": "open",
+      "opened_at": "2026-08-21T00:46:59",
       "closed_at": null,
       "realized_pct": 0.0
     },
