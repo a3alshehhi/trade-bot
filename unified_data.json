@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T04:07:00",
+  "updated_at": "2026-08-21T04:51:45",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -194,11 +194,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-21T04:27:18",
+      "realized_pct": 1.63,
+      "result_pct": 1.63,
+      "exec_pct": 1.63
     },
     {
       "id": "paper|GLMRUSDT|2026-08-20T18:17:13",
@@ -217,11 +217,11 @@
       "hits": [
         1
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-21T04:23:38",
+      "realized_pct": 1.63,
+      "result_pct": 1.63,
+      "exec_pct": 1.63
     },
     {
       "id": "paper|PROMUSDT|2026-08-20T17:21:12",
@@ -16049,11 +16049,11 @@
   ],
   "stats": {
     "total": 689,
-    "open": 34,
-    "closed": 655,
-    "wins": 425,
-    "win_rate": 64.9,
-    "net_pct": 562.79,
+    "open": 32,
+    "closed": 657,
+    "wins": 427,
+    "win_rate": 65.0,
+    "net_pct": 566.05,
     "pf": 1.75,
     "simulated": 1
   }
