@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-22T03:17:48",
+  "updated_at": "2026-08-22T03:32:57",
   "stats": {
-    "open": 29,
-    "closed": 653,
+    "open": 27,
+    "closed": 655,
     "win_rate": 68.5,
-    "profit_factor": 2.0,
-    "total_pct": 55316.4,
-    "avg_pct": 1.08,
+    "profit_factor": 2.01,
+    "total_pct": 60682.78,
+    "avg_pct": 1.09,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
       {
         "key": "2026-08-22",
-        "trades": 1,
+        "trades": 3,
         "win_rate": 100.0,
-        "return_pct": 4.62,
+        "return_pct": 14.75,
         "week": "2026-W34",
         "month": "2026-08"
       },
@@ -399,9 +399,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 138,
-        "win_rate": 79.0,
-        "return_pct": 4110.63,
+        "trades": 140,
+        "win_rate": 79.3,
+        "return_pct": 4518.37,
         "month": "2026-08"
       },
       {
@@ -450,9 +450,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 388,
-        "win_rate": 73.5,
-        "return_pct": 33488.34
+        "trades": 390,
+        "win_rate": 73.6,
+        "return_pct": 36740.95
       },
       {
         "key": "2026-07",
@@ -1922,12 +1922,14 @@
         4,
         5,
         6,
-        7
+        7,
+        8
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-20T01:21:31",
-      "closed_at": null,
-      "realized_pct": 1.74
+      "closed_at": "2026-08-22T03:32:53",
+      "realized_pct": 4.73,
+      "result_pct": 4.73
     },
     {
       "id": "الفيواب الأسبوعي · BTC|ICPUSDT|2026-08-20 01:15:00",
@@ -2092,7 +2094,8 @@
       "stop": 0.729,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-20T18:39:23",
@@ -6304,12 +6307,14 @@
         4,
         5,
         6,
-        7
+        7,
+        8
       ],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-20T01:17:32",
-      "closed_at": null,
-      "realized_pct": 1.74
+      "closed_at": "2026-08-22T03:31:03",
+      "realized_pct": 4.73,
+      "result_pct": 4.73
     },
     {
       "id": "العرض/الطلب|ICPUSDT|2026-08-20 01:15:00",
@@ -6474,7 +6479,8 @@
       "stop": 0.729,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "opened_at": "2026-08-20T18:32:04",
