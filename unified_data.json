@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T03:28:27",
+  "updated_at": "2026-08-22T04:09:16",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -137,7 +137,8 @@
       "usd": 100.0,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -185,7 +186,8 @@
       "usd": 100.0,
       "hits": [
         1,
-        2
+        2,
+        3
       ],
       "status": "open",
       "closed_at": null,
@@ -568,13 +570,14 @@
         4,
         5,
         6,
-        7
+        7,
+        8
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-22T03:32:53",
+      "realized_pct": 4.73,
+      "result_pct": 4.73,
+      "exec_pct": 4.73
     },
     {
       "id": "paper|THETAUSDT|2026-08-20T01:17:32",
@@ -597,13 +600,14 @@
         4,
         5,
         6,
-        7
+        7,
+        8
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-22T03:31:03",
+      "realized_pct": 4.73,
+      "result_pct": 4.73,
+      "exec_pct": 4.73
     },
     {
       "id": "paper|STRAXUSDT|2026-08-20T00:27:02",
@@ -16124,12 +16128,12 @@
   ],
   "stats": {
     "total": 689,
-    "open": 22,
-    "closed": 667,
-    "wins": 437,
-    "win_rate": 65.5,
-    "net_pct": 621.31,
-    "pf": 1.82,
+    "open": 20,
+    "closed": 669,
+    "wins": 439,
+    "win_rate": 65.6,
+    "net_pct": 630.77,
+    "pf": 1.84,
     "simulated": 1
   }
 }
