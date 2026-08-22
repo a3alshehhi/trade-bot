@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T01:45:10",
+  "updated_at": "2026-08-22T02:42:13",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -2109,7 +2109,8 @@
         2,
         3,
         4,
-        5
+        5,
+        6
       ],
       "status": "open",
       "closed_at": null,
@@ -2188,11 +2189,11 @@
         5,
         6
       ],
-      "status": "open",
-      "closed_at": null,
-      "realized_pct": 0.0,
-      "result_pct": null,
-      "exec_pct": null
+      "status": "closed",
+      "closed_at": "2026-08-22T01:45:49",
+      "realized_pct": 4.62,
+      "result_pct": 4.62,
+      "exec_pct": 4.62
     },
     {
       "id": "paper|SEIUSDT|2026-08-19T17:32:40",
@@ -16115,11 +16116,11 @@
   ],
   "stats": {
     "total": 689,
-    "open": 23,
-    "closed": 666,
-    "wins": 436,
+    "open": 22,
+    "closed": 667,
+    "wins": 437,
     "win_rate": 65.5,
-    "net_pct": 616.69,
+    "net_pct": 621.31,
     "pf": 1.82,
     "simulated": 1
   }
