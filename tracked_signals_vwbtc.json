@@ -2972,15 +2972,15 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 12:30:00",
-    "last_bar": "2026-08-22 04:59:59.999000",
+    "last_bar": "2026-08-22 05:14:59.999000",
     "hits": [
       1,
       2,
       3,
       4
     ],
-    "stopped": false,
-    "hi_seen": 0.00812,
+    "stopped": true,
+    "hi_seen": 0.00817,
     "lo_seen": 0.0068,
     "created": "2026-08-19T12:54:26",
     "dca_levels": [
@@ -2991,7 +2991,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 3
+    "st_stage": 3,
+    "exit_price": 0.00785572,
+    "close_card_sent": true,
+    "closed_at": "2026-08-22T05:30:02"
   },
   "الفيواب الأسبوعي · BTC|TIAUSDT|2026-08-19 13:15:00": {
     "symbol": "TIAUSDT",
@@ -4037,7 +4040,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:00:00",
-    "last_bar": "2026-08-22 04:59:59.999000",
+    "last_bar": "2026-08-22 05:29:59.999000",
     "hits": [
       1,
       2,
@@ -4353,7 +4356,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:00:00",
-    "last_bar": "2026-08-22 04:59:59.999000",
+    "last_bar": "2026-08-22 05:14:59.999000",
     "hits": [
       1,
       2,
@@ -4363,7 +4366,7 @@
       6,
       7
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0382,
     "lo_seen": 0.0292068,
     "created": "2026-08-19T18:25:00",
@@ -4375,7 +4378,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 3
+    "st_stage": 3,
+    "exit_price": 0.0344068,
+    "close_card_sent": true,
+    "closed_at": "2026-08-22T05:30:05"
   },
   "الفيواب الأسبوعي · BTC|VTHOUSDT|2026-08-19 18:00:00": {
     "symbol": "VTHOUSDT",
@@ -4480,7 +4486,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:15:00",
-    "last_bar": "2026-08-22 04:59:59.999000",
+    "last_bar": "2026-08-22 05:29:59.999000",
     "hits": [
       1,
       2,
@@ -4862,7 +4868,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 20:00:00",
-    "last_bar": "2026-08-22 04:59:59.999000",
+    "last_bar": "2026-08-22 05:14:59.999000",
     "hits": [
       1,
       2,
@@ -4871,7 +4877,7 @@
       5,
       6
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.0041,
     "lo_seen": 0.0034345,
     "created": "2026-08-19T20:22:01",
@@ -4883,7 +4889,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 3
+    "st_stage": 3,
+    "exit_price": 0.00378,
+    "close_card_sent": true,
+    "closed_at": "2026-08-22T05:30:07"
   },
   "الفيواب الأسبوعي · BTC|WLDUSDT|2026-08-19 22:00:00": {
     "symbol": "WLDUSDT",
@@ -4990,7 +4999,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 22:00:00",
-    "last_bar": "2026-08-22 04:59:59.999000",
+    "last_bar": "2026-08-22 05:14:59.999000",
     "hits": [
       1,
       2,
@@ -4998,8 +5007,8 @@
       4,
       5
     ],
-    "stopped": false,
-    "hi_seen": 0.06178,
+    "stopped": true,
+    "hi_seen": 0.06205,
     "lo_seen": 0.05043004,
     "created": "2026-08-19T22:22:33",
     "dca_levels": [
@@ -5010,7 +5019,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 3
+    "st_stage": 3,
+    "exit_price": 0.05721004,
+    "close_card_sent": true,
+    "closed_at": "2026-08-22T05:30:09"
   },
   "الفيواب الأسبوعي · BTC|ACTUSDT|2026-08-19 22:15:00": {
     "symbol": "ACTUSDT",
@@ -5876,16 +5888,16 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-20 18:15:00",
-    "last_bar": "2026-08-22 04:59:59.999000",
+    "last_bar": "2026-08-22 05:14:59.999000",
     "hits": [
       1,
       2,
       3,
       4
     ],
-    "stopped": false,
-    "hi_seen": 0.868,
-    "lo_seen": 0.754,
+    "stopped": true,
+    "hi_seen": 0.875,
+    "lo_seen": 0.663,
     "created": "2026-08-20T18:39:23",
     "dca_levels": [
       0.780912,
@@ -5895,7 +5907,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 3
+    "st_stage": 3,
+    "exit_price": 0.847776,
+    "close_card_sent": true,
+    "closed_at": "2026-08-22T05:30:11"
   },
   "الفيواب الأسبوعي · BTC|EPICUSDT|2026-08-21 00:30:00": {
     "symbol": "EPICUSDT",
@@ -5938,11 +5953,11 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-21 00:30:00",
-    "last_bar": "2026-08-22 04:59:59.999000",
+    "last_bar": "2026-08-22 05:14:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.3809,
-    "lo_seen": 0.3516,
+    "lo_seen": 0.32,
     "created": "2026-08-21T00:50:14",
     "dca_levels": [
       0.3627698,
@@ -5951,7 +5966,10 @@
       0.3401054
     ],
     "wait_entry": true,
-    "max_age_h": 48.0
+    "max_age_h": 48.0,
+    "exit_price": 0.3281,
+    "close_card_sent": true,
+    "closed_at": "2026-08-22T05:30:12"
   },
   "الفيواب الأسبوعي · BTC|CYBERUSDT|2026-08-21 01:30:00": {
     "symbol": "CYBERUSDT",
@@ -5994,7 +6012,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-21 01:30:00",
-    "last_bar": "2026-08-22 04:59:59.999000",
+    "last_bar": "2026-08-22 05:14:59.999000",
     "hits": [
       1,
       2,
@@ -6002,7 +6020,7 @@
       4,
       5
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.378,
     "lo_seen": 0.31081,
     "created": "2026-08-21T01:57:17",
@@ -6014,6 +6032,9 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 3
+    "st_stage": 3,
+    "exit_price": 0.35581,
+    "close_card_sent": true,
+    "closed_at": "2026-08-22T05:30:14"
   }
 }
