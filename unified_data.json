@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T16:57:21",
+  "updated_at": "2026-08-22T17:53:26",
   "rule": "wick",
   "fee_pct_per_side": 0.1,
   "trades": [
@@ -7984,48 +7984,6 @@
       "exec_reasons": [
         "وقف خسارة"
       ]
-    },
-    {
-      "id": "binance|DEXEUSDT|2026-08-05T01:56:12",
-      "source": "binance",
-      "source_ar": "بايننس ديمو",
-      "symbol": "DEXEUSDT",
-      "label": "SD Stable",
-      "side": "buy",
-      "timeframe": "15m",
-      "entry": 2.481,
-      "stop_orig": 2.23185,
-      "stop": 2.23185,
-      "targets": [
-        2.532656,
-        2.609814
-      ],
-      "opened_at": "2026-08-05T01:56:12",
-      "usd": 27.49,
-      "hits": [],
-      "status": "closed",
-      "closed_at": "2026-08-05T15:00:00",
-      "realized_pct": -10.042,
-      "result_pct": -10.242,
-      "exec_pct": null,
-      "net_pct": -10.242,
-      "result_r": -1.0,
-      "unrealized_pct": 0.0,
-      "exit_price": 2.23185,
-      "exit_reason": "وقف خسارة",
-      "cur_stop": 2.23185,
-      "remaining": 0.0,
-      "pnl_usdt": -2.8156,
-      "last_price": 1.934,
-      "events": [
-        {
-          "ts": "2026-08-05T15:00:00",
-          "type": "stop",
-          "price": 2.23185,
-          "pct": -10.042
-        }
-      ],
-      "real_rule": "wick"
     },
     {
       "id": "paper|SXTUSDT|2026-08-04T23:39:19",
@@ -16133,13 +16091,13 @@
     }
   ],
   "stats": {
-    "total": 689,
+    "total": 688,
     "open": 5,
-    "closed": 684,
+    "closed": 683,
     "wins": 452,
-    "win_rate": 66.1,
-    "net_pct": 687.83,
-    "pf": 1.89,
-    "simulated": 1
+    "win_rate": 66.2,
+    "net_pct": 698.07,
+    "pf": 1.92,
+    "simulated": 0
   }
 }
