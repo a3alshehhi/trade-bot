@@ -9177,7 +9177,7 @@
     "entry": 0.384868,
     "stop": 0.307,
     "init_stop": 0.307,
-    "cur_stop": 0.33332500000000004,
+    "cur_stop": 0.357205,
     "legs": [
       0.384868,
       0.37,
@@ -9210,9 +9210,9 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-18 18:30:00",
-    "last_bar": "2026-08-23 02:44:59.999000",
+    "last_bar": "2026-08-23 02:59:59.999000",
     "hits": [],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 0.408,
     "lo_seen": 0.323,
     "created": "2026-08-18T18:47:09",
@@ -9224,7 +9224,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 2
+    "st_stage": 2,
+    "exit_price": 0.357205,
+    "close_card_sent": true,
+    "closed_at": "2026-08-23T05:45:45"
   },
   "العرض/الطلب|THETAUSDT|2026-08-18 20:30:00": {
     "symbol": "THETAUSDT",
@@ -10777,7 +10780,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:00:00",
-    "last_bar": "2026-08-23 02:44:59.999000",
+    "last_bar": "2026-08-23 05:44:59.999000",
     "hits": [
       1,
       2,
@@ -11285,7 +11288,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:15:00",
-    "last_bar": "2026-08-23 02:44:59.999000",
+    "last_bar": "2026-08-23 05:44:59.999000",
     "hits": [
       1,
       2,

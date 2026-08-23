@@ -1,16 +1,24 @@
 {
-  "updated_at": "2026-08-23T05:32:27",
+  "updated_at": "2026-08-23T05:47:24",
   "stats": {
-    "open": 12,
-    "closed": 670,
-    "win_rate": 69.0,
-    "profit_factor": 2.06,
-    "total_pct": 104024.02,
-    "avg_pct": 1.15,
+    "open": 11,
+    "closed": 671,
+    "win_rate": 68.9,
+    "profit_factor": 2.04,
+    "total_pct": 96537.5,
+    "avg_pct": 1.14,
     "max_drawdown_pct": -70.77
   },
   "periods": {
     "daily": [
+      {
+        "key": "2026-08-23",
+        "trades": 1,
+        "win_rate": 0.0,
+        "return_pct": -7.19,
+        "week": "2026-W34",
+        "month": "2026-08"
+      },
       {
         "key": "2026-08-22",
         "trades": 18,
@@ -399,9 +407,9 @@
     "weekly": [
       {
         "key": "2026-W34",
-        "trades": 155,
-        "win_rate": 80.0,
-        "return_pct": 7811.51,
+        "trades": 156,
+        "win_rate": 79.5,
+        "return_pct": 7242.67,
         "month": "2026-08"
       },
       {
@@ -450,9 +458,9 @@
     "monthly": [
       {
         "key": "2026-08",
-        "trades": 405,
-        "win_rate": 74.1,
-        "return_pct": 63010.43
+        "trades": 406,
+        "win_rate": 73.9,
+        "return_pct": 58472.79
       },
       {
         "key": "2026-07",
@@ -5464,10 +5472,11 @@
       "entry": 0.384868,
       "stop": 0.307,
       "hits": [],
-      "status": "open",
+      "status": "closed",
       "opened_at": "2026-08-18T18:47:09",
-      "closed_at": null,
-      "realized_pct": 0.0
+      "closed_at": "2026-08-23T05:45:45",
+      "realized_pct": -7.19,
+      "result_pct": -7.19
     },
     {
       "id": "العرض/الطلب|THETAUSDT|2026-08-18 20:30:00",
