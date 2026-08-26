@@ -4040,7 +4040,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:00:00",
-    "last_bar": "2026-08-26 06:44:59.999000",
+    "last_bar": "2026-08-26 12:44:59.999000",
     "hits": [
       1,
       2,
@@ -4049,7 +4049,7 @@
       5,
       6
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 81272.62,
     "lo_seen": 67462.412,
     "created": "2026-08-19T18:25:00",
@@ -4061,7 +4061,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 3
+    "st_stage": 3,
+    "exit_price": 77980.14,
+    "close_card_sent": true,
+    "closed_at": "2026-08-26T12:47:49"
   },
   "الفيواب الأسبوعي · BTC|ZECUSDT|2026-08-19 18:00:00": {
     "symbol": "ZECUSDT",
