@@ -4040,7 +4040,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:00:00",
-    "last_bar": "2026-08-26 01:29:59.999000",
+    "last_bar": "2026-08-26 01:44:59.999000",
     "hits": [
       1,
       2,
@@ -4453,7 +4453,7 @@
     "entry": 2027.43796,
     "stop": 1885.78,
     "init_stop": 1885.78,
-    "cur_stop": 2405.5219500000003,
+    "cur_stop": 2478.65445,
     "legs": [
       2027.43796,
       2000.39,
@@ -4486,7 +4486,7 @@
     "mgmt": "ladder",
     "breakeven_done": false,
     "bar_ts": "2026-08-19 18:15:00",
-    "last_bar": "2026-08-26 01:29:59.999000",
+    "last_bar": "2026-08-26 01:44:59.999000",
     "hits": [
       1,
       2,
@@ -4495,7 +4495,7 @@
       5,
       6
     ],
-    "stopped": false,
+    "stopped": true,
     "hi_seen": 2546.78,
     "lo_seen": 2027.43796,
     "created": "2026-08-19T18:36:46",
@@ -4507,7 +4507,10 @@
     ],
     "wait_entry": true,
     "max_age_h": 48.0,
-    "st_stage": 3
+    "st_stage": 3,
+    "exit_price": 2478.65445,
+    "close_card_sent": true,
+    "closed_at": "2026-08-26T01:47:36"
   },
   "الفيواب الأسبوعي · BTC|ZENUSDT|2026-08-19 18:15:00": {
     "symbol": "ZENUSDT",
